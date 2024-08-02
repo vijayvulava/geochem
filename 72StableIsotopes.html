@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7.2 Stable Isotopes &#8212; Introduction to Geochemistry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '72StableIsotopes';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7.3 Practice Problems" href="73Problems.html" />
+    <link rel="prev" title="7.1 Radioisotopes" href="71RadioIsotopes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introduction to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Atoms First</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1AtomsFirst.html">1 Atoms First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11Atoms.html">1.1 Atoms and Subatomic Particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12PeriodicTable.html">1.2 The Periodic Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13ChemicalBonding.html">1.3 Chemical Bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14ChemicalReactions.html">1.4 Chemical Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15Problems.html">1.5 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2Thermodynamics.html">2 Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21Energy.html">2.1 Energy and Thermochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22ZerothLaw.html">2.2  The Zeroth Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23FirstLaw.html">2.3  The First Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24SecondLaw.html">2.4 The Second Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25ThirdLaw.html">2.5 The Third Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26Gibbs.html">2.6 Gibbs Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27Problems.html">2.7 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chemical Equilibrium</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3ChemicalEquilibrium.html">3 Chemical Equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31ChemicalEquilibrium.html">3.1 What is Equilibrium?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LawMassAction.html">3.2  Law of Mass Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33ApplicationsK.html">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="34Problems.html">3.4  Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acids and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4AcidsBases.html">4 Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41AcidsBases.html">4.1 What are Acids and Bases?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42AcidBaseStrength.html">4.2 Strength of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="43SaltsSolubility.html">4.3 Salts of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44Problems.html">4.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reduction and Oxidation Processes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5Redox.html">5 Redox Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51RedoxRxn.html">5.1 What is Oxidation and Reduction?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52RedoxRxnBalancing.html">5.2 Balancing Redox Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="53pe.html">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="54Problems.html">5.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kinetics of Reactions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Kinetics.html">6 Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Rates.html">6.1  Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62RateExpr.html">6.2  Common Rate Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="63Problems.html">6.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Isotopes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7Isotopes.html">7 Environmental Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71RadioIsotopes.html">7.1 Radioisotopes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7.2 Stable Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="73Problems.html">7.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Organic Chemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="8Organics.html">8 Environmental Organic Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="81WhatOrganics.html">8.1 What are organic chemicals?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="82EnvirOrganicChem.html">8.2 Organic Chemicals in the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="83Problems.html">8.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Review of Basic Mathematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/72StableIsotopes.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>7.2 Stable Isotopes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-stable-isotopes">What are Stable Isotopes?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stable-isotope-fractionation">Stable Isotope Fractionation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-delta-notation">The <span class="math notranslate nohighlight">\(\delta\)</span> notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stable-isotopes-and-the-water-cycle">Stable isotopes and the water cycle</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="stable-isotopes">
+<h1>7.2 Stable Isotopes<a class="headerlink" href="#stable-isotopes" title="Link to this heading">#</a></h1>
+<section id="what-are-stable-isotopes">
+<h2>What are Stable Isotopes?<a class="headerlink" href="#what-are-stable-isotopes" title="Link to this heading">#</a></h2>
+<p>Stable isotopes do not spontaneously break down to form other isotopes. Because of relative differences in masses of isotopes of an element, changes to isotopic ratios can be observed during various biogeochemical processes. Study of stable isotopes is useful in gaining better understanding in environmental and geological studies.</p>
+<p>Stable isotopes are especially useful in elements whose isotopes have large relative mass differences. Therefore, most of the elements used for stable isotope studies have a low atomic number and atomic mass (<a class="reference internal" href="#id1"><span class="std std-numref">Table 15</span></a>). For isotopes with an atomic mass of greater than <span class="math notranslate nohighlight">\(40\)</span>, the relative mass differences are too small for any measurable isotopic fractionation. Most elements used in radiometric dating have high atomic mass, and mass fractionation is not significant.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Distribution of stable isotopes of most commonly-used elements.</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Element</p></th>
+<th class="head"><p>Isotope</p></th>
+<th class="head"><p>%</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>H</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{^1 H}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(99.985\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>H</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{^2 H}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.015\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>C</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{^{12} C}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(98.9\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>C</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{^{13} C}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>N</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{^{14} N}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(99.63\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>N</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{^{15} N}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.37\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>O</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{^{16} O}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(99.762\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>O</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{^{18} O}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="stable-isotope-fractionation">
+<h2>Stable Isotope Fractionation<a class="headerlink" href="#stable-isotope-fractionation" title="Link to this heading">#</a></h2>
+<p>Isotopic fractionation is the partitioning of isotopes during physical (evaporation, condensation, melting, crystallization, absorption and desorption, diffusion), chemical, or biological processes. This partitioning is proportional to the difference in the masses of the isotopes. The processes can either be equilibrium reactions, in which forward and backward reaction rates are equal for each isotope, or kinetic reactions, which are unidirectional reactions in which reaction rates are dependent on the masses of the isotopes and their vibrational energies.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Stable isotope fractionation of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">During evaporation of  in a closed system, six isotope combinations of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> are possible: <span class="math notranslate nohighlight">\(\ce{^1H2^{16}O}, \ce{^1H^2H^{16}O}, \ce{^2H2^{16}O}, \ce{^1H2^{18}O}, \ce{^1H^2H^{18}O}, \ce{^2H2^{18}O}\)</span>.</p>
+<p class="sd-card-text">As a result of these different stable isotope combinations, the molecular masses are <span class="math notranslate nohighlight">\(18\)</span>, <span class="math notranslate nohighlight">\(19\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(21\)</span>, and <span class="math notranslate nohighlight">\(22\)</span> respectively. See the conceptulizations in the figure below.</p>
+<p class="sd-card-text"><img alt="# Water Isotopes Diagram - USGS" src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Fig%201.Isotopes.web_.jpg" /></p>
+</div>
+</details><p>Why do stable isotopes fractionate? Isotopically lighter isotopes have higher velocities than heavier isotopes. From basic physics, kinetic energy of a particle can be calculated using the following formula:</p>
+<div class="math notranslate nohighlight" id="equation-kineticenergy">
+<span class="eqno">(73)<a class="headerlink" href="#equation-kineticenergy" title="Link to this equation">#</a></span>\[\text{Kinetic Energy} = \frac{1}{2} mv^2\]</div>
+<p>Per Eqn. <a class="reference internal" href="#equation-kineticenergy">(73)</a>, isotopically lighter molecules that have higher velocities and therefore, greater amount of kinetic energy. Consider the above water example. Since the lighter molecules have greater velocities, they preferentially escape into the vapor phase resulting in enrichment of the lighter isotopes ( and ), relative to the liquid phase of water. In addition, atoms with greater mass form slightly stronger bonds, the heavier isotope is generally enriched in the more condensed phase or larger molecule.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Fractionation of water between phases</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the equilibrium exchange of water between different phases:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+H2O(s) &lt;=&gt; H2O(l) &lt;=&gt; H2O(g)
+}\]</div>
+<p class="sd-card-text">As we know, the molecules of water are held together by weak hydrogen bonds.  These intermolecular bonds are strongest in the solid phase and weakest in the vapor phase.  In addition, there is slightly greater hydrogen bond strength for <span class="math notranslate nohighlight">\(\ce{H2^{18}O-H2O}\)</span> versus <span class="math notranslate nohighlight">\(\ce{H2^{16}O-H2O}\)</span> bonds, the <span class="math notranslate nohighlight">\(\ce{^{16}O}\)</span> bonds will be more easily broken during evaporation. Therefore a lower concentration of <span class="math notranslate nohighlight">\(\ce{H2^{18}O}\)</span> is present in the water vapor than in the liquid water, and so water is isotopically enriched over its vapor. Similarly, <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> is more enriched in ice than in water.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Fractionation of <span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span> during dissolution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the chemical weathering of limestone (<span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+CaCO3 -&gt;[Acid] CaO + CO2
+}\]</div>
+<p class="sd-card-text">In this reaction <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> escapes and thus does not equilibrate with the solid phase. During a chemical reaction the lighter isotope is more reactive and is concentrated in the products. The relative loss of the lighter isotope from the reactants leads to an enrichment of the reactants in the heavier isotope. In this example, the gas phase (product) is enriched in the lighter isotopes of C and O, and the enrichment is significantly greater than that which would occur during an equilibrium reaction.</p>
+</div>
+</details><p>The partitioning of stable isotopes between two substances, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, is described by the isotopic fractionation factor, <span class="math notranslate nohighlight">\(\alpha\)</span>. The fractionation factor is written as</p>
+<div class="math notranslate nohighlight" id="equation-alpha">
+<span class="eqno">(74)<a class="headerlink" href="#equation-alpha" title="Link to this equation">#</a></span>\[\alpha = \frac{R_A}{R_B}\]</div>
+<p>where, <span class="math notranslate nohighlight">\(R\)</span> is ratio of heavy to light isotope abundance (e.g., <span class="math notranslate nohighlight">\(\ce{^2 H}\)</span>/<span class="math notranslate nohighlight">\(\ce{^1 H}\)</span>  , <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16}O}\)</span> ). Generally, the isotope abundance ratio does not greatly vary in the environment, and so the fractionation factor, <span class="math notranslate nohighlight">\(\alpha\)</span>, generally has a value close to 1. However, this value can be precisely measured and so is expressed with a precision of 4-5 decimal places. The fractionation factor depends on the temperature and can be determined either experimentally or calculated from spectroscopic data.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Isotope fractionation factor</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the evaporation of water. We can setup the fractionation ratio and factor as follows:</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{\ce{^{18}O}}{\ce{^{16}O}}
+\]</div>
+<p class="sd-card-text">We can calculate <span class="math notranslate nohighlight">\(\alpha\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\alpha = \frac{\ce{^{18}O}/\ce{^{16}O}_{\text{(liquid)}}}{\ce{^{18}O}/\ce{^{16}O}_{\text{(vapor)}}}
+\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\ce{^{16}O}\)</span> is enriched in the vapor phase relative to the liquid,</p>
+<div class="math notranslate nohighlight">
+\[
+[\ce{^{18}O}]_{\text{vapor}} &gt; [\ce{^{16}O}]_{\text{liquid}}
+\]</div>
+<p class="sd-card-text">Conversely, <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> is enriched in the liquid relative to the vapor,</p>
+<div class="math notranslate nohighlight">
+\[
+[\ce{^{18}O}]_{\text{liquid}} &gt; [\ce{^{18}O}]_{\text{vapor}}\]</div>
+<p class="sd-card-text">Therefore, the fractionation factor is greater than 1. With increasing temperature, the fractionation factor decreases, and it becomes 1 at infinite temperature.</p>
+</div>
+</details><p>In <a class="reference internal" href="#oxygen-fractionation"><span class="std std-numref">Fig. 52</span></a>, isotope fractionation of <span class="math notranslate nohighlight">\(\ce{O}\)</span> as a function of temperature during evaporation of <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> is shown. Paleoclimatologists use <span class="math notranslate nohighlight">\(\ce{O}\)</span> ratios (<span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16}O}\)</span>) from <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> trapped in glaciers as well as the <span class="math notranslate nohighlight">\(\ce{O}\)</span> absorbed in the shells of marine plants and animals to measure past temperatures and rainfall. In polar ice cores, the measurement is relatively simple: less <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> in the frozen water means that temperatures were cooler.  In shells, the measurement is far more complicated because the biological and chemical processes that form the shells skew the <span class="math notranslate nohighlight">\(\ce{O}\)</span> ratio in different ways depending on temperature.</p>
+<figure class="margin-caption align-default" id="oxygen-fractionation">
+<img alt="https://earthobservatory.nasa.gov/ContentFeature/Paleoclimatology_OxygenBalance/images/oxygen_schematic.jpg" src="https://earthobservatory.nasa.gov/ContentFeature/Paleoclimatology_OxygenBalance/images/oxygen_schematic.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Water vapor gradually loses <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> as it travels from the equator to the poles. Because water molecules with heavy <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> isotopes in them condense more easily than normal water molecules, air becomes progressively depleted in <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> as it travels to high latitudes and becomes colder and drier. In turn, the snow that forms most glacial ice is also depleted in <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span>. Image source: <a class="reference external" href="https://earthobservatory.nasa.gov/features/Paleoclimatology_OxygenBalance">Paleoclimatology: The Oxygen Balance (nasa.gov)</a></span><a class="headerlink" href="#oxygen-fractionation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The isotopic fractionation factor is related to the equilibrium constant (<span class="math notranslate nohighlight">\(K\)</span>) of a reaction as follows:</p>
+<div class="math notranslate nohighlight" id="equation-alphak">
+<span class="eqno">(75)<a class="headerlink" href="#equation-alphak" title="Link to this equation">#</a></span>\[\alpha = K^\frac{1}{n}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(K\)</span> is the equilibrium constant and <span class="math notranslate nohighlight">\(n\)</span> is the number of atoms exchanged.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Isotope fractionation factor and <span class="math notranslate nohighlight">\(K\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the exchange of <span class="math notranslate nohighlight">\(\ce{O}\)</span> isotopes between carbonate (<span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span>) and water. This particular reaction is of interest because it is used as a “paleothermometer” in marine systems. The fractionation factor can help determine temperature of water at the time of deposition of carbonate.</p>
+<p class="sd-card-text">Let’s write the reaction in terms of a single oxygen, so <span class="math notranslate nohighlight">\(n = 1\)</span> in Eq. <a class="reference internal" href="#equation-alphak">(75)</a>,</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{
+1/3 CaC^{16}O3 + H2^{18}O &lt;=&gt; 1/3 CaC^{18}O3 + H2^{16}O
+}\]</div>
+<p class="sd-card-text">Writing this equation in terms of the equilibrium constant, <span class="math notranslate nohighlight">\(K\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[K = \frac{([\ce{CaC^{18}O3}]^{1/3} [\ce{H2^{16}O}])}{([\ce{CaC^{16}O3}]^{1/3} [\ce{H2^{18}O}])}\]</div>
+<p class="sd-card-text">Rearranging this equation with <span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span> separated from <span class="math notranslate nohighlight">\(\ce{H2O}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[K = \frac{([\ce{CaC^{18}O3}]/[\ce{CaC^{16}O3}])^{1/3}}{[\ce{H2^{18}O}]/ [\ce{H2^{16}O}]}\]</div>
+<p class="sd-card-text">Therefore,</p>
+<div class="math notranslate nohighlight">
+\[K = \alpha = \frac{R_\text{Carbonate}}{R_\ce{H2O}} = \frac{\ce{^{18}O}/\ce{^{18}O}\, \text{of}\, \ce{CaCO3}}{\ce{^{18}O}/\ce{^{18}O}\, \text{of}\, \ce{H2O}}\]</div>
+<p class="sd-card-text">Because the isotopic fractionation factor varies as a function of temperature, the measured fractionation factor can be compared to emprirical values to determine the equilibrium temperature for the calcium carbonate-water reaction.</p>
+</div>
+</details></section>
+<section id="the-delta-notation">
+<h2>The <span class="math notranslate nohighlight">\(\delta\)</span> notation<a class="headerlink" href="#the-delta-notation" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(R\)</span> values for environmental samples have to be compared with a fixed value (or a standard) to know if that sample is enriched or depleted compared to the standard.</p>
+<p>Since isotopic variations between samples are very small, we express isotopic ratios using delta (<span class="math notranslate nohighlight">\(\delta\)</span>) notation. This value is determined by comparing the isotopic ratio (<span class="math notranslate nohighlight">\(R\)</span>) of a sample with that of a standard and calculated as follows:</p>
+<div class="math notranslate nohighlight" id="equation-delta">
+<span class="eqno">(76)<a class="headerlink" href="#equation-delta" title="Link to this equation">#</a></span>\[\delta = \left(\frac{R_\text{Sample}}{R_\text{Standard}} - 1\right) \times 1000\]</div>
+<p>Where the isotopic ratio, <span class="math notranslate nohighlight">\(R\)</span>, has been defined in the previous section. Note that the ratio is multiplied by a thousand and is expressed in “parts per thousand” or permille or permil or the symbol, <span class="math notranslate nohighlight">\(\pu{‰}\)</span>. As seen in Eqn. <a class="reference internal" href="#equation-delta">(76)</a>, <span class="math notranslate nohighlight">\(R_\text{Standard}\)</span> is required for the element of interest. Standards for most common elements of interest have been adopted worldwide for research purposes and shown in <a class="reference internal" href="#isotopestandards"><span class="std std-numref">Table 16</span></a>. Typically, V-SMOW (Vienna standard mean ocean water), and PDB (Pee Dee beleminite) are most commonly used for <span class="math notranslate nohighlight">\(\ce{H}\)</span>, <span class="math notranslate nohighlight">\(\ce{O}\)</span>, and <span class="math notranslate nohighlight">\(\ce{C}\)</span> ratios.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="isotopestandards">
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Isotope ratios and standards for most commonly-used elements in environmental geosciences.</span><a class="headerlink" href="#isotopestandards" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Isotope Ratio</p></th>
+<th class="head"><p>Standard</p></th>
+<th class="head text-right"><p><span class="math notranslate nohighlight">\(R \times \pu{e-5}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{^2 H}\)</span>/<span class="math notranslate nohighlight">\(\ce{^1 H}\)</span></p></td>
+<td><p>V-SMOW</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(15.575\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{^{13} C}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{12} C}\)</span></p></td>
+<td><p>PDB</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(1123.75\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{^{18} O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16} O}\)</span></p></td>
+<td><p>V-SMOW</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(200.52\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{^{18} O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16} O}\)</span></p></td>
+<td><p>PDB</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(206.72\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{^{15} N}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{14} N}\)</span></p></td>
+<td><p>NBS-14</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(367.6 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{^{34} S}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{32} S}\)</span></p></td>
+<td><p>CDT</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(4499.4\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>When <span class="math notranslate nohighlight">\(\delta\)</span> values are negative, <span class="math notranslate nohighlight">\(R_\text{Sample} &lt; R_\text{Standard}\)</span> in Eqn. <a class="reference internal" href="#equation-delta">(76)</a>, therefore, the sample is considered to be depleted compared with the standard. Similarly, when <span class="math notranslate nohighlight">\(\delta\)</span> values are positive, <span class="math notranslate nohighlight">\(R_\text{Sample} &gt; R_\text{Standard}\)</span>, therefore, the sample is considered to be enriched compared to the standard.</p>
+<p>Since the <span class="math notranslate nohighlight">\(\delta\)</span> values and the isotope fractionation factors (<span class="math notranslate nohighlight">\(\alpha\)</span>) are derived from isotopic ratios, they are correlated with each other. Once again, let’s look at fractionation of between water (liquid) and vapor and express the fractionation factor, <span class="math notranslate nohighlight">\(\alpha\)</span>, in terms of the <span class="math notranslate nohighlight">\(\delta \ce{^{18}O}\)</span> values of the water and vapor by combining Eqn. <a class="reference internal" href="#equation-alpha">(74)</a> and Eqn. <a class="reference internal" href="#equation-delta">(76)</a>.</p>
+<div class="math notranslate nohighlight" id="equation-alphadelta">
+<span class="eqno">(77)<a class="headerlink" href="#equation-alphadelta" title="Link to this equation">#</a></span>\[\alpha \ce{^{18}O}_{\text{water-liquid-vapor}} = \frac{\delta \ce{^{18}O}_{\text{liquid water}}+1000}{\delta \ce{^{18}O}_{\text{vapor water }}+1000}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: <span class="math notranslate nohighlight">\(\delta\)</span> notation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">A rainwater sample collected in Boston, Massachusetts, has an <span class="math notranslate nohighlight">\(\ce{^{18} O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16} O}\)</span> ratio of <span class="math notranslate nohighlight">\(0.0019750\)</span>. Calculate <span class="math notranslate nohighlight">\(\delta\)</span> for this rainwater sample.</p>
+<p class="sd-card-text">From <a class="reference internal" href="#isotopestandards"><span class="std std-numref">Table 16</span></a>, we can read the isotopic ratio of <span class="math notranslate nohighlight">\(\ce{^{18} O}\)</span>/<span class="math notranslate nohighlight">\(\ce{^{16} O}\)</span> in V-SMOW to be <span class="math notranslate nohighlight">\(0.0020052\)</span>. Substitute values in Eqn. <a class="reference internal" href="#equation-delta">(76)</a> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\delta &amp;=  \left(\frac{\ce{^{18}O}/\ce{^{16}O}_\text{Sample}}{\ce{^{18}O}/\ce{^{16}O}_\text{Standard}} - 1\right) \times 1000\\ &amp;=\left(\frac{0.0019750}{0.0020052} - 1\right) \times 1000 = \pu{-15.1 ‰} 
+\end{align}\end{split}\]</div>
+<p class="sd-card-text">Since this final value is negative, the sample isotopically lighter than the standard.</p>
+</div>
+</details></section>
+<section id="stable-isotopes-and-the-water-cycle">
+<h2>Stable isotopes and the water cycle<a class="headerlink" href="#stable-isotopes-and-the-water-cycle" title="Link to this heading">#</a></h2>
+<p>Isotopes provide a great tool for distinguishing different water sources and recharge areas during analysis of the water cycle. The natural isotopes and are an intrinsic component of the water molecule and so are ideal tracers. They are selectively partitioned at each step of the water cycle, from primary evaporation over the oceans, through condensation and precipitation to groundwater recharge and runoff back to the seas.</p>
+<p>The principal hydrological processes that affect the distribution of isotopes through the hydrological cycle include the following:</p>
+<ol class="arabic simple">
+<li><p>Evaporation and formation of atmospheric vapor</p></li>
+<li><p>Condensation and rain out with decreasing temperature</p></li>
+<li><p>Reevaporation from soils and surface waters, which enriches the residual water in both isotopes</p></li>
+<li><p>Mixing during recharge and groundwater flow</p></li>
+</ol>
+<p>Based on experimental observations of water isotopes around the world at different latitudes, it has been observed that <span class="math notranslate nohighlight">\(\ce{^{18}O}\)</span> and <span class="math notranslate nohighlight">\(\ce{^{2}H}\)</span> in freshwater are enriched in warm regions and depleted in cold regions, with a range of <span class="math notranslate nohighlight">\(\delta \ce{^{18}O} &gt; \pu{40 ‰}\)</span> and <span class="math notranslate nohighlight">\(\delta \ce{^{2}H} &gt; \pu{300 ‰}\)</span>. In addition, there is a strong linear correlation between <span class="math notranslate nohighlight">\(\delta \ce{^{18}O}\)</span> and <span class="math notranslate nohighlight">\(\delta \ce{^{2}H}\)</span> in meteoric waters, with a slope of <span class="math notranslate nohighlight">\(8\)</span> and deuterium intercept of <span class="math notranslate nohighlight">\(\pu{10}\)</span>. This linear correlation is called the <em><strong>Global Meteoric Water Line (GMWL)</strong></em> and describes the global annual average relationship between <span class="math notranslate nohighlight">\(\delta \ce{^{18}O}\)</span> and <span class="math notranslate nohighlight">\(\delta \ce{^{2}H}\)</span> in natural <a class="reference external" href="https://en.wikipedia.org/wiki/Meteoric_water" title="Meteoric water">meteoric waters</a>.</p>
+<div class="math notranslate nohighlight" id="equation-gmwl">
+<span class="eqno">(78)<a class="headerlink" href="#equation-gmwl" title="Link to this equation">#</a></span>\[\delta \ce{^{2}H} = 8 \delta \ce{^{18}O} + 10\]</div>
+<figure class="margin-caption align-default" id="gmwl-fig">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Global_meteoric_water_line.tif/lossy-page1-1280px-Global_meteoric_water_line.tif.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Global_meteoric_water_line.tif/lossy-page1-1280px-Global_meteoric_water_line.tif.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Global relationship between <span class="math notranslate nohighlight">\(\delta \ce{^{18}O}\)</span> and <span class="math notranslate nohighlight">\(\delta \ce{^{2}H}\)</span> (<span class="math notranslate nohighlight">\(\delta\)</span>D) in water samples. The line shown is called the global meteoric water line. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Global_meteoric_water_line">Global meteoric water line - Wikipedia</a></span><a class="headerlink" href="#gmwl-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The mean global meteoric water line (GMWL) is based on numerous analyses of meteoric waters collected at different latitudes and represents a global average. Local meteoric water lines are determined by measuring the isotopic composition of meteoric waters from a restricted geographic area.</p>
+<p>The <em><strong>Local Meteoric Water Line</strong></em> (LMWL) can diverge from the GMWL depending on the climate of that region. The LMWL can differ from GMWL in slope and intercept - the deviation is mainly from climate factors that impact precipitation patterns.</p>
+<figure class="margin-caption align-default" id="lmwl-fig">
+<img alt="https://www.mdpi.com/water/water-10-00705/article_deploy/html/images/water-10-00705-g003.png" src="https://www.mdpi.com/water/water-10-00705/article_deploy/html/images/water-10-00705-g003.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Local relationship (LMWL) between <span class="math notranslate nohighlight">\(\delta \ce{^{18}O}\)</span> and <span class="math notranslate nohighlight">\(\delta \ce{^{2}H}\)</span> (<span class="math notranslate nohighlight">\(\delta\)</span>D) in water samples from a study in China. Compare the equations with the GMWL shown in the previous figure Image source: <a class="reference external" href="https://www.mdpi.com/2073-4441/10/6/705">Oxygen and Hydrogen Isotopes of Precipitation in a Rocky Mountainous Area of Beijing to Distinguish and Estimate Spring Recharge (mdpi.com)</a></span><a class="headerlink" href="#lmwl-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="71RadioIsotopes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">7.1 Radioisotopes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="73Problems.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7.3 Practice Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-stable-isotopes">What are Stable Isotopes?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stable-isotope-fractionation">Stable Isotope Fractionation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-delta-notation">The <span class="math notranslate nohighlight">\(\delta\)</span> notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stable-isotopes-and-the-water-cycle">Stable isotopes and the water cycle</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3.2 Law of Mass Action &#8212; Introduction to Geochemistry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '32LawMassAction';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3.3 Application of \(K\)" href="33ApplicationsK.html" />
+    <link rel="prev" title="3.1 What is Equilibrium?" href="31ChemicalEquilibrium.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introduction to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Atoms First</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1AtomsFirst.html">1 Atoms First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11Atoms.html">1.1 Atoms and Subatomic Particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12PeriodicTable.html">1.2 The Periodic Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13ChemicalBonding.html">1.3 Chemical Bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14ChemicalReactions.html">1.4 Chemical Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15Problems.html">1.5 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2Thermodynamics.html">2 Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21Energy.html">2.1 Energy and Thermochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22ZerothLaw.html">2.2  The Zeroth Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23FirstLaw.html">2.3  The First Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24SecondLaw.html">2.4 The Second Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25ThirdLaw.html">2.5 The Third Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26Gibbs.html">2.6 Gibbs Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27Problems.html">2.7 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chemical Equilibrium</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3ChemicalEquilibrium.html">3 Chemical Equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31ChemicalEquilibrium.html">3.1 What is Equilibrium?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.2  Law of Mass Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33ApplicationsK.html">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="34Problems.html">3.4  Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acids and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4AcidsBases.html">4 Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41AcidsBases.html">4.1 What are Acids and Bases?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42AcidBaseStrength.html">4.2 Strength of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="43SaltsSolubility.html">4.3 Salts of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44Problems.html">4.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reduction and Oxidation Processes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5Redox.html">5 Redox Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51RedoxRxn.html">5.1 What is Oxidation and Reduction?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52RedoxRxnBalancing.html">5.2 Balancing Redox Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="53pe.html">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="54Problems.html">5.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kinetics of Reactions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Kinetics.html">6 Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Rates.html">6.1  Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62RateExpr.html">6.2  Common Rate Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="63Problems.html">6.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Isotopes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7Isotopes.html">7 Environmental Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71RadioIsotopes.html">7.1 Radioisotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72StableIsotopes.html">7.2 Stable Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="73Problems.html">7.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Organic Chemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="8Organics.html">8 Environmental Organic Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="81WhatOrganics.html">8.1 What are organic chemicals?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="82EnvirOrganicChem.html">8.2 Organic Chemicals in the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="83Problems.html">8.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Review of Basic Mathematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/32LawMassAction.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3.2  Law of Mass Action</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-quotient">Reaction quotient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-law-of-mass-action-and-k">The Law of Mass Action and <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-concentrations">Gas phase concentrations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-and-delta-rxn-g"><span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\Delta_{rxn}G\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-of-k-on-the-direction-of-reactions">Influence of <span class="math notranslate nohighlight">\(K\)</span> on the direction of reactions.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-activities">Chemical Activities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-k">Units of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="law-of-mass-action">
+<h1>3.2  Law of Mass Action<a class="headerlink" href="#law-of-mass-action" title="Link to this heading">#</a></h1>
+<section id="reaction-quotient">
+<h2>Reaction quotient<a class="headerlink" href="#reaction-quotient" title="Link to this heading">#</a></h2>
+<p>To quantify chemical equilibrium, we need to define the term, <em><strong>reaction quotient</strong></em> (<span class="math notranslate nohighlight">\(Q_c\)</span>). In any balanced chemical reaction, this term refers to the ratio of product concentrations in the numerator and reactant concentrations in the denominator – with each concentration raised to a power equal to the corresponding stoichiometric coefficient.</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{aA + bB &lt;=&gt; cC +dD}
+\]</div>
+<div class="math notranslate nohighlight" id="equation-qc">
+<span class="eqno">(22)<a class="headerlink" href="#equation-qc" title="Link to this equation">#</a></span>\[Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}\]</div>
+<p>In the above equation, square brackets “<span class="math notranslate nohighlight">\([ \, ]\)</span>” are used to indicate molar concentrations (<span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> or <span class="math notranslate nohighlight">\(\pu{M}\)</span>) of a chemical constituent.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Reaction quotient</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s write <span class="math notranslate nohighlight">\(Q_c\)</span> for the following reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+N2(g) + 3 H2(g) &amp;&lt;=&gt; 2 NH3(g) \\
+Cd^2+(aq) + 4 Br-(aq) &amp;&lt;=&gt; CdBr4^2-(aq)
+}
+\end{align*}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+        Q_c &amp;= \frac{[\ce{NH3(g)}]^2}{[\ce{N2(g)}][\ce{H2 (g)}]^3}\\
+         &amp;=\frac{[\ce{CdBr4^{2-} (aq)}]}{[\ce{Cd^{2+} (aq)}][\ce{Br^- (aq)}]^4}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details></section>
+<section id="the-law-of-mass-action-and-k">
+<h2>The Law of Mass Action and <span class="math notranslate nohighlight">\(K\)</span><a class="headerlink" href="#the-law-of-mass-action-and-k" title="Link to this heading">#</a></h2>
+<p>Extensive studies and observations have determined that <span class="math notranslate nohighlight">\(Q_c\)</span> had the same value at equilibrium at constant temperature, regardless of the initial concentrations. Therefore, for a system at equilibrium, <span class="math notranslate nohighlight">\(Q_c\)</span> becomes the equilibrium constant, <span class="math notranslate nohighlight">\(K_c\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-lawmassaction">
+<span class="eqno">(23)<a class="headerlink" href="#equation-lawmassaction" title="Link to this equation">#</a></span>\[Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b} = K_c\]</div>
+<p>Equation <a class="reference internal" href="#equation-lawmassaction">(23)</a> is known as the <em><strong>law of mass action</strong></em>. This expression can be simplified as follows:</p>
+<div class="math notranslate nohighlight" id="equation-equi-exp">
+<span class="eqno">(24)<a class="headerlink" href="#equation-equi-exp" title="Link to this equation">#</a></span>\[K_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}\]</div>
+<p>This expression is called the <em><strong>equilibrium expression</strong></em>. If the equilibrium concentrations of all reactants and products are known in a given chemical reaction, we can calculate <span class="math notranslate nohighlight">\(K_c\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Calculating equilibrium constants</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In an analysis of the following reaction at <span class="math notranslate nohighlight">\(\pu{100 ^\circ C}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+Br2(g) + Cl2(g) &lt;=&gt; 2 BrCl(g)
+}\]</div>
+<p class="sd-card-text">the equilibrium concentrations were found to be <span class="math notranslate nohighlight">\([\ce{Br2 (g)}] = \pu{2.3e-3 mol L-1}\)</span>, <span class="math notranslate nohighlight">\([\ce{Cl2 (g)}] = \pu{1.2e-2 mol L-1}\)</span>, and <span class="math notranslate nohighlight">\([\ce{BrCl (g)}] = \pu{1.4e-2 mol L-1}\)</span>.</p>
+<p class="sd-card-text">Let’s write the equilibrium expression and substitute the given equilibrium concentrations to calculate <span class="math notranslate nohighlight">\(K_c\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    K_c &amp;= \frac{[\ce{BrCl(g){}}]^2}{[\ce{Br2(g)}][\ce{Cl2(g)}]}\\
+        &amp;= \frac{(\pu{1.4e-2 mol L-1})^2}{(\pu{2.3e-3 mol L-1})(\pu{1.2e-2 mol L-1})}\\
+        &amp;= 7.1
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Note, we did not show any units for <span class="math notranslate nohighlight">\(K_c\)</span>. It is a dimensionless quantity as described in a subsequent section.</p>
+</div>
+</details></section>
+<section id="gas-phase-concentrations">
+<h2>Gas phase concentrations<a class="headerlink" href="#gas-phase-concentrations" title="Link to this heading">#</a></h2>
+<p>Gas concentrations can be expressed in <span class="math notranslate nohighlight">\(P\)</span>. But in reality, gas concentrations are often expressed in partial pressures or as percent of the composition of Earth’s atmosphere. Therefore, concentrations of gases are commonly expressed in units of atmosphere or <span class="math notranslate nohighlight">\(\pu{atm}\)</span>. We can also convert gas concentrations from <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> to <span class="math notranslate nohighlight">\(\pu{atm}\)</span> using the ideal gas law equation.</p>
+<div class="math notranslate nohighlight" id="equation-gaslaw">
+<span class="eqno">(25)<a class="headerlink" href="#equation-gaslaw" title="Link to this equation">#</a></span>\[PV = n R T\]</div>
+<p>where, <span class="math notranslate nohighlight">\(P\)</span> is pressure in <span class="math notranslate nohighlight">\(\pu{atm}\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is volume in <span class="math notranslate nohighlight">\(\pu{L}\)</span>, <span class="math notranslate nohighlight">\(n\)</span> is number of moles, <span class="math notranslate nohighlight">\(T\)</span> is temperature in <span class="math notranslate nohighlight">\(\pu{K}\)</span>, and <span class="math notranslate nohighlight">\(R\)</span> is gas law constant and has the value of <span class="math notranslate nohighlight">\(\pu{0.0821 L atm mol-1 K-1}\)</span> or <span class="math notranslate nohighlight">\(\pu{8.314 J mol-1 K}\)</span> at STP. Note that the ideal gas law is derived from a combination of Boyle’s, Charles’, and Avogadro’s laws. To convert gas concentrations from <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> to <span class="math notranslate nohighlight">\(\pu{atm}\)</span>, rearrange Eq. <a class="reference internal" href="#equation-gaslaw">(25)</a> as follows:</p>
+<div class="math notranslate nohighlight" id="equation-mol-atm-convert">
+<span class="eqno">(26)<a class="headerlink" href="#equation-mol-atm-convert" title="Link to this equation">#</a></span>\[\frac{n\ (\pu{mol})}{V\ (\pu{L})} = \frac{P\ (\pu{atm}) }{R\ (\pu{atm L mol-1 K-1}) \times T\ (\pu{K})}\]</div>
+<p><a class="reference external" href="https://ed.ted.com/lessons/1207-1-a-bennet-brianh264">The ABC’s of gas: Avogadro, Boyle, Charles - TED-Ed</a></p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/BY9VGS2eXas" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Converting gas phase concentrations</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(P_{\ce{O2}}\)</span> in Earth’s atmosphere is <span class="math notranslate nohighlight">\(0.21\)</span> (or <span class="math notranslate nohighlight">\(21\%\)</span> of Earth’s atmosphere is composed of <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>) We can convert <span class="math notranslate nohighlight">\(P_{\ce{O2}}\)</span> to <span class="math notranslate nohighlight">\([\ce{O2}]\)</span>  at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    \frac{n\ (\pu{mole})}{V\ (\pu{L})} &amp;= \frac{P\ (\pu{atm}) }{R\ (\pu{atm L mol-1 K-1}) \times T\ (\pu{K})}\\
+    &amp;= \frac{\pu{0.21 atm}}{(\pu{0.0821atm L mol-1 K-1})\times (\pu{298 K})}\\
+    &amp;= \pu{8.58e-3 mol L-1}
+    \end{aligned}
+\end{split}\]</div>
+</div>
+</details><p>The equilibrium expression can be rewritten for reactions that involve gases only as</p>
+<div class="math notranslate nohighlight" id="equation-gas-equi">
+<span class="eqno">(27)<a class="headerlink" href="#equation-gas-equi" title="Link to this equation">#</a></span>\[K_p = \frac{{P_C}^c {P_D}^d}{{P_A}^a {P_B}^b}\]</div>
+<p>The subscript, <span class="math notranslate nohighlight">\(p\)</span>, in <span class="math notranslate nohighlight">\(K_p\)</span> refers to gas concentrations expressed in <span class="math notranslate nohighlight">\(\pu{atm}\)</span>, while the subscript, <span class="math notranslate nohighlight">\(c\)</span>, in <span class="math notranslate nohighlight">\(K_c\)</span> refers to gas concentrations expressed in <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>. Because gas concentrations are interchangeable in units, it follows that <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> are correlated as follows:</p>
+<div class="math notranslate nohighlight" id="equation-kp-kc-convert">
+<span class="eqno">(28)<a class="headerlink" href="#equation-kp-kc-convert" title="Link to this equation">#</a></span>\[K_p = K_c (RT)^{\Delta n}\]</div>
+<p>where, <span class="math notranslate nohighlight">\(\Delta n = \sum \text{Total}\, n\, \text{of products} - \sum \text{Total}\, n\, \text{of reactants}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Writing equilibrium expressions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s write the equilibrium expression in <span class="math notranslate nohighlight">\(K_p\)</span> for the following reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+Br2 (g) + Cl2 (g) &lt;=&gt; 2 BrCl (g)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[K_p = \frac{{P_{\ce{BrCl (g)}}}^2}{P_{\ce{Br2 (g)}} P_{\ce{Cl2 (g)}}}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Converting equilibrium expressions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We calculated <span class="math notranslate nohighlight">\(K_c=7.1\)</span> for the reaction below</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+Br2 (g) + Cl2 (g) &lt;=&gt; 2 BrCl (g)}
+\]</div>
+<p class="sd-card-text">Let’s convert <span class="math notranslate nohighlight">\(K_c\)</span> to <span class="math notranslate nohighlight">\(K_p\)</span> using Eq. <a class="reference internal" href="#equation-kp-kc-convert">(28)</a>.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta n = (2)-(1+1) = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+K_p &amp;= K_c (RT)^{\Delta n}\\
+    &amp;= 7.1 \times (\pu{0.0821 atm L mol-1 K-1} \times \pu{373 K})^0\\
+    &amp;= 7.1
+    \end{aligned}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: <span class="math notranslate nohighlight">\(K\)</span>’s and reaction types</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the following two reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+N2O4 (g) &amp;&lt;=&gt; 2 NO2 (g) \\
+CO2 (g) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
+}
+\end{align*}
+\end{split}\]</div>
+<ol class="arabic simple">
+<li><p class="sd-card-text">In the first reaction all chemical components are gases and is an example of homogeneous equilibrium reactions i.e., the states of matter are the same in the entire reaction. The second reaction contains more than one phase of matter and is an example of heterogeneous equilibrium.</p></li>
+<li><p class="sd-card-text">In the first reaction, <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> can be written since all components are gases, while in the second reaction only <span class="math notranslate nohighlight">\(K_c\)</span> can be written as <span class="math notranslate nohighlight">\(P\)</span> is not applicable for aqueous/liquid concentrations.</p></li>
+</ol>
+</div>
+</details></section>
+<section id="k-and-delta-rxn-g">
+<h2><span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\Delta_{rxn}G\)</span><a class="headerlink" href="#k-and-delta-rxn-g" title="Link to this heading">#</a></h2>
+<p>As seen in Eq. <a class="reference internal" href="#equation-equi-exp">(24)</a>, <span class="math notranslate nohighlight">\(K\)</span> indicates a ratio of product concentrations over reactant concentrations at equilibrium. This magnitude of this ratio (<span class="math notranslate nohighlight">\(K\)</span>) can be interpreted mathematically to deduce relative concentrations of reactants or the products at equilibrium in a chemical reaction. When <span class="math notranslate nohighlight">\(K\)</span> is very large, we can expect the numerator (product concentrations) to be very large relative to the denominator (reactant concentrations), and vice versa. In other words, we can interpret a high <span class="math notranslate nohighlight">\(K\)</span> value to indicate the products in a reaction to be more favored and that the reaction proceeds spontaneously as written (to right). Likewise, a low <span class="math notranslate nohighlight">\(K\)</span> can be interpreted as meaning that the reaction is spontaneous to the left. As a rule of thumb, a <span class="math notranslate nohighlight">\(K\)</span> value of  <span class="math notranslate nohighlight">\(\ge 10^2\)</span> is considered high and a value of  <span class="math notranslate nohighlight">\(\le 10^{−2}\)</span> is considered low.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="k-relative">
+<caption><span class="caption-number">Table 9 </span><span class="caption-text">Magnitude of <span class="math notranslate nohighlight">\(K\)</span> and significance in reactions.</span><a class="headerlink" href="#k-relative" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(K\)</span> value</p></th>
+<th class="head"><p>Reaction Direction</p></th>
+<th class="head"><p>Spontaneity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(K \gg 1\)</span></p></td>
+<td><p>Products are favored</p></td>
+<td><p>Spontaneous to right</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(K \ll 1\)</span></p></td>
+<td><p>Reactants are favored</p></td>
+<td><p>Spontaneous to left</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="influence-of-k-on-the-direction-of-reactions">
+<h2>Influence of <span class="math notranslate nohighlight">\(K\)</span> on the direction of reactions.<a class="headerlink" href="#influence-of-k-on-the-direction-of-reactions" title="Link to this heading">#</a></h2>
+<p>Since magnitude of <span class="math notranslate nohighlight">\(K\)</span> is related to spontaneity of the reaction, it follows that <span class="math notranslate nohighlight">\(K\)</span> is directly related to <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span>. When <span class="math notranslate nohighlight">\(K \gg 1\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is negative and when <span class="math notranslate nohighlight">\(K \ll 1\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is positive. Therefore, we can also use <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> to determine <span class="math notranslate nohighlight">\(K\)</span>. In the hypothetical reaction,</p>
+<div class="math notranslate nohighlight">
+\[\ce{aA + bB &lt;=&gt; cC + dD}
+\]</div>
+<p><span class="math notranslate nohighlight">\(Q_C\)</span> can be written as shown in Eq. <a class="reference internal" href="#equation-qc">(22)</a>. Using thermodynamic data, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> can be determined. In nonstandard conditions, it can shown from thermodynamic principles that</p>
+<div class="math notranslate nohighlight">
+\[\Delta_{rxn}G^\circ = \Delta_{rxn}G^\circ{} + \mathrm{R}T\ln Q_c\]</div>
+<p>Under equilibrium conditions, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ{}=0\)</span> and <span class="math notranslate nohighlight">\(Q_c=K_c\)</span>, therefore the above equation can be simplified as follows:</p>
+<div class="math notranslate nohighlight" id="equation-kc-gibbs-ln">
+<span class="eqno">(29)<a class="headerlink" href="#equation-kc-gibbs-ln" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+0 &amp;= \Delta_{rxn}G^\circ{} + \mathrm{R}T\ln K_c \\
+\Delta_{rxn}G^\circ{} &amp;= -\mathrm{R}T\ln K_c
+\end{align}\end{split}\]</div>
+<p>The above equation can be simplified into a non-logarithmic form as follows:</p>
+<div class="math notranslate nohighlight" id="equation-kc-gibbs">
+<span class="eqno">(30)<a class="headerlink" href="#equation-kc-gibbs" title="Link to this equation">#</a></span>\[K_c = e^{-\left({\dfrac{\Delta_{rxn}G^\circ{}}{\mathrm{R}T}}\right)}\]</div>
+</section>
+<section id="chemical-activities">
+<h2>Chemical Activities<a class="headerlink" href="#chemical-activities" title="Link to this heading">#</a></h2>
+<p>In chemical thermodynamics, concentrations are dimensionless (unitless). These dimensionless or idealized concentrations are called activities. Activity of a chemical constituent is an important concept and is used to address the influence of physical and chemical conditions in the bulk solution. Chemical species in solution interact in many ways with nearby chemical species, including chemical bonding, van der Waals (dipole) interactions, to long-range electrostatic interactions. Sometimes, when concentrations of solutes are very high, they crowd each other. The intensity of all these interactions depends on the distance between the molecules and their concentrations. The activities inherently account for all these factors and are hence referred to as “thermodynamic concentrations.” Because, these values are dimensionless, <span class="math notranslate nohighlight">\(K_c\)</span> of any aqueous phase chemical reaction is dimensionless.</p>
+<p>Activities are derived from the same fundamental thermodynamic principles covered thus far. We use “<span class="math notranslate nohighlight">\(\{\, \}\)</span>” (curly brackets or braces) around chemical species names to indicate activity. An activity coefficient (<span class="math notranslate nohighlight">\(\gamma_i\)</span>) is used to convert concentrations to activities as follows:</p>
+<div class="math notranslate nohighlight" id="equation-activity">
+<span class="eqno">(31)<a class="headerlink" href="#equation-activity" title="Link to this equation">#</a></span>\[\{A\} = \gamma_A [A]\]</div>
+<p>where <span class="math notranslate nohighlight">\(\{A\}\)</span> is activity, <span class="math notranslate nohighlight">\([A]\)</span> is concentration, and <span class="math notranslate nohighlight">\(\gamma_A\)</span> is the activity coefficient. By convention, <span class="math notranslate nohighlight">\(\gamma_A = 1\)</span> for ideal solutes and dilute solutions (e.g., rain water and freshwater systems) and is <span class="math notranslate nohighlight">\(&lt; 1\)</span> all other cases. Also, by convention, <span class="math notranslate nohighlight">\(\{A\} = 1\)</span> for pure solids (e.g., mineral phases, precipitates, etc) and pure liquids (e.g., water).</p>
+<p>Activity coefficients are usually determined using ionic strength (<span class="math notranslate nohighlight">\(I\)</span>) of a solution. Ionic strength is a measure of combined concentration of all ions present in an aqueous solution and is calculated as follows:</p>
+<div class="math notranslate nohighlight" id="equation-ionicstrength">
+<span class="eqno">(32)<a class="headerlink" href="#equation-ionicstrength" title="Link to this equation">#</a></span>\[I = \frac{1}{2} \sum_{i=1}^{n} c_i z_i^2\]</div>
+<p>where,  <span class="math notranslate nohighlight">\(c_i\)</span> is concentration of each ion in <span class="math notranslate nohighlight">\(\pu{mol L-1 }\)</span> and <span class="math notranslate nohighlight">\(z_i\)</span> is charge of each ion in  <span class="math notranslate nohighlight">\(\pu{eq mol-1}\)</span>. The activity coefficient, <span class="math notranslate nohighlight">\(\gamma_i\)</span> for each ion using one of the following equations:</p>
+<div class="math notranslate nohighlight" id="equation-activitycoeff">
+<span class="eqno">(33)<a class="headerlink" href="#equation-activitycoeff" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
+-\log \gamma_i &amp;= A z_i^2 \sqrt{I}\, &amp;&amp; \text{for}\, I&lt;0.005 \\
+-\log \gamma_i &amp;= \dfrac{A z_i^2 \sqrt{I}}{1+Ba_i\sqrt{I}}\, &amp;&amp; \text{for}\, 0.005&lt;I&lt;0.1\\
+-\log \gamma_i &amp;= A z_i^2 \sqrt{I} \left( \dfrac{\sqrt{I}}{1+\sqrt{I}} -0.2I\right)\, &amp;&amp; \text{for}\, 0.1&lt;I&lt;0.5 
+\end{aligned}\end{split}\]</div>
+<p>where, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are called Debye-Hückel constants and vary with temperature. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(A=\pu{0.511}\)</span> and <span class="math notranslate nohighlight">\(B=\pu{0.329e8}\)</span>. <span class="math notranslate nohighlight">\(a_i\)</span> is ion size parameter and is provided in <a class="reference internal" href="#ionsize"><span class="std std-numref">Table 10</span></a>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="pst-scrollable-table-container"><table class="table" id="ionsize">
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">Ion size parameters (<span class="math notranslate nohighlight">\(a_i\)</span>) of major ions</span><a class="headerlink" href="#ionsize" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(a_i, \, \pu{cm}\)</span></p></th>
+<th class="head"><p>Ion</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\pu{3e-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{All ions (exceptions below)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\pu{4e-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{Na+}\)</span>, <span class="math notranslate nohighlight">\(\ce{SO4^2-}\)</span>, <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\pu{6e-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{Ca^2+}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\pu{8e-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{Mg^2+}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</aside>
+</section>
+<section id="units-of-k">
+<h2>Units of <span class="math notranslate nohighlight">\(K\)</span><a class="headerlink" href="#units-of-k" title="Link to this heading">#</a></h2>
+<p>As seen in the previous section, the <strong>activity</strong>, or the effective concentration, of ions is less than that indicated by the actual concentration. Ions become more and more widely separated as solutions become more dilute, and the residual interionic interactions become less significant. Thus, in extremely dilute solutions, the effective concentrations of the ions (their activities) are essentially equal to the actual concentrations. <em>In freshwater environmental systems, aqueous ions are present in very small concentrations and, therefore, activities and concentrations are similar</em>.</p>
+<p>Below is a summary of the main conventions of activities and effective concentrations:</p>
+<ul class="simple">
+<li><p>Activities are dimensionless (unitless) quantities and are in essence “adjusted” concentrations.</p></li>
+<li><p>For relatively dilute solutions, a substance’s activity and its molar concentration are roughly equal.</p></li>
+<li><p>Activities for pure condensed phases (solids and liquids) are equal to 1.</p></li>
+</ul>
+<p>As a consequence of this last consideration, <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions do not contain terms for solids or liquids (being numerically equal to 1, these terms have no effect on the expression’s value)<em>.</em></p>
+<p>For <strong>homogeneous equilibrium</strong> (the reactants and products are present in a single solution), evaluation of reaction quotients (<span class="math notranslate nohighlight">\(Q_c\)</span>) and equilibrium constants (<span class="math notranslate nohighlight">\(K_c\)</span>), it is a common convention to omit units of concentrations (as they are equivalent to activities) of reactants and products, resulting in <strong><span class="math notranslate nohighlight">\(K\)</span> values are also dimensionless</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Homogeneous reactions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the following reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+H2CO3 (aq) &amp;&lt;=&gt; H+ (aq) + HCO3- (aq) &amp;&amp; $K_c$ = \frac{[H+ (aq)][HCO3- (aq)]}{[H2CO3 (aq)]}\\
+NH3 (aq) + H2O (l) &amp;&lt;=&gt; NH4+ (aq) + OH- (aq) &amp;&amp; $K_c$ = \frac{[NH4+ (aq)][OH− (aq)]}{[NH3 (aq)]}\\
+N2 (g) + 3 H2 (g) &amp;⇌ 2 NH3 (g) &amp;&amp; $K_c$ = \frac{[NH3 (g)]^2}{[N2 (g)][H2 (g)]^3}
+}
+\end{align*}
+\end{split}\]</div>
+<ol class="arabic simple">
+<li><p class="sd-card-text">In the first two reactions all chemical components are in aqueous phase and/or also include <span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span>. A <span class="math notranslate nohighlight">\(K_c\)</span> expression can be written for these reactions and the concentration <span class="math notranslate nohighlight">\(H2O (l)\)</span> does not appear in the <span class="math notranslate nohighlight">\(K_c\)</span> expression by convention.</p></li>
+<li><p class="sd-card-text">In the third reaction, all components are in gas phase and <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
+</ol>
+</div>
+</details><p>A <strong>heterogeneous equilibrium</strong> is a system in which reactants and products are found in two or more phases. The phases may be any combination of solid, liquid, or gas phases, and solutions. When dealing with these equilibria, remember that solids and pure liquids do not appear in equilibrium constant expressions (the activities of pure solids, pure liquids, and solvents are 1).  If a chemical reaction involves heterogeneous phases of reactants and products (usually a mixture of gases and liquids), it is not uncommon to see <span class="math notranslate nohighlight">\(K\)</span> values with units.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Heterogeneous reactions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the following reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+PbCl2 (s) + H2O (l)  &amp;⇌ Pb^2+ (aq) + 2 Cl− (aq) &amp;&amp; $K_c$ = [Pb^2+ (aq)][Cl− (aq)]^2 \\
+CaO (s) + CO2 (g) &amp;⇌ CaCO3 (s) &amp;&amp; $K_c$ = \frac{1}{[CO2 (g)]} \\
+H2O (l) &amp;⇌ H2O (g) &amp;&amp; $K_c$ = [H2O (g)] 
+}
+\end{align*}
+\end{split}\]</div>
+<ol class="arabic simple">
+<li><p class="sd-card-text">In the first reaction, a solid is dissolving in <span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span> to form ions.</p></li>
+<li><p class="sd-card-text">In the second reaction, a solid is reacting with a gas to form another solid. <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
+<li><p class="sd-card-text">In the third reaction, a phase change is occuring. <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
+</ol>
+<p class="sd-card-text">When writing out the <span class="math notranslate nohighlight">\(K_c\)</span> expressions in such reactions, the activities of solids, liquids, and solvents are 1.</p>
+</div>
+</details></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="31ChemicalEquilibrium.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">3.1 What is Equilibrium?</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="33ApplicationsK.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-quotient">Reaction quotient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-law-of-mass-action-and-k">The Law of Mass Action and <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-concentrations">Gas phase concentrations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-and-delta-rxn-g"><span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\Delta_{rxn}G\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-of-k-on-the-direction-of-reactions">Influence of <span class="math notranslate nohighlight">\(K\)</span> on the direction of reactions.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-activities">Chemical Activities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-k">Units of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

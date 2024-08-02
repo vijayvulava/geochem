@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2.6 Gibbs Free Energy &#8212; Introduction to Geochemistry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '26Gibbs';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.7 Practice Problems" href="27Problems.html" />
+    <link rel="prev" title="2.5 The Third Law" href="25ThirdLaw.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introduction to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Atoms First</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1AtomsFirst.html">1 Atoms First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11Atoms.html">1.1 Atoms and Subatomic Particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12PeriodicTable.html">1.2 The Periodic Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13ChemicalBonding.html">1.3 Chemical Bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14ChemicalReactions.html">1.4 Chemical Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15Problems.html">1.5 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2Thermodynamics.html">2 Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21Energy.html">2.1 Energy and Thermochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22ZerothLaw.html">2.2  The Zeroth Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23FirstLaw.html">2.3  The First Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24SecondLaw.html">2.4 The Second Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25ThirdLaw.html">2.5 The Third Law</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.6 Gibbs Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27Problems.html">2.7 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chemical Equilibrium</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3ChemicalEquilibrium.html">3 Chemical Equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31ChemicalEquilibrium.html">3.1 What is Equilibrium?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LawMassAction.html">3.2  Law of Mass Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33ApplicationsK.html">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="34Problems.html">3.4  Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acids and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4AcidsBases.html">4 Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41AcidsBases.html">4.1 What are Acids and Bases?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42AcidBaseStrength.html">4.2 Strength of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="43SaltsSolubility.html">4.3 Salts of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44Problems.html">4.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reduction and Oxidation Processes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5Redox.html">5 Redox Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51RedoxRxn.html">5.1 What is Oxidation and Reduction?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52RedoxRxnBalancing.html">5.2 Balancing Redox Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="53pe.html">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="54Problems.html">5.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kinetics of Reactions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Kinetics.html">6 Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Rates.html">6.1  Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62RateExpr.html">6.2  Common Rate Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="63Problems.html">6.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Isotopes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7Isotopes.html">7 Environmental Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71RadioIsotopes.html">7.1 Radioisotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72StableIsotopes.html">7.2 Stable Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="73Problems.html">7.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Organic Chemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="8Organics.html">8 Environmental Organic Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="81WhatOrganics.html">8.1 What are organic chemicals?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="82EnvirOrganicChem.html">8.2 Organic Chemicals in the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="83Problems.html">8.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Review of Basic Mathematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/26Gibbs.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2.6 Gibbs Free Energy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-gibbs-free-energy-delta-f-g-circ">Standard Gibbs free energy, <span class="math notranslate nohighlight">\(\Delta _{f} G^\circ\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predicting-sign-of-delta-rxn-g-circ">Predicting sign of <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-t-at-equilibrium">Calculating <span class="math notranslate nohighlight">\(T\)</span> at equilibrium</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="gibbs-free-energy">
+<h1>2.6 Gibbs Free Energy<a class="headerlink" href="#gibbs-free-energy" title="Link to this heading">#</a></h1>
+<p>According to the second law, <span class="math notranslate nohighlight">\(\Delta _{universe} S^\circ  &gt; 0\)</span>, which was expressed in another form in Eq. <a class="reference internal" href="24SecondLaw.html#equation-secondlaw">(16)</a>.</p>
+<div class="math notranslate nohighlight">
+\[\Delta _{universe} S^\circ  = \Delta _{sys} S^\circ  - \frac{\Delta _{sys} H^\circ  }{T} &gt;0\]</div>
+<p>Multiply both sides of above equation by <span class="math notranslate nohighlight">\(T\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[T\Delta _{universe} S^\circ  = T \Delta _{sys} S^\circ  - \Delta _{sys} H^\circ   &gt;0\]</div>
+<p>Now reverse signs on both sides of above equation,</p>
+<div class="math notranslate nohighlight" id="equation-gibbs-deriv">
+<span class="eqno">(18)<a class="headerlink" href="#equation-gibbs-deriv" title="Link to this equation">#</a></span>\[-T \Delta _{universe} S^\circ  = \Delta _{sys} H^\circ -T \Delta _{sys} S^\circ    &lt;0\]</div>
+<p>According to Eq. <a class="reference internal" href="#equation-gibbs-deriv">(18)</a>, processes that occur at constant <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(T\)</span> are spontaneous if <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ\)</span> and <span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ\)</span> are such that <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ   -T \Delta _{sys} S^\circ    &lt;0\)</span>. To simplify this expression, we introduce a new thermodynamic function called Gibbs free energy (<span class="math notranslate nohighlight">\(G\)</span>) or free energy. Gibbs free energy, , is the energy available to do work.</p>
+<div class="math notranslate nohighlight" id="equation-gibbs">
+<span class="eqno">(19)<a class="headerlink" href="#equation-gibbs" title="Link to this equation">#</a></span>\[\Delta _{sys} G^\circ = \Delta _{sys} H^\circ -T \Delta _{sys} S^\circ \]</div>
+<p>Free energy is a state function and, as the name implies, has same units as and <span class="math notranslate nohighlight">\(T \Delta _{sys} S^\circ\)</span> (<span class="math notranslate nohighlight">\(\pu{kJ}\)</span> or <span class="math notranslate nohighlight">\(\pu{kJ mol−1}\)</span>)  If a reaction is accompanied by release of usable energy (<span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ  &lt;0\)</span>), reaction is guaranteed to be spontaneous.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="g-spont">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> and spontaneity of reactions.</span><a class="headerlink" href="#g-spont" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head text-center"><p><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> condition</p></th>
+<th class="head"><p>Reaction condition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ  &lt;0\)</span></p></td>
+<td><p>Reaction is spontaneous in forward direction</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ  =0\)</span></p></td>
+<td><p>Reaction is at equilibrium</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ  &gt;0\)</span></p></td>
+<td><p>Reaction is nonspontaneous as written</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="standard-gibbs-free-energy-delta-f-g-circ">
+<h2>Standard Gibbs free energy, <span class="math notranslate nohighlight">\(\Delta _{f} G^\circ\)</span><a class="headerlink" href="#standard-gibbs-free-energy-delta-f-g-circ" title="Link to this heading">#</a></h2>
+<p>The standard free energy of reaction is the free-energy change for a reaction when it occurs under standard-state conditions - i.e., when reactants in their standard states are converted to products in their standard states.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>The CRC Handbook of Physics and Chemistry is a good reference obtaining <span class="math notranslate nohighlight">\(\Delta_f G^\circ\)</span> for most chemicals. The online version is available at <a class="reference external" href="https://hbcp.chemnetbase.com/faces/documents/05_02/05_02_0001.xhtml">Standard Thermodynamic Properties of Chemical Substances (chemnetbase.com)</a></p>
+</aside>
+<p><span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is calculated as follows:</p>
+<div class="math notranslate nohighlight" id="equation-gibbs-rxn">
+<span class="eqno">(20)<a class="headerlink" href="#equation-gibbs-rxn" title="Link to this equation">#</a></span>\[\Delta _{rxn} G^\circ = \sum \Delta _{products} G^\circ - \sum \Delta _{reactants} G^\circ\]</div>
+<p><span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> can be calculated by looking up standard free energy of formation (<span class="math notranslate nohighlight">\(\Delta _{f} G^\circ\)</span>) from thermodynamic data tables.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Calculating <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Example 1</strong></p>
+<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> for the following reaction at
+<span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \ce{
+C (s) + O2 (g) -&gt; CO2 (g)
+}\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{C(s)} = \pu{0 kJ mol-1}\)</span>, <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{O2(g)} = \pu{0 kJ mol-1}\)</span>, and <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{CO2(g)} = \pu{-394.4 kJ mol-1}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Delta _{rxn} G^\circ  &amp;= [\Delta _f G^\circ _\ce{CO2 (g)}] - [\Delta _f G^\circ _\ce{C (s)} + \Delta _f G_\ce{O2 (g)}]\\
+&amp;= [(\pu{-394.4 kJ mol-1})] - [(\pu{0 kJ mol-1}) + (\pu{0 kJ mol-1})]\\
+&amp;= \pu{-394.4 kJ mol-1}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Example 2</strong></p>
+<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> for the following reaction at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{
+CH4(g) + 2 O2(g) -&gt; CO2(g) + 2 H2O(l)
+}
+\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{CH4(g)} = \pu{-50.8 kJ mol-1}\)</span>, <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{CO2(g)} = \pu{-394.4 kJ mol-1}\)</span>, <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{O2(g)} = \pu{0 kJ mol-1}\)</span>, and <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{H2O(l)} = \pu{-237.2 kJ mol-1}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta _{rxn} G^\circ  &amp;= [\Delta_f G^\circ _\ce{CO2 (g)} + 2 \cdot\Delta_f G^\circ _\ce{H2O (l)}] - [\Delta_f G^\circ _\ce{CH4 (g)} + 2\cdot \Delta_f G^\circ _\ce{O2 (g)}]\\
+&amp;= [(\pu{-394.4 kJ mol-1}) + 2(\pu{-237.2 kJ mol-1})]  - [(\pu{-50.8 kJ mol-1}) + 2(\pu{0 kJ mol-1})]\\
+&amp;= \pu{-818.0 kJ mol-1}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details></section>
+<section id="predicting-sign-of-delta-rxn-g-circ">
+<h2>Predicting sign of <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span><a class="headerlink" href="#predicting-sign-of-delta-rxn-g-circ" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is a function of <span class="math notranslate nohighlight">\(T\)</span> as can be seen in Eq. <a class="reference internal" href="#equation-gibbs-rxn">(20)</a>. Also, <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ  = 0\)</span> at equilibrium (see <a class="reference internal" href="#g-spont"><span class="std std-numref">Table 7</span></a>). Eq. <a class="reference internal" href="#equation-gibbs-rxn">(20)</a> can be rearranged to determine exact <span class="math notranslate nohighlight">\(T\)</span> where equilibrium is reached.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Delta _{rxn} G^\circ  = \Delta _{sys} H^\circ -T \Delta _{sys} S^\circ  = 0\\\end{split}\]</div>
+<p>Rearranging the above expression, we get</p>
+<div class="math notranslate nohighlight" id="equation-gibbs-t">
+<span class="eqno">(21)<a class="headerlink" href="#equation-gibbs-t" title="Link to this equation">#</a></span>\[T = \frac{\Delta _{sys} H^\circ}{\Delta _{sys} S^\circ }\]</div>
+<p>Equations <a class="reference internal" href="#equation-gibbs">(19)</a>  and <a class="reference internal" href="#equation-gibbs-t">(21)</a> can be used to predict sign of <span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> as shown in <a class="reference internal" href="#gibbs-predict"><span class="std std-numref">Table 8</span></a>.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="gibbs-predict">
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">Predicting sign of <span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> using signs of <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span> and <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ\)</span>.</span><a class="headerlink" href="#gibbs-predict" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>When <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ\)</span> is</p></th>
+<th class="head text-center"><p>and <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span> is</p></th>
+<th class="head text-center"><p>then <span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> will be</p></th>
+<th class="head"><p>and the process is</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td><p>Spontaneous</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td><p>Nonspontaneous</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-\)</span> when <span class="math notranslate nohighlight">\(T{\Delta _{sys}S^\circ} &lt; {\Delta _{sys} H^\circ}\)</span></p></td>
+<td><p>Spontaneous at low <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(+\)</span> when <span class="math notranslate nohighlight">\(T {\Delta _{sys} S^\circ} &gt; {\Delta _{sys} H^\circ}\)</span></p></td>
+<td><p>Nonspontaneous at high <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-\)</span> when <span class="math notranslate nohighlight">\(T{\Delta _{sys}S^\circ} &gt; {\Delta _{sys} H^\circ}\)</span></p></td>
+<td><p>Spontaneous at high <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(+\)</span> when <span class="math notranslate nohighlight">\(T{\Delta _{sys}S^\circ} &lt; {\Delta _{sys} H^\circ}\)</span></p></td>
+<td><p>Nonspontaneous at low <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="calculating-t-at-equilibrium">
+<h2>Calculating <span class="math notranslate nohighlight">\(T\)</span> at equilibrium<a class="headerlink" href="#calculating-t-at-equilibrium" title="Link to this heading">#</a></h2>
+<p>In earlier example, we saw how <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> was calculated at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> using Eq. <a class="reference internal" href="#equation-gibbs-rxn">(20)</a> - however, <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> is a function of <span class="math notranslate nohighlight">\(T\)</span>. How do we calculate (<span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> at other <span class="math notranslate nohighlight">\(T\)</span>? In such cases, <span class="math notranslate nohighlight">\(\Delta _{rxn} S^\circ\)</span> and <span class="math notranslate nohighlight">\(\Delta _{rxn} H^\circ\)</span> are determined separately and applied directly in Eq. <a class="reference internal" href="#equation-gibbs-t">(21)</a> at the specified <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Using Eq. <a class="reference internal" href="#equation-gibbs-t">(21)</a>, exact <span class="math notranslate nohighlight">\(T\)</span> where a system reaches equilibrium could be calculated. At any <span class="math notranslate nohighlight">\(T\)</span> above or below this value the system will not longer be in equilibrium. The exact definition of equilibrium will be explored in the next chapter.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Calculating <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> at a specified <span class="math notranslate nohighlight">\(T\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> for decomposition of limestone to quick lime and <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> as per the following reaction at <span class="math notranslate nohighlight">\(\pu{835 ^\circ C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{CaCO3(s) -&gt; CaO(s) + CO2(g)}
+\]</div>
+<p class="sd-card-text">Thermodynamic data for these substances at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> are as follows:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Chemical</p></th>
+<th class="head text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span>, , <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+<th class="head text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(S^\circ\)</span>, , <span class="math notranslate nohighlight">\(\pu{J K-1 mol−1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CaCO3(s)}\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-1206.9\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(92.9\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CaO(s)}\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-635.6\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(39.8\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-393.5\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(213.6\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="sd-card-text">From these data we can determine <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{177.8 kJ mol-1}\)</span> and <span class="math notranslate nohighlight">\(\Delta_{rxn}S^\circ = \pu{160.5 J K-1 mol-1}\)</span>. From these data, let’s calculate <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> at <span class="math notranslate nohighlight">\(\pu{835 ^\circ C}\)</span> (= <span class="math notranslate nohighlight">\(\pu{1108 K}\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta _{rxn} G^\circ  &amp;= \Delta_{rxn}H^\circ -T \Delta_{rxn}S^\circ\\
+   &amp;=\pu{177.8 kJ mol-1} - (\pu{1108 K})(\pu{160.5 J K-1 mol-1}) \left(\frac{\pu{1 kJ}}{\pu{e3 J}}\right)\\
+   &amp; =\pu{0  kJ mol-1}
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">In this particular example, the system reached equilibrium at <span class="math notranslate nohighlight">\(\pu{835 ^\circ C}\)</span>!</p>
+</div>
+</details></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="25ThirdLaw.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2.5 The Third Law</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="27Problems.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.7 Practice Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-gibbs-free-energy-delta-f-g-circ">Standard Gibbs free energy, <span class="math notranslate nohighlight">\(\Delta _{f} G^\circ\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predicting-sign-of-delta-rxn-g-circ">Predicting sign of <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-t-at-equilibrium">Calculating <span class="math notranslate nohighlight">\(T\)</span> at equilibrium</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

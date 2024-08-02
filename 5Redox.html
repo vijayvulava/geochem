@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5 Redox Chemistry &#8212; Introduction to Geochemistry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5Redox';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5.1 What is Oxidation and Reduction?" href="51RedoxRxn.html" />
+    <link rel="prev" title="4.4 Practice Problems" href="44Problems.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introduction to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Atoms First</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1AtomsFirst.html">1 Atoms First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11Atoms.html">1.1 Atoms and Subatomic Particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12PeriodicTable.html">1.2 The Periodic Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13ChemicalBonding.html">1.3 Chemical Bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14ChemicalReactions.html">1.4 Chemical Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15Problems.html">1.5 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2Thermodynamics.html">2 Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21Energy.html">2.1 Energy and Thermochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22ZerothLaw.html">2.2  The Zeroth Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23FirstLaw.html">2.3  The First Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24SecondLaw.html">2.4 The Second Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25ThirdLaw.html">2.5 The Third Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26Gibbs.html">2.6 Gibbs Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27Problems.html">2.7 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chemical Equilibrium</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3ChemicalEquilibrium.html">3 Chemical Equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31ChemicalEquilibrium.html">3.1 What is Equilibrium?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LawMassAction.html">3.2  Law of Mass Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33ApplicationsK.html">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="34Problems.html">3.4  Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acids and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4AcidsBases.html">4 Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41AcidsBases.html">4.1 What are Acids and Bases?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42AcidBaseStrength.html">4.2 Strength of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="43SaltsSolubility.html">4.3 Salts of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44Problems.html">4.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reduction and Oxidation Processes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5 Redox Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51RedoxRxn.html">5.1 What is Oxidation and Reduction?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52RedoxRxnBalancing.html">5.2 Balancing Redox Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="53pe.html">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="54Problems.html">5.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kinetics of Reactions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Kinetics.html">6 Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Rates.html">6.1  Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62RateExpr.html">6.2  Common Rate Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="63Problems.html">6.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Isotopes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7Isotopes.html">7 Environmental Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71RadioIsotopes.html">7.1 Radioisotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72StableIsotopes.html">7.2 Stable Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="73Problems.html">7.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Organic Chemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="8Organics.html">8 Environmental Organic Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="81WhatOrganics.html">8.1 What are organic chemicals?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="82EnvirOrganicChem.html">8.2 Organic Chemicals in the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="83Problems.html">8.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Review of Basic Mathematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/5Redox.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>5 Redox Chemistry</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acid-rain">Acid Rain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acid-mine-drainage">Acid Mine Drainage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arsenic-in-bengal-basin">Arsenic in Bengal Basin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chromium-in-groundwater">Chromium in Groundwater</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excess-nutrients-in-water">Excess nutrients in water</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="redox-chemistry">
+<h1>5 Redox Chemistry<a class="headerlink" href="#redox-chemistry" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Earth’s atmosphere contains about <span class="math notranslate nohighlight">\(\pu{20 \%}\)</span> molecular oxygen, <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>, a chemically reactive gas that plays an essential role in the metabolism of aerobic organisms and in many environmental processes that shape the world. The term oxidation was originally used to describe chemical reactions involving <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>, but its meaning has evolved to refer to a broad and important reaction class known as <em>oxidation-reduction (redox) reactions</em>.</p>
+<p>In this chapter, we focus on how loss or gain of electrons can impact elements and their behavior in the environment. Below are some basic examples of redox reactions that occur on Earth, both naturally and due to human actions.</p>
+<section id="acid-rain">
+<h3>Acid Rain<a class="headerlink" href="#acid-rain" title="Link to this heading">#</a></h3>
+<p>Coal from the Appalachian Mountains have naturally higher sulfur content, due to their geological origin in the ocean basins. This coal is also the most common type of coal consumed in most of the eastern half of the US. When this coal is combusted, <span class="math notranslate nohighlight">\(\ce{S}\)</span> is oxidized as shown in the reaction below to form <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span>. Subsequent oxidation reaction turns <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span> into <span class="math notranslate nohighlight">\(\ce{SO3(g)}\)</span>, which leads to formation of sulfuric acid (<span class="math notranslate nohighlight">\(\ce{H2SO4(aq)}\)</span>) by combining with water. Sulfuric acid is a strong acid and leads to acid rain as well as acidification of natural streams, leading to deleterious impacts on overall environments.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+\begin{align*} 
+\ce{
+S(s) + O2(g) &amp;-&gt; SO2(g\\
+2 SO2(g) + O2(g) &amp;-&gt; 2 SO3(g) \\
+SO3(g) + H2O(l) &amp;-&gt; H2SO4(aq) \\
+H2SO4(aq) &amp;-&gt; H+(aq) + HSO4^-(aq) &amp;
+} 
+\end{align*} 
+\end{split}\]</div>
+</section>
+<section id="acid-mine-drainage">
+<h3>Acid Mine Drainage<a class="headerlink" href="#acid-mine-drainage" title="Link to this heading">#</a></h3>
+<p>Metal-bearing sulfide minerals such as iron, copper, and lead pyrites (<span class="math notranslate nohighlight">\(\ce{FeS2}\)</span>, <span class="math notranslate nohighlight">\(\ce{Cu2S}\)</span>, and <span class="math notranslate nohighlight">\(\ce{PbS}\)</span>), are stable in reducing environments but break down in oxidizing environments driven by oxidation of the sulfide anion (<span class="math notranslate nohighlight">\(\ce{S^2-}\)</span>) to <span class="math notranslate nohighlight">\(\ce{S^6+}\)</span> (present in <span class="math notranslate nohighlight">\(\ce{SO4^2-}\)</span>), can result in release of trace metals and arsenic to soils and aquatic systems.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+\begin{align*} 
+\ce{
+FeS2 + 14 Fe^3+ + 8 H2O &amp;-&gt; 16 H+ + 15 Fe^2+ + 2 SO4^2-\\
+PbS + 8 Fe^3+ + 4 H2O &amp;-&gt; 8 H+ + SO4^2- + Pb^2+ + 8 Fe^2+
+} \end{align*} \end{split}\]</div>
+<p>A by-product of these reactions is the large-scale release of acids (<span class="math notranslate nohighlight">\(\ce{H+}\)</span> in the above reactions) into stream environments. Often, <span class="math notranslate nohighlight">\(p\ce{H}\)</span> drops to levels that cannot sustain any aquatic life.</p>
+<p><a class="reference external" href="https://www.usgs.gov/mission-areas/water-resources/science/mine-drainage">Mine Drainage | U.S. Geological Survey (usgs.gov)</a></p>
+</section>
+<section id="arsenic-in-bengal-basin">
+<h3>Arsenic in Bengal Basin<a class="headerlink" href="#arsenic-in-bengal-basin" title="Link to this heading">#</a></h3>
+<p>Arsenic poisoning and the health emergency in Bengal Basin of the Indian subcontinent. The shallow aquifer materials in the Bengal Basic naturally contain thick deposits of arsenopyrite (<span class="math notranslate nohighlight">\(\ce{FeAsS}\)</span>) minerals. To address high infant mortality rates in Bangladesh, the WHO recommended and funded a large-scale installation of groundwater wells as groundwater naturally contained low bacteria compared to stream water. During pumping of groundwater, the extensive drawdown of the water table allowed reduction of ferric (<span class="math notranslate nohighlight">\(\ce{Fe^3+}\)</span>) to ferrous (<span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>) iron and dissolution of iron hydroxides, which in turn released arsenic into solution. Aquifers where dissolved arsenic was once well below drinking-water standards (e.g., <span class="math notranslate nohighlight">\(\pu{10 ppb}\)</span> in the USA) can experience substantial increases of dissolved arsenic that exceed safe drinking water standards.</p>
+<p><a class="reference external" href="https://www.iwapublishing.com/news/arsenic-contamination-groundwater-bangladesh-environmental-and-social-disaster">Arsenic Contamination In Groundwater In Bangladesh: An Environmental And Social Disaster | IWA Publishing</a></p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/BVht6JtufYE" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+</section>
+<section id="chromium-in-groundwater">
+<h3>Chromium in Groundwater<a class="headerlink" href="#chromium-in-groundwater" title="Link to this heading">#</a></h3>
+<p>Groundwater contamination during unregulated dumping of <span class="math notranslate nohighlight">\(\ce{Cr(VI)}\)</span> (<span class="math notranslate nohighlight">\(\ce{Cr^6+}\)</span>) waste by a large electrical utility, PG&amp;E, into unlined soil pits created a health emergency in the community of Hinkley, CA. The <span class="math notranslate nohighlight">\(\ce{Cr}\)</span> waste seeped into the aquifer and created a large plume that went undetected until the contaminated well water created many health problems in the local community. Since <span class="math notranslate nohighlight">\(\ce{Cr(VI)}\)</span> is present in water as an oxyanion (<span class="math notranslate nohighlight">\(\ce{Cr2O7^2-}\)</span> or <span class="math notranslate nohighlight">\(\ce{CrO4^2-}\)</span>), it is not “attracted” (sorbed) to aquifer materials, this form of Cr can easily be transported in groundwater environments. Typically, treatment of this form requires that <span class="math notranslate nohighlight">\(\ce{Cr^6+}\)</span> to be reduced to <span class="math notranslate nohighlight">\(\ce{Cr^3+}\)</span>, which is less toxic.</p>
+<p><a class="reference external" href="https://news.stanford.edu/2018/07/23/widespread-groundwater-contamination-risk-chromium/">Widespread groundwater contamination risk from chromium | Stanford News</a></p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/tadJai_SC4I" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+</section>
+<section id="excess-nutrients-in-water">
+<h3>Excess nutrients in water<a class="headerlink" href="#excess-nutrients-in-water" title="Link to this heading">#</a></h3>
+<p>Large-scale factory-farming practices use excessive fertilizers to increase crop and animal yield. A by-product of these practices is the discharge of large concentrations of nutrient elements such as <span class="math notranslate nohighlight">\(\ce{N}\)</span> and <span class="math notranslate nohighlight">\(\ce{P}\)</span> in stream runoff. The excess <span class="math notranslate nohighlight">\(\ce{N}\)</span> and <span class="math notranslate nohighlight">\(\ce{P}\)</span> in the final receiving bodies of water result in an increase in algal populations in water. Excess algae create “blooms” that can be seen in the form of green pigments that float on water. Eutrophication, where degradation of algae in water bodies reduces available dissolved <span class="math notranslate nohighlight">\(\ce{N}\)</span> and <span class="math notranslate nohighlight">\(\ce{O2(aq)}\)</span> (DO) in the water. Aerobic microbial organisms responsible for degradation (consumption) of algae also consume during this process. Ultimately, DO reduces to a dangerously low level that is detrimental to aquatic and marine life. Excess fertilizer discharge in stream runoff have created “dead zones” and harmful algal blooms (HAB) in the Gulf of Mexico, the Great Lakes, and along the Atlantic coastal areas. Highly oxygenated surface waters in cool streams and lakes typically contain <span class="math notranslate nohighlight">\(\pu{7-9 mg L-1}\)</span> of DO. Wetlands and groundwater contain naturally lower amounts of DO than do surface waters (e.g., groundwater generally contain DO from <span class="math notranslate nohighlight">\(\pu{1-6 mg L-1}\)</span> while wetlands can vary between oxic and anoxic conditions). In aquatic environments, DO levels below <span class="math notranslate nohighlight">\(\pu{5-6 mg L-1}\)</span> are detrimental to aquatic life.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/92TFJTtuq6k" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+</section>
+</section>
+<section id="learning-goals">
+<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
+<div class="admonition-learning-goals admonition">
+<p class="admonition-title">Learning Goals</p>
+<p>The main goals for this chapter are to:</p>
+<ol class="arabic simple">
+<li><p>identify oxidation and reduction processes and the role of electrons in redox processes</p></li>
+<li><p>balance oxidation and reduction reactions</p></li>
+<li><p>explain how electron activity is influenced in various environmental settings</p></li>
+<li><p>show relationships between electron activity and <span class="math notranslate nohighlight">\(p\ce{H}\)</span> in a graphical format.</p></li>
+</ol>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/16-introduction">Ch. 16 Electrochemistry - Chemistry: Atoms First | OpenStax</a></p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="44Problems.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4.4 Practice Problems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="51RedoxRxn.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5.1 What is Oxidation and Reduction?</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acid-rain">Acid Rain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acid-mine-drainage">Acid Mine Drainage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arsenic-in-bengal-basin">Arsenic in Bengal Basin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chromium-in-groundwater">Chromium in Groundwater</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excess-nutrients-in-water">Excess nutrients in water</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

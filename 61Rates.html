@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6.1 Chemical Kinetics &#8212; Introduction to Geochemistry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '61Rates';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6.2 Common Rate Expressions" href="62RateExpr.html" />
+    <link rel="prev" title="6 Chemical Kinetics" href="6Kinetics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introduction to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Atoms First</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1AtomsFirst.html">1 Atoms First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11Atoms.html">1.1 Atoms and Subatomic Particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12PeriodicTable.html">1.2 The Periodic Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13ChemicalBonding.html">1.3 Chemical Bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14ChemicalReactions.html">1.4 Chemical Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15Problems.html">1.5 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2Thermodynamics.html">2 Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21Energy.html">2.1 Energy and Thermochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22ZerothLaw.html">2.2  The Zeroth Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23FirstLaw.html">2.3  The First Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24SecondLaw.html">2.4 The Second Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25ThirdLaw.html">2.5 The Third Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26Gibbs.html">2.6 Gibbs Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27Problems.html">2.7 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chemical Equilibrium</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3ChemicalEquilibrium.html">3 Chemical Equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31ChemicalEquilibrium.html">3.1 What is Equilibrium?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LawMassAction.html">3.2  Law of Mass Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33ApplicationsK.html">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="34Problems.html">3.4  Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acids and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4AcidsBases.html">4 Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41AcidsBases.html">4.1 What are Acids and Bases?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42AcidBaseStrength.html">4.2 Strength of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="43SaltsSolubility.html">4.3 Salts of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44Problems.html">4.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reduction and Oxidation Processes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5Redox.html">5 Redox Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51RedoxRxn.html">5.1 What is Oxidation and Reduction?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52RedoxRxnBalancing.html">5.2 Balancing Redox Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="53pe.html">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="54Problems.html">5.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kinetics of Reactions</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Kinetics.html">6 Chemical Kinetics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6.1  Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62RateExpr.html">6.2  Common Rate Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="63Problems.html">6.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Isotopes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7Isotopes.html">7 Environmental Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71RadioIsotopes.html">7.1 Radioisotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72StableIsotopes.html">7.2 Stable Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="73Problems.html">7.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Organic Chemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="8Organics.html">8 Environmental Organic Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="81WhatOrganics.html">8.1 What are organic chemicals?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="82EnvirOrganicChem.html">8.2 Organic Chemicals in the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="83Problems.html">8.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Review of Basic Mathematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/61Rates.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6.1  Chemical Kinetics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rates">Reaction Rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stoichiometry-reaction-rates">Stoichiometry &amp; Reaction Rates</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chemical-kinetics">
+<h1>6.1  Chemical Kinetics<a class="headerlink" href="#chemical-kinetics" title="Link to this heading">#</a></h1>
+<p>Chemical equilibrium is a thermodynamics concept. Thermodynamics is able to predict what reactions as possible, however, it does not tell us how fast reactions happen. For example, consider the following reaction that occurs naturally in nature:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+C6H12O6 (s) + 6 O2 (g) -&gt; 6 CO2 (g) + 6 H2O (l)
+}\]</div>
+<p>Per thermodynamics, the above reaction involving glucose (<span class="math notranslate nohighlight">\(\ce{C6H12O6}\)</span> or sugar) proceeds spontaneously under standard conditions and glucose is expected to combust in the presence of <span class="math notranslate nohighlight">\(\ce{O2}\)</span>. In reality, when do we observe spontaneous combustion of glucose? We don’t, because the above reaction proceeds very slowly.</p>
+<p>In thermodynamics, we explained that reactions occur spontaneously (this term is unrelated to rates of reactions) and reach equilibrium by minimizing <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> . In all spontaneous reactions, products have free energies less than that of the reactants. In some cases, it take little or no energy to start the process of creation of the products (<a class="reference internal" href="#activation-energy"><span class="std std-numref">Fig. 46</span></a>).</p>
+<figure class="margin-caption align-default" id="activation-energy">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Activation2_updated.svg/1280px-Activation2_updated.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Activation2_updated.svg/1280px-Activation2_updated.svg.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Energy used in the course of the glucose reaction with and without external support (catalyst). In either casem the activation energy must be exceeded for the reaction to proceed. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Activation_energy">Activation energy - Wikipedia</a></span><a class="headerlink" href="#activation-energy" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In other cases, external factors such as catalysts can lower the activation energy to overcome an energy barrier (<a class="reference internal" href="#activation-energy"><span class="std std-numref">Fig. 46</span></a>). This requirement adds time for a reaction to reach equilibrium.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/D0ZyjpAin_Y" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Consider the dissolution of the mineral gypsum in water:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+CaSO4.2 H2O (s) -&gt;[H2O] Ca^2+ (aq) + SO4^2- (aq) + 2 H2O (l)
+}\]</div>
+<p>This reaction is thermodynamically favorable, i.e., <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ&lt;0\)</span>. In order for this reaction to proceed, energy must be spent break chemical bonds within the crystalline structure, followed by diffusion of and away from the crystalline surface. The dissolution will continue until there is a dissolved ion gradient between the crystalline surface and the bulk aqueous solution. Thermodynamics does not explicitly account for these intermediate time-limiting steps.</p>
+<p><em><strong>Chemical kinetics</strong></em> is the study of how rapidly reactions take place. Chemical kinetics provide important information for the elucidation of chemical mechanisms.</p>
+<p>Consider a chemical reaction expressed in the following general form:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+Reactants -&gt; Products
+}\]</div>
+<p>Over the course of this reaction, concentrations of the <em>Reactants</em> decrease while concentrations of the <em>Products</em> increase. The rates at which the changes in concentrations occur depend on the chemical system in question.</p>
+<p>The <em><strong>Collision Theory</strong></em> of chemical kinetics, the reaction rate is directly proportional to the number of collision at any given time.</p>
+<div class="math notranslate nohighlight" id="equation-collisions-rate">
+<span class="eqno">(58)<a class="headerlink" href="#equation-collisions-rate" title="Link to this equation">#</a></span>\[\text{Rate} \propto \frac{\text{Number of Collisions}}{\text{Time}}\]</div>
+<p>Not every collision between molecules results in a reaction, however, the collision theory gives simple basis to explaining chemical reaction mechanisms. For example, a molecule in motion possesses kinetic energy and when molecules collide, part of this kinetic energy is converted to vibrational energy, which can cause some chemical bonds in molecules and crystalline structures to break. A minimum amount of energy, the activation energy (<span class="math notranslate nohighlight">\(\Delta G^\ddagger\)</span>), required to initiate a chemical reaction (see <a class="reference internal" href="#activation-energy"><span class="std std-numref">Fig. 46</span></a>). Without this minimum amount of energy at impact, a collision will be ineffective or the reaction will occur at a slow rate.</p>
+<section id="reaction-rates">
+<h2>Reaction Rates<a class="headerlink" href="#reaction-rates" title="Link to this heading">#</a></h2>
+<p>Since kinetics is concerned with the change of chemical concentrations over time, or the <em><strong>rates</strong></em> of chemical reactions become important.</p>
+<p>Consider the following hypothetical reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{A -&gt; B}\]</div>
+<p>We can follow the progress of a reaction by monitoring either the decrease in concentration of the reactants or the increase in the concentrations of the products (<a class="reference internal" href="#rxn-ab"><span class="std std-numref">Fig. 47</span></a>).</p>
+<figure class="margin-caption align-default" id="rxn-ab">
+<img alt="https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/section_18/e5dd3f15f478af1b02121333c365af99.jpg" src="https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/section_18/e5dd3f15f478af1b02121333c365af99.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">The reaction mixture initially contains only A molecules (purple). With increasing time, the number of A molecules decreases and more B molecules (green) are formed (top). The graph shows the change in the number of A and B molecules in the reaction as a function of time (bottom). Image source: <a class="reference external" href="https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/s18-02-reaction-rates-and-rate-laws.html">Reaction Rates and Rate Laws (saylordotorg.github.io)</a></span><a class="headerlink" href="#rxn-ab" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can express the change in chemical concentration of each chemical species as a function of time using the “<span class="math notranslate nohighlight">\(\Delta\)</span>” notation.</p>
+<div class="math notranslate nohighlight" id="equation-reaction-rate">
+<span class="eqno">(59)<a class="headerlink" href="#equation-reaction-rate" title="Link to this equation">#</a></span>\[\text{Rate} = -\frac{\Delta [A]}{\Delta t} \quad \text{or} \quad \text{Rate} =  \frac{\Delta [B]}{\Delta t}\]</div>
+<p>Here “[]” represents concentration of a chemical specie, while the “–” (minus) sign represents decrease in concentration. Rate is always a positive quantity, so when it is expressed as <span class="math notranslate nohighlight">\(\Delta [A]/\Delta t\)</span>, a minus sign is needed in the rate expression to make the rate positive. When the rate is expressed in terms of the change in a product concentration, no negative sign is needed to make the rate positive because the product concentration increases with time. Rates calculated in this way are average rates over the time period <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Reaction Rates</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Write reaction rates for the following reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\ce{
+a A + bB &amp;-&gt; cC + dD\\
+CO2 + 2 H2O &amp;-&gt; CH4 + 2 O2\\
+4 NH3 + 5 O2 &amp;-&gt; 4 NO + 6 H2O
+}
+\end{align}\end{split}\]</div>
+<p class="sd-card-text"><strong>Answer:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{Rate} &amp;=  - \frac{1}{a} \frac{\Delta [A]}{\Delta t} = - \frac{1}{b} \frac{\Delta [B]}{\Delta t} = \frac{1}{c} \frac{\Delta [C]}{\Delta t} =  \frac{1}{d} \frac{\Delta [D]}{\Delta t}\\
+&amp;= -  \frac{\Delta [\ce{CO2}]}{\Delta t} = - \frac{1}{2} \frac{\Delta [\ce{H2O}]}{\Delta t} =   \frac{\Delta [\ce{CH4}]}{\Delta t} =  \frac{1}{2} \frac{\Delta [\ce{O2}]}{\Delta t}\\
+&amp;= -  \frac{1}{4}\frac{\Delta [\ce{NH3}]}{\Delta t} = - \frac{1}{5} \frac{\Delta [\ce{O2}]}{\Delta t} =   \frac{1}{4}\frac{\Delta [\ce{NO}]}{\Delta t} =  \frac{1}{6} \frac{\Delta [\ce{H2O}]}{\Delta t}
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Reaction Rates</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider,</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+4 NO2 + O2 -&gt; 2 N2O5
+}\]</div>
+<p class="sd-card-text">At a particular time during the reaction, <span class="math notranslate nohighlight">\(\ce{NO2(g)}\)</span> is being consumed at the rate of <span class="math notranslate nohighlight">\(\pu{1.3e-3 mol L-1 s-1}\)</span>. (a) At what rate is <span class="math notranslate nohighlight">\(\ce{O2(g)}\)</span> being consumed? (b) At what rate is <span class="math notranslate nohighlight">\(\ce{N2O5(g)}\)</span> being produced?</p>
+<p class="sd-card-text"><strong>Answer</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\text{Rate} =  -  \frac{1}{4}\frac{\Delta [\ce{NO2}]}{\Delta t} = -  \frac{\Delta [\ce{O2}]}{\Delta t} =   \frac{1}{2}\frac{\Delta [\ce{N2O5}]}{\Delta t}
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac{\Delta [\ce{NO2}]}{\Delta t} &amp;= -\pu{1.3e-3 mol L-1 s-1}\\
+\text{Rate} &amp; = -  \frac{1}{4}\frac{\Delta [\ce{NO2}]}{\Delta t} = -  \frac{1}{4} \times (-\pu{1.3e-3 mol L-1 s-1})\\
+&amp;= \pu{3.25e-4 mol L-1 s-1}
+\end{aligned}\end{split}\]</div>
+</div>
+</details></section>
+<section id="stoichiometry-reaction-rates">
+<h2>Stoichiometry &amp; Reaction Rates<a class="headerlink" href="#stoichiometry-reaction-rates" title="Link to this heading">#</a></h2>
+<p>Consider a hypothetical chemical reaction, where two reactants <em>A</em> and <em>B</em> combine to form a product <em>AB</em>.</p>
+<div class="math notranslate nohighlight">
+\[\ce{A + B \rightarrow AB}\]</div>
+<p>This reactants show a one-to-one stoichiometry. One mole of <em>A</em> reacts with one mole of <em>B</em> to form the product, <span class="math notranslate nohighlight">\(AB\)</span>. That is, the reaction rates of <em>A</em> and <em>B</em> are identical. It also follows that reaction rates are proportional (<span class="math notranslate nohighlight">\(\propto\)</span>) to concentrations of <em>A</em> (<span class="math notranslate nohighlight">\([A]\)</span>) and <em>B</em> (<span class="math notranslate nohighlight">\([B]\)</span>). If the reaction rates are proportional to concentrations of the reactants, it can be summarized that reaction rates for the reaction are proportional to the product of <span class="math notranslate nohighlight">\([A]\)</span> and <span class="math notranslate nohighlight">\([B]\)</span> or <span class="math notranslate nohighlight">\([A]\times [B]\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-rate-ab">
+<span class="eqno">(60)<a class="headerlink" href="#equation-rate-ab" title="Link to this equation">#</a></span>\[\text{Rate} \propto [A] \times [B]\]</div>
+<p>The proportional sign in Eq. <a class="reference internal" href="#equation-rate-ab">(60)</a> can be converted into an “=” sign by incorporating a proportionality constant, <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-ratelaw-ab">
+<span class="eqno">(61)<a class="headerlink" href="#equation-ratelaw-ab" title="Link to this equation">#</a></span>\[\text{Rate} = \kappa [A]^1[B]^1\]</div>
+<p>This expression where the reaction rate is equated to concentration of reactants are called <em>rate expressions</em> or <em>rate laws</em>. In this equation, <span class="math notranslate nohighlight">\(\kappa\)</span> is called the <em>rate constant</em>. By convention, the rate laws are only written for the reactants and each reactant has its own rate constant. Note that the exponent 1 is shown in Eq. <a class="reference internal" href="#equation-ratelaw-ab">(61)</a> refers to the number of moles of each reactant in the original chemical reaction. In this case, the <em><strong>reaction order</strong></em> for <em>A</em> and <em>B</em> is 1 (both have one mole each in the reaction.) The reaction order refers to the molecularity or the number of molecules of a reactant that are participating in a reaction. The reaction order for the whole reaction is the sum of the reaction order for all reactants. In this case, the reaction order for the above reaction is 2. Equation <a class="reference internal" href="#equation-ratelaw-ab">(61)</a> also shows that the rate is dependent on the reactant concentrations.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="6Kinetics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">6 Chemical Kinetics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="62RateExpr.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6.2  Common Rate Expressions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rates">Reaction Rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stoichiometry-reaction-rates">Stoichiometry &amp; Reaction Rates</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

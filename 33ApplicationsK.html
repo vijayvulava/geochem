@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3.3 Application of \(K\) &#8212; Introduction to Geochemistry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '33ApplicationsK';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3.4 Practice Problems" href="34Problems.html" />
+    <link rel="prev" title="3.2 Law of Mass Action" href="32LawMassAction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introduction to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Atoms First</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1AtomsFirst.html">1 Atoms First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11Atoms.html">1.1 Atoms and Subatomic Particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12PeriodicTable.html">1.2 The Periodic Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13ChemicalBonding.html">1.3 Chemical Bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14ChemicalReactions.html">1.4 Chemical Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15Problems.html">1.5 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2Thermodynamics.html">2 Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21Energy.html">2.1 Energy and Thermochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22ZerothLaw.html">2.2  The Zeroth Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23FirstLaw.html">2.3  The First Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24SecondLaw.html">2.4 The Second Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25ThirdLaw.html">2.5 The Third Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26Gibbs.html">2.6 Gibbs Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27Problems.html">2.7 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chemical Equilibrium</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3ChemicalEquilibrium.html">3 Chemical Equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31ChemicalEquilibrium.html">3.1 What is Equilibrium?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LawMassAction.html">3.2  Law of Mass Action</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="34Problems.html">3.4  Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acids and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4AcidsBases.html">4 Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41AcidsBases.html">4.1 What are Acids and Bases?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42AcidBaseStrength.html">4.2 Strength of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="43SaltsSolubility.html">4.3 Salts of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44Problems.html">4.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reduction and Oxidation Processes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5Redox.html">5 Redox Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51RedoxRxn.html">5.1 What is Oxidation and Reduction?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52RedoxRxnBalancing.html">5.2 Balancing Redox Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="53pe.html">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="54Problems.html">5.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kinetics of Reactions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Kinetics.html">6 Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Rates.html">6.1  Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62RateExpr.html">6.2  Common Rate Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="63Problems.html">6.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Isotopes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7Isotopes.html">7 Environmental Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71RadioIsotopes.html">7.1 Radioisotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72StableIsotopes.html">7.2 Stable Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="73Problems.html">7.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Organic Chemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="8Organics.html">8 Environmental Organic Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="81WhatOrganics.html">8.1 What are organic chemicals?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="82EnvirOrganicChem.html">8.2 Organic Chemicals in the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="83Problems.html">8.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Review of Basic Mathematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/33ApplicationsK.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3.3  Application of K</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predicting-direction-of-a-reaction">Predicting Direction of a Reaction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-chateliers-principle">Le Châtelier’s Principle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-concentrations-of-reactants">Determining Concentrations of Reactants</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="application-of-k">
+<h1>3.3  Application of <span class="math notranslate nohighlight">\(K\)</span><a class="headerlink" href="#application-of-k" title="Link to this heading">#</a></h1>
+<section id="predicting-direction-of-a-reaction">
+<h2>Predicting Direction of a Reaction<a class="headerlink" href="#predicting-direction-of-a-reaction" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(K\)</span> values can be used to predict the direction in which any reaction proceeds spontaneously. First, we have to recall how reaction quotient (<span class="math notranslate nohighlight">\(Q_c\)</span>, Eq. <a class="reference internal" href="32LawMassAction.html#equation-qc">(22)</a>) is calculated for a reaction. If, <span class="math notranslate nohighlight">\(Q_c \ne K_c\)</span>, this information can be used to predict the direction in which the reaction proceeds to reach equilibrium. There are three possibilities (summarized in <a class="reference internal" href="#qckc-relation"><span class="std std-numref">Table 11</span></a>):</p>
+<div class="pst-scrollable-table-container"><table class="table" id="qckc-relation">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Relationship between <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> and how this information helps predict the flow of a reaction.</span><a class="headerlink" href="#qckc-relation" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(Q_c\, \text{vs.}\, K_c\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\dfrac{\{\text{Products}\}}{\{\text{Reactants}\}}\, \text{Ratio}\)</span></p></th>
+<th class="head"><p>For Equilbrium</p></th>
+<th class="head"><p>System Proceeds</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(Q_c &lt; K_c\)</span></p></td>
+<td><p>Low</p></td>
+<td><p>Reactants must create products</p></td>
+<td><p>Towards products</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_c = K_c\)</span></p></td>
+<td><p></p></td>
+<td><p>Concentrations do not change</p></td>
+<td><p>At equilibrium</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(Q_c &gt; K_c\)</span></p></td>
+<td><p>High</p></td>
+<td><p>Products must create reactants</p></td>
+<td><p>Towards reactants</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The example below demonstrates application of this information.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The formation of <span class="math notranslate nohighlight">\(\ce{HI(g)}\)</span> from <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span> and <span class="math notranslate nohighlight">\(\ce{I2(g)}\)</span> is depicted int the reaction below:</p>
+<div class="math notranslate nohighlight">
+\[\ce{H2(g) + I2(g) &lt;=&gt; 2 HI(g) \qquad $K_c =54.3$ at $\pu{430 ^\circ C}$ 
+}\]</div>
+<p class="sd-card-text">If we were to conduct an experiment starting with an initial mixture of <span class="math notranslate nohighlight">\(\pu{0.243 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span>, <span class="math notranslate nohighlight">\(\pu{0.146 M}\)</span>  of <span class="math notranslate nohighlight">\(\ce{I2(g)}\)</span>, and <span class="math notranslate nohighlight">\(\pu{1.98 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{HI(g)}\)</span> at <span class="math notranslate nohighlight">\(\pu{430 ^\circ C}\)</span>, we can calculate <span class="math notranslate nohighlight">\(Q_c\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+        Q_c &amp;= \frac{[\ce{HI}]^2}{[\ce{H2}][\ce{I2}]}\\
+        &amp;= \frac{(1.98)^2}{(0.243)\times (0.146)}\\
+        &amp;= 110.5\\
+        &amp; \ne K_c
+    \end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">In the above example, <span class="math notranslate nohighlight">\(Q_c&gt;K_c\)</span>, therefore, the reaction proceeds to the left to reach equilibrium.</p>
+</div>
+</details></section>
+<section id="le-chateliers-principle">
+<h2>Le Châtelier’s Principle<a class="headerlink" href="#le-chateliers-principle" title="Link to this heading">#</a></h2>
+<p>As implied in the discussion above, <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> in a system could be different, causing the system to be in disequilibrium. Likewise, a system can be disturbed from the equilibrium by a change in reaction conditions. In nature, most systems are in such a state and are working towards achieving this equilibrium. Humans intentionally, or unintentionally, disturb an equilibrium condition towards a goal. An example is the industrial level of production of ammonia (<span class="math notranslate nohighlight">\(\ce{NH3}\)</span>) by reacting <span class="math notranslate nohighlight">\(\ce{N2}\)</span> with <span class="math notranslate nohighlight">\(\ce{H2}\)</span> at high <span class="math notranslate nohighlight">\(T\)</span> as shown in the following reaction.</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2(g) + 3 H2(g) &lt;=&gt; 2 NH3(g)
+}\]</div>
+<p>The above reaction is called the Haber-Bosch reaction, widely credited to having providing humans with enhancing crop production critical for matching the population growth in the twentieth century. In this reaction, the production is often manipulated by increasing one or more of the reactants or removing the product, causing the reaction to be out of equilibrium. The system then responds by increasing production of <span class="math notranslate nohighlight">\(\ce{NH3(g)}\)</span>. This is ultimately the goal of this process at an industrial scale - large production of <span class="math notranslate nohighlight">\(\ce{NH3(g)}\)</span>.</p>
+<p><a class="reference external" href="https://ed.ted.com/lessons/the-chemical-reaction-that-feeds-the-world-daniel-d-dulek">The Haber process | TED-Ed</a></p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/o1_D4FscMnU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Le Châtelier’s principle addresses the shift in equilibrium when external stress is applied to a system in equilibrium. <em>When a stress is applied to a system at equilibrium, the system will respond by shifting in the direction that minimizes the effect of the stress.</em> <em>Stress</em> can be applied in a variety of ways including:</p>
+<ol class="arabic simple">
+<li><p>addition of a reactant or product,</p></li>
+<li><p>removal of a reactant or product,</p></li>
+<li><p>change in volume of the system, resulting in a change in concentration or partial pressure of the reactants and products, and</p></li>
+<li><p>change in temperature.</p></li>
+</ol>
+<figure class="margin-caption align-default" id="nh3-production">
+<img alt="https://openstax.org/apps/archive/20221109.213337/resources/0402516bd1c563bf706ff9a267c6f19a642c591d" src="https://openstax.org/apps/archive/20221109.213337/resources/0402516bd1c563bf706ff9a267c6f19a642c591d" />
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Commercial production of ammonia requires heavy equipment to handle the high temperatures and pressures required. This schematic outlines the design of an ammonia plant. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/17-7-catalysis">17.7 Catalysis - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#nh3-production" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The system can respond to such change(s) by “shifting” the reaction in forward or reverse direction, such that the effect of the stress is partially offset as the system reestablishes equilibrium. A shift to the right produces more products by the forward reaction. A shift to the left produces more reactants by the reverse reaction. Using Le Châtelier’s principle, we can predict the direction in which an equilibrium will shift, given the specific stress that is applied.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Addition or removal of chemicals</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the Haber-Bosch process at <span class="math notranslate nohighlight">\(\pu{700 ^\circ C}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2(g) + 3 H2(g) &lt;=&gt; 2 NH3(g)
+}\]</div>
+<p class="sd-card-text">If at equilibrium, the concentrations are <span class="math notranslate nohighlight">\([\ce{N2}] = \pu{2.05 M}\)</span>, <span class="math notranslate nohighlight">\([\ce{H2}] = \pu{1.56 M}\)</span>, and <span class="math notranslate nohighlight">\([\ce{NH3}] = \pu{1.52 M}\)</span>, let’s calculate the reaction quotient (<span class="math notranslate nohighlight">\(Q_c= K_c\)</span> at equilibrium.)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Q_c &amp;= \frac{[\ce{NH3}]^2}{[\ce{N2}][\ce{H2}]^3} = \frac{(1.52)^2}{(2.05)\times(1.56)^3}\\
+&amp;= 0.297    = K_c
+ \end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">If we “stress” this system by increasing <span class="math notranslate nohighlight">\([\ce{N2}]\)</span> from <span class="math notranslate nohighlight">\(\pu{2.05 M}\)</span>  to <span class="math notranslate nohighlight">\(\pu{3.51 M}\)</span>, let’s recalculate <span class="math notranslate nohighlight">\(Q_c\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Q_c &amp;= \frac{(1.52)^2}{(3.51)\times(1.56)^3}\\
+&amp;= 0.173 \ne K_c
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(Q_c &lt; K_c\)</span>, the reaction proceeds to the right side of the above reaction (see <a class="reference internal" href="#qckc-relation"><span class="std std-numref">Table 11</span></a>). We can easily predict reaction scenarios that involve removal or addition of reactants or products.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Changes to volume and pressure</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the following reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2O4(g) &lt;=&gt; 2 NO2(g)
+}\]</div>
+<p class="sd-card-text">At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(K_c = \pu{4.63e-3}\)</span>. If at equilibrium, the concentrations are <span class="math notranslate nohighlight">\([\ce{N2O4}] = \pu{0.643 M}\)</span> and <span class="math notranslate nohighlight">\([\ce{NO2}] = \pu{0.0547 M}\)</span> in a cylinder. If we use a piston to reduce the volume of this cylinder by half (“stress”), the resulting concentrations are doubled to <span class="math notranslate nohighlight">\([\ce{N2O4}] = \pu{1.286 M}\)</span> and <span class="math notranslate nohighlight">\([\ce{NO2}] = \pu{0.1094 M}\)</span>. Let’s calculate <span class="math notranslate nohighlight">\(Q_c\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Q_c &amp;= \frac{[\ce{NO2}]^2}{[\ce{N2O4}]} = \frac{(0.1094)^2}{(1.286)}\\
+&amp;= \pu{9.31e-3}    \ne K_c
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(Q_c &gt; K_c\)</span>, the reaction proceeds to the left side of the above reaction (see <a class="reference internal" href="#qckc-relation"><span class="std std-numref">Table 11</span></a>).</p>
+<p class="sd-card-text">Note: When there is no difference in the number of moles of gas, changing the volume of the reaction vessel will change the concentrations of reactant(s) and product(s) in the same proportion - but the system will remain at equilibrium. (<span class="math notranslate nohighlight">\(Q_c = K_c\)</span>)</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Changes to temperature</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Changes to <span class="math notranslate nohighlight">\(T\)</span> can alter the position of an equilibrium and the equilibrium constant. Consider the following reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2O4(g) &lt;=&gt; 2 NO2(g)
+}\]</div>
+<p class="sd-card-text">This is an endothermic reaction (<span class="math notranslate nohighlight">\(\Delta_{sys}H^\circ{}&gt;0\)</span>), so the above reaction can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\ce{\text{heat} + N2O4(g) &lt;=&gt; 2 NO2(g)
+}\]</div>
+<p class="sd-card-text">In this expression, “heat” is treated as a reactant. If we were to increase <span class="math notranslate nohighlight">\(T\)</span> or add “heat”, we can see that <span class="math notranslate nohighlight">\(Q_c &lt; K_c\)</span> or that the reaction will proceed to the right as expected. Similar argument can be made for exothermic reactions.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(T\)</span> increase favors endothermic reactions, while <span class="math notranslate nohighlight">\(T\)</span> decrease favors exothermic processes.</p>
+</div>
+</details><p>In cases where <span class="math notranslate nohighlight">\(T\)</span> in a system is changed, the resulting new equilibrium constant can be calculated using the van’t Hoff equation:</p>
+<div class="math notranslate nohighlight" id="equation-vanthoff">
+<span class="eqno">(34)<a class="headerlink" href="#equation-vanthoff" title="Link to this equation">#</a></span>\[\ln \frac{K_2}{K_1} = \frac{\Delta_{rxn}H^\circ}{R} \left(\frac{1}{T_1} - \frac{1}{T_2}\right)\]</div>
+</section>
+<section id="determining-concentrations-of-reactants">
+<h2>Determining Concentrations of Reactants<a class="headerlink" href="#determining-concentrations-of-reactants" title="Link to this heading">#</a></h2>
+<p>If we know the <span class="math notranslate nohighlight">\(K\)</span> of a reaction, we can calculate the concentrations in an equilibrium mixture from the initial reactant concentrations. We can set up “ICE” tables to make this calculation methodical.</p>
+<div class="admonition-calculating-concentrations-of-reactants-and-products-at-equilibrium admonition">
+<p class="admonition-title">Calculating concentrations of reactants and products at equilibrium</p>
+<p>The following steps summarize the process involved:</p>
+<ol class="arabic simple">
+<li><p>Construct an equilibrium table, and fill in the initial concentrations (including any that are zero).</p></li>
+<li><p>Use initial concentrations to calculate the reaction quotient, <span class="math notranslate nohighlight">\(Q_c\)</span>, and compare <span class="math notranslate nohighlight">\(Q_c\)</span> to <span class="math notranslate nohighlight">\(K_c\)</span> to determine the direction in which the reaction will proceed.</p></li>
+<li><p>Define <span class="math notranslate nohighlight">\(x\)</span> as the amount of a particular species consumed, and use the stoichiometry of the reaction to define (in terms of <span class="math notranslate nohighlight">\(x\)</span>) the amount of other species consumed or produced.</p></li>
+<li><p>For each species in the equilibrium, add the change in concentration to the initial concentration to get the equilibrium concentration.</p></li>
+<li><p>Use the equilibrium concentrations and the equilibrium expression to solve for <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>Using the calculated value of <span class="math notranslate nohighlight">\(x\)</span>, determine the concentrations of all species at equilibrium.</p></li>
+<li><p>Check your work by substituting the calculated equilibrium concentrations into the equilibrium expression. The result should be very close to the <span class="math notranslate nohighlight">\(K\)</span> stated in the problem.</p></li>
+</ol>
+<p>See the example below to see this method in practice.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Calculating concentrations at equilibrium</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(K_c\)</span> for the following reaction is <span class="math notranslate nohighlight">\(54.3\)</span> at <span class="math notranslate nohighlight">\(\pu{430 ^\circ C}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\ce{H2(g) + I2(g) &lt;=&gt; 2 HI(g)
+}\]</div>
+<p class="sd-card-text">Let’s calculate concentrations of all components at equilibrium if we start with <span class="math notranslate nohighlight">\(\pu{0.24 M}\)</span> of both <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span> and <span class="math notranslate nohighlight">\(\ce{I2(g)}\)</span>.</p>
+<p class="sd-card-text">Let’s determine how <span class="math notranslate nohighlight">\(Q_c\)</span> correlates with <span class="math notranslate nohighlight">\(K_c\)</span>. Because, there are no products to begin, the reaction proceeds to right to create products.</p>
+<p class="sd-card-text">In the above system, let’s insert the starting concentrations that we know into the equilibrium table below. We define the change in concentration of one of the reactants as <span class="math notranslate nohighlight">\(x\)</span>. Because there is no product at the start of the reaction, the reactant concentration must decrease; that is, this reaction must proceed in the forward direction to reach equilibrium. According to the stoichiometry of the chemical reaction, the reactant concentrations will both decrease by the same amount (<span class="math notranslate nohighlight">\(x\)</span>), and the product concentration will increase by twice that amount (<span class="math notranslate nohighlight">\(2x\)</span>). Combining the initial concentration and the change in concentration for each species, we get expressions (in terms of <span class="math notranslate nohighlight">\(x\)</span>) for the equilibrium concentrations:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(+\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{I2(g)}\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\rightleftharpoons\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(2\ce{HI(g)}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><strong>I</strong>nitial, M</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.24\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.24\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>C</strong>hange, M</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(-x\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(-x\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(+2x\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>E</strong>quilibrium, M</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\((0.24-x)\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\((0.24-x)\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\((0+2x)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="sd-card-text">The above equilibrium setup table is called the <em><strong>ICE Table</strong></em>.</p>
+<p class="sd-card-text">From the ICE table we can write <span class="math notranslate nohighlight">\(K_c\)</span> expression and substitute equilibrium concentrations</p>
+<div class="math notranslate nohighlight">
+\[K_c = \frac{[\ce{HI}(g)]^2}{[\ce{H2(g)}][\ce{I2(g)}]} = \frac{(0+2x)^2}{(0.24-x)(0.24-x)} = 54.3\]</div>
+<p class="sd-card-text">The above expression can be rearranged into a linear quadratic form:</p>
+<div class="math notranslate nohighlight">
+\[50.3 x^2 - 26.1x + 3.13 = 0\]</div>
+<p class="sd-card-text">Solutions for a generic quadratic equation, <span class="math notranslate nohighlight">\(ax^2 + bx + c = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</div>
+<p class="sd-card-text">To calculate <span class="math notranslate nohighlight">\(x\)</span>, substitute <span class="math notranslate nohighlight">\(a=50.3\)</span>, <span class="math notranslate nohighlight">\(b=-26.1\)</span>, and <span class="math notranslate nohighlight">\(c=3.13\)</span> in above expression and we obtain <span class="math notranslate nohighlight">\(x_1 = 0.189\)</span> and <span class="math notranslate nohighlight">\(x_2 = 0.329\)</span>. Which of these two <span class="math notranslate nohighlight">\(x\)</span> values is correct? We can substitute each <span class="math notranslate nohighlight">\(x\)</span> value into the equilibrium concentration expressions and determine the correct value.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
+<th class="head text-center"><p class="sd-card-text"></p></th>
+<th class="head"><p class="sd-card-text"></p></th>
+<th class="head text-center"><p class="sd-card-text"></p></th>
+<th class="head text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+<th class="head text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(x_2\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2}\)</span></p></td>
+<td class="text-center"><p class="sd-card-text">=</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\( 0.24-x\)</span></p></td>
+<td class="text-center"><p class="sd-card-text">=</p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.051 \)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-0.089\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{I2}\)</span></p></td>
+<td class="text-center"><p class="sd-card-text">=</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\( 0.24-x\)</span></p></td>
+<td class="text-center"><p class="sd-card-text">=</p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.051\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-0.089\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{HI}\)</span></p></td>
+<td class="text-center"><p class="sd-card-text">=</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\( 2x\)</span></p></td>
+<td class="text-center"><p class="sd-card-text">=</p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.378\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-0.658\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="sd-card-text">Substituting <span class="math notranslate nohighlight">\(x_1\)</span> in the above table resulted in all positive equilibrium concentrations, while substitution of <span class="math notranslate nohighlight">\(x_2\)</span> resulted in negative equilibrium concentrations. Since negative concentrations are not possible, the correct value for <span class="math notranslate nohighlight">\(x_1 = 0.189\)</span>.</p>
+<p class="sd-card-text">As a final check, let’s re-substitute equilibrium concentrations in <span class="math notranslate nohighlight">\(K\)</span> expression.</p>
+<div class="math notranslate nohighlight">
+\[
+K_c = \frac{[\ce{HI}(g)]^2}{[\ce{H2(g)}][\ce{I2(g)}]} = \frac{(0.378)^2}{(0.051)\times(0.051)} = 54.9 \approx 54.3
+\]</div>
+<p class="sd-card-text">The small discrepancy in the final calculation can be attributed to rounding.</p>
+</div>
+</details></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="32LawMassAction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">3.2  Law of Mass Action</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="34Problems.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">3.4  Practice Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predicting-direction-of-a-reaction">Predicting Direction of a Reaction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-chateliers-principle">Le Châtelier’s Principle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-concentrations-of-reactants">Determining Concentrations of Reactants</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

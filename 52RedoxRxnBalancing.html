@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5.2 Balancing Redox Reactions &#8212; Introduction to Geochemistry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '52RedoxRxnBalancing';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5.3 Electron Activity, \(pe\)" href="53pe.html" />
+    <link rel="prev" title="5.1 What is Oxidation and Reduction?" href="51RedoxRxn.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introduction to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Atoms First</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1AtomsFirst.html">1 Atoms First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11Atoms.html">1.1 Atoms and Subatomic Particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12PeriodicTable.html">1.2 The Periodic Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13ChemicalBonding.html">1.3 Chemical Bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14ChemicalReactions.html">1.4 Chemical Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15Problems.html">1.5 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2Thermodynamics.html">2 Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21Energy.html">2.1 Energy and Thermochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22ZerothLaw.html">2.2  The Zeroth Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23FirstLaw.html">2.3  The First Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24SecondLaw.html">2.4 The Second Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25ThirdLaw.html">2.5 The Third Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26Gibbs.html">2.6 Gibbs Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27Problems.html">2.7 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chemical Equilibrium</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3ChemicalEquilibrium.html">3 Chemical Equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31ChemicalEquilibrium.html">3.1 What is Equilibrium?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LawMassAction.html">3.2  Law of Mass Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33ApplicationsK.html">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="34Problems.html">3.4  Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acids and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4AcidsBases.html">4 Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41AcidsBases.html">4.1 What are Acids and Bases?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42AcidBaseStrength.html">4.2 Strength of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="43SaltsSolubility.html">4.3 Salts of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44Problems.html">4.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reduction and Oxidation Processes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5Redox.html">5 Redox Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51RedoxRxn.html">5.1 What is Oxidation and Reduction?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5.2 Balancing Redox Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="53pe.html">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="54Problems.html">5.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kinetics of Reactions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Kinetics.html">6 Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Rates.html">6.1  Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62RateExpr.html">6.2  Common Rate Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="63Problems.html">6.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Isotopes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7Isotopes.html">7 Environmental Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71RadioIsotopes.html">7.1 Radioisotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72StableIsotopes.html">7.2 Stable Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="73Problems.html">7.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Organic Chemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="8Organics.html">8 Environmental Organic Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="81WhatOrganics.html">8.1 What are organic chemicals?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="82EnvirOrganicChem.html">8.2 Organic Chemicals in the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="83Problems.html">8.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Review of Basic Mathematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/52RedoxRxnBalancing.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>5.2 Balancing Redox Reactions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="balancing-redox-reactions">
+<h1>5.2 Balancing Redox Reactions<a class="headerlink" href="#balancing-redox-reactions" title="Link to this heading">#</a></h1>
+<p>Balancing redox reactions is similar to balancing any chemical reactions.  However, the charge and the mass of the elements need to be considered during that process.</p>
+<p>For balancing redox reactions, we balance the elements on each side of the equation arrow, as well as the electrons.</p>
+<div class="admonition-balancing-redox-reactions admonition">
+<p class="admonition-title">Balancing redox reactions</p>
+<p>Follow steps below in sequence to balance redox reactions.</p>
+<ol class="arabic simple">
+<li><p>Identify the OS of all major elements</p></li>
+<li><p>Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span>  where appropriate in skeletal reaction</p></li>
+<li><p>Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span>  where appropriate in actual reaction</p></li>
+<li><p>Adjust stoichiometry of main element only</p></li>
+<li><p>Add <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> on appropriate side of reaction to balance <span class="math notranslate nohighlight">\(\ce{O}\)</span></p></li>
+<li><p>Add <span class="math notranslate nohighlight">\(\ce{H+}\)</span> on appropriate side to balance <span class="math notranslate nohighlight">\(\ce{H}\)</span></p></li>
+<li><p>Verify charge balance on both sides of reaction</p></li>
+<li><p>Combine half-reactions such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span>  are consumed - factor half reactions as required</p></li>
+<li><p>Verify stoichiometry and charge balance of final reaction</p></li>
+</ol>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Balancing redox reactions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s balance the following redox reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+SO4^2- + FeO -&gt; H2S + FeOOH
+}\]</div>
+<p class="sd-card-text">This reaction involves two redox “couples”:</p>
+<p class="sd-card-text">Step 1: Identify the OS of all major elements</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Chemical</p></th>
+<th class="head text-right"><p class="sd-card-text">OS</p></th>
+<th class="head"><p class="sd-card-text">Chemical</p></th>
+<th class="head text-right"><p class="sd-card-text">OS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{SO4^2-}\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(+6\)</span></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2S}\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{FeOOH}\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(+3\)</span></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{FeO}\)</span></p></td>
+<td class="text-right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(+2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="sd-card-text">Step 2: Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span> where appropriate in skeletal rxn</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} 
+\ce{
+S(VI) + 8 e- &amp;-&gt; S(-II)\\
+Fe(III) + e- &amp;-&gt; Fe(II)
+} \end{align*} \end{split}\]</div>
+<p class="sd-card-text">Step 3: Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span> where appropriate in actual rxn</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} 
+\ce{
+SO4^2- + 8 e- &amp;-&gt; H2S\\
+FeOOH + e- &amp;-&gt; FeO
+} \end{align*} \end{split}\]</div>
+<p class="sd-card-text">Step 4: Adjust stoichiometry of main elements (in the example below they are already balanced)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} 
+\ce{
+SO4^2- + 8 e- &amp;-&gt; H2S\\
+FeOOH + e- &amp;-&gt; FeO
+} \end{align*} \end{split}\]</div>
+<p class="sd-card-text">Step 5: Add <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> to balance <span class="math notranslate nohighlight">\(\ce{O}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} 
+\ce{
+SO4^2- + 8 e- &amp;-&gt; H2S + 4 H2O\\
+FeOOH + e- &amp;-&gt; FeO + H2O
+} \end{align*} \end{split}\]</div>
+<p class="sd-card-text">Step 6: Add <span class="math notranslate nohighlight">\(\ce{H+}\)</span> to balance <span class="math notranslate nohighlight">\(\ce{O}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} 
+\ce{
+SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
+FeOOH + e- + H+ &amp;-&gt; FeO + H2O
+} \end{align*} \end{split}\]</div>
+<p class="sd-card-text">Step 7: Verify charge balance on both sides of rxn</p>
+<p class="sd-card-text">Step 8a: Combine half-rxn such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  In this case multiply the <span class="math notranslate nohighlight">\(\ce{Fe}\)</span> half-reaction by a factor <span class="math notranslate nohighlight">\(8\)</span> to have same number of <span class="math notranslate nohighlight">\(\ce{e-}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} 
+\ce{
+SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
+8FeOOH + 8e- + 8H+ &amp;-&gt; 8FeO + 8H2O
+} \end{align*} \end{split}\]</div>
+<p class="sd-card-text">Step 8b: Combine half-rxn such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  Reverse the 2nd reaction so that the <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are on the opposite sides of the reactions. Now, all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> can be cancelled.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} 
+\ce{
+SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
+8 FeO + 8 H2O &amp;-&gt; 8 FeOOH + 8 e- + 8 H+
+} \end{align*} \end{split}\]</div>
+<p class="sd-card-text">Step 9: Add both half-reactions and check stoichiometry and charge balance on final reaction</p>
+<div class="math notranslate nohighlight">
+\[ \ce{
+SO4^2- + 8 FeO + 2 H+ + 4 H2O -&gt; H2S + 8 FeOOH
+}\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{FeO}\)</span> is oxidized by <span class="math notranslate nohighlight">\(\ce{SO4^2-}\)</span>!</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Balancing redox reactions – Case Study 1</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Groundwater is an anoxic environment where dissolved iron exists as <span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>. When this water is pumped to the surface, <span class="math notranslate nohighlight">\(\ce{O2(g)}\)</span> in atmosphere oxidizes <span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>, into an insoluble precipitate <span class="math notranslate nohighlight">\(\ce{Fe(OH)3 (s)}\)</span> depending on <span class="math notranslate nohighlight">\(p\ce{H}\)</span> conditions. Let’s write the half-reactions and the overall redox reaction.</p>
+<p class="sd-card-text">(1) The half-reactions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align} \ce{
+    Fe^2+ + 3 H2O &amp;&lt;=&gt; Fe(OH)3 + 3 H+ + e- \\
+    O2 + 4 H+ + 4 e- &amp;&lt;=&gt; 2 H2O
+} \end{align} \end{split}\]</div>
+<p class="sd-card-text">(2) The overall redox reaction</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+    4 Fe^2+ + O2 + 10 H2O &lt;=&gt; 4 Fe(OH)3 + 8 H+
+}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Balancing redox reactions – Case Study 2</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Ammonia (as <span class="math notranslate nohighlight">\(\ce{NH3}\)</span>) in fertilizers discharged into natural surface waters is often oxidized to <span class="math notranslate nohighlight">\(\ce{NO3-}\)</span> by bacteria using dissolved oxygen. This process is called nitrification. Let’s write the half-reactions and the overall redox reaction.</p>
+<p class="sd-card-text">(1) The half-reactions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align} \ce{
+    NH4+ + 3 H2O &amp;&lt;=&gt; NO3- + 10 H+ + 8 e- \\
+    O2 + 4 H+ + 4 e- &amp;&lt;=&gt; 2 H2O
+} \end{align} \end{split}\]</div>
+<p class="sd-card-text">(2) The overall redox reaction</p>
+<div class="math notranslate nohighlight">
+\[ \ce{
+    NH4+ + 2 O2 &lt;=&gt; NO3- + 2 H+ + H2O
+ }\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Balancing redox reactions - Case Study 3</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{SO4^2-(aq)}\)</span> in ocean water is often reduced to <span class="math notranslate nohighlight">\(\ce{H2S(g)}\)</span> by abundant organic matter (<span class="math notranslate nohighlight">\(\ce{CH2O}\)</span> in simplified form) present in saltmarsh environments. <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> is a common by-product during this process. Let’s write the half-reactions and the overall redox reaction.</p>
+<p class="sd-card-text">(1) The half-reactions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align} \ce{
+    SO4^2- + 10 H+ + 8 e- &amp;&lt;=&gt; H2S + 4 H2O\\
+    CH2O + H2O &amp;&lt;=&gt; CO2 + 4 H+ + 4 e-
+    } \end{align} \end{split}\]</div>
+<p class="sd-card-text">(2) The overall redox reaction</p>
+<div class="math notranslate nohighlight">
+\[ \ce{
+    SO4^2- + 2 CH2O + 2 H+ &lt;=&gt; H2S + 2 CO2 + 2 H2O
+    } \]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example: Balancing redox reactions - Case Study 4</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Acid mine drainage is cause by the oxidation of pyrite (<span class="math notranslate nohighlight">\(\ce{FeS2(s)}\)</span>) when it comes in contact with water containing dissolved oxygen. The base reaction is:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+FeS2 + O2 -&gt; Fe(OH)3 + SO4^2-
+}\]</div>
+<p class="sd-card-text">In this reaction, three elements (<span class="math notranslate nohighlight">\(\ce{Fe}\)</span>, <span class="math notranslate nohighlight">\(\ce{S}\)</span>, and <span class="math notranslate nohighlight">\(\ce{O}\)</span>) participate in the overall redox reaction.</p>
+<p class="sd-card-text">(1) The half-reactions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align} 
+ \ce{
+    Fe^2+ &amp;-&gt; Fe^3+ + e- \\
+    2 S- + 8 H2O &amp;-&gt; 2 SO4^2- + 14 e- + 16 H+ \\
+    O2 + 4 e- + 2 H+ &amp;-&gt; 2 OH-
+    } \end{align} \end{split}\]</div>
+<p class="sd-card-text">(2) The overall redox reaction</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align} \ce{
+    4 FeS2 + 15 O2 + 14 H2O -&gt; 4 Fe(OH)3 + 8 SO4^2- + 16 H+
+    } \end{align} \]</div>
+<p class="sd-card-text">In this case, both <span class="math notranslate nohighlight">\(\ce{Fe}\)</span> and <span class="math notranslate nohighlight">\(\ce{S}\)</span> are oxidized by <span class="math notranslate nohighlight">\(\ce{O2}\)</span>.</p>
+</div>
+</details></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="51RedoxRxn.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5.1 What is Oxidation and Reduction?</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="53pe.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4.4 Practice Problems &#8212; Introduction to Geochemistry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '44Problems';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5 Redox Chemistry" href="5Redox.html" />
+    <link rel="prev" title="4.3 Salts of Acids and Bases" href="43SaltsSolubility.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
+    <script>document.write(`<img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Introduction to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Atoms First</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1AtomsFirst.html">1 Atoms First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11Atoms.html">1.1 Atoms and Subatomic Particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12PeriodicTable.html">1.2 The Periodic Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13ChemicalBonding.html">1.3 Chemical Bonding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14ChemicalReactions.html">1.4 Chemical Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15Problems.html">1.5 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2Thermodynamics.html">2 Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21Energy.html">2.1 Energy and Thermochemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22ZerothLaw.html">2.2  The Zeroth Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23FirstLaw.html">2.3  The First Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24SecondLaw.html">2.4 The Second Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25ThirdLaw.html">2.5 The Third Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26Gibbs.html">2.6 Gibbs Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27Problems.html">2.7 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chemical Equilibrium</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3ChemicalEquilibrium.html">3 Chemical Equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31ChemicalEquilibrium.html">3.1 What is Equilibrium?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32LawMassAction.html">3.2  Law of Mass Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33ApplicationsK.html">3.3  Application of <span class="math notranslate nohighlight">\(K\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="34Problems.html">3.4  Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acids and Bases</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4AcidsBases.html">4 Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="41AcidsBases.html">4.1 What are Acids and Bases?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42AcidBaseStrength.html">4.2 Strength of Acids and Bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="43SaltsSolubility.html">4.3 Salts of Acids and Bases</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reduction and Oxidation Processes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="5Redox.html">5 Redox Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="51RedoxRxn.html">5.1 What is Oxidation and Reduction?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="52RedoxRxnBalancing.html">5.2 Balancing Redox Reactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="53pe.html">5.3  Electron Activity, <span class="math notranslate nohighlight">\(pe\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="54Problems.html">5.4 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kinetics of Reactions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="6Kinetics.html">6 Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="61Rates.html">6.1  Chemical Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="62RateExpr.html">6.2  Common Rate Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="63Problems.html">6.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Isotopes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="7Isotopes.html">7 Environmental Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="71RadioIsotopes.html">7.1 Radioisotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="72StableIsotopes.html">7.2 Stable Isotopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="73Problems.html">7.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environmental Organic Chemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="8Organics.html">8 Environmental Organic Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="81WhatOrganics.html">8.1 What are organic chemicals?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="82EnvirOrganicChem.html">8.2 Organic Chemicals in the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="83Problems.html">8.3 Practice Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Review of Basic Mathematics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/44Problems.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4.4 Practice Problems</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="practice-problems">
+<h1>4.4 Practice Problems<a class="headerlink" href="#practice-problems" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Label each specie in the reactions below as acid, base, conjugate base, or conjugate acid:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+H2SO4 + 2 NH3 &amp;-&gt; 2 NH4+ + SO4^2-\\
+HCl + NO2- &amp;-&gt; HNO2 + Cl-\\
+HF + NH3 &amp;&lt;=&gt; F- + NH4+\\
+CH3COO- + H2O &amp;&lt;=&gt; CH3COOH + OH-
+}
+\end{align*}
+\end{split}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Calculate <span class="math notranslate nohighlight">\([\ce{OH-}]\)</span>  in a <span class="math notranslate nohighlight">\(\pu{1.4e-3 M}\)</span>  <span class="math notranslate nohighlight">\(\ce{HCl}\)</span> solution at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p></li>
+<li><p>Calculate <span class="math notranslate nohighlight">\([\ce{H3O+}]\)</span> in a solution for which <span class="math notranslate nohighlight">\([\ce{OH-}] = \pu{0.25 M}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p></li>
+<li><p>Calculate the concentration of the strong acid, <span class="math notranslate nohighlight">\(\ce{HBr}\)</span>, in a solution at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> that has a <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(0.12\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2.46\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6.27\)</span></p></li>
+</ol>
+</li>
+<li><p>A sample of acid rain collected from a pond was shown to have a <span class="math notranslate nohighlight">\(p\ce{H} = 4.65\)</span>. What concentration of <span class="math notranslate nohighlight">\(\ce{HNO3}\)</span> is this <span class="math notranslate nohighlight">\(p\ce{H}\)</span> equivalent to?</p></li>
+<li><p>Calculate the concentration of <span class="math notranslate nohighlight">\(\ce{HCl}\)</span> in a solution at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> that has <span class="math notranslate nohighlight">\(p\ce{H} =\)</span></p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(4.95\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3.45\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2.78\)</span></p></li>
+</ol>
+</li>
+<li><p>An aqueous solution of a strong base has <span class="math notranslate nohighlight">\(p\ce{H} = 8.15\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. Calculate the original concentration of base in the solution if the base is</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\ce{NaOH}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ce{Ba(OH)2}\)</span></p></li>
+</ol>
+</li>
+<li><p>Calculate the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of an aqueous solution at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> that is <span class="math notranslate nohighlight">\(\pu{0.095 M}\)</span> in hydrocyanic acid (<span class="math notranslate nohighlight">\(\ce{HCN}\)</span>). (<span class="math notranslate nohighlight">\(K_a = \pu{4.9e-10}\)</span>)</p></li>
+<li><p>Calculate the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> at equilibrium of <span class="math notranslate nohighlight">\(\pu{0.0075 M}\)</span> (hypochlorous acid, the main ingredient of bleach) solution at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. This equilibrium reaction is</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\ce{
+HClO (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + ClO- (aq) \qquad $K_a= \pu{3.5e-8}$
+}\]</div>
+<ol class="arabic simple" start="10">
+<li><p>The <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of an aqueous acid solution is <span class="math notranslate nohighlight">\(\pu{6.20}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. Calculate <span class="math notranslate nohighlight">\(K_a\)</span> for this acid if the initial acid concentration is <span class="math notranslate nohighlight">\(\pu{0.010 M}\)</span>. Assume the acid to be a weak monoprotic acid.</p></li>
+<li><p>Using the acetic acid equilibrium reaction is as shown below, Determine the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> and percent ionization for acetic acid (<span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span>) solutions at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> with concentrations :</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\pu{0.15 M}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\pu{0.015 M}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\pu{0.0015 M}\)</span></p></li>
+</ol>
+</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\ce{
+CH3COOH (aq) &lt;=&gt; H+ (aq) + CH3COO- (aq) \qquad $K_a = \pu{1.8e-5}$
+}\]</div>
+<ol class="arabic simple" start="12">
+<li><p>In the following dissociation reaction of <span class="math notranslate nohighlight">\(\ce{H4SiO4 (aq)}\)</span>, calculate the relative abundance of <span class="math notranslate nohighlight">\(\ce{H4SiO4 (aq)}\)</span> to <span class="math notranslate nohighlight">\(\ce{H3SiO4- (aq)}\)</span> at <span class="math notranslate nohighlight">\(p\ce{H} = 8.2\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\ce{
+H4SiO4 (aq) &lt;=&gt; H3SiO4- (aq) + H+ (aq) \qquad $K_a = 10^{-9.83}$
+}\]</div>
+<ol class="arabic simple" start="13">
+<li><p>Solve the following problems that are related to the carbonate system:</p>
+<ol class="arabic simple">
+<li><p>In a natural water whose <span class="math notranslate nohighlight">\(p\ce{H} = 4\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, calculate the relative activity of (a) <span class="math notranslate nohighlight">\(\ce{H2CO3^* (aq)}\)</span> to <span class="math notranslate nohighlight">\(\ce{HCO3- (aq)}\)</span> and (b) <span class="math notranslate nohighlight">\(\ce{HCO3- (aq)}\)</span> to <span class="math notranslate nohighlight">\(\ce{CO3^2- (aq)}\)</span>.</p></li>
+<li><p>Determine the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> at which (a) <span class="math notranslate nohighlight">\([\ce{H2CO3^* (aq)}] = [\ce{HCO3- (aq)}]\)</span> and (b) <span class="math notranslate nohighlight">\([\ce{HCO3- (aq)}] = [\ce{CO3^2- (aq)}]\)</span>.</p></li>
+<li><p>A groundwater sample has <span class="math notranslate nohighlight">\(p\ce{H} = 6.84\)</span> and <span class="math notranslate nohighlight">\([\ce{HCO3- (aq)}] = \pu{460 mg L−1}\)</span>. Calculate <span class="math notranslate nohighlight">\(P_\ce{CO2 (g)}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. Assume that activity equals concentration.</p></li>
+<li><p>Calculate  <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of rainwater in equilibrium with atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>.</p></li>
+<li><p>Calculate the concentration of each carbonate species in solution at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> when <span class="math notranslate nohighlight">\(\ce{C}_T = \pu{e-3 mol L-1}\)</span> and <span class="math notranslate nohighlight">\(p\ce{H} = 5.7\)</span>. Explain if your answer is reasonable.</p></li>
+<li><p>Calculate the acidity and alkalinity of this system at <span class="math notranslate nohighlight">\(\ce{C}_T = \pu{e-3 mol L-1}\)</span> and <span class="math notranslate nohighlight">\(p\ce{H} = 5.7\)</span>.</p></li>
+</ol>
+</li>
+<li><p>Solve the following problems that are related to the silicate system:</p>
+<ol class="arabic simple">
+<li><p>In a natural water whose  <span class="math notranslate nohighlight">\(p\ce{H} = 7\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, calculate the relative abundance of <span class="math notranslate nohighlight">\(\ce{H4SiO4 (aq)}\)</span> to <span class="math notranslate nohighlight">\(\ce{H3SiO4- (aq)}\)</span>.</p></li>
+<li><p>Determine the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> at which (a) <span class="math notranslate nohighlight">\([\ce{H4SiO4 (aq)}] = [\ce{H3SiO4- (aq)}]\)</span> and (b) <span class="math notranslate nohighlight">\([\ce{H3SiO4- (aq)}] = [\ce{H2SiO4^2- (aq)}]\)</span>.</p></li>
+<li><p>A river water sample has a <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of 6.5 and <span class="math notranslate nohighlight">\(\ce{Si}_T = \pu{10.5 mg L−1}\)</span>. Calculate each silica species concentration in this water sample. Note: Use the same method as that used for the carbonate system.</p></li>
+</ol>
+</li>
+<li><p>Calculate the concentration of <span class="math notranslate nohighlight">\(\ce{OH-}\)</span> in solution if <span class="math notranslate nohighlight">\(\pu{0.1 mol}\)</span> of <span class="math notranslate nohighlight">\(\ce{NH3}\)</span> is dissolved in <span class="math notranslate nohighlight">\(\pu{1 L}\)</span> of pure water at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. (<span class="math notranslate nohighlight">\(K_b = \pu{10^{-4.7}}\)</span>)</p></li>
+<li><p>What is the original molarity of an aqueous solution of ammonia (<span class="math notranslate nohighlight">\(\ce{NH3}\)</span>) whose <span class="math notranslate nohighlight">\(p\ce{H}\)</span> is <span class="math notranslate nohighlight">\(11.22\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>?</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ce{Zn(OH)2 (s)}\)</span> is an amphoteric hydroxide. Write balanced ionic equations to show its reaction with</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\ce{HCl}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ce{NaOH}\)</span> (note: the product is <span class="math notranslate nohighlight">\(\ce{Zn(OH)4^2- (aq)}\)</span>).</p></li>
+</ol>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\ce{Cu(OH)2 (s)}\)</span> is an amphoteric compound and dissolves according to the shown after the question. Answer the following questions and assume that the water temperature is <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Excess copper hydroxide is added to a beaker of water, i.e., solid copper hydroxide is present in the water. Using a base, the solution <span class="math notranslate nohighlight">\(p\ce{H}\)</span> is adjusted to <span class="math notranslate nohighlight">\(10\)</span>. Calculate <span class="math notranslate nohighlight">\([\ce{Cu(OH)3- (aq)}]\)</span> in the solution at equilibrium.</p></li>
+<li><p>A strong acid is added to the solution until the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> is reduced to <span class="math notranslate nohighlight">\(4\)</span>. Will the amount of <span class="math notranslate nohighlight">\(\ce{Cu(OH)3- (aq)}\)</span> in the beaker increase or decrease? Explain. At this <span class="math notranslate nohighlight">\(p\ce{H}\)</span>, calculate <span class="math notranslate nohighlight">\([\ce{Cu(OH)3- (aq)}]\)</span> in the solution.</p></li>
+</ol>
+</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\ce{
+Cu(OH)2 (s) + OH- (aq) &lt;=&gt; Cu(OH)3- (aq) \qquad $K_a = 10^{-2.9}$
+}\]</div>
+<ol class="arabic simple" start="19">
+<li><p>Calculate the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a buffer system made up of <span class="math notranslate nohighlight">\(\pu{0.15 M}\)</span> <span class="math notranslate nohighlight">\(\ce{NH3}\)</span> and <span class="math notranslate nohighlight">\(\pu{0.35 M}\)</span> <span class="math notranslate nohighlight">\(\ce{NH4Cl}\)</span>. <span class="math notranslate nohighlight">\(pK_a= 9.26\)</span> for <span class="math notranslate nohighlight">\(\ce{NH4+}/\ce{NH3}\)</span>.</p></li>
+<li><p>What is the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of the buffer that is made up of  <span class="math notranslate nohighlight">\(\pu{0.10 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{Na2HPO4}\)</span> and <span class="math notranslate nohighlight">\(\pu{0.15 M}\)</span> of  <span class="math notranslate nohighlight">\(\ce{KH2PO4}\)</span>? <span class="math notranslate nohighlight">\(pK_a\)</span>’s for the dissociation of the weak acid, <span class="math notranslate nohighlight">\(\ce{H3PO4}\)</span> are <span class="math notranslate nohighlight">\(2.15\)</span>, <span class="math notranslate nohighlight">\(7.20\)</span>, and <span class="math notranslate nohighlight">\(12.35\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\pu{0.10 M}\)</span> <span class="math notranslate nohighlight">\(\ce{NaOH}\)</span> is added to a buffer solution containing <span class="math notranslate nohighlight">\(\pu{1 M}\)</span> each of <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> and <span class="math notranslate nohighlight">\(\ce{CH3COONa}\)</span>, determine the final solution <span class="math notranslate nohighlight">\(p\ce{H}\)</span>.</p></li>
+<li><p>The <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a bicarbonate-carbonic acid buffer is 8.0. Calculate the ratio of the concentration of carbonic acid (<span class="math notranslate nohighlight">\(\ce{H2CO3}\)</span>) to that of the bicarbonate ion (<span class="math notranslate nohighlight">\(\ce{HCO3-}\)</span>).</p></li>
+<li><p>In a natural water sample that is in equilibrium with atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> and an initial <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of <span class="math notranslate nohighlight">\(6.35\)</span>, determine the change in <span class="math notranslate nohighlight">\(p\ce{H}\)</span> upon addition of a strong acid at the following concentrations: (Note: The activity of <span class="math notranslate nohighlight">\(\ce{CO3^2-}\)</span> is negligible.)</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\pu{e-3 mol}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\pu{e-4 mol}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\pu{e-5 mol}\)</span></p></li>
+</ol>
+</li>
+<li><p>A water sample from the Rio Grande river in Texas has <span class="math notranslate nohighlight">\([\ce{Ca^2+}] = \pu{109 mg L-1}\)</span> and <span class="math notranslate nohighlight">\([\ce{SO4^2-}] = \pu{238 mg L-1}\)</span> in addition to other ions. Is this water under-, over-, or saturated with respect to gypsum (<span class="math notranslate nohighlight">\(K_{s0} = 10^{-4.6}\)</span>)?</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="43SaltsSolubility.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4.3 Salts of Acids and Bases</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5Redox.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5 Redox Chemistry</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Vijay Vulava
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
