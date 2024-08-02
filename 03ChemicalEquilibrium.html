@@ -1,0 +1,1318 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chemical Equilibrium &#8212; Introduction to Geochemistry</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Acids and Bases" href="04AcidsBases.html" />
+    <link rel="prev" title="Equilibrium Thermodynamics" href="02Thermodynamics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Geochemistry</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01AtomsFirst.html">
+   Atoms First - A short introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02Thermodynamics.html">
+   Equilibrium Thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chemical Equilibrium
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04AcidsBases.html">
+   Acids and Bases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05Redox.html">
+   Redox Chemistry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06Kinetics.html">
+   Chemical Kinetics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07Isotopes.html">
+   Environmental Isotopes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08Organics.html">
+   Environmental Organic Chemistry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Appendix.html">
+   Basic Math for Geoscientists
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="http://vulavav.people.cofc.edu/geochemistry/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="http://vulavav.people.cofc.edu/geochemistry//issues/new?title=Issue%20on%20page%20%2F03ChemicalEquilibrium.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/03ChemicalEquilibrium.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Chemical Equilibrium
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#law-of-mass-action-and-the-equilibrium-constant">
+   Law of Mass Action and the Equilibrium Constant
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gas-phase-concentrations">
+     Gas phase concentrations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k-and-delta-rxn-g">
+     <span class="math notranslate nohighlight">
+      \(K\)
+     </span>
+     and
+     <span class="math notranslate nohighlight">
+      \(\Delta_{rxn}G\)
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#influence-of-k-on-the-direction-of-reactions">
+       Influence of
+       <span class="math notranslate nohighlight">
+        \(K\)
+       </span>
+       on the direction of reactions.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activities">
+       Activities
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-of-k">
+   Application of
+   <span class="math notranslate nohighlight">
+    \(K\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predict-direction-of-a-reaction">
+     Predict Direction of a Reaction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-chatelier-s-principle">
+     Le Châtelier’s Principle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determine-concentrations-of-reactants">
+     Determine Concentrations of Reactants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice-problems">
+   Practice Problems
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chemical Equilibrium</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Chemical Equilibrium
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#law-of-mass-action-and-the-equilibrium-constant">
+   Law of Mass Action and the Equilibrium Constant
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gas-phase-concentrations">
+     Gas phase concentrations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k-and-delta-rxn-g">
+     <span class="math notranslate nohighlight">
+      \(K\)
+     </span>
+     and
+     <span class="math notranslate nohighlight">
+      \(\Delta_{rxn}G\)
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#influence-of-k-on-the-direction-of-reactions">
+       Influence of
+       <span class="math notranslate nohighlight">
+        \(K\)
+       </span>
+       on the direction of reactions.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activities">
+       Activities
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-of-k">
+   Application of
+   <span class="math notranslate nohighlight">
+    \(K\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predict-direction-of-a-reaction">
+     Predict Direction of a Reaction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-chatelier-s-principle">
+     Le Châtelier’s Principle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determine-concentrations-of-reactants">
+     Determine Concentrations of Reactants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice-problems">
+   Practice Problems
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="chemical-equilibrium">
+<h1>Chemical Equilibrium<a class="headerlink" href="#chemical-equilibrium" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>The influence of chemical equilibrium and kinetics on the progress of chemical reactions often determines the abundance, distribution, and fate of substances in the environment. An understanding of the basic concepts of chemical equilibrium and chemical kinetics, therefore, may help us to explain and predict the environmental concentrations of inorganic and organic species in aqueous systems, whether these species are present naturally or have been introduced by humans.</p>
+<p>Equilibrium principles can be used to explain how Earth came to be and how humans are changing the entire planet dramatically. Watch the video below as narrated by the famous environmental scientist David Attenborough.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/2Jq23mSDh9U" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>In the previous chapter, we learned about the foundation principles of thermodynamics, including the laws of thermodynamics. These foundational principles explain why reactions happen. In this chapter, we will focus on the terminology of chemical reactions and the predictive power of thermodynamics in various environmental systems.</p>
+<div class="admonition-learning-goals admonition">
+<p class="admonition-title">Learning Goals</p>
+<p>The main goals for this chapter are to:
+1.</p>
+</div>
+</section>
+<section id="id1">
+<h2>Chemical Equilibrium<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>While studying chemical reactions, we need to know when they start and when they end. To do this, we define the state of equilibrium, when reactions are not proceeding. In thermodynamics, systems are at perfect rest, with absolutely no gradients or inhomogeneities of any kind. Under equilibrium conditions, systems have two attributes:</p>
+<ol class="simple">
+<li><p>None of the properties change with time - regardless of the time observed</p></li>
+<li><p>The system will return to equilibrium if any of its attributes are disturbed.</p></li>
+</ol>
+<p>A state in which there are no observable changes as a function of time. This state is achieved when (i) the rates of forward and reverse reaction rates are equal and (ii) concentrations of reactants and products remain constant. There are two types of equilibrium: (i) <em><strong>physical equilibrium</strong></em> involves a change in the states of matter, but not a change in the chemical composition. (ii) <em><strong>chemical equilibrium</strong></em> involves a change in chemical composition.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Types of equilibrium<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="simple">
+<li><p class="sd-card-text">Physical equilibrium: e.g., <span class="math notranslate nohighlight">\(\ce{H2O(l) &lt;=&gt; H2O(g)}\)</span></p></li>
+<li><p class="sd-card-text">Chemical equilibrium: e.g., <span class="math notranslate nohighlight">\(\ce{N2O4(g) &lt;=&gt; 2 NO2(g)} \)</span></p></li>
+</ol>
+</div>
+</details><div class="container">
+<iframe src="https://www.youtube.com/embed/dUMmoPdwBy4" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+</section>
+<section id="law-of-mass-action-and-the-equilibrium-constant">
+<h2>Law of Mass Action and the Equilibrium Constant<a class="headerlink" href="#law-of-mass-action-and-the-equilibrium-constant" title="Permalink to this headline">#</a></h2>
+<p>To quantify chemical equilibrium, we need to define the term, <em>reaction quotient</em> (<span class="math notranslate nohighlight">\(Q_c\)</span>). In any balanced chemical reaction, this term refers to the ratio of product concentrations in the numerator and reactant concentrations in the denominator – with each concentration raised to a power equal to the corresponding stoichiometric coefficient.</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{aA + bB &lt;=&gt; cC +dD}
+\]</div>
+<div class="math notranslate nohighlight" id="equation-qc">
+<span class="eqno">(22)<a class="headerlink" href="#equation-qc" title="Permalink to this equation">#</a></span>\[Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}\]</div>
+<p>In the above equation, square brackets “<span class="math notranslate nohighlight">\([ \, ]\)</span>” are used to indicate molar concentrations (<span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> or <span class="math notranslate nohighlight">\(\pu{M}\)</span>) of a chemical constituent.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Reaction quotient <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s write <span class="math notranslate nohighlight">\(Q_c\)</span> for the following reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+N2(g) + 3 H2(g) &amp;&lt;=&gt; 2 NH3(g) \\
+Cd^2+(aq) + 4 Br-(aq) &amp;&lt;=&gt; CdBr4^2-(aq)
+}
+\end{align*}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+        Q_c &amp;= \frac{[\ce{NH3(g)}]^2}{[\ce{N2(g)}][\ce{H2 (g)}]^3}\\
+         &amp;=\frac{[\ce{CdBr4^{2-} (aq)}]}{[\ce{Cd^{2+} (aq)}][\ce{Br^- (aq)}]^4}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details><p>Extensive studies and observations have determined that <span class="math notranslate nohighlight">\(Q_c\)</span> had the same value at equilibrium at constant temperature, regardless of the initial concentrations. Therefore, for a system at equilibrium, <span class="math notranslate nohighlight">\(Q_c\)</span> becomes the equilibrium constant, <span class="math notranslate nohighlight">\(K_c\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-lawmassaction">
+<span class="eqno">(23)<a class="headerlink" href="#equation-lawmassaction" title="Permalink to this equation">#</a></span>\[Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b} = K_c\]</div>
+<p>Equation <a class="reference internal" href="#equation-lawmassaction">(23)</a> is known as the <em><strong>law of mass action</strong></em>. This expression can be simplified as follows:</p>
+<div class="math notranslate nohighlight" id="equation-equi-exp">
+<span class="eqno">(24)<a class="headerlink" href="#equation-equi-exp" title="Permalink to this equation">#</a></span>\[K_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}\]</div>
+<p>This expression is called the <em><strong>equilibrium expression</strong></em>. If the equilibrium concentrations of all reactants and products are known in a given chemical reaction, we can calculate <span class="math notranslate nohighlight">\(K_c\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Calculating equilibrium constants <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In an analysis of the following reaction at <span class="math notranslate nohighlight">\(\pu{100 ^\circ C}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+Br2(g) + Cl2(g) &lt;=&gt; 2 BrCl(g)
+}\]</div>
+<p class="sd-card-text">the equilibrium concentrations were found to be <span class="math notranslate nohighlight">\([\ce{Br2 (g)}] = \pu{2.3e-3 mol L-1}\)</span>, <span class="math notranslate nohighlight">\([\ce{Cl2 (g)}] = \pu{1.2e-2 mol L-1}\)</span>, and <span class="math notranslate nohighlight">\([\ce{BrCl (g)}] = \pu{1.4e-2 mol L-1}\)</span>.</p>
+<p class="sd-card-text">Let’s write the equilibrium expression and substitute the given equilibrium concentrations to calculate <span class="math notranslate nohighlight">\(K_c\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    K_c &amp;= \frac{[\ce{BrCl(g){}}]^2}{[\ce{Br2(g)}][\ce{Cl2(g)}]}\\
+        &amp;= \frac{(\pu{1.4e-2 mol L-1})^2}{(\pu{2.3e-3 mol L-1})(\pu{1.2e-2 mol L-1})}\\
+        &amp;= 7.1
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Note, we did not show any units for <span class="math notranslate nohighlight">\(K_c\)</span>. It is a dimensionless quantity as described in a subsequent section.</p>
+</div>
+</details><section id="gas-phase-concentrations">
+<h3>Gas phase concentrations<a class="headerlink" href="#gas-phase-concentrations" title="Permalink to this headline">#</a></h3>
+<p>Gas concentrations can be expressed in <span class="math notranslate nohighlight">\(P\)</span>. But in reality, gas concentrations are often expressed in partial pressures or as percent of the composition of Earth’s atmosphere. Therefore, concentrations of gases are commonly expressed in units of atmosphere or <span class="math notranslate nohighlight">\(\pu{atm}\)</span>. We can also convert gas concentrations from <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> to <span class="math notranslate nohighlight">\(\pu{atm}\)</span> using the ideal gas law equation.</p>
+<div class="math notranslate nohighlight" id="equation-gaslaw">
+<span class="eqno">(25)<a class="headerlink" href="#equation-gaslaw" title="Permalink to this equation">#</a></span>\[PV = n R T\]</div>
+<p>where, <span class="math notranslate nohighlight">\(P\)</span> is pressure in <span class="math notranslate nohighlight">\(\pu{atm}\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is volume in <span class="math notranslate nohighlight">\(\pu{L}\)</span>, <span class="math notranslate nohighlight">\(n\)</span> is number of moles, <span class="math notranslate nohighlight">\(T\)</span> is temperature in <span class="math notranslate nohighlight">\(\pu{K}\)</span>, and <span class="math notranslate nohighlight">\(R\)</span> is gas law constant and has the value of <span class="math notranslate nohighlight">\(\pu{0.0821 L atm mol-1 K-1}\)</span> or <span class="math notranslate nohighlight">\(\pu{8.314 J mol-1 K}\)</span> at STP. Note that the ideal gas law is derived from a combination of Boyle’s, Charles’, and Avogadro’s laws. To convert gas concentrations from <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> to <span class="math notranslate nohighlight">\(\pu{atm}\)</span>, rearrange Eq. <a class="reference internal" href="#equation-gaslaw">(25)</a> as follows:</p>
+<div class="math notranslate nohighlight" id="equation-mol-atm-convert">
+<span class="eqno">(26)<a class="headerlink" href="#equation-mol-atm-convert" title="Permalink to this equation">#</a></span>\[\frac{n\ (\pu{mol})}{V\ (\pu{L})} = \frac{P\ (\pu{atm}) }{R\ (\pu{atm L mol-1 K-1}) \times T\ (\pu{K})}\]</div>
+<p><a class="reference external" href="https://ed.ted.com/lessons/1207-1-a-bennet-brianh264">The ABC’s of gas: Avogadro, Boyle, Charles - TED-Ed</a></p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/BY9VGS2eXas" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Converting gas phase concentrations <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(P_{\ce{O2}}\)</span> in Earth’s atmosphere is <span class="math notranslate nohighlight">\(0.21\)</span> (or <span class="math notranslate nohighlight">\(21\%\)</span> of Earth’s atmosphere is composed of <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>) We can convert <span class="math notranslate nohighlight">\(P_{\ce{O2}}\)</span> to <span class="math notranslate nohighlight">\([\ce{O2}]\)</span>  at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    \frac{n\ (\pu{mole})}{V\ (\pu{L})} &amp;= \frac{P\ (\pu{atm}) }{R\ (\pu{atm L mol-1 K-1}) \times T\ (\pu{K})}\\
+    &amp;= \frac{\pu{0.21 atm}}{(\pu{0.0821atm L mol-1 K-1})\times (\pu{298 K})}\\
+    &amp;= \pu{8.58e-3 mol L-1}
+    \end{aligned}
+\end{split}\]</div>
+</div>
+</details><p>The equilibrium expression can be rewritten for reactions that involve gases only as</p>
+<div class="math notranslate nohighlight" id="equation-gas-equi">
+<span class="eqno">(27)<a class="headerlink" href="#equation-gas-equi" title="Permalink to this equation">#</a></span>\[K_p = \frac{{P_C}^c {P_D}^d}{{P_A}^a {P_B}^b}\]</div>
+<p>The subscript, <span class="math notranslate nohighlight">\(p\)</span>, in <span class="math notranslate nohighlight">\(K_p\)</span> refers to gas concentrations expressed in <span class="math notranslate nohighlight">\(\pu{atm}\)</span>, while the subscript, <span class="math notranslate nohighlight">\(c\)</span>, in <span class="math notranslate nohighlight">\(K_c\)</span> refers to gas concentrations expressed in <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>. Because gas concentrations are interchangeable in units, it follows that <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> are correlated as follows:</p>
+<div class="math notranslate nohighlight" id="equation-kp-kc-convert">
+<span class="eqno">(28)<a class="headerlink" href="#equation-kp-kc-convert" title="Permalink to this equation">#</a></span>\[K_p = K_c (RT)^{\Delta n}\]</div>
+<p>where, <span class="math notranslate nohighlight">\(\Delta n = \sum \text{Total}\, n\, \text{of products} - \sum \text{Total}\, n\, \text{of reactants}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Writing equilibrium expressions <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s write the equilibrium expression in <span class="math notranslate nohighlight">\(K_p\)</span> for the following reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+Br2 (g) + Cl2 (g) &lt;=&gt; 2 BrCl (g)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[K_p = \frac{{P_{\ce{BrCl (g)}}}^2}{P_{\ce{Br2 (g)}} P_{\ce{Cl2 (g)}}}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Converting equilibrium expressions <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We calculated <span class="math notranslate nohighlight">\(K_c=7.1\)</span> for the reaction below</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+Br2 (g) + Cl2 (g) &lt;=&gt; 2 BrCl (g)}
+\]</div>
+<p class="sd-card-text">Let’s convert <span class="math notranslate nohighlight">\(K_c\)</span> to <span class="math notranslate nohighlight">\(K_p\)</span> using Eq. <a class="reference internal" href="#equation-kp-kc-convert">(28)</a>.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta n = (2)-(1+1) = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+K_p &amp;= K_c (RT)^{\Delta n}\\
+    &amp;= 7.1 \times (\pu{0.0821 atm L mol-1 K-1} \times \pu{373 K})^0\\
+    &amp;= 7.1
+    \end{aligned}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: <span class="math notranslate nohighlight">\(K\)</span>’s and reaction types <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the following two reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+N2O4 (g) &amp;&lt;=&gt; 2 NO2 (g) \\
+CO2 (g) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
+}
+\end{align*}
+\end{split}\]</div>
+<ol class="simple">
+<li><p class="sd-card-text">In the first reaction all chemical components are gases and is an example of homogeneous equilibrium reactions i.e., the states of matter are the same in the entire reaction. The second reaction contains more than one phase of matter and is an example of heterogeneous equilibrium.</p></li>
+<li><p class="sd-card-text">In the first reaction, <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> can be written since all components are gases, while in the second reaction only <span class="math notranslate nohighlight">\(K_c\)</span> can be written as <span class="math notranslate nohighlight">\(P\)</span> is not applicable for aqueous/liquid concentrations.</p></li>
+</ol>
+</div>
+</details></section>
+<section id="k-and-delta-rxn-g">
+<h3><span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\Delta_{rxn}G\)</span><a class="headerlink" href="#k-and-delta-rxn-g" title="Permalink to this headline">#</a></h3>
+<p>As seen in Eq. <a class="reference internal" href="#equation-equi-exp">(24)</a>, <span class="math notranslate nohighlight">\(K\)</span> indicates a ratio of product concentrations over reactant concentrations at equilibrium. This magnitude of this ratio (<span class="math notranslate nohighlight">\(K\)</span>) can be interpreted mathematically to deduce relative concentrations of reactants or the products at equilibrium in a chemical reaction. When <span class="math notranslate nohighlight">\(K\)</span> is very large, we can expect the numerator (product concentrations) to be very large relative to the denominator (reactant concentrations), and vice versa. In other words, we can interpret a high <span class="math notranslate nohighlight">\(K\)</span> value to indicate the products in a reaction to be more favored and that the reaction proceeds spontaneously as written (to right). Likewise, a low <span class="math notranslate nohighlight">\(K\)</span> can be interpreted as meaning that the reaction is spontaneous to the left. As a rule of thumb, a <span class="math notranslate nohighlight">\(K\)</span> value of  <span class="math notranslate nohighlight">\(\ge 10^2\)</span> is considered high and a value of  <span class="math notranslate nohighlight">\(\le 10^{−2}\)</span> is considered low.</p>
+<table class="colwidths-auto table" id="k-relative">
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">Magnitude of <span class="math notranslate nohighlight">\(K\)</span> and significance in reactions.</span><a class="headerlink" href="#k-relative" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(K\)</span> value</p></th>
+<th class="head"><p>Reaction Direction</p></th>
+<th class="head"><p>Spontaneity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(K \gg 1\)</span></p></td>
+<td><p>Products are favored</p></td>
+<td><p>Spontaneous to right</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(K \ll 1\)</span></p></td>
+<td><p>Reactants are favored</p></td>
+<td><p>Spontaneous to left</p></td>
+</tr>
+</tbody>
+</table>
+<section id="influence-of-k-on-the-direction-of-reactions">
+<h4>Influence of <span class="math notranslate nohighlight">\(K\)</span> on the direction of reactions.<a class="headerlink" href="#influence-of-k-on-the-direction-of-reactions" title="Permalink to this headline">#</a></h4>
+<p>Since magnitude of <span class="math notranslate nohighlight">\(K\)</span> is related to spontaneity of the reaction, it follows that <span class="math notranslate nohighlight">\(K\)</span> is directly related to <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span>. When <span class="math notranslate nohighlight">\(K \gg 1\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is negative and when <span class="math notranslate nohighlight">\(K \ll 1\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is positive. Therefore, we can also use <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> to determine <span class="math notranslate nohighlight">\(K\)</span>. In the hypothetical reaction,</p>
+<div class="math notranslate nohighlight">
+\[\ce{aA + bB &lt;=&gt; cC + dD}
+\]</div>
+<p><span class="math notranslate nohighlight">\(Q_C\)</span> can be written as shown in Eq. <a class="reference internal" href="#equation-qc">(22)</a>. Using thermodynamic data, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> can be determined. In nonstandard conditions, it can shown from thermodynamic principles that</p>
+<div class="math notranslate nohighlight">
+\[\Delta_{rxn}G^\circ = \Delta_{rxn}G^\circ{} + \mathrm{R}T\ln Q_c\]</div>
+<p>Under equilibrium conditions, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ{}=0\)</span> and <span class="math notranslate nohighlight">\(Q_c=K_c\)</span>, therefore the above equation can be simplified as follows:</p>
+<div class="math notranslate nohighlight" id="equation-kc-gibbs-ln">
+<span class="eqno">(29)<a class="headerlink" href="#equation-kc-gibbs-ln" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}
+0 &amp;= \Delta_{rxn}G^\circ{} + \mathrm{R}T\ln K_c \\
+\Delta_{rxn}G^\circ{} &amp;= -\mathrm{R}T\ln K_c
+\end{align}\end{split}\]</div>
+<p>The above equation can be simplified into a non-logarithmic form as follows:</p>
+<div class="math notranslate nohighlight" id="equation-kc-gibbs">
+<span class="eqno">(30)<a class="headerlink" href="#equation-kc-gibbs" title="Permalink to this equation">#</a></span>\[K_c = e^{-\left({\dfrac{\Delta_{rxn}G^\circ{}}{\mathrm{R}T}}\right)}\]</div>
+</section>
+<section id="activities">
+<h4>Activities<a class="headerlink" href="#activities" title="Permalink to this headline">#</a></h4>
+<p>In chemical thermodynamics, concentrations are dimensionless (unitless). These dimensionless or idealized concentrations are called activities. Activity of a chemical constituent is an important concept and is used to address the influence of physical and chemical conditions in the bulk solution. Chemical species in solution interact in many ways with nearby chemical species, including chemical bonding, van der Waals (dipole) interactions, to long-range electrostatic interactions. Sometimes, when concentrations of solutes are very high, they crowd each other. The intensity of all these interactions depends on the distance between the molecules and their concentrations. The activities inherently account for all these factors and are hence referred to as “thermodynamic concentrations.” Because, these values are dimensionless, <span class="math notranslate nohighlight">\(K_c\)</span> of any aqueous phase chemical reaction is dimensionless.</p>
+<p>Activities are derived from the same fundamental thermodynamic principles covered thus far. We use “<span class="math notranslate nohighlight">\(\{\, \}\)</span>” (curly brackets or braces) around chemical species names to indicate activity. An activity coefficient (<span class="math notranslate nohighlight">\(\gamma_i\)</span>) is used to convert concentrations to activities as follows:</p>
+<div class="math notranslate nohighlight" id="equation-activity">
+<span class="eqno">(31)<a class="headerlink" href="#equation-activity" title="Permalink to this equation">#</a></span>\[\{A\} = \gamma_A [A]\]</div>
+<p>where <span class="math notranslate nohighlight">\(\{A\}\)</span> is activity, <span class="math notranslate nohighlight">\([A]\)</span> is concentration, and <span class="math notranslate nohighlight">\(\gamma_A\)</span> is the activity coefficient. By convention, <span class="math notranslate nohighlight">\(\gamma_A = 1\)</span> for ideal solutes and dilute solutions (e.g., rain water and freshwater systems) and is <span class="math notranslate nohighlight">\(&lt; 1\)</span> all other cases. Also, by convention, <span class="math notranslate nohighlight">\(\{A\} = 1\)</span> for pure solids (e.g., mineral phases, precipitates, etc) and pure liquids (e.g., water).</p>
+<p>Activity coefficients are usually determined using ionic strength (<span class="math notranslate nohighlight">\(I\)</span>) of a solution. Ionic strength is a measure of combined concentration of all ions present in an aqueous solution and is calculated as follows:</p>
+<div class="math notranslate nohighlight" id="equation-ionicstrength">
+<span class="eqno">(32)<a class="headerlink" href="#equation-ionicstrength" title="Permalink to this equation">#</a></span>\[I = \frac{1}{2} \sum_{i=1}^{n} c_i z_i^2\]</div>
+<p>where,  <span class="math notranslate nohighlight">\(c_i\)</span> is concentration of each ion in <span class="math notranslate nohighlight">\(\pu{mol L-1 }\)</span> and <span class="math notranslate nohighlight">\(z_i\)</span> is charge of each ion in  <span class="math notranslate nohighlight">\(\pu{eq mol-1}\)</span>. The activity coefficient, <span class="math notranslate nohighlight">\(\gamma_i\)</span> for each ion using one of the following equations:</p>
+<div class="math notranslate nohighlight" id="equation-activitycoeff">
+<span class="eqno">(33)<a class="headerlink" href="#equation-activitycoeff" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+-\log \gamma_i &amp;= A z_i^2 \sqrt{I}\, &amp;&amp; \text{for}\, I&lt;0.005 \\
+-\log \gamma_i &amp;= \dfrac{A z_i^2 \sqrt{I}}{1+Ba_i\sqrt{I}}\, &amp;&amp; \text{for}\, 0.005&lt;I&lt;0.1\\
+-\log \gamma_i &amp;= A z_i^2 \sqrt{I} \left( \dfrac{\sqrt{I}}{1+\sqrt{I}} -0.2I\right)\, &amp;&amp; \text{for}\, 0.1&lt;I&lt;0.5 
+\end{aligned}\end{split}\]</div>
+<p>where, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are called Debye-Hückel constants and vary with temperature. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(A=\pu{0.511}\)</span> and <span class="math notranslate nohighlight">\(B=\pu{0.329e8}\)</span>. <span class="math notranslate nohighlight">\(a_i\)</span> is ion size parameter and is provided in <a class="reference internal" href="#ionsize"><span class="std std-numref">Table 11</span></a>.</p>
+<table class="colwidths-auto table" id="ionsize">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Ion size parameters (<span class="math notranslate nohighlight">\(a_i\)</span>) of major ions</span><a class="headerlink" href="#ionsize" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(a_i, \, \pu{cm}\)</span></p></th>
+<th class="head"><p>Ion</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\pu{3e-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{All ions (exceptions below)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\pu{4e-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{Na+}\)</span>, <span class="math notranslate nohighlight">\(\ce{SO4^2-}\)</span>, <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\pu{6e-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{Ca^2+}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\pu{8e-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{Mg^2+}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Since, activities are dimensionless, it follows that <span class="math notranslate nohighlight">\(K\)</span> values are also dimensionless. However, if a chemical reaction involves heterogeneous phases of reactants and products (usually a mixture of gases and liquids), it is not uncommon to see <span class="math notranslate nohighlight">\(K\)</span> values with units.</p>
+</section>
+</section>
+</section>
+<section id="application-of-k">
+<h2>Application of <span class="math notranslate nohighlight">\(K\)</span><a class="headerlink" href="#application-of-k" title="Permalink to this headline">#</a></h2>
+<section id="predict-direction-of-a-reaction">
+<h3>Predict Direction of a Reaction<a class="headerlink" href="#predict-direction-of-a-reaction" title="Permalink to this headline">#</a></h3>
+<p><span class="math notranslate nohighlight">\(K\)</span> values can be used to predict the direction in which any reaction proceeds spontaneously. First, we have to recall how reaction quotient (<span class="math notranslate nohighlight">\(Q_c\)</span>, Eq. <a class="reference internal" href="#equation-qc">(22)</a>) is calculated for a reaction. See example below.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Calculate <span class="math notranslate nohighlight">\(Q_c\)</span> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The formation of <span class="math notranslate nohighlight">\(\ce{HI(g)}\)</span> from <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span> and <span class="math notranslate nohighlight">\(\ce{I2(g)}\)</span> is depicted int the reaction below:</p>
+<div class="math notranslate nohighlight">
+\[\ce{H2(g) + I2(g) &lt;=&gt; 2 HI(g) \qquad $K_c =54.3$ at $\pu{430 ^\circ C}$ 
+}\]</div>
+<p class="sd-card-text">If we were to conduct an experiment starting with an initial mixture of <span class="math notranslate nohighlight">\(\pu{0.243 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span>, <span class="math notranslate nohighlight">\(\pu{0.146 M}\)</span>  of <span class="math notranslate nohighlight">\(\ce{I2(g)}\)</span>, and <span class="math notranslate nohighlight">\(\pu{1.98 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{HI(g)}\)</span> at <span class="math notranslate nohighlight">\(\pu{430 ^\circ C}\)</span>, we can calculate <span class="math notranslate nohighlight">\(Q_c\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+        Q_c &amp;= \frac{[\ce{HI}]^2}{[\ce{H2}][\ce{I2}]}\\
+        &amp;= \frac{(1.98)^2}{(0.243)\times (0.146)}\\
+        &amp;= 110.5\\
+        &amp; \ne K_c
+    \end{aligned}
+\end{split}\]</div>
+</div>
+</details><p>As seen in the example above, <span class="math notranslate nohighlight">\(Q_c\ne K_c\)</span>. This information can be used to predict the direction in which the reaction proceeds to reach equilibrium. There are three possibilities (summarized in <a class="reference internal" href="#qckc-relation"><span class="std std-numref">Table 12</span></a>):</p>
+<table class="colwidths-auto table" id="qckc-relation">
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">Relationship between <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> and how this information helps predict the flow of a reaction.</span><a class="headerlink" href="#qckc-relation" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(Q_c\, \text{vs.}\, K_c\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\dfrac{\{\text{Products}\}}{\{\text{Reactants}\}}\, \text{Ratio}\)</span></p></th>
+<th class="head"><p>For Equilbrium</p></th>
+<th class="head"><p>System Proceeds</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(Q_c &lt; K_c\)</span></p></td>
+<td><p>Low</p></td>
+<td><p>Reactants must create products</p></td>
+<td><p>Towards products</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_c = K_c\)</span></p></td>
+<td><p></p></td>
+<td><p>Concentrations do not change</p></td>
+<td><p>At equilibrium</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(Q_c &gt; K_c\)</span></p></td>
+<td><p>High</p></td>
+<td><p>Products must create reactants</p></td>
+<td><p>Towards reactants</p></td>
+</tr>
+</tbody>
+</table>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Comparing <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In the above example, <span class="math notranslate nohighlight">\(Q_c&gt;K_c\)</span>, therefore, the reaction proceeds to the left to reach equilibrium.</p>
+</div>
+</details></section>
+<section id="le-chatelier-s-principle">
+<h3>Le Châtelier’s Principle<a class="headerlink" href="#le-chatelier-s-principle" title="Permalink to this headline">#</a></h3>
+<p>As implied in the discussion above, <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> in a system could be different, causing the system to be in disequilibrium. Likewise, a system can be disturbed from the equilibrium by a change in reaction conditions. In nature, most systems are in such a state and are working towards achieving this equilibrium. Humans intentionally, or unintentionally, disturb an equilibrium condition towards a goal. An example is the industrial level of production of ammonia (<span class="math notranslate nohighlight">\(\ce{NH3}\)</span>) by reacting <span class="math notranslate nohighlight">\(\ce{N2}\)</span> with <span class="math notranslate nohighlight">\(\ce{H2}\)</span> at high <span class="math notranslate nohighlight">\(T\)</span> as shown in the following reaction.</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2(g) + 3 H2(g) &lt;=&gt; 2 NH3(g)
+}\]</div>
+<p>The above reaction is called the Haber-Bosch reaction, widely credited to having providing humans with enhancing crop production critical for matching the population growth in the twentieth century. In this reaction, the production is often manipulated by increasing one or more of the reactants or removing the product, causing the reaction to be out of equilibrium. The system then responds by increasing production of <span class="math notranslate nohighlight">\(\ce{NH3(g)}\)</span>. This is ultimately the goal of this process at an industrial scale - large production of <span class="math notranslate nohighlight">\(\ce{NH3(g)}\)</span>.</p>
+<p><a class="reference external" href="https://ed.ted.com/lessons/the-chemical-reaction-that-feeds-the-world-daniel-d-dulek">The Haber process | TED-Ed</a></p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/o1_D4FscMnU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Le Châtelier’s principle addresses the shift in equilibrium when external stress is applied to a system in equilibrium. <em>When a stress is applied to a system at equilibrium, the system will respond by shifting in the direction that minimizes the effect of the stress.</em> <em>Stress</em> can be applied in a variety of ways including:</p>
+<ol class="simple">
+<li><p>addition of a reactant or product,</p></li>
+<li><p>removal of a reactant or product,</p></li>
+<li><p>change in volume of the system, resulting in a change in concentration or partial pressure of the reactants and products, and</p></li>
+<li><p>change in temperature.</p></li>
+</ol>
+<figure class="margin-caption align-default" id="nh3-production">
+<a class="reference internal image-reference" href="https://openstax.org/apps/archive/20221109.213337/resources/0402516bd1c563bf706ff9a267c6f19a642c591d"><img alt="https://openstax.org/apps/archive/20221109.213337/resources/0402516bd1c563bf706ff9a267c6f19a642c591d" src="https://openstax.org/apps/archive/20221109.213337/resources/0402516bd1c563bf706ff9a267c6f19a642c591d" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Commercial production of ammonia requires heavy equipment to handle the high temperatures and pressures required. This schematic outlines the design of an ammonia plant. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/17-7-catalysis">17.7 Catalysis - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#nh3-production" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The system can respond to such change(s) by “shifting” the reaction in forward or reverse direction, such that the effect of the stress is partially offset as the system reestablishes equilibrium. A shift to the right produces more products by the forward reaction. A shift to the left produces more reactants by the reverse reaction. Using Le Châtelier’s principle, we can predict the direction in which an equilibrium will shift, given the specific stress that is applied.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Addition or removal of chemicals <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the Haber-Bosch process at <span class="math notranslate nohighlight">\(\pu{700 ^\circ C}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2(g) + 3 H2(g) &lt;=&gt; 2 NH3(g)
+}\]</div>
+<p class="sd-card-text">If at equilibrium, the concentrations are <span class="math notranslate nohighlight">\([\ce{N2}] = \pu{2.05 M}\)</span>, <span class="math notranslate nohighlight">\([\ce{H2}] = \pu{1.56 M}\)</span>, and <span class="math notranslate nohighlight">\([\ce{NH3}] = \pu{1.52 M}\)</span>, let’s calculate the reaction quotient (<span class="math notranslate nohighlight">\(Q_c= K_c\)</span> at equilibrium.)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Q_c &amp;= \frac{[\ce{NH3}]^2}{[\ce{N2}][\ce{H2}]^3} = \frac{(1.52)^2}{(2.05)\times(1.56)^3}\\
+&amp;= 0.297    = K_c
+ \end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">If we “stress” this system by increasing <span class="math notranslate nohighlight">\([\ce{N2}]\)</span> from <span class="math notranslate nohighlight">\(\pu{2.05 M}\)</span>  to <span class="math notranslate nohighlight">\(\pu{3.51 M}\)</span>, let’s recalculate <span class="math notranslate nohighlight">\(Q_c\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Q_c &amp;= \frac{(1.52)^2}{(3.51)\times(1.56)^3}\\
+&amp;= 0.173 \ne K_c
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(Q_c &lt; K_c\)</span>, the reaction proceeds to the right side of the above reaction (see <a class="reference internal" href="#qckc-relation"><span class="std std-numref">Table 12</span></a>). We can easily predict reaction scenarios that involve removal or addition of reactants or products.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Changes to volume and pressure <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the following reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2O4(g) &lt;=&gt; 2 NO2(g)
+}\]</div>
+<p class="sd-card-text">At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(K_c = \pu{4.63e-3}\)</span>. If at equilibrium, the concentrations are <span class="math notranslate nohighlight">\([\ce{N2O4}] = \pu{0.643 M}\)</span> and <span class="math notranslate nohighlight">\([\ce{NO2}] = \pu{0.0547 M}\)</span> in a cylinder. If we use a piston to reduce the volume of this cylinder by half (“stress”), the resulting concentrations are doubled to <span class="math notranslate nohighlight">\([\ce{N2O4}] = \pu{1.286 M}\)</span> and <span class="math notranslate nohighlight">\([\ce{NO2}] = \pu{0.1094 M}\)</span>. Let’s calculate <span class="math notranslate nohighlight">\(Q_c\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Q_c &amp;= \frac{[\ce{NO2}]^2}{[\ce{N2O4}]} = \frac{(0.1094)^2}{(1.286)}\\
+&amp;= \pu{9.31e-3}    \ne K_c
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(Q_c &gt; K_c\)</span>, the reaction proceeds to the left side of the above reaction (see <a class="reference internal" href="#qckc-relation"><span class="std std-numref">Table 12</span></a>).</p>
+<p class="sd-card-text">Note: When there is no difference in the number of moles of gas, changing the volume of the reaction vessel will change the concentrations of reactant(s) and product(s) in the same proportion - but the system will remain at equilibrium. (<span class="math notranslate nohighlight">\(Q_c = K_c\)</span>)</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Changes to temperature <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Changes to <span class="math notranslate nohighlight">\(T\)</span> can alter the position of an equilibrium and the equilibrium constant. Consider the following reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2O4(g) &lt;=&gt; 2 NO2(g)
+}\]</div>
+<p class="sd-card-text">This is an endothermic reaction (<span class="math notranslate nohighlight">\(\Delta_{sys}H^\circ{}&gt;0\)</span>), so the above reaction can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\ce{\text{heat} + N2O4(g) &lt;=&gt; 2 NO2(g)
+}\]</div>
+<p class="sd-card-text">In this expression, “heat” is treated as a reactant. If we were to increase <span class="math notranslate nohighlight">\(T\)</span> or add “heat”, we can see that <span class="math notranslate nohighlight">\(Q_c &lt; K_c\)</span> or that the reaction will proceed to the right as expected. Similar argument can be made for exothermic reactions.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(T\)</span> increase favors endothermic reactions, while <span class="math notranslate nohighlight">\(T\)</span> decrease favors exothermic processes.</p>
+</div>
+</details><p>In cases where <span class="math notranslate nohighlight">\(T\)</span> in a system is changed, the resulting new equilibrium constant can be calculated using the van’t Hoff equation:</p>
+<div class="math notranslate nohighlight" id="equation-vanthoff">
+<span class="eqno">(34)<a class="headerlink" href="#equation-vanthoff" title="Permalink to this equation">#</a></span>\[\ln \frac{K_2}{K_1} = \frac{\Delta_{rxn}H^\circ}{R} \left(\frac{1}{T_1} - \frac{1}{T_2}\right)\]</div>
+</section>
+<section id="determine-concentrations-of-reactants">
+<h3>Determine Concentrations of Reactants<a class="headerlink" href="#determine-concentrations-of-reactants" title="Permalink to this headline">#</a></h3>
+<p>If we know the <span class="math notranslate nohighlight">\(K\)</span> of a reaction, we can calculate the concentrations in an equilibrium mixture from the initial reactant concentrations. We can set up “ICE” tables to make this calculation methodical.</p>
+<div class="admonition-calculating-concentrations-of-reactants-and-products-at-equilibrium admonition">
+<p class="admonition-title">Calculating concentrations of reactants and products at equilibrium</p>
+<p>The following steps summarize the process involved:</p>
+<ol class="simple">
+<li><p>Construct an equilibrium table, and fill in the initial concentrations (including any that are zero).</p></li>
+<li><p>Use initial concentrations to calculate the reaction quotient, <span class="math notranslate nohighlight">\(Q_c\)</span>, and compare <span class="math notranslate nohighlight">\(Q_c\)</span> to <span class="math notranslate nohighlight">\(K_c\)</span> to determine the direction in which the reaction will proceed.</p></li>
+<li><p>Define <span class="math notranslate nohighlight">\(x\)</span> as the amount of a particular species consumed, and use the stoichiometry of the reaction to define (in terms of <span class="math notranslate nohighlight">\(x\)</span>) the amount of other species consumed or produced.</p></li>
+<li><p>For each species in the equilibrium, add the change in concentration to the initial concentration to get the equilibrium concentration.</p></li>
+<li><p>Use the equilibrium concentrations and the equilibrium expression to solve for <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>Using the calculated value of <span class="math notranslate nohighlight">\(x\)</span>, determine the concentrations of all species at equilibrium.</p></li>
+<li><p>Check your work by substituting the calculated equilibrium concentrations into the equilibrium expression. The result should be very close to the <span class="math notranslate nohighlight">\(K\)</span> stated in the problem.</p></li>
+</ol>
+<p>See the example below to see this method in practice.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Calculating concentrations at equilibrium <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(K_c\)</span> for the following reaction is <span class="math notranslate nohighlight">\(54.3\)</span> at <span class="math notranslate nohighlight">\(\pu{430 ^\circ C}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\ce{H2(g) + I2(g) &lt;=&gt; 2 HI(g)
+}\]</div>
+<p class="sd-card-text">Let’s calculate concentrations of all components at equilibrium if we start with <span class="math notranslate nohighlight">\(\pu{0.24 M}\)</span> of both <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span> and <span class="math notranslate nohighlight">\(\ce{I2(g)}\)</span>.</p>
+<p class="sd-card-text">Let’s determine how <span class="math notranslate nohighlight">\(Q_c\)</span> correlates with <span class="math notranslate nohighlight">\(K_c\)</span>. Because, there are no products to begin, the reaction proceeds to right to create products.</p>
+<p class="sd-card-text">In the above system, let’s insert the starting concentrations that we know into the equilibrium table below. We define the change in concentration of one of the reactants as <span class="math notranslate nohighlight">\(x\)</span>. Because there is no product at the start of the reaction, the reactant concentration must decrease; that is, this reaction must proceed in the forward direction to reach equilibrium. According to the stoichiometry of the chemical reaction, the reactant concentrations will both decrease by the same amount (<span class="math notranslate nohighlight">\(x\)</span>), and the product concentration will increase by twice that amount (<span class="math notranslate nohighlight">\(2x\)</span>). Combining the initial concentration and the change in concentration for each species, we get expressions (in terms of <span class="math notranslate nohighlight">\(x\)</span>) for the equilibrium concentrations:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(+\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{I2(g)}\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\rightleftharpoons\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(2\ce{HI(g)}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><strong>I</strong>nitial, M</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.24\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.24\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><strong>C</strong>hange, M</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(-x\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(-x\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(+2x\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><strong>E</strong>quilibrium, M</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\((0.24-x)\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\((0.24-x)\)</span></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\((0+2x)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">The above equilibrium setup table is called the <em><strong>ICE Table</strong></em>.</p>
+<p class="sd-card-text">From the ICE table we can write <span class="math notranslate nohighlight">\(K_c\)</span> expression and substitute equilibrium concentrations</p>
+<div class="math notranslate nohighlight">
+\[K_c = \frac{[\ce{HI}(g)]^2}{[\ce{H2(g)}][\ce{I2(g)}]} = \frac{(0+2x)^2}{(0.24-x)(0.24-x)} = 54.3\]</div>
+<p class="sd-card-text">The above expression can be rearranged into a linear quadratic form:</p>
+<div class="math notranslate nohighlight">
+\[50.3 x^2 - 26.1x + 3.13 = 0\]</div>
+<p class="sd-card-text">Solutions for a generic quadratic equation, <span class="math notranslate nohighlight">\(ax^2 + bx + c = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</div>
+<p class="sd-card-text">To calculate <span class="math notranslate nohighlight">\(x\)</span>, substitute <span class="math notranslate nohighlight">\(a=50.3\)</span>, <span class="math notranslate nohighlight">\(b=-26.1\)</span>, and <span class="math notranslate nohighlight">\(c=3.13\)</span> in above expression and we obtain <span class="math notranslate nohighlight">\(x_1 = 0.189\)</span> and <span class="math notranslate nohighlight">\(x_2 = 0.329\)</span>. Which of these two <span class="math notranslate nohighlight">\(x\)</span> values is correct? We can substitute each <span class="math notranslate nohighlight">\(x\)</span> value into the equilibrium concentration expressions and determine the correct value.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
+<th class="text-align:center head"><p class="sd-card-text"></p></th>
+<th class="head"><p class="sd-card-text"></p></th>
+<th class="text-align:center head"><p class="sd-card-text"></p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(x_2\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2}\)</span></p></td>
+<td class="text-align:center"><p class="sd-card-text">=</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\( 0.24-x\)</span></p></td>
+<td class="text-align:center"><p class="sd-card-text">=</p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.051 \)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-0.089\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{I2}\)</span></p></td>
+<td class="text-align:center"><p class="sd-card-text">=</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\( 0.24-x\)</span></p></td>
+<td class="text-align:center"><p class="sd-card-text">=</p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.051\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-0.089\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{HI}\)</span></p></td>
+<td class="text-align:center"><p class="sd-card-text">=</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\( 2x\)</span></p></td>
+<td class="text-align:center"><p class="sd-card-text">=</p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0.378\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-0.658\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">Substituting <span class="math notranslate nohighlight">\(x_1\)</span> in the above table resulted in all positive equilibrium concentrations, while substitution of <span class="math notranslate nohighlight">\(x_2\)</span> resulted in negative equilibrium concentrations. Since negative concentrations are not possible, the correct value for <span class="math notranslate nohighlight">\(x_1 = 0.189\)</span>.</p>
+<p class="sd-card-text">As a final check, let’s re-substitute equilibrium concentrations in <span class="math notranslate nohighlight">\(K\)</span> expression.</p>
+<div class="math notranslate nohighlight">
+\[
+K_c = \frac{[\ce{HI}(g)]^2}{[\ce{H2(g)}][\ce{I2(g)}]} = \frac{(0.378)^2}{(0.051)\times(0.051)} = 54.9 \approx 54.3
+\]</div>
+<p class="sd-card-text">The small discrepancy in the final calculation can be attributed to rounding.</p>
+</div>
+</details></section>
+</section>
+<section id="practice-problems">
+<h2>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">#</a></h2>
+<p>(1) Write <span class="math notranslate nohighlight">\(Q_c\)</span> expressions for the following reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+2 N2O &amp;&lt;=&gt; 2 N2 + O2 \\
+2 NOBr &amp;&lt;=&gt; 2 NO + Br2 \\
+HF &amp;&lt;=&gt; H+ + F- \\
+CO + H2O &amp;&lt;=&gt; CO2 + H2 \\
+CH4 + 2 H2S &amp;&lt;=&gt; CS2 + 4 H2 \\
+H2C2O4 &amp;&lt;=&gt; 2 H+ + C2O4^2-
+}
+\end{align*}
+\end{split}\]</div>
+<p>(2) A reaction vessel contains <span class="math notranslate nohighlight">\(\ce{NH3 (g)}\)</span>, <span class="math notranslate nohighlight">\(\ce{N2 (g)}\)</span>, and <span class="math notranslate nohighlight">\(\ce{H2 (g)}\)</span> at equilibrium at a certain temperature. The equilibrium concentrations are <span class="math notranslate nohighlight">\([\ce{NH3}] = \pu{0.25 M}\)</span>, <span class="math notranslate nohighlight">\([\ce{N2}] = \pu{0.11 M}\)</span>, and <span class="math notranslate nohighlight">\([\ce{H2}] = \pu{1.91 M}\)</span>. Calculate the equilibrium constant <span class="math notranslate nohighlight">\(K_c\)</span> for each of the two reactions representing synthesis of ammonia as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{N2 + 3 H2 &amp; &lt;=&gt; 2 NH3\\
+1/2 N2 + 3/2 H2 &amp; &lt;=&gt; NH3
+}
+\end{align*}
+\end{split}\]</div>
+<p>(3) Create a table of all gases present in Earth’s atmosphere from the most abundant at top to less abundant (minimum of 6 gases). In adjacent columns, list concentrations in fraction (<span class="math notranslate nohighlight">\(\%\)</span>), partial pressure (<span class="math notranslate nohighlight">\(P,\, \pu{atm}\)</span>), and concentration (<span class="math notranslate nohighlight">\(C,\, \pu{mol L-1}\)</span>). See template below:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gas</p></th>
+<th class="text-align:right head"><p>Fraction</p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(P\)</span></p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(C\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(\%\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(\pu{atm}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{N2}\)</span></p></td>
+<td class="text-align:right"><p></p></td>
+<td class="text-align:right"><p></p></td>
+<td class="text-align:right"><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{O2}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(21\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(0.21\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(\pu{8.58e-3}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+<td class="text-align:right"><p></p></td>
+<td class="text-align:right"><p></p></td>
+<td class="text-align:right"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>(4) Carbonyl chloride (<span class="math notranslate nohighlight">\(\ce{COCl2}\)</span>), also called phosgene, is a highly poisonous gas that was used on the battlefield in World War I. It is produced by the reaction of carbon monoxide with chlorine gas as follows
+$<span class="math notranslate nohighlight">\(\ce{CO(g) + Cl2(g)  &lt;=&gt; COCl2(g)}\)</span>$</p>
+<p>In an experiment conducted at <span class="math notranslate nohighlight">\(\pu{74 ^\circ C}\)</span>, the equilibrium concentrations of the species involved in the reaction were as follows: <span class="math notranslate nohighlight">\([\ce{CO}] = \pu{1.2e-2 M}\)</span>, <span class="math notranslate nohighlight">\([\ce{Cl2}]= \pu{0.054 M}\)</span>, and <span class="math notranslate nohighlight">\([\ce{COCl2}] = \pu{0.14 M}\)</span>.</p>
+<blockquote>
+<div><p>(a) Write the equilibrium expression.</p>
+<p>(b) Determine <span class="math notranslate nohighlight">\(K_c\)</span> and <span class="math notranslate nohighlight">\(K_p\)</span> for this reaction at 74 °C.</p>
+</div></blockquote>
+<p>(5). At equilibrium, the pressure of the reacting mixture (represented below) is <span class="math notranslate nohighlight">\(\pu{0.105 atm}\)</span> at <span class="math notranslate nohighlight">\(\pu{350 ^\circ C}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\ce{CaCO3(s) &lt;=&gt; CaO(s) + CO2(g)
+}\]</div>
+<blockquote>
+<div><p>Determine <span class="math notranslate nohighlight">\(K_c\)</span> and <span class="math notranslate nohighlight">\(K_p\)</span> for this reaction.</p>
+</div></blockquote>
+<p>(6) Below is a reaction depicting the composition of water molecules and the production of <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. (In reality, this reaction occurs at a very high temperature.)</p>
+<div class="math notranslate nohighlight">
+\[\ce{2 H2O(g) &lt;=&gt; 2 H2(g) + O2(g)
+}\]</div>
+<blockquote>
+<div><p>Using thermodynamic data, calculate the equilibrium constant, <span class="math notranslate nohighlight">\(K_p\)</span> for this reaction.</p>
+</div></blockquote>
+<p>(7) The dissolution of silver chloride in water at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\ce{AgCl(s) &lt;=&gt;[H2O] Ag+(aq) + Cl-(aq) \qquad $K_{sp} = \pu{1.6e-10}$
+}\]</div>
+<blockquote>
+<div><p>Calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> for the process using only the data provided here.</p>
+</div></blockquote>
+<p>(8) Consider the decomposition of calcium carbonate as shown in the reaction below.</p>
+<div class="math notranslate nohighlight">
+\[\ce{CaCO3 &lt;=&gt; CaO + CO2
+}\]</div>
+<blockquote>
+<div><p>Assume that <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{177.8 kJ mol-1}\)</span> and <span class="math notranslate nohighlight">\(\Delta_{rxn}S^\circ = \pu{160.5 J mol-1 K-1}\)</span> for the temperature range.  Calculate the pressure in atm of in an equilibrium process at</p>
+<p>(a) <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span></p>
+<p>(b) <span class="math notranslate nohighlight">\(\pu{800 ^\circ C}\)</span>.</p>
+</div></blockquote>
+<p>(9) At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ = \pu{8.6 kJ mol-1}\)</span> for the process shown below.</p>
+<div class="math notranslate nohighlight">
+\[\ce{H2O(l) &lt;=&gt; H2O(g)
+}\]</div>
+<blockquote>
+<div><p>Calculate the vapor pressure of water at this temperature.</p>
+</div></blockquote>
+<p>(10) The reaction below shows the equilibrium between graphite and diamond.</p>
+<div class="math notranslate nohighlight">
+\[\ce{C  (diamond) &lt;=&gt; C  (graphite)
+}\]</div>
+<blockquote>
+<div><p>(a) Calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> for the process.</p>
+<p>(b) Is the formation of graphite from diamond favored at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>? If so, why is it that diamonds do not become graphite on standing?</p>
+</div></blockquote>
+<p>(11) <span class="math notranslate nohighlight">\(\ce{CaCl2(s)}\)</span> is a strong electrolyte when it is dissolved in water at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> to create <span class="math notranslate nohighlight">\(\ce{Ca^2+}\)</span> and <span class="math notranslate nohighlight">\(\ce{Cl-}\)</span>. Calculate activity of <span class="math notranslate nohighlight">\(\{\ce{Ca^2+}\}\)</span> and <span class="math notranslate nohighlight">\(\{\ce{Cl-}\}\)</span> when the following concentrations of <span class="math notranslate nohighlight">\(\ce{CaCl2(s)}\)</span> are dissolved:</p>
+<blockquote>
+<div><p>(a) <span class="math notranslate nohighlight">\(\pu{0.001 mol L-1}\)</span></p>
+<p>(b) <span class="math notranslate nohighlight">\(\pu{0.09 mol L-1}\)</span></p>
+<p>(c) <span class="math notranslate nohighlight">\(\pu{0.4 mol L-1}\)</span></p>
+</div></blockquote>
+<p>(12) At the start of the following reaction, the concentrations of <span class="math notranslate nohighlight">\(\ce{N2}\)</span>, <span class="math notranslate nohighlight">\(\ce{H2}\)</span>, and <span class="math notranslate nohighlight">\(\ce{NH3}\)</span> are <span class="math notranslate nohighlight">\(\pu{0.071 M}\)</span>, <span class="math notranslate nohighlight">\(\pu{9.2e-3 M}\)</span>, and <span class="math notranslate nohighlight">\(\pu{1.83e-4 M}\)</span>, respectively.</p>
+<div class="math notranslate nohighlight">
+\[\ce{N2 + 3 H2 &lt;=&gt; 2 NH3 \qquad $K_c =1.2$ at $\pu{375 ^\circ C}$
+}\]</div>
+<blockquote>
+<div><p>Determine whether this system is at equilibrium, and if not, determine in which direction it must proceed to establish equilibrium.</p>
+</div></blockquote>
+<p>(13) Hydrogen sulfide (<span class="math notranslate nohighlight">\(\ce{H2S(g)}\)</span>) is a commonly found in salt marsh environments. It is removed by reaction with oxygen to produce elemental sulfur.</p>
+<div class="math notranslate nohighlight">
+\[\ce{2 H2S(g) + O2(g) &lt;=&gt; 2 S(s) + 2 H2O(g)
+}\]</div>
+<blockquote>
+<div><p>For each of the following scenarios, determine whether the equilibrium will shift to the right, shift to the left, or neither:</p>
+<p>(a) addition of <span class="math notranslate nohighlight">\(\ce{O2(g)}\)</span></p>
+<p>(b) removal of <span class="math notranslate nohighlight">\(\ce{H2S(g)}\)</span></p>
+<p>(c) removal of <span class="math notranslate nohighlight">\(\ce{H2O(g)}\)</span></p>
+<p>(d) addition of <span class="math notranslate nohighlight">\(\ce{S(s)}\)</span></p>
+</div></blockquote>
+<p>(14) Repeat above problem with the following initial data.</p>
+<div class="math notranslate nohighlight">
+\[\ce{H2(g) + I2(g) &lt;=&gt; 2 HI(g)
+}\]</div>
+<blockquote>
+<div><p>Calculate concentrations of all components at equilibrium if we start with <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span> = <span class="math notranslate nohighlight">\(\pu{0.00623 M}\)</span>, <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span> = <span class="math notranslate nohighlight">\(\pu{0.00414 M}\)</span>, and <span class="math notranslate nohighlight">\(\ce{HI(g)}\)</span> =  <span class="math notranslate nohighlight">\(\pu{0.0424 M}\)</span>. <span class="math notranslate nohighlight">\(K_c\)</span> for the above reaction is <span class="math notranslate nohighlight">\(54.3\)</span> at <span class="math notranslate nohighlight">\(\pu{430 ^\circ C}\)</span>. Hint: Compare <span class="math notranslate nohighlight">\(Q_c\)</span> with <span class="math notranslate nohighlight">\(K_c\)</span> to determine in which direction the reaction proceeds towards equilibrium.</p>
+</div></blockquote>
+<p>(15) Large quantities of <span class="math notranslate nohighlight">\(\ce{H2 (g)}\)</span> are needed to produce <span class="math notranslate nohighlight">\(\ce{NH3(g)}\)</span>. One preparation for <span class="math notranslate nohighlight">\(\ce{H2 (g)}\)</span> is the following reaction, at <span class="math notranslate nohighlight">\(\pu{300 ^\circ C}\)</span> in the presence of a Cu-Zn catalyst:</p>
+<div class="math notranslate nohighlight">
+\[\ce{CO(g) + H2O(g) &lt;=&gt; CO2(g) + H2(g) \qquad $K_c=1.87$ and $\Delta _{rxn}H^\circ = \pu{-41 kJ mol-1}$
+}\]</div>
+<blockquote>
+<div><p>(a) Initial concentrations of reactants <span class="math notranslate nohighlight">\(\ce{CO(g)}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2O(g)}\)</span> were <span class="math notranslate nohighlight">\(\pu{3.2 M}\)</span>. The final concentration of <span class="math notranslate nohighlight">\(\ce{CO(g)}\)</span> was monitored over time and determined to be <span class="math notranslate nohighlight">\(\pu{1.35 M}\)</span> at equilibrium. What are the equilibrium concentrations of all gases? (Use ICE method)</p>
+<p>(b) In another reactor, initial concentrations are: <span class="math notranslate nohighlight">\([\ce{CO}] = \pu{0.50 M}\)</span>, <span class="math notranslate nohighlight">\([\ce{H2O}] = \pu{0.045 M}\)</span>, <span class="math notranslate nohighlight">\([\ce{CO2}] = \pu{0.050 M}\)</span>, <span class="math notranslate nohighlight">\([\ce{H2}] = \pu{0.040 M}\)</span>. (i) Compare <span class="math notranslate nohighlight">\(Q\)</span> to <span class="math notranslate nohighlight">\(K\)</span> and determine in which direction the reaction will proceed. (ii) What are the equilibrium concentrations?</p>
+<p>(c) If <span class="math notranslate nohighlight">\(\pu{0.80 mole}\)</span> of <span class="math notranslate nohighlight">\(\ce{CO(g)}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2O(g)}\)</span> are added to a new <span class="math notranslate nohighlight">\(\pu{5 L}\)</span> reactor, what are the equilibrium concentrations of all reactants and products?</p>
+<p>(d) If your objective is to increase <span class="math notranslate nohighlight">\(\ce{H2(g)}\)</span> production, explain which of the following options work? (i) Remove reactant or product? (ii) Add reactant or product? (iii) Change <span class="math notranslate nohighlight">\(P\)</span>? (iv) Change <span class="math notranslate nohighlight">\(T\)</span>?</p>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="02Thermodynamics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Equilibrium Thermodynamics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="04AcidsBases.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Acids and Bases</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vijay Vulava<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

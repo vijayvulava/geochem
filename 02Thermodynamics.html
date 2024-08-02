@@ -1,0 +1,1920 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Equilibrium Thermodynamics &#8212; Introduction to Geochemistry</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/vmv.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chemical Equilibrium" href="03ChemicalEquilibrium.html" />
+    <link rel="prev" title="Atoms First - A short introduction" href="01AtomsFirst.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/Geolo-Envir-Geosc-dept.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Geochemistry</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Geochemistry
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01AtomsFirst.html">
+   Atoms First - A short introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Equilibrium Thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03ChemicalEquilibrium.html">
+   Chemical Equilibrium
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04AcidsBases.html">
+   Acids and Bases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05Redox.html">
+   Redox Chemistry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06Kinetics.html">
+   Chemical Kinetics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07Isotopes.html">
+   Environmental Isotopes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08Organics.html">
+   Environmental Organic Chemistry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Appendix.html">
+   Basic Math for Geoscientists
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="http://vulavav.people.cofc.edu/geochemistry/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="http://vulavav.people.cofc.edu/geochemistry//issues/new?title=Issue%20on%20page%20%2F02Thermodynamics.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/02Thermodynamics.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-and-thermochemistry">
+   Energy and Thermochemistry
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-work">
+     What is work?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-energy">
+     What is energy?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-thermodynamics">
+   Introduction to Thermodynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thermodynamic-systems">
+     Thermodynamic Systems
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#states-and-state-variables">
+     States and State Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phases-and-components">
+     Phases and Components
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeroth-law-of-thermodynamics">
+   Zeroth Law of Thermodynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-law-of-thermodynamics">
+   First Law of Thermodynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enthalpy">
+     Enthalpy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hess-s-law">
+     Hess’s Law
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-law-of-thermodynamics">
+   Second Law of Thermodynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spontaneous-processes">
+     Spontaneous processes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropy">
+     Entropy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-entropy-s-circ">
+     Standard entropy,
+     <span class="math notranslate nohighlight">
+      \(S^\circ\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qualitative-prediction-of-delta-sys-s-circ">
+     Qualitative prediction of
+     <span class="math notranslate nohighlight">
+      \(\Delta _{sys}S^\circ\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#s-circ-changes-in-the-universe">
+     <span class="math notranslate nohighlight">
+      \(S^\circ\)
+     </span>
+     changes in the universe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#second-law-definition">
+     Second Law - Definition
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#third-law-of-thermodynamics">
+   Third Law of Thermodynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gibbs-free-energy">
+   Gibbs Free Energy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-gibbs-free-energy-delta-f-g-circ">
+     Standard Gibbs free energy,
+     <span class="math notranslate nohighlight">
+      \(\Delta _{f} G^\circ\)
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#predicting-sign-of-delta-rxn-g-circ">
+       Predicting sign of
+       <span class="math notranslate nohighlight">
+        \(\Delta_{rxn}G^\circ\)
+       </span>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calculating-t-at-equilibrium">
+       Calculating
+       <span class="math notranslate nohighlight">
+        \(T\)
+       </span>
+       at equilibrium
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice-problems">
+   Practice Problems
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Equilibrium Thermodynamics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-and-thermochemistry">
+   Energy and Thermochemistry
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-work">
+     What is work?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-energy">
+     What is energy?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-thermodynamics">
+   Introduction to Thermodynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thermodynamic-systems">
+     Thermodynamic Systems
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#states-and-state-variables">
+     States and State Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phases-and-components">
+     Phases and Components
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeroth-law-of-thermodynamics">
+   Zeroth Law of Thermodynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-law-of-thermodynamics">
+   First Law of Thermodynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enthalpy">
+     Enthalpy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hess-s-law">
+     Hess’s Law
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-law-of-thermodynamics">
+   Second Law of Thermodynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spontaneous-processes">
+     Spontaneous processes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropy">
+     Entropy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-entropy-s-circ">
+     Standard entropy,
+     <span class="math notranslate nohighlight">
+      \(S^\circ\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qualitative-prediction-of-delta-sys-s-circ">
+     Qualitative prediction of
+     <span class="math notranslate nohighlight">
+      \(\Delta _{sys}S^\circ\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#s-circ-changes-in-the-universe">
+     <span class="math notranslate nohighlight">
+      \(S^\circ\)
+     </span>
+     changes in the universe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#second-law-definition">
+     Second Law - Definition
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#third-law-of-thermodynamics">
+   Third Law of Thermodynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gibbs-free-energy">
+   Gibbs Free Energy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-gibbs-free-energy-delta-f-g-circ">
+     Standard Gibbs free energy,
+     <span class="math notranslate nohighlight">
+      \(\Delta _{f} G^\circ\)
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#predicting-sign-of-delta-rxn-g-circ">
+       Predicting sign of
+       <span class="math notranslate nohighlight">
+        \(\Delta_{rxn}G^\circ\)
+       </span>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calculating-t-at-equilibrium">
+       Calculating
+       <span class="math notranslate nohighlight">
+        \(T\)
+       </span>
+       at equilibrium
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice-problems">
+   Practice Problems
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="equilibrium-thermodynamics">
+<h1>Equilibrium Thermodynamics<a class="headerlink" href="#equilibrium-thermodynamics" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Thermodynamics is a fundamental scientific discipline that is applicable in a wide range of fields and systems, both natural and man-made. It is used to describe and predict the behavior of systems that exchange energy, work, and heat with their surroundings. The systems studied using this approach can be from a microscopic- to planetary-scales.  Some examples of natural and human systems that can be studied using a thermodynamic approach are outlined below.</p>
+<p>In this example on the impact of climate change - scientists use principles of thermodynamics to predict how various parts of the Earth system respond to the changing climate.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/AVu-vplvCZE" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Economists can also explain supply chains and manufacturing processes using thermodynamic principles.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/h6Clz8DQvIk" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Earth’s interior including the mantle and the plate tectonic theory can be quantified using the principles of thermodynamics. The Earth can be studied from a classic systems perspective that makes the application of thermodynamics very helpful.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/ECBbAjoEHWI" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>The world’s scientists and governments are banking on “green” solutions as an answer to solving the climate crisis.  However, thermodynamic principles can help us better identify which types of solutions are more feasible than others.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Chp9VlSs25c" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<!---
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Cco0T7cj-B4" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+--->
+<p>Equilibrium thermodynamics focuses on prediction of concentrations of all species and phases present at the end of a reaction at equilibrium. Kinetics focuses on the rate at which reactions occur. In this section we focus on fundamental ideas of thermodynamics and also on their applications in the field of environmental geochemistry.</p>
+<p>This chapter provides a basic understanding of chemical thermodynamics, which is the basis for all of chemical equilibria. We describe the basic concepts, principal functions of state, and laws of thermodynamics and show how these concepts are used to define the equilibrium conditions for chemical processes. The effects of temperature and pressure on thermodynamic functions of state and on chemical equilibria also are developed, and examples are provided throughout the chapter to illustrate applications of important thermodynamic principles and equations.</p>
+<div class="admonition-learning-goals admonition">
+<p class="admonition-title">Learning Goals</p>
+<p>The main goals for this chapter are to:</p>
+<ol class="simple">
+<li><p>learn the basic terminology of thermodynamics - including, work, energy, systems, and state variables,</p></li>
+<li><p>identify how energy is transferred between systems and their surroundings, and</p></li>
+<li><p>define and apply the laws of thermodynamics and the fundamental thermodynamic properties, including enthalpy, entropy, and Gibbs free energy.</p></li>
+</ol>
+</div>
+</section>
+<section id="energy-and-thermochemistry">
+<h2>Energy and Thermochemistry<a class="headerlink" href="#energy-and-thermochemistry" title="Permalink to this headline">#</a></h2>
+<section id="what-is-work">
+<h3>What is work?<a class="headerlink" href="#what-is-work" title="Permalink to this headline">#</a></h3>
+<p>Mass (e.g., coffee, gasoline) contained in a closed system (e.g., a Thermos flask, gas tank in a car) is a conserved quantity, but if the system is not closed, the amount of mass that goes in or out of the system can be measured. Likewise, we often have a system that is not closed, and would like to know how much energy comes in or out.</p>
+<p>Energy is not a physical substance like water or coffee, so energy transfer cannot be measured with a meter or an instrument. So, how can we tell how much useful energy can a car “put out” on one tank of gas?</p>
+<p>The <em><strong>law of conservation of energy</strong></em> guarantees that all the chemical energy in the gasoline will reappear in some form, but not necessarily in a form that is useful for doing farm work. Tractors, like cars, are extremely inefficient, and typically <span class="math notranslate nohighlight">\(\pu{90 \%}\)</span> of the energy they consume is converted directly into heat, which is carried away by the exhaust and the air flowing over the radiator. We wish to distinguish the energy that comes out directly as heat from the energy that serves to accelerate a trailer or to plow a field, so we define a technical meaning of the ordinary word “work” to express the distinction:</p>
+<div class="math notranslate nohighlight" id="equation-work">
+<span class="eqno">(4)<a class="headerlink" href="#equation-work" title="Permalink to this equation">#</a></span>\[\text{Work} = \text{force} \times \text{distance}\]</div>
+</section>
+<section id="what-is-energy">
+<h3>What is energy?<a class="headerlink" href="#what-is-energy" title="Permalink to this headline">#</a></h3>
+<p>Energy is the capacity to do work. It can be in many forms: thermal energy (associated with random motion of atoms and molecules), chemical energy (associated with bonds in chemical substances), potential energy (associated with position of an object), kinetic energy (associated with motion), etc. Each of these forms of energy can be converted to another form (e.g., dropping an object converts potential energy to kinetic energy), but cannot be created or destroyed. This principle is called <em><strong>law of conservation of energy</strong></em>. SI unit of energy is joule or <span class="math notranslate nohighlight">\(\pu{J}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Kinetic Energy<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The amount of kinetic energy possessed by <span class="math notranslate nohighlight">\(\pu{2 kg}\)</span> mass moving at a speed of <span class="math notranslate nohighlight">\(\pu{1 m s−1}\)</span>, calculated as:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[
+E_k = \frac{1}{2}m\nu^2 = \frac{1}{2}(\pu{ 2 kg})(\pu{1 m s-2})  = \pu{ 1 J}
+\]</div>
+</div></blockquote>
+</div>
+</details><p>Matter can undergo physical and chemical changes. For example, freezing of water does not involve breaking down of water molecules and only involves changing the state of matter, i.e., physical change. This can be represented as follows: <span class="math notranslate nohighlight">\(\ce{H2O(l)  -&gt; H2O(g)} \)</span></p>
+<p>Chemical change involves making or breaking chemical bonds. Formation of water from constituent elements is an example of chemical change: <span class="math notranslate nohighlight">\(\ce{2 H2(g) + O2(g) -&gt; 2 H2O(l)} \)</span>. In each case there was a specific type of energy involved in the change. This energy must be released or supplied for changes (reactions) to occur.</p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/2S6e11NBwiw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Energy changes associated with physical processes and chemical reactions must be discussed in the context of a <em><strong>system</strong></em> and its <em><strong>surroundings</strong></em>. A system is a specific part of the universe that interests us and the surroundings are rest of the universe. Practically speaking, surroundings are immediately close to the system. In the above examples, ice or water is a system and all other parts beyond this system (container, etc) are the surroundings.</p>
+<p><em>Heat</em> and <em>thermal energy</em> are not to be used interchangeably. Heat is the transfer of thermal energy between two bodies that are at different temperatures. Matter does not contain heat - it contains thermal energy. <em><strong>Thermochemistry</strong></em> is the study of heat (transfer of thermal energy) associated with chemical reactions.</p>
+<p>The above chemical reaction (formation of water) results in release of energy and can be written as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{2 H2(g) + O2(g) -&gt; 2 H2O(l) + \text{Energy}}
+\]</div>
+<p>In this case, the system contains a mixture of all reactants and products. Because, energy cannot be created or destroyed, the energy is transferred between the system and the surroundings. In the above chemical reaction, energy is created in the system and is transferred to its surroundings. This is an example of an <em><strong>exothermic reaction</strong></em>.</p>
+<p>Consider the decomposition of mercury(II) oxide (<span class="math notranslate nohighlight">\(\ce{HgO}\)</span>) at high temperatures:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{\text{Energy} + 2 HgO(s) -&gt; 2 Hg(l) + O2 (g)}
+\]</div>
+<p>For this reaction to occur, energy has to be supplied to the system from the surroundings. This is an example of an <em><strong>endothermic reaction</strong></em>.</p>
+<div class="container">
+<iframe src="https://player.vimeo.com/video/73325384?h=6aab1f5431" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>The above video shows how energy is consumed or produced during forming or breaking chemical bonds.  In an exothermic reaction, the energy of the products in a reaction is lower than the energy of the reactants causing the excess energy to be released from the system to the surroundings. In an endothermic reaction, the energy of the products is higher than that of the reactants.</p>
+<figure class="margin align-default" id="fda-label">
+<a class="reference internal image-reference" href="https://www.fda.gov/files/nutrition-facts-label-download-image2.jpg"><img alt="https://www.fda.gov/files/nutrition-facts-label-download-image2.jpg" src="https://www.fda.gov/files/nutrition-facts-label-download-image2.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">An example of a US Food and Drug Administration (FDA)’s nutritional facts label. Note that the Calories amount on this label are actually kilocalories. Image source: <a class="reference external" href="https://www.fda.gov/food/food-labeling-nutrition">Food Labeling &amp; Nutrition | FDA</a></span><a class="headerlink" href="#fda-label" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>SI unit for energy is joule (<span class="math notranslate nohighlight">\(\pu{J}\)</span>), another common unit of energy is calorie (<span class="math notranslate nohighlight">\(\pu{cal}\)</span>). A calorie is the amount of energy required to raise the temperature of <span class="math notranslate nohighlight">\(\pu{1 g}\)</span> of water by <span class="math notranslate nohighlight">\(\pu{1 ^\circ C}\)</span>. <span class="math notranslate nohighlight">\(\pu{1 cal} = \pu{4.184 J}\)</span>. Calories listed on nutrition labels (see figure ) are not “calories” but “kilocalories.” To make the distinction, the first letter in Calories is capitalized.</p>
+<div class="math notranslate nohighlight">
+\[\pu{1 Cal} = \pu{1000 cal} = \pu{1 kcal} = \pu{4184 J}\]</div>
+<figure class="margin align-default" id="eu-label">
+<a class="reference internal image-reference" href="https://esha.com/wp-content/uploads/2015/02/eu_label_1-01.jpg"><img alt="https://esha.com/wp-content/uploads/2015/02/eu_label_1-01.jpg" src="https://esha.com/wp-content/uploads/2015/02/eu_label_1-01.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">An example of an European Union’s nutritional facts label. Image source: <a class="reference external" href="https://esha.com/products/genesis-rd-food-labeling-software/labels-and-labeling/european-union-nutrition-facts-label/">EU Nutrition Facts Templates - Ingredients List Label | ESHA Research</a></span><a class="headerlink" href="#eu-label" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="introduction-to-thermodynamics">
+<h2>Introduction to Thermodynamics<a class="headerlink" href="#introduction-to-thermodynamics" title="Permalink to this headline">#</a></h2>
+<p>Thermodynamics is a scientific study that deals with different relative energy levels and transfers of energy between systems and between different states of matter. Chemical thermodynamics specifically deals with energy transfers as related to chemical reactions and is primarily of our interest in geochemistry. We will also focus on the concept of equilibrium and its theoretical underpinnings in thermodynamics. The laws of thermodynamics provide useful guidelines for understanding the exchange of energy between systems and also direction of chemical processes.</p>
+<section id="thermodynamic-systems">
+<h3>Thermodynamic Systems<a class="headerlink" href="#thermodynamic-systems" title="Permalink to this headline">#</a></h3>
+<p>It is very important to clearly define the <em><strong>system</strong></em> in equilibrium thermodynamics. This system can be in the scale of the entire universe (for an astronomer), an aquifer (for a hydrogeologist), or a petri dish (for a microbiologist) The choice depends on the kind of problem of interest. For example, in a shore environment there are different processes occurring and defining the bounds of the system become very important. See <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 24</span></a> for an example of how various processes on Earth can be studied using a systems approach.</p>
+<figure class="margin-caption align-default" id="earth-systems">
+<a class="reference internal image-reference" href="https://mynasadata.larc.nasa.gov/sites/default/files/2019-04/earth_system_diagram_print.jpg"><img alt="https://mynasadata.larc.nasa.gov/sites/default/files/2019-04/earth_system_diagram_print.jpg" src="https://mynasadata.larc.nasa.gov/sites/default/files/2019-04/earth_system_diagram_print.jpg" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Systems can be considered at many scales. In this picture we can see how energy and matter (elements, water, etc) is cycled across the entire Earth system at many scales.  Image source: <a class="reference external" href="https://mynasadata.larc.nasa.gov/basic-page/earth-system-matter-and-energy-cycles">Earth System: Matter and Energy Cycles | MyNASAData</a></span><a class="headerlink" href="#earth-systems" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A system is any portion of the universe that can be isolated from the rest of the universe for the purpose of observing and measuring changes. By saying that a system is any portion of the universe, we mean that the system can be whatever the observer defines it to be. In <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 24</span></a> we can see different parts of Earth can be subdivided into subsystems and studied separately for convenience.  A system is conceptual be design and needs to be defined more clearly by the observer.  It can be large or small, simple or complex. It can be in form of a  laboratory experiment in a beaker, or a lake, a small sample of rock, an ocean, a volcano, a mountain range, a continent, or an entire planet. A leaf is a system; it is part of a larger system (a tree), which in turn is part of an even larger system (a forest) and so on.</p>
+<p>The fact that a system is isolated from the rest of the universe means that it must have a boundary that sets it apart from its surroundings. The nature of the boundary is one of the most important defining features of a system, allowing us to establish three basic kinds of systems—open, closed, and isolated—with different types of boundaries.</p>
+<div class="admonition-types-of-systems admonition">
+<p class="admonition-title">Types of systems</p>
+<p>There are three types of systems:</p>
+<ol class="simple">
+<li><p>Open systems - can exchange mass and energy with surroundings</p></li>
+<li><p>Closed systems - can exchange energy with surroundings</p></li>
+<li><p>Isolated systems - no exchange of mass or energy with surroundings</p></li>
+</ol>
+<p>In <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 24</span></a> the Earth system is an open system internally with free exchange of mass and energy.  Since there is negligible exchange of mass with Earth and it’s surroundings in the solar system, it is a closed system for mass. However, Earth gains and loses energy from within the solar system and is an open system for energy.</p>
+</div>
+<p>Since matter and energy is shared between systems and surroundings, it would be useful to quantify the flow of mass and energy.  The amount of matter (or energy) that is transferred across the boundary of a system, and the rate at which it is transferred, is called a <em><strong>flux</strong></em>. It is quantified in units of <em>mass or volume per time</em>.</p>
+<p>The storage and movement of material and energy in a group of interacting systems is often represented as a <em><strong>box model</strong></em>. A box model can be used to show the following essential features of a system:</p>
+<ol class="simple">
+<li><p>The processes by which matter (or energy) enters and leaves the system, and the rates at which they do so.</p></li>
+<li><p>The processes by which matter (or energy) moves among the various parts of the system internally, and the rates at which this happens.</p></li>
+<li><p>The amount of matter (or energy) in the system at a given time and its distribution within the system.</p></li>
+</ol>
+<p>As shown in <a class="reference internal" href="#hydro-box-model"><span class="std std-numref">Fig. 25</span></a>, the “boxes” in a box model represent the places where water (or energy, or whatever might be the material of interest) is stored for a period of time within the system. These storage places are called <em><strong>reservoirs</strong></em>.  When the flux of matter into a reservoir matches the flux out of that reservoir, we say that the reservoir is at <em><strong>steady state</strong></em>. The average length of time water spends in any of these reservoirs is called its <em><strong>residence time</strong></em>. The residence time of any material in any particular reservoir is deter- mined by the interaction of many factors, including the physical, chemical, and biologic properties of the material itself, the properties of the reservoir, and any external forces or processes acting on either the material or the reservoir.</p>
+<figure class="margin-caption align-default" id="hydro-box-model">
+<a class="reference internal image-reference" href="_images/water-cycle-science.jpeg"><img alt="_images/water-cycle-science.jpeg" src="_images/water-cycle-science.jpeg" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">The global hydrological cycle is shown as a box model in this figure. Fluxes (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>) and reservoirs (<span class="math notranslate nohighlight">\(\pu{e3 km3}\)</span>) with natural and anthropogenic cycles are included. Big vertical arrows show total annual precipitation and evapotranspiration over land and ocean (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>), which include annual precipitation and evapotranspiration in major landscapes (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>) presented by small vertical arrows; parentheses indicate area (<span class="math notranslate nohighlight">\(\pu{e6 km2}\)</span>). The direct groundwater discharge, which is estimated to be about <span class="math notranslate nohighlight">\(\pu{10 \%}\)</span> of total river discharge globally, is included in river discharge.  Image source: <a class="reference external" href="https://www.science.org/doi/10.1126/science.1128845">Global Hydrological Cycles and World Water Resources | Science</a></span><a class="headerlink" href="#hydro-box-model" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Under steady state conditions, the residence time can be calculated as shown in eq <a class="reference internal" href="#equation-residence-time">(5)</a>.</p>
+<div class="math notranslate nohighlight" id="equation-residence-time">
+<span class="eqno">(5)<a class="headerlink" href="#equation-residence-time" title="Permalink to this equation">#</a></span>\[\text{Residence time} = \dfrac{\text{Reservoir Amount}}{\text{Rate of addition/removal}}\]</div>
+</section>
+<section id="states-and-state-variables">
+<h3>States and State Variables<a class="headerlink" href="#states-and-state-variables" title="Permalink to this headline">#</a></h3>
+<p>In thermodynamics, it is important to explicitly define the properties (e.g., composition, energy, temperature, pressure, and volume) of a system – these properties help us understand changes in the <em><strong>state of system</strong></em> during a chemical process. When state of the system changes, these properties change. <em><strong>State variables</strong></em> (or <em><strong>state functions</strong></em>) are properties that are determined by the state of the system, regardless of how they were achieved. That is, when the state of the system changes, the magnitude of the change is only dependent on the initial and final states of the system and not on how the change is accomplished. Energy, pressure, temperature, and volume are examples of state variables. Several important state variables are not measurable in the absolute sense in a particular equilibrium state, though they do have fixed, finite values in these states. However, the changes between the equilibrium states can be measured. Changes in system variables can be denoted as shown below. The <span class="math notranslate nohighlight">\(\Delta\)</span> is a standard mathematical symbol for change and refers to the <em>final</em> minus <em>initial</em> values as shown below.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+	\begin{eqnarray*}
+		\Delta E &amp;=&amp; E_{final}-E_{initial}\\
+		\Delta P &amp;=&amp; P_{final}-P_{initial}\\
+		\Delta V &amp;=&amp; V_{final}-V_{initial}\\
+		\Delta T &amp;=&amp; T_{final}-T_{initial}
+	\end{eqnarray*}
+\end{split}\]</div>
+<p>Thermodynamic properties can be extensive properties or intensive properties. <em><strong>Extensive properties</strong></em> are dependent on the amount of the material in the system (e.g., mass, volume.) <em><strong>Intensive properties</strong></em> are independent on the amount of material. They are the same for any subset of the material in the system (e.g., concentration, temperature, pressure). <a class="reference internal" href="#state-properties"><span class="std std-numref">Table 5</span></a> lists a summary of the most commonly-used state variables.</p>
+<table class="colwidths-auto table" id="state-properties">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Commonly-used state extensive and intensive properties and their standard SI units. Note: Molar properties are normalized by moles of material while specific properties are normalized by mass.</span><a class="headerlink" href="#state-properties" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Extensive Property</strong></p></th>
+<th class="head"><p><strong>Intensive Property</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mass</p></td>
+<td><p>mass (<span class="math notranslate nohighlight">\(\pu{ g}\)</span> or <span class="math notranslate nohighlight">\(\pu{ mol}\)</span>)</p></td>
+<td><p>concentration (<span class="math notranslate nohighlight">\(\pu{ g L-1}\)</span> or <span class="math notranslate nohighlight">\(\pu{ mol L-1}\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p>density (<span class="math notranslate nohighlight">\(\pu{ kg L-1}\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Volume</p></td>
+<td><p>volume (<span class="math notranslate nohighlight">\(\pu{ L}\)</span>)</p></td>
+<td><p>specific volume (<span class="math notranslate nohighlight">\(\pu{ L kg-1}\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p>molar volume (<span class="math notranslate nohighlight">\(\pu{ L mol-1}\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Thermal</p></td>
+<td><p>heat capacity (<span class="math notranslate nohighlight">\(\pu{ J K-1}\)</span>)</p></td>
+<td><p>specific heat (<span class="math notranslate nohighlight">\(\pu{ J K g-1}\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>energy (<span class="math notranslate nohighlight">\(\pu{ kJ}\)</span>)</p></td>
+<td><p>molar energy (<span class="math notranslate nohighlight">\(\pu{ kJ mol-1}\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>enthalpy (<span class="math notranslate nohighlight">\(\pu{ kJ}\)</span>)</p></td>
+<td><p>molar enthalpy (<span class="math notranslate nohighlight">\(\pu{ kJ mol-1}\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>entropy (<span class="math notranslate nohighlight">\(\pu{ J K-1}\)</span>)</p></td>
+<td><p>molar entropy (<span class="math notranslate nohighlight">\(\pu{ J K mol-1}\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>free energy (<span class="math notranslate nohighlight">\(\pu{ kJ}\)</span>)</p></td>
+<td><p>molar free energy (<span class="math notranslate nohighlight">\(\pu{ kJ mol-1}\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Other</p></td>
+<td><p></p></td>
+<td><p>pressure (<span class="math notranslate nohighlight">\(\pu{ atm}\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p>temperature (<span class="math notranslate nohighlight">\(\pu{ K}\)</span>)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Some thermodynamic properties are additive even after systems are transformed or when two systems are combined. These properties are <em>conserved</em>. Intensive properties are not conserved as they are not additive even within the same system. Only extensive properties are conserved.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Conservation of Mass<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Conservation of mass Let’s determine concentration in a solution (<span class="math notranslate nohighlight">\(S\)</span>) formed when one spoon (<span class="math notranslate nohighlight">\(\pu{5 mL}\)</span>) of seawater (<span class="math notranslate nohighlight">\(sw\)</span>) from Folly Beach (<span class="math notranslate nohighlight">\(=\pu{10.8 g L^{-1}}\)</span>) at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> is added to <span class="math notranslate nohighlight">\(\pu{1.0 L}\)</span> of freshwater (<span class="math notranslate nohighlight">\(fw\)</span>) from Goose Creek reservoir (<span class="math notranslate nohighlight">\(=\pu{6 mg L^{-1}}\)</span>). Since, concentration is an intensive property and is not additive, it needs to be transformed to an extensive property. The extensive property equivalent of concentration is mass (<span class="math notranslate nohighlight">\(m = C\times V\)</span>, where <span class="math notranslate nohighlight">\(m\)</span> is mass, <span class="math notranslate nohighlight">\(C\)</span> is concentration and <span class="math notranslate nohighlight">\(V\)</span> is volume).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+        m_s &amp;= m_{sw} + m_{fw} = C_{sw}V_{sw} + C_{fw}V_{fw}\\
+         &amp;= (\pu{5e-5 L})(\pu{10.8 g L-1}) + (\pu{1 L})(\pu{6e-3 g L-1})\\
+        &amp;= \pu{6.54e-3 g}\\
+        V_s &amp;= V_{sw} + V_{fw} \\
+        &amp;= \pu{5e-5 L} + \pu{1 L}\\ 
+        &amp;= \pu{1.00005 L}\\
+        &amp;\text{Now, convert the mass back to concentration}\\
+        C_s &amp;= \frac{m_s}{V_s}\\ 
+        &amp;= \frac{\pu{6.54e-3 g}}{\pu{1.00005 L}} = \pu{6.5 mg L-1}
+    \end{aligned}
+\end{split}\]</div>
+</div>
+</details></section>
+<section id="phases-and-components">
+<h3>Phases and Components<a class="headerlink" href="#phases-and-components" title="Permalink to this headline">#</a></h3>
+<p>Thermodynamic properties are used to define the state of the system. But we need to know how many of these properties are required to actually define a system? You can intuitively guess that this would depend on the complexity of the system. The number of properties required is determined by the number of phases and components present in the system.</p>
+<p>A <em><strong>phase</strong></em> is defined as a homogeneous body of matter that has distinct boundaries with adjacent phases, and hence can be mechanically separable. Shape, orientation, and position of a phase in relation to adjacent phases is irrelevant, so a single phase may occur in several locations within a system. Examples of single phases include, quartz in granite and a salt solution. There are three common phases – solid, liquid, gas or vapor. A system having only a single phase is <em>homogeneous</em> and a system with multiple phases is <em>heterogeneous</em>.</p>
+<p><em><strong>Components</strong></em> are used to describe the chemical composition of a system. They are defined as the smallest set of chemical formula required to completely describe the composition of all the phases that make up a system. For example, in a <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span> solution (doesn’t matter if there is water vapor or calcite precipitate in the solution), the combination of <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span> and describes the composition of all phases.</p>
+<p>So, how many thermodynamic properties does one need in a system that <span class="math notranslate nohighlight">\(P\)</span> phases and <span class="math notranslate nohighlight">\(C\)</span> components? According to the <em><strong>Gibbs Phase Rule</strong></em>, <span class="math notranslate nohighlight">\(C-P+2\)</span> properties are needed.</p>
+<p>Why do we need to know thermodynamic properties? This will become clear as we start discussing the laws of thermodynamics.</p>
+<p>Unlike what you have learned about the definition of a law according to the scientific method, the thermodynamics laws are concepts held to be true without derivation or proof. The basis of thermodynamics is built on three conservation statements: in any process, mass, energy, and momentum are conserved.</p>
+<p>Originally, there were only three laws of thermodynamics that were formulated.  However, when the fourth law was formulated, it was decided that this fourth law was even more fundamental than the original three laws. Instead of renumbering the original three laws, the fourth law was named the “Zeroth” law.</p>
+</section>
+</section>
+<section id="zeroth-law-of-thermodynamics">
+<h2>Zeroth Law of Thermodynamics<a class="headerlink" href="#zeroth-law-of-thermodynamics" title="Permalink to this headline">#</a></h2>
+<p>The zeroth law states that if two thermodynamic systems are in thermal equilibrium with each other, and also separately in thermal equilibrium with a third system, then the three systems are in thermal equilibrium with each other.</p>
+<p>Two systems are said to be in thermal equilibrium if they are linked by a wall permeable only to heat, and they do not change over time. This property is applied in a basic thermometer.  When a thermometer is placed in a room or on a body, the temperature reading on the thermometer changes until thermal equilibrium is established between the thermometer and the surrounding system.</p>
+<figure class="margin align-default" id="thermometer">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mercury_Thermometer.jpg/220px-Mercury_Thermometer.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mercury_Thermometer.jpg/220px-Mercury_Thermometer.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Mercury thermometer (mercury-in-glass thermometer) for measurement of room temperature. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Thermometer">Thermometer - Wikipedia</a></span><a class="headerlink" href="#thermometer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="first-law-of-thermodynamics">
+<h2>First Law of Thermodynamics<a class="headerlink" href="#first-law-of-thermodynamics" title="Permalink to this headline">#</a></h2>
+<p>The first law states that <em><strong>energy is conserved</strong></em>, in other words, energy can be converted from one form to another and can neither be created nor destroyed. Any change in the heat of the system or work done by the system must be accounted for in the internal energy of the system.</p>
+<div class="math notranslate nohighlight" id="equation-firstlaw">
+<span class="eqno">(6)<a class="headerlink" href="#equation-firstlaw" title="Permalink to this equation">#</a></span>\[\Delta_{sys}E^\circ = q + w\]</div>
+<p>In Eq <a class="reference internal" href="#equation-firstlaw">(6)</a>, <span class="math notranslate nohighlight">\(\Delta_{sys}E^\circ\)</span> is the differential change in the internal energy of the system, <span class="math notranslate nohighlight">\(q\)</span> is the heat added or removed from the system, and <span class="math notranslate nohighlight">\(w\)</span> is the work done on or by the system. By convention, <span class="math notranslate nohighlight">\(q\)</span> is positive for an endothermic process and negative for an exothermic process, and <span class="math notranslate nohighlight">\(w\)</span> is positive for work done on the system by the surroundings and negative for work done by the system on the surroundings.</p>
+<figure class="margin-caption align-default" id="exo-endo">
+<a class="reference internal image-reference" href="https://openstax.org/apps/archive/20221109.213337/resources/68b9d7102438342c6cf948437ecbe44f09267984"><img alt="https://openstax.org/apps/archive/20221109.213337/resources/68b9d7102438342c6cf948437ecbe44f09267984" src="https://openstax.org/apps/archive/20221109.213337/resources/68b9d7102438342c6cf948437ecbe44f09267984" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">In a calorimetric determination, either (a) an exothermic process occurs and heat, <span class="math notranslate nohighlight">\(q&lt;0\)</span>, indicating that thermal energy is transferred from the system to its surroundings, or (b) an endothermic process occurs and heat, <span class="math notranslate nohighlight">\(q&gt;0\)</span>, indicating that thermal energy is transferred from the surroundings to the system. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/9-2-calorimetry">9.2 Calorimetry - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#exo-endo" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If a chemical reaction occurred in a sealed container (e.g., a combustion reaction) and the product of the reaction were creation of a new products, this would increase the volume and the pressure. Instead of a sealed container, if this reaction occurred in a container that had a movable piston that allowed the volume to adjust (<span class="math notranslate nohighlight">\(\Delta V\)</span>), the pressure would remain constant. Therefore, the chemical reaction is causing mechanical work to occur in that system. Specifically, this type of work is called pressure-volume (<span class="math notranslate nohighlight">\(PV\)</span>) work. The amount of work done by such a process is given by</p>
+<div class="math notranslate nohighlight" id="equation-pv">
+<span class="eqno">(7)<a class="headerlink" href="#equation-pv" title="Permalink to this equation">#</a></span>\[w = -P\Delta V\]</div>
+<p>In Eq <a class="reference internal" href="#equation-pv">(7)</a>  <span class="math notranslate nohighlight">\(P\)</span> is the external, opposing pressure and <span class="math notranslate nohighlight">\(\Delta V\)</span> is the change in the volume of the container as the result of the piston being pushed upward. The negative sign in Eq <a class="reference internal" href="#equation-pv">(7)</a>  accounts for an increase in volume resulting in a negative value for <span class="math notranslate nohighlight">\(w\)</span>. At constant <span class="math notranslate nohighlight">\(V\)</span>, (<span class="math notranslate nohighlight">\(\Delta V = 0\)</span>), <span class="math notranslate nohighlight">\(q_V = _{sys}{E}\)</span>.</p>
+<p>This condition is not practical as volume is not constant. Rather, in near-Earth’s surface systems, we can assume <span class="math notranslate nohighlight">\(P\)</span> to be constant resulting in <span class="math notranslate nohighlight">\(q_P\)</span>. We can now combine Eqs <a class="reference internal" href="#equation-firstlaw">(6)</a> and <a class="reference internal" href="#equation-pv">(7)</a> as follows:</p>
+<div class="math notranslate nohighlight" id="equation-energywork">
+<span class="eqno">(8)<a class="headerlink" href="#equation-energywork" title="Permalink to this equation">#</a></span>\[\Delta_{sys}{E} = q_P- P\Delta V\]</div>
+<section id="enthalpy">
+<h3>Enthalpy<a class="headerlink" href="#enthalpy" title="Permalink to this headline">#</a></h3>
+<p>Enthalpy is state function derived from rearranging Eq <a class="reference internal" href="#equation-energywork">(8)</a> as follows:</p>
+<div class="math notranslate nohighlight" id="equation-enthalpy">
+<span class="eqno">(9)<a class="headerlink" href="#equation-enthalpy" title="Permalink to this equation">#</a></span>\[q_P= \Delta_{sys}{E} + P\Delta V\]</div>
+<p>The variable <span class="math notranslate nohighlight">\(q_P\)</span> in Eq <a class="reference internal" href="#equation-enthalpy">(9)</a> is called enthalpy (<span class="math notranslate nohighlight">\(\Delta H^\circ\)</span>) and is equal to the heat flow when processes occur at constant <span class="math notranslate nohighlight">\(P\)</span> and the only work done is pressure-volume work. The assumption of constant <span class="math notranslate nohighlight">\(P\)</span> is acceptable for Earth’s near surface environments, where most systems can be considered to be open. <span class="math notranslate nohighlight">\(\Delta H^\circ\)</span> is a state function and accounts for both the internal energy (<span class="math notranslate nohighlight">\(\Delta _{sys}E^\circ\)</span>) and work (<span class="math notranslate nohighlight">\(w\)</span>) done on or by the system. It quantifies the heat flow into or out of the system at constant pressure (<span class="math notranslate nohighlight">\(P\)</span>). Enthalpy has the unit of <span class="math notranslate nohighlight">\(\pu{kJ}\)</span>, while molar enthalpy has the units of <span class="math notranslate nohighlight">\(\pu{ kJ mol−1}\)</span>. In a chemical reaction, (<span class="math notranslate nohighlight">\(\Delta _{rxn}H^\circ\)</span>) accounts for <span class="math notranslate nohighlight">\(\Delta _{prod}H^\circ\)</span> (products in a reaction) and <span class="math notranslate nohighlight">\(\Delta _{reac}H^\circ\)</span> (reactants in a reaction) as shown below:</p>
+<div class="math notranslate nohighlight" id="equation-h-rxn">
+<span class="eqno">(10)<a class="headerlink" href="#equation-h-rxn" title="Permalink to this equation">#</a></span>\[\Delta_{rxn}H^\circ = \Sigma \Delta_{prod}H^\circ - \Sigma \Delta_{reac}H^\circ\]</div>
+<p><span class="math notranslate nohighlight">\(\Delta _{rxn}H^\circ\)</span> can be used to determine if the system (<span class="math notranslate nohighlight">\(sys\)</span>) gains or loses heat. This value can be positive or negative (units: <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span>) and needs to be applied to chemical reaction that represents the system.</p>
+<p>When <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ &lt;0\)</span>, (<span class="math notranslate nohighlight">\(\Delta_{prod}H^\circ &lt; \Delta_{reac}H^\circ\)</span>), this implies there is more internal energy bound within the reactants and that portion of this energy is now contained within the products while the rest is released into the surroundings. That is, the excess energy is release into the surroundings (<span class="math notranslate nohighlight">\(surr\)</span>). Such systems are called <em><strong>exothermic</strong></em> systems.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Exothermic reactions <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Virtually any combustion reaction is an exothermic reaction as heat is released into the surroundings. Hydrogen gas explosively reacts with oxygen to form water molecules as shown in:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{2 H2(g) + O2(g) -&gt; 2 H2O(l) + \text{heat}}
+\]</div>
+<p class="sd-card-text">Heat released into the surroundings is “product” of this reactions can be quantified if we know exactly how much internal energy makes up each of the chemical species.</p>
+</div>
+</details><p>In the scenarios where <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ &gt;0\)</span>, (<span class="math notranslate nohighlight">\(\Delta_{prod}H^\circ &gt; \Delta_{reac}H^\circ\)</span>),  there is more internal energy in the products than in the reactants. The system has to adjust for the imbalance in the energy by absorbing energy from the surroundings. Such systems are called <em><strong>endothermic</strong></em> systems.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Endothermic reactions <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Heating of liquid water from an external heat source (stove) causes water to evaporate or turn into vapor phase water. This can be represented as:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{H2O(l) + \text{heat} -&gt; H2O(g)}
+\]</div>
+<p class="sd-card-text">Heat energy is a “reactant” and is required to make this reaction possible.</p>
+</div>
+</details><p>Absolute enthalpies of chemical entities are difficult to measure. These values depend on the chemical composition of the chemical entity, types of bonds involved and system conditions (functions such as <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, etc.). Hence, <span class="math notranslate nohighlight">\(\Delta\)</span> term is used before <span class="math notranslate nohighlight">\(H\)</span> is used to denote that enthalpies of a chemical entity as measured relative to a standard state. The reference point for all enthalpy expressions is called the standard enthalpy of formation (<span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span>), which is defined as the heat change that results when <span class="math notranslate nohighlight">\(\pu{1 mol}\)</span> of a compound is formed from its constituent elements in their standard states. <em><strong>Standard states</strong></em> refer to the most stable form of an element under standard conditions, meaning at ordinary atmospheric pressure. E.g., oxygen can exist as as the most stable form at ordinary atmospheric pressure. Although the standard state does not specify a temperature, we will always use (<span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span>) values measured at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>The CRC Handbook of Physics and Chemistry is a good reference obtaining <span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span> for most chemicals. The online version is available at <a class="reference external" href="https://hbcp-chemnetbase-com.eu1.proxy.openathens.net/faces/contents/ContentsSearch.xhtml">Handbook of Chemistry and Physics 103rd Edition (openathens.net)</a></p>
+</aside>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Determining enthalpy of a reaction<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s determine if the following reaction gain heat from or lose heat to the surroundings.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+2 H2(g) + O2(g) &amp;-&gt; 2 H2O(g)\\
+H2O(l) &amp;-&gt; H2O(g)
+}
+\end{align*}
+\end{split}\]</div>
+<p class="sd-card-text">First, we need to lookup <span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span> for all chemical species in thermodynamic data tables</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Chemical</p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span>,  <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+<th class="head"><p class="sd-card-text">Chemical</p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span>,  <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2O (g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-241.8\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2 (g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-285.8\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"></p></td>
+<td class="text-align:right"><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2O (s)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-291.8\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">Next we need to calculate <span class="math notranslate nohighlight">\(\Delta_{rxn} H^\circ\)</span> for each reaction.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\Delta_{rxn} H^\circ &amp;= [2(-241.8)] - [(2(0) + (0)] = \pu{-483.6 kJ mol-1}\\
+\Delta_{rxn} H^\circ &amp;= [(-241.8)] - [(-285.8)] = \pu{+44.0 kJ mol-1}
+\end{align*}
+\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ &lt;0\)</span>, the first reaction is exothermic and <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ &gt;0\)</span>, the second reaction is endothermic.</p>
+</div>
+</details><p>Since we are working with thermochemical systems, where heat is released or captured during a reaction, the following guidelines will be helpful in interpreting, writing, and manipulating thermochemical reactions.</p>
+<div class="admonition-rules-for-working-with-thermochemical-data admonition">
+<p class="admonition-title">Rules for working with thermochemical data</p>
+<ol class="simple">
+<li><p>All calculations have to be performed on balanced chemical reactions.</p></li>
+<li><p>Always specify physical states of matter of all reactants and products.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> means that this is the enthalpy change per mole of the reaction (or process) as it is written and does not refer to individual chemical species or the number of moles involved in each reaction.</p></li>
+<li><p>If both sides of a reaction are multiplied by <span class="math notranslate nohighlight">\(n\)</span>, then <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> must be multiplied by <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p>If reaction is reversed, <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> magnitude remains same, but sign changes.</p></li>
+</ol>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Application of thermochemical rules <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s calculate the <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> for the following chemical reactions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\ce{
+4 H2(g) + 2 O2(g) &amp;-&gt; 4 H2O(g) \\
+H2O(g) &amp;-&gt; H2O(l)
+}
+\end{align}
+\end{split}\]</div>
+<p class="sd-card-text">If we used <span class="math notranslate nohighlight">\(\Delta_{f}H^\circ\)</span> from the table in the previous example, we can calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> as <span class="math notranslate nohighlight">\(\pu{−967.2 kJ mol-1}\)</span> and  <span class="math notranslate nohighlight">\(\pu{−44.0 kJ mol-1}\)</span>, respectively in these reactions.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Application of thermochemistry and mass balance <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s calculate the heat evolved when <span class="math notranslate nohighlight">\(\pu{75 g}\)</span> of <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span> is oxidized to <span class="math notranslate nohighlight">\(\ce{SO3 (g)}\)</span> as shown:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{SO2(g) + 1/2 O2(g) -&gt; SO3(g)}
+\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{-99.1 kJ mol-1}\)</span></p>
+<p class="sd-card-text">According to this reaction, <span class="math notranslate nohighlight">\(\pu{1 mole}\)</span> of <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span> is oxidized to <span class="math notranslate nohighlight">\(\pu{1 mole}\)</span> of <span class="math notranslate nohighlight">\(\ce{SO3(g)}\)</span> resulting in <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{-99.1 kJ mol-1}\)</span> (release of energy into surroundings)</p>
+<p class="sd-card-text">The molar mass of <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span> is <span class="math notranslate nohighlight">\(\pu{64 g}\)</span> (<span class="math notranslate nohighlight">\(\pu{1 mol} = \pu{64 g}\)</span>) or, in other words, <span class="math notranslate nohighlight">\(\pu{64 g}\)</span> of <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span> results in <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{-99.1 kJ mol-1}\)</span>.</p>
+<p class="sd-card-text">Therefore, <span class="math notranslate nohighlight">\(\pu{75 g}\)</span> of <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span> results in:</p>
+<div class="math notranslate nohighlight">
+\[
+\pu{75 g}\, \ce{SO2} \times \dfrac{\pu{1 mol}\, \ce{SO2}}{\pu{64 g}\, \ce{SO2}} = \pu{1.2 mol}\, \ce{SO2}
+\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\therefore \Delta_\ce{SO2} H^\circ = \pu{1.2 mol}\times (\pu{-99.1 kJ mol-1}) = \pu{116 kJ}\)</span>.</p>
+</div>
+</details></section>
+<section id="hess-s-law">
+<h3>Hess’s Law<a class="headerlink" href="#hess-s-law" title="Permalink to this headline">#</a></h3>
+<p>Because <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> is a state function, the change in enthalpy that occurs when reactants are converted to products in a reaction is the same whether the reaction takes place in one step or in a series of steps. This observation is called <em><strong>Hess’s law</strong></em>. This is an application of the concept that in thermodynamics, the system <em>does not care</em> how many steps (individual reactions) were required to reach equilibrium – just the final reaction.</p>
+<p>Another practical concern is that many compounds cannot be synthesized from their elements directly. In some cases, the reaction proceeds too slowly, or side reactions produce substances other than the desired compound. In these cases, <span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span> can be determined by an indirect approach, using Hess’s law.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Hess’s law <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Combustion of graphite (<span class="math notranslate nohighlight">\(\ce{C}\)</span>) to can occur as follows:</p>
+<div class="math notranslate nohighlight">
+\[ \ce{
+C(s) + 1/2 O2(g) -&gt; CO(g)}
+\]</div>
+<p class="sd-card-text">This reaction can be created by combining two separate reactions shown below:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Reaction</p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span>, <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CO2(g) -&gt; CO(g) + 1/2 O2(g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-283.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{C(s) + O2(g)  -&gt; CO2(g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-393.5\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">We can add balanced chemical equations just as we can add algebraic equalities, canceling identical items on opposite sides of the equation arrow. In order to combine the above two reactions, we need to reverse the first reaction as follows to get common terms on opposite sides. Also, remember to change sign of <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> when reversing reactions.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Reaction</p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span>, <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CO2(g) -&gt; CO(g) + 1/2 O2(g) }\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-283.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{C(s) + O2(g)  -&gt; CO2(g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-393.5\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">—</p></td>
+<td class="text-align:right"><p class="sd-card-text">—</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{C(s) + 1/2 O2(g)  -&gt; CO(g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-110.5\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">Therefore, <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{-110.5 kJ mol-1}\)</span> for the final reaction.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Hess’s law <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s determine <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> for the reaction below using <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> data for the following reactions:</p>
+<div class="math notranslate nohighlight">
+\[ \ce{
+C(s) + 2 H2(g) + 1/2 O2(g) -&gt; CH3OH(l)
+}\]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Reaction</p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span>, <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CH3OH(l) + 3/2 O2(g) -&gt; CO2(g) + 2 H2O(l)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-726.4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{C(s) + O2(g)  -&gt; CO2(g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-393.5\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2(g) + 1/2 O2(g) -&gt; H2O(l)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-285.8\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">The following changes were made to each of the above reactions to get common reactants and products to match our required reaction:</p>
+<ol class="simple">
+<li><p class="sd-card-text">Rxn 1: Reversed, sign of <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> changed</p></li>
+<li><p class="sd-card-text">Rxn 2: No change</p></li>
+<li><p class="sd-card-text">Rxn 3: Multiplied by 2, including <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> value</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Reaction</p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span>, <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CO2(g) + 2 H2O(l) -&gt; CH3OH(l) + 3/2 O2(g) }\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(726.4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{C(s) + O2(g)  -&gt; CO2(g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-393.5\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{2 H2(g) + O2(g) -&gt; 2 H2O(l)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-571.6\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">—</p></td>
+<td class="text-align:right"><p class="sd-card-text">—</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{C(s) + 2 H2 (g) + 1/2 O2(g) -&gt; CH3OH(l)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-238.7\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">Therefore, <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{-238.7 kJ mol-1}\)</span> for the final reaction.</p>
+</div>
+</details></section>
+</section>
+<section id="second-law-of-thermodynamics">
+<h2>Second Law of Thermodynamics<a class="headerlink" href="#second-law-of-thermodynamics" title="Permalink to this headline">#</a></h2>
+<p>The first law of thermodynamics addresses energy exchange between a system and it’s surroundings. But, it does not address <em>if</em> a reaction or process will occur under a given set of conditions (<span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, concentration, etc) That is, it does not address if the chemical process is <em>spontaneous</em>. The second law introduces a state function called entropy (<span class="math notranslate nohighlight">\(S\)</span>) to address spontaneity.</p>
+<section id="spontaneous-processes">
+<h3>Spontaneous processes<a class="headerlink" href="#spontaneous-processes" title="Permalink to this headline">#</a></h3>
+<p>Spontaneous processes are defined as processes that does occur under a specific set of conditions. Unlike in common parlance, spontaneous processes do not indicate “fast” or suddenly occurring reactions. Reaction rates are not addressed in thermodynamics, where all state functions are compared is systems assumed to already be at equilibrium under given set of conditions.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Spontaneous processes<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="simple">
+<li><p class="sd-card-text">Water flows downhill</p></li>
+<li><p class="sd-card-text">Lump of sugar dissolves in hot coffee</p></li>
+<li><p class="sd-card-text">At <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span>, <span class="math notranslate nohighlight">\(\ce{H2O(l)}\)</span> freezes below <span class="math notranslate nohighlight">\(\pu{0 ^\circ C}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{Fe}\)</span> exposed to <span class="math notranslate nohighlight">\(\ce{O2}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> at <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span> forms <span class="math notranslate nohighlight">\(\ce{Fe2O3}\)</span> (rust)</p></li>
+</ol>
+</div>
+</details><p>Processes that result in a decrease in the energy of a system often are spontaneous – i.e., these processes reach a most stable lower energy level. In such reactions, heat is given off to the surroundings (exothermic processes) However, endothermic processes can also be spontaneous.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Spontaneous chemical processes <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">All reactions shown below occur spontaneously at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. It is also evident that first two reactions are exothermic, while the last two reactions are endothermic.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Reaction</p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span>,  <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CH4(g) + 2 O2(g) -&gt; CO2(g) + 2 H2O(l)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-890.4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H+ (aq) + OH- (aq) &lt;=&gt; H2O(l) }\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-56.2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{H2O(s) -&gt; H2O(l)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(6.01\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{NH4NO3(s) -&gt;[H2O] NH4+ (aq) + NO3- (aq)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(25.0\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><p>Because <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> is not adequate to predict spontaneity of the process, we have to define new terms such as entropy and Gibbs free energy.</p>
+</section>
+<section id="entropy">
+<h3>Entropy<a class="headerlink" href="#entropy" title="Permalink to this headline">#</a></h3>
+<p>Imagine two well-insulated bottles somewhere in the universe (<a class="reference internal" href="#spontaneous"><span class="std std-numref">Fig. 28</span></a>) and that within one side of bottle was filled with a gas and the other side of the bottle contains vacuum, separated by a valve. If this valve were to be removed, you would intuitively know that gas will enter the side under vacuum spontaneously. We have neither added energy to nor taken energy from the system, hence the first law says nothing about this process. Nor did opening the valve <em>cause</em> the reaction. This is apparent from the observation that if we reclose the valve, the gas will not return to the original side. This phenomenon suggests there is something very fundamental and universal about this. This process is addressed in the second law of thermodynamics.</p>
+<figure class="margin-caption align-default" id="spontaneous">
+<a class="reference internal image-reference" href="https://openstax.org/apps/archive/20221109.213337/resources/9eafa2a59a63c98a307979ec929c1e6ae7d47898"><img alt="https://openstax.org/apps/archive/20221109.213337/resources/9eafa2a59a63c98a307979ec929c1e6ae7d47898" src="https://openstax.org/apps/archive/20221109.213337/resources/9eafa2a59a63c98a307979ec929c1e6ae7d47898" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">An isolated system consists of an ideal gas in one flask that is connected by a valve to a second flask containing a vacuum. Once the valve is opened, the gas spontaneously becomes evenly distributed between the flasks. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/12-1-spontaneity">12.1 Spontaneity - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#spontaneous" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Entropy (<span class="math notranslate nohighlight">\(S\)</span>) of a system is a measure of how spread out or how dispersed the system’s energy is. The simplest interpretation of this is how spread out a system’s energy is in space. Because the gas molecules that were originally confined to one side of the container are moving, they possess motional energy. When the barrier is removed, the motional energy of molecules will cause the as molecules to spread out and occupy a larger volume. This dispersal of system’s motional energy causes an increase in the system’s entropy. Just as spontaneity is favored by a process being exothermic, spontaneity is also favored by an increase in the system’s entropy. Whether it is the enthalpy change, the entropy change, or both, for a process to be spontaneous, something must favor spontaneity.</p>
+<p><a class="reference external" href="https://ed.ted.com/lessons/what-is-entropy-jeff-phillips">What is entropy? - Jeff Phillips | TED-Ed</a></p>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/YM-uykVfq_E" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<p>Entropy is an extensive property (see <a class="reference internal" href="#state-properties"><span class="std std-numref">Table 5</span></a>) and has the units <span class="math notranslate nohighlight">\(\pu{J K−1}\)</span>. Molar entropy is entropy normalized to amount (moles) of a substance (<span class="math notranslate nohighlight">\(\pu{J K-1 mol−1}\)</span>) and is, therefore, an intensive property. Mathematically, <span class="math notranslate nohighlight">\(S\)</span> is described as the heat absorbed (<span class="math notranslate nohighlight">\(q\)</span>) in a reversible reaction that occurred in a closed system divided by absolute temperature (<span class="math notranslate nohighlight">\(T\)</span>, an intensive property).</p>
+<div class="math notranslate nohighlight" id="equation-entropy">
+<span class="eqno">(11)<a class="headerlink" href="#equation-entropy" title="Permalink to this equation">#</a></span>\[\delta S = \frac{\delta q}{T}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\delta\)</span> indicates <em>a small change</em>. As seen in the above example, most reactions that occur in nature are irreversible the above equation is rewritten as</p>
+<div class="math notranslate nohighlight" id="equation-entropy-t">
+<span class="eqno">(12)<a class="headerlink" href="#equation-entropy-t" title="Permalink to this equation">#</a></span>\[\delta S &gt; \frac{\delta q}{T}\]</div>
+</section>
+<section id="standard-entropy-s-circ">
+<h3>Standard entropy, <span class="math notranslate nohighlight">\(S^\circ\)</span><a class="headerlink" href="#standard-entropy-s-circ" title="Permalink to this headline">#</a></h3>
+<p>It is the absolute entropy of a substance at <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span> (they are function of temperature, but standard values are expressed at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. The units of entropy are <span class="math notranslate nohighlight">\(\pu{J K-1 mol−1}\)</span>. The <span class="math notranslate nohighlight">\(S^\circ\)</span> of substances (elements and compounds) are always positive (i.e., <span class="math notranslate nohighlight">\(S^\circ &gt; 0\)</span>), even for elements in their standard states.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>The CRC Handbook of Physics and Chemistry is a good reference obtaining <span class="math notranslate nohighlight">\(S^\circ\)</span> for most chemicals. The online version is available at <a class="reference external" href="https://hbcp-chemnetbase-com.eu1.proxy.openathens.net/faces/contents/ContentsSearch.xhtml">Handbook of Chemistry and Physics 103rd Edition (openathens.net)</a></p>
+</aside>
+<table class="colwidths-auto table" id="entropy-substances">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Entropy (<span class="math notranslate nohighlight">\(S^\circ\)</span>) of selected substances. Observe the trends in the table.</span><a class="headerlink" href="#entropy-substances" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Substance</p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(S,\ \pu{J K-1 mol−1}\)</span></p></th>
+<th class="head"><p>Substance</p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(S,\ \pu{J K-1 mol−1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{H2O(l)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(69.9\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{C}\)</span> (diamond)</p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(2.4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{H2O(g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(188.7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{C}\)</span> (graphite)</p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(5.69\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{Na(s)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(51.05\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{O2(g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(205.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{Na(l)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(57.56\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{O3(g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(237.6\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{Na(g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(153.7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{F2(g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(203.34\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{He(g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(126.1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{Au(s)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(47.7\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{Ne(g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(146.2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ce{Hg(l)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(77.4\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-general-trends-in-entropy-s-circ-of-various-chemical-substances admonition">
+<p class="admonition-title">General trends in entropy (<span class="math notranslate nohighlight">\(S^\circ\)</span>) of various chemical substances</p>
+<p>The table of data shown above highlight the following trends:</p>
+<ol class="simple">
+<li><p>For a given substance, is increases in the following order: <span class="math notranslate nohighlight">\(S_\text{gas} \gg S_\text{liquid}&gt; S_\text{solid}\)</span>. This can be explained by greater molecular motion in gases compared with liquids, and in liquids compared with solids (see <a class="reference internal" href="#entropy-substance-fig"><span class="std std-numref">Fig. 29</span></a>).</p></li>
+<li><p>For two monatomic species, the one with the larger molar mass has the greater <span class="math notranslate nohighlight">\(S^\circ\)</span>. E.g., compare <span class="math notranslate nohighlight">\(\ce{He}\)</span> vs. <span class="math notranslate nohighlight">\(\ce{Ne}\)</span>.</p></li>
+<li><p>For two substances in the same phase, and with similar molar masses, the substance with the more complex molecular structure has the greater <span class="math notranslate nohighlight">\(S^\circ\)</span>. The more complex a molecular structure, the more different types of motion the molecule can exhibit. E.g., <span class="math notranslate nohighlight">\(\ce{O2(g)}\)</span> vs. <span class="math notranslate nohighlight">\(\ce{O3(g)}\)</span>.</p></li>
+<li><p>When an element exists in two or more allotropic forms (e.g., graphite vs. diamond), the form in which the atoms are more mobile has the greater entropy. In diamond, the carbon atoms occupy fixed positions in a three-dimensional array. In graphite, although the carbon atoms occupy fixed positions within the two-dimensional sheets, the sheets are free to move with respect to one another, which increases the mobility and, therefore, total number of possible arrangements of atoms within the solid.</p></li>
+</ol>
+</div>
+<figure class="margin-caption align-default" id="entropy-substance-fig">
+<img alt="https://openstax.org/apps/archive/20221109.213337/resources/f3f96b7f897d7cd062c326b3e451634f6c3d5a20" src="https://openstax.org/apps/archive/20221109.213337/resources/f3f96b7f897d7cd062c326b3e451634f6c3d5a20" />
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">The entropy of a substance increases (<span class="math notranslate nohighlight">\(S^\circ &gt; 0\)</span>) as it transforms from a relatively ordered solid, to a less-ordered liquid, and then to a still less-ordered gas. The entropy decreases (<span class="math notranslate nohighlight">\(S^\circ &lt; 0\)</span>) as the substance transforms from a gas to a liquid and then to a solid. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/12-2-entropy">12.2 Entropy - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#entropy-substance-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Entropy of a system (<span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ\)</span>) can be calculated similar to mathematical procedure for calculating <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-s-sys">
+<span class="eqno">(13)<a class="headerlink" href="#equation-s-sys" title="Permalink to this equation">#</a></span>\[\Delta _{sys} S^\circ  = \sum \Delta_{prod}S - \sum \Delta_{reac}S\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Calculating <span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ\)</span> of a system <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ\)</span> of the following reaction at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\ce{CaCO3(s) -&gt; CaO(s) + CO2(g)}
+\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(S^\circ\)</span> of these substances can be looked up the CRC Thermodynamic Data Tables: <span class="math notranslate nohighlight">\(S_{\ce{CaCO3 (s)}} = \pu{92.9 J K-1 mol-1}\)</span>, <span class="math notranslate nohighlight">\(S_{\ce{CaO (s)}} = \pu{39.8 J K-1 mol-1}\)</span>, and <span class="math notranslate nohighlight">\(S_{\ce{CO2 (g)}} = \pu{213.6 J K-1 mol-1}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\Delta _{sys} S^\circ  &amp;= [S_{\ce{CaO (s)}} + S_{\ce{CO2 (g)}}] - [S_{\ce{CaCO3 (s)}}]\\
+&amp;= [\pu{39.8 J K-1 mol-1} + \pu{213.6 J K-1 mol-1}] - [\pu{92.9 J K-1 mol-1}]\\
+&amp;= \pu{160.5 J K-1 mol-1}
+\end{align*}
+\end{split}\]</div>
+</div>
+</details></section>
+<section id="qualitative-prediction-of-delta-sys-s-circ">
+<h3>Qualitative prediction of <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span><a class="headerlink" href="#qualitative-prediction-of-delta-sys-s-circ" title="Permalink to this headline">#</a></h3>
+<p>Equation <a class="reference internal" href="#equation-s-sys">(13)</a> helps us calculate <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span> for any process where <span class="math notranslate nohighlight">\(S^\circ\)</span> of all reactants and products are known. But, we can qualitatively predict the sign of <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span> by evaluating the chemical process.</p>
+<div class="admonition-processes-that-lead-to-increase-in-s-circ-of-a-system admonition">
+<p class="admonition-title">Processes that lead to increase in <span class="math notranslate nohighlight">\(S^\circ\)</span> of a system</p>
+<ol class="simple">
+<li><p>Melting - when solids melt, molecules have greater energy and are more mobile. They go from being in fixed positions in the solid, to being free to move about in the liquid.</p></li>
+<li><p>Vaporization or sublimation - a dramatic increase in energy/mobility, and in the number of possible arrangements of a system’s molecules when the molecules go from a condensed phase to the gas phase.</p></li>
+<li><p>Temperature increase - the energy of the system’s molecules increases due to increase in their average kinetic energy.</p></li>
+<li><p>Reaction resulting in a greater number of gas molecules – since entropy of a substance in the gas phase is always significantly greater than its entropy in either the liquid or solid phase, a reaction that results in an increase in the number of gas molecules causes an increase in the system’s entropy.</p></li>
+<li><p>Dissolving a substance - dissolving causes dispersal of the molecules (and consequently, of the system’s energy) into a larger volume and greater entropy. This rule breaks down for multiple-charged ions in water as these ions attract water molecules (hydration) around their surfaces resulting in lower entropy.</p></li>
+</ol>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Predicting the sign of <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span> a system <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s predict sign of <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span> for the following systems using the rules outlined above:</p>
+<ol class="simple">
+<li><p class="sd-card-text">Decomposition of <span class="math notranslate nohighlight">\(\ce{CaCO3(s)}\)</span> to <span class="math notranslate nohighlight">\(\ce{CaO(s)}\)</span> and <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span>: <span class="math notranslate nohighlight">\(+\)</span> or <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ &gt;0\)</span></p></li>
+<li><p class="sd-card-text">Heating bromine vapor from <span class="math notranslate nohighlight">\(\pu{45 ^\circ C}\)</span> to <span class="math notranslate nohighlight">\(\pu{80 ^\circ C}\)</span>: <span class="math notranslate nohighlight">\(+\)</span> or <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ &gt;0\)</span></p></li>
+<li><p class="sd-card-text">Condensation of water vapor on a cold surface: <span class="math notranslate nohighlight">\(-\)</span> or <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ &lt;0\)</span></p></li>
+<li><p class="sd-card-text">Reaction of <span class="math notranslate nohighlight">\(\ce{NH3(g)}\)</span> and <span class="math notranslate nohighlight">\(\ce{HCl(g)}\)</span> to give <span class="math notranslate nohighlight">\(\ce{NH4Cl(s)}\)</span>: <span class="math notranslate nohighlight">\(-\)</span> or <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ &lt;0\)</span></p></li>
+<li><p class="sd-card-text">Dissolution of sugar in water: <span class="math notranslate nohighlight">\(+\)</span> or <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ &gt;0\)</span></p></li>
+</ol>
+</div>
+</details></section>
+<section id="s-circ-changes-in-the-universe">
+<h3><span class="math notranslate nohighlight">\(S^\circ\)</span> changes in the universe<a class="headerlink" href="#s-circ-changes-in-the-universe" title="Permalink to this headline">#</a></h3>
+<p>Every system we study is part of the universe. We call the environment that exists outside the system as the surroundings. Together, the system and its surroundings make up the universe. The transfer of energy from the system to its surroundings was addressed in the first law. Based on our understanding of entropy, we can also describe entropy changes in the surroundings. To correctly predict if a system is spontaneous, we need to address entropy change in the surroundings as well.</p>
+<p>Consider melting of an ice cube at room temperature (endothermic process). Because we can expect ice cube to melt spontaneously, we would expect <span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ  &gt;0\)</span> (melting of a solid). Consequent to this melting of ice, the air in the room becomes cooler causing a decrease in entropy of the surrounding (<span class="math notranslate nohighlight">\(\Delta _{surr}S^\circ &lt;0\)</span>). Now consider the opposite process of a cup of boiling water placed at room temperature (exothermic process). Because the water in the cup is cooling, <span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ  &gt;0\)</span> and since the surroundings are warmer than before, <span class="math notranslate nohighlight">\(\Delta _{surr}S^\circ &gt;0\)</span>.</p>
+<p>Now, let’s examine combustion of graphite (<span class="math notranslate nohighlight">\(\ce{C}\)</span>) in the same room as above. This process would result in formation of <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> and heat (exothermic process). Though this reaction is producing a gas (<span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ  &gt;0\)</span>), it is an exothermic reaction resulting in <span class="math notranslate nohighlight">\(\Delta _{surr}S^\circ &gt;0\)</span>.</p>
+<p>Therefore, in exothermic processes, heat transferred from the system to the surroundings increases the temperature of the molecules in the surroundings causing entropy of the surroundings to increase. Conversely, in endothermic processes, heat is transferred from the surroundings to the system, decreasing the entropy of the surroundings. There is a clear correlation between <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ\)</span>, <span class="math notranslate nohighlight">\(\Delta _{surr}S^\circ\)</span>, and <span class="math notranslate nohighlight">\(T\)</span> in the system (see Eq. <a class="reference internal" href="#equation-entropy">(11)</a>):</p>
+<div class="math notranslate nohighlight" id="equation-s-t">
+<span class="eqno">(14)<a class="headerlink" href="#equation-s-t" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+   \Delta _{surr}S^\circ &amp;\propto \Delta _{sys} H^\circ  \\
+    \Delta _{surr}S^\circ &amp;\propto \frac{1}{T}
+\end{aligned}\end{split}\]</div>
+<p>The negative sign refers to an exothermic process. In endothermic processes, the signs would be reversed. Combining, above two expressions, we have</p>
+<div class="math notranslate nohighlight" id="equation-s-surr">
+<span class="eqno">(15)<a class="headerlink" href="#equation-s-surr" title="Permalink to this equation">#</a></span>\[\Delta _{surr}S^\circ = - \frac{\Delta _{sys} H^\circ}{T}\]</div>
+</section>
+<section id="second-law-definition">
+<h3>Second Law - Definition<a class="headerlink" href="#second-law-definition" title="Permalink to this headline">#</a></h3>
+<p>It was clear from the above discussion that both systems and surroundings can undergo changes in entropy during a chemical or physical process. These changes can be summarized as:</p>
+<div class="math notranslate nohighlight" id="equation-secondlaw">
+<span class="eqno">(16)<a class="headerlink" href="#equation-secondlaw" title="Permalink to this equation">#</a></span>\[\Delta _{universe} S^\circ  = \Delta _{sys} S^\circ  + \Delta _{surr}S^\circ\]</div>
+<p>Second law of thermodynamics defines that <em>increases in a spontaneous process and remains unchanged at equilibrium.</em> This law is summarized in <a class="reference internal" href="#s-univ"><span class="std std-numref">Table 7</span></a></p>
+<table class="colwidths-auto table" id="s-univ">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\Delta _{univ} S^\circ\)</span> and spontaneity of processes in systems.</span><a class="headerlink" href="#s-univ" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(\Delta _{univ} S^\circ\)</span> condition</p></th>
+<th class="head"><p>Reaction condition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\Delta _{univ} S^\circ  &gt;0\)</span></p></td>
+<td><p>Reaction is spontaneous</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\Delta _{univ} S^\circ  =0\)</span></p></td>
+<td><p>Reaction is at equilibrium</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\Delta _{univ} S^\circ  &lt;0\)</span></p></td>
+<td><p>Reaction is nonspontaneous</p></td>
+</tr>
+</tbody>
+</table>
+<p>Equations <a class="reference internal" href="#equation-s-surr">(15)</a> and <a class="reference internal" href="#equation-secondlaw">(16)</a> can be combined to focus on the system properties as follows:</p>
+<div class="math notranslate nohighlight" id="equation-secondlaw-sys">
+<span class="eqno">(17)<a class="headerlink" href="#equation-secondlaw-sys" title="Permalink to this equation">#</a></span>\[\Delta _{universe} S^\circ = \Delta _{sys} S^\circ - \frac{\Delta _{sys} H^\circ}{T}\]</div>
+<p>We can now use Eq. <a class="reference internal" href="#equation-secondlaw-sys">(17)</a> to determine if a chemical process occurs spontaneously.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Determining spontaneity of system <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the synthesis of ammonia (<span class="math notranslate nohighlight">\(\ce{NH3(g)}\)</span>) at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> (<span class="math notranslate nohighlight">\(=\pu{298 K}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{N2(g) + 3 H2(g) -&gt; 2 NH3(g)}
+\]</div>
+<p class="sd-card-text">Using thermodynamic data, we can determine that <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ = \pu{-96.2 kJ mol-1}\)</span> and <span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ = \pu{-199 J mol-1 K-1}\)</span>. Let’s see if synthesis of <span class="math notranslate nohighlight">\(\ce{NH3(g)}\)</span> is spontaneous. Substitute given data into Eq. <a class="reference internal" href="#equation-secondlaw-sys">(17)</a> and adjust units for consistency.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta _{universe} S^\circ  &amp;= \pu{-199 J K-1 mol-1} - \frac{\pu{-96.2 J K-1 mol-1} \times \pu{1000 J K-1 mol-1}}{\pu{298 K}}\\
+&amp;= \pu{-199 J K-1 mol-1} + \pu{323 J K-1 mol-1}\\
+&amp;= \pu{124 J K-1 mol-1}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\Delta _{universe} S^\circ &gt;0\)</span>, this process is spontaneous.</p>
+</div>
+</details></section>
+</section>
+<section id="third-law-of-thermodynamics">
+<h2>Third Law of Thermodynamics<a class="headerlink" href="#third-law-of-thermodynamics" title="Permalink to this headline">#</a></h2>
+<p>This law is an application of the second law. It states that <em>the entropy of a perfect crystalline substance is zero at absolute zero</em> (<span class="math notranslate nohighlight">\(\pu{0 K}\)</span>). As <span class="math notranslate nohighlight">\(T\)</span> increases, molecular motion increases causing an increase in entropy (<a class="reference internal" href="#entropy-substance-fig"><span class="std std-numref">Fig. 29</span></a>).</p>
+<p>As can be observed from <a class="reference internal" href="#entropy-substance-fig"><span class="std std-numref">Fig. 29</span></a>, all entropy values of substances are absolute entropies at a given <span class="math notranslate nohighlight">\(T\)</span> compared with their corresponding values (<span class="math notranslate nohighlight">\(=0\)</span>) at absolute zero. Absolute entropies are referred to as standard entropies (<span class="math notranslate nohighlight">\(S^\circ\)</span>) at <span class="math notranslate nohighlight">\(1\)</span>.</p>
+</section>
+<section id="gibbs-free-energy">
+<h2>Gibbs Free Energy<a class="headerlink" href="#gibbs-free-energy" title="Permalink to this headline">#</a></h2>
+<p>According to the second law, <span class="math notranslate nohighlight">\(\Delta _{universe} S^\circ  &gt; 0\)</span>, which was expressed in another form in Eq. <a class="reference internal" href="#equation-secondlaw">(16)</a>.</p>
+<div class="math notranslate nohighlight">
+\[\Delta _{universe} S^\circ  = \Delta _{sys} S^\circ  - \frac{\Delta _{sys} H^\circ  }{T} &gt;0\]</div>
+<p>Multiply both sides of above equation by <span class="math notranslate nohighlight">\(T\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[T\Delta _{universe} S^\circ  = T \Delta _{sys} S^\circ  - \Delta _{sys} H^\circ   &gt;0\]</div>
+<p>Now reverse signs on both sides of above equation,</p>
+<div class="math notranslate nohighlight" id="equation-gibbs-deriv">
+<span class="eqno">(18)<a class="headerlink" href="#equation-gibbs-deriv" title="Permalink to this equation">#</a></span>\[-T \Delta _{universe} S^\circ  = \Delta _{sys} H^\circ -T \Delta _{sys} S^\circ    &lt;0\]</div>
+<p>According to Eq. <a class="reference internal" href="#equation-gibbs-deriv">(18)</a>, processes that occur at constant <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(T\)</span> are spontaneous if <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ\)</span> and <span class="math notranslate nohighlight">\(\Delta _{sys} S^\circ\)</span> are such that <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ   -T \Delta _{sys} S^\circ    &lt;0\)</span>. To simplify this expression, we introduce a new thermodynamic function called Gibbs free energy (<span class="math notranslate nohighlight">\(G\)</span>) or free energy. Gibbs free energy, , is the energy available to do work.</p>
+<div class="math notranslate nohighlight" id="equation-gibbs">
+<span class="eqno">(19)<a class="headerlink" href="#equation-gibbs" title="Permalink to this equation">#</a></span>\[\Delta _{sys} G^\circ = \Delta _{sys} H^\circ -T \Delta _{sys} S^\circ \]</div>
+<p>Free energy is a state function and, as the name implies, has same units as and <span class="math notranslate nohighlight">\(T \Delta _{sys} S^\circ\)</span> (<span class="math notranslate nohighlight">\(\pu{kJ}\)</span> or <span class="math notranslate nohighlight">\(\pu{kJ mol−1}\)</span>)  If a reaction is accompanied by release of usable energy (<span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ  &lt;0\)</span>), reaction is guaranteed to be spontaneous.</p>
+<table class="colwidths-auto table" id="g-spont">
+<caption><span class="caption-number">Table 8 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> and spontaneity of reactions.</span><a class="headerlink" href="#g-spont" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> condition</p></th>
+<th class="head"><p>Reaction condition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ  &lt;0\)</span></p></td>
+<td><p>Reaction is spontaneous in forward direction</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ  =0\)</span></p></td>
+<td><p>Reaction is at equilibrium</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ  &gt;0\)</span></p></td>
+<td><p>Reaction is nonspontaneous as written</p></td>
+</tr>
+</tbody>
+</table>
+<section id="standard-gibbs-free-energy-delta-f-g-circ">
+<h3>Standard Gibbs free energy, <span class="math notranslate nohighlight">\(\Delta _{f} G^\circ\)</span><a class="headerlink" href="#standard-gibbs-free-energy-delta-f-g-circ" title="Permalink to this headline">#</a></h3>
+<p>The standard free energy of reaction is the free-energy change for a reaction when it occurs under standard-state conditions - i.e., when reactants in their standard states are converted to products in their standard states.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>The CRC Handbook of Physics and Chemistry is a good reference obtaining <span class="math notranslate nohighlight">\(\Delta_f G^\circ\)</span> for most chemicals. The online version is available at <a class="reference external" href="https://hbcp-chemnetbase-com.eu1.proxy.openathens.net/faces/contents/ContentsSearch.xhtml">Handbook of Chemistry and Physics 103rd Edition (openathens.net)</a></p>
+</aside>
+<p><span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is calculated as follows:</p>
+<div class="math notranslate nohighlight" id="equation-gibbs-rxn">
+<span class="eqno">(20)<a class="headerlink" href="#equation-gibbs-rxn" title="Permalink to this equation">#</a></span>\[\Delta _{rxn} G^\circ = \sum \Delta _{products} G^\circ - \sum \Delta _{reactants} G^\circ\]</div>
+<p><span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> can be calculated by looking up standard free energy of formation (<span class="math notranslate nohighlight">\(\Delta _{f} G^\circ\)</span>) from thermodynamic data tables.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Calculating <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> for the following reaction at
+<span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \ce{
+C (s) + O2 (g) -&gt; CO2 (g)
+}\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{C(s)} = \pu{0 kJ mol-1}\)</span>, <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{O2(g)} = \pu{0 kJ mol-1}\)</span>, and <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{CO2(g)} = \pu{-394.4 kJ mol-1}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Delta _{rxn} G^\circ  &amp;= [\Delta _f G^\circ _\ce{CO2 (g)}] - [\Delta _f G^\circ _\ce{C (s)} + \Delta _f G_\ce{O2 (g)}]\\
+&amp;= [(\pu{-394.4 kJ mol-1})] - [(\pu{0 kJ mol-1}) + (\pu{0 kJ mol-1})]\\
+&amp;= \pu{-394.4 kJ mol-1}
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example:  Calculating <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> for the following reaction at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{
+CH4(g) + 2 O2(g) -&gt; CO2(g) + 2 H2O(l)
+}
+\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{CH4(g)} = \pu{-50.8 kJ mol-1}\)</span>, <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{CO2(g)} = \pu{-394.4 kJ mol-1}\)</span>, <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{O2(g)} = \pu{0 kJ mol-1}\)</span>, and <span class="math notranslate nohighlight">\(\Delta_f G^\circ _\ce{H2O(l)} = \pu{-237.2 kJ mol-1}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta _{rxn} G^\circ  &amp;= [\Delta_f G^\circ _\ce{CO2 (g)} + 2 \cdot\Delta_f G^\circ _\ce{H2O (l)}] - [\Delta_f G^\circ _\ce{CH4 (g)} + 2\cdot \Delta_f G^\circ _\ce{O2 (g)}]\\
+&amp;= [(\pu{-394.4 kJ mol-1}) + 2(\pu{-237.2 kJ mol-1})]  - [(\pu{-50.8 kJ mol-1}) + 2(\pu{0 kJ mol-1})]\\
+&amp;= \pu{-818.0 kJ mol-1}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details><section id="predicting-sign-of-delta-rxn-g-circ">
+<h4>Predicting sign of <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span><a class="headerlink" href="#predicting-sign-of-delta-rxn-g-circ" title="Permalink to this headline">#</a></h4>
+<p><span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is a function of <span class="math notranslate nohighlight">\(T\)</span> as can be seen in Eq. <a class="reference internal" href="#equation-gibbs-rxn">(20)</a>. Also, <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ  = 0\)</span> at equilibrium (see <a class="reference internal" href="#g-spont"><span class="std std-numref">Table 8</span></a>). Eq. <a class="reference internal" href="#equation-gibbs-rxn">(20)</a> can be rearranged to determine exact <span class="math notranslate nohighlight">\(T\)</span> where equilibrium is reached.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Delta _{rxn} G^\circ  = \Delta _{sys} H^\circ -T \Delta _{sys} S^\circ  = 0\\\end{split}\]</div>
+<p>Rearranging the above expression, we get</p>
+<div class="math notranslate nohighlight" id="equation-gibbs-t">
+<span class="eqno">(21)<a class="headerlink" href="#equation-gibbs-t" title="Permalink to this equation">#</a></span>\[T = \frac{\Delta _{sys} H^\circ}{\Delta _{sys} S^\circ }\]</div>
+<p>Equations <a class="reference internal" href="#equation-gibbs">(19)</a>  and <a class="reference internal" href="#equation-gibbs-t">(21)</a> can be used to predict sign of <span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> as shown in <a class="reference internal" href="#gibbs-predict"><span class="std std-numref">Table 9</span></a>.</p>
+<table class="colwidths-auto table" id="gibbs-predict">
+<caption><span class="caption-number">Table 9 </span><span class="caption-text">Predicting sign of <span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> using signs of <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span> and <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ\)</span>.</span><a class="headerlink" href="#gibbs-predict" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>When <span class="math notranslate nohighlight">\(\Delta _{sys} H^\circ\)</span> is</p></th>
+<th class="text-align:center head"><p>and <span class="math notranslate nohighlight">\(\Delta _{sys}S^\circ\)</span> is</p></th>
+<th class="text-align:center head"><p>then <span class="math notranslate nohighlight">\(\Delta _{sys} G^\circ\)</span> will be</p></th>
+<th class="head"><p>and the process is</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td><p>Spontaneous</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td><p>Nonspontaneous</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(-\)</span> when <span class="math notranslate nohighlight">\(T{\Delta _{sys}S^\circ} &lt; {\Delta _{sys} H^\circ}\)</span></p></td>
+<td><p>Spontaneous at low <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(+\)</span> when <span class="math notranslate nohighlight">\(T {\Delta _{sys} S^\circ} &gt; {\Delta _{sys} H^\circ}\)</span></p></td>
+<td><p>Nonspontaneous at high <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(-\)</span> when <span class="math notranslate nohighlight">\(T{\Delta _{sys}S^\circ} &gt; {\Delta _{sys} H^\circ}\)</span></p></td>
+<td><p>Spontaneous at high <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(+\)</span> when <span class="math notranslate nohighlight">\(T{\Delta _{sys}S^\circ} &lt; {\Delta _{sys} H^\circ}\)</span></p></td>
+<td><p>Nonspontaneous at low <span class="math notranslate nohighlight">\(T\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculating-t-at-equilibrium">
+<h4>Calculating <span class="math notranslate nohighlight">\(T\)</span> at equilibrium<a class="headerlink" href="#calculating-t-at-equilibrium" title="Permalink to this headline">#</a></h4>
+<p>In earlier example, we saw how <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> was calculated at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> using Eq. <a class="reference internal" href="#equation-gibbs-rxn">(20)</a> - however, <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> is a function of <span class="math notranslate nohighlight">\(T\)</span>. How do we calculate (<span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> at other <span class="math notranslate nohighlight">\(T\)</span>? In such cases, <span class="math notranslate nohighlight">\(\Delta _{rxn} S^\circ\)</span> and <span class="math notranslate nohighlight">\(\Delta _{rxn} H^\circ\)</span> are determined separately and applied directly in Eq. <a class="reference internal" href="#equation-gibbs-t">(21)</a> at the specified <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Using Eq. <a class="reference internal" href="#equation-gibbs-t">(21)</a>, exact <span class="math notranslate nohighlight">\(T\)</span> where a system reaches equilibrium could be calculated. At any <span class="math notranslate nohighlight">\(T\)</span> above or below this value the system will not longer be in equilibrium. The exact definition of equilibrium will be explored in the next chapter.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Calculating <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> at specified <span class="math notranslate nohighlight">\(T\)</span> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> for decomposition of limestone to quick lime and <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> as per the following reaction at <span class="math notranslate nohighlight">\(\pu{835 ^\circ C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\ce{CaCO3(s) -&gt; CaO(s) + CO2(g)}
+\]</div>
+<p class="sd-card-text">Thermodynamic data for these substances at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> are as follows:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Chemical</p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta_f H^\circ\)</span>, , <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+<th class="text-align:right head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(S^\circ\)</span>, , <span class="math notranslate nohighlight">\(\pu{J K-1 mol−1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CaCO3(s)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-1206.9\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(92.9\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CaO(s)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-635.6\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(39.8\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(-393.5\)</span></p></td>
+<td class="text-align:right"><p class="sd-card-text"><span class="math notranslate nohighlight">\(213.6\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="sd-card-text">From these data we can determine <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{177.8 kJ mol-1}\)</span> and <span class="math notranslate nohighlight">\(\Delta_{rxn}S^\circ = \pu{160.5 J K-1 mol-1}\)</span>. From these data, let’s calculate <span class="math notranslate nohighlight">\(\Delta _{rxn} G^\circ\)</span> at <span class="math notranslate nohighlight">\(\pu{835 ^\circ C}\)</span> (= <span class="math notranslate nohighlight">\(\pu{1108 K}\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta _{rxn} G^\circ  &amp;= \Delta_{rxn}H^\circ -T \Delta_{rxn}S^\circ\\
+   &amp;=\pu{177.8 kJ mol-1} - (\pu{1108 K})(\pu{160.5 J K-1 mol-1}) \left(\frac{\pu{1 kJ}}{\pu{e3 J}}\right)\\
+   &amp; =\pu{0  kJ mol-1}
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">In this particular example, the system reached equilibrium at <span class="math notranslate nohighlight">\(\pu{835 ^\circ C}\)</span>!</p>
+</div>
+</details></section>
+</section>
+</section>
+<section id="practice-problems">
+<h2>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this headline">#</a></h2>
+<p>(1) Calculate the kinetic energy of an oxygen atom moving at a speed of <span class="math notranslate nohighlight">\(\pu{100 m s−1}\)</span>. Hint: convert mass of an <span class="math notranslate nohighlight">\(\ce{O}\)</span> atom from <span class="math notranslate nohighlight">\(\pu{amu}\)</span> to <span class="math notranslate nohighlight">\(\pu{g}\)</span>.</p>
+<p>(2) Calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span> for the following reactions using thermodynamic data:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\ce{H2 + F2 &amp;-&gt; 2 HF\\
+2 NO2 &amp;-&gt; N2O4
+}
+\end{align*}\end{split}\]</div>
+<p>(3) How is the system defined in this chemical reaction? Where does the energy go?</p>
+<p>(4) According to a Clif Bar nutrition label, it contains <span class="math notranslate nohighlight">\(\pu{240 Cal}\)</span> of energy. How much is this energy in <span class="math notranslate nohighlight">\(\pu{J}\)</span>?</p>
+<p>(5) What would be good examples of open, closed, and isolated systems in nature?</p>
+<p>(6) Of mass and concentration, which property is conserved in a system?</p>
+<p>(7) Is a mixture of different gases a single phase?</p>
+<p>(8) What component defines a pure <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> system?</p>
+<p>(9) What component(s) defines an aqueous system composed of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> and <span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span>?</p>
+<p>(10) How many properties are required to define a system of <span class="math notranslate nohighlight">\(\pu{1 L}\)</span> pure <span class="math notranslate nohighlight">\(\ce{H2O}\)</span>?</p>
+<p>(11) If <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{2803 kJ mol-1}\)</span> for photosynthesis reaction shown below:</p>
+<div class="math notranslate nohighlight">
+\[\ce{6 H2O(l) + 6 CO2(g) -&gt;[Sunlight] C6H12O6(s) + 6 O2(g)}\]</div>
+<blockquote>
+<div><p>Calculate the solar energy required to produce <span class="math notranslate nohighlight">\(\pu{75 g}\)</span> of <span class="math notranslate nohighlight">\(\ce{C6H12O6}\)</span>.</p>
+</div></blockquote>
+<p>(12) If <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{-72.4 kJ mol-1}\)</span> for the reaction</p>
+<div class="math notranslate nohighlight">
+\[\ce{H2(g) + Br2(l) -&gt; 2 HBr(g)}\]</div>
+<blockquote>
+<div><p>Calculate the amount of heat released when <span class="math notranslate nohighlight">\(\pu{1 kg}\)</span> of <span class="math notranslate nohighlight">\(\ce{Br2}\)</span> is consumed in this reaction.</p>
+</div></blockquote>
+<p>(13) If <span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ = \pu{333.8 kJ mol-1}\)</span> for the thermochemical equation,</p>
+<div class="math notranslate nohighlight">
+\[\ce{2 Cu2O -&gt; 4 Cu + O2}\]</div>
+<blockquote>
+<div><p>Calculate the mass of copper produced when <span class="math notranslate nohighlight">\(\pu{1.47e4 kJ}\)</span> is consumed in this reaction.</p>
+</div></blockquote>
+<p>(14) Determine the enthalpy change for each reaction using the reaction data provided in the table below each reaction:</p>
+<div class="math notranslate nohighlight">
+\[\ce{NO(g) + O(g) -&gt; NO2(g)}\]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Reaction</p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span>, <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{NO(g) + O3(g) -&gt; NO2(g) + O2 (g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(-198.9\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{O3(g)  -&gt; 3/2 O2 (g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(-142.3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{O2(g) -&gt; 2 O (g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(-571.6\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="math notranslate nohighlight">
+\[\ce{
+3 H2 + O3 -&gt; 3 H2O
+}\]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Reaction</p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span>, <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{2 H2 (g) + O2(g) -&gt; 2H2O (g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(-483.6\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{3 O2(g) -&gt; 2 O3 (g)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(284.6\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="math notranslate nohighlight">
+\[ \ce{
+P4O6 + 2 O2 -&gt; P4O10}
+\]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Reaction</p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(\Delta_{rxn}H^\circ\)</span>, <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ce{P4 (s) + 3 O2(g) -&gt; P4O6 (s)}\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(-1640.1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ce{P4(s) + 5O2(g) -&gt; P4O10(s) }\)</span></p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(-2940.1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>(15) Calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}S^\circ\)</span>of the following reactions at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+N2 + 3 H2 &amp;-&gt; 2 NH3\\
+H2 + Cl2 &amp;-&gt; 2 HCl\\
+H2 + CuO &amp;-&gt; Cu + H2O\\
+2 Al + 3 ZnO &amp;-&gt; Al2O3 + 3 Zn\\
+CH4 + 2 O2 &amp;-&gt; CO2 + 2 H2O
+}
+\end{align*}
+\end{split}\]</div>
+<p>(16) Determine sign of <span class="math notranslate nohighlight">\(\Delta_{sys}S\)</span> for the following systems using the rules outlined in the section on entropy of substances:</p>
+<blockquote>
+<div><ol class="simple">
+<li><p>Freezing ethanol</p></li>
+<li><p>Evaporating water</p></li>
+<li><p>Heating water</p></li>
+<li><p>Condensing bromine vapor</p></li>
+</ol>
+</div></blockquote>
+<p>(17) Calculate <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> for the following reactions at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+2 MgO &amp;-&gt; 2 Mg + O2\\
+H2 + Br2 &amp;-&gt; 2 HBr\\
+2 C2H6 + 7 O2 &amp;-&gt; 4 CO2 + 6 H2O
+}
+\end{align*}
+\end{split}\]</div>
+<p>(18) Determine the <span class="math notranslate nohighlight">\(T\)</span> at which the following reactions reach equilibrium:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\ce{
+2 MgO &amp;-&gt; 2 Mg + O2\\
+H2 + Br2 &amp;-&gt; 2 HBr\\
+2 C2H6 + 7 O2 &amp;-&gt; 4 CO2 + 6 H2O
+}
+\end{align*}
+\end{split}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="01AtomsFirst.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Atoms First - A short introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="03ChemicalEquilibrium.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chemical Equilibrium</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vijay Vulava<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
