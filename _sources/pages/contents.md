@@ -1,6 +1,0 @@
-- #geol103
--
-- {{renderer :tocgen2, [[1atomsfirst]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[1atomsfirst]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[11atoms]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[11atoms]], calc(100vh - 135px)}}

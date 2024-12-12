@@ -66,45 +66,45 @@ $$
 $$
 
 >Let's inventory all atoms on both sides of the arrow.
-
+>
 > | 4 	| C 	| 1 	|
 > | --- | --- | --- |
 > | 10 	| H 	| 2 	|
 > | 2 	| O 	| 3 	|
-
+>
 >Now, let's fix $\ce{C}$ atoms first by changing the coefficient of $\ce{CO2 (g)}$.
-
+>
 >$$
 \ce{C4H10(g) + O2(g) -> 4 CO2(g) + H2O(l)	}
 $$
-
+>
 > | 4 	| C 	| $\cancel{1}$ 4 	|
 > | --- | --- | --- |
 > | 10 	| H 	| 2 	|
 > | 2 	| O 	| $\cancel{3}$ 9 	|
-
+>
 >Now, let's fix $\ce{H}$ atoms by changing coefficient of $\ce{H2O (l)}$.
-
+>
 >$$
 \ce{C4H10(g) + O2(g) -> 4 CO2(g) + 5 H2O(l)	}
 $$	
-
+>
 > | 4 	| C 	| 4 	|
 > | --- | --- | --- |
 > | 10 	| H 	| $\cancel{2}$ 10 	|
 > | 2 	| O 	| $\cancel{9}$  13	|
-
+>
 >Lastly, let's fix $\ce{O}$ atoms by changing coefficient of $\ce{O2 (g)}$.
-
+>
 >$$
 \ce{C4H10(g) + 13/2 O2(g) -> 4 CO2(g) + 5 H2O(l)	}
 $$	
-
+>
 > | 4 	| C 	| 4 	|
 > | --- | --- | --- |
 > | 10 	| H 	| 10 	|
 > | $\cancel{2}$ 13 	| O 	| 13 	|
-
+>
 > Multiply the above equation by 2 to get the whole number of coefficients.
 >
 >$$
@@ -125,22 +125,22 @@ $$
 
 
 >1. Write all reactants and products in the correct locations of the chemical equation:
-
+>
 >$$
 	\ce{Al2Si2O5(OH)4 + H+ -> Al^3+ + H4SiO4 + H2O}
 $$
 >2.  Balance the main elements ($\ce{Al}$ and $\ce{Si}$) first
-
+>
 >$$
 	\ce{Al2Si2O5(OH)4 + H+ -> 2 Al^3+ + 2 H4SiO4 + H2O}
 $$
 >3. Balance $\ce{O}$ next and adjust $\ce{H2O}$ as needed
-
+>
 >$$
 	\ce{Al2Si2O5(OH)4 + H+ -> 2 Al^3+ + 2 H4SiO4 + H2O}
 $$
 >4. Balance single elements and ions ($\ce{H+}$) last
-
+>
 >$$
 	\ce{Al2Si2O5(OH)4 + 6 H+ -> 2 Al^3+ + 2 H4SiO4 + H2O}
 $$
