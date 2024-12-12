@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="4.1 What are Acids and Bases?" href="41AcidsBases.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -423,27 +404,27 @@ document.write(`
 <h1>4.2 Strength of Acids and Bases<a class="headerlink" href="#strength-of-acids-and-bases" title="Link to this heading">#</a></h1>
 <section id="how-strong-are-acids-and-bases">
 <h2>How strong are acids and bases?<a class="headerlink" href="#how-strong-are-acids-and-bases" title="Link to this heading">#</a></h2>
-<p>Strength of acids and bases are measured by their tendency to ionize. Let’s consider a hypothetical strong acid <span class="math notranslate nohighlight">\(\ce{HX}\)</span> that readily ionizes in water.</p>
+<p>The strength of acids and bases is measured by their tendency to ionize. Consider a hypothetical strong acid <span class="math notranslate nohighlight">\(\ce{HX}\)</span> that readily ionizes in water.</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 HX -&gt;[H2O] H+ + X-
 }\]</div>
-<p>In the above case, weak <span class="math notranslate nohighlight">\(\ce{H-X}\)</span> bonds within the molecular structure can result in strong ionization and vice versa. This bond strength is referred to as bond enthalpy. Another factor that impacts strength of acids is polarity in the <span class="math notranslate nohighlight">\(\ce{H-X}\)</span> bond or difference in electronegativity in the main bond. When the above <span class="math notranslate nohighlight">\(\ce{H-X}\)</span> is highly polarized, <span class="math notranslate nohighlight">\(\ce{HX}\)</span> tends to break up into <span class="math notranslate nohighlight">\(\ce{H+}\)</span> and <span class="math notranslate nohighlight">\(\ce{X-}\)</span>. Therefore, high degree of polarity results in stronger acids (or bases).</p>
+<p>In the above case, weak <span class="math notranslate nohighlight">\(\ce{H-X}\)</span> bonds within the molecular structure can result in strong ionization and vice versa. This bond strength is referred to as bond enthalpy. Another factor that impacts the strength of acids is polarity in the <span class="math notranslate nohighlight">\(\ce{H-X}\)</span> bond or the difference in electronegativity in the main bond. When the above <span class="math notranslate nohighlight">\(\ce{H-X}\)</span> is highly polarized, <span class="math notranslate nohighlight">\(\ce{HX}\)</span> tends to break up into <span class="math notranslate nohighlight">\(\ce{H+}\)</span> and <span class="math notranslate nohighlight">\(\ce{X-}\)</span>. Therefore, high polarity results in stronger acids (or bases).</p>
 <p><a class="reference external" href="https://ed.ted.com/lessons/the-strengths-and-weaknesses-of-acids-and-bases-george-zaidan-and-charles-morton">The strengths and weaknesses of acids and bases - TED-Ed</a></p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/DupXDD87oHc" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>In general, hydrohalic acids (acids with halide conjugate base) are strong with the exception of <span class="math notranslate nohighlight">\(\ce{HF}\)</span>. The strength is these acids are as follows:</p>
+<p>Generally, hydrohalic acids (acids with halide conjugate base) are strong except <span class="math notranslate nohighlight">\(\ce{HF}\)</span>. The strength of these acids are as follows:</p>
 <div class="math notranslate nohighlight">
 \[\ce{HF} \ll \ce{HCl} &lt; \ce{HBr} &lt; \ce{HI}\]</div>
-<p>Strength of oxoacids (acids that contain <span class="math notranslate nohighlight">\(\ce{H}\)</span>, <span class="math notranslate nohighlight">\(\ce{O}\)</span>, and a central, nonmetal atom) increases with the electronegativity of central nonmetal atom. For example, since <span class="math notranslate nohighlight">\(\ce{Cl}\)</span> is more electronegative than <span class="math notranslate nohighlight">\(\ce{Br}\)</span>, therefore the strength of these acids are:</p>
+<p>The strength of oxoacids (acids that contain <span class="math notranslate nohighlight">\(\ce{H}\)</span>, <span class="math notranslate nohighlight">\(\ce{O}\)</span>, and a central, nonmetal atom) increases with the electronegativity of a central nonmetal atom. For example, since <span class="math notranslate nohighlight">\(\ce{Cl}\)</span> is more electronegative than <span class="math notranslate nohighlight">\(\ce{Br}\)</span>, therefore the strength of these acids are:</p>
 <div class="math notranslate nohighlight">
 \[\ce{HClO3} &gt; \ce{HBrO3}\]</div>
-<p>When oxoacids have same central atom, but different number of <span class="math notranslate nohighlight">\(\ce{O}\)</span> atoms, the strength of the acid is directly proportional to number of <span class="math notranslate nohighlight">\(\ce{O}\)</span> atoms present (or directly proportional to oxidation state of central atom). For example,</p>
+<p>When oxoacids have the same central atom but a different number of <span class="math notranslate nohighlight">\(\ce{O}\)</span> atoms, the strength of the acid is directly proportional to the number of <span class="math notranslate nohighlight">\(\ce{O}\)</span> atoms present (or directly proportional to the oxidation state of a central atom). For example,</p>
 <div class="math notranslate nohighlight">
 \[\ce{HClO4} &gt; \ce{HClO3} &gt; \ce{HClO2} &gt; \ce{HClO}\]</div>
-<p>There are only a few strong acids and include: <span class="math notranslate nohighlight">\(\ce{HCl}\)</span>, <span class="math notranslate nohighlight">\(\ce{HBr}\)</span>, <span class="math notranslate nohighlight">\(\ce{HI}\)</span>, <span class="math notranslate nohighlight">\(\ce{HNO3}\)</span>, <span class="math notranslate nohighlight">\(\ce{HClO3}\)</span> (chloric acid), <span class="math notranslate nohighlight">\(\ce{HClO4}\)</span> (perchloric acid), and <span class="math notranslate nohighlight">\(\ce{H2SO4}\)</span>. Because ionization of these strong acids in water is <span class="math notranslate nohighlight">\(\pu{100 \%}\)</span> complete, <span class="math notranslate nohighlight">\(\{\ce{H3O+}\}\)</span> is same as initial concentration of the acid.</p>
+<p>There are only a few strong acids and include: <span class="math notranslate nohighlight">\(\ce{HCl}\)</span>, <span class="math notranslate nohighlight">\(\ce{HBr}\)</span>, <span class="math notranslate nohighlight">\(\ce{HI}\)</span>, <span class="math notranslate nohighlight">\(\ce{HNO3}\)</span>, <span class="math notranslate nohighlight">\(\ce{HClO3}\)</span> (chloric acid), <span class="math notranslate nohighlight">\(\ce{HClO4}\)</span> (perchloric acid), and <span class="math notranslate nohighlight">\(\ce{H2SO4}\)</span>. Because the ionization of these strong acids in water is <span class="math notranslate nohighlight">\(\pu{100 \%}\)</span> complete, <span class="math notranslate nohighlight">\(\{\ce{H3O+}\}\)</span> is the same as the initial concentration of the acid.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of strong acids</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -473,7 +454,7 @@ p\ce{H} &amp;= 14.0 - p\ce{OH} = 14.0-1.75 = 12.25
 </details></section>
 <section id="acid-ionization-constants">
 <h2>Acid ionization constants<a class="headerlink" href="#acid-ionization-constants" title="Link to this heading">#</a></h2>
-<p>Most acids are weak and only partially ionize in water. At equilibrium, an aqueous solution of a weak acid contains a mixture of aqueous acid molecules, the corresponding conjugate base, and <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span>. The degree to which a weak acid ionizes depends on the concentration of the acid and the equilibrium constant for the ionization.</p>
+<p>Most acids are weak and only partially ionize in water. At equilibrium, an aqueous solution of a weak acid contains a mixture of aqueous acid molecules, the corresponding conjugate base, and <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span>. The degree to which a weak acid ionizes depends on the acid concentration and the equilibrium constant for the ionization.</p>
 <p>Consider a weak monoprotic acid <span class="math notranslate nohighlight">\(\ce{HA}\)</span>, whose ionization in water can be represented as</p>
 <div class="math notranslate nohighlight">
 \[\ce{
@@ -482,8 +463,8 @@ HA &lt;=&gt;[H2O] H+ + A-
 <p>The equilibrium expression for this reaction can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-ka">
 <span class="eqno">(40)<a class="headerlink" href="#equation-ka" title="Link to this equation">#</a></span>\[K_a = \frac{\{\ce{H+}\}\{\ce{A-}\}}{\{\ce{HA}\}}\]</div>
-<p>In Eq <a class="reference internal" href="#equation-ka">(40)</a> <span class="math notranslate nohighlight">\(K_a\)</span>  is special equilibrium constant called the <em><strong>acid ionization constant</strong></em>. The magnitude of <span class="math notranslate nohighlight">\(K_a\)</span> indicates the strength of an acid. A large <span class="math notranslate nohighlight">\(K_a\)</span> value indicates a stronger acid, whereas a small <span class="math notranslate nohighlight">\(K_a\)</span> value indicates a weaker acid.</p>
-<p>Weak acids do not completely dissociate, hence we need to use the <em>ICE method</em> setup introduced in the previous chapter to solve  equilibrium problems.</p>
+<p>In Eq <a class="reference internal" href="#equation-ka">(40)</a> <span class="math notranslate nohighlight">\(K_a\)</span>  is a special equilibrium constant called the <em><strong>acid ionization constant</strong></em>. The magnitude of <span class="math notranslate nohighlight">\(K_a\)</span> indicates the strength of an acid. A large <span class="math notranslate nohighlight">\(K_a\)</span> value indicates a stronger acid, whereas a small <span class="math notranslate nohighlight">\(K_a\)</span> value indicates a weaker acid.</p>
+<p>Weak acids do not completely dissociate. Hence, we must use the <em>ICE method</em> setup introduced in the previous chapter to solve equilibrium problems.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Equilibrium <span class="math notranslate nohighlight">\(p\ce{H}\)</span>  of weak acid solutions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -492,7 +473,7 @@ HA &lt;=&gt;[H2O] H+ + A-
 \[\ce{
 HF + H2O &lt;=&gt; H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
 }\]</div>
-<p class="sd-card-text">Let’s setup the ICE table for this problem</p>
+<p class="sd-card-text">Let’s set the ICE table for this problem</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
@@ -544,7 +525,7 @@ HF + H2O &lt;=&gt; H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Relative abundance of weak acids</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We can calculate the relative abundance of conjugate base of a weak acid at any  by examining the equilibrium expression. In the <span class="math notranslate nohighlight">\(\ce{HF}\)</span> ionization reaction shown in previous example, the expression can be rearranged as</p>
+<p class="sd-card-text">We can calculate the relative abundance of the conjugate base of a weak acid by examining the equilibrium expression. In the <span class="math notranslate nohighlight">\(\ce{HF}\)</span> ionization reaction shown in the previous example, the expression can be rearranged as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
  \begin{align*}
@@ -564,8 +545,8 @@ HF + H2O &lt;=&gt; H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
 </section>
 <section id="carbonic-acid-system">
 <h2>Carbonic acid system<a class="headerlink" href="#carbonic-acid-system" title="Link to this heading">#</a></h2>
-<p>Carbonic acid (<span class="math notranslate nohighlight">\(\ce{H2CO3}\)</span>) is the most abundant acid in natural waters and is also a weak acid. Along with its salt, <span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span>, it forms a buffer that plays an important role in regulating the  of natural waters. Hence, an understanding of the carbonic acid system is essential to the understanding of the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of natural waters.</p>
-<p><span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> dissolves in water in the sequence as shown below.  Closely, note the states of matter and the arrows between reactants and products.</p>
+<p>Carbonic acid (<span class="math notranslate nohighlight">\(\ce{H2CO3}\)</span>) is the most abundant acid in natural waters and is also a weak acid. Along with its salt, <span class="math notranslate nohighlight">\(\ce{CaCO3}\)</span>, it forms a buffer that plays an important role in regulating the natural waters. Hence, understanding the carbonic acid system is essential to understanding the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of natural waters.</p>
+<p><span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> dissolves in water in the sequence as shown below.  Closely note the states of matter and the arrows between reactants and products.</p>
 <div class="math notranslate nohighlight" id="equation-co2-dissol">
 <span class="eqno">(41)<a class="headerlink" href="#equation-co2-dissol" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
 \ce{
@@ -573,11 +554,11 @@ CO2(g) &amp;&lt;=&gt; CO2(aq) \\
 CO2(aq) &amp;&lt;&lt;=&gt; H2CO3(aq) 
 }
 \end{align*}\end{split}\]</div>
-<p>The above two reactions cannot be separated and is often difficult to distinguish between <span class="math notranslate nohighlight">\(\ce{CO2(aq)}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2CO3(aq)}\)</span>. Often, scientists use the term <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> to denote the sum of <span class="math notranslate nohighlight">\([\ce{CO2(aq)}]\)</span> and <span class="math notranslate nohighlight">\([\ce{H2CO3(aq)}]\)</span>. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\([\ce{CO2(aq)}]\)</span>  makes up <span class="math notranslate nohighlight">\(\pu{99.85 \%}\)</span> of this sum, and may be more acceptable to the use of <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span>. In this text, we will use <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> to represent carbonic acid.</p>
+<p>The above two reactions cannot be separated, and it is often difficult to distinguish between <span class="math notranslate nohighlight">\(\ce{CO2(aq)}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2CO3(aq)}\)</span>. Often, scientists use the term <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> to denote the sum of <span class="math notranslate nohighlight">\([\ce{CO2(aq)}]\)</span> and <span class="math notranslate nohighlight">\([\ce{H2CO3(aq)}]\)</span>. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\([\ce{CO2(aq)}]\)</span>  makes up <span class="math notranslate nohighlight">\(\pu{99.85 \%}\)</span> of this sum and may be more acceptable to the use of <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span>. In this text, we will use <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> to represent carbonic acid.</p>
 <p>The equilibrium relationship of reaction <a class="reference internal" href="#equation-co2-dissol">(41)</a> can be expressed as</p>
 <div class="math notranslate nohighlight">
 \[K_H = \frac{[\ce{CO2 (aq)}]}{P_{\ce{CO2 (g)}}} = \pu{10^{-1.47} mol L-1 atm-1}\]</div>
-<p>The <span class="math notranslate nohighlight">\(K_H\)</span> is a special equilibrium constant called the <em><strong>Henry’s Law constant</strong></em> and is used for equilibrium reactions that involve dissolution of gases in water. Using the <span class="math notranslate nohighlight">\(K_H\)</span>, <span class="math notranslate nohighlight">\([\ce{H2CO3^*}]\)</span> can be calculated for different atmospheric concentrations.</p>
+<p>The <span class="math notranslate nohighlight">\(K_H\)</span> is a special equilibrium constant called the <em><strong>Henry’s Law constant</strong></em> and is used for equilibrium reactions involving gas dissolution in water. Using the <span class="math notranslate nohighlight">\(K_H\)</span>, <span class="math notranslate nohighlight">\([\ce{H2CO3^*}]\)</span> can be calculated for different atmospheric concentrations.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Application of <span class="math notranslate nohighlight">\(K_H\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -604,13 +585,13 @@ HCO3- (aq) &amp;&lt;=&gt; H+ (aq) + CO3^2- (aq) \qquad $K_{a2} = \pu{4.68e-10}$
 \frac{[\ce{H2CO3^* (aq)}]}{[\ce{HCO3- (aq)}]} &amp;= \frac{[\ce{H3O+ (aq)}]}{K_{a1}}  \\
 \frac{[\ce{HCO3- (aq)}]}{[\ce{CO3^2- (aq)}]} &amp;= \frac{[\ce{H3O+ (aq)}]}{K_{a2}} 
 \end{align}\end{split}\]</div>
-<p>The total carbonate concentration (<span class="math notranslate nohighlight">\(\ce{C}_T\)</span>) present in an aqueous system can be considered to be constant. If we assume that all carbonate is only present in this aqueous system in the forms of <span class="math notranslate nohighlight">\(\ce{H2CO3^* (aq)}\)</span>, <span class="math notranslate nohighlight">\(\ce{HCO3- (aq)}\)</span>, and <span class="math notranslate nohighlight">\(\ce{CO3^2- (aq)}\)</span>, we can use mass balance concepts to determine absolute abundance as follows:</p>
+<p>The total carbonate concentration (<span class="math notranslate nohighlight">\(\ce{C}_T\)</span>) present in an aqueous system can be considered constant. If we assume that all carbonate is only present in this aqueous system in the forms of <span class="math notranslate nohighlight">\(\ce{H2CO3^* (aq)}\)</span>, <span class="math notranslate nohighlight">\(\ce{HCO3- (aq)}\)</span>, and <span class="math notranslate nohighlight">\(\ce{CO3^2- (aq)}\)</span>, we can use mass balance concepts to determine absolute abundance as follows:</p>
 <div class="math notranslate nohighlight" id="equation-ct-exp">
 <span class="eqno">(44)<a class="headerlink" href="#equation-ct-exp" title="Link to this equation">#</a></span>\[\ce{C}_T = [\ce{H2CO3^* (aq)}] + [\ce{HCO3- (aq)}] + [\ce{CO3^2- (aq)}] \]</div>
 <p>Equilibrium expressions  <a class="reference internal" href="#equation-co3-ka1-ka2-exp">(43)</a> can be combined with equation <a class="reference internal" href="#equation-ct-exp">(44)</a> and simplified as:</p>
 <div class="math notranslate nohighlight" id="equation-ct-expanded">
 <span class="eqno">(45)<a class="headerlink" href="#equation-ct-expanded" title="Link to this equation">#</a></span>\[\ce{C}_T = [\ce{H2CO3^* (aq)}]\left(1 + \frac{K_{a1}}{[\ce{H3O+}]} + \frac{K_{a1} K_{a2}}{[\ce{H3O+}]^2}\right) \]</div>
-<p>We now have an expression that relates total carbonate to the amount of. This is a very useful expression as can be seen. In order to simplify subsequent equations, we will define a variable, <span class="math notranslate nohighlight">\(\alpha_\text{H}\)</span>, that encompasses all of the terms inside the parentheses in equation <a class="reference internal" href="#equation-ct-expanded">(45)</a>. Note that this portion of the equation deals with <span class="math notranslate nohighlight">\(p\ce{H}\)</span>  of the aqueous system.</p>
+<p>We now have an expression that relates total carbonate to the amount of. This is a very useful expression. To simplify subsequent equations, we will define a variable, <span class="math notranslate nohighlight">\(\alpha_\text{H}\)</span>, that encompasses all of the terms inside the parentheses in equation <a class="reference internal" href="#equation-ct-expanded">(45)</a>. Note that this portion of the equation deals with <span class="math notranslate nohighlight">\(p\ce{H}\)</span>  of the aqueous system.</p>
 <div class="math notranslate nohighlight" id="equation-alpha-h">
 <span class="eqno">(46)<a class="headerlink" href="#equation-alpha-h" title="Link to this equation">#</a></span>\[\alpha_\ce{H} = \left(1 + \frac{K_{a1}}{[\ce{H3O+}]} + \frac{K_{a1} K_{a2}}{[\ce{H3O+}]^2}\right)\]</div>
 <p>We can now determine <span class="math notranslate nohighlight">\([\ce{H2CO3^* (aq)}]\)</span>, <span class="math notranslate nohighlight">\([\ce{HCO3- (aq)}]\)</span>, and <span class="math notranslate nohighlight">\([\ce{CO3^2- (aq)}]\)</span>, by combining equations eq <a class="reference internal" href="#equation-co3-ka1-ka2-exp">(43)</a> and <a class="reference internal" href="#equation-ct-expanded">(45)</a> as follows:</p>
@@ -620,11 +601,11 @@ HCO3- (aq) &amp;&lt;=&gt; H+ (aq) + CO3^2- (aq) \qquad $K_{a2} = \pu{4.68e-10}$
 [\ce{HCO3^- (aq)}] &amp;= \frac{\text{C}_T K_{a1}}{[\ce{H3O+}] \alpha_\text{H}}\\
 [\ce{CO3^2- (aq)}] &amp;= \frac{\text{C}_T K_{a1} K_{a2}}{[\ce{H3O+}]^2 \alpha_\text{H}}
 \end{align}\end{split}\]</div>
-<p>If <span class="math notranslate nohighlight">\(\ce{C}_T\)</span> and <span class="math notranslate nohighlight">\(p\ce{H}\)</span> are known in any given system, all carbonate species concentrations can be determined.</p>
+<p>All carbonate species concentrations can be determined if <span class="math notranslate nohighlight">\(\ce{C}_T\)</span> and <span class="math notranslate nohighlight">\(p\ce{H}\)</span> are known in any given system.</p>
 </section>
 <section id="silicic-acid-system">
 <h2>Silicic acid system<a class="headerlink" href="#silicic-acid-system" title="Link to this heading">#</a></h2>
-<p>Silicic acid (<span class="math notranslate nohighlight">\(\ce{H4SiO4}\)</span>) is a common byproduct of silicate mineral weathering, and is a weak acid. This is “tetraprotic acid,” meaning it can release four <span class="math notranslate nohighlight">\(\ce{H+}\)</span> in four dissociation steps. Only the first two dissociation steps are environmentally relevant. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, dissociates in water as follows,</p>
+<p>Silicic acid (<span class="math notranslate nohighlight">\(\ce{H4SiO4}\)</span>) is a common byproduct of silicate mineral weathering and weak acid. This is a “tetraprotic acid,” meaning it can release four <span class="math notranslate nohighlight">\(\ce{H+}\)</span> in four dissociation steps. Only the first two dissociation steps are environmentally relevant. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, dissociates in water as follows,</p>
 <div class="math notranslate nohighlight" id="equation-silicate">
 <span class="eqno">(48)<a class="headerlink" href="#equation-silicate" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 \ce{
@@ -635,7 +616,7 @@ H3SiO4- + H2O &amp;&lt;=&gt; H2SiO4^2- + H3O+ \qquad  $K_{a2} = \pu{10^{-13.17}}
 </section>
 <section id="weak-bases-and-base-ionization-constants">
 <h2>Weak bases and base ionization constants<a class="headerlink" href="#weak-bases-and-base-ionization-constants" title="Link to this heading">#</a></h2>
-<p>Just as acids, most bases and only partially ionize in water. At equilibrium, an aqueous solution of a weak base contains a mixture of aqueous base molecules, <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>, and the corresponding conjugate acid. The ionization can be treated very similar to that of a weak acid.</p>
+<p>Just like acids, most bases only partially ionize in water. At equilibrium, an aqueous solution of a weak base contains a mixture of aqueous base molecules, <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>, and the corresponding conjugate acid. The ionization can be treated very similar to that of a weak acid.</p>
 <p>Consider a weak base <span class="math notranslate nohighlight">\(\ce{B}\)</span> (and the conjugate acid, <span class="math notranslate nohighlight">\(\ce{HB+}\)</span>), whose ionization in water can be represented as</p>
 <div class="math notranslate nohighlight">
 \[\ce{
@@ -655,7 +636,7 @@ B + H2O &lt;=&gt; HB+ + OH-
 <figure class="margin-caption align-default" id="trans-elem-coord">
 <img alt="https://openstax.org/apps/archive/20230220.155442/resources/68a314671bf83af3515776c96ec37c9d7555f061" src="https://openstax.org/apps/archive/20230220.155442/resources/68a314671bf83af3515776c96ec37c9d7555f061" />
 <figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">(a) Covalent bonds involve the sharing of electrons, and ionic bonds involve the transferring of electrons associated with each bonding atom, as indicated by the colored electrons. (b) Coordinate covalent bonds involve electrons from a Lewis base being donated to a metal center. The lone pairs from six water molecules form bonds to the scandium ion to form an octahedral complex.   Image source: <a class="reference external" href="https://openstax.org/books/chemistry-2e/pages/19-2-coordination-chemistry-of-transition-metals">19.2 Coordination Chemistry of Transition Metals - Chemistry 2e | OpenStax</a></span><a class="headerlink" href="#trans-elem-coord" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">(a) Covalent bonds involve the sharing of electrons, and ionic bonds involve transferring electrons associated with each bonding atom, as indicated by the colored electrons. (b) Coordinate covalent bonds involve electrons from a Lewis base being donated to a metal center. The lone pairs from six water molecules form bonds to the scandium ion to form an octahedral complex.   Image source: <a class="reference external" href="https://openstax.org/books/chemistry-2e/pages/19-2-coordination-chemistry-of-transition-metals">19.2 Coordination Chemistry of Transition Metals - Chemistry 2e | OpenStax</a></span><a class="headerlink" href="#trans-elem-coord" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For example, the dissolution of aluminum nitrate in water is typically represented as</p>
@@ -663,7 +644,7 @@ B + H2O &lt;=&gt; HB+ + OH-
 \[
 \ce{Al(NO3)3 (s) &lt;=&gt; Al^3+ (aq) + 3 NO3- (aq) }
 \]</div>
-<p>However, the <span class="math notranslate nohighlight">\(\ce{Al^3+ (aq)}\)</span> actually reacts with six <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> molecules to form a stable complex ion, and so the more explicit representation of the dissolution process is shown below:</p>
+<p>However, the <span class="math notranslate nohighlight">\(\ce{Al^3+ (aq)}\)</span> reacts with six <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> molecules to form a stable complex ion, and so the more explicit representation of the dissolution process is shown below:</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{Al(NO3)3 (s) 6 H2O (l) &lt;=&gt; Al(H2O)6^3+ (aq) + 3 NO3- (aq) }
@@ -690,11 +671,11 @@ Al(H2O)5(OH)^2+ (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + Al(H2O)4(OH)2^+ (aq)\\
 Al(H2O)4(OH)2^+ (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + Al(H2O)3(OH)3 (aq)
 }
 \end{align}\end{split}\]</div>
-<p>Most metal ions (transition metals) will undergo acid ionization to some extent when dissolved in water. The acid strength of these complex ions typically increases with increasing charge and decreasing size of the metal ions. Many natural metal oxides (e.g., <span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span>, <span class="math notranslate nohighlight">\(\ce{Fe2O3}\)</span>, both of which are common components of natural soils) and hydroxides (E.g., <span class="math notranslate nohighlight">\(\ce{Al(OH)3}\)</span>, <span class="math notranslate nohighlight">\(\ce{Fe(OH)3}\)</span> - both are components of natural soils) can act as both acids and bases as they respond to change in the bulk solution conditions.</p>
+<p>Most metal ions (transition metals) will undergo acid ionization to some extent when dissolved in water. The acid strength of these complex ions typically increases with the metal ions’ increasing charge and decreasing size. Many natural metal oxides (e.g., <span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span>, <span class="math notranslate nohighlight">\(\ce{Fe2O3}\)</span>, both of which are common components of natural soils) and hydroxides (E.g., <span class="math notranslate nohighlight">\(\ce{Al(OH)3}\)</span>, <span class="math notranslate nohighlight">\(\ce{Fe(OH)3}\)</span> - both are components of natural soils) can act as both acids and bases as they respond to change in the bulk solution conditions.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Amphoteric acids and bases</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Aluminum oxide (<span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span>) is amphoteric. Depending on the reaction conditions, it can behave either as an acidic oxide or as a basic oxide. For example, <span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span> acts as a base with hydrochloric acid (<span class="math notranslate nohighlight">\(\ce{HCl}\)</span>) to produce a salt (<span class="math notranslate nohighlight">\(\ce{AlCl3}\)</span>) and <span class="math notranslate nohighlight">\(\ce{H2O}\)</span>,</p>
+<p class="sd-card-text">Aluminum oxide (<span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span>) is amphoteric. It can behave either as an acidic or basic oxide depending on the reaction conditions. For example, <span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span> acts as a base with hydrochloric acid (<span class="math notranslate nohighlight">\(\ce{HCl}\)</span>) to produce a salt (<span class="math notranslate nohighlight">\(\ce{AlCl3}\)</span>) and <span class="math notranslate nohighlight">\(\ce{H2O}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 Al2O3 + 6 HCl -&gt; 2 AlCl3 + 3 H2O
@@ -704,7 +685,7 @@ Al2O3 + 6 HCl -&gt; 2 AlCl3 + 3 H2O
 \[\ce{
 Al2O3 + 2 NaOH + 3 H2O -&gt; 2 NaAl(OH)4
 }\]</div>
-<p class="sd-card-text">Aluminum hydroxide reacts with both acids and bases in a similar fashion:</p>
+<p class="sd-card-text">Aluminum hydroxide reacts with both acids and bases similarly:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -714,11 +695,11 @@ Al(OH)3 + OH- &amp;-&gt; Al(OH)4^-
 }
 \end{align}\end{split}\]</div>
 </div>
-</details><p>The amphoteric nature of metal oxides and hydroxides are often exploited in water and wastewater treatment as well as treatment of metal contaminated soils and groundwater. By adding acids or bases to solutions, metal contaminants in solid form could be “mobilized” into aqueous solutions.</p>
+</details><p>The amphoteric nature of metal oxides and hydroxides is often exploited in water and wastewater treatment as well as the treatment of metal-contaminated soils and groundwater. By adding acids or bases to solutions, metal contaminants in solid form could be “mobilized” into aqueous solutions.</p>
 </section>
 <section id="common-ions-and-buffering">
 <h2>Common Ions and Buffering<a class="headerlink" href="#common-ions-and-buffering" title="Link to this heading">#</a></h2>
-<p>A buffer solution resists changes to  when or are added. This is possible to solutions that contain a weak acid and its conjugate base (or a weak base and its conjugate acid). To understand how this works, let’s explore the <em><strong>common ion effect</strong></em> easily observable in the acetic acid-acetate system.</p>
+<p>A buffer solution resists changes when acids or bases are added. This is possible in solutions that contain a weak acid and its conjugate base (or a weak base and its conjugate acid). To understand this, let’s explore the <em><strong>common ion effect</strong></em>, which is easily observable in the acetic acid-acetate system.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Common ion effect</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -761,7 +742,7 @@ CH3COOH &lt;=&gt; H+ + CH3COO-
 \[\ce{
 CH3COONa (aq) -&gt; CH3COO- (aq) + Na+ (aq)
 }\]</div>
-<p class="sd-card-text">That is, the net effect of adding the above two reactions is to increase concentration of <span class="math notranslate nohighlight">\(\ce{CH3COO- (aq)}\)</span> in the original reaction.  Le Châtelier’s principle tells us that increasing product concentration will drive the reaction to the left.</p>
+<p class="sd-card-text">The net effect of adding the above two reactions is to increase the concentration of <span class="math notranslate nohighlight">\(\ce{CH3COO- (aq)}\)</span> in the original reaction.  Le Châtelier’s principle tells us that increasing product concentration will drive the reaction to the left.</p>
 <div class="math notranslate nohighlight">
 \[ \ce{
 CH3COOH (aq)) &lt;&lt;=&gt;  H+ (aq) +  CH3COO- (aq)
@@ -796,7 +777,7 @@ CH3COOH (aq)) &lt;&lt;=&gt;  H+ (aq) +  CH3COO- (aq)
 </div>
 <p class="sd-card-text">The solution to this problem yields: [<span class="math notranslate nohighlight">\(\ce{H+ (aq)}\)</span>] = <span class="math notranslate nohighlight">\(\pu{3.6e-5 M}\)</span> or <span class="math notranslate nohighlight">\(p\ce{H} = 4.44\)</span>, or as expected <span class="math notranslate nohighlight">\(p\ce{H}\)</span> increased.</p>
 </div>
-</details><p>In the above solution, a soluble salt that contained a common ion added shifted the equilibrium to the left, thereby suppressing the ionization of the weak electrolyte. In general, when a compound containing an ion in common with a dissolved substance is added to a solution at equilibrium, the equilibrium shifts to the left. This phenomenon is known as the <em>common ion effect</em>. Note that the common ion can also be <span class="math notranslate nohighlight">\(\ce{H+}\)</span> or <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. That is, addition of a strong acid to a solution of a weak acid suppresses ionization of the weak acid. Similarly, addition of a strong base to a solution of weak base suppresses ionization of the weak base.</p>
+</details><p>In the above solution, a soluble salt that contained a common ion shifted the equilibrium to the left, thereby suppressing the ionization of the weak electrolyte. Generally, when a compound containing an ion in common with a dissolved substance is added to a solution at equilibrium, the equilibrium shifts to the left. This phenomenon is known as the <em>common ion effect</em>. The common ion can also be <span class="math notranslate nohighlight">\(\ce{H+}\)</span> or <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. That is, adding a strong acid to a weak acid’s solution suppresses the weak acid’s ionization. Similarly, adding a strong base to a solution of a weak base suppresses the ionization of the weak base.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Common ion effect due to addition of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> or <span class="math notranslate nohighlight">\(\ce{OH-}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -858,7 +839,7 @@ the ICE method.</p>
 </table>
 </div>
 <p class="sd-card-text">The solution to this problem yields a <span class="math notranslate nohighlight">\(p\ce{H} = 4.74\)</span>.</p>
-<p class="sd-card-text">Now, let’s add <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{HCl}\)</span> to this system (assume that the addition of <span class="math notranslate nohighlight">\(\ce{HCl}\)</span> doesn’t change volume).  As seen in the previous example, all added <span class="math notranslate nohighlight">\(\ce{H+}\)</span> is converted to <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span>.</p>
+<p class="sd-card-text">Now, let’s add <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{HCl}\)</span> to this system (assume that the addition of <span class="math notranslate nohighlight">\(\ce{HCl}\)</span> doesn’t change volume).  As the previous example shows, all added <span class="math notranslate nohighlight">\(\ce{H+}\)</span> is converted to <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 H+ + CH3COO- -&gt; CH3COOH
@@ -885,7 +866,7 @@ H+ + CH3COO- -&gt; CH3COOH
 </tbody>
 </table>
 </div>
-<p class="sd-card-text">Using the ICE approach, let’s determine the final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of this solution after adding <span class="math notranslate nohighlight">\(\ce{HCl}\)</span>.</p>
+<p class="sd-card-text">Using the ICE approach, let’s determine this solution’s final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> after adding <span class="math notranslate nohighlight">\(\ce{HCl}\)</span>.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
@@ -913,9 +894,9 @@ H+ + CH3COO- -&gt; CH3COOH
 </tbody>
 </table>
 </div>
-<p class="sd-card-text">The solution to this problem yields a <span class="math notranslate nohighlight">\(p\ce{H} = 4.66\)</span>. In other words, a drop of <span class="math notranslate nohighlight">\(0.08\)</span> <span class="math notranslate nohighlight">\(p\ce{H}\)</span> unit after addition of the strong acid. In contrast, if there were no acetate present in the solution, <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of pure water in the presence of <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> HCl would have been <span class="math notranslate nohighlight">\(1.0\)</span> (<span class="math notranslate nohighlight">\(-\log[\ce{H+}] = -\log(0.1) = 1.0\)</span>)!</p>
+<p class="sd-card-text">The solution to this problem yields a <span class="math notranslate nohighlight">\(p\ce{H} = 4.66\)</span>. In other words, a drop of <span class="math notranslate nohighlight">\(0.08\)</span> <span class="math notranslate nohighlight">\(p\ce{H}\)</span> unit after adding the strong acid. In contrast, if there were no acetate present in the solution, <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of pure water in the presence of <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> HCl would have been <span class="math notranslate nohighlight">\(1.0\)</span> (<span class="math notranslate nohighlight">\(-\log[\ce{H+}] = -\log(0.1) = 1.0\)</span>)!</p>
 </div>
-</details><p>The final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a buffer solution can be determined using the <em><strong>Henderson-Hasselbalch equation</strong></em>, which can be derived from equilibrium expression of dissociation of a weak acid. The final equation is given as:</p>
+</details><p>The final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a buffer solution can be determined using the <em><strong>Henderson-Hasselbalch equation</strong></em>, which can be derived from the equilibrium expression of dissociation of a weak acid. The final equation is given as:</p>
 <div class="math notranslate nohighlight" id="equation-henderson">
 <span class="eqno">(52)<a class="headerlink" href="#equation-henderson" title="Link to this equation">#</a></span>\[p\ce{H} = pK_a + \log \frac{[\text{Conjugate Base}]}{[\text{Acid}]}\]</div>
 <p>Equation <a class="reference internal" href="#equation-henderson">(52)</a> can be used to determine ideal concentrations and appropriate combinations of weak acids/conjugate bases that make effective buffer solutions.</p>
@@ -929,7 +910,7 @@ H+ + CH3COO- -&gt; CH3COOH
     &amp;= 4.74 + \log \frac{\pu{0.9 M}}{\pu{1.1 M}}\\
     &amp;= 4.65
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">This <span class="math notranslate nohighlight">\(p\ce{H}\)</span> value is similar to the value obtained using the ICE approach.</p>
+<p class="sd-card-text">This <span class="math notranslate nohighlight">\(p\ce{H}\)</span> value is similar to that obtained using the ICE approach.</p>
 </div>
 </details><aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -938,7 +919,7 @@ H+ + CH3COO- -&gt; CH3COOH
 </section>
 <section id="soil-organic-matter">
 <h2>Soil Organic Matter<a class="headerlink" href="#soil-organic-matter" title="Link to this heading">#</a></h2>
-<p>Soil carbon can act as a chemical buffer by regulating the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of the soil. This is because soil carbon can help to stabilize the concentration of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> in the soil, which in turn affects the <span class="math notranslate nohighlight">\(p\ce{H}\)</span>. Soil carbon can also help to buffer against changes in the concentration of other ions, such as <span class="math notranslate nohighlight">\(\ce{CO3^2-}\)</span>, <span class="math notranslate nohighlight">\(\ce{NH4+}\)</span>, <span class="math notranslate nohighlight">\(\ce{NO3-}\)</span>, and <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span>, which can also influence the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of the soil. In this way, soil carbon can help to maintain a relatively stable <span class="math notranslate nohighlight">\(p\ce{H}\)</span> in the soil, which can be beneficial for plant growth and other soil processes.</p>
+<p>Soil carbon can act as a chemical buffer by regulating the soil’s <span class="math notranslate nohighlight">\(p\ce{H}\)</span>. This is because soil carbon can help stabilize the concentration of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> in the soil, affecting the <span class="math notranslate nohighlight">\(p\ce{H}\)</span>. Soil carbon can also help to buffer against changes in the concentration of other ions, such as <span class="math notranslate nohighlight">\(\ce{CO3^2-}\)</span>, <span class="math notranslate nohighlight">\(\ce{NH4+}\)</span>, <span class="math notranslate nohighlight">\(\ce{NO3-}\)</span>, and <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span>, which can also influence the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of the soil. In this way, soil carbon can help maintain a relatively stable <span class="math notranslate nohighlight">\(p\ce{H}\)</span> in the soil, which can benefit plant growth and other soil processes.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/Ymy0IO7nizw" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -950,18 +931,18 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="acidity-and-alkalinity">
 <h2>Acidity and Alkalinity<a class="headerlink" href="#acidity-and-alkalinity" title="Link to this heading">#</a></h2>
-<p>Minerals present in rocks undergo chemical weathering and release different types ions into natural water systems, some of which can resist fluctuation in <span class="math notranslate nohighlight">\(p\ce{H}\)</span> as shown in the preceding section.  This ability of resisting change to <span class="math notranslate nohighlight">\(p\ce{H}\)</span> due to addition of acids and bases is called the <em><strong>buffering capacity</strong></em> of water. Volcanic and human activities release reactive gases such as <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>, <span class="math notranslate nohighlight">\(\ce{SO2}\)</span>, and <span class="math notranslate nohighlight">\(\ce{NO_x}\)</span>, which interact with water creating acids and bases that affect natural water systems. However, the presence of ions such as <span class="math notranslate nohighlight">\(\ce{HCO3-}\)</span> and <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> in natural water can counteract the addition of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> and <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. To determine the ability of water to buffer addition of acids or bases, water samples would need to be titrated with a strong acid or base.</p>
-<p>The carbonic acid system is the dominant weak acid system in most natural waters. In this system, the main weak acids are <span class="math notranslate nohighlight">\(\ce{HCO3–}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> and the main weak bases are <span class="math notranslate nohighlight">\(\ce{HCO3–}\)</span> and <span class="math notranslate nohighlight">\(\ce{CO3^2–}\)</span>. In order to neutralize these acids, base ions have to be added. This is called the <em><strong>acid neutralizing capacity</strong></em> (ANC) or <em><strong>alkalinity</strong></em> of water. Based on our understanding of the <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> system in a previous section, this value is determined as follows:</p>
+<p>Minerals in rocks undergo chemical weathering and release different types of ions into natural water systems, some of which can resist fluctuation in <span class="math notranslate nohighlight">\(p\ce{H}\)</span> as shown in the preceding section.  This ability to resist change to <span class="math notranslate nohighlight">\(p\ce{H}\)</span> due to adding acids and bases is called the <em><strong>buffering capacity</strong></em> of water. Volcanic and human activities release reactive gases such as <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>, <span class="math notranslate nohighlight">\(\ce{SO2}\)</span>, and <span class="math notranslate nohighlight">\(\ce{NO_x}\)</span>, which interact with water creating acids and bases that affect natural water systems. However, the presence of ions such as <span class="math notranslate nohighlight">\(\ce{HCO3-}\)</span> and <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> in natural water can counteract the addition of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> and <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. Water samples would need to be titrated with a strong acid or base to determine the ability of water to buffer the addition of acids or bases.</p>
+<p>The carbonic acid is the dominant weak acid system in most natural waters. In this system, the main weak acids are <span class="math notranslate nohighlight">\(\ce{HCO3–}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> and the main weak bases are <span class="math notranslate nohighlight">\(\ce{HCO3–}\)</span> and <span class="math notranslate nohighlight">\(\ce{CO3^2–}\)</span>. To neutralize these acids, base ions have to be added. This is called the <em><strong>acid neutralizing capacity</strong></em> (ANC) or <em><strong>alkalinity</strong></em> of water. Based on our understanding of the <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> system in a previous section, this value is determined as follows:</p>
 <div class="math notranslate nohighlight" id="equation-anc">
 <span class="eqno">(53)<a class="headerlink" href="#equation-anc" title="Link to this equation">#</a></span>\[\ce{
 ANC = [HCO3-] + 2[CO3^2-] + [OH-] - [H+]
 }\]</div>
-<p>In order to neutralize the bases in natural waters, acid ions have to be added. This is called the <em><strong>base neutralizing capacity</strong></em> (BNC) or <em><strong>acidity</strong></em> of water. This value is determined as follows:</p>
+<p>Acid ions must be added to neutralize the bases in natural waters. This is called the <em><strong>base neutralizing capacity</strong></em> (BNC) or <em><strong>acidity</strong></em> of water. This value is determined as follows:</p>
 <div class="math notranslate nohighlight" id="equation-bnc">
 <span class="eqno">(54)<a class="headerlink" href="#equation-bnc" title="Link to this equation">#</a></span>\[\ce{
 BNC = 2[H2CO3^*] + [HCO3-] + [H+] - [OH-]
 }\]</div>
-<p>Alkalinity is the amount of strong acid required to make a water equivalent to an <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> solution, and acidity is the amount of strong base required to make water equivalent to a <span class="math notranslate nohighlight">\(\ce{Na2CO3}\)</span> solution. This means that alkalinity and acidity are tied intimately to the <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> titration curve. It also means that titration with strong acid is an excellent way to measure alkalinity. Similarly, titration with strong base is used to measure acidity.</p>
+<p>Alkalinity is the strong acid required to make water equivalent to an <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> solution, and acidity is the strong base required to make water equivalent to a <span class="math notranslate nohighlight">\(\ce{Na2CO3}\)</span> solution. This means alkalinity and acidity are intimately tied to the <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> titration curve. It also means titration with a strong acid is an excellent way to measure alkalinity. Similarly, titration with a strong base is used to measure acidity.</p>
 </section>
 </section>
 
@@ -1020,7 +1001,8 @@ BNC = 2[H2CO3^*] + [HCO3-] + [H+] - [OH-]
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1089,8 +1071,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

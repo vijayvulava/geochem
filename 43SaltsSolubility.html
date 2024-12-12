@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="4.2 Strength of Acids and Bases" href="42AcidBaseStrength.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -417,18 +398,18 @@ document.write(`
 <section id="how-do-salts-form">
 <h2>How do salts form?<a class="headerlink" href="#how-do-salts-form" title="Link to this heading">#</a></h2>
 <p>When acids and bases react, the resulting neutralization results in the formation of salt and water. However, the type of salt depends on the relative strength of acids and bases.</p>
-<p>Salts that are from strong bases and strong acids do not hydrolyze are result in a solution with <span class="math notranslate nohighlight">\(p\ce{H}=7\)</span>. Halides and alkaline metals dissociate and do not affect the <span class="math notranslate nohighlight">\(\ce{H+}\)</span> as the cation does not alter the <span class="math notranslate nohighlight">\(\ce{H+}\)</span> and the anion does not attract the <span class="math notranslate nohighlight">\(\ce{H+}\)</span> from water.</p>
+<p>Salts from strong bases and strong acids do not hydrolyze, resulting in a solution with <span class="math notranslate nohighlight">\(p\ce{H}=7\)</span>. Halides and alkaline metals dissociate and do not affect the <span class="math notranslate nohighlight">\(\ce{H+}\)</span> as the cation does not alter the <span class="math notranslate nohighlight">\(\ce{H+}\)</span> and the anion does not attract the <span class="math notranslate nohighlight">\(\ce{H+}\)</span> from water.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Salt of a strong acid and a strong base</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Consider the salt <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span>, which form as a result of a neutralization reaction between a strong acid, <span class="math notranslate nohighlight">\(\ce{HCl}\)</span> and a strong base, <span class="math notranslate nohighlight">\(\ce{NaOH}\)</span>.</p>
+<p class="sd-card-text">Consider the salt <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span>, which forms as a result of a neutralization reaction between a strong acid, <span class="math notranslate nohighlight">\(\ce{HCl}\)</span>, and a strong base, <span class="math notranslate nohighlight">\(\ce{NaOH}\)</span>.</p>
 <p class="sd-card-text">When dissolved in water, <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span> does not hydrolyze as shown below:</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{NaCl (s) + H2O (l) -&gt; Na+ (aq) + Cl- (aq) + H+ (aq) + OH- (aq)}
 \]</div>
 </div>
-</details><p>Salts that are from strong bases and weak acids do hydrolyze, which gives it a <span class="math notranslate nohighlight">\(p\ce{H}&gt;7\)</span>. The anion in the salt is derived from a weak acid, most likely organic, and will accept the proton from the water in the reaction. This will have the water act as an acid that will, in this case, leaving a <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. The cation will be from a strong base, meaning from either the alkaline or alkaline earth metals and, like before, it will dissociate into an ion and will not affect the <span class="math notranslate nohighlight">\(\ce{H+}\)</span>.</p>
+</details><p>Salts from strong bases and weak acids hydrolyze, giving it a <span class="math notranslate nohighlight">\(p\ce{H}&gt;7\)</span>. The anion in the salt is derived from a weak acid, most likely organic, and will accept the proton from the water in the reaction. This will have the water act as an acid that will, in this case, leave a <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. The cation will be from a strong base, meaning from either the alkaline or alkaline earth metals, and, like before, it will dissociate into an ion and will not affect the <span class="math notranslate nohighlight">\(\ce{H+}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Salt of a weak acid and a strong base</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -438,7 +419,7 @@ document.write(`
 \[
 \ce{CH3COONa (s) &lt;=&gt; Na+ (aq) + CH3COO- (aq) }
 \]</div>
-<p class="sd-card-text">The <span class="math notranslate nohighlight">\(\ce{Na+}\)</span> does not undergo acid or base ionization and has no effect on the solution <span class="math notranslate nohighlight">\(p\ce{H}\)</span>.</p>
+<p class="sd-card-text">The <span class="math notranslate nohighlight">\(\ce{Na+}\)</span> does not undergo acid or base ionization and does not affect the solution <span class="math notranslate nohighlight">\(p\ce{H}\)</span>.</p>
 <p class="sd-card-text">The acetate ion, <span class="math notranslate nohighlight">\(\ce{CH3COO-}\)</span>, is the conjugate base of acetic acid, <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span>, and so its base ionization (or base hydrolysis) reaction is represented by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -448,7 +429,7 @@ CH3COO− (aq) + H2O (l) &lt;=&gt;  CH3COOH (aq) + OH− (aq)
 \]</div>
 <p class="sd-card-text">Dissolving sodium acetate in water yields a solution of inert cations (<span class="math notranslate nohighlight">\(\ce{Na+}\)</span>) and weak base anions (<span class="math notranslate nohighlight">\(\ce{CH3COO-}\)</span>), resulting in a basic solution (final product contains <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>).</p>
 </div>
-</details><p>Salts of weak bases and strong acids do hydrolyze, which gives it a <span class="math notranslate nohighlight">\(p\ce{H}&lt;7\)</span>. This is due to the fact that the anion will become a spectator ion and fail to attract the <span class="math notranslate nohighlight">\(\ce{H+}\)</span>, while the cation from the weak base will donate a <span class="math notranslate nohighlight">\(\ce{H+}\)</span> to water forming a <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span>.</p>
+</details><p>Salts of weak bases and strong acids do hydrolyze, which gives it a <span class="math notranslate nohighlight">\(p\ce{H}&lt;7\)</span>. This is because the anion will become a spectator ion and fail to attract the <span class="math notranslate nohighlight">\(\ce{H+}\)</span>, while the cation from the weak base will donate a <span class="math notranslate nohighlight">\(\ce{H+}\)</span> to water forming a <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Salt of a strong acid and a weak base</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -470,7 +451,7 @@ NH4+ (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + NH3 (aq)
 \]</div>
 <p class="sd-card-text">Dissolving <span class="math notranslate nohighlight">\(\ce{NH4Cl}\)</span> in water yields a solution of weak acid cations (<span class="math notranslate nohighlight">\(\ce{NH4+}\)</span>) and inert anions (<span class="math notranslate nohighlight">\(\ce{Cl−}\)</span>), resulting in an acidic solution (final product contains <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span>).</p>
 </div>
-</details><p>Salts from a weak base and weak acid also hydrolyze as the others, but a bit more complex and will require the <span class="math notranslate nohighlight">\(K_a\)</span> and <span class="math notranslate nohighlight">\(K_b\)</span> to be taken into account. The stronger acid or base will be the dominant factor in determining whether the solution is acidic or basic. The cation will be the acid, and the anion will be the base and will form either form a <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span> or a <span class="math notranslate nohighlight">\(\ce{OH-}\)</span> depending on which ion reacts more readily with the water.</p>
+</details><p>Salts from a weak base and weak acid also hydrolyze as the others, but a bit more complex and will require the <span class="math notranslate nohighlight">\(K_a\)</span> and <span class="math notranslate nohighlight">\(K_b\)</span> to be considered. The stronger acid or base will be the dominant factor in determining whether the solution is acidic or basic. The cation will be the acid, and the anion will be the base, forming either a <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span> or a <span class="math notranslate nohighlight">\(\ce{OH-}\)</span> depending on which ion reacts more readily with the water.</p>
 </section>
 <section id="solubility-and-saturation">
 <h2>Solubility and Saturation<a class="headerlink" href="#solubility-and-saturation" title="Link to this heading">#</a></h2>
@@ -482,7 +463,7 @@ NH4+ (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + NH3 (aq)
 <div class="math notranslate nohighlight">
 \[\ce{NaCl(s) → Na+(aq) + Cl–(aq)}\]</div>
 <p>Both types of reactions can be in equilibrium under the given set of conditions.</p>
-<p>It is common to write the precipitation‐dissolution equilibria with the solid phase as a reactant and the metals and ligands (anions) as products in their uncomplexed forms. For equilibria of this form, the equilibrium constant (<span class="math notranslate nohighlight">\(K\)</span>) is given a special name. It is called the <em><strong>solubility product</strong></em> and given the symbol <span class="math notranslate nohighlight">\(K_{s0}\)</span>. The <span class="math notranslate nohighlight">\(s\)</span> in <span class="math notranslate nohighlight">\(K_{s0}\)</span> indicates that a solid phase is involved and the zero (not the letter O) indicates that the metal and ligand are uncomplexed.</p>
+<p>Writing the precipitation‐dissolution equilibria with the solid phase as a reactant and the metals and ligands (anions) as products in their uncomplexed forms is common. For equilibria of this form, the equilibrium constant (<span class="math notranslate nohighlight">\(K\)</span>) is given a unique name. It is called the <em><strong>solubility product</strong></em> and given the symbol <span class="math notranslate nohighlight">\(K_{s0}\)</span>. The <span class="math notranslate nohighlight">\(s\)</span> in <span class="math notranslate nohighlight">\(K_{s0}\)</span> indicates that a solid phase is involved, and the zero (not the letter O) indicates that the metal and ligand are uncomplexed.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Solubility product notation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -496,21 +477,21 @@ CaCO3(s) &amp;&lt;=&gt; Ca^2+ + CO3^2–    \qquad   $K = K_{s0}$
 }
 \end{align}
 \end{split}\]</div>
-<p class="sd-card-text">Note that the metal and ligand must be uncomplexed to use the <span class="math notranslate nohighlight">\(K_{s0}\)</span> label.</p>
+<p class="sd-card-text">The metal and ligand must be uncomplexed to use the <span class="math notranslate nohighlight">\(K_{s0}\)</span> label.</p>
 <p class="sd-card-text">The equilibrium constant for the equilibrium <span class="math notranslate nohighlight">\(\ce{CaCO3(s) + H+ = Ca^2+ + HCO3–}\)</span> cannot be called <span class="math notranslate nohighlight">\(K_{s0}\)</span>.</p>
 </div>
 </details><p>For a mineral solid, <span class="math notranslate nohighlight">\(\ce{M_xL_y (s)}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{M_xL_y (s) &lt;=&gt; x M^y+ + y L^x- \qquad $K_{s0}$}\]</div>
-<p>Let’s write the equilibrium (law of mass) expression for this reaction.</p>
+<p>Let’s write this reaction’s equilibrium (law of mass) expression.</p>
 <div class="math notranslate nohighlight" id="equation-solubility-product">
 <span class="eqno">(55)<a class="headerlink" href="#equation-solubility-product" title="Link to this equation">#</a></span>\[K_{s0} = \frac{\{\ce{M^{y+}}\}^x \{\ce{L^{x-}}\}^y}{\{\ce{M_xL_y (s)}\}} 
  = \{\ce{M^{y+}}\}^x \{\ce{L^{x-}}\}^y
 \]</div>
-<p>Note, the activity of solids under standard thermodynamic conditions is unity (= 1).</p>
-<p>How can you tell if the solid phase exists at equilibrium? If the solid phase exists, then the product of the free metal and ligand activities should equal the solubility product. This condition is called <em><strong>saturation</strong></em>. If the product of the free metal and ligand activities is less than the solubility product, then the solid phase should not form at equilibrium and the solution is said to be <em><strong>undersaturated</strong></em>. The solid phase will not exist at equilibrium in undersaturated solutions. When the product of the free metal and ligand activities is greater than the solubility product, this type of solution is said to be <em><strong>oversaturated</strong></em>.</p>
-<p>The product of the free metal and ligand activities is often called the <em><strong>ion activity product</strong></em> (<span class="math notranslate nohighlight">\(IAP\)</span>) and the above solid phase equilibria can be summarized as follows:</p>
+<p>Note that the activity of solids under standard thermodynamic conditions is unity (= 1).</p>
+<p>How can you tell if the solid phase exists at equilibrium? If the solid phase exists, then the product of the free metal and ligand activities should equal the solubility product. This condition is called <em><strong>saturation</strong></em>. If the free metal and ligand activity product is less than the solubility product, then the solid phase should not form at equilibrium, and the solution is said to be <em><strong>undersaturated</strong></em>. The solid phase will not exist at equilibrium in undersaturated solutions. When the free metal and ligand activity product is greater than the solubility product, this type of solution is said to be <em><strong>oversaturated</strong></em>.</p>
+<p>The product of the free metal and ligand activities is often called the <em><strong>ion activity product</strong></em> (<span class="math notranslate nohighlight">\(IAP\)</span>), and the above solid phase equilibria can be summarized as follows:</p>
 <div class="admonition-solubility-product-and-saturation admonition">
 <p class="admonition-title">Solubility product and saturation</p>
 <ul class="simple">
@@ -526,7 +507,7 @@ CaCO3(s) &amp;&lt;=&gt; Ca^2+ + CO3^2–    \qquad   $K = K_{s0}$
 <p class="sd-card-text">Let’s calculate the IAP of this system:</p>
 <div class="math notranslate nohighlight">
 \[IAP = [\ce{Ca^2+}][\ce{SO^2-}] = (10^{-3})(10^{-2}) = 10^{-5}\]</div>
-<p class="sd-card-text">Since, <span class="math notranslate nohighlight">\(IAP &lt; K_{s0}\)</span>, the solution is undersaturated with respect to gypsum.</p>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(IAP &lt; K_{s0}\)</span>, the solution is undersaturated for gypsum.</p>
 </div>
 </details></section>
 </section>
@@ -586,7 +567,8 @@ CaCO3(s) &amp;&lt;=&gt; Ca^2+ + CO3^2–    \qquad   $K = K_{s0}$
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -648,8 +630,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

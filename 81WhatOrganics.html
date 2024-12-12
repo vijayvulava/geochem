@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="8 Environmental Organic Chemistry" href="8Organics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -429,71 +410,71 @@ document.write(`
 <h2>Formulas<a class="headerlink" href="#formulas" title="Link to this heading">#</a></h2>
 <p>Because of the complex nature of organic chemicals, a system has been adopted to name these chemicals.  The standard nomenclature is developed and maintained by the <a class="reference external" href="https://iupac.org/what-we-do/books/bluebook/">IUPAC | International Union of Pure and Applied Chemistry</a>.</p>
 <p>Molecular formulas of organic chemicals give the numbers of each type of atom in the molecule.  For example, the molecular formulas for methane, ethane, and pentane are <span class="math notranslate nohighlight">\(\ce{CH4}\)</span>, <span class="math notranslate nohighlight">\(\ce{C2H6}\)</span>, and <span class="math notranslate nohighlight">\(\ce{C5H12}\)</span>, respectively.</p>
-<p><strong>Structural formulas</strong> show the orientation of the atoms in a molecule in either two or three dimensions. Condensed structural formulas are used to save space and are written in terms of carbon units. Carbon chains are usually drawn as straight lines in Lewis structures, but Lewis structures are not intended to indicate the geometry of molecules.</p>
+<p><strong>Structural formulas</strong> show the orientation of the atoms in a molecule in either two or three dimensions. Condensed structural formulas are used to save space and are written in carbon units. Carbon chains are usually drawn as straight lines in Lewis structures, but Lewis structures are not intended to indicate the geometry of molecules.</p>
 <figure class="margin-caption align-default" id="hydrocarbons">
 <img alt="https://openstax.org/apps/archive/20221109.213337/resources/a75f99f6a3472d708a31e32853ca94689a36fd38" src="https://openstax.org/apps/archive/20221109.213337/resources/a75f99f6a3472d708a31e32853ca94689a36fd38" />
 <figcaption>
-<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Lewis structures, ball-and-stick models, and space-filling models for hydrocarbon molecules of methane, ethane, and pentane.</span><a class="headerlink" href="#hydrocarbons" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Lewis structures, ball-and-stick models, and space-filling models for methane, ethane, and pentane hydrocarbon molecules.</span><a class="headerlink" href="#hydrocarbons" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first-2e/pages/21-1-hydrocarbons">21.1 Hydrocarbons - Chemistry: Atoms First 2e | OpenStax</a></p>
 </div>
 </figcaption>
 </figure>
-<p>A common method used to simplify the drawings of larger molecules is to use a skeletal structure (also called a line-angle structure). In this type of structure, carbon atoms are not symbolized with a C, but represented by each end of a line or bend in a line. Hydrogen atoms are not drawn if they are attached to a carbon. Other atoms besides carbon and hydrogen are represented by their elemental symbols.</p>
+<p>A standard method to simplify the drawings of larger molecules is to use a skeletal structure (also called a line-angle structure). In this structure, carbon atoms are not symbolized with a <span class="math notranslate nohighlight">\(\ce{C}\)</span> but are represented by each end of a line or bend in a line. Hydrogen atoms are not drawn if they are attached to a carbon. Other atoms besides carbon and hydrogen are represented by their elemental symbols.</p>
 <figure class="margin-caption align-default" id="hydrocarbon-structure">
 <img alt="https://openstax.org/apps/archive/20230220.155442/resources/f9d310a73fdcdef30851de14b05a4d2d799bb961" src="https://openstax.org/apps/archive/20230220.155442/resources/f9d310a73fdcdef30851de14b05a4d2d799bb961" />
 <figcaption>
-<p><span class="caption-number">Fig. 57 </span><span class="caption-text">The same structure can be represented three different ways: an expanded formula, a condensed formula, and a skeletal structure.</span><a class="headerlink" href="#hydrocarbon-structure" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">The same structure can be represented in three different ways: an expanded formula, a condensed formula, and a skeletal structure.</span><a class="headerlink" href="#hydrocarbon-structure" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first-2e/pages/21-1-hydrocarbons">21.1 Hydrocarbons - Chemistry: Atoms First 2e | OpenStax</a></p>
 </div>
 </figcaption>
 </figure>
-<p>The three-dimensional geometry of an organic molecule is important because it partly determines the properties of the molecule.</p>
-<p><strong>Isomers</strong> are compounds with the same molecular formula but different structural formulas. Hydrocarbons with the same formula, including alkanes, can have different structures. For example, two alkanes have the formula <span class="math notranslate nohighlight">\(\ce{C4H10}\)</span>: They are called <em>n</em>-butane and 2-methylpropane (or isobutane), and have the following Lewis structures:</p>
+<p>The three-dimensional geometry of an organic molecule is important because it partly determines its properties.</p>
+<p><strong>Isomers</strong> are compounds with the same molecular formula but different structural formulas. Hydrocarbons with the same formula, including alkanes, can have different structures. For example, two alkanes have the formula <span class="math notranslate nohighlight">\(\ce{C4H10}\)</span>: They are called <em>n</em>-butane and 2-methylpropane (or isobutane) and have the following Lewis structures:</p>
 <figure class="margin-caption align-default" id="hydrocarbon-isomers">
 <img alt="https://openstax.org/apps/archive/20230220.155442/resources/a088bb78f00556194e31469be4290058e7f38036" src="https://openstax.org/apps/archive/20230220.155442/resources/a088bb78f00556194e31469be4290058e7f38036" />
 <figcaption>
-<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Isomers for an alkane with the same condensed formula of <span class="math notranslate nohighlight">\(\ce{C4H10}\)</span>.</span><a class="headerlink" href="#hydrocarbon-isomers" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Isomers for an alkane with the same condensed formula: <span class="math notranslate nohighlight">\(\ce{C4H10}\)</span>.</span><a class="headerlink" href="#hydrocarbon-isomers" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first-2e/pages/21-1-hydrocarbons">21.1 Hydrocarbons - Chemistry: Atoms First 2e | OpenStax</a></p>
 </div>
 </figcaption>
 </figure>
-<p>The compounds <em>n</em>-butane and 2-methylpropane are structural isomers (the term constitutional isomers is also commonly used). Constitutional isomers have the same molecular formula but different spatial arrangements of the atoms in their molecules. The n-butane molecule contains an unbranched chain, meaning that no carbon atom is bonded to more than two other carbon atoms. We use the term normal, or the prefix <em>n</em>, to refer to a chain of carbon atoms without branching. The compound 2–methylpropane has a branched chain (the carbon atom in the center of the Lewis structure is bonded to three other carbon atoms)</p>
+<p>The compounds <em>n</em>-butane and 2-methylpropane are structural isomers (the term constitutional isomers is also commonly used). Constitutional isomers have the same molecular formula but different spatial arrangements of the atoms in their molecules. The n-butane molecule contains an unbranched chain, meaning no carbon atom is bonded to more than two other carbon atoms. We use the term normal, or the prefix <em>n</em>, to refer to a chain of carbon atoms without branching. The compound 2–methylpropane has a branched chain (the carbon atom in the center of the Lewis structure is bonded to three other carbon atoms)</p>
 </section>
 <section id="id1">
 <h2>Hydrocarbons<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p>The simplest organic compounds are primarily composed of carbon and hydrogen atoms and are called hydrocarbons. Other elements, e.g., oxygen, nitrogen, sulfur, phosphorous, and the halogens-may also occur in organic compounds. The fundamental building block of organic compounds is the carbon-carbon bond. The bonding between carbon atoms is covalent. Single bonds (<span class="math notranslate nohighlight">\(\ce{C-C}\)</span>) are formed when one pair of electrons is shared between two carbon atoms. Double bonds (<span class="math notranslate nohighlight">\(\ce{C=C}\)</span>) involve the sharing of two pairs of electrons, and triple bonds (<span class="math notranslate nohighlight">\(\ce{C#C}\)</span>) the sharing of three pairs of electrons.</p>
-<p>When multiple bonds occur between carbon atoms, the compound is referred to as unsaturated organic compound. If there are only single bonds between the carbon atoms, the compound is saturated. These compounds are saturated with <span class="math notranslate nohighlight">\(\ce{H}\)</span>-atoms.</p>
-<p>The carbon atoms are joined together to form chains, branched structures, or rings. A functional group is an atom or a group of atoms that can be attached to the carbon atoms. In most cases, a functional group contains at least one non-carbon atom. Also important is the order in which the functional groups are attached and the geometric position of the attached groups. All of this variability means that the naming of organic molecules is not an easy task.</p>
+<p>The simplest organic compounds are primarily composed of carbon and hydrogen atoms and are called hydrocarbons. Other elements, e.g., oxygen, nitrogen, sulfur, phosphorous, and halogens, may also occur in organic compounds. The fundamental building block of organic compounds is the carbon-carbon bond. The bonding between carbon atoms is covalent. Single bonds (<span class="math notranslate nohighlight">\(\ce{C-C}\)</span>) are formed when one pair of electrons is shared between two carbon atoms. Double bonds (<span class="math notranslate nohighlight">\(\ce{C=C}\)</span>) involve the sharing of two pairs of electrons, and triple bonds (<span class="math notranslate nohighlight">\(\ce{C#C}\)</span>) involve the sharing of three pairs of electrons.</p>
+<p>The compound is called an unsaturated organic compound when multiple bonds occur between carbon atoms. The compound is saturated if only single bonds exist between the carbon atoms. These compounds are saturated with <span class="math notranslate nohighlight">\(\ce{H}\)</span>-atoms.</p>
+<p>The carbon atoms are joined to form chains, branched structures, or rings. A functional group is an atom or a group of atoms that can be attached to the carbon atoms. In most cases, a functional group contains at least one non-carbon atom. Also important is the order in which the functional groups are attached and the geometric position of the attached groups. All of this variability means that the naming of organic molecules is not an easy task.</p>
 <p>Hydrocarbons contain only carbon and hydrogen and are the most common group of organic compounds. The major types of hydrocarbons are alkanes, alkenes, alkynes, and aromatic (or aryl) compounds.</p>
-<p><strong>Alkanes</strong> are the simplest of the hydrocarbons and has the chemical formula, <span class="math notranslate nohighlight">\(\ce{C_{n}H_{2n+2}}\)</span>. In alkanes the C atoms have single bonds and occur as straight or branched chains and as rings. Alkanes, because of their strong single carbon bond, tend to be chemically nonreactive except at high temperatures, such as those found during combustion. Alkanes can undergo substitution reactions in which one or more hydrogens are replaced by atoms of another element.</p>
-<p><strong>Alkenes</strong> have a double bond between two of the carbons, and <strong>alkynes</strong> have a triple bond between two of the carbons. The type of bonding, single versus multiple, affects the reactivity of the molecule.</p>
-<p><strong>Functional groups</strong> are structural units within organic compounds that are defined by specific bonding arrangements between specific atoms. The types of functional groups present in an organic molecule are major determinants of its chemical properties and are used as a means of classifying organic compounds as detailed in the subsections below.</p>
+<p><strong>Alkanes</strong> are the simplest of the hydrocarbons and have the chemical formula, <span class="math notranslate nohighlight">\(\ce{C_{n}H_{2n+2}}\)</span>. In alkanes, the <span class="math notranslate nohighlight">\(\ce{C}\)</span> atoms have single bonds and occur as straight or branched chains and rings. Because of their strong single-carbon bond, alkanes are chemically nonreactive except at high temperatures, such as those found during combustion. Alkanes can undergo substitution reactions in which atoms of another element replace one or more hydrogens.</p>
+<p><strong>Alkenes</strong> have a double bond between two carbons, and <strong>alkynes</strong> have a triple bond between two carbons. The type of bonding, single versus multiple, affects the molecule’s reactivity.</p>
+<p><strong>Functional groups</strong> are distinct structural units in organic compounds characterized by specific bonding arrangements of certain atoms. The types of functional groups in an organic molecule are significant determinants of its chemical properties and are used to classify organic compounds, as outlined in the subsections below.</p>
 <section id="alcohols">
 <h3>Alcohols<a class="headerlink" href="#alcohols" title="Link to this heading">#</a></h3>
 <p>Alcohols are derivatives of hydrocarbons in which an <span class="math notranslate nohighlight">\(\ce{–OH}\)</span> group has replaced a hydrogen atom. Although all alcohols have one or more hydroxyl (<span class="math notranslate nohighlight">\(\ce{–OH}\)</span>) functional groups, they do not behave like bases such as <span class="math notranslate nohighlight">\(\ce{NaOH}\)</span> and <span class="math notranslate nohighlight">\(\ce{KOH}\)</span>, which are ionic compounds that contain <span class="math notranslate nohighlight">\(\ce{OH-}\)</span> ions. Alcohols are covalent molecules; the <span class="math notranslate nohighlight">\(\ce{–OH}\)</span> group in an alcohol molecule is attached to a carbon atom by a covalent bond.</p>
-<p>Ethanol, <span class="math notranslate nohighlight">\(\ce{CH3CH2OH}\)</span> (or <span class="math notranslate nohighlight">\(\ce{C2H5OH}\)</span>), also called ethyl alcohol, is a particularly important alcohol for human use. Ethanol is the alcohol produced by some species of yeast that is found in wine, beer, and distilled drinks. It has long been prepared by humans harnessing the metabolic efforts of yeasts in fermenting various sugars:</p>
+<p>Ethanol, <span class="math notranslate nohighlight">\(\ce{CH3CH2OH}\)</span> (or <span class="math notranslate nohighlight">\(\ce{C2H5OH}\)</span>), also called ethyl alcohol, is a significant alcohol for human uses. Ethanol is the alcohol some yeast species produce in wine, beer, and distilled drinks. It has long been prepared by humans harnessing the metabolic efforts of yeasts in fermenting various sugars:</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{
 C6H12O6 (aq) -&gt;[Yeast] 2C2H5OH (aq) + 2CO2 (g)
 }
 \]</div>
-<p>The name of an alcohol comes from the hydrocarbon from which it was derived. The final <em>-e</em> in the name of the hydrocarbon is replaced by <em>-ol</em>, and the carbon atom to which the <span class="math notranslate nohighlight">\(\ce{–OH}\)</span> group is bonded is indicated by a number placed before the name.</p>
+<p>The name of alcohol comes from the hydrocarbon from which it was derived. The final <em>-e</em> in the name of the hydrocarbon is replaced by <em>-ol</em>, and the carbon atom to which the <span class="math notranslate nohighlight">\(\ce{–OH}\)</span> group is bonded is indicated by a number placed before the name.</p>
 </section>
 <section id="ethers">
 <h3>Ethers<a class="headerlink" href="#ethers" title="Link to this heading">#</a></h3>
-<p>Ethers are compounds that contain the functional group <span class="math notranslate nohighlight">\(\ce{–O–}\)</span>. Ethers do not have a designated suffix like the other types of molecules we have named so far. In the IUPAC system, the oxygen atom and the smaller carbon branch are named as an alkoxy substituent and the remainder of the molecule as the base chain, as in alkanes. As shown in the following compound, the red symbols represent the smaller alkyl group and the oxygen atom, which would be named “methoxy.” The larger carbon branch would be ethane, making the molecule methoxyethane. Many ethers are referred to with common names instead of the IUPAC system names. For common names, the two branches connected to the oxygen atom are named separately and followed by “ether.” The common name for the compound shown  below is ethylmethyl ether:</p>
-<p><img alt="A molecular structure is shown with a red C H subscript 3 group bonded up and to the right to a red O atom. The O atom is bonded down and to the right to a C H subscript 2 group. The C H subscript 2 group is bonded up and to the right to a C H subscript 3 group." src="https://openstax.org/apps/archive/20230220.155442/resources/1759e7b2c07b70322fed5739fadb6433cda48c33" /></p>
+<p>Ethers are compounds that contain the functional group <span class="math notranslate nohighlight">\(\ce{–O–}\)</span>. Ethers do not have a designated suffix like the other types of molecules we have named. In the IUPAC system, the oxygen atom and the smaller carbon branch are named an alkoxy substituent, and the remainder of the molecule is the base chain, as in alkanes. As shown in the following compound, the red symbols represent the smaller alkyl group and the oxygen atom, which would be named “methoxy.” The larger carbon branch would be ethane, making the molecule methoxyethane. Many ethers are referred to with common names instead of the IUPAC system names. For common names, the two branches connected to the oxygen atom are named separately and followed by “ether.” The common name for the compound shown  below is ethylmethyl ether:</p>
+<p><img alt="A molecular structure is shown with a red   subscript 3 group bonded up and to the right to a red  atom. The  atom is bonded down and to the right to a   subscript 2 group. The   subscript 2 group is bonded up and to the right to a   subscript 3 group." src="https://openstax.org/apps/archive/20230220.155442/resources/1759e7b2c07b70322fed5739fadb6433cda48c33" /></p>
 </section>
 <section id="aldehydes-and-ketones">
 <h3>Aldehydes and Ketones<a class="headerlink" href="#aldehydes-and-ketones" title="Link to this heading">#</a></h3>
-<p>Both aldehydes and ketones contain a carbonyl group, a functional group with a carbon-oxygen double bond. The names for aldehyde and ketone compounds are derived using similar nomenclature rules as for alkanes and alcohols, and include the class-identifying suffixes <em>-al</em> and <em>-one</em>, respectively:</p>
-<p><img alt="A C atom is shown with dashes appearing to the left and right. An O atom is double bonded above the C atom." src="https://openstax.org/apps/archive/20230220.155442/resources/9a8459c91c80b600e3410ac33f0becd0b7ce8a1c" /></p>
+<p>Both aldehydes and ketones contain a carbonyl group, a functional group with a carbon-oxygen double bond. The names for aldehyde and ketone compounds are derived using similar nomenclature rules as for alkanes and alcohols and include the class-identifying suffixes <em>-al</em> and <em>-one</em>, respectively:</p>
+<p><img alt="A  atom is shown with dashes appearing to the left and right. An  atom is double bonded above the  atom." src="https://openstax.org/apps/archive/20230220.155442/resources/9a8459c91c80b600e3410ac33f0becd0b7ce8a1c" /></p>
 <p>In an aldehyde, the carbonyl group is bonded to at least one hydrogen atom. In a ketone, the carbonyl group is bonded to two carbon atoms:</p>
-<p><img alt="Five structures are shown. The first is a C atom with an R group bonded to the left and an H atom to the right. An O atom is double bonded above the C atom. This structure is labeled, “Functional group of an aldehyde.” The second structure shows a C atom with R groups bonded to the left and right. An O atom is double bonded above the C atom. This structure is labeled, “Functional group of a ketone.” The third structure looks exactly like the functional group of a ketone. The fourth structure is labeled C H subscript 3 C H O. It is also labeled, “An aldehyde,” and “ethanal (acetaldehyde).” This structure has a C atom to which 3 H atoms are bonded above, below, and to the left. In red to the right of this C atom, a C atom is attached which has an O atom double bonded above and an H atom bonded to the right. The O atom as two sets of electron dots. The fifth structure is labeled C H subscript 3 C O C H subscript 2 C H subscript 3. It is also labeled, “A ketone,” and “butanone.” This structure has a C atom to which 3 H atoms are bonded above, below, and to the left. To the right of this in red is a C atom to which an O atom is double bonded above. The O atom has two sets of electron dots. Attached to the right of this red C atom in black is a two carbon atom chain with H atoms attached above, below, and to the right." src="https://openstax.org/apps/archive/20230220.155442/resources/e68d08d5415f795b0442dad7ba7f87d32b7053e7" /><img alt="No Alt Text" src="https://openstax.org/apps/archive/20230220.155442/resources/d5f759ab850a78bd87a1cc36422d63c9c2e38132" /></p>
+<p><img alt="Five structures are shown." src="https://openstax.org/apps/archive/20230220.155442/resources/e68d08d5415f795b0442dad7ba7f87d32b7053e7" /><img alt="No Alt Text" src="https://openstax.org/apps/archive/20230220.155442/resources/d5f759ab850a78bd87a1cc36422d63c9c2e38132" /></p>
 <p>As text, an aldehyde group is represented as <span class="math notranslate nohighlight">\(\ce{–CHO}\)</span>; a ketone is represented as <span class="math notranslate nohighlight">\(\ce{–C(O)–}\)</span> or <span class="math notranslate nohighlight">\(\ce{–CO–}\)</span>.</p>
 </section>
 <section id="carboxylic-acids-and-esters">
@@ -508,16 +489,16 @@ C6H12O6 (aq) -&gt;[Yeast] 2C2H5OH (aq) + 2CO2 (g)
 </div>
 </figcaption>
 </figure>
-<p>Both carboxylic acids and esters contain a carbonyl group with a second oxygen atom bonded to the carbon atom in the carbonyl group by a single bond. In a carboxylic acid, the second oxygen atom also bonds to a hydrogen atom. In an ester, the second oxygen atom bonds to another carbon atom. The names for carboxylic acids and esters include prefixes that denote the lengths of the carbon chains in the molecules and are derived following nomenclature rules similar to those for inorganic acids and salts (see these examples):</p>
-<p><img alt="Two structures are shown. The first structure is labeled, “ethanoic acid,” and, “acetic acid.” This structure indicates a C atom to which H atoms are bonded above, below and to the left. To the right of this in red is a bonded group comprised of a C atom to which an O atom is double bonded above. To the right of the red C atom, an O atom is bonded which has an H atom bonded to its right. Both O atoms have two sets of electron dots. The second structure is labeled, “methyl ethanoate,” and, “methyl acetate.” This structure indicates a C atom to which H atoms are bonded above, below and to the left. In red, bonded to the right is a C atom with a double bonded O atom above and a single bonded O atom to the right. To the right of this last O atom in black is another C atom to which H atoms are bonded above, below and to the right. Both O atoms have two pairs of electron dots." src="https://openstax.org/apps/archive/20230220.155442/resources/b1047531908b3cf5123f3ffb08e7c51661323f65" /></p>
-<p>The functional groups for an acid and for an ester are shown in red in these formulas.</p>
-<p>Carboxylic acids are weak acids, meaning they are not 100% ionized in water. Generally only about 1% of the molecules of a carboxylic acid dissolved in water are ionized at any given time. The remaining molecules are undissociated in solution.</p>
+<p>Both carboxylic acids and esters contain a carbonyl group with a second oxygen atom bonded to the carbon atom in the carbonyl group by a single bond. The second oxygen atom also bonds to a hydrogen atom in a carboxylic acid. In an ester, the second oxygen atom bonds to another carbon atom. The names for carboxylic acids and esters include prefixes that denote the lengths of the carbon chains in the molecules and are derived following nomenclature rules similar to those for inorganic acids and salts (see these examples):</p>
+<p><img alt="Two structures are shown." src="https://openstax.org/apps/archive/20230220.155442/resources/b1047531908b3cf5123f3ffb08e7c51661323f65" /></p>
+<p>The functional groups for an acid and an ester are red in these formulas.</p>
+<p>Carboxylic acids are weak acids, meaning they are not 100% ionized in water. Generally, only about 1% of carboxylic acid molecules dissolved in water are ionized at any given time. The remaining molecules are undissociated in the solution.</p>
 <p>The simplest carboxylic acid is formic acid, <span class="math notranslate nohighlight">\(\ce{HCOOH}\)</span>. Acetic acid, <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span>, constitutes 3–6% vinegar.</p>
 </section>
 <section id="amines">
 <h3>Amines<a class="headerlink" href="#amines" title="Link to this heading">#</a></h3>
 <p>Amines are molecules that contain carbon-nitrogen bonds. The nitrogen atom in an amine has a lone pair of electrons and three bonds to other atoms, either carbon or hydrogen. Various nomenclatures are used to derive names for amines, but all involve the class-identifying suffix <em>–ine</em> as illustrated here for a few simple examples:</p>
-<p><img alt="Three structures are shown, each with a red, central N atom which has a pair of electron dots indicated in red above the N atoms. The first structure is labeled methyl amine. To the left of the N, a C H subscript 3 group is bonded. H atoms are bonded to the right and bottom of the central N atom. The second structure is labeled dimethyl amine. This structure has C H subscript 3 groups bonded to the left and right of the N atom and a single H atom is bonded below. The third structure is labeled trimethyl amine, which has C H subscript 3 groups bonded to the left, right, and below the central N atom." src="https://openstax.org/apps/archive/20230220.155442/resources/f08531f33766cef7e61da5afdc7b4b1b2f7a1c5f" /></p>
+<p><img alt="Three structures are shown, each with a red, central N atom which has a pair of electron dots indicated in red above the N atoms." src="https://openstax.org/apps/archive/20230220.155442/resources/f08531f33766cef7e61da5afdc7b4b1b2f7a1c5f" /></p>
 </section>
 </section>
 <section id="cyclic-aromatic-hydrocarbons">
@@ -527,7 +508,7 @@ C6H12O6 (aq) -&gt;[Yeast] 2C2H5OH (aq) + 2CO2 (g)
 <figure class="margin-caption align-default" id="benzene">
 <img alt="https://chem.libretexts.org/&#64;api/deki/files/103000/CNX_Chem_20_01_aromatic_img.jpg?revision=1&amp;size=bestfit&amp;width=513&amp;height=178" src="https://chem.libretexts.org/&#64;api/deki/files/103000/CNX_Chem_20_01_aromatic_img.jpg?revision=1&amp;size=bestfit&amp;width=513&amp;height=178" />
 <figcaption>
-<p><span class="caption-number">Fig. 60 </span><span class="caption-text">2D model of a benzene molecule. The carbon “ring” is what makes benzene “aromatic”.</span><a class="headerlink" href="#benzene" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">2D model of a benzene molecule. The carbon “ring” is what makes benzene “aromatic.”</span><a class="headerlink" href="#benzene" title="Link to this image">#</a></p>
 <div class="legend">
 <p>Image source: <a class="reference external" href="https://chem.libretexts.org/Courses/Nassau_Community_College/Organic_Chemistry_I_and_II/16%3A_Aromatic_Compounds/16.02%3A_The_Structure_and_Properties_of_Benzene_and_its_Derivatives">16.2: The Structure and Properties of Benzene and its Derivatives - Chemistry LibreTexts</a></p>
 </div>
@@ -536,9 +517,9 @@ C6H12O6 (aq) -&gt;[Yeast] 2C2H5OH (aq) + 2CO2 (g)
 <p>Cyclic and aromatic hydrocarbons are important in organic chemistry. They are used as solvents, fuels, and building blocks for other chemicals. Some cyclic and aromatic hydrocarbons are also toxic and carcinogenic.</p>
 <section id="polynuclear-aromatic-hydrocarbons">
 <h3>Polynuclear Aromatic Hydrocarbons<a class="headerlink" href="#polynuclear-aromatic-hydrocarbons" title="Link to this heading">#</a></h3>
-<p>Polynuclear aromatic hydrocarbons (PAHs) are a group of organic compounds that are formed during the incomplete combustion of organic materials such as coal, oil, and gas. They are also found in cigarette smoke, grilled or charred food, and other sources. PAHs are known to be carcinogenic and can cause other health problems. They are also harmful to the environment and can accumulate in soil and water.</p>
-<p>PAHs are composed of multiple aromatic hydrocarbon (benzene-like) rings. The simplest representative is naphthalene, having two aromatic rings and the three-ring compounds anthracene and phenanthrene. They are uncharged, non-polar and planar. Many are colorless.</p>
-<p>PAHs can be harmful to human health. They can cause cancer, birth defects, and other health problems. Exposure to PAHs can occur through the air, water, food, and soil. The Environmental Protection Agency (EPA) has set limits on the amount of PAHs that can be in drinking water.</p>
+<p>Polynuclear aromatic hydrocarbons (PAHs) are a group of organic compounds formed during the incomplete combustion of organic materials such as coal, oil, and gas. They are also found in cigarette smoke, grilled or charred food, and other sources. PAHs are known to be carcinogenic and can cause other health problems. They also harm the environment and can accumulate in soil and water.</p>
+<p>PAHs are composed of multiple aromatic hydrocarbon (benzene-like) rings. The simplest representative is naphthalene, having two aromatic rings and the three-ring compounds anthracene and phenanthrene. They are uncharged, non-polar, and planar. Many are colorless.</p>
+<p>PAHs can be harmful to human health. They can cause cancer, birth defects, and other health problems. Exposure to PAHs can occur through the air, water, food, and soil. The Environmental Protection Agency (EPA) has set limits on the amount of PAHs in drinking water.</p>
 <figure class="margin-caption align-default" id="pahs">
 <img alt="https://www.atsdr.cdc.gov/csem/polycyclic-aromatic-hydrocarbons/images/pah-small.jpg" src="https://www.atsdr.cdc.gov/csem/polycyclic-aromatic-hydrocarbons/images/pah-small.jpg" />
 <figcaption>
@@ -613,7 +594,8 @@ C6H12O6 (aq) -&gt;[Yeast] 2C2H5OH (aq) + 2CO2 (g)
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -686,8 +668,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -66,6 +69,7 @@
     <link rel="prev" title="1.5 Practice Problems" href="15Problems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +149,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -356,24 +345,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -415,23 +396,23 @@ document.write(`
 <h1>2 Thermodynamics<a class="headerlink" href="#thermodynamics" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>Thermodynamics is a fundamental scientific discipline that is applicable in a wide range of fields and systems, both natural and man-made. It is used to describe and predict the behavior of systems that exchange energy, work, and heat with their surroundings. The systems studied using this approach can be from a microscopic- to planetary-scales.  Some examples of natural and human systems that can be studied using a thermodynamic approach are outlined below.</p>
-<p>In this example on the impact of climate change - scientists use principles of thermodynamics to predict how various parts of the Earth system respond to the changing climate.</p>
+<p>Thermodynamics is a core scientific field that applies to various areas and systems, whether natural or created by humans. It explains and forecasts the behavior of systems interacting with their environment through energy, work, and heat exchanges. The systems examined through this lens can range from microscopic to planetary scales. below are some examples of natural and human systems that can be analyzed using a thermodynamic perspective.</p>
+<p>In this example of climate change’s impact, scientists apply thermodynamics principles to forecast how different Earth system components respond to the changing climate.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/AVu-vplvCZE" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Economists can also explain supply chains and manufacturing processes using thermodynamic principles.</p>
+<p>Economists can use thermodynamic principles to explain supply chains and manufacturing processes.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/h6Clz8DQvIk" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Earth’s interior including the mantle and the plate tectonic theory can be quantified using the principles of thermodynamics. The Earth can be studied from a classic systems perspective that makes the application of thermodynamics very helpful.</p>
+<p>The Earth’s interior, including the mantle and plate tectonic theory, can be understood through thermodynamic principles. Studying the Earth from a classical systems perspective enhances the application of thermodynamics.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/ECBbAjoEHWI" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>The world’s scientists and governments are banking on “green” solutions as an answer to solving the climate crisis.  However, thermodynamic principles can help us better identify which types of solutions are more feasible than others.</p>
+<p>Scientists and governments rely on “green” solutions to address the climate crisis. However, understanding thermodynamic principles can help us better identify which solutions are more feasible than others.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/Chp9VlSs25c" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -442,8 +423,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 --->
-<p>Equilibrium thermodynamics focuses on prediction of concentrations of all species and phases present at the end of a reaction at equilibrium. Kinetics focuses on the rate at which reactions occur. In this section we focus on fundamental ideas of thermodynamics and also on their applications in the field of environmental geochemistry.</p>
-<p>This chapter provides a basic understanding of chemical thermodynamics, which is the basis for all of chemical equilibria. We describe the basic concepts, principal functions of state, and laws of thermodynamics and show how these concepts are used to define the equilibrium conditions for chemical processes. The effects of temperature and pressure on thermodynamic functions of state and on chemical equilibria also are developed, and examples are provided throughout the chapter to illustrate applications of important thermodynamic principles and equations.</p>
+<p>Equilibrium thermodynamics predicts the concentrations of all species and phases present at the end of a reaction when it reaches equilibrium. In contrast, kinetics examines the rate at which reactions occur. This section will focus on the fundamental concepts of thermodynamics and their applications in environmental geochemistry.</p>
+<p>This chapter offers a fundamental understanding of chemical thermodynamics, the foundation for all chemical equilibria. We explain the essential concepts, key functions of the state, and the laws of thermodynamics, demonstrating how these ideas are applied to define the equilibrium conditions for chemical processes. Additionally, we explore how temperature and pressure impact thermodynamic functions and chemical equilibria. Throughout the chapter, I provide examples to illustrate the applications of significant thermodynamic principles and equations.</p>
 </section>
 <section id="learning-goals">
 <h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
@@ -451,8 +432,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p class="admonition-title">Learning Goals</p>
 <p>The main goals for this chapter are to:</p>
 <ol class="arabic simple">
-<li><p>learn the basic terminology of thermodynamics - including, work, energy, systems, and state variables,</p></li>
-<li><p>identify how energy is transferred between systems and their surroundings, and</p></li>
+<li><p>learn the basic terminology of thermodynamics - including work, energy, systems, and state variables,</p></li>
+<li><p>identify how energy is transferred between systems and their surroundings and</p></li>
 <li><p>define and apply the laws of thermodynamics and the fundamental thermodynamic properties, including enthalpy, entropy, and Gibbs free energy.</p></li>
 </ol>
 </div>
@@ -521,7 +502,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -584,8 +566,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

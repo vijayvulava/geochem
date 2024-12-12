@@ -18,7 +18,7 @@ $$
 \ce{HCl(aq) + H2O(aq)⟶ Cl−(aq) + H3O+(aq)}
 $$
 
-A far greater number of compounds behave as ***weak acids*** and only partially react with water, leaving a large majority of dissolved molecules in their original form and generating a relatively small amount of hydronium ions. Weak acids are more commonly encountered in nature, being the substances partly responsible for the tangy taste of citrus fruits, the stinging sensation of insect bites, and the unpleasant smells associated with body odor. A familiar example of a weak acid is acetic acid ($\ce{CH3COOH}$), the main ingredient in vinegars:
+A far greater number of compounds behave as ***weak acids*** and only partially react with water, leaving a large majority of dissolved molecules in their original form and generating a relatively small amount of hydronium ions. Weak acids are more commonly encountered in nature, partly responsible for the tangy taste of citrus fruits, the stinging sensation of insect bites, and the unpleasant smells associated with body odor. A familiar example of a weak acid is acetic acid ($\ce{CH3COOH}$), the main ingredient in vinegar:
 
 $$
 \ce{
@@ -28,16 +28,16 @@ $$
 
 When dissolved in water under typical conditions, only about $\pu{1 \%}$ of acetic acid molecules are present in the ionized form, $\ce{CH3COO−}$. (The use of a double-arrow in the reaction above denotes the partial reaction aspect of this process, a concept addressed in the chapter on chemical equilibrium.)
 
-A base is a substance that will dissolve in water to yield $\ce{OH-}$. The most common bases are ionic compounds composed of alkali or alkaline earth metal cations (groups 1 and 2) combined with the $\ce{OH-}$ - for example, $\ce{NaOH}$ and $\ce{Ca(OH)2}$. When these compounds dissolve in water, $\ce{OH-}$ are released directly into the solution. These bases, along with other hydroxides that completely dissociate in water, are considered ***strong bases***. Consider as an example the dissolution of lye (sodium hydroxide) in water:
+A base is a substance that will dissolve in water to yield $\ce{OH-}$. The most common bases are ionic compounds composed of alkali or alkaline earth metal cations (groups 1 and 2) combined with the $\ce{OH-}$ - for example, $\ce{NaOH}$ and $\ce{Ca(OH)2}$. When these compounds dissolve in water, $\ce{OH-}$ are released directly into the solution. These bases and other hydroxides that completely dissociate in water are considered ***strong bases***. Consider as an example the dissolution of lye (sodium hydroxide) in water:
 
 $$\ce{
 NaOH(s) ⟶ Na+(aq) + OH−(aq)
 }
 $$
 
-This reaction confirms that $\ce{NaOH}$ is a base. Since the dissociation process is essentially complete when ionic compounds dissolve in water under typical conditions, NaOH and other ionic hydroxides are all classified as strong bases.
+This reaction confirms that $\ce{NaOH}$ is a base. Since dissociation is essentially complete when ionic compounds dissolve in water under typical conditions, NaOH and other ionic hydroxides are classified as strong bases.
 
-Unlike ionic hydroxides, some compounds produce $\ce{OH-}$ when dissolved by chemically reacting with water molecules. In all cases, these compounds react only partially and so are classified as ***weak bases***. These types of compounds are also abundant in nature and important commodities in various technologies. For example, global production of the weak base ammonia is typically well over $\pu{100 tons}$ annually, being widely used as an agricultural fertilizer, a raw material for chemical synthesis of other compounds, and an active ingredient in household cleaners. When dissolved in water, ammonia reacts partially to yield $\ce{OH-}$, as shown here:
+Unlike ionic hydroxides, some compounds produce $\ce{OH-}$ when dissolved by chemically reacting with water molecules. These compounds react only partially in all cases and are classified as ***weak bases***. These compounds are also abundant in nature and important commodities in various technologies. For example, global production of the weak base ammonia is typically well over $\pu{100 tons}$ annually, being widely used as an agricultural fertilizer, a raw material for chemical synthesis of other compounds, and an active ingredient in household cleaners. When dissolved in water, ammonia reacts partially to yield $\ce{OH-}$, as shown here:
 
 $$
 \ce{
@@ -64,7 +64,7 @@ $$
 
 ## Brønsted-Lowry Acids and Bases
 
-The Arrhenius definition for acids and bases in the previous section is a bit restrictive. For example, this definition does not cover bases that do not produce $\ce{OH-}$ (e.g., $\ce{NH3}$ in the last reaction). Johannes Brønsted ([Johannes Nicolaus Brønsted - Wikipedia](https://en.wikipedia.org/wiki/Johannes_Nicolaus_Br%C3%B8nsted)) and Thomas Martin Lowry ([Martin Lowry - Wikipedia](https://en.wikipedia.org/wiki/Martin_Lowry)) improved the standard definition as follows: *Brønsted-Lowry acid is a proton ($\ce{H+}$) donor*, and a *Brønsted-Lowry base is a $\ce{H+}$ acceptor*.
+The Arrhenius definition of acids and bases in the previous section is slightly restrictive. For example, this definition does not cover bases that do not produce $\ce{OH-}$ (e.g., $\ce{NH3}$ in the last reaction). Johannes Brønsted ([Johannes Nicolaus Brønsted - Wikipedia](https://en.wikipedia.org/wiki/Johannes_Nicolaus_Br%C3%B8nsted)) and Thomas Martin Lowry ([Martin Lowry - Wikipedia](https://en.wikipedia.org/wiki/Martin_Lowry)) improved the standard definition as follows: *Brønsted-Lowry acid is a proton ($\ce{H+}$) donor*, and a *Brønsted-Lowry base is a $\ce{H+}$ acceptor*.
 
 ```{dropdown} Example: Brønsted acids and bases 
 
@@ -80,7 +80,7 @@ $$
 > The first example below is both an Arrhenius and Brønsted acid as is donated. The second example is also both an Arrhenius and Brønsted base because it produces a $\ce{OH-}$ and accepts a $\ce{H+}$ (to become $\ce{NH4+}$).
 ```
 
-The reactions below show the same reaction but it is important to recognize that $\ce{H+}$ does not exist as an isolated species in solution. Rather, it is hydrated just as other aqueous ions are. The proton, being positively charged, is strongly attracted to the partial negative charge ($\delta -$) on the oxygen atom in a water molecule and forms the **hydronium ion,** $\ce{H3O+}$.
+The reactions below show the same reaction, but it is important to recognize that $\ce{H+}$ does not exist as an isolated species in solution. Rather, it is hydrated just as other aqueous ions are. The positively charged proton is strongly attracted to the partial negative charge ($\delta -$) on the oxygen atom in a water molecule and forms the **hydronium ion,** $\ce{H3O+}$.
 
 $$
 \begin{align*}
@@ -89,9 +89,9 @@ HF + H2O &<=> H3O+ + F-}
 \end{align*}
 $$
 
-Both and are used interchangeably throughout the text, but they refer to the same aqueous species.
+Both $\ce{H3O+}$ and $\ce{H+}$ are used interchangeably throughout the text, but they refer to the same aqueous species.
 
-Note that acids and bases that donate one are called monoprotic acid or base (most examples shown above) and those that can donate or accept multiple and are referred to as multiprotic or polyprotic acids and bases. Examples of polyprotic acids and bases include $\ce{H2SO4}$ (sulfuric acid), $\ce{H3PO4}$ (phosphoric acid), $\ce{Ba(OH)2}$ (barium hydroxide), etc.
+Note that acids and bases that donate one are called monoprotic acids or bases (most examples shown above), and those that can donate or accept multiple are referred to as multiprotic or polyprotic acids and bases. Examples of polyprotic acids and bases include $\ce{H2SO4}$ (sulfuric acid), $\ce{H3PO4}$ (phosphoric acid), $\ce{Ba(OH)2}$ (barium hydroxide), etc.
 
 When a Brønsted-Lowry acid donates a $\ce{H+}$, what remains of the acid is known as a conjugate base. For example, in the ionization of $\ce{HCl}$ in water,
 
@@ -99,9 +99,9 @@ $$\ce{
 HCl + H2O -> H3O+ + Cl-
 }$$
 
-$\ce{HCl}$ is the Brønsted-Lowry acid, producing a $\ce{Cl-}$, the conjugate base. In other words $\ce{HCl-Cl-}$ are called conjugate acid-base pair.
+$\ce{HCl}$ is the Brønsted-Lowry acid, producing a $\ce{Cl-}$, the conjugate base. In other words, $\ce{HCl-Cl-}$ are called a conjugate acid-base pair.
 
-When a Brønsted-Lowry base accepts a $\ce{H+}$, the newly formed protonated species is known as a conjugate acid. For example, $\ce{NH3}$ ionizes in water,
+When a Brønsted-Lowry base accepts a $\ce{H+}$, the newly formed protonated species is a conjugate acid. For example, $\ce{NH3}$ ionizes in water,
 
 $$\ce{
 NH3 + H2O <=> NH4+ + OH-
@@ -122,7 +122,7 @@ Ionization of $\ce{H2O}$ and $\ce{NH3}$ to form to form Brønsted-Lowry acid-bas
 
 ## Lewis Acids and Bases
 
-Some chemical substances behave similar to acids and bases as defined above, but do not involve the transfer of $\ce{H+}$. In Lewis definition of acid-base behavior, acids and bases are identified by their ability to accept or to donate a pair of electrons and form a coordinate covalent bond. A coordinate covalent bond occurs when one of the atoms in the bond provides both bonding electrons. For example, a coordinate covalent bond occurs when a water molecule combines with a hydrogen ion to form a hydronium ion. A coordinate covalent bond also results when an ammonia molecule combines with a hydrogen ion to form an ammonium ion.
+Some chemical substances behave similarly to acids and bases as defined above but do not involve the transfer of $\ce{H+}$. In Lewis's definition of acid-base behavior, acids and bases are identified by their ability to accept or donate a pair of electrons and form a coordinate covalent bond. A coordinate covalent bond occurs when one of the atoms in the bond provides both bonding electrons. For example, a coordinate covalent bond occurs when a water molecule combines with a hydrogen ion to form a hydronium ion. A coordinate covalent bond also results when an ammonia molecule combines with a hydrogen ion to form an ammonium ion.
 
 
 ```{figure} https://openstax.org/apps/archive/20230220.155442/resources/96a0a1c409fe899efd322c430fb064fadd822f22
@@ -130,7 +130,7 @@ Some chemical substances behave similar to acids and bases as defined above, but
 name: coord-covalent-bond
 figclass: margin-caption
 ---
-A coordinate covalent bond showing a water molecule combining with a hydrogen ion to form a hydronium ion and an ammonia molecule combines with a hydrogen ion to form an ammonium ion.   Image source: [15.2 Lewis Acids and Bases - Chemistry 2e | OpenStax](https://openstax.org/books/chemistry-2e/pages/15-2-lewis-acids-and-bases)
+A coordinate covalent bond shows a water molecule combining with a hydrogen ion to form a hydronium ion, and an ammonia molecule combines with a hydrogen ion to form an ammonium ion.   Image source: [15.2 Lewis Acids and Bases - Chemistry 2e | OpenStax](https://openstax.org/books/chemistry-2e/pages/15-2-lewis-acids-and-bases)
 ```
 
 *The species donating the electron pair that compose the bond is a Lewis base*, *the species accepting the electron pair is a Lewis acid*, and the product of the reaction is a Lewis acid-base adduct. Brønsted-Lowry acid-base reactions represent a subcategory of Lewis acid reactions, specifically, those in which the acid species is $\ce{H+}$.
@@ -140,7 +140,7 @@ For more information, see [15.2 Lewis Acids and Bases - Chemistry 2e | OpenStax]
 ````
 ## Acid-Base Properties of Water
 
-Water is considered an *universal solvent* due to it's ubiquity and importance for all biological, environmental, and surficial geological processes. In addition, most environmental acid-base chemistry we encounter takes place in aqueous solution. Water has the ability to act as either a Brønsted-Lowry acid (as in the ionization of $\ce{HCl}$) or a Brønsted-Lowry base (as in the ionization of $\ce{NH3}$). A species that can behave either as a Brønsted-Lowry acid or a Brønsted-Lowry base is called amphoteric. Water is also a very weak electrolyte, but it does undergo ionization to a small extent:
+Water is considered a *universal solvent* due to its ubiquity and importance for all biological, environmental, and surficial geological processes. In addition, most environmental acid-base chemistry occurs in aqueous solution. Water can act as either a Brønsted-Lowry acid (as in the ionization of $\ce{HCl}$) or a Brønsted-Lowry base (as in the ionization of $\ce{NH3}$). Amphoteric is a species that can behave either as a Brønsted-Lowry acid or a Brønsted-Lowry base. Water is also a very weak electrolyte, but it does undergo ionization to a small extent:
 
 $$\ce{
 H2O <=> H+ + OH-
@@ -152,7 +152,7 @@ $$\ce{
 2 H2O <=> H3O+ + OH-
 }$$
 
-where one $\ce{H2O}$ acts as an acid and the other acts as a base. As indicated by the $\rightleftharpoons$ in the reaction above, this is an equilibrium reaction. We can use basic thermodynamic principles to estimate the $K_c$ for this reaction. The equilibrium expression for above reactions can be written as
+where one $\ce{H2O}$ acts as an acid and the other acts as a base. As indicated by the $\rightleftharpoons$ in the reaction above, this is an equilibrium reaction. We can use basic thermodynamic principles to estimate the $K_c$ for this reaction. The equilibrium expression for the above reactions can be written as
 
 ```{math}
 :label: kw
@@ -160,7 +160,7 @@ where one $\ce{H2O}$ acts as an acid and the other acts as a base. As indicated 
 K_c = \dfrac{\{\ce{H3O+}\}\{\ce{OH-}\}}{\{\ce{H2O}\}^2} = \{\ce{H3O+}\}\{\ce{OH-}\} =  K_w
 ```
 
-Note that $\{\ce{H2O}\}= 1$ by convention. Since this an important equilibrium reaction that is encountered frequently in environmental systems, we give $K_c$ a special subscript $w$ to indicate autoionization equilibrium constant of water, $K_w$.
+Note that $\{\ce{H2O}\}= 1$ by convention. Since this is an important equilibrium reaction encountered frequently in environmental systems, we give $K_c$ a special subscript $w$ to indicate the autoionization equilibrium constant of water, $K_w$.
 
 Using thermodynamic data, we can calculate $K_w$ at $\pu{25 ^\circ C}$ as 
 
@@ -170,15 +170,15 @@ Using thermodynamic data, we can calculate $K_w$ at $\pu{25 ^\circ C}$ as
 K_w =  \{\ce{H3O+}\}\{\ce{OH-}\} =  \pu{e-14}
 ```
 
-In pure water, autoionization is the only source of $\ce{H3O+}$ and $\ce{OH-}$, and the stoichiometry of the reaction tells us that their concentrations are equal. At $\pu{25 ^\circ C}$, 
+In pure water, autoionization is the only source of $\ce{H3O+}$ and $\ce{OH-}$, and the reaction's stoichiometry tells us that their concentrations are equal. At $\pu{25 ^\circ C}$, 
 
 $$\{\ce{H3O+}\} = \{\ce{OH-}\} =  \pu{1.0e-7}$$
 
 ````{margin}
-Concentrations of $\ce{H3O+}$ and $\ce{OH-}$ are usually so low in environmental systems compared with the remainder of ions, that their activities are practically equal to their concentrations.
+Concentrations of $\ce{H3O+}$ and $\ce{OH-}$ are usually so low in environmental systems compared with the remainder of ions that their activities are practically equal to their concentrations.
 ````
 
-Although $K_w$  is constant, the individual concentrations of $\ce{H3O+}$ and $\ce{OH-}$ can be influenced by the addition of an acid or a base. The relative amounts of $\ce{H3O+}$ and $\ce{OH-}$ determine whether a solution is neutral, acidic, or basic as summarized in {numref}`h3o-oh`
+Although $K_w$  is constant, the individual concentrations of $\ce{H3O+}$ and $\ce{OH-}$ can be influenced by adding an acid or a base. The relative amounts of $\ce{H3O+}$ and $\ce{OH-}$ determine whether a solution is neutral, acidic, or basic as summarized in {numref}`h3o-oh`
 
 ```{table} Relative amounts of $\ce{H3O+}$ and $\ce{OH-}$ in aqueous solutions.
 :name: h3o-oh
@@ -204,7 +204,7 @@ $$\begin{aligned}
 
 ##  $p\ce{H}$ and $p\ce{OH}$
 
-The acidity of an aqueous solution depends on $\{\ce{H3O+}\}$. This concentration can range over many orders of magnitude, which can make reporting the numbers cumbersome. To describe the acidity of a solution, rather than report the molar concentration of $\ce{H3O+}$, we typically use the more convenient  scale. The $p\ce{H}$ of a solution is defined as the negative base-10 logarithm of the $[\ce{H3O+}]$ (in $\pu{mol L-1}$ or $\pu{M}$). 
+The acidity of an aqueous solution depends on $\{\ce{H3O+}\}$. This concentration can range over many orders of magnitude, making reporting the numbers cumbersome. To describe the acidity of a solution, rather than report the molar concentration of $\ce{H3O+}$, we typically use the more convenient scale. The $p\ce{H}$ of a solution is defined as the negative base-10 logarithm of the $[\ce{H3O+}]$ (in $\pu{mol L-1}$ or $\pu{M}$). 
 
 ```{math}
 :label: ph
@@ -212,7 +212,7 @@ The acidity of an aqueous solution depends on $\{\ce{H3O+}\}$. This concentratio
 p\ce{H} = -\log_{10}[\ce{H3O+}]
 ```
 
-$p\ce{H}$ of a solution is dimensionless, units of concentration are removed before applying the logarithm. Conversely, when concentration of solutions are calculated from $p\ce{H}$, the original units are added back.
+$p\ce{H}$ of a solution is dimensionless, and concentration units are removed before applying the logarithm. Conversely, the original units are added back when solution concentration is calculated from $p\ce{H}$.
 
 ```{dropdown} Example: Calculating $p\ce{H}$
 
@@ -234,7 +234,7 @@ Our understanding of $\ce{H3O+}$ and $\ce{OH-}$ in water can be summarized as sh
 
 ```
 
-We can also determine the from  using the "antilog" or "inverse log" of  as shown below: 
+We can also determine the concentration by using the "antilog" or "inverse log" as shown below: 
 
 ```{math}
 :label: h3o_conc
@@ -242,7 +242,7 @@ We can also determine the from  using the "antilog" or "inverse log" of  as sh
 [\ce{H3O+}] = 10^{-p\ce{H}}
 ```
 
-Let's look at Eq. {eq}`kw2` again and apply negative logarithm to both sides of that equation. 
+Let's look at Eq. {eq}`kw2` again and apply a negative logarithm to both sides. 
 
 ```{math}
 :label: phpoh

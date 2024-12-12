@@ -76,7 +76,7 @@ CH4 + 2 O2 &-> CO2 + 2 H2O
 \end{align*}
 $$
 
-16. Determine sign of $\Delta_{sys}S$ for the following systems using the rules outlined in the section on entropy of substances:
+16. Determine the sign of $\Delta_{sys}S$ for the following systems using the rules outlined in the section on the entropy of substances:
 	1. Freezing ethanol
 	2. Evaporating water
 	3. Heating water

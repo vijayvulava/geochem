@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="2 Thermodynamics" href="2Thermodynamics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -428,7 +409,7 @@ document.write(`
 <h1>2.1 Energy and Thermochemistry<a class="headerlink" href="#energy-and-thermochemistry" title="Link to this heading">#</a></h1>
 <section id="what-is-energy">
 <h2>What is energy?<a class="headerlink" href="#what-is-energy" title="Link to this heading">#</a></h2>
-<p>Energy is the capacity to do work. It can be in many forms: thermal energy (associated with random motion of atoms and molecules), chemical energy (associated with bonds in chemical substances), potential energy (associated with position of an object), kinetic energy (associated with motion), etc. Each of these forms of energy can be converted to another form (e.g., dropping an object converts potential energy to kinetic energy), but cannot be created or destroyed. This principle is called <em><strong>law of conservation of energy</strong></em>. SI unit of energy is joule or <span class="math notranslate nohighlight">\(\pu{J}\)</span>.</p>
+<p>Energy is the capacity to do work. It can be in many forms: thermal energy (associated with the random motion of atoms and molecules), chemical energy (associated with bonds in chemical substances), potential energy (associated with the position of an object), kinetic energy (associated with motion), etc. Each of these forms of energy can be converted to another form (e.g., dropping an object converts potential energy to kinetic energy) but cannot be created or destroyed. This principle is called <em><strong>the law of conservation of energy</strong></em>. SI unit of energy is joule or <span class="math notranslate nohighlight">\(\pu{J}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Kinetic Energy</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -440,7 +421,7 @@ E_k = \frac{1}{2}m\nu^2 = \frac{1}{2}(\pu{ 2 kg})(\pu{1 m s-2})  = \pu{ 1 J}
 \]</div>
 </div></blockquote>
 </div>
-</details><p>Matter can undergo physical and chemical changes. For example, freezing of water does not involve breaking down of water molecules and only involves changing the state of matter, i.e., physical change. This can be represented as follows:</p>
+</details><p>Matter can undergo physical and chemical changes. For example, freezing water does not involve breaking down water molecules and only involves changing the state of matter, i.e., physical change. This can be represented as follows:</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{H2O(l)  -&gt; H2O(g)} 
@@ -453,17 +434,17 @@ E_k = \frac{1}{2}m\nu^2 = \frac{1}{2}(\pu{ 2 kg})(\pu{1 m s-2})  = \pu{ 1 J}
 <iframe src="https://www.youtube.com/embed/2S6e11NBwiw" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Energy changes associated with physical processes and chemical reactions must be discussed in the context of a <em><strong>system</strong></em> and its <em><strong>surroundings</strong></em>. A system is a specific part of the universe that interests us and the surroundings are rest of the universe. Practically speaking, surroundings are immediately close to the system. In the above examples, ice or water is a system and all other parts beyond this system (container, etc) are the surroundings.</p>
+<p>Energy changes associated with physical processes and chemical reactions must be discussed in the context of a <em><strong>system</strong></em> and its <em><strong>surroundings</strong></em>. A system is a specific part of the universe that interests us; the surroundings are the rest of the universe. Practically speaking, surroundings are immediately close to the system. In the above examples, ice or water is a system, and all other parts beyond this system (container, etc) are the surroundings.</p>
 </section>
 <section id="how-is-energy-transferred">
 <h2>How is energy transferred?<a class="headerlink" href="#how-is-energy-transferred" title="Link to this heading">#</a></h2>
-<p>Physical and chemical changes within systems can result in exchange of the energy from within the system to the surroundings or vice versa.</p>
-<p>Mass (e.g., coffee, gasoline) contained in a closed system (e.g., a Thermos flask, gas tank in a car) is a conserved quantity, but if the system is not closed, the amount of mass that goes in or out of the system can be measured. Likewise, we often have a system that is not closed, and would like to know how much energy comes in or out.</p>
-<p>Energy is not a physical substance like water or coffee, so energy transfer cannot be measured with a meter or an instrument. So, how can we tell how much useful energy can a car “put out” on one tank of gas?</p>
-<p>The <em><strong>law of conservation of energy</strong></em> guarantees that all the chemical energy in the gasoline will reappear in some form, but not necessarily in a form that is useful for doing farm work. Tractors, like cars, are extremely inefficient, and typically <span class="math notranslate nohighlight">\(\pu{90 \%}\)</span> of the energy they consume is converted directly into heat, which is carried away by the exhaust and the air flowing over the radiator. We distinguish the energy that comes out directly as heat from the energy that serves to accelerate a trailer or to plow a field, so we define a technical meaning of the ordinary word “work” to express the distinction.</p>
+<p>Physical and chemical changes within systems can exchange energy from within the system to the surroundings or vice versa.</p>
+<p>Mass (e.g., coffee, gasoline) contained in a closed system (e.g., a Thermos flask or gas tank in a car) is a conserved quantity, but if the system is not closed, the amount of mass that goes in or out of the system can be measured. Likewise, we often have a system that is not closed, and we would like to know how much energy comes in or out.</p>
+<p>Energy is not a physical substance like water or coffee, so energy transfer cannot be measured with a meter or an instrument. So, how can we tell how much useful energy a car can “put out” on one gas tank?</p>
+<p>The <em><strong>law of conservation of energy</strong></em> guarantees that all the chemical energy in the gasoline will reappear in some form, but not necessarily in a form useful for doing farm work. Tractors, like cars, are extremely inefficient, and typically, <span class="math notranslate nohighlight">\(\pu{90 \%}\)</span> of the energy they consume is converted directly into heat, which is carried away by the exhaust and the air flowing over the radiator. We distinguish the energy that comes out directly as heat from the energy that accelerates a trailer or plows a field, so we define a technical meaning of the ordinary word “work” to express the distinction.</p>
 <section id="what-is-work">
 <h3>What is work?<a class="headerlink" href="#what-is-work" title="Link to this heading">#</a></h3>
-<p><strong>Work</strong> (<span class="math notranslate nohighlight">\(w\)</span>) is the energy that crosses a system boundary in response to a force moving through a distance (e.g., when a system changes volume) and is expresses mathematically as follows:</p>
+<p><strong>Work</strong> (<span class="math notranslate nohighlight">\(w\)</span>) is the energy that crosses a system boundary in response to a force moving through a distance (e.g., when a system changes volume) and is expressed mathematically as follows:</p>
 <div class="math notranslate nohighlight" id="equation-work">
 <span class="eqno">(4)<a class="headerlink" href="#equation-work" title="Link to this equation">#</a></span>\[\text{Work} = \text{force} \times \text{distance}\]</div>
 </section>
@@ -474,31 +455,31 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="a-pond-analogy">
 <h3>A Pond Analogy<a class="headerlink" href="#a-pond-analogy" title="Link to this heading">#</a></h3>
-<p>Heat and work are forms of energy that is transferred in different ways. If we consider the water in a deep pond. The amount of water in the pond is quite large, but finite, and could be measured, it corresponds to the <em>internal energy</em>, <span class="math notranslate nohighlight">\(U\)</span> of a system.</p>
-<figure class="margin-caption align-default" id="pondanalogy">
+<p>Heat and work are forms of energy that are transferred in different ways. Suppose we consider the water in a deep pond. The amount of water in the pond is quite large but finite and could be measured; it corresponds to a system’s <em>internal energy</em>, <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<figure class="margin-caption align-default" id="pondanalogyin">
 <img alt="_images/PondAnalogy.png" src="_images/PondAnalogy.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">A pond analogy to relate the concepts of work and heat to the concept of energy.</span><a class="headerlink" href="#pondanalogy" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">A pond analogy to relate the concepts of work and heat to the concept of energy.</span><a class="headerlink" href="#pondanalogyin" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Water may be added and subtracted from the pond either in the form of stream water (heat, <span class="math notranslate nohighlight">\(q\)</span>) or precipitation/evaporation (work, <span class="math notranslate nohighlight">\(w\)</span>). All the inflows and outflows out of the lake can be monitored using appropriate instruments. If the only gains and losses of water are as follows: stream inflow and outflow is <span class="math notranslate nohighlight">\(q_i\)</span> and <span class="math notranslate nohighlight">\(q_o\)</span>, respectively, the precipitation is <span class="math notranslate nohighlight">\(w_r\)</span>, and the evaporation is <span class="math notranslate nohighlight">\(w_e\)</span>, then, the change in pond volume, <span class="math notranslate nohighlight">\(\Delta U\)</span>, can be calculated as:</p>
+<p>Water may be added and subtracted from the pond either in the form of stream water (heat, <span class="math notranslate nohighlight">\(q\)</span>) or precipitation/evaporation (work, <span class="math notranslate nohighlight">\(w\)</span>). All the inflows and outflows of the lake can be monitored using appropriate instruments. If the only gains and losses of water are as follows: stream inflow and outflow are <span class="math notranslate nohighlight">\(q_i\)</span> and <span class="math notranslate nohighlight">\(q_o\)</span>, respectively, the precipitation is <span class="math notranslate nohighlight">\(w_r\)</span>, and the evaporation is <span class="math notranslate nohighlight">\(w_e\)</span>, then the change in pond volume, <span class="math notranslate nohighlight">\(\Delta U\)</span>, can be calculated as:</p>
 <div class="math notranslate nohighlight">
 \[
 \Delta U = (q_i-q_o)+(w_r-w_e) = q + w
 \]</div>
-<p>Once water enters the pond, it loses its identity as stream or rain water. The pond does not contain any identifiable stream water or rain water, simply water. Similarly systems do not contain so much heat or work, just energy. The water level in the pond can be raised either by stream water alone <em>or</em> by rain water alone, the temperature rise in the water bath can be caused either by heating (transferring energy due to a temperature difference) or by thrashing a paddle wheel about in it (transferring energy by doing work on the system).</p>
-<p>Another implication or assumption in our pond analogy is that water is conserved; that is, it cannot simply appear or disappear. The same proposition regarding energy is known as the first law of thermodynamics (an explored in aa following sections). For example, the energy expended in lifting a book off a floor to the table was not lost, but transferred to the book.</p>
+<p>Once water enters the pond, it loses its identity as a stream or rainwater. The pond does not contain any identifiable stream water or rain water; it is simply water. Similarly, systems do not contain so much heat or work; they contain energy. The water level in the pond can be raised either by stream water alone <em>or</em> by rainwater alone; the temperature rise in the water bath can be caused either by heating (transferring energy due to a temperature difference) or by thrashing a paddle wheel about in it (transferring energy by doing work on the system).</p>
+<p>Another implication or assumption in our pond analogy is that water is conserved; it cannot simply appear or disappear. The same proposition regarding energy is known as the first law of thermodynamics (explored in the following sections). For example, the energy expended in lifting a book off the floor to the table was not lost but transferred to the book.</p>
 </section>
 </section>
 <section id="what-is-thermochemistry">
 <h2>What is thermochemistry?<a class="headerlink" href="#what-is-thermochemistry" title="Link to this heading">#</a></h2>
-<p><em>Heat</em> and <em>thermal energy</em> are not to be used interchangeably. Heat is the transfer of thermal energy between two bodies that are at different temperatures. Matter does not contain heat - it contains thermal energy. <em><strong>Thermochemistry</strong></em> is the study of heat (transfer of thermal energy) associated with chemical reactions.</p>
+<p><em>Heat</em> and <em>thermal energy</em> are not to be used interchangeably. Heat is the transfer of thermal energy between two bodies at different temperatures. Matter does not contain heat - it contains thermal energy. <em><strong>Thermochemistry</strong></em> is the study of heat (transfer of thermal energy) associated with chemical reactions.</p>
 <p>The above chemical reaction (formation of water) results in release of energy and can be written as follows:</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{2 H2(g) + O2(g) -&gt; 2 H2O(l) + \text{Energy}}
 \]</div>
-<p>In this case, the system contains a mixture of all reactants and products. Because, energy cannot be created or destroyed, the energy is transferred between the system and the surroundings. In the above chemical reaction, energy is created in the system and is transferred to its surroundings. This is an example of an <em><strong>exothermic reaction</strong></em>.</p>
+<p>In this case, the system contains a mixture of all reactants and products. Because energy cannot be created or destroyed, it is transferred between the system and the surroundings. In the above chemical reaction, energy is created in the system and is transferred to its surroundings. This is an example of an <em><strong>exothermic reaction</strong></em>.</p>
 <p>Consider the decomposition of mercury(II) oxide (<span class="math notranslate nohighlight">\(\ce{HgO}\)</span>) at high temperatures:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -509,37 +490,37 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <iframe src="https://player.vimeo.com/video/73325384?h=6aab1f5431" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>The above video shows how energy is consumed or produced during forming or breaking chemical bonds.  In an exothermic reaction, the energy of the products in a reaction is lower than the energy of the reactants causing the excess energy to be released from the system to the surroundings. In an endothermic reaction, the energy of the products is higher than that of the reactants.</p>
+<p>The above video shows how energy is consumed or produced during the forming or breaking of chemical bonds.  In an exothermic reaction, the energy of the products in a reaction is lower than the energy of the reactants, causing the excess energy to be released from the system to the surroundings. In an endothermic reaction, the products’ energy is higher than the reactants’ energy.</p>
 <figure class="margin align-default" id="fda-label">
 <img alt="https://www.fda.gov/files/nutrition-facts-label-download-image2.jpg" src="https://www.fda.gov/files/nutrition-facts-label-download-image2.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">An example of a US Food and Drug Administration (FDA)’s nutritional facts label. Note that the Calories amount on this label are actually kilocalories. Image source: <a class="reference external" href="https://www.fda.gov/food/food-labeling-nutrition">Food Labeling &amp; Nutrition | FDA</a></span><a class="headerlink" href="#fda-label" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">An example of a US Food and Drug Administration (FDA)‘s nutritional facts label. Note that the ``Calories’’ on this label are kilocalories. Image source: <a class="reference external" href="https://www.fda.gov/food/food-labeling-nutrition">Food Labeling &amp; Nutrition | FDA</a></span><a class="headerlink" href="#fda-label" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>SI unit for energy is joule (<span class="math notranslate nohighlight">\(\pu{J}\)</span>), another common unit of energy is calorie (<span class="math notranslate nohighlight">\(\pu{cal}\)</span>). A calorie is the amount of energy required to raise the temperature of <span class="math notranslate nohighlight">\(\pu{1 g}\)</span> of water by <span class="math notranslate nohighlight">\(\pu{1 ^\circ C}\)</span>. <span class="math notranslate nohighlight">\(\pu{1 cal} = \pu{4.184 J}\)</span>. Calories listed on nutrition labels (see figure ) are not “calories” but “kilocalories.” To make the distinction, the first letter in Calories is capitalized.</p>
+<p>SI unit for energy is joule (<span class="math notranslate nohighlight">\(\pu{J}\)</span>), another common unit of energy is calorie (<span class="math notranslate nohighlight">\(\pu{cal}\)</span>). A calorie is the energy required to raise the temperature of <span class="math notranslate nohighlight">\(\pu{1 g}\)</span> of water by <span class="math notranslate nohighlight">\(\pu{1 ^\circ C}\)</span>. <span class="math notranslate nohighlight">\(\pu{1 cal} = \pu{4.184 J}\)</span>. Calories listed on nutrition labels (see figure ) are not “calories” but “kilocalories.” To make the distinction, the first letter in Calories is capitalized.</p>
 <div class="math notranslate nohighlight">
 \[\pu{1 Cal} = \pu{1000 cal} = \pu{1 kcal} = \pu{4184 J}\]</div>
 <figure class="margin align-default" id="eu-label">
 <img alt="https://esha.com/wp-content/uploads/2015/02/eu_label_1-01.jpg" src="https://esha.com/wp-content/uploads/2015/02/eu_label_1-01.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">An example of an European Union’s nutritional facts label. Image source: <a class="reference external" href="https://esha.com/products/genesis-rd-food-labeling-software/labels-and-labeling/european-union-nutrition-facts-label/">EU Nutrition Facts Templates - Ingredients List Label | ESHA Research</a></span><a class="headerlink" href="#eu-label" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">An example of a European Union’s nutritional facts label. Image source: <a class="reference external" href="https://esha.com/products/genesis-rd-food-labeling-software/labels-and-labeling/european-union-nutrition-facts-label/">EU Nutrition Facts Templates - Ingredients List Label | ESHA Research</a></span><a class="headerlink" href="#eu-label" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="what-is-thermodynamics">
 <h2>What is Thermodynamics?<a class="headerlink" href="#what-is-thermodynamics" title="Link to this heading">#</a></h2>
-<p>Thermodynamics is a scientific study that deals with different relative energy levels and transfers of energy between systems and between different states of matter. Chemical thermodynamics specifically deals with energy transfers as related to chemical reactions and is primarily of our interest in geochemistry. We will also focus on the concept of equilibrium and its theoretical underpinnings in thermodynamics. The laws of thermodynamics provide useful guidelines for understanding the exchange of energy between systems and also direction of chemical processes.</p>
+<p>Thermodynamics is a scientific study that deals with different relative energy levels and energy transfers between systems and different states of matter. Chemical thermodynamics specifically deals with energy transfers related to chemical reactions and is primarily of interest in geochemistry. We will also focus on the concept of equilibrium and its theoretical underpinnings in thermodynamics. The laws of thermodynamics provide useful guidelines for understanding the exchange of energy between systems and the direction of chemical processes.</p>
 <section id="thermodynamic-systems">
 <h3>Thermodynamic Systems<a class="headerlink" href="#thermodynamic-systems" title="Link to this heading">#</a></h3>
-<p>It is very important to clearly define the <em><strong>system</strong></em> in equilibrium thermodynamics. This system can be in the scale of the entire universe (for an astronomer), an aquifer (for a hydrogeologist), or a petri dish (for a microbiologist) The choice depends on the kind of problem of interest. For example, in a shore environment there are different processes occurring and defining the bounds of the system become very important. See <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 26</span></a> for an example of how various processes on Earth can be studied using a systems approach.</p>
+<p>It is very important to clearly define the <em><strong>system</strong></em> in equilibrium thermodynamics. This system can be on the scale of the entire universe (for an astronomer), an aquifer (for a hydrogeologist), or a petri dish (for a microbiologist). The choice depends on the kind of problem of interest. For example, in a shore environment, different processes occur, and defining the bounds of the system becomes very important. See <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 26</span></a> for an example of how various processes on Earth can be studied using a systems approach.</p>
 <figure class="margin-caption align-default" id="earth-systems">
 <img alt="https://mynasadata.larc.nasa.gov/sites/default/files/2019-04/earth_system_diagram_print.jpg" src="https://mynasadata.larc.nasa.gov/sites/default/files/2019-04/earth_system_diagram_print.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Systems can be considered at many scales. In this picture we can see how energy and matter (elements, water, etc) is cycled across the entire Earth system at many scales.  Image source: <a class="reference external" href="https://mynasadata.larc.nasa.gov/basic-page/earth-system-matter-and-energy-cycles">Earth System: Matter and Energy Cycles | MyNASAData</a></span><a class="headerlink" href="#earth-systems" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Systems can be considered at many scales. This picture shows how energy and matter (elements, water, etc) are cycled across the entire Earth system at many scales.  Image source: <a class="reference external" href="https://mynasadata.larc.nasa.gov/basic-page/earth-system-matter-and-energy-cycles">Earth System: Matter and Energy Cycles | MyNASAData</a></span><a class="headerlink" href="#earth-systems" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A system is any portion of the universe that can be isolated from the rest of the universe for the purpose of observing and measuring changes. By saying that a system is any portion of the universe, we mean that the system can be whatever the observer defines it to be. In <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 26</span></a> we can see different parts of Earth can be subdivided into subsystems and studied separately for convenience.  A system is conceptual be design and needs to be defined more clearly by the observer.  It can be large or small, simple or complex. It can be in form of a  laboratory experiment in a beaker, or a lake, a small sample of rock, an ocean, a volcano, a mountain range, a continent, or an entire planet. A leaf is a system; it is part of a larger system (a tree), which in turn is part of an even larger system (a forest) and so on.</p>
-<p>The fact that a system is isolated from the rest of the universe means that it must have a boundary that sets it apart from its surroundings. The nature of the boundary is one of the most important defining features of a system, allowing us to establish three basic kinds of systems—open, closed, and isolated—with different types of boundaries.</p>
+<p>A system is any portion of the universe that can be isolated from the rest of the universe for the purpose of observing and measuring changes. By saying that a system is any portion of the universe, we mean that the system can be whatever the observer defines it to be. In <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 26</span></a>, we can see different parts of Earth can be subdivided into subsystems and studied separately for convenience.  A system is conceptual in design and needs to be defined more clearly by the observer.  It can be large or small, simple or complex. It can be a laboratory experiment in a beaker or a lake, a small sample of rock, an ocean, a volcano, a mountain range, a continent, or an entire planet. A leaf is a system; it is part of a larger system (a tree), part of an even larger system (a forest), and so on.</p>
+<p>A system being isolated from the rest of the universe means that it must have a boundary that sets it apart from its surroundings. The nature of the boundary is one of the most important defining features of a system, allowing us to establish three basic kinds of systems—open, closed, and isolated—with different types of boundaries.</p>
 <div class="admonition-types-of-systems admonition">
 <p class="admonition-title">Types of systems</p>
 <p>There are three types of systems:</p>
@@ -548,29 +529,29 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li><p>Closed systems - can exchange energy with surroundings</p></li>
 <li><p>Isolated systems - no exchange of mass or energy with surroundings</p></li>
 </ol>
-<p>In <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 26</span></a> the Earth system is an open system internally with free exchange of mass and energy.  Since there is negligible exchange of mass with Earth and it’s surroundings in the solar system, it is a closed system for mass. However, Earth gains and loses energy from within the solar system and is an open system for energy.</p>
+<p>In <a class="reference internal" href="#earth-systems"><span class="std std-numref">Fig. 26</span></a>, the Earth system is an open system internally with the free exchange of mass and energy.  Since there is negligible mass exchange with Earth and its surroundings in the solar system, it is a closed system for mass. However, Earth gains and loses energy from within the solar system, an open energy system.</p>
 </div>
-<p>Since matter and energy is shared between systems and surroundings, it would be useful to quantify the flow of mass and energy.  The amount of matter (or energy) that is transferred across the boundary of a system, and the rate at which it is transferred, is called a <em><strong>flux</strong></em>. It is quantified in units of <em>mass or volume per time</em>.</p>
+<p>Since matter and energy are shared between systems and surroundings, it would be useful to quantify the flow of mass and energy.  The amount of matter (or energy) transferred across a system’s boundary and the rate at which it is transferred is called a <em><strong>flux</strong></em>. It is quantified in units of <em>mass or volume per time</em>.</p>
 <p>The storage and movement of material and energy in a group of interacting systems is often represented as a <em><strong>box model</strong></em>. A box model can be used to show the following essential features of a system:</p>
 <ol class="arabic simple">
-<li><p>The processes by which matter (or energy) enters and leaves the system, and the rates at which they do so.</p></li>
-<li><p>The processes by which matter (or energy) moves among the various parts of the system internally, and the rates at which this happens.</p></li>
+<li><p>The processes by which matter (or energy) enters and leaves the system and the rates at which they do so.</p></li>
+<li><p>The processes by which matter (or energy) moves among the various parts of the system internally and the rates at which this happens.</p></li>
 <li><p>The amount of matter (or energy) in the system at a given time and its distribution within the system.</p></li>
 </ol>
-<p>As shown in <a class="reference internal" href="#hydro-box-model"><span class="std std-numref">Fig. 27</span></a>, the “boxes” in a box model represent the places where water (or energy, or whatever might be the material of interest) is stored for a period of time within the system. These storage places are called <em><strong>reservoirs</strong></em>.  When the flux of matter into a reservoir matches the flux out of that reservoir, we say that the reservoir is at <em><strong>steady state</strong></em>. The average length of time water spends in any of these reservoirs is called its <em><strong>residence time</strong></em>. The residence time of any material in any particular reservoir is deter- mined by the interaction of many factors, including the physical, chemical, and biologic properties of the material itself, the properties of the reservoir, and any external forces or processes acting on either the material or the reservoir.</p>
+<p>As shown in <a class="reference internal" href="#hydro-box-model"><span class="std std-numref">Fig. 27</span></a>, the “boxes” in a box model represent the places where water (or energy, or whatever might be the material of interest) is stored for some time within the system. These storage places are called <em><strong>reservoirs</strong></em>.  When the flux of matter into a reservoir matches the flux out of that reservoir, we say that the reservoir is at <em><strong>steady state</strong></em>. The average time water spends in these reservoirs is called its <em><strong>residence time</strong></em>. The residence time of any material in any particular reservoir is determined by the interaction of many factors, including the physical, chemical, and biological properties of the material itself, the properties of the reservoir, and any external forces or processes acting on either the material or the reservoir.</p>
 <figure class="margin-caption align-default" id="hydro-box-model">
 <img alt="_images/water-cycle-science.jpeg" src="_images/water-cycle-science.jpeg" />
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">The global hydrological cycle is shown as a box model in this figure. Fluxes (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>) and reservoirs (<span class="math notranslate nohighlight">\(\pu{e3 km3}\)</span>) with natural and anthropogenic cycles are included. Big vertical arrows show total annual precipitation and evapotranspiration over land and ocean (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>), which include annual precipitation and evapotranspiration in major landscapes (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>) presented by small vertical arrows; parentheses indicate area (<span class="math notranslate nohighlight">\(\pu{e6 km2}\)</span>). The direct groundwater discharge, which is estimated to be about <span class="math notranslate nohighlight">\(\pu{10 \%}\)</span> of total river discharge globally, is included in river discharge.  Image source: <a class="reference external" href="https://www.science.org/doi/10.1126/science.1128845">Global Hydrological Cycles and World Water Resources | Science</a></span><a class="headerlink" href="#hydro-box-model" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">The global hydrological cycle is shown as a box model in this figure. Fluxes (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>) and reservoirs (<span class="math notranslate nohighlight">\(\pu{e3 km3}\)</span>) with natural and anthropogenic cycles are included. Big vertical arrows show total annual precipitation and evapotranspiration over land and ocean (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>), which include annual precipitation and evapotranspiration in major landscapes (<span class="math notranslate nohighlight">\(\pu{e3 km3 yr-1}\)</span>) presented by small vertical arrows; parentheses indicate area (<span class="math notranslate nohighlight">\(\pu{e6 km2}\)</span>). The direct groundwater discharge, estimated to be about <span class="math notranslate nohighlight">\(\pu{10 \%}\)</span> of total river discharge globally, is included in river discharge.  Image source: <a class="reference external" href="https://www.science.org/doi/10.1126/science.1128845">Global Hydrological Cycles and World Water Resources | Science</a></span><a class="headerlink" href="#hydro-box-model" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Under steady state conditions, the residence time can be calculated as shown in eq <a class="reference internal" href="#equation-residence-time">(5)</a>.</p>
+<p>Under steady-state conditions, the residence time can be calculated as shown in eq <a class="reference internal" href="#equation-residence-time">(5)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-residence-time">
 <span class="eqno">(5)<a class="headerlink" href="#equation-residence-time" title="Link to this equation">#</a></span>\[\text{Residence time} = \dfrac{\text{Reservoir Amount}}{\text{Rate of addition/removal}}\]</div>
 </section>
 <section id="states-and-state-variables">
 <h3>States and State Variables<a class="headerlink" href="#states-and-state-variables" title="Link to this heading">#</a></h3>
-<p>In thermodynamics, it is important to explicitly define the properties (e.g., composition, energy, temperature, pressure, and volume) of a system – these properties help us understand changes in the <em><strong>state of system</strong></em> during a chemical process. When state of the system changes, these properties change. <em><strong>State variables</strong></em> (or <em><strong>state functions</strong></em>) are properties that are determined by the state of the system, regardless of how they were achieved. That is, when the state of the system changes, the magnitude of the change is only dependent on the initial and final states of the system and not on how the change is accomplished. Energy, pressure, temperature, and volume are examples of state variables. Several important state variables are not measurable in the absolute sense in a particular equilibrium state, though they do have fixed, finite values in these states. However, the changes between the equilibrium states can be measured. Changes in system variables can be denoted as shown below. The <span class="math notranslate nohighlight">\(\Delta\)</span> is a standard mathematical symbol for change and refers to the <em>final</em> minus <em>initial</em> values as shown below.</p>
+<p>In thermodynamics, it is important to explicitly define a system’s properties (e.g., composition, energy, temperature, pressure, and volume). These properties help us understand changes in the <em><strong>state of the system</strong></em> during a chemical process. When the state of the system changes, these properties change. <em><strong>State variables</strong></em> (or <em><strong>state functions</strong></em>) are properties determined by the state of the system, regardless of how they were achieved. That is, when the state of the system changes, the magnitude of the change only depends on the initial and final states of the system and not on how the change is accomplished. Energy, pressure, temperature, and volume are examples of state variables. Several important state variables are not measurable in the absolute sense in a particular equilibrium state, though they do have fixed, finite values in these states. However, the changes between the equilibrium states can be measured. Changes in system variables can be denoted below. The <span class="math notranslate nohighlight">\(\Delta\)</span> is a standard mathematical symbol for change and refers to the <em>final</em> minus <em>initial</em> values, as shown below.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 	\begin{eqnarray*}
@@ -580,9 +561,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 		\Delta T &amp;=&amp; T_{final}-T_{initial}
 	\end{eqnarray*}
 \end{split}\]</div>
-<p>Thermodynamic properties can be extensive properties or intensive properties. <em><strong>Extensive properties</strong></em> are dependent on the amount of the material in the system (e.g., mass, volume.) <em><strong>Intensive properties</strong></em> are independent on the amount of material. They are the same for any subset of the material in the system (e.g., concentration, temperature, pressure). <a class="reference internal" href="#state-properties"><span class="std std-numref">Table 5</span></a> lists a summary of the most commonly-used state variables.</p>
+<p>Thermodynamic properties can be extensive properties or intensive properties. <em><strong>Extensive properties</strong></em> are dependent on the amount of the material in the system (e.g., mass, volume.) <em><strong>Intensive properties</strong></em> are independent of the amount of material. They are the same for any subset of the material in the system (e.g., concentration, temperature, pressure). <a class="reference internal" href="#state-properties"><span class="std std-numref">Table 5</span></a> lists a summary of the most commonly-used state variables.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="state-properties">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Commonly-used state extensive and intensive properties and their standard SI units. Note: Molar properties are normalized by moles of material while specific properties are normalized by mass.</span><a class="headerlink" href="#state-properties" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Commonly-used state extensive and intensive properties and their standard SI units. Note: Molar properties are normalized by moles of material, while specific properties are normalized by mass.</span><a class="headerlink" href="#state-properties" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Type</strong></p></th>
 <th class="head"><p><strong>Extensive Property</strong></p></th>
@@ -641,7 +622,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Conservation of Mass</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Conservation of mass Let’s determine concentration in a solution (<span class="math notranslate nohighlight">\(S\)</span>) formed when one spoon (<span class="math notranslate nohighlight">\(\pu{5 mL}\)</span>) of seawater (<span class="math notranslate nohighlight">\(sw\)</span>) from Folly Beach (<span class="math notranslate nohighlight">\(=\pu{10.8 g L^{-1}}\)</span>) at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> is added to <span class="math notranslate nohighlight">\(\pu{1.0 L}\)</span> of freshwater (<span class="math notranslate nohighlight">\(fw\)</span>) from Goose Creek reservoir (<span class="math notranslate nohighlight">\(=\pu{6 mg L^{-1}}\)</span>). Since, concentration is an intensive property and is not additive, it needs to be transformed to an extensive property. The extensive property equivalent of concentration is mass (<span class="math notranslate nohighlight">\(m = C\times V\)</span>, where <span class="math notranslate nohighlight">\(m\)</span> is mass, <span class="math notranslate nohighlight">\(C\)</span> is concentration and <span class="math notranslate nohighlight">\(V\)</span> is volume).</p>
+<p class="sd-card-text">Conservation of mass Let’s determine concentration in a solution (<span class="math notranslate nohighlight">\(S\)</span>) formed when one spoon (<span class="math notranslate nohighlight">\(\pu{5 mL}\)</span>) of seawater (<span class="math notranslate nohighlight">\(sw\)</span>) from Folly Beach (<span class="math notranslate nohighlight">\(=\pu{10.8 g L^{-1}}\)</span>) at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> is added to <span class="math notranslate nohighlight">\(\pu{1.0 L}\)</span> of freshwater (<span class="math notranslate nohighlight">\(fw\)</span>) from Goose Creek reservoir (<span class="math notranslate nohighlight">\(=\pu{6 mg L^{-1}}\)</span>). Since concentration is an intensive and not additive property, it needs to be transformed into an extensive property. The extensive property equivalent of concentration is mass (<span class="math notranslate nohighlight">\(m = C\times V\)</span>, where <span class="math notranslate nohighlight">\(m\)</span> is mass, <span class="math notranslate nohighlight">\(C\)</span> is concentration, and <span class="math notranslate nohighlight">\(V\)</span> is volume).</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -660,13 +641,13 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </details></section>
 <section id="phases-and-components">
 <h3>Phases and Components<a class="headerlink" href="#phases-and-components" title="Link to this heading">#</a></h3>
-<p>Thermodynamic properties are used to define the state of the system. But we need to know how many of these properties are required to actually define a system? You can intuitively guess that this would depend on the complexity of the system. The number of properties required is determined by the number of phases and components present in the system.</p>
-<p>A <em><strong>phase</strong></em> is defined as a homogeneous body of matter that has distinct boundaries with adjacent phases, and hence can be mechanically separable. Shape, orientation, and position of a phase in relation to adjacent phases is irrelevant, so a single phase may occur in several locations within a system. Examples of single phases include, quartz in granite and a salt solution. There are three common phases – solid, liquid, gas or vapor. A system having only a single phase is <em>homogeneous</em> and a system with multiple phases is <em>heterogeneous</em>.</p>
-<p><em><strong>Components</strong></em> are used to describe the chemical composition of a system. They are defined as the smallest set of chemical formula required to completely describe the composition of all the phases that make up a system. For example, in a <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span> solution (doesn’t matter if there is water vapor or calcite precipitate in the solution), the combination of <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span> and describes the composition of all phases.</p>
-<p>So, how many thermodynamic properties does one need in a system that <span class="math notranslate nohighlight">\(P\)</span> phases and <span class="math notranslate nohighlight">\(C\)</span> components? According to the <em><strong>Gibbs Phase Rule</strong></em>, <span class="math notranslate nohighlight">\(C-P+2\)</span> properties are needed.</p>
+<p>Thermodynamic properties are used to define the state of the system. However, we need to know how many properties are required to define a system. You can intuitively guess that this would depend on the system’s complexity. The number of properties required is determined by the number of phases and components in the system.</p>
+<p>A <em><strong>phase</strong></em> is defined as a homogeneous body of matter with distinct boundaries with adjacent phases and hence can be mechanically separable. A phase’s shape, orientation, and position in relation to adjacent phases are irrelevant, so a single phase may occur in several locations within a system. Examples of single phases include quartz in granite and a salt solution. There are three common phases: solid, liquid, gas, and vapor. A system with only one phase is <em>homogeneous</em> and a system with multiple phases is <em>heterogeneous</em>.</p>
+<p><em><strong>Components</strong></em> are used to describe the chemical composition of a system. They are defined as the smallest set of chemical formulas required to completely describe the composition of all the phases that make up a system. For example, in a <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span> solution (it doesn’t matter if there is water vapor or calcite precipitate in the solution), the combination of <span class="math notranslate nohighlight">\(\ce{NaCl}\)</span> describes the composition of all phases.</p>
+<p>So, how many thermodynamic properties does one need in a system with <span class="math notranslate nohighlight">\(P\)</span> phases and <span class="math notranslate nohighlight">\(C\)</span> components? According to the <em><strong>Gibbs Phase Rule,</strong></em>, <span class="math notranslate nohighlight">\(C-P+2\)</span> properties are needed.</p>
 <p><em>Why do we need to know thermodynamic properties?</em> This will become clear as we study the laws of thermodynamics.</p>
-<p>Unlike what you have learned about the definition of a law according to the scientific method, the thermodynamics laws are concepts held to be true without derivation or proof. The basis of thermodynamics is built on three conservation statements: in any process, mass, energy, and momentum are conserved.</p>
-<p>Originally, there were only three laws of thermodynamics that were formulated.  However, when the fourth law was formulated, it was decided that this fourth law was even more fundamental than the original three laws. Instead of renumbering the original three laws, the fourth law was named the “Zeroth” law.</p>
+<p>Unlike what you have learned about the definition of a law according to the scientific method, thermodynamics laws are concepts held to be true without derivation or proof. The basis of thermodynamics is built on three conservation statements: in any process, mass, energy, and momentum are conserved.</p>
+<p>Initially, only three laws of thermodynamics were formulated.  However, when the fourth law was formulated, it was decided that this fourth law was even more fundamental than the original three laws. Instead of renumbering the original three laws, the fourth law was named the “Zeroth” law.</p>
 </section>
 </section>
 </section>
@@ -726,7 +707,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -800,8 +782,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

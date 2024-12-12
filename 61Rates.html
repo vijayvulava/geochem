@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="6 Chemical Kinetics" href="6Kinetics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -414,17 +395,17 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chemical-kinetics">
 <h1>6.1  Chemical Kinetics<a class="headerlink" href="#chemical-kinetics" title="Link to this heading">#</a></h1>
-<p>Chemical equilibrium is a thermodynamics concept. Thermodynamics is able to predict what reactions as possible, however, it does not tell us how fast reactions happen. For example, consider the following reaction that occurs naturally in nature:</p>
+<p>Chemical equilibrium is a thermodynamics concept. Thermodynamics can predict what reactions are possible, however, it does not tell us how fast reactions happen. For example, consider the following reaction that occurs naturally in nature:</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 C6H12O6 (s) + 6 O2 (g) -&gt; 6 CO2 (g) + 6 H2O (l)
 }\]</div>
-<p>Per thermodynamics, the above reaction involving glucose (<span class="math notranslate nohighlight">\(\ce{C6H12O6}\)</span> or sugar) proceeds spontaneously under standard conditions and glucose is expected to combust in the presence of <span class="math notranslate nohighlight">\(\ce{O2}\)</span>. In reality, when do we observe spontaneous combustion of glucose? We don’t, because the above reaction proceeds very slowly.</p>
-<p>In thermodynamics, we explained that reactions occur spontaneously (this term is unrelated to rates of reactions) and reach equilibrium by minimizing <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> . In all spontaneous reactions, products have free energies less than that of the reactants. In some cases, it take little or no energy to start the process of creation of the products (<a class="reference internal" href="#activation-energy"><span class="std std-numref">Fig. 46</span></a>).</p>
+<p>Per thermodynamics, the above reaction involving glucose (<span class="math notranslate nohighlight">\(\ce{C6H12O6}\)</span> or sugar) proceeds spontaneously under standard conditions, and glucose is expected to combust in the presence of <span class="math notranslate nohighlight">\(\ce{O2}\)</span>. In reality, when do we observe spontaneous combustion of glucose? We don’t because the above reaction proceeds very slowly.</p>
+<p>In thermodynamics, we explained that reactions occur spontaneously (this term is unrelated to rates of reactions) and reach equilibrium by minimizing <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span>. In all spontaneous reactions, products have less free energy than reactants. In some cases, it takes little or no energy to start the process of creation of the products (<a class="reference internal" href="#activation-energy"><span class="std std-numref">Fig. 46</span></a>).</p>
 <figure class="margin-caption align-default" id="activation-energy">
 <img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Activation2_updated.svg/1280px-Activation2_updated.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Activation2_updated.svg/1280px-Activation2_updated.svg.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Energy used in the course of the glucose reaction with and without external support (catalyst). In either casem the activation energy must be exceeded for the reaction to proceed. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Activation_energy">Activation energy - Wikipedia</a></span><a class="headerlink" href="#activation-energy" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Energy is used during the glucose reaction with and without external support (catalyst). In either case, the activation energy must be exceeded for the reaction to proceed. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Activation_energy">Activation energy - Wikipedia</a></span><a class="headerlink" href="#activation-energy" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In other cases, external factors such as catalysts can lower the activation energy to overcome an energy barrier (<a class="reference internal" href="#activation-energy"><span class="std std-numref">Fig. 46</span></a>). This requirement adds time for a reaction to reach equilibrium.</p>
@@ -437,21 +418,21 @@ frameborder="0" allowfullscreen class="video"></iframe>
 \[\ce{
 CaSO4.2 H2O (s) -&gt;[H2O] Ca^2+ (aq) + SO4^2- (aq) + 2 H2O (l)
 }\]</div>
-<p>This reaction is thermodynamically favorable, i.e., <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ&lt;0\)</span>. In order for this reaction to proceed, energy must be spent break chemical bonds within the crystalline structure, followed by diffusion of and away from the crystalline surface. The dissolution will continue until there is a dissolved ion gradient between the crystalline surface and the bulk aqueous solution. Thermodynamics does not explicitly account for these intermediate time-limiting steps.</p>
+<p>This reaction is thermodynamically favorable, i.e., <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ&lt;0\)</span>. For this reaction to proceed, energy must be spent to break chemical bonds within the crystalline structure, followed by diffusion of and away from the crystalline surface. The dissolution will continue until there is a dissolved ion gradient between the crystalline surface and the bulk aqueous solution. Thermodynamics does not explicitly account for these intermediate time-limiting steps.</p>
 <p><em><strong>Chemical kinetics</strong></em> is the study of how rapidly reactions take place. Chemical kinetics provide important information for the elucidation of chemical mechanisms.</p>
 <p>Consider a chemical reaction expressed in the following general form:</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 Reactants -&gt; Products
 }\]</div>
-<p>Over the course of this reaction, concentrations of the <em>Reactants</em> decrease while concentrations of the <em>Products</em> increase. The rates at which the changes in concentrations occur depend on the chemical system in question.</p>
-<p>The <em><strong>Collision Theory</strong></em> of chemical kinetics, the reaction rate is directly proportional to the number of collision at any given time.</p>
+<p>Throughout this reaction, concentrations of the <em>Reactants</em> decrease while concentrations of the <em>Products</em> increase. The rates at which the changes in concentrations occur depend on the chemical system.</p>
+<p>In the <em><strong>Collision Theory</strong></em> of chemical kinetics, the reaction rate is directly proportional to the number of collisions at any given time.</p>
 <div class="math notranslate nohighlight" id="equation-collisions-rate">
 <span class="eqno">(58)<a class="headerlink" href="#equation-collisions-rate" title="Link to this equation">#</a></span>\[\text{Rate} \propto \frac{\text{Number of Collisions}}{\text{Time}}\]</div>
-<p>Not every collision between molecules results in a reaction, however, the collision theory gives simple basis to explaining chemical reaction mechanisms. For example, a molecule in motion possesses kinetic energy and when molecules collide, part of this kinetic energy is converted to vibrational energy, which can cause some chemical bonds in molecules and crystalline structures to break. A minimum amount of energy, the activation energy (<span class="math notranslate nohighlight">\(\Delta G^\ddagger\)</span>), required to initiate a chemical reaction (see <a class="reference internal" href="#activation-energy"><span class="std std-numref">Fig. 46</span></a>). Without this minimum amount of energy at impact, a collision will be ineffective or the reaction will occur at a slow rate.</p>
+<p>Not every collision between molecules results in a reaction. However, the collision theory gives a simple basis for explaining chemical reaction mechanisms. For example, a molecule in motion possesses kinetic energy. When molecules collide, part of this kinetic energy is converted to vibrational energy, which can cause some chemical bonds in molecules and crystalline structures to break. A minimum amount of energy, the activation energy (<span class="math notranslate nohighlight">\(\Delta G^\ddagger\)</span>), is required to initiate a chemical reaction (see <a class="reference internal" href="#activation-energy"><span class="std std-numref">Fig. 46</span></a>). Without this minimum energy at impact, a collision will be ineffective, or the reaction will occur slowly.</p>
 <section id="reaction-rates">
 <h2>Reaction Rates<a class="headerlink" href="#reaction-rates" title="Link to this heading">#</a></h2>
-<p>Since kinetics is concerned with the change of chemical concentrations over time, or the <em><strong>rates</strong></em> of chemical reactions become important.</p>
+<p>Since kinetics is concerned with changing chemical concentrations over time, the <em><strong>rates</strong></em> of chemical reactions become important.</p>
 <p>Consider the following hypothetical reaction:</p>
 <div class="math notranslate nohighlight">
 \[\ce{A -&gt; B}\]</div>
@@ -459,13 +440,13 @@ Reactants -&gt; Products
 <figure class="margin-caption align-default" id="rxn-ab">
 <img alt="https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/section_18/e5dd3f15f478af1b02121333c365af99.jpg" src="https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/section_18/e5dd3f15f478af1b02121333c365af99.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 47 </span><span class="caption-text">The reaction mixture initially contains only A molecules (purple). With increasing time, the number of A molecules decreases and more B molecules (green) are formed (top). The graph shows the change in the number of A and B molecules in the reaction as a function of time (bottom). Image source: <a class="reference external" href="https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/s18-02-reaction-rates-and-rate-laws.html">Reaction Rates and Rate Laws (saylordotorg.github.io)</a></span><a class="headerlink" href="#rxn-ab" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">The reaction mixture initially contains only <em>A</em> molecules (purple). The number of <em>A</em> molecules decreases with increasing time, and more <em>B</em> molecules (green) are formed (top). The graph shows the change in the reaction’s number of <em>A</em> and <em>B</em> molecules as a function of time (bottom). Image source: <a class="reference external" href="https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/s18-02-reaction-rates-and-rate-laws.html">Reaction Rates and Rate Laws (saylordotorg.github.io)</a></span><a class="headerlink" href="#rxn-ab" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>We can express the change in chemical concentration of each chemical species as a function of time using the “<span class="math notranslate nohighlight">\(\Delta\)</span>” notation.</p>
 <div class="math notranslate nohighlight" id="equation-reaction-rate">
 <span class="eqno">(59)<a class="headerlink" href="#equation-reaction-rate" title="Link to this equation">#</a></span>\[\text{Rate} = -\frac{\Delta [A]}{\Delta t} \quad \text{or} \quad \text{Rate} =  \frac{\Delta [B]}{\Delta t}\]</div>
-<p>Here “[]” represents concentration of a chemical specie, while the “–” (minus) sign represents decrease in concentration. Rate is always a positive quantity, so when it is expressed as <span class="math notranslate nohighlight">\(\Delta [A]/\Delta t\)</span>, a minus sign is needed in the rate expression to make the rate positive. When the rate is expressed in terms of the change in a product concentration, no negative sign is needed to make the rate positive because the product concentration increases with time. Rates calculated in this way are average rates over the time period <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
+<p>Here, “[]” represents the concentration of a chemical species, while the “<span class="math notranslate nohighlight">\(-\)</span>” (minus) sign represents a decrease in concentration. Rate is always a positive quantity, so when it is expressed as <span class="math notranslate nohighlight">\(\Delta [A]/\Delta t\)</span>, a minus sign is needed in the rate expression to make the rate positive. When the rate is expressed in terms of the change in a product concentration, no negative sign is needed to make the rate positive because the product concentration increases with time. Rates calculated this way are average rates over the period <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Reaction Rates</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -510,16 +491,16 @@ CO2 + 2 H2O &amp;-&gt; CH4 + 2 O2\\
 </details></section>
 <section id="stoichiometry-reaction-rates">
 <h2>Stoichiometry &amp; Reaction Rates<a class="headerlink" href="#stoichiometry-reaction-rates" title="Link to this heading">#</a></h2>
-<p>Consider a hypothetical chemical reaction, where two reactants <em>A</em> and <em>B</em> combine to form a product <em>AB</em>.</p>
+<p>Consider a hypothetical chemical reaction where two reactants <em>A</em> and <em>B</em> combine to form a product <em>AB</em>.</p>
 <div class="math notranslate nohighlight">
 \[\ce{A + B \rightarrow AB}\]</div>
-<p>This reactants show a one-to-one stoichiometry. One mole of <em>A</em> reacts with one mole of <em>B</em> to form the product, <span class="math notranslate nohighlight">\(AB\)</span>. That is, the reaction rates of <em>A</em> and <em>B</em> are identical. It also follows that reaction rates are proportional (<span class="math notranslate nohighlight">\(\propto\)</span>) to concentrations of <em>A</em> (<span class="math notranslate nohighlight">\([A]\)</span>) and <em>B</em> (<span class="math notranslate nohighlight">\([B]\)</span>). If the reaction rates are proportional to concentrations of the reactants, it can be summarized that reaction rates for the reaction are proportional to the product of <span class="math notranslate nohighlight">\([A]\)</span> and <span class="math notranslate nohighlight">\([B]\)</span> or <span class="math notranslate nohighlight">\([A]\times [B]\)</span>.</p>
+<p>These reactants show a one-to-one stoichiometry. One mole of <em>A</em> reacts with one mole of <em>B</em> to form the product, <span class="math notranslate nohighlight">\(AB\)</span>. The reaction rates of <em>A</em> and <em>B</em> are identical. It also follows that reaction rates are proportional (<span class="math notranslate nohighlight">\(\propto\)</span>) to concentrations of <em>A</em> (<span class="math notranslate nohighlight">\([A]\)</span>) and <em>B</em> (<span class="math notranslate nohighlight">\([B]\)</span>). If the reaction rates are proportional to concentrations of the reactants, it can be summarized that reaction rates for the reaction are proportional to the product of <span class="math notranslate nohighlight">\([A]\)</span> and <span class="math notranslate nohighlight">\([B]\)</span> or <span class="math notranslate nohighlight">\([A]\times [B]\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-rate-ab">
 <span class="eqno">(60)<a class="headerlink" href="#equation-rate-ab" title="Link to this equation">#</a></span>\[\text{Rate} \propto [A] \times [B]\]</div>
 <p>The proportional sign in Eq. <a class="reference internal" href="#equation-rate-ab">(60)</a> can be converted into an “=” sign by incorporating a proportionality constant, <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-ratelaw-ab">
 <span class="eqno">(61)<a class="headerlink" href="#equation-ratelaw-ab" title="Link to this equation">#</a></span>\[\text{Rate} = \kappa [A]^1[B]^1\]</div>
-<p>This expression where the reaction rate is equated to concentration of reactants are called <em>rate expressions</em> or <em>rate laws</em>. In this equation, <span class="math notranslate nohighlight">\(\kappa\)</span> is called the <em>rate constant</em>. By convention, the rate laws are only written for the reactants and each reactant has its own rate constant. Note that the exponent 1 is shown in Eq. <a class="reference internal" href="#equation-ratelaw-ab">(61)</a> refers to the number of moles of each reactant in the original chemical reaction. In this case, the <em><strong>reaction order</strong></em> for <em>A</em> and <em>B</em> is 1 (both have one mole each in the reaction.) The reaction order refers to the molecularity or the number of molecules of a reactant that are participating in a reaction. The reaction order for the whole reaction is the sum of the reaction order for all reactants. In this case, the reaction order for the above reaction is 2. Equation <a class="reference internal" href="#equation-ratelaw-ab">(61)</a> also shows that the rate is dependent on the reactant concentrations.</p>
+<p>This expression where the reaction rate is equated to reactant concentration is called <em>rate expressions</em> or <em>rate laws</em>. In this equation, <span class="math notranslate nohighlight">\(\kappa\)</span> is called the <em>rate constant</em>. By convention, the rate laws are only written for the reactants, and each reactant has its rate constant. Note that the exponent <span class="math notranslate nohighlight">\(1\)</span> is shown in Eq. <a class="reference internal" href="#equation-ratelaw-ab">(61)</a>, which refers to the number of moles of each reactant in the original chemical reaction. In this case, the <em><strong>reaction order</strong></em> for <em>A</em> and <em>B</em> is <span class="math notranslate nohighlight">\(1\)</span> (both have one mole each in the reaction.) The reaction order refers to the molecularity or the number of molecules of a reactant participating in a reaction. The reaction order for the whole reaction is the sum of the reaction order for all reactants. In this case, the reaction order for the above reaction is 2. Equation <a class="reference internal" href="#equation-ratelaw-ab">(61)</a> also shows that the rate depends on the reactant concentrations.</p>
 </section>
 </section>
 
@@ -578,7 +559,8 @@ CO2 + 2 H2O &amp;-&gt; CH4 + 2 O2\\
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -640,8 +622,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

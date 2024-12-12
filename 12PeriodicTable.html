@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="1.1 Atoms and Subatomic Particles" href="11Atoms.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -427,8 +408,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-periodic-table">
 <h1>1.2 The Periodic Table<a class="headerlink" href="#the-periodic-table" title="Link to this heading">#</a></h1>
-<p>The <strong>periodic table</strong> offers a lot of information that is used by geologists as well!  Understanding why elements in the periodic table are arranged in the particular way helps us understand major geological concepts better.</p>
-<p>Arrangement of elements in the <strong>periodic table</strong> based on their physical and chemical properties is arguably one of the greatest achievements in all of science. Many scientists over many hundreds of years studied elemental properties and a way to organize them. It culminated in the work of Dmitri Mendeleev (<a class="reference external" href="https://en.wikipedia.org/wiki/Dmitri_Mendeleev">Dmitri Mendeleev - Wikipedia</a>) - who finally created a version of the periodic table organized by atomic numbers of elements and arranged in groups and periods.  This modern periodic table is arguably one of the greatest achievements in modern science.</p>
+<p>The <strong>periodic table</strong> also offers a lot of information geologists use!  Understanding why elements in the periodic table are arranged in a particular way helps us understand major geological concepts better.</p>
+<p>The arrangement of elements in the <strong>periodic table</strong> based on their physical and chemical properties is arguably one of the most outstanding scientific achievements. Over hundreds of years, scientists have studied elemental properties and how to organize them. It culminated in the work of Dmitri Mendeleev (<a class="reference external" href="https://en.wikipedia.org/wiki/Dmitri_Mendeleev">Dmitri Mendeleev - Wikipedia</a>) - who finally created a version of the periodic table organized by atomic numbers of elements and arranged in groups and periods.  This modern periodic table is arguably one of the greatest achievements in modern science.</p>
 <p><a class="reference external" href="https://ed.ted.com/lessons/solving-the-puzzle-of-the-periodic-table-eric-rosado">Solving the puzzle of the periodic table - Eric Rosado | TED-Ed</a></p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/O-48znAg7VE" 
@@ -439,7 +420,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <iframe src="https://www.youtube.com/embed/fPnwBITSmgU" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Below is the latest version of IUPAC periodic table. The <a class="reference external" href="https://iupac.org/">International Union of Pure and Applied Chemistry (iupac.org)</a> is an nonpolitical and international authority on chemical nomenclature and terminology, including the naming of new elements in the periodic table and all elemental data. This version supersedes all other versions of periodic tables in all your textbooks. The periodic table is updated when new elements are created or new or updated data is available. Another good source of elemental information is <a class="reference external" href="https://ptable.com/#">Periodic Table - Ptable</a>.</p>
+<p>Below is the latest version of the IUPAC periodic table. The <a class="reference external" href="https://iupac.org/">International Union of Pure and Applied Chemistry (iupac.org)</a> is a nonpolitical and international authority on chemical nomenclature and terminology, including the naming of new elements in the periodic table and all elemental data. This version supersedes all other versions of periodic tables in all your textbooks. The periodic table is updated when new elements are created, or new or updated data is available. Another good source of elemental information is <a class="reference external" href="https://ptable.com/#">Periodic Table - Ptable</a>.</p>
 <figure class="margin-caption align-default" id="ptable-iupac">
 <img alt="https://iupac.org/wp-content/uploads/2022/05/IUPAC_Periodic_Table_150-04May22.jpg" src="https://iupac.org/wp-content/uploads/2022/05/IUPAC_Periodic_Table_150-04May22.jpg" />
 <figcaption>
@@ -448,30 +429,30 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </figure>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>The element Md was named for Mendeleev. Most recently, elements 113, 115, 117, and 118 were named as nihonium (Nh after Nihon or Japanese for land of the rising sun), moscovium (Mc after a research lab in Moscow, Russia), tennessine (Ts in honor of research labs in Oak Ridge and Nashville, Tennessee), and oganesson (Og after Yuri Oganessian), respectively.</p>
+<p>The element Md was named for Mendeleev. Most recently, elements 113, 115, 117, and 118 were named nihonium (Nh after Nihon or Japanese for the land of the rising sun), moscovium (Mc after a research lab in Moscow, Russia), tennessine (Ts in honor of research labs in Oak Ridge and Nashville, Tennessee), and oganesson (Og after Yuri Oganessian), respectively.</p>
 </aside>
-<p>The periodic table contains 118 elements and are arranged according to the <span class="math notranslate nohighlight">\(Z\)</span> shown above each element.  With the exception of <span class="math notranslate nohighlight">\(\ce{H}\)</span>, nonmetals appear at the far right of the table. The two rows of metals below the main table are separated to keep the table from being too wide. The 1-18 group designation is an IUPAC-recommendation.</p>
-<p>The elements are arranged in <strong>periods</strong>, horizontal rows, in order of increasing <span class="math notranslate nohighlight">\(Z\)</span>. The first period contains just two elements, <span class="math notranslate nohighlight">\(\ce{H}\)</span> and <span class="math notranslate nohighlight">\(\ce{He}\)</span>. The second and third periods each contain eight elements: <span class="math notranslate nohighlight">\(\ce{Li-Ne}\)</span>, and <span class="math notranslate nohighlight">\(\ce{Na-Ar}\)</span>, respectively. The fourth and fifth periods each contain 18 elements: <span class="math notranslate nohighlight">\(\ce{K-Kr}\)</span>, and <span class="math notranslate nohighlight">\(\ce{Rb-Xe}\)</span>, respectively.</p>
-<p>Most elements can be categorized as metals or nonmetals. One of the properties used to distinguish metals from nonmetals is metals’ ability to conduct heat and/or electricity. Metalloids are elements with properties that are intermediate between those of metals and nonmetals. These include <span class="math notranslate nohighlight">\(\ce{B, Si, Ge, As, Sb, Te, Po, and At}\)</span>. The  below shows main classes of elements in the periodic table.</p>
+<p>The periodic table contains 118 elements arranged according to the <span class="math notranslate nohighlight">\(Z\)</span> shown above each element.  Except for <span class="math notranslate nohighlight">\(\ce{H}\)</span>, nonmetals appear at the far right of the table. The two rows of metals below the main table are separated to keep the table from being too wide. The 1-18 group designation is an IUPAC recommendation.</p>
+<p>The elements are arranged in <strong>periods</strong>, horizontal rows, in order of increasing <span class="math notranslate nohighlight">\(Z\)</span>. The first period contains two elements, <span class="math notranslate nohighlight">\(\ce{H}\)</span> and <span class="math notranslate nohighlight">\(\ce{He}\)</span>. The second and third periods contain eight elements: <span class="math notranslate nohighlight">\(\ce{Li-Ne}\)</span>, and <span class="math notranslate nohighlight">\(\ce{Na-Ar}\)</span>, respectively. The fourth and fifth periods contain 18 elements: <span class="math notranslate nohighlight">\(\ce{K-Kr}\)</span>, and <span class="math notranslate nohighlight">\(\ce{Rb-Xe}\)</span>, respectively.</p>
+<p>Most elements can be categorized as metals or nonmetals. One of the properties that distinguishes metals from nonmetals is metals’ ability to conduct heat and/or electricity. Metalloids are elements with properties that are intermediate between those of metals and nonmetals. These include <span class="math notranslate nohighlight">\(\ce{B, Si, Ge, As, Sb, Te, Po, and At}\)</span>. The figure below shows the main classes of elements in the periodic table.</p>
 <figure class="margin-caption align-default" id="ptable-labels">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/259dc990a9ede0ba7b94a1a52af3c622dcacc9d0" src="https://openstax.org/apps/archive/20220815.182343/resources/259dc990a9ede0ba7b94a1a52af3c622dcacc9d0" />
 <figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">The periodic table organizes elements with similar properties into groups and periods. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-6-the-periodic-table">3.6 The Periodic Table - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#ptable-labels" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Vertical columns in the periodic table are groups, referred to collectively by their group number (Group 1, Group 2, and so on). For convenience, some groups have special names: e.g., Group 1 are alkali metals, Group 2 are alkaline earth metals, Group 16 are chalcogens, Group 17 are halogens, and Group 18 are the noble gases. Elements in Group 3-12 collectively are called the transition elements or the transition metals.</p>
+<p>Vertical columns in the periodic table are groups, referred to collectively by their group number (Group 1, Group 2, and so on). For convenience, some groups have special names: e.g., Group 1 are alkali metals, Group 2 are alkaline earth metals, Group 16 are chalcogens, Group 17 are halogens, and Group 18 are noble gases. Group 3-12 elements collectively are called the transition elements or the transition metals.</p>
 <p>For more information, see <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-6-the-periodic-table?target=%7B%22index%22%3A0%2C%22type%22%3A%22search%22%7D#fs-idm421502880">3.6 The Periodic Table - Chemistry: Atoms First | OpenStax</a>.</p>
 <section id="electron-configurations">
 <h2>Electron Configurations<a class="headerlink" href="#electron-configurations" title="Link to this heading">#</a></h2>
-<p>Hydrogen’s atomic structure is the simplest of all elements due to the presence of just one electron in its atomic structure.  For all other elements, quantum theory has to be applied to predict and describe the configuration of electrons in an atom.  Subatomic particles are not governed by the same physical laws as all other substances on Earth, obviously due to their size and mass.</p>
-<p>Understanding electronic structure of elements if fundamental to understanding how different minerals and rocks form.  Further, knowledge of electron configurations helps us understand and predict the properties of the elements. It also explains why the elements fit into the periodic table the way they do.</p>
+<p>Hydrogen’s atomic structure is the simplest of all elements due to the presence of just one electron in its atomic structure.  For all other elements, quantum theory has to be applied to predict and describe the configuration of electrons in an atom.  Due to their size and mass, subatomic particles are not governed by the same physical laws as all other substances on Earth.</p>
+<p>Understanding the electronic structure of elements is fundamental to understanding how different minerals and rocks form.  Further, knowledge of electron configurations helps us understand and predict the properties of the elements. It also explains why the elements fit into the periodic table the way they do.</p>
 <section id="quantum-mechanics">
 <h3>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Link to this heading">#</a></h3>
-<p>Pioneering work in quantum theory (quantum, or the smallest quantity of energy emitted or absorbed, was proposed by German physicist, Max Planck and later advanced by Einstein and others) revolutionized the whole field of physics and chemistry.  Other ideas in quantum mechanics (e.g., Heisenberg uncertainty principle, Schrödinger’s equation) greatly helped us understand complex particle- and wave-like behavior of electrons around the nucleus.</p>
-<p>Quantum mechanics does not allow us to specify the exact location of an electron in an atom, it does define the region where the electron is most likely to be at a given time. Electron density gives probability that an electron will be found in a particular region of an atom.  In this description of an atom, we use <em>atomic orbitals</em> to refer to wave function of an electron in an atom.</p>
-<p>Quantum numbers are required to describe the distribution of electron density in an atom. Each atomic orbital in an atom is characterized by a unique set of three quantum numbers: the principal quantum number (<span class="math notranslate nohighlight">\(n\)</span>), the angular momentum quantum number (<span class="math notranslate nohighlight">\(l\)</span>), and the magnetic quantum number (<span class="math notranslate nohighlight">\(m_l\)</span>).</p>
-<p>The principal quantum number (<span class="math notranslate nohighlight">\(n\)</span>) designates the size of the orbital. Values of <span class="math notranslate nohighlight">\(n\)</span> are <span class="math notranslate nohighlight">\(1,\ 2,\ 3,\ \ldots, \)</span> etc. Larger the <span class="math notranslate nohighlight">\(n\)</span>, greater the distance of an electron in that orbital from the nucleus.  Collection of orbitals with same <span class="math notranslate nohighlight">\(n\)</span> value is called a shell.</p>
-<p>The angular momentum quantum number (<span class="math notranslate nohighlight">\(l\)</span>) describes the shape of the orbital and depends on the value of <span class="math notranslate nohighlight">\(n\)</span> (range from 0 to <span class="math notranslate nohighlight">\(n-1\)</span>). One or more orbitals with same <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(l\)</span> values are called subshells. E.g., <span class="math notranslate nohighlight">\(2s\)</span> and <span class="math notranslate nohighlight">\(2p\)</span>. See <a class="reference internal" href="#orbital-desig"><span class="std std-numref">Table 2</span></a> for orbital designations.</p>
+<p>Pioneering work in quantum theory (quantum, or the smallest quantity of energy emitted or absorbed, was proposed by German physicist Max Planck and later advanced by Einstein and others) revolutionized the whole field of physics and chemistry.  Other ideas in quantum mechanics (e.g., Heisenberg uncertainty principle, Schrödinger’s equation) helped us understand the complex particle- and wave-like behavior of electrons around the nucleus.</p>
+<p>Quantum mechanics does not allow us to specify the exact location of an electron in an atom, but it does define the region where the electron is most likely to be at a given time. Electron density gives the probability that an electron will be found in a particular region of an atom.  In this description of an atom, we use <em>atomic orbitals</em> to refer to the wave function of an electron in an atom.</p>
+<p>Quantum numbers are required to describe an atom’s electron density distribution. Each atomic orbital in an atom is characterized by a unique set of three quantum numbers: the principal quantum number (<span class="math notranslate nohighlight">\(n\)</span>), the angular momentum quantum number (<span class="math notranslate nohighlight">\(l\)</span>), and the magnetic quantum number (<span class="math notranslate nohighlight">\(m_l\)</span>).</p>
+<p>The principal quantum number (<span class="math notranslate nohighlight">\(n\)</span>) designates the orbital size. Values of <span class="math notranslate nohighlight">\(n\)</span> are <span class="math notranslate nohighlight">\(1,\ 2,\ 3,\ \ldots, \)</span> etc. The larger the <span class="math notranslate nohighlight">\(n\)</span>, the greater the distance of an electron in that orbital from the nucleus.  A collection of orbitals with the same <span class="math notranslate nohighlight">\(n\)</span> value is called a shell.</p>
+<p>The angular momentum quantum number (<span class="math notranslate nohighlight">\(l\)</span>) describes the shape of the orbital and depends on the value of <span class="math notranslate nohighlight">\(n\)</span> (range from 0 to <span class="math notranslate nohighlight">\(n-1\)</span>). One or more orbitals with the same <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(l\)</span> values are called subshells. E.g., <span class="math notranslate nohighlight">\(2s\)</span> and <span class="math notranslate nohighlight">\(2p\)</span>. See <a class="reference internal" href="#orbital-desig"><span class="std std-numref">Table 2</span></a> for orbital designations.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="orbital-desig">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">Orbital designations</span><a class="headerlink" href="#orbital-desig" title="Link to this table">#</a></caption>
 <thead>
@@ -492,8 +473,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </tbody>
 </table>
 </div>
-<p>The magnetic quantum number (<span class="math notranslate nohighlight">\(m_l\)</span>) describes the orientation of the orbital in space.  Within a subshell, <span class="math notranslate nohighlight">\(m_l\)</span> depend on the value of <span class="math notranslate nohighlight">\(l\)</span> and there are (<span class="math notranslate nohighlight">\(2l+1\)</span>) values of <span class="math notranslate nohighlight">\(m_l\)</span> from <span class="math notranslate nohighlight">\(-l,\ldots, 0, \ldots, +l\)</span>.</p>
-<p>Though three quantum numbers are sufficient to describe an atomic orbital, electron spin quantum number (<span class="math notranslate nohighlight">\(m_s\)</span>) is necessary to describe an electron that occupies the orbital.  Physicists determined that electrons have magnetic properties due to spinning of electrons on their own axes.  The <span class="math notranslate nohighlight">\(m_s\)</span> value specifies two possible and opposite directions of spin as: <span class="math notranslate nohighlight">\(+\frac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(-\frac{1}{2}\)</span>. Quantum numbers are summarized in <a class="reference internal" href="#summary-quantum"><span class="std std-numref">Table 3</span></a>.</p>
+<p>The magnetic quantum number (<span class="math notranslate nohighlight">\(m_l\)</span>) describes the orbital orientation in space.  Within a subshell, <span class="math notranslate nohighlight">\(m_l\)</span> depend on the value of <span class="math notranslate nohighlight">\(l\)</span> and there are (<span class="math notranslate nohighlight">\(2l+1\)</span>) values of <span class="math notranslate nohighlight">\(m_l\)</span> from <span class="math notranslate nohighlight">\(-l,\ldots, 0, \ldots, +l\)</span>.</p>
+<p>Though three quantum numbers are sufficient to describe an atomic orbital, an electron spin quantum number (<span class="math notranslate nohighlight">\(m_s\)</span>) is necessary to describe an electron that occupies the orbital.  Physicists determined that electrons have magnetic properties due to electrons spinning on their axes.  The <span class="math notranslate nohighlight">\(m_s\)</span> value specifies two possible and opposite directions of spin as <span class="math notranslate nohighlight">\(+\frac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(-\frac{1}{2}\)</span>. Quantum numbers are summarized in <a class="reference internal" href="#summary-quantum"><span class="std std-numref">Table 3</span></a>.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="summary-quantum">
 <caption><span class="caption-number">Table 3 </span><span class="caption-text">Summary of quantum numbers</span><a class="headerlink" href="#summary-quantum" title="Link to this table">#</a></caption>
 <thead>
@@ -524,39 +505,39 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>An electron’s magnetic properties is the origin for electromagnetism. This property is used to identify elements using a mass spectromenter. For more information, see <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/2-3-atomic-structure-and-symbolism">2.3 Atomic Structure and Symbolism - Chemistry: Atoms First | OpenStax</a></p>
+<p>An electron’s magnetic properties are the origin of electromagnetism. This property is used to identify elements using a mass spectrometer. For more information, see <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/2-3-atomic-structure-and-symbolism">2.3 Atomic Structure and Symbolism - Chemistry: Atoms First | OpenStax</a></p>
 </aside>
 </section>
 <section id="atomic-orbitals">
 <h3>Atomic Orbitals<a class="headerlink" href="#atomic-orbitals" title="Link to this heading">#</a></h3>
-<p>Even though it is hard to describe what atomic orbitals look like, they are assigned specific shapes to help understand formation of chemical bonds and molecular geometry in Earth materials. These shapes represent probability distributions for the location of the electron. The <em>Heisenberg uncertainty principle</em> tells us that it is impossible to simultaneously measure the position and momentum of a particle. In this case, the position of an electron is only approximately known.   <a class="reference internal" href="#orbital-diagrams"><span class="std std-numref">Fig. 6</span></a> shows these approximate locations at any time.</p>
+<p>Even though it is hard to describe atomic orbitals, they are assigned specific shapes to help understand the formation of chemical bonds and molecular geometry in Earth materials. These shapes represent probability distributions for the location of the electron. The <em>Heisenberg uncertainty principle</em> tells us that it is impossible to simultaneously measure the position and momentum of a particle. In this case, the position of an electron is only approximately known.   <a class="reference internal" href="#orbital-diagrams"><span class="std std-numref">Fig. 6</span></a> shows these approximate locations at any time.</p>
 <figure class="margin-caption align-default" id="orbital-diagrams">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/a90abd7d07f0304260a7d292a97f60ef7eee1b1f" src="https://openstax.org/apps/archive/20220815.182343/resources/a90abd7d07f0304260a7d292a97f60ef7eee1b1f" />
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Balloon diagrams showing where electron densities are concentrated in <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, and <span class="math notranslate nohighlight">\(d\)</span> orbitals. Source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#orbital-diagrams" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Balloon diagrams show electron densities in <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, and <span class="math notranslate nohighlight">\(d\)</span> orbitals. Source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#orbital-diagrams" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="id1">
 <h3>Electron Configurations<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<p>The <span class="math notranslate nohighlight">\(\ce{H}\)</span> atom is a particularly simple system because it contains only one electron, which may reside in the <span class="math notranslate nohighlight">\(1s\)</span> orbital (the ground state), or in some higher-energy orbital (an excited state). With many-electron systems, we need to know the ground-state electron configuration – i.e., how the electrons are distributed in the various atomic orbitals. To do this, we need to know the relative energies of atomic orbitals in a many-electron system, which differ from those in a one-electron system such as <span class="math notranslate nohighlight">\(\ce{H}\)</span>.</p>
+<p>The <span class="math notranslate nohighlight">\(\ce{H}\)</span> atom is a straightforward system because it contains only one electron, which may reside in the <span class="math notranslate nohighlight">\(1s\)</span> orbital (the ground state) or some higher-energy orbital (an excited state). With many-electron systems, we need to know the ground-state electron configuration – i.e., how the electrons are distributed in the various atomic orbitals. We need to know the relative energies of atomic orbitals in a many-electron system, which differ from those in a one-electron system such as <span class="math notranslate nohighlight">\(\ce{H}\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The ground state for a many-electron atom is the one in which all the electrons occupy orbitals of the lowest possible energy.</p>
 </div>
-<p><a class="reference internal" href="#orbital-energy"><span class="std std-numref">Fig. 7</span></a> shows the general order or orbital energies in a many-electron atom. In contrast to the <span class="math notranslate nohighlight">\(\ce{H}\)</span> atom, many-electron systems depend on values of both <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(l\)</span>. The general order in which electrons fill can be summarized in <a class="reference internal" href="#orbital-order"><span class="std std-numref">Fig. 8</span></a>.</p>
+<p><a class="reference internal" href="#orbital-energy"><span class="std std-numref">Fig. 7</span></a> shows the general order or orbital energies in a many-electron atom. In contrast to the <span class="math notranslate nohighlight">\(\ce{H}\)</span> atom, many-electron systems depend on <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(l\)</span> values. The general order in which electrons fill can be summarized in <a class="reference internal" href="#orbital-order"><span class="std std-numref">Fig. 8</span></a>.</p>
 <p>Using <em><strong>Pauli exclusion principle</strong></em>, no two electrons in an atom can have the same four quantum numbers. Because each orbital corresponds to a unique set of the first three quantum numbers and the spin quantum number has only two possible values, two electrons with opposite spins may occupy a given orbital.</p>
 <figure class="margin-caption align-default" id="orbital-energy">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/7ca7e55b26cf820d042d7ad8657e8e1e725e95d7" src="https://openstax.org/apps/archive/20220815.182343/resources/7ca7e55b26cf820d042d7ad8657e8e1e725e95d7" />
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Orbital energy levels in many-electron atoms. For a given value of <span class="math notranslate nohighlight">\(n\)</span>, orbital energy increases with the value of <span class="math notranslate nohighlight">\(l\)</span>. <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(d\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> levels can hold 2, 6, 10, and 14 electrons, respectively. Source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#orbital-energy" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Orbital energy levels in many-electron atoms. For a given value of <span class="math notranslate nohighlight">\(n\)</span>, orbital energy increases with <span class="math notranslate nohighlight">\(l\)</span>. <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(d\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> levels can hold 2, 6, 10, and 14 electrons, respectively. Source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#orbital-energy" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We can write electron configurations for elements based on the order of orbital energies and the <em>Pauli exclusion principle</em>. The <em><strong>Aufbau principle</strong></em> makes it possible to “build” the periodic table of the elements and determine their electron configurations by steps. Each step involves adding one proton to the nucleus and one electron to the appropriate atomic orbital. Through this process we gain a detailed knowledge of the electron configurations of the elements. The <em><strong>Hund’s rule</strong></em>, which states that the most stable arrangement of electrons in orbitals of equal energy is the one in which the number of electrons with the same spin is maximized, is finally used to round up all the rules for writing the electron configurations.</p>
+<p>We can write electron configurations for elements based on the order of orbital energies and the <em>Pauli exclusion principle</em>. The <em><strong>Aufbau principle</strong></em> makes it possible to “build” the periodic table of the elements and determine their electron configurations in steps. Each step involves adding one proton to the nucleus and one electron to the appropriate atomic orbital. Through this process, we gain a detailed knowledge of the electron configurations of the elements. The <em><strong>Hund’s rule</strong></em> states that the most stable arrangement of electrons in orbitals of equal energy is the one in which the number of electrons with the same spin is maximized, which is finally used to round up all the rules for writing the electron configurations.</p>
 <figure class="margin-caption align-default" id="orbital-order">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/7909e7ef9926a80d76573e73d00eec2c1be57c1e" src="https://openstax.org/apps/archive/20220815.182343/resources/7909e7ef9926a80d76573e73d00eec2c1be57c1e" />
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">A simple way to remember the order in which orbitals fill with electrons. The arrow leads through each subshell in the appropriate filling order for electron configurations. This chart is straightforward to construct. Simply make a column for all the <span class="math notranslate nohighlight">\(s\)</span> orbitals with each <span class="math notranslate nohighlight">\(n\)</span> shell on a separate row. Repeat for <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(d\)</span>, and <span class="math notranslate nohighlight">\(f\)</span>. Be sure to only include orbitals allowed by the quantum numbers (no <span class="math notranslate nohighlight">\(1p\)</span> or <span class="math notranslate nohighlight">\(2d\)</span>, and so forth). Finally, draw diagonal lines from top to bottom as shown. Source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#orbital-order" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">A simple way to remember the order in which orbitals fill with electrons. The arrow leads through each subshell in the appropriate filling order for electron configurations. This chart is straightforward to construct. Make a column for all the <span class="math notranslate nohighlight">\(s\)</span> orbitals with each <span class="math notranslate nohighlight">\(n\)</span> shell on a separate row. Repeat for <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(d\)</span>, and <span class="math notranslate nohighlight">\(f\)</span>. Be sure to only include orbitals allowed by the quantum numbers (no <span class="math notranslate nohighlight">\(1p\)</span> or <span class="math notranslate nohighlight">\(2d\)</span>, and so forth). Finally, draw diagonal lines from top to bottom as shown. Source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#orbital-order" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition-general-rules-for-writing-electron-configurations admonition">
@@ -566,9 +547,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li><p>Electrons will reside in the available orbitals of the lowest possible energy. The overall energy of the atom is minimized.</p></li>
 <li><p>Each orbital can accommodate a maximum of two electrons.</p></li>
 <li><p>Electrons will not pair in degenerate (equal energy) orbitals if an empty orbital is available.</p></li>
-<li><p>For each set of orbitals (<span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(d\)</span>, <span class="math notranslate nohighlight">\(f\)</span>) the electrons will first be added singly to each available orbital.  After all the orbitals in a set have a single set have a single electron, subsequent electrons can enter these orbitals if they have the opposite spin.</p></li>
-<li><p>Atoms attain their maximum stability when the available orbitals are either completely-filled, half-filled, or empty.</p></li>
-<li><p>Orbitals will fill in the order indicated shown in the  above, which provides a simple way for you to remember the proper order.</p></li>
+<li><p>The electrons will first be added singly to each available orbital for each set of orbitals (<span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(d\)</span>, <span class="math notranslate nohighlight">\(f\)</span>).  After all the orbitals in a set have a single set of a single electron, subsequent electrons can enter these orbitals if they have the opposite spin.</p></li>
+<li><p>Atoms attain maximum stability when the available orbitals are completely-filled, half-filled, or empty.</p></li>
+<li><p>Orbitals will fill in the order indicated shown in Fig. <a class="reference internal" href="#orbital-order"><span class="std std-numref">Fig. 8</span></a>, which provides a simple way for you to remember the proper order.</p></li>
 </ol>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -576,7 +557,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <span class="sd-summary-text">Example: Writing electron configuration</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Let’s write the electron configuration of a calcium (<span class="math notranslate nohighlight">\(\ce{Ca}\)</span>) atom (<span class="math notranslate nohighlight">\(Z = 20\)</span>) using the general rules given above.</p>
 <blockquote>
-<div><p class="sd-card-text">Because <span class="math notranslate nohighlight">\(Z = 20\)</span>, we know that a <span class="math notranslate nohighlight">\(\ce{Ca}\)</span> atom has 20 electrons. They will fill orbitals in the order designated in the  above. Remember, each <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(d\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> levels can hold 2, 6, 10, and 14 electrons, respectively. Follow that order and start assigning electrons to each orbital until you account for 20 electrons.</p>
+<div><p class="sd-card-text">Because <span class="math notranslate nohighlight">\(Z = 20\)</span>, we know that a <span class="math notranslate nohighlight">\(\ce{Ca}\)</span> atom has 20 electrons. They will fill orbitals in the order designated in Fig. <a class="reference internal" href="#orbital-order"><span class="std std-numref">Fig. 8</span></a>. Remember, each <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(d\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> levels can hold 2, 6, 10, and 14 electrons, respectively. Follow that order and start assigning electrons to each orbital until you account for 20 electrons.</p>
 </div></blockquote>
 <blockquote>
 <div><p class="sd-card-text">Orbitals will fill in the following order: <span class="math notranslate nohighlight">\(1s^2 2s^2 2p^6 3s^2 3p^6 4s^2\)</span>.</p>
@@ -585,18 +566,18 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </details></section>
 <section id="electron-configuration-and-the-periodic-table">
 <h3>Electron Configuration and the Periodic Table<a class="headerlink" href="#electron-configuration-and-the-periodic-table" title="Link to this heading">#</a></h3>
-<p>Noble gases (<span class="math notranslate nohighlight">\(\ce{He}\)</span>-<span class="math notranslate nohighlight">\(\ce{Rn}\)</span>, group 18 in the periodic table) have all their orbitals completely filled.  Electron configurations of all other elements (except <span class="math notranslate nohighlight">\(\ce{H}\)</span>) can be represented using the <strong>noble gas core</strong>, i.e., the noble gas that precedes each element is shown in brackets followed by the electron configuration in the outermost occupied subshells.</p>
+<p>Noble gases (<span class="math notranslate nohighlight">\(\ce{He}\)</span>-<span class="math notranslate nohighlight">\(\ce{Rn}\)</span>, group 18 in the periodic table) have all their orbitals filled.  Electron configurations of all other elements (except <span class="math notranslate nohighlight">\(\ce{H}\)</span>) can be represented using the <strong>noble gas core</strong>, i.e., the noble gas that precedes each element is shown in brackets, followed by the electron configuration in the outermost occupied subshells.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Compressed electron configuration</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Let’s write the electron configuration of a calcium (<span class="math notranslate nohighlight">\(\ce{Ca}\)</span>) atom (<span class="math notranslate nohighlight">\(Z = 20\)</span>) using the abbreviated form.  <span class="math notranslate nohighlight">\(\ce{Ne}\)</span> is the closest preceding element with the electron configuration: <span class="math notranslate nohighlight">\(1s^2 2s^2 2p^6 3s^2 3p^6\)</span>.</p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(\therefore \ce{Ca}\)</span> would be <span class="math notranslate nohighlight">\(\ce{Ne}\)</span>[<span class="math notranslate nohighlight">\(4s^2\)</span>].</p>
 </div>
-</details><p><a class="reference internal" href="#elec-config"><span class="std std-numref">Fig. 9</span></a> shows electron configuration of all the elements in the periodic table in terms of the noble gas core. As seen in this , the electron configuration in each group has the outermost electrons in common.  These outermost electrons are called <strong>valence electrons</strong>. These valence electrons determine how atoms interact with one another. Having the same valence-electron configuration is what causes the elements in the same group to exhibit similar chemical properties. In the next section we explore these trends in the periodic table.</p>
+</details><p><a class="reference internal" href="#elec-config"><span class="std std-numref">Fig. 9</span></a> shows the electron configuration of all the elements in the periodic table in terms of the noble gas core. As seen in this figure, the electron configuration in each group has the outermost electrons in common.  These outermost electrons are called <strong>valence electrons</strong>. These valence electrons determine how atoms interact with one another. Having the same valence-electron configuration causes the elements in the same group to exhibit similar chemical properties. In the next section, we explore these trends in the periodic table.</p>
 <figure class="margin-caption align-default" id="elec-config">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/4ca8452e928093588afa5e9da401a101b0262ab9" src="https://openstax.org/apps/archive/20220815.182343/resources/4ca8452e928093588afa5e9da401a101b0262ab9" />
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Electron configuration of elements in the periodic table using the <strong>noble gas core</strong>.. Image Source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-4-electronic-structure-of-atoms-electron-configurations">3.4 Electronic Structure of Atoms (Electron Configurations) - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#elec-config" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Electron configuration of elements in the periodic table using the <strong>noble gas core</strong>. Image Source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-4-electronic-structure-of-atoms-electron-configurations">3.4 Electronic Structure of Atoms (Electron Configurations) - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#elec-config" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -605,25 +586,25 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <h2>Trends in the Periodic Table<a class="headerlink" href="#trends-in-the-periodic-table" title="Link to this heading">#</a></h2>
 <section id="effective-nuclear-charge">
 <h3>Effective nuclear charge<a class="headerlink" href="#effective-nuclear-charge" title="Link to this heading">#</a></h3>
-<p>Nuclear charge (<span class="math notranslate nohighlight">\(Z\)</span>) is the number of protons in the nucleus of an atom and influence how much of this positive charge electrons experience and is expressed as effective nuclear charge (<span class="math notranslate nohighlight">\(Z_\textrm{eff}\)</span>). Since H has only one electron, <span class="math notranslate nohighlight">\(Z=Z_\textrm{eff}\)</span>, but this is not the case for rest of the elements. In all other atoms, the electrons are simultaneously attracted to the nucleus and repelled by one another. An electron in a many-electron atom is partially shielded from the positive charge of the nucleus by the other electrons in the atom. If an electron is removed from an atom, the effective nuclear charge increases and more energy is required to remove any subsequent electrons, therefore, <span class="math notranslate nohighlight">\(Z_\textrm{eff}\)</span> increases from left to right in each period of the periodic table.  Similarly, <span class="math notranslate nohighlight">\(Z_\textrm{eff}\)</span> increases from top to bottom in each group as each step down a group represents a large increase in <span class="math notranslate nohighlight">\(Z\)</span> and an additional shell of core electrons to shield the valence electrons from the nucleus. Several of the physical and chemical properties are dependent on <span class="math notranslate nohighlight">\(Z_\textrm{eff}\)</span>.</p>
+<p>Nuclear charge (<span class="math notranslate nohighlight">\(Z\)</span>) is the number of protons in the nucleus of an atom and influences how much of this positive charge electrons experience and is expressed as effective nuclear charge (<span class="math notranslate nohighlight">\(Z_\textrm{eff}\)</span>). Since H has only one electron, <span class="math notranslate nohighlight">\(Z=Z_\textrm{eff}\)</span>, but this is not the case for the rest of the elements. In all other atoms, the electrons are simultaneously attracted to the nucleus and repelled by one another. An electron in a many-electron atom is partially shielded from the positive charge of the nucleus by the other electrons in the atom. If an electron is removed from an atom, the effective nuclear charge increases, and more energy is required to remove any subsequent electrons; therefore, <span class="math notranslate nohighlight">\(Z_\textrm{eff}\)</span> increases from left to right in each period of the periodic table.  Similarly, <span class="math notranslate nohighlight">\(Z_\textrm{eff}\)</span> increases from top to bottom in each group as each step down a group represents a significant increase in <span class="math notranslate nohighlight">\(Z\)</span> and an additional shell of core electrons to shield the valence electrons from the nucleus. Several of the physical and chemical properties are dependent on <span class="math notranslate nohighlight">\(Z_\textrm{eff}\)</span>.</p>
 </section>
 <section id="atomic-radius">
 <h3>Atomic Radius<a class="headerlink" href="#atomic-radius" title="Link to this heading">#</a></h3>
-<p>We envision that atoms are spherical and intuit that the atomic radius of an atom is the distance between the nucleus and the valence shell. But, according to quantum mechanics, there is no specific distance an electron can be found beyond the nucleus. So we operationally define the atomic radius in two ways: (i) the metallic radius – half the distance between the nuclei of two adjacent, identical metal atoms and (ii) the covalent radius – half the distance between adjacent, identical nuclei that are connected by a chemical bond.</p>
+<p>We envision that atoms are spherical and intuit that the atomic radius of an atom is the distance between the nucleus and the valence shell. But, according to quantum mechanics, no specific distance an electron can be found beyond the nucleus. So we operationally define the atomic radius in two ways: (i) the metallic radius – half the distance between the nuclei of two adjacent, identical metal atoms and (ii) the covalent radius – half the distance between adjacent, identical nuclei that are connected by a chemical bond.</p>
 <figure class="margin-caption align-default" id="atomic-radii">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/fd6cb9ecef36396c18372bf63d177a966ef93c9f" src="https://openstax.org/apps/archive/20220815.182343/resources/fd6cb9ecef36396c18372bf63d177a966ef93c9f" />
 <figcaption>
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Atomic radii trends in the periodic table. The units are in picometers (<span class="math notranslate nohighlight">\(\pu{e-12 m}\)</span>. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#atomic-radii" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>As seen in the  below, the atomic radius decreases as we move from left to right across a period and increases from top to bottom as we move down within a group.  This trend may be counter-intuitive. <em>Isn’t the atomic radius supposed to increase as we go from left to right in each period?</em> In the previous section, we found that <span class="math notranslate nohighlight">\(Z_{eff}\)</span> increases from left to right in each period, i.e., there is powerful attraction between the nucleus and the valence shell when the magnitudes of both charges increase. Therefore, as we move from left to right in each period, the valence shell is drawn closer to the nucleus making the atomic radius smaller. Within each period, the trend in atomic radius decreases as <span class="math notranslate nohighlight">\(Z\)</span> increases; for example, from <span class="math notranslate nohighlight">\(\ce{K}\)</span> to <span class="math notranslate nohighlight">\(\ce{Kr}\)</span>. Within each group (e.g., the alkali metals shown in purple), the trend is that atomic radius increases as <span class="math notranslate nohighlight">\(Z\)</span> increases.</p>
+<p>As seen in <a class="reference internal" href="#atomic-radii"><span class="std std-numref">Fig. 10</span></a> shows the electron configuration of all the elements in the periodic table, the atomic radius decreases as we move from left to right across a period and increases from top to bottom as we move down within a group.  This trend may be counter-intuitive. <em>Isn’t the atomic radius supposed to increase as we go from left to right in each period?</em> In the previous section, we found that <span class="math notranslate nohighlight">\(Z_{eff}\)</span> increases from left to right in each period, i.e., there is powerful attraction between the nucleus and the valence shell when the magnitudes of both charges increase. Therefore, as we move from left to right in each period, the valence shell is drawn closer to the nucleus, making the atomic radius smaller. Within each period, the trend in atomic radius decreases as <span class="math notranslate nohighlight">\(Z\)</span> increases; for example, from <span class="math notranslate nohighlight">\(\ce{K}\)</span> to <span class="math notranslate nohighlight">\(\ce{Kr}\)</span>. Within each group (e.g., the alkali metals shown in purple), the trend is that atomic radius increases as <span class="math notranslate nohighlight">\(Z\)</span> increases.</p>
 <figure class="margin-caption align-default" id="atomic-radii-trend">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/359de624ee19f48ec344deabaedd1ac1fd65d890" src="https://openstax.org/apps/archive/20220815.182343/resources/359de624ee19f48ec344deabaedd1ac1fd65d890" />
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Within each period, the atomic radius decreases as <span class="math notranslate nohighlight">\(Z\)</span> increases; for example, from <span class="math notranslate nohighlight">\(\ce{K}\)</span> to <span class="math notranslate nohighlight">\(\ce{Kr}\)</span>. Within each group (e.g., the alkali metals shown in purple), the atomic radius increases as <span class="math notranslate nohighlight">\(Z\)</span> increases. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#atomic-radii-trend" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">The atomic radius decreases within each period as <span class="math notranslate nohighlight">\(Z\)</span> increases; for example, from <span class="math notranslate nohighlight">\(\ce{K}\)</span> to <span class="math notranslate nohighlight">\(\ce{Kr}\)</span>. Within each group (e.g., the alkali metals shown in purple), the atomic radius increases as <span class="math notranslate nohighlight">\(Z\)</span> increases. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#atomic-radii-trend" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><em><strong>Ionic radius</strong></em> is related to atomic radius, but is deduced from bond length when the atom is bonded to one or more other atoms. As seen in <a class="reference internal" href="#ionic-radii-trend"><span class="std std-numref">Fig. 12</span></a>, <em><strong>cations</strong></em> have smaller ionic radii than do <em><strong>anions</strong></em>. Also, ionic radius decreases as charge increases. This decrease is due both to loss of outer electrons and to shrinking of the orbits of the remaining electrons. The latter occurs because the charge of the nucleus is shared by fewer electrons and hence has a greater attractive force on each. In addition, ionic radius increases downward in each group in the periodic table, both because of addition of electrons to outer shells and because these outer electrons are increasingly shielded from the nuclear charge by the inner ones. Ionic radius is important in determining geochemical properties such as substitution in solids, solubility, and diffusion rates. Large ions need to be surrounded, or coordinated, by a greater number of oppositely charged ions than do smaller ones.</p>
+<p><em><strong>Ionic radius</strong></em> is related to atomic radius but is deduced from bond length when the atom is bonded to one or more other atoms. As seen in <a class="reference internal" href="#ionic-radii-trend"><span class="std std-numref">Fig. 12</span></a>, <em><strong>cations</strong></em> have smaller ionic radii than do <em><strong>anions</strong></em>. Also, the ionic radius decreases as the charge increases. This decrease is due to the loss of outer electrons and the shrinking of the orbits of the remaining electrons. The latter occurs because fewer electrons share the charge of the nucleus and hence have a greater attractive force on each. In addition, the ionic radius increases downward in each group in the periodic table, both because of the addition of electrons to outer shells and because these outer electrons are increasingly shielded from the nuclear charge by the inner ones. Ionic radius is important in determining geochemical properties such as substitution in solids, solubility, and diffusion rates. Large ions need to be surrounded, or coordinated, by more oppositely charged ions than smaller ones.</p>
 <figure class="margin-caption align-default" id="ionic-radii-trend">
 <img alt="https://openstax.org/apps/archive/20221109.213337/resources/8de04f0707fca242da5b757cef08ff37a899b9a7" src="https://openstax.org/apps/archive/20221109.213337/resources/8de04f0707fca242da5b757cef08ff37a899b9a7" />
 <figcaption>
@@ -633,25 +614,25 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="ionization-energy">
 <h3>Ionization Energy<a class="headerlink" href="#ionization-energy" title="Link to this heading">#</a></h3>
-<p>Ionization energy (<em>IE</em>) is the minimum energy required to remove an electron from an atom in the gas phase resulting in formation of a cation (ion with a positive charge).</p>
+<p>Ionization energy (<em>IE</em>) is the minimum energy required to remove an electron from an atom in the gas phase, forming a cation (ion with a positive charge).</p>
 <div class="math notranslate nohighlight">
 \[\ce{Na -&gt; Na^+ + e^-}\]</div>
-<p>The above reaction shows the <em>ionization</em> of <span class="math notranslate nohighlight">\(\ce{Na}\)</span> to , both in gas phases and the release of an electron (denoted as ). The ionization energy is expressed in kJ/mol or the number of kilojoules required to remove a mole of electrons from a mole of gaseous atoms. In the above <span class="math notranslate nohighlight">\(\ce{Na}\)</span> ionization reaction, <em>IE</em> <span class="math notranslate nohighlight">\(= \pu{495.8 kJ mol-1}\)</span>. Specifically, this is the first ionization energy of sodium, <em>IE</em><span class="math notranslate nohighlight">\(_1\)</span> (Na), which corresponds to the removal of the most loosely held electron from each <span class="math notranslate nohighlight">\(\ce{Na}\)</span> atom. The  below shows <em>IE</em><span class="math notranslate nohighlight">\(_1\)</span> of elements in the periodic table. In general, as the nuclear charge (<span class="math notranslate nohighlight">\(Z_{eff}\)</span>) increases, <em>IE</em> also increases.</p>
+<p>The above reaction shows the <em>ionization</em> of <span class="math notranslate nohighlight">\(\ce{Na}\)</span> to <span class="math notranslate nohighlight">\(\ce{Na^+}\)</span>, both in gas phases and the release of an electron (denoted as <span class="math notranslate nohighlight">\(\ce{e^-}\)</span>). The ionization energy is expressed in <span class="math notranslate nohighlight">\(\pu{kJ mol-1}\)</span> or the number of kilojoules required to remove a mole of electrons from a mole of gaseous atoms. In the above <span class="math notranslate nohighlight">\(\ce{Na}\)</span> ionization reaction, <em>IE</em> <span class="math notranslate nohighlight">\(= \pu{495.8 kJ mol-1}\)</span>. Specifically, this is the first ionization energy of sodium, <em>IE</em><span class="math notranslate nohighlight">\(_1\)</span> (Na), which corresponds to the removal of the most loosely held electron from each <span class="math notranslate nohighlight">\(\ce{Na}\)</span> atom. <a class="reference internal" href="#st-ie"><span class="std std-numref">Fig. 13</span></a> shows <em>IE</em><span class="math notranslate nohighlight">\(_1\)</span> of elements in the periodic table. In general, as the nuclear charge (<span class="math notranslate nohighlight">\(Z_{eff}\)</span>) increases, <em>IE</em> also increases.</p>
 <figure class="margin-caption align-default" id="st-ie">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/bab6ad5d505805939f9dc3ac5b32aaa0659fe585" src="https://openstax.org/apps/archive/20220815.182343/resources/bab6ad5d505805939f9dc3ac5b32aaa0659fe585" />
 <figcaption>
 <p><span class="caption-number">Fig. 13 </span><span class="caption-text">First ionization energy of elements. Image source: <a class="reference external" href="https://openstax.org/books/chemistry-atoms-first/pages/3-5-periodic-variations-in-element-properties">3.5 Periodic Variations in Element Properties - Chemistry: Atoms First | OpenStax</a></span><a class="headerlink" href="#st-ie" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>It is possible to remove additional electrons from the atoms, however, the removal of each successive electron requires expending enormous amounts of energy. It is harder to remove an electron from a cation than from an atom (and it gets even harder as the charge on the cation increases).  Since core electrons are closer to the nucleus, they experience strong <span class="math notranslate nohighlight">\(Z_{eff}\)</span>.  Additionally, there are fewer filled shells shielding them from the nucleus.</p>
+<p>It is possible to remove additional electrons from the atoms; however, removing each successive electron requires expending enormous amounts of energy. It is harder to remove an electron from a cation than from an atom (and it gets even more challenging as the charge on the cation increases).  Since core electrons are closer to the nucleus, they experience strong <span class="math notranslate nohighlight">\(Z_{eff}\)</span>.  Additionally, fewer filled shells are shielding them from the nucleus.</p>
 </section>
 <section id="electron-affinity">
 <h3>Electron Affinity<a class="headerlink" href="#electron-affinity" title="Link to this heading">#</a></h3>
-<p>Electron affinity (<em>EA</em>) is the energy released when an atom in the gas phase accepts an electron resulting in formation of an anion (ion with a negative charge).</p>
+<p>Electron affinity (<em>EA</em>) is the energy released when an atom in the gas phase accepts an electron, forming an anion (ion with a negative charge).</p>
 <div class="math notranslate nohighlight">
 \[\ce{Cl + e^- -&gt; Cl^-}\]</div>
-<p>In the above reaction, one mole of gaseous Cl accepts a mole of electrons resulting in release of <span class="math notranslate nohighlight">\(\pu{349.0 kJ mol-1}\)</span> of energy.</p>
-<p>See the  below for <em>EA</em> trends in the main group elements in the periodic table. Like <em>IE</em>, <em>EA</em> increases from left to right across a period due to an increase in <span class="math notranslate nohighlight">\(Z_{eff}\)</span> from left to right. It becomes easier to add negatively-charged electrons to atoms as the number of positively-charged protons increase in the nucleus.</p>
+<p>In the above reaction, one mole of gaseous Cl accepts a mole of electrons, releasing <span class="math notranslate nohighlight">\(\pu{349.0 kJ mol-1}\)</span> of energy.</p>
+<p>See <a class="reference internal" href="#ea-trend"><span class="std std-numref">Fig. 14</span></a> for <em>EA</em> trends in the main group elements in the periodic table. Like <em>IE</em>, <em>EA</em> increases from left to right across a period due to an increase in <span class="math notranslate nohighlight">\(Z_{eff}\)</span> from left to right. Adding negatively charged electrons to atoms becomes easier as the number of positively charged protons increases in the nucleus.</p>
 <figure class="margin-caption align-default" id="ea-trend">
 <img alt="https://openstax.org/apps/archive/20220815.182343/resources/e60ca7a4db76b979af54de82a1808d3bd40ca805" src="https://openstax.org/apps/archive/20220815.182343/resources/e60ca7a4db76b979af54de82a1808d3bd40ca805" />
 <figcaption>
@@ -661,7 +642,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="electronegativity">
 <h3>Electronegativity<a class="headerlink" href="#electronegativity" title="Link to this heading">#</a></h3>
-<p>Electronegativity quantifies the tendency of an element to attract shared electrons (in a covalent bonds) to itself. It is a parameter that used to characterize behavior of the elements and is inversely correlated with atomic radii within each group of the periodic table. It determines how the electron density in a molecule or a poly-atomic ion is distributed. An element with a high electronegativity has a greater tendency to attract electron density than does an element with low electronegativity. Electronegativity is a relative concept and can be measured only in relation to the electronegativity of other elements.  <a class="reference internal" href="#en-trend"><span class="std std-numref">Fig. 15</span></a> shows trends in periodic table. We can make a qualitative prediction of an atom’s electronegativity based on its <em>EA</em> and its <em>IE</em><span class="math notranslate nohighlight">\(_1\)</span>. In general, electronegativity increases from left to right in the periodic table. Electronegativity values range between <span class="math notranslate nohighlight">\(0.7-4.0\)</span> and elements with higher numbers indicate stronger ability to attract electrons (<a class="reference internal" href="#en-trend"><span class="std std-numref">Fig. 15</span></a>).</p>
+<p>Electronegativity quantifies the tendency of an element to attract shared electrons (in a covalent bond) to itself. It is a parameter used to characterize the behavior of the elements and is inversely correlated with atomic radii within each periodic table group. It determines how the electron density in a molecule or a polyatomic ion is distributed. An element with a high electronegativity tends to attract electron density more than an element with low electronegativity. Electronegativity is a relative concept and can be measured only relative to the electronegativity of other elements.  <a class="reference internal" href="#en-trend"><span class="std std-numref">Fig. 15</span></a> shows trends in the periodic table. We can qualitatively predict an atom’s electronegativity based on its <em>EA</em> and its <em>IE</em><span class="math notranslate nohighlight">\(_1\)</span>. In general, electronegativity increases from left to right in the periodic table. Electronegativity values range between <span class="math notranslate nohighlight">\(0.7-4.0\)</span>, and elements with higher numbers indicate a stronger ability to attract electrons (<a class="reference internal" href="#en-trend"><span class="std std-numref">Fig. 15</span></a>).</p>
 <figure class="margin-caption align-default" id="en-trend">
 <img alt="https://openstax.org/apps/archive/20221109.213337/resources/a85730daff7d621641b83ce53ccb757ee7eb20e5" src="https://openstax.org/apps/archive/20221109.213337/resources/a85730daff7d621641b83ce53ccb757ee7eb20e5" />
 <figcaption>
@@ -727,7 +708,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -802,8 +784,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

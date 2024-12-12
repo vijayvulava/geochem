@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="4.3 Salts of Acids and Bases" href="43SaltsSolubility.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -404,7 +385,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="practice-problems">
 <h1>4.4 Practice Problems<a class="headerlink" href="#practice-problems" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
-<li><p>Label each specie in the reactions below as acid, base, conjugate base, or conjugate acid:</p></li>
+<li><p>Label each species in the reactions below as acid, base, conjugate base, or conjugate acid:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -435,7 +416,7 @@ CH3COO- + H2O &amp;&lt;=&gt; CH3COOH + OH-
 <li><p><span class="math notranslate nohighlight">\(2.78\)</span></p></li>
 </ol>
 </li>
-<li><p>An aqueous solution of a strong base has <span class="math notranslate nohighlight">\(p\ce{H} = 8.15\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. Calculate the original concentration of base in the solution if the base is</p>
+<li><p>An aqueous solution of a strong base has <span class="math notranslate nohighlight">\(p\ce{H} = 8.15\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. Calculate the original concentration of the base in the solution if the base is</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\ce{NaOH}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\ce{Ba(OH)2}\)</span></p></li>
@@ -497,7 +478,7 @@ H4SiO4 (aq) &lt;=&gt; H3SiO4- (aq) + H+ (aq) \qquad $K_a = 10^{-9.83}$
 </li>
 <li><p><span class="math notranslate nohighlight">\(\ce{Cu(OH)2 (s)}\)</span> is an amphoteric compound and dissolves according to the shown after the question. Answer the following questions and assume that the water temperature is <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
 <ol class="arabic simple">
-<li><p>Excess copper hydroxide is added to a beaker of water, i.e., solid copper hydroxide is present in the water. Using a base, the solution <span class="math notranslate nohighlight">\(p\ce{H}\)</span> is adjusted to <span class="math notranslate nohighlight">\(10\)</span>. Calculate <span class="math notranslate nohighlight">\([\ce{Cu(OH)3- (aq)}]\)</span> in the solution at equilibrium.</p></li>
+<li><p>Excess copper hydroxide is added to a beaker of water, i.e., solid copper hydroxide is present in the water. The solution <span class="math notranslate nohighlight">\(p\ce{H}\)</span> is adjusted to <span class="math notranslate nohighlight">\(10\)</span> using a base. Calculate <span class="math notranslate nohighlight">\([\ce{Cu(OH)3- (aq)}]\)</span> in the solution at equilibrium.</p></li>
 <li><p>A strong acid is added to the solution until the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> is reduced to <span class="math notranslate nohighlight">\(4\)</span>. Will the amount of <span class="math notranslate nohighlight">\(\ce{Cu(OH)3- (aq)}\)</span> in the beaker increase or decrease? Explain. At this <span class="math notranslate nohighlight">\(p\ce{H}\)</span>, calculate <span class="math notranslate nohighlight">\([\ce{Cu(OH)3- (aq)}]\)</span> in the solution.</p></li>
 </ol>
 </li>
@@ -511,14 +492,14 @@ Cu(OH)2 (s) + OH- (aq) &lt;=&gt; Cu(OH)3- (aq) \qquad $K_a = 10^{-2.9}$
 <li><p>What is the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of the buffer that is made up of  <span class="math notranslate nohighlight">\(\pu{0.10 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{Na2HPO4}\)</span> and <span class="math notranslate nohighlight">\(\pu{0.15 M}\)</span> of  <span class="math notranslate nohighlight">\(\ce{KH2PO4}\)</span>? <span class="math notranslate nohighlight">\(pK_a\)</span>’s for the dissociation of the weak acid, <span class="math notranslate nohighlight">\(\ce{H3PO4}\)</span> are <span class="math notranslate nohighlight">\(2.15\)</span>, <span class="math notranslate nohighlight">\(7.20\)</span>, and <span class="math notranslate nohighlight">\(12.35\)</span>.</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(\pu{0.10 M}\)</span> <span class="math notranslate nohighlight">\(\ce{NaOH}\)</span> is added to a buffer solution containing <span class="math notranslate nohighlight">\(\pu{1 M}\)</span> each of <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> and <span class="math notranslate nohighlight">\(\ce{CH3COONa}\)</span>, determine the final solution <span class="math notranslate nohighlight">\(p\ce{H}\)</span>.</p></li>
 <li><p>The <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a bicarbonate-carbonic acid buffer is 8.0. Calculate the ratio of the concentration of carbonic acid (<span class="math notranslate nohighlight">\(\ce{H2CO3}\)</span>) to that of the bicarbonate ion (<span class="math notranslate nohighlight">\(\ce{HCO3-}\)</span>).</p></li>
-<li><p>In a natural water sample that is in equilibrium with atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> and an initial <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of <span class="math notranslate nohighlight">\(6.35\)</span>, determine the change in <span class="math notranslate nohighlight">\(p\ce{H}\)</span> upon addition of a strong acid at the following concentrations: (Note: The activity of <span class="math notranslate nohighlight">\(\ce{CO3^2-}\)</span> is negligible.)</p>
+<li><p>In a natural water sample that is in equilibrium with atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> and an initial <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of <span class="math notranslate nohighlight">\(6.35\)</span>, determine the change in <span class="math notranslate nohighlight">\(p\ce{H}\)</span> upon the addition of a strong acid at the following concentrations: (Note: The activity of <span class="math notranslate nohighlight">\(\ce{CO3^2-}\)</span> is negligible.)</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\pu{e-3 mol}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\pu{e-4 mol}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\pu{e-5 mol}\)</span></p></li>
 </ol>
 </li>
-<li><p>A water sample from the Rio Grande river in Texas has <span class="math notranslate nohighlight">\([\ce{Ca^2+}] = \pu{109 mg L-1}\)</span> and <span class="math notranslate nohighlight">\([\ce{SO4^2-}] = \pu{238 mg L-1}\)</span> in addition to other ions. Is this water under-, over-, or saturated with respect to gypsum (<span class="math notranslate nohighlight">\(K_{s0} = 10^{-4.6}\)</span>)?</p></li>
+<li><p>A water sample from the Rio Grande River in Texas has <span class="math notranslate nohighlight">\([\ce{Ca^2+}] = \pu{109 mg L-1}\)</span> and <span class="math notranslate nohighlight">\([\ce{SO4^2-}] = \pu{238 mg L-1}\)</span> in addition to other ions. Is this water under-, over-, or saturated with respect to gypsum (<span class="math notranslate nohighlight">\(K_{s0} = 10^{-4.6}\)</span>)?</p></li>
 </ol>
 </section>
 
@@ -623,8 +604,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

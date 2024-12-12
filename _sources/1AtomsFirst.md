@@ -1,33 +1,33 @@
+
+
 # 1 Atoms First
-
 ## Introduction 
-
-From the origins of the universe to the dramatic development of the COVID-19 mRNA vaccines, chemical elements are essential to our understanding of nature.  
-
-Chemistry deals with the composition, properties, and structure of matter, as well as the ways in which substances can transform into different forms. However, this definition is too broad to be useful because geologists and environmental scientists  also study the composition and transformations of matter. Geology examines minerals, which transform through geological processes like erosion, and continents, which transform through earthquakes and plate drift.
-
-Geochemists and chemists understand and explain everything in terms of the properties of just over 100 types of atoms found in all matter, and the variety of molecules that are created by forming and breaking bonds between atoms. Therefore, chemistry is defined by its approach, rather than its subject matter. Chemistry explains or understands any subject regarding the properties of atoms and molecules.
-
-Chemistry plays a crucial role in Geology, providing a unique perspective. For example, [The Earth Scientist's Periodic Table](http://railsback.org/PT.html) has been specifically designed from Earth sciences perspective. 
-
+  
+From the universe's origins to the significant development of the COVID-19 mRNA vaccines, chemical elements are vital for our understanding of nature.
+  
+Chemistry is the study of matter's composition, properties, and structure, as well as how substances can change into different forms. However, this definition is too broad to be helpful since geologists and environmental scientists also examine the composition and transformations of matter. Geologists, for instance, study minerals, which change through geological processes like volcanism and chemical weathering, as well as a broader understanding of plate tectonics.
+  
+Geochemists and chemists analyze and explain the properties of over a hundred elements found in all matter and the various molecules formed by creating and breaking bonds between atoms. Consequently, chemistry is defined more by its approach than its specific subject matter. It encompasses the study of any topic related to the properties of atoms and molecules.
+  
+Chemistry plays a crucial role in Geology, providing a unique perspective. For example, [The Earth Scientist's Periodic Table](http://railsback.org/PT.html) has been designed explicitly from an Earth sciences perspective. 
+  
 ```{figure} http://railsback.org/PT/815PeriodicTable48e023600.jpg
 ---
 name: earthperiodictable
 figclass: margin-caption
 ---
-The _Earth Scientist's Periodic Table of the Elements and Their Ions_ is a new periodic table designed to contextualize trends in geochemistry, mineralogy, aqueous chemistry, and other natural sciences. Image source: [An Earth Scientist's Periodic Table  
-of the Elements and Their Ions](http://railsback.org/PT.html)
+The _Earth Scientist's Periodic Table of the Elements and Their Ions_ is a new periodic table designed to contextualize trends in geochemistry, mineralogy, aqueous chemistry, and other natural sciences. Image source: [An Earth Scientist's Periodic Table of the Elements and Their Ions](http://railsback.org/PT.html)
 ```
-
-In this chapter we recap some of the elementary concepts of introductory college chemistry -- especially, the concepts covered in detail during the first semester of a two-semester college chemistry sequence (e.g., CHEM 111).
+  
+This chapter will review some fundamental concepts of introductory college chemistry, particularly those discussed in depth during the first semester of a two-semester college chemistry course (e.g., CHEM 111).
 
 ## Learning Goals
-
+  
 ```{admonition} Learning Goals
-
+ 
 The main goals for this chapter are to: 
 1. define basic atomic principles,
-2. identify different expressions of mass and concentrations, and
+2. identify different expressions of mass and concentrations and
 3. understand the organization and trends in the periodic table.
 ```
 

@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="7.2 Stable Isotopes" href="72StableIsotopes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -405,8 +386,8 @@ document.write(`
 <h1>7.3 Practice Problems<a class="headerlink" href="#practice-problems" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
 <li><p>Assume that in 1951, before the first atmospheric tests of fusion bombs, the concentration of <span class="math notranslate nohighlight">\(\ce{^3H}\)</span> in rainwater was <span class="math notranslate nohighlight">\(\pu{8 TU}\)</span>. Calculate the concentration for pre-bomb in a present-day groundwater reservoir. <span class="math notranslate nohighlight">\((\lambda = \pu{5.575e-2 y-1})\)</span> Note: <span class="math notranslate nohighlight">\(\pu{1 TU} = 1\, \ce{^3H}\)</span> per  <span class="math notranslate nohighlight">\(\pu{e18}\, \ce{H}\)</span> atoms.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\ce{^{14}C}\)</span> activity of modern-day <span class="math notranslate nohighlight">\(\ce{C}\)</span> is <span class="math notranslate nohighlight">\(\pu{13.56 dpm g−1}\)</span>. If a charcoal from an ancient fire has an activity of <span class="math notranslate nohighlight">\(\pu{6.22 dpm g−1}\)</span>, how old was the fire? <span class="math notranslate nohighlight">\((\lambda = \pu{1.209e-4 y-1})\)</span>. Note: <em>dpm</em> refers to <em>disintegrations</em> (of the radioisotope) <em>per minute</em>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\ce{^{137}Cs}\)</span> is often used to radio-date fresh surface sediment, and its <span class="math notranslate nohighlight">\(t_{1/2} = \pu{30 y}\)</span>. From an original sample of <span class="math notranslate nohighlight">\(\pu{80 g}\)</span> of <span class="math notranslate nohighlight">\(\ce{^{137}Cs}\)</span>, how much is left in <span class="math notranslate nohighlight">\(\pu{80 y}\)</span>?</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ce{^{14}C}\)</span> activity of modern-day <span class="math notranslate nohighlight">\(\ce{C}\)</span> is <span class="math notranslate nohighlight">\(\pu{13.56 dpm g−1}\)</span>. If charcoal from an ancient fire has an activity of <span class="math notranslate nohighlight">\(\pu{6.22 dpm g−1}\)</span>, how old was the fire? <span class="math notranslate nohighlight">\((\lambda = \pu{1.209e-4 y-1})\)</span>. Note: <em>dpm</em> refers to <em>disintegrations</em> (of the radioisotope) <em>per minute</em>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ce{^{137}Cs}\)</span> is often used to radio-date fresh surface sediment, and it’s <span class="math notranslate nohighlight">\(t_{1/2} = \pu{30 y}\)</span>. From an original sample of <span class="math notranslate nohighlight">\(\pu{80 g}\)</span> of <span class="math notranslate nohighlight">\(\ce{^{137}Cs}\)</span>, how much is left in <span class="math notranslate nohighlight">\(\pu{80 y}\)</span>?</p></li>
 <li><p><span class="math notranslate nohighlight">\(\ce{^{230}Th}\)</span> activity in surface of a marine sediment core is <span class="math notranslate nohighlight">\(\pu{62 dpm}\)</span> and <span class="math notranslate nohighlight">\(\pu{28 dpm}\)</span> at <span class="math notranslate nohighlight">\(\pu{1 m}\)</span> depth. <span class="math notranslate nohighlight">\((\lambda = \pu{9.217e-6 y-1})\)</span>.</p>
 <ol class="arabic simple">
 <li><p>What is the age of sediment at <span class="math notranslate nohighlight">\(\pu{1 m}\)</span> depth?</p></li>
@@ -416,12 +397,13 @@ document.write(`
 <li><p>A water sample has a <span class="math notranslate nohighlight">\(\delta \ce{^{18}O}\)</span> value of <span class="math notranslate nohighlight">\(\pu{−4.5 ‰}\)</span>. It is in equilibrium with water vapor at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. The fractionation factor at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span> is <span class="math notranslate nohighlight">\(1.0093\)</span>. What is the <span class="math notranslate nohighlight">\(\delta \ce{^{18}O}\)</span> value of the water vapor? <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{−13.67 ‰}\)</span></p></li>
 <li><p>For Greenland, average summer temperatures are <span class="math notranslate nohighlight">\(\pu{0 ^\circ C}\)</span> and average winter temperatures are <span class="math notranslate nohighlight">\(\pu{-30 ^\circ C}\)</span>. The fractionation factors for <span class="math notranslate nohighlight">\(\delta \ce{^{18}O}\)</span> are: at <span class="math notranslate nohighlight">\(\pu{-30 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(\alpha = 1.0155\)</span> and at <span class="math notranslate nohighlight">\(\pu{0 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(\alpha = 1.0112\)</span>. Calculate the isotopic composition of snow formed during the summer and winter seasons. <strong>Answer:</strong> Summer = <span class="math notranslate nohighlight">\(\pu{−24.4 ‰}\)</span> and winter = <span class="math notranslate nohighlight">\(\pu{−29.9 ‰}\)</span></p></li>
 <li><p>A water sample was measured by isotope ratio mass spectrometry to have a <span class="math notranslate nohighlight">\(\ce{^{18}O/^{16}O}\)</span> ratio <span class="math notranslate nohighlight">\(R = 0.00199517\)</span> with VSMOW (<span class="math notranslate nohighlight">\(R = 0.00200520\)</span>). What is its <span class="math notranslate nohighlight">\(\delta\)</span> value (rounded to one decimal place)?</p></li>
-<li><p>Identify which sample of water is isotopically lightest in the figure below. Provide an appropriate rationale.</p></li>
+<li><p>Identify which water sample is isotopically lightest in the figure below. Provide an appropriate rationale.</p></li>
 </ol>
 <figure class="margin-caption align-default" id="atmos-water-isotope">
-<a class="reference internal image-reference" href="https://www.mdpi.com/water/water-12-00138/article_deploy/html/images/water-12-00138-g001.png"><img alt="https://www.mdpi.com/water/water-12-00138/article_deploy/html/images/water-12-00138-g001.png" src="https://www.mdpi.com/water/water-12-00138/article_deploy/html/images/water-12-00138-g001.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="https://www.mdpi.com/water/water-12-00138/article_deploy/html/images/water-12-00138-g001.png"><img alt="https://www.mdpi.com/water/water-12-00138/article_deploy/html/images/water-12-00138-g001.png" src="https://www.mdpi.com/water/water-12-00138/article_deploy/html/images/water-12-00138-g001.png" style="height: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 55 </span><span class="caption-text">The diagram of isotopic composition change of atmospheric water vapor showing the processes of evaporation and rainout as the air mass proceeds from an ocean to a continent. Image source: <a class="reference external" href="https://www.mdpi.com/2073-4441/12/1/138/htm">Stable Isotopes of Water and Nitrate for the Identification of Groundwater Flowpaths: A Review (mdpi.com)</a></span><a class="headerlink" href="#atmos-water-isotope" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">The diagram of the isotopic composition change of atmospheric water vapor shows the processes of evaporation and rainout as the air mass proceeds from an ocean to a continent. Image source: <a class="reference external" href="https://www.mdpi.com/2073-4441/12/1/138/htm">Stable Isotopes of Water and Nitrate for the Identification of Groundwater Flowpaths: A Review (mdpi.com)</a></span><a class="headerlink" href="#atmos-water-isotope" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -527,8 +509,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

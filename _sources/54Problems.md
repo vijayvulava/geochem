@@ -32,7 +32,7 @@ SO2 + MnO4- -> SO4^2- + Mn^2+
 MnO4- + H2O2 -> O2 + Mn^2+
 } $$
 >
->(e) Organic matter present in soils and natural water has a strong influence on redox processes. In the reaction below, organic matter ($\ce{CH2O}$) is represented in a simplified form:
+>(e) Organic matter present in soils and natural water strongly influences redox processes. In the reaction below, organic matter ($\ce{CH2O}$) is represented in a simplified form:
 >
 >$$ \ce{
 CH2O + NO3- -> HCO3- + N2 + CO2

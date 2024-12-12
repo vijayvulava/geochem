@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="1.3 Chemical Bonding" href="13ChemicalBonding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -417,7 +398,7 @@ document.write(`
 <section id="what-are-chemical-reactions">
 <h2>What are chemical reactions?<a class="headerlink" href="#what-are-chemical-reactions" title="Link to this heading">#</a></h2>
 <p>Understanding how chemical reactions work is very fundamental in geology and environmental sciences.  It is particularly useful for determining how minerals and rocks form from basic elements, how chemical weathering reactions breakdown minerals and rocks, how water dissolves salts and minerals, how contaminants move in aqueous environments, how ocean acidification is impacting corals, nuclear reactions occur, and so on.</p>
-<p>The main principles that underlie chemical equations is the conservation of mass and transformation of chemical entities or species. These chemical equations can contain significant amount of information regarding the chemical system depicted by the chemical equations.  In all chemical equations, chemical species are separated by an arrow and indicates the phrase <em>to produce</em>} or in other contexts the direction of reaction.  This arrow can point in one direction or in both directions (e.g., <span class="math notranslate nohighlight">\(\ce{-&gt;, &lt;-, &lt;=&gt;}\)</span>).  Chemical species that appeared to the left of the arrow are called reactants and species to the right side of the arrow are products.  The “+” sign indicates the word <em>and</em> whether it appears to the left or right side of the arrow.  The states of the matter are also important in the chemical equations and need to be explicitly shown to deal with ambiguous situations where it is not clear if the chemical in the equation is solid, liquid, or a gas. The common symbols used are <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(l\)</span>, <span class="math notranslate nohighlight">\(g\)</span>, and <span class="math notranslate nohighlight">\(aq\)</span> for solid, liquid, gas, and aqueous (dissolved in water).</p>
+<p>The main principles that underlie chemical equations are the conservation of mass and the transformation of chemical entities or species. These chemical equations can contain significant information regarding the chemical system depicted by the chemical equations.  In all chemical equations, chemical species are separated by an arrow and indicate the phrase <em>to produce</em>} or, in other contexts, the direction of the reaction.  This arrow can point in one direction or both directions (e.g., <span class="math notranslate nohighlight">\(\ce{-&gt;, &lt;-, &lt;=&gt;}\)</span>).  Chemical species that appear to the left of the arrow are called reactants, and species on the right side of the arrow are products.  The “+” sign indicates the word <em>and</em> whether it appears on the left or right side of the arrow.  The states of matter are also important in chemical equations and must be explicitly shown to deal with ambiguous situations where it is unclear if the chemical in the equation is solid, liquid, or gas. The standard symbols used are <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(l\)</span>, <span class="math notranslate nohighlight">\(g\)</span>, and <span class="math notranslate nohighlight">\(aq\)</span> for solid, liquid, gas, and aqueous (dissolved in water).</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Dissolution of _ <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> _ in _ <span class="math notranslate nohighlight">\(\ce{H2O}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -431,9 +412,9 @@ CO2 (aq) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 }
 \end{align*}
 \end{split}\]</div>
-<p class="sd-card-text">The first equation is a representation of the chemical reaction where gaseous <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> (or <span class="math notranslate nohighlight">\(\ce{CO2 (g)}\)</span>) dissolves in water to form aqueous <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> (or <span class="math notranslate nohighlight">\(\ce{CO2 (aq)}\)</span>). Because <span class="math notranslate nohighlight">\(\ce{CO2 (aq)}\)</span> does not explicitly form a chemical bond with water, <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> is shown on top of the arrow to indicate it’s implicit involvement in the reaction.  The <span class="math notranslate nohighlight">\(\ce{&lt;=&gt;}\)</span> arrow indicates that the reaction  is reversible.  The second equation represents a chemical reaction where <span class="math notranslate nohighlight">\(\ce{CO2 (aq)}\)</span> explicitly reacts with <span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span> to produce <span class="math notranslate nohighlight">\(\ce{H2CO3 (aq)}\)</span> (carbonic acid.)</p>
+<p class="sd-card-text">The first equation is a representation of the chemical reaction where gaseous <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> (or <span class="math notranslate nohighlight">\(\ce{CO2 (g)}\)</span>) dissolves in water to form aqueous <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> (or <span class="math notranslate nohighlight">\(\ce{CO2 (aq)}\)</span>). Because <span class="math notranslate nohighlight">\(\ce{CO2 (aq)}\)</span> does not explicitly form a chemical bond with water, <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> is shown on top of the arrow to indicate its implicit involvement in the reaction.  The <span class="math notranslate nohighlight">\(\ce{&lt;=&gt;}\)</span> arrow indicates that the reaction is reversible.  The second equation represents a chemical reaction where <span class="math notranslate nohighlight">\(\ce{CO2 (aq)}\)</span> explicitly reacts with <span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span> to produce <span class="math notranslate nohighlight">\(\ce{H2CO3 (aq)}\)</span> (carbonic acid.)</p>
 </div>
-</details><p>There are different types of chemical reactions that will be explored over the rest of the course and they include precipitation, dissolution, acid-base, redox, and nuclear reactions.</p>
+</details><p>Different types of chemical reactions will be explored over the rest of the course, including precipitation, dissolution, acid-base, redox, and nuclear reactions.</p>
 </section>
 <section id="balancing-chemical-reactions">
 <h2>Balancing Chemical Reactions<a class="headerlink" href="#balancing-chemical-reactions" title="Link to this heading">#</a></h2>
@@ -444,34 +425,34 @@ CO2 (aq) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 <div class="admonition-the-three-hypotheses-that-make-up-dalton-s-atomic-theory admonition">
 <p class="admonition-title">The three hypotheses that make up Dalton’s atomic theory</p>
 <ol class="arabic simple">
-<li><p>Matter is composed of tiny, indivisible particles called atoms; and all atoms of a given element are identical.</p></li>
-<li><p>Compounds are made up of specific combinations of atoms of two or more different elements.</p></li>
-<li><p>Chemical reactions cause the rearrangement of atoms, but do not cause either the creation or the destruction of atoms.</p></li>
+<li><p>Matter is composed of tiny, indivisible particles called atoms, and all atoms of a given element are identical.</p></li>
+<li><p>Compounds comprise specific combinations of atoms of two or more elements.</p></li>
+<li><p>Chemical reactions cause the rearrangement of atoms but do not cause either the creation or the destruction of atoms.</p></li>
 </ol>
 </div>
-<p>This equation must be balanced so that the same number of atoms appear on both sides of the reaction arrow.  We do this by writing appropriate stoichiometric coefficients (or just <em>coefficients</em>) to the left of each chemical specie until there are same number of atoms on both sides or the equation is <em>balanced</em>.  In this particular case, let’s tackle <span class="math notranslate nohighlight">\(\ce{O}\)</span> first.  Let’s add a coefficient of 2 before <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> to balance <span class="math notranslate nohighlight">\(\ce{O}\)</span>. Now, there are 4 <span class="math notranslate nohighlight">\(\ce{H}\)</span> atoms on the right.  If we add a coefficient of 2 before <span class="math notranslate nohighlight">\(\ce{H2}\)</span>, there are same number of <span class="math notranslate nohighlight">\(\ce{H}\)</span> atoms on both sides.  The balanced reaction can be shown as:</p>
+<p>This equation must be balanced so that the same number of atoms appear on both sides of the reaction arrow.  We write appropriate stoichiometric coefficients (or just <em>coefficients</em>) to the left of each chemical species until the same number of atoms on both sides of the equation is <em>balanced</em>.  In this particular case, let’s tackle <span class="math notranslate nohighlight">\(\ce{O}\)</span> first.  Let’s add a coefficient of 2 before <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> to balance <span class="math notranslate nohighlight">\(\ce{O}\)</span>. There are 4 <span class="math notranslate nohighlight">\(\ce{H}\)</span> atoms on the right.  If we add a coefficient of 2 before <span class="math notranslate nohighlight">\(\ce{H2}\)</span>, there are the same number of <span class="math notranslate nohighlight">\(\ce{H}\)</span> atoms on both sides.  The balanced reaction can be shown as follows:</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{2 H2 (g) + O2 (g) -&gt; 2 H2O (l)}
 \]</div>
-<p>Balancing a chemical reaction requires a trial-and-error approach.  Sometimes, you have to try several iterations of the coefficients of a reactant or product until conservation of mass is achieved.  Below are a couple of approaches that a commonly applied.</p>
+<p>Balancing a chemical reaction requires a trial-and-error approach.  Sometimes, you have to try several iterations of the coefficients of a reactant or product until conservation of mass is achieved.  Below are a couple of approaches that are commonly applied.</p>
 <div class="admonition-rules-for-balancing-chemical-reactions admonition">
 <p class="admonition-title">Rules for balancing chemical reactions</p>
 <ol class="arabic simple">
 <li><p>Change the coefficients of compounds (e.g., <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>) before changing the coefficients of elements (e.g., <span class="math notranslate nohighlight">\(\ce{O2}\)</span>).</p></li>
 <li><p>Treat polyatomic ions that appear on both sides of the equation (e.g., <span class="math notranslate nohighlight">\(\ce{CO_3^2-}\)</span>, <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>, <span class="math notranslate nohighlight">\(\ce{SO_4^2-}\)</span>) as units, rather than counting their constituent atoms individually.</p></li>
-<li><p>Count atoms and/or polyatomic ions carefully, and track their numbers each time you change a coefficient.</p></li>
+<li><p>Count atoms and/or polyatomic ions carefully and track their numbers each time you change a coefficient.</p></li>
 </ol>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Balancing chemical reactions - Approach 1</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let’s balance the equation that represents combustion of butane (<span class="math notranslate nohighlight">\(\ce{C4H10 (g)}\)</span>):</p>
+<p class="sd-card-text">Let’s balance the equation that represents the combustion of butane (<span class="math notranslate nohighlight">\(\ce{C4H10 (g)}\)</span>):</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{C4H10(g) + O2(g) -&gt;	CO2(g) + H2O(l)	}
 \]</div>
-<p class="sd-card-text">Let’s do an inventory of all atoms on both sides of the arrow.</p>
+<p class="sd-card-text">Let’s inventory all atoms on both sides of the arrow.</p>
 <blockquote>
 <div><div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -493,7 +474,7 @@ CO2 (aq) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 </table>
 </div>
 </div></blockquote>
-<p class="sd-card-text">Now, let’s fix <span class="math notranslate nohighlight">\(\ce{C}\)</span> atoms first by changing coefficient of <span class="math notranslate nohighlight">\(\ce{CO2 (g)}\)</span>.</p>
+<p class="sd-card-text">Now, let’s fix <span class="math notranslate nohighlight">\(\ce{C}\)</span> atoms first by changing the coefficient of <span class="math notranslate nohighlight">\(\ce{CO2 (g)}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{C4H10(g) + O2(g) -&gt; 4 CO2(g) + H2O(l)	}
@@ -572,7 +553,7 @@ CO2 (aq) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 </div>
 </div></blockquote>
 <blockquote>
-<div><p class="sd-card-text">Multiply above equation by 2 to get whole number coefficients.</p>
+<div><p class="sd-card-text">Multiply the above equation by 2 to get the whole number of coefficients.</p>
 </div></blockquote>
 <div class="math notranslate nohighlight">
 \[
@@ -583,9 +564,9 @@ CO2 (aq) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Balancing chemical reactions - Approach 2</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Here’s another approach to balancing chemical equations. Kaolinite (<span class="math notranslate nohighlight">\(\ce{Al2Si2O5(OH)4}\)</span>), a major component of soils, is chemically weathered (by <span class="math notranslate nohighlight">\(\ce{H+}\)</span>) into <span class="math notranslate nohighlight">\(\ce{Al^3+}\)</span>, silicic acid (<span class="math notranslate nohighlight">\(\ce{H4SiO4}\)</span>), and <span class="math notranslate nohighlight">\(\ce{H2O}\)</span>. The basic chemical reaction that represents this chemical process is shown below:</p>
+<p class="sd-card-text">Here’s another approach to balancing chemical equations. Kaolinite (<span class="math notranslate nohighlight">\(\ce{Al2Si2O5(OH)4}\)</span>), a significant component of soils, is chemically weathered (by <span class="math notranslate nohighlight">\(\ce{H+}\)</span>) into <span class="math notranslate nohighlight">\(\ce{Al^3+}\)</span>, silicic acid (<span class="math notranslate nohighlight">\(\ce{H4SiO4}\)</span>), and <span class="math notranslate nohighlight">\(\ce{H2O}\)</span>. The basic chemical reaction that represents this chemical process is shown below:</p>
 <ol class="arabic simple">
-<li><p class="sd-card-text">Write all reactants and products in correct locations of the chemical equation:</p></li>
+<li><p class="sd-card-text">Write all reactants and products in the correct locations of the chemical equation:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[
@@ -674,7 +655,8 @@ CO2 (aq) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -736,8 +718,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

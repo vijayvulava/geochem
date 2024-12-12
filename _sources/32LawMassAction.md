@@ -2,7 +2,7 @@
 
 ## Reaction quotient
 
-To quantify chemical equilibrium, we need to define the term, ***reaction quotient*** ($Q_c$). In any balanced chemical reaction, this term refers to the ratio of product concentrations in the numerator and reactant concentrations in the denominator -- with each concentration raised to a power equal to the corresponding stoichiometric coefficient.
+To quantify chemical equilibrium, we must define the term ***reaction quotient*** ($Q_c$). In any balanced chemical reaction, this term refers to the ratio of product concentrations in the numerator and reactant concentrations in the denominator -- with each concentration raised to a power equal to the corresponding stoichiometric coefficient.
 
 $$
 \ce{aA + bB <=> cC +dD}
@@ -40,7 +40,7 @@ $$
 
 ## The Law of Mass Action and $K$
 
-Extensive studies and observations have determined that $Q_c$ had the same value at equilibrium at constant temperature, regardless of the initial concentrations. Therefore, for a system at equilibrium, $Q_c$ becomes the equilibrium constant, $K_c$.
+Extensive studies and observations have determined that $Q_c$ had the same value at equilibrium at constant temperature, regardless of the initial concentrations. Therefore, $Q_c$ becomes the equilibrium constant for a system at equilibrium, $K_c$.
 
 ```{math}
 :label: lawmassaction
@@ -48,7 +48,7 @@ Extensive studies and observations have determined that $Q_c$ had the same value
 Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b} = K_c
 ```
 
-Equation {eq}`lawmassaction` is known as the ***law of mass action***. This expression can be simplified as follows:
+Equation {eq}`lawmassaction` is the ***law of mass action***. This expression can be simplified as follows:
 
 ```{math}
 :label: equi_exp
@@ -77,14 +77,14 @@ $$\begin{aligned}
 \end{aligned}
 $$ 
 
-Note, we did not show any units for $K_c$. It is a dimensionless quantity as described in a subsequent section.
+Note that we did not show any units for $K_c$. It is a dimensionless quantity, as described in a subsequent section.
 
 ```
 
 
 ## Gas phase concentrations
 
-Gas concentrations can be expressed in $P$. But in reality, gas concentrations are often expressed in partial pressures or as percent of the composition of Earth's atmosphere. Therefore, concentrations of gases are commonly expressed in units of atmosphere or $\pu{atm}$. We can also convert gas concentrations from $\pu{mol L-1}$ to $\pu{atm}$ using the ideal gas law equation. 
+Gas concentrations can be expressed in $P$. But in reality, gas concentrations are often expressed in partial pressures or as percent of the composition of Earth's atmosphere. Therefore, concentrations of gases are commonly expressed in units of atmosphere or $\pu{atm}$. Using the ideal gas law equation, we can also convert gas concentrations from $\pu{mol L-1}$ to $\pu{atm}$. 
 
 ```{math}
 :label: gaslaw
@@ -182,15 +182,15 @@ CO2 (g) + H2O (l) &<=> H2CO3 (aq)
 \end{align*}
 $$
 
-1. In the first reaction all chemical components are gases and is an example of homogeneous equilibrium reactions i.e., the states of matter are the same in the entire reaction. The second reaction contains more than one phase of matter and is an example of heterogeneous equilibrium.
-2. In the first reaction, $K_p$ and $K_c$ can be written since all components are gases, while in the second reaction only $K_c$ can be written as $P$ is not applicable for aqueous/liquid concentrations.
+1. In the first reaction, all chemical components are gases and is an example of a homogeneous equilibrium reaction, i.e., the states of matter are the same in the entire reaction. The second reaction contains more than one phase of matter and is an example of heterogeneous equilibrium.
+2. In the first reaction, $K_p$ and $K_c$ can be written since all components are gases, while in the second reaction, only $K_c$ can be written as $P$ is not applicable for aqueous/liquid concentrations.
 
 ```
 
 
 ## $K$ and $\Delta_{rxn}G$
 
-As seen in Eq. {eq}`equi_exp`, $K$ indicates a ratio of product concentrations over reactant concentrations at equilibrium. This magnitude of this ratio ($K$) can be interpreted mathematically to deduce relative concentrations of reactants or the products at equilibrium in a chemical reaction. When $K$ is very large, we can expect the numerator (product concentrations) to be very large relative to the denominator (reactant concentrations), and vice versa. In other words, we can interpret a high $K$ value to indicate the products in a reaction to be more favored and that the reaction proceeds spontaneously as written (to right). Likewise, a low $K$ can be interpreted as meaning that the reaction is spontaneous to the left. As a rule of thumb, a $K$ value of  $\ge 10^2$ is considered high and a value of  $\le 10^{−2}$ is considered low.
+As seen in Eq. {eq}`equi_exp`, $K$ indicates a ratio of product concentrations over reactant concentrations at equilibrium. The magnitude of this ratio ($K$) can be interpreted mathematically to deduce relative concentrations of reactants or the products at equilibrium in a chemical reaction. When $K$ is very large, we can expect the numerator (product concentrations) to be very large relative to the denominator (reactant concentrations) and vice versa. In other words, we can interpret a high $K$ value to indicate the products in a reaction to being more favored and that the reaction proceeds spontaneously as written (to the right). Likewise, a low $K$ can mean a spontaneous reaction to the left. As a rule of thumb, a $K$ value of  $\ge 10^2$ is considered high, and a value of  $\le 10^{−2}$ is considered low.
 
 ```{table} Magnitude of $K$ and significance in reactions.
 :name: k-relative
@@ -203,7 +203,7 @@ As seen in Eq. {eq}`equi_exp`, $K$ indicates a ratio of product concentrations o
 
 ## Influence of $K$ on the direction of reactions.
 
-Since magnitude of $K$ is related to spontaneity of the reaction, it follows that $K$ is directly related to $\Delta_{rxn}G^\circ$. When $K \gg 1$, $\Delta_{rxn}G^\circ$ is negative and when $K \ll 1$, $\Delta_{rxn}G^\circ$ is positive. Therefore, we can also use $\Delta_{rxn}G^\circ$ to determine $K$. In the hypothetical reaction,
+Since the magnitude of $K$ is related to the reaction's spontaneity, $K$ is directly related to $\Delta_{rxn}G^\circ$. When $K \gg 1$, $\Delta_{rxn}G^\circ$ is negative and when $K \ll 1$, $\Delta_{rxn}G^\circ$ is positive. Therefore, we can also use $\Delta_{rxn}G^\circ$ to determine $K$. In the hypothetical reaction,
 
 $$\ce{aA + bB <=> cC + dD}
 $$
@@ -230,7 +230,7 @@ K_c = e^{-\left({\dfrac{\Delta_{rxn}G^\circ{}}{\mathrm{R}T}}\right)}
 
 ## Chemical Activities
 
-In chemical thermodynamics, concentrations are dimensionless (unitless). These dimensionless or idealized concentrations are called activities. Activity of a chemical constituent is an important concept and is used to address the influence of physical and chemical conditions in the bulk solution. Chemical species in solution interact in many ways with nearby chemical species, including chemical bonding, van der Waals (dipole) interactions, to long-range electrostatic interactions. Sometimes, when concentrations of solutes are very high, they crowd each other. The intensity of all these interactions depends on the distance between the molecules and their concentrations. The activities inherently account for all these factors and are hence referred to as "thermodynamic concentrations." Because, these values are dimensionless, $K_c$ of any aqueous phase chemical reaction is dimensionless.
+In chemical thermodynamics, concentrations are dimensionless (unitless). These dimensionless or idealized concentrations are called activities. The activity of a chemical constituent is an important concept and is used to address the influence of physical and chemical conditions in the bulk solution. Chemical species in solution interact with nearby chemical species, including chemical bonding, van der Waals (dipole), and long-range electrostatic interactions. Sometimes, when concentrations of solutes are very high, they crowd each other. The intensity of all these interactions depends on the distance between the molecules and their concentrations. The activities inherently account for all these factors and are called "thermodynamic concentrations." Because these values are dimensionless, $K_c$ of any aqueous phase chemical reaction is dimensionless.
 
 Activities are derived from the same fundamental thermodynamic principles covered thus far. We use "$\{\, \}$" (curly brackets or braces) around chemical species names to indicate activity. An activity coefficient ($\gamma_i$) is used to convert concentrations to activities as follows: 
 
@@ -238,15 +238,15 @@ Activities are derived from the same fundamental thermodynamic principles covere
 :label: activity
 \{A\} = \gamma_A [A]
 ```
- where $\{A\}$ is activity, $[A]$ is concentration, and $\gamma_A$ is the activity coefficient. By convention, $\gamma_A = 1$ for ideal solutes and dilute solutions (e.g., rain water and freshwater systems) and is $< 1$ all other cases. Also, by convention, $\{A\} = 1$ for pure solids (e.g., mineral phases, precipitates, etc) and pure liquids (e.g., water).
+ where $\{A\}$ is activity, $[A]$ is concentration, and $\gamma_A$ is the activity coefficient. By convention, $\gamma_A = 1$ for ideal solutes and dilute solutions (e.g., rainwater and freshwater systems) and is $< 1$ in all other cases. Also, by convention, $\{A\} = 1$ for pure solids (e.g., mineral phases, precipitates, etc.) and pure liquids (e.g., water).
 
-Activity coefficients are usually determined using ionic strength ($I$) of a solution. Ionic strength is a measure of combined concentration of all ions present in an aqueous solution and is calculated as follows:
+Activity coefficients are usually determined using a solution's ionic strength ($I$). Ionic strength is a measure of the combined concentration of all ions present in an aqueous solution and is calculated as follows:
 
 ```{math}
 :label: ionicstrength
 I = \frac{1}{2} \sum_{i=1}^{n} c_i z_i^2
 ```
-where,  $c_i$ is concentration of each ion in $\pu{mol L-1 }$ and $z_i$ is charge of each ion in  $\pu{eq mol-1}$. The activity coefficient, $\gamma_i$ for each ion using one of the following equations:
+where,  $c_i$ is concentration of each ion in $\pu{mol L-1 }$ and $z_i$ is charge of each ion in  $\pu{eq mol-1}$. The activity coefficient, $\gamma_i$, for each ion using one of the following equations:
 
 ```{math}
 :label: activitycoeff
@@ -257,7 +257,7 @@ where,  $c_i$ is concentration of each ion in $\pu{mol L-1 }$ and $z_i$ is charg
 \end{aligned}
 ```
 
-where, $A$ and $B$ are called Debye-Hückel constants and vary with temperature. At $\pu{25 ^\circ C}$, $A=\pu{0.511}$ and $B=\pu{0.329e8}$. $a_i$ is ion size parameter and is provided in {numref}`ionsize`.
+where $A$ and $B$ are called Debye-Hückel constants and vary with temperature. At $\pu{25 ^\circ C}$, $A=\pu{0.511}$ and $B=\pu{0.329e8}$. $a_i$ is ion size parameter and is provided in {numref}`ionsize`.
 
 ````{margin}
 ```{table} Ion size parameters ($a_i$) of major ions
@@ -275,16 +275,16 @@ where, $A$ and $B$ are called Debye-Hückel constants and vary with temperature.
 
 ## Units of $K$
 
-As seen in the previous section, the **activity**, or the effective concentration, of ions is less than that indicated by the actual concentration. Ions become more and more widely separated as solutions become more dilute, and the residual interionic interactions become less significant. Thus, in extremely dilute solutions, the effective concentrations of the ions (their activities) are essentially equal to the actual concentrations. *In freshwater environmental systems, aqueous ions are present in very small concentrations and, therefore, activities and concentrations are similar*.
+As seen in the previous section, the **activity**, or the effective concentration, of ions is less than that indicated by the actual concentration. Ions become more widely separated as solutions become more dilute, and the residual interionic interactions become less significant. Thus, in extremely dilute solutions, the effective concentrations of the ions (their activities) are equal to the actual concentrations. *In freshwater environmental systems, aqueous ions are present in very small concentrations; therefore, activities and concentrations are similar*.
 
  Below is a summary of the main conventions of activities and effective concentrations:
-- Activities are dimensionless (unitless) quantities and are in essence “adjusted” concentrations.
-- For relatively dilute solutions, a substance's activity and its molar concentration are roughly equal.
+- Activities are dimensionless (unitless) quantities and are essentially “adjusted” concentrations.
+- A substance's activity and molar concentration are roughly equal for relatively dilute solutions.
 - Activities for pure condensed phases (solids and liquids) are equal to 1.
 
-As a consequence of this last consideration, $Q_c$ and $K_c$ expressions do not contain terms for solids or liquids (being numerically equal to 1, these terms have no effect on the expression's value)_._ 
+Due to this last consideration, $Q_c$ and $K_c$ expressions do not contain terms for solids or liquids (being numerically equal to 1, these terms do not affect the expression's value). 
 
-For **homogeneous equilibrium** (the reactants and products are present in a single solution), evaluation of reaction quotients ($Q_c$) and equilibrium constants ($K_c$), it is a common convention to omit units of concentrations (as they are equivalent to activities) of reactants and products, resulting in **$K$ values are also dimensionless**. 
+For **homogeneous equilibrium** (the reactants and products are present in a single solution), evaluation of reaction quotients ($Q_c$), and equilibrium constants ($K_c$), it is a common convention to omit units of concentrations (as they are equivalent to activities) of reactants and products, resulting in **$K$ values are also dimensionless**. 
 
 ```{dropdown} Example: Homogeneous reactions
 
@@ -300,12 +300,12 @@ N2 (g) + 3 H2 (g) &⇌ 2 NH3 (g) && $K_c$ = \frac{[NH3 (g)]^2}{[N2 (g)][H2 (g)]^
 \end{align*}
 $$
 
-1. In the first two reactions all chemical components are in aqueous phase and/or also include $\ce{H2O (l)}$. A $K_c$ expression can be written for these reactions and the concentration $H2O (l)$ does not appear in the $K_c$ expression by convention.
-2. In the third reaction, all components are in gas phase and $K_p$ and $K_c$ expressions can be written.
+1. In the first two reactions, all chemical components are in the aqueous phase and/or include $\ce{H2O (l)}$. A $K_c$ expression can be written for these reactions, and the concentration $H2O (l)$ does not appear by convention in the $K_c$ expression.
+2. In the third reaction, all components are in the gas phase, and $K_p$ and $K_c$ expressions can be written.
 
 ```
 
-A **heterogeneous equilibrium** is a system in which reactants and products are found in two or more phases. The phases may be any combination of solid, liquid, or gas phases, and solutions. When dealing with these equilibria, remember that solids and pure liquids do not appear in equilibrium constant expressions (the activities of pure solids, pure liquids, and solvents are 1).  If a chemical reaction involves heterogeneous phases of reactants and products (usually a mixture of gases and liquids), it is not uncommon to see $K$ values with units.
+A **heterogeneous equilibrium** is a system in which reactants and products are found in two or more phases. The phases may combine solid, liquid, or gas phases and solutions. When dealing with these equilibria, remember that solids and pure liquids do not appear in equilibrium constant expressions (the activities of pure solids, pure liquids, and solvents are 1).  If a chemical reaction involves heterogeneous phases of reactants and products (usually a mixture of gases and liquids), it is not uncommon to see $K$ values with units.
 
 ```{dropdown} Example: Heterogeneous reactions
 
@@ -321,9 +321,9 @@ H2O (l) &⇌ H2O (g) && $K_c$ = [H2O (g)]
 \end{align*}
 $$
 
-1. In the first reaction, a solid is dissolving in $\ce{H2O (l)}$ to form ions. 
-2. In the second reaction, a solid is reacting with a gas to form another solid. $K_p$ and $K_c$ expressions can be written.
-3. In the third reaction, a phase change is occuring. $K_p$ and $K_c$ expressions can be written.
+1. A  solid dissolves in $\ce{H2O (l)}$ to form ions in the first reaction. 
+2. In the second reaction, a solid reacts with a gas to form another solid. $K_p$ and $K_c$ expressions can be written.
+3. In the third reaction, a phase change is occurring. $K_p$ and $K_c$ expressions can be written.
 
 When writing out the $K_c$ expressions in such reactions, the activities of solids, liquids, and solvents are 1. 
 

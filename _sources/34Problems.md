@@ -15,7 +15,7 @@ H2C2O4 &<=> 2 H+ + C2O4^2-
 \end{align*}
 $$
 
-2. A reaction vessel contains $\ce{NH3 (g)}$, $\ce{N2 (g)}$, and $\ce{H2 (g)}$ at equilibrium at a certain temperature. The equilibrium concentrations are $[\ce{NH3}] = \pu{0.25 M}$, $[\ce{N2}] = \pu{0.11 M}$, and $[\ce{H2}] = \pu{1.91 M}$. Calculate the equilibrium constant $K_c$ for each of the two reactions representing synthesis of ammonia as
+2. A reaction vessel contains $\ce{NH3 (g)}$, $\ce{N2 (g)}$, and $\ce{H2 (g)}$ at equilibrium at a certain temperature. The equilibrium concentrations are $[\ce{NH3}] = \pu{0.25 M}$, $[\ce{N2}] = \pu{0.11 M}$, and $[\ce{H2}] = \pu{1.91 M}$. Calculate the equilibrium constant $K_c$ for each of the two reactions representing the synthesis of ammonia as
 
 $$
 \begin{align*}
@@ -25,7 +25,7 @@ $$
 \end{align*}
 $$
 
-3. Create a table of all gases present in Earth's atmosphere from the most abundant at top to less abundant (minimum of 6 gases). In adjacent columns, list concentrations in fraction ($\%$), partial pressure ($P,\, \pu{atm}$), and concentration ($C,\, \pu{mol L-1}$). See template below:
+3. Create a table of all gases in Earth's atmosphere from the most abundant at the top to the least abundant (minimum of 6 gases). In adjacent columns, list concentrations in fraction ($\%$), partial pressure ($P,\, \pu{atm}$), and concentration ($C,\, \pu{mol L-1}$). See the template below:
    
 | Gas       | Fraction   |   $P$   |   $C$   |
 |------  |-----: | ------: | --------: |
@@ -34,7 +34,7 @@ $$
 | $\ce{O2}$ | $21$    | $0.21$   | $\pu{8.58e-3}$    |
 | $\vdots$  |     |     |       |
 
-4. Carbonyl chloride ($\ce{COCl2}$), also called phosgene, is a highly poisonous gas that was used on the battlefield in World War I. It is produced by the reaction of carbon monoxide with chlorine gas as follows
+4. Carbonyl chloride ($\ce{COCl2}$), also called phosgene, is a highly poisonous gas used on the battlefield in World War I. It is produced by the reaction of carbon monoxide with chlorine gas as follows
 
 $$\ce{CO(g) + Cl2(g)  <=> COCl2(g)}$$
 
@@ -54,7 +54,7 @@ $$\ce{CaCO3(s) <=> CaO(s) + CO2(g)
 
 $$\ce{2 H2O(g) <=> 2 H2(g) + O2(g)
 }$$
-> Using thermodynamic data, calculate the equilibrium constant, $K_p$ for this reaction.
+> Using thermodynamic data, calculate this reaction's equilibrium constant, $K_p$.
 
 7. The dissolution of silver chloride in water at $\pu{25 ^\circ C}$. 
 
@@ -62,7 +62,7 @@ $$\ce{AgCl(s) <=>[H2O] Ag+(aq) + Cl-(aq) \qquad $K_{sp} = \pu{1.6e-10}$
 }$$
 > Calculate $\Delta_{rxn}G^\circ$ for the process using only the data provided here.
 
-8. Consider the decomposition of calcium carbonate as shown in the reaction below. 
+8. Consider the decomposition of calcium carbonate, as shown in the reaction below. 
 
 $$\ce{CaCO3 <=> CaO + CO2
 }$$
@@ -85,7 +85,7 @@ $$\ce{C  (diamond) <=> C  (graphite)
 
 > a. Calculate $\Delta_{rxn}G^\circ$ for the process.
 > 
-> b. Is the formation of graphite from diamond favored at $\pu{25 ^\circ C}$? If so, why is it that diamonds do not become graphite on standing?
+> b. Is the formation of graphite from diamond favored at $\pu{25 ^\circ C}$? If they are fvored, why do diamonds not become graphite on standing?
 
 11. $\ce{CaCl2(s)}$ is a strong electrolyte when it is dissolved in water at $\pu{25 ^\circ C}$ to create $\ce{Ca^2+}$ and $\ce{Cl-}$. Calculate activity of $\{\ce{Ca^2+}\}$ and $\{\ce{Cl-}\}$ when the following concentrations of $\ce{CaCl2(s)}$ are dissolved: 
 
@@ -116,14 +116,14 @@ $$\ce{2 H2S(g) + O2(g) <=> 2 S(s) + 2 H2O(g)
 >
 >(d) addition of $\ce{S(s)}$
 
-14. Repeat above problem with the following initial data.
+14. Repeat the above problem with the following initial data.
 
 $$\ce{H2(g) + I2(g) <=> 2 HI(g)
 }$$
 
 >Calculate concentrations of all components at equilibrium if we start with $\ce{H2(g)}$ = $\pu{0.00623 M}$, $\ce{H2(g)}$ = $\pu{0.00414 M}$, and $\ce{HI(g)}$ =  $\pu{0.0424 M}$. $K_c$ for the above reaction is $54.3$ at $\pu{430 ^\circ C}$. 
 >
->Hint: Compare $Q_c$ with $K_c$ to determine in which direction the reaction proceeds towards equilibrium.
+>Hint: Compare $Q_c$ with $K_c$ to determine which direction the reaction proceeds towards equilibrium.
 
 15. Large quantities of $\ce{H2 (g)}$ are needed to produce $\ce{NH3(g)}$. One preparation for $\ce{H2 (g)}$ is the following reaction, at $\pu{300 ^\circ C}$ in the presence of a Cu-Zn catalyst:
 
@@ -132,7 +132,7 @@ $$\ce{CO(g) + H2O(g) <=> CO2(g) + H2(g) \qquad $K_c=1.87$ and $\Delta _{rxn}H^\c
 
 >(a) Initial concentrations of reactants $\ce{CO(g)}$ and $\ce{H2O(g)}$ were $\pu{3.2 M}$. The final concentration of $\ce{CO(g)}$ was monitored over time and determined to be $\pu{1.35 M}$ at equilibrium. What are the equilibrium concentrations of all gases? (Use ICE method) 
 >
->(b) In another reactor, initial concentrations are: $[\ce{CO}] = \pu{0.50 M}$, $[\ce{H2O}] = \pu{0.045 M}$, $[\ce{CO2}] = \pu{0.050 M}$, $[\ce{H2}] = \pu{0.040 M}$. (i) Compare $Q$ to $K$ and determine in which direction the reaction will proceed. (ii) What are the equilibrium concentrations?
+>(b) In another reactor, initial concentrations are: $[\ce{CO}] = \pu{0.50 M}$, $[\ce{H2O}] = \pu{0.045 M}$, $[\ce{CO2}] = \pu{0.050 M}$, $[\ce{H2}] = \pu{0.040 M}$. (i) Compare $Q$ to $K$ and determine the direction of the reaction. (ii) What are the equilibrium concentrations?
 >
 >(c) If $\pu{0.80 mole}$ of $\ce{CO(g)}$ and $\ce{H2O(g)}$ are added to a new $\pu{5 L}$ reactor, what are the equilibrium concentrations of all reactants and products?
 >

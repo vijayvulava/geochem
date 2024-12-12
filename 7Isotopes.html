@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -66,6 +69,7 @@
     <link rel="prev" title="6.3 Practice Problems" href="63Problems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +149,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -356,24 +345,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -419,23 +400,23 @@ document.write(`
 <h1>7 Environmental Isotopes<a class="headerlink" href="#environmental-isotopes" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>Isotopes are used in many ways to understand Earth’s history and how environmental processes occur on Earth. For example, isotopes of carbon, oxygen, and nitrogen are used to study past climates and environments by analyzing the isotopic composition of fossils and sediments. Isotopes of uranium and lead are used to date rocks and minerals. Isotopes of hydrogen and oxygen are used to study the water cycle and past climates. Isotopes of argon are used to date volcanic rocks. These are just a few examples of how isotopes are used in geology and geochemistry.</p>
+<p>Isotopes play a significant role in understanding Earth’s history and the processes occurring within its environment. For instance, isotopes of carbon, oxygen, and nitrogen are utilized to study ancient climates and environments by analyzing the isotopic composition of fossils and sediments. Additionally, isotopes of uranium and lead are employed to date rocks and minerals. Isotopes of hydrogen and oxygen help researchers examine the water cycle and past climates. Furthermore, isotopes of argon are used to date volcanic rocks. These examples illustrate the various applications of isotopes in geology and geochemistry.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/FDLYRuJs-Jo" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 <section id="radioisotopes-in-geosciences">
 <h3>Radioisotopes in Geosciences<a class="headerlink" href="#radioisotopes-in-geosciences" title="Link to this heading">#</a></h3>
-<p>Radioisotopes are important for understanding the Earth in a number of ways. They can be used to date rocks and minerals, helping geologists to understand the history of the Earth and the processes that have shaped it. Radioisotopes can also be used to study the movements and behavior of elements in the Earth’s crust and mantle, giving us a better understanding of the Earth’s internal structure and processes. In addition, radioisotopes are used in the field of environmental science to study the movement of elements and compounds through ecosystems, and to understand the processes that control the distribution and behavior of elements in the environment.</p>
-<p>Radioisotope decay is also harnessed to generate power. Nuclear power is generated through the process of nuclear fission. In a nuclear power plant, fuel rods containing uranium or other fissile materials are placed inside a reactor. When a neutron hits the nucleus of a uranium atom, it causes the nucleus to split into two smaller atoms, releasing a large amount of energy in the process. This energy is used to heat water, which produces steam that drives a turbine connected to a generator. The generator converts the mechanical energy of the turbine into electrical energy, which is then sent to the grid for distribution to homes and businesses.</p>
-<p>The process of nuclear fission also releases additional neutrons, which can be captured by other uranium atoms, creating a chain reaction. The rate at which the chain reaction occurs is carefully controlled by the use of control rods, which can absorb excess neutrons and slow down the reaction. The heat produced by the nuclear reaction is removed from the reactor by a cooling system, which prevents the fuel rods from overheating and melting.</p>
-<p>Nuclear power has the potential to be a low-carbon source of electricity that can help to address climate change. Because nuclear reactions release a large amount of energy with minimal carbon emissions, nuclear power plants can generate electricity with fewer greenhouse gas emissions than fossil fuel-fired power plants.</p>
+<p>Radioisotopes play a crucial role in our understanding of the Earth for several reasons. They can be used to date rocks and minerals, which helps geologists comprehend the planet’s history and the processes that have shaped it. Additionally, radioisotopes allow scientists to study the movement and behavior of elements within the Earth’s crust and mantle, leading to a better understanding of the Earth’s internal structure and dynamics. Furthermore, radioisotopes are utilized in environmental geosciences to investigate how elements and compounds move through ecosystems. This research aids in understanding the processes that control the distribution and behavior of elements in the environment.</p>
+<p>Radioisotope decay is also used to generate power. Nuclear power is produced through a process called nuclear fission. In a nuclear power plant, fuel rods containing uranium or other fissile materials are placed inside a reactor. When a neutron collides with the nucleus of a uranium atom, it causes the nucleus to split into two smaller atoms, releasing a significant amount of energy in the process. This energy is used to heat water, which produces steam that drives a turbine connected to a generator. The generator then converts the mechanical energy from the turbine into electrical energy, which is sent to the grid for distribution to homes and businesses.</p>
+<p>Nuclear fission releases additional neutrons, which can be captured by other uranium atoms, leading to a chain reaction. The rate of this chain reaction is carefully controlled using control rods, which absorb excess neutrons and slow down the reaction. A cooling system removes the heat generated by the nuclear reaction, preventing the fuel rods from overheating and melting.</p>
+<p>Nuclear power can potentially serve as a low-carbon source of electricity, contributing to efforts to combat climate change. Since nuclear reactions produce a large amount of energy with minimal carbon emissions, so nuclear power plants can generate electricity with significantly fewer greenhouse gas emissions than fossil fuel-fired power plants.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/R7WPEYGr1Vs" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>However, nuclear power is not without its challenges. One of the main concerns is the management of nuclear waste, which can remain radioactive for thousands of years and requires careful disposal. In addition, the construction of nuclear power plants can be expensive and time-consuming, and there are concerns about the safety of nuclear power plants, especially in the wake of accidents such as the Fukushima disaster in Japan.</p>
-<p>Overall, the role of nuclear power in addressing climate change will depend on the ability to address these challenges and on the availability of other low-carbon energy sources. Some experts believe that a mix of low-carbon energy sources, including nuclear power, will be necessary to meet the global demand for electricity while reducing greenhouse gas emissions.</p>
+<p>Nuclear power presents several challenges that need to be addressed. One of the primary concerns is the management of nuclear waste, which can remain radioactive for thousands of years and require careful disposal. Additionally, constructing nuclear power plants can be costly and time-consuming. Safety is another major issue, especially given accidents such as the Fukushima disaster in Japan.</p>
+<p>Overall, the effectiveness of nuclear power in combating climate change will depend on how well these challenges can be managed and the availability of other low-carbon energy sources. Some experts believe that a combination of low-carbon energy sources, including nuclear power, will be essential to meet the global demand for electricity while reducing greenhouse gas emissions.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/NfNgRc4sJt8" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -443,9 +424,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="stable-isotopes-in-geosciences">
 <h3>Stable Isotopes in Geosciences<a class="headerlink" href="#stable-isotopes-in-geosciences" title="Link to this heading">#</a></h3>
-<p>Water isotopes, particularly isotopes of hydrogen and oxygen, are used to study climate because they can provide information about the sources, movements, and histories of water in the Earth’s hydrological cycle. Different isotopes of water have different properties and behave differently in the environment, so by measuring the relative abundance of different isotopes in water samples, scientists can learn about the conditions under which the water was formed and the processes it has undergone.</p>
-<p>For example, the ratio of heavy isotopes (such as deuterium) to light isotopes (such as hydrogen) in water can be used to trace the source and movement of water, as well as to understand the temperature and humidity conditions in the atmosphere. Similarly, the ratio of oxygen isotopes in water can be used to infer information about the temperature and humidity of the air when the water was evaporated, as well as the altitude at which the water precipitated.</p>
-<p>By studying the isotopic composition of water from various sources and locations, scientists can build a picture of the Earth’s hydrological cycle and how it has changed over time, providing valuable insights into past and present climate conditions.</p>
+<p>Water isotopes, particularly those of hydrogen and oxygen, are valuable for studying climate because they provide insights into water sources, movements, and histories in the Earth’s hydrological cycle. Different isotopes of water have distinct properties and behave differently in the environment. By measuring the relative abundance of these isotopes in water samples, scientists can learn about the conditions under which the water was formed and the processes it has undergone.</p>
+<p>For instance, the ratio of heavy isotopes (e.g., deuterium) to light isotopes (e.g., protium) in water can help trace the source and movement of water. It also aids in understanding the temperature and humidity conditions in the atmosphere. Similarly, the ratio of oxygen isotopes in water can reveal information about the temperature and humidity of the air when the water evaporated, as well as the altitude at which the water precipitated.</p>
+<p>By studying the isotopic composition of water from various sources and locations, scientists can construct a comprehensive picture of the Earth’s hydrological cycle and its changes over time, offering valuable insights into past and present climate conditions.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/UggRfCbAulQ" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -459,8 +440,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p>The main goals for this chapter are to:</p>
 <ol class="arabic simple">
 <li><p>describe radio and stable isotopes of elements,</p></li>
-<li><p>explain how isotopes partition into different geological environments, and</p></li>
-<li><p>how isotopes can help are used to understand contemporary and historical geological processes.</p></li>
+<li><p>explain how isotopes partition into different geological environments and</p></li>
+<li><p>determine how isotopes help us understand contemporary and historical geological processes.</p></li>
 </ol>
 </div>
 </section>
@@ -527,7 +508,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -594,8 +576,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

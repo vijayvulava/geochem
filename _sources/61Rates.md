@@ -1,21 +1,21 @@
 # 6.1  Chemical Kinetics
 
-Chemical equilibrium is a thermodynamics concept. Thermodynamics is able to predict what reactions as possible, however, it does not tell us how fast reactions happen. For example, consider the following reaction that occurs naturally in nature:
+Chemical equilibrium is a thermodynamics concept. Thermodynamics can predict what reactions are possible, however, it does not tell us how fast reactions happen. For example, consider the following reaction that occurs naturally in nature:
 
 $$\ce{
 C6H12O6 (s) + 6 O2 (g) -> 6 CO2 (g) + 6 H2O (l)
 }$$
 
-Per thermodynamics, the above reaction involving glucose ($\ce{C6H12O6}$ or sugar) proceeds spontaneously under standard conditions and glucose is expected to combust in the presence of $\ce{O2}$. In reality, when do we observe spontaneous combustion of glucose? We don't, because the above reaction proceeds very slowly.
+Per thermodynamics, the above reaction involving glucose ($\ce{C6H12O6}$ or sugar) proceeds spontaneously under standard conditions, and glucose is expected to combust in the presence of $\ce{O2}$. In reality, when do we observe spontaneous combustion of glucose? We don't because the above reaction proceeds very slowly.
 
-In thermodynamics, we explained that reactions occur spontaneously (this term is unrelated to rates of reactions) and reach equilibrium by minimizing $\Delta_{rxn}G^\circ$ . In all spontaneous reactions, products have free energies less than that of the reactants. In some cases, it take little or no energy to start the process of creation of the products ({numref}`activation-energy`).
+In thermodynamics, we explained that reactions occur spontaneously (this term is unrelated to rates of reactions) and reach equilibrium by minimizing $\Delta_{rxn}G^\circ$. In all spontaneous reactions, products have less free energy than reactants. In some cases, it takes little or no energy to start the process of creation of the products ({numref}`activation-energy`).
 
 ```{figure} https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Activation2_updated.svg/1280px-Activation2_updated.svg.png
 ---
 name: activation-energy
 figclass: margin-caption
 ---
-Energy used in the course of the glucose reaction with and without external support (catalyst). In either casem the activation energy must be exceeded for the reaction to proceed. Image source: [Activation energy - Wikipedia](https://en.wikipedia.org/wiki/Activation_energy)
+Energy is used during the glucose reaction with and without external support (catalyst). In either case, the activation energy must be exceeded for the reaction to proceed. Image source: [Activation energy - Wikipedia](https://en.wikipedia.org/wiki/Activation_energy)
 ```
 
 In other cases, external factors such as catalysts can lower the activation energy to overcome an energy barrier ({numref}`activation-energy`). This requirement adds time for a reaction to reach equilibrium.
@@ -32,7 +32,7 @@ $$\ce{
 CaSO4.2 H2O (s) ->[H2O] Ca^2+ (aq) + SO4^2- (aq) + 2 H2O (l)
 }$$
 
-This reaction is thermodynamically favorable, i.e., $\Delta_{rxn}G^\circ<0$. In order for this reaction to proceed, energy must be spent break chemical bonds within the crystalline structure, followed by diffusion of and away from the crystalline surface. The dissolution will continue until there is a dissolved ion gradient between the crystalline surface and the bulk aqueous solution. Thermodynamics does not explicitly account for these intermediate time-limiting steps.
+This reaction is thermodynamically favorable, i.e., $\Delta_{rxn}G^\circ<0$. For this reaction to proceed, energy must be spent to break chemical bonds within the crystalline structure, followed by diffusion of and away from the crystalline surface. The dissolution will continue until there is a dissolved ion gradient between the crystalline surface and the bulk aqueous solution. Thermodynamics does not explicitly account for these intermediate time-limiting steps.
 
 ***Chemical kinetics*** is the study of how rapidly reactions take place. Chemical kinetics provide important information for the elucidation of chemical mechanisms.
 
@@ -41,19 +41,19 @@ Consider a chemical reaction expressed in the following general form:
 $$\ce{
 Reactants -> Products
 }$$
-Over the course of this reaction, concentrations of the *Reactants* decrease while concentrations of the *Products* increase. The rates at which the changes in concentrations occur depend on the chemical system in question.
+Throughout this reaction, concentrations of the *Reactants* decrease while concentrations of the *Products* increase. The rates at which the changes in concentrations occur depend on the chemical system.
 
-The ***Collision Theory*** of chemical kinetics, the reaction rate is directly proportional to the number of collision at any given time.
+In the ***Collision Theory*** of chemical kinetics, the reaction rate is directly proportional to the number of collisions at any given time.
 
 ```{math}
 :label: collisions-rate
 \text{Rate} \propto \frac{\text{Number of Collisions}}{\text{Time}}
 ```
-Not every collision between molecules results in a reaction, however, the collision theory gives simple basis to explaining chemical reaction mechanisms. For example, a molecule in motion possesses kinetic energy and when molecules collide, part of this kinetic energy is converted to vibrational energy, which can cause some chemical bonds in molecules and crystalline structures to break. A minimum amount of energy, the activation energy ($\Delta G^\ddagger$), required to initiate a chemical reaction (see {numref}`activation-energy`). Without this minimum amount of energy at impact, a collision will be ineffective or the reaction will occur at a slow rate.
+Not every collision between molecules results in a reaction. However, the collision theory gives a simple basis for explaining chemical reaction mechanisms. For example, a molecule in motion possesses kinetic energy. When molecules collide, part of this kinetic energy is converted to vibrational energy, which can cause some chemical bonds in molecules and crystalline structures to break. A minimum amount of energy, the activation energy ($\Delta G^\ddagger$), is required to initiate a chemical reaction (see {numref}`activation-energy`). Without this minimum energy at impact, a collision will be ineffective, or the reaction will occur slowly.
 
 ## Reaction Rates
 
-Since kinetics is concerned with the change of chemical concentrations over time, or the ***rates*** of chemical reactions become important. 
+Since kinetics is concerned with changing chemical concentrations over time, the ***rates*** of chemical reactions become important. 
 
 Consider the following hypothetical reaction: 
 
@@ -65,7 +65,7 @@ We can follow the progress of a reaction by monitoring either the decrease in co
 name: rxn-ab
 figclass: margin-caption
 ---
-The reaction mixture initially contains only A molecules (purple). With increasing time, the number of A molecules decreases and more B molecules (green) are formed (top). The graph shows the change in the number of A and B molecules in the reaction as a function of time (bottom). Image source: [Reaction Rates and Rate Laws (saylordotorg.github.io)](https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/s18-02-reaction-rates-and-rate-laws.html)
+The reaction mixture initially contains only *A* molecules (purple). The number of *A* molecules decreases with increasing time, and more *B* molecules (green) are formed (top). The graph shows the change in the reaction's number of *A* and *B* molecules as a function of time (bottom). Image source: [Reaction Rates and Rate Laws (saylordotorg.github.io)](https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/s18-02-reaction-rates-and-rate-laws.html)
 ```
 
 We can express the change in chemical concentration of each chemical species as a function of time using the "$\Delta$" notation.
@@ -75,7 +75,7 @@ We can express the change in chemical concentration of each chemical species as 
 \text{Rate} = -\frac{\Delta [A]}{\Delta t} \quad \text{or} \quad \text{Rate} =  \frac{\Delta [B]}{\Delta t}
 ```
 
-Here "\[\]" represents concentration of a chemical specie, while the "--" (minus) sign represents decrease in concentration. Rate is always a positive quantity, so when it is expressed as $\Delta [A]/\Delta t$, a minus sign is needed in the rate expression to make the rate positive. When the rate is expressed in terms of the change in a product concentration, no negative sign is needed to make the rate positive because the product concentration increases with time. Rates calculated in this way are average rates over the time period $\Delta t$.
+Here, "\[\]" represents the concentration of a chemical species, while the "$-$" (minus) sign represents a decrease in concentration. Rate is always a positive quantity, so when it is expressed as $\Delta [A]/\Delta t$, a minus sign is needed in the rate expression to make the rate positive. When the rate is expressed in terms of the change in a product concentration, no negative sign is needed to make the rate positive because the product concentration increases with time. Rates calculated this way are average rates over the period $\Delta t$.
 
 
 ```{dropdown} Example: Reaction Rates
@@ -129,11 +129,11 @@ $$\begin{aligned}
 
 ## Stoichiometry & Reaction Rates
 
-Consider a hypothetical chemical reaction, where two reactants *A* and *B* combine to form a product *AB*. 
+Consider a hypothetical chemical reaction where two reactants *A* and *B* combine to form a product *AB*. 
 
 $$\ce{A + B \rightarrow AB}$$ 
 
-This reactants show a one-to-one stoichiometry. One mole of *A* reacts with one mole of *B* to form the product, $AB$. That is, the reaction rates of *A* and *B* are identical. It also follows that reaction rates are proportional ($\propto$) to concentrations of *A* ($[A]$) and *B* ($[B]$). If the reaction rates are proportional to concentrations of the reactants, it can be summarized that reaction rates for the reaction are proportional to the product of $[A]$ and $[B]$ or $[A]\times [B]$.
+These reactants show a one-to-one stoichiometry. One mole of *A* reacts with one mole of *B* to form the product, $AB$. The reaction rates of *A* and *B* are identical. It also follows that reaction rates are proportional ($\propto$) to concentrations of *A* ($[A]$) and *B* ($[B]$). If the reaction rates are proportional to concentrations of the reactants, it can be summarized that reaction rates for the reaction are proportional to the product of $[A]$ and $[B]$ or $[A]\times [B]$.
 
 ```{math}
 :label: rate-ab
@@ -147,4 +147,4 @@ The proportional sign in Eq. {eq}`rate-ab` can be converted into an "=" sign by
 \text{Rate} = \kappa [A]^1[B]^1
 ```
 
-This expression where the reaction rate is equated to concentration of reactants are called *rate expressions* or *rate laws*. In this equation, $\kappa$ is called the *rate constant*. By convention, the rate laws are only written for the reactants and each reactant has its own rate constant. Note that the exponent 1 is shown in Eq. {eq}`ratelaw-ab` refers to the number of moles of each reactant in the original chemical reaction. In this case, the ***reaction order*** for *A* and *B* is 1 (both have one mole each in the reaction.) The reaction order refers to the molecularity or the number of molecules of a reactant that are participating in a reaction. The reaction order for the whole reaction is the sum of the reaction order for all reactants. In this case, the reaction order for the above reaction is 2. Equation {eq}`ratelaw-ab` also shows that the rate is dependent on the reactant concentrations.
+This expression where the reaction rate is equated to reactant concentration is called *rate expressions* or *rate laws*. In this equation, $\kappa$ is called the *rate constant*. By convention, the rate laws are only written for the reactants, and each reactant has its rate constant. Note that the exponent $1$ is shown in Eq. {eq}`ratelaw-ab`, which refers to the number of moles of each reactant in the original chemical reaction. In this case, the ***reaction order*** for *A* and *B* is $1$ (both have one mole each in the reaction.) The reaction order refers to the molecularity or the number of molecules of a reactant participating in a reaction. The reaction order for the whole reaction is the sum of the reaction order for all reactants. In this case, the reaction order for the above reaction is 2. Equation {eq}`ratelaw-ab` also shows that the rate depends on the reactant concentrations.

@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="7 Environmental Isotopes" href="7Isotopes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -418,8 +399,8 @@ document.write(`
 <h1>7.1 Radioisotopes<a class="headerlink" href="#radioisotopes" title="Link to this heading">#</a></h1>
 <section id="what-are-isotopes">
 <h2>What are isotopes?<a class="headerlink" href="#what-are-isotopes" title="Link to this heading">#</a></h2>
-<p>Atoms that have same atomic number (<span class="math notranslate nohighlight">\(Z\)</span>), but different atomic mass (<span class="math notranslate nohighlight">\(M\)</span>), i.e., isotopes of the same number of protons (<span class="math notranslate nohighlight">\(\ce{p+}\)</span>), but different number of neutrons (<span class="math notranslate nohighlight">\(\ce{n^0}\)</span>). For example, the element hydrogen has three isotopes: <span class="math notranslate nohighlight">\(\ce{_1^{1}H}\)</span> (protium), <span class="math notranslate nohighlight">\(\ce{_1^{2}H}\)</span>(deuterium), and <span class="math notranslate nohighlight">\(\ce{_1^{3}H}\)</span> (tritium). By convention, the atomic number is shown in lower left side of the element symbol, while the atomic mass is shown on upper left side of the element symbol. Since, isotopes of the same element have the same atomic number, often the atomic number is not shown. The common way to show the hydrogen isotopes would be: <span class="math notranslate nohighlight">\(\ce{^{1}H}\)</span>, <span class="math notranslate nohighlight">\(\ce{^{2}H}\)</span>, and <span class="math notranslate nohighlight">\(\ce{^{3}H}\)</span>. In literature, you may also come across other naming conventions such as <span class="math notranslate nohighlight">\(\ce{C-14}\)</span> or <span class="math notranslate nohighlight">\(\ce{U-238}\)</span>.</p>
-<p>In calculation of atomic mass of an element, relative abundances of all isotopes and their respective masses are used to calculate a weighted average.</p>
+<p>Atoms that have the same atomic number (<span class="math notranslate nohighlight">\(Z\)</span>) but a different atomic mass (<span class="math notranslate nohighlight">\(M\)</span>), i.e., isotopes of an element have the same number of protons (<span class="math notranslate nohighlight">\(\ce{p+}\)</span>) but a different number of neutrons (<span class="math notranslate nohighlight">\(\ce{n^0}\)</span>). For example, the element hydrogen has three isotopes: <span class="math notranslate nohighlight">\(\ce{_1^{1}H}\)</span> (protium), <span class="math notranslate nohighlight">\(\ce{_1^{2}H}\)</span>(deuterium), and <span class="math notranslate nohighlight">\(\ce{_1^{3}H}\)</span> (tritium). By convention, the atomic number is shown on the lower left side of the element symbol, while the atomic mass is on the upper left side. Since isotopes of the same element have the same atomic number, the atomic number is often not shown. The common way to show the hydrogen isotopes would be <span class="math notranslate nohighlight">\(\ce{^{1}H}\)</span>, <span class="math notranslate nohighlight">\(\ce{^{2}H}\)</span>, and <span class="math notranslate nohighlight">\(\ce{^{3}H}\)</span>. You may also come across other naming conventions in literature such as <span class="math notranslate nohighlight">\(\ce{C-14}\)</span> or <span class="math notranslate nohighlight">\(\ce{U-238}\)</span>.</p>
+<p>In the calculation of the atomic mass of an element, relative abundances of all isotopes and their respective masses are used to calculate a weighted average.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Calculation of atomic mass</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -441,16 +422,16 @@ document.write(`
 </details></section>
 <section id="what-are-radioisotopes">
 <h2>What are Radioisotopes?<a class="headerlink" href="#what-are-radioisotopes" title="Link to this heading">#</a></h2>
-<p>The number of neutrons in the nucleus of an element can be variable, giving rise to isotopes. Many isotopes are not stable and some will spontaneously transform from one form to another. This process is termed radioactive decay, and an isotope that undergoes radioactive decay is termed a radioisotope.</p>
-<p>In the example of <span class="math notranslate nohighlight">\(\ce{H}\)</span> isotopes is a radioisotope. Similarly, <span class="math notranslate nohighlight">\(\ce{^{14}C}\)</span> is a radioisotope of <span class="math notranslate nohighlight">\(\ce{C}\)</span>, that is employed in many geological and environmental applications. Within the periodic table, majority of the elements have stable and radioisotopes. All elements with <span class="math notranslate nohighlight">\(Z&gt;83\)</span> are radioisotopes. The elements <span class="math notranslate nohighlight">\(\ce{Tc}\)</span> (<span class="math notranslate nohighlight">\(Z=43\)</span>) and <span class="math notranslate nohighlight">\(\ce{Pm}\)</span> (<span class="math notranslate nohighlight">\(Z=61\)</span>) have no stable isotopes.</p>
+<p>The number of neutrons in the nucleus of an element can be variable, giving rise to isotopes. Many isotopes are unstable, and some will spontaneously transform from one form to another. This process is termed radioactive decay, and an isotope that undergoes radioactive decay is termed a radioisotope.</p>
+<p>In the example of <span class="math notranslate nohighlight">\(\ce{H}\)</span> isotopes is a radioisotope. Similarly, <span class="math notranslate nohighlight">\(\ce{^{14}C}\)</span> is a radioisotope of <span class="math notranslate nohighlight">\(\ce{C}\)</span> that is employed in many geological and environmental applications. Within the periodic table, the majority of the elements have stable radioisotopes. All elements with <span class="math notranslate nohighlight">\(Z&gt;83\)</span> are radioisotopes. The elements <span class="math notranslate nohighlight">\(\ce{Tc}\)</span> (<span class="math notranslate nohighlight">\(Z=43\)</span>) and <span class="math notranslate nohighlight">\(\ce{Pm}\)</span> (<span class="math notranslate nohighlight">\(Z=61\)</span>) have no stable isotopes.</p>
 </section>
 <section id="decay-mechanisms">
 <h2>Decay Mechanisms<a class="headerlink" href="#decay-mechanisms" title="Link to this heading">#</a></h2>
-<p>Why are radioisotopes unstable? The nucleus of a radioisotope is unstable because the total energy content of its nucleus is greater than that of a neighboring stable nucleus. There are several processes by which a radioisotope can become stable. When radioisotopes decay, they release various forms of subatomic particles as well as energy. For example, <a class="reference internal" href="#u238-decay"><span class="std std-numref">Fig. 50</span></a> shows how decays into more stable isotopes.</p>
+<p>Why are radioisotopes unstable? The nucleus of a radioisotope is unstable because the total energy content of its nucleus is greater than that of a neighboring stable nucleus. There are several processes by which a radioisotope can become stable. When radioisotopes decay, they release various forms of subatomic particles and energy. For example, <a class="reference internal" href="#u238-decay"><span class="std std-numref">Fig. 50</span></a> shows how decays into more stable isotopes.</p>
 <figure class="margin-caption align-default" id="u238-decay">
 <img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Decay_chain%284n%2B2%2C_Uranium_series%29.svg/800px-Decay_chain%284n%2B2%2C_Uranium_series%29.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Decay_chain%284n%2B2%2C_Uranium_series%29.svg/800px-Decay_chain%284n%2B2%2C_Uranium_series%29.svg.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Decay sequence of naturally-occuring <span class="math notranslate nohighlight">\(\ce{^{238}U}\)</span> into daughter products as well as the release of various types of subatomic particles. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Decay_chain">Decay chain - Wikipedia</a></span><a class="headerlink" href="#u238-decay" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Decay sequence of naturally occurring <span class="math notranslate nohighlight">\(\ce{^{238}U}\)</span> into daughter products and the release of various types of subatomic particles. Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Decay_chain">Decay chain - Wikipedia</a></span><a class="headerlink" href="#u238-decay" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This decay process can be shown as a chemical reaction:</p>
@@ -476,9 +457,9 @@ document.write(`
 \[
 \ce{_6^{14}C -&gt; _7^{14}N + e-}
 \]</div>
-<p class="sd-card-text">Because the neutron converts to a proton, the mass number of the isotope does not change, but the atomic number increases by 1.</p>
+<p class="sd-card-text">Because the neutron converts to a proton, the isotope’s mass number does not change, but the atomic number increases by 1.</p>
 </div>
-</details><p>In beta+ (<span class="math notranslate nohighlight">\(\beta^+\)</span>or positron) decay, a proton (<span class="math notranslate nohighlight">\(\ce{p+}\)</span>) can decay into a neutron (<span class="math notranslate nohighlight">\(\ce{n^0}\)</span>) and a positron (a positively charged electron, <span class="math notranslate nohighlight">\(\ce{e+}\)</span>). Again, the mass number does not change, but the atomic number decreases by 1 as there is one less proton in the nucleus as shown below.</p>
+</details><p>In beta+ (<span class="math notranslate nohighlight">\(\beta^+\)</span>or positron) decay, a proton (<span class="math notranslate nohighlight">\(\ce{p+}\)</span>) can decay into a neutron (<span class="math notranslate nohighlight">\(\ce{n^0}\)</span>) and a positron (a positively charged electron, <span class="math notranslate nohighlight">\(\ce{e+}\)</span>). Again, the mass number does not change, but the atomic number decreases by <span class="math notranslate nohighlight">\(1\)</span> as there is one less proton in the nucleus, as shown below.</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align*}
@@ -493,9 +474,9 @@ document.write(`
 \[
 \ce{_9^{18}F -&gt; _8^{18}O + e+}
 \]</div>
-<p class="sd-card-text">The mass number did not change, but the atomic number decreased by 1 as there is one less proton in the nucleus.</p>
+<p class="sd-card-text">The mass number did not change, but the atomic number decreased by <span class="math notranslate nohighlight">\(1\)</span> as there is one less proton in the nucleus.</p>
 </div>
-</details><p>A proton can also convert into a neutron by capturing an orbiting electron, emitting X-ray radiation in the process as shown in the reaction below. This process is called <em><strong>electron capture</strong></em>.</p>
+</details><p>A proton can also convert into a neutron by capturing an orbiting electron, emitting X-ray radiation, as shown in the reaction below. This process is called <em><strong>electron capture</strong></em>.</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align*}
@@ -510,9 +491,9 @@ document.write(`
 \[
 \ce{_9^{18}F + e- -&gt; _8^{18}O + X-rays}
 \]</div>
-<p class="sd-card-text">The mass number did not change, but the atomic number decreased by 1 as there is one less proton in the nucleus.</p>
+<p class="sd-card-text">The mass number did not change, but the atomic number decreased by <span class="math notranslate nohighlight">\(1\)</span> as there is one less proton in the nucleus.</p>
 </div>
-</details><p>Neutron-rich radioisotopes tend to undergo decay by <span class="math notranslate nohighlight">\(\beta^-\)</span> decay process, whereas neutron-poor radioisotopes undergo <span class="math notranslate nohighlight">\(\beta^+\)</span> decay or electron capture. Many radioisotopes require repeated <span class="math notranslate nohighlight">\(\beta\)</span> decays to become stable.  For example, radioactive <span class="math notranslate nohighlight">\(\ce{_{54}^{140}Xe}\)</span>, which undergoes four successive <span class="math notranslate nohighlight">\(\beta-\)</span> decays to form stable <span class="math notranslate nohighlight">\(\ce{_{58}^{140}Ce}\)</span>.</p>
+</details><p>Neutron-rich radioisotopes tend to decay by the <span class="math notranslate nohighlight">\(\beta^-\)</span> decay process, whereas neutron-poor radioisotopes undergo <span class="math notranslate nohighlight">\(\beta^+\)</span> decay or electron capture. Many radioisotopes require repeated <span class="math notranslate nohighlight">\(\beta\)</span> decays to become stable.  For example, radioactive <span class="math notranslate nohighlight">\(\ce{_{54}^{140}Xe}\)</span>, which undergoes four successive <span class="math notranslate nohighlight">\(\beta-\)</span> decays to form stable <span class="math notranslate nohighlight">\(\ce{_{58}^{140}Ce}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{align*}
@@ -521,19 +502,19 @@ _{54}^{140}Xe -&gt; _{55}^{140}Cs -&gt;_{56}^{140}Ba  -&gt; _{57}^{140}La -&gt; 
 }
 \end{align*}
 \]</div>
-<p>For the heavier radioisotopes the number of beta decays would be enormous, and so they undergo a different kind of radioactive decay process. This is known as <em><strong>alpha (<span class="math notranslate nohighlight">\(\alpha\)</span>) decay</strong></em> and involves the ejection of an <span class="math notranslate nohighlight">\(\alpha\)</span> particle (i.e., <span class="math notranslate nohighlight">\(\ce{_2^{4}\alpha}\)</span> or <span class="math notranslate nohighlight">\(\ce{_2^{4}He}\)</span>) from the nucleus.</p>
+<p>The number of beta decay reactions would be numerous for the heavier radioisotopes, so they undergo a different kind of radioactive decay process. This is known as <em><strong>alpha (<span class="math notranslate nohighlight">\(\alpha\)</span>) decay</strong></em> and involves the ejection of an <span class="math notranslate nohighlight">\(\alpha\)</span> particle (i.e., <span class="math notranslate nohighlight">\(\ce{_2^{4}\alpha}\)</span> or <span class="math notranslate nohighlight">\(\ce{_2^{4}He}\)</span>) from the nucleus.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Example: Alpha decay</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Example: Alpha (<span class="math notranslate nohighlight">\(\alpha\)</span>) decay</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The isotope <span class="math notranslate nohighlight">\(\ce{_{94}^{239}Pu}\)</span> decays to <span class="math notranslate nohighlight">\(\ce{_{92}^{235}U}\)</span> by this process.</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{_{94}^{239}Pu -&gt; _{92}^{235}U + _{2}^{4}He}
 \]</div>
-<p class="sd-card-text">The loss of means that the mass number decreases by 4, whereas the atomic number decreases by 2.</p>
+<p class="sd-card-text">The loss of an <span class="math notranslate nohighlight">\(\alpha\)</span> particle means that the mass number decreases by 4, whereas the atomic number decreases by 2.</p>
 </div>
-</details><p>The <span class="math notranslate nohighlight">\(\alpha\)</span> particle is ejected at speed, and due to its mass is the most ionizing but the least penetrating form of radiation. A sheet of paper can block this form of radiation.</p>
-<p>Another form of radioactive decay is that of spontaneous fission. In this process, a heavy radioisotope will split into two medium-weight nuclei, which are called fission products. These are commonly radioactive themselves.</p>
+</details><p>The <span class="math notranslate nohighlight">\(\alpha\)</span> particle is ejected at speed and, due to its mass, is the most ionizing but the least penetrating form of radiation. A sheet of paper can block this form of radiation.</p>
+<p>Another form of radioactive decay is that of spontaneous fission. In this process, a heavy radioisotope will split into two medium-weight nuclei called fission products. These are commonly radioactive themselves.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Spontaneous fission</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -542,9 +523,9 @@ _{54}^{140}Xe -&gt; _{55}^{140}Cs -&gt;_{56}^{140}Ba  -&gt; _{57}^{140}La -&gt; 
 \[
 \ce{_{98}^{252}Cf -&gt; _{48}^{120}Cd + _{50}^{130}Sn + 2 n^0}
 \]</div>
-<p class="sd-card-text">The atomic numbers of cadmium (48) and tin (50) add up to the atomic number of californium (98) because there is no change in the total number of protons, and the total mass of the products including the two neutrons adds up to 252, the mass number of <span class="math notranslate nohighlight">\(\ce{_{98}^{252}Cf}\)</span>.</p>
+<p class="sd-card-text">The atomic numbers of cadmium (48) and tin (50) add up to the atomic number of californium (98) because there is no change in the total number of protons. The total mass of the products including the two neutrons, adds up to 252, the mass number of <span class="math notranslate nohighlight">\(\ce{_{98}^{252}Cf}\)</span>.</p>
 </div>
-</details><p>The last form of radioactive decay is that of <em><strong>gamma (<span class="math notranslate nohighlight">\(\gamma\)</span>) decay</strong></em>. Here, the radioisotopes are in an excited (i.e., high-energy) state. The majority of alpha and beta decays result in excited-state daughter nuclei, and these lose energy to go to their ground (i.e., low-energy) state by emitting gamma (<span class="math notranslate nohighlight">\(\gamma\)</span>) radiation. This gamma radiation is actually very-short-wavelength electromagnetic radiation similar to X-rays.</p>
+</details><p>The last form of radioactive decay is <em><strong>gamma (<span class="math notranslate nohighlight">\(\gamma\)</span>) decay</strong></em>. Here, the radioisotopes are in an excited (i.e., high-energy) state. Most alpha and beta decays result in excited-state daughter nuclei, which lose energy to go to their ground (i.e., low-energy) state by emitting gamma (<span class="math notranslate nohighlight">\(\gamma\)</span>) radiation. This gamma radiation is very short-wavelength electromagnetic radiation similar to X-rays.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Gamma decay</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -602,10 +583,10 @@ _{55}^{137}Cs -&gt; _{56}^{137}Ba (exited state) -&gt; _{56}^{137}Ba + \gamma
 </section>
 <section id="quantifying-decay">
 <h2>Quantifying Decay<a class="headerlink" href="#quantifying-decay" title="Link to this heading">#</a></h2>
-<p>Radioactive decay is a random process, and it is not possible to predict when any one particular atom will decay. The rate at which a particular radioisotope decays obeys first order kinetics. If the number of isotope atoms are represented as <span class="math notranslate nohighlight">\(N\)</span>, the rate of decay can be expressed as follows:</p>
+<p>Radioactive decay is a random process, and it is impossible to predict when any particular atom will decay. The rate at which a particular radioisotope decay obeys first-order kinetics. If the number of isotope atoms is represented as <span class="math notranslate nohighlight">\(N\)</span>, the rate of decay can be expressed as follows:</p>
 <div class="math notranslate nohighlight" id="equation-radio-decay">
 <span class="eqno">(68)<a class="headerlink" href="#equation-radio-decay" title="Link to this equation">#</a></span>\[\frac{dN}{dt} = -\lambda N\]</div>
-<p>where, <span class="math notranslate nohighlight">\(\lambda\)</span> is the radioactive decay constant (similar to the rate constant, <span class="math notranslate nohighlight">\(\kappa\)</span> described in the previous chapter.) We can integrate the above equation and derive the following solution:</p>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the radioactive decay constant (similar to the rate constant, <span class="math notranslate nohighlight">\(\kappa\)</span> described in the previous chapter.) We can integrate the above equation and derive the following solution:</p>
 <div class="math notranslate nohighlight" id="equation-radio-decay-equation">
 <span class="eqno">(69)<a class="headerlink" href="#equation-radio-decay-equation" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \ln \frac{N_t}{N_0} &amp;= -\lambda t \\
@@ -613,7 +594,7 @@ _{55}^{137}Cs -&gt; _{56}^{137}Ba (exited state) -&gt; _{56}^{137}Ba + \gamma
 N &amp;= N_0 e^{-\lambda t} 
 \end{aligned}\end{split}\]</div>
 <p>where, <span class="math notranslate nohighlight">\(N_0\)</span> is the number of unchanged atoms at <span class="math notranslate nohighlight">\(t=0\)</span>, and <span class="math notranslate nohighlight">\(N_t\)</span> is the number of atoms available at time, <span class="math notranslate nohighlight">\(t\)</span>.</p>
-<p>Since, the radioisotope is unstable and decaying according to first order kinetics, the time required for an isotope to reach half it’s original mass or concentration is called half-life. That is, at half-life, <span class="math notranslate nohighlight">\(N_t = \dfrac{N_0}{2}\)</span>. If we make appropriate substitutions to Eq. <a class="reference internal" href="#equation-radio-decay-equation">(69)</a>,</p>
+<p>Since the radioisotope is unstable and decaying according to first-order kinetics, the time required for an isotope to reach half its original mass or concentration is called half-life. At half-life, <span class="math notranslate nohighlight">\(N_t = \dfrac{N_0}{2}\)</span>. If we make appropriate substitutions to Eq. <a class="reference internal" href="#equation-radio-decay-equation">(69)</a>,</p>
 <div class="math notranslate nohighlight" id="equation-71radioisotopes-0">
 <span class="eqno">(70)<a class="headerlink" href="#equation-71radioisotopes-0" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{1}{2} &amp;= e^{-\lambda t_{1/2}} \\
@@ -623,10 +604,10 @@ t_{1/2} &amp;= \frac{0.693}{\lambda}
 <p>Consider the radioactive decay of <span class="math notranslate nohighlight">\(\ce{^{238}U}\)</span> to <span class="math notranslate nohighlight">\(\ce{^{234}Th}\)</span>. <span class="math notranslate nohighlight">\(\ce{^{238}U}\)</span> is the radioactive parent and <span class="math notranslate nohighlight">\(\ce{^{234}Th}\)</span> is the radiogenic daughter. For any closed system at time <span class="math notranslate nohighlight">\(t\)</span>, the number of daughter atoms produced plus the number of parent atoms remaining must equal the total number of parent atoms at the start. If we substitute <span class="math notranslate nohighlight">\(D\)</span> for the number of daughter atoms produced in Eq. <a class="reference internal" href="#equation-parent-daughter">(71)</a>, we get</p>
 <div class="math notranslate nohighlight" id="equation-parent-daughter">
 <span class="eqno">(71)<a class="headerlink" href="#equation-parent-daughter" title="Link to this equation">#</a></span>\[N = (N+D) e^{-\lambda t}\]</div>
-<p>If we assume that the <span class="math notranslate nohighlight">\(D\)</span> is not a radioisotope, we can simplify Eq. <a class="reference internal" href="#equation-radio-decay-equation">(69)</a> to determine the number of daughter atoms formed as the parent atoms decays</p>
+<p>If we assume that the <span class="math notranslate nohighlight">\(D\)</span> is not a radioisotope, we can simplify Eq. <a class="reference internal" href="#equation-radio-decay-equation">(69)</a> to determine the number of daughter atoms formed as the parent atoms decay as follows:</p>
 <div class="math notranslate nohighlight" id="equation-71radioisotopes-1">
 <span class="eqno">(72)<a class="headerlink" href="#equation-71radioisotopes-1" title="Link to this equation">#</a></span>\[D = N_0(1-e^{-\lambda t})\]</div>
-<p>The relationship between the decay of a radioisotope and the growth of a daughter can be seen in <a class="reference internal" href="#parent-daughter-fig"><span class="std std-numref">Fig. 51</span></a>.</p>
+<p>The relationship between a radioisotope’s decay and its daughter’s growth can be seen in <a class="reference internal" href="#parent-daughter-fig"><span class="std std-numref">Fig. 51</span></a>.</p>
 <figure class="margin-caption align-default" id="parent-daughter-fig">
 <img alt="https://d32ogoqmya1dw8.cloudfront.net/images/NAGTWorkshops/time/radioactive_decay_456.jpg" src="https://d32ogoqmya1dw8.cloudfront.net/images/NAGTWorkshops/time/radioactive_decay_456.jpg" />
 <figcaption>
@@ -691,7 +672,8 @@ t_{1/2} &amp;= \frac{0.693}{\lambda}
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -755,8 +737,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,6 +1,6 @@
 # 4.4 Practice Problems
 
-1. Label each specie in the reactions below as acid, base, conjugate base, or conjugate acid:
+1. Label each species in the reactions below as acid, base, conjugate base, or conjugate acid:
 
 $$
 \begin{align*}
@@ -26,7 +26,7 @@ $$
 	2. $3.45$
 	3. $2.78$
 
-7. An aqueous solution of a strong base has $p\ce{H} = 8.15$ at $\pu{25 ^\circ C}$. Calculate the original concentration of base in the solution if the base is 
+7. An aqueous solution of a strong base has $p\ce{H} = 8.15$ at $\pu{25 ^\circ C}$. Calculate the original concentration of the base in the solution if the base is 
 	1. $\ce{NaOH}$
 	2. $\ce{Ba(OH)2}$
 
@@ -73,7 +73,7 @@ H4SiO4 (aq) <=> H3SiO4- (aq) + H+ (aq) \qquad $K_a = 10^{-9.83}$
 	2. $\ce{NaOH}$ (note: the product is $\ce{Zn(OH)4^2- (aq)}$).
 
 18. $\ce{Cu(OH)2 (s)}$ is an amphoteric compound and dissolves according to the shown after the question. Answer the following questions and assume that the water temperature is $\pu{25 ^\circ C}$.
-	1. Excess copper hydroxide is added to a beaker of water, i.e., solid copper hydroxide is present in the water. Using a base, the solution $p\ce{H}$ is adjusted to $10$. Calculate $[\ce{Cu(OH)3- (aq)}]$ in the solution at equilibrium. 
+	1. Excess copper hydroxide is added to a beaker of water, i.e., solid copper hydroxide is present in the water. The solution $p\ce{H}$ is adjusted to $10$ using a base. Calculate $[\ce{Cu(OH)3- (aq)}]$ in the solution at equilibrium. 
 	2. A strong acid is added to the solution until the $p\ce{H}$ is reduced to $4$. Will the amount of $\ce{Cu(OH)3- (aq)}$ in the beaker increase or decrease? Explain. At this $p\ce{H}$, calculate $[\ce{Cu(OH)3- (aq)}]$ in the solution. 
 
 $$\ce{
@@ -83,9 +83,9 @@ Cu(OH)2 (s) + OH- (aq) <=> Cu(OH)3- (aq) \qquad $K_a = 10^{-2.9}$
 20. What is the $p\ce{H}$ of the buffer that is made up of  $\pu{0.10 M}$ of $\ce{Na2HPO4}$ and $\pu{0.15 M}$ of  $\ce{KH2PO4}$? $pK_a$'s for the dissociation of the weak acid, $\ce{H3PO4}$ are $2.15$, $7.20$, and $12.35$.
 21. If $\pu{0.10 M}$ $\ce{NaOH}$ is added to a buffer solution containing $\pu{1 M}$ each of $\ce{CH3COOH}$ and $\ce{CH3COONa}$, determine the final solution $p\ce{H}$.
 22. The $p\ce{H}$ of a bicarbonate-carbonic acid buffer is 8.0. Calculate the ratio of the concentration of carbonic acid ($\ce{H2CO3}$) to that of the bicarbonate ion ($\ce{HCO3-}$).
-23. In a natural water sample that is in equilibrium with atmospheric $\ce{CO2}$ and an initial $p\ce{H}$ of $6.35$, determine the change in $p\ce{H}$ upon addition of a strong acid at the following concentrations: (Note: The activity of $\ce{CO3^2-}$ is negligible.)
+23. In a natural water sample that is in equilibrium with atmospheric $\ce{CO2}$ and an initial $p\ce{H}$ of $6.35$, determine the change in $p\ce{H}$ upon the addition of a strong acid at the following concentrations: (Note: The activity of $\ce{CO3^2-}$ is negligible.)
 	1. $\pu{e-3 mol}$
 	2. $\pu{e-4 mol}$
 	3. $\pu{e-5 mol}$
 
-24. A water sample from the Rio Grande river in Texas has $[\ce{Ca^2+}] = \pu{109 mg L-1}$ and $[\ce{SO4^2-}] = \pu{238 mg L-1}$ in addition to other ions. Is this water under-, over-, or saturated with respect to gypsum ($K_{s0} = 10^{-4.6}$)?
+24. A water sample from the Rio Grande River in Texas has $[\ce{Ca^2+}] = \pu{109 mg L-1}$ and $[\ce{SO4^2-}] = \pu{238 mg L-1}$ in addition to other ions. Is this water under-, over-, or saturated with respect to gypsum ($K_{s0} = 10^{-4.6}$)?

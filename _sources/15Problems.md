@@ -10,8 +10,8 @@
 8. What mass of $\ce{Hg}$ contains the same number of atoms as $\pu{90.15 g}$ of $\ce{Hg}$?
 9. Calculate molecular and formula masses for the following compounds: (i) citric acid ($\ce{H3C6H5O7}$), (ii) barium acetate ($\ce{Ba(C2H3O2)2}$), and (iii) caffeine molecule shown in {numref}`caffeine`.
 10. Determine the percent composition by mass of (i) sodium bicarbonate ($\ce{Na2CO3}$), (ii) lithium carbonate ($\ce{Li2CO3}$), and (iii) kaolinite ($\ce{Al2Si2O5(OH)4}$).
-11. How many orbitals are there in a subshell designated by the quantum numbers $n = 3, l = 2$?
-12. How many subshells are there in the shell designated by $n = 3$? 
+11. How many orbitals are in a subshell designated by the quantum numbers $n = 3, l = 2$?
+12. How many subshells are in the shell designated by $n = 3$? 
 13. What is the total number of orbitals in the shell designated by $n = 4$?
 14. What is the minimum value of the principal quantum number for an orbital in which $m_l = +2$?
 15. Write the electron configuration of the following elements: $\ce{Ti, Cr, Fe, Hg, Si, Se, Ar}$. 

@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="8.1 What are organic chemicals?" href="81WhatOrganics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -424,10 +405,10 @@ document.write(`
 <h1>8.2 Organic Chemicals in the Environment<a class="headerlink" href="#organic-chemicals-in-the-environment" title="Link to this heading">#</a></h1>
 <section id="aqueous-solubility">
 <h2>Aqueous Solubility<a class="headerlink" href="#aqueous-solubility" title="Link to this heading">#</a></h2>
-<p>This fundamental property refers to the saturated solubility of the organic compound in water and is shown as <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> and typical units are <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> and <span class="math notranslate nohighlight">\(\pu{\mu g L-1}\)</span>. For typical organic pollutants, <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> is usually very low. For example, a relatively high value might be for benzene (<span class="math notranslate nohighlight">\(\pu{2.2e-2 mol L-1}\)</span>), and a relatively low value might be for decachlorobiphenyl (<span class="math notranslate nohighlight">\(\pu{e-10 mol L-1}\)</span>). <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> changes with temperature but not as much as vapor pressure. There are several thermodynamics-based methods to predict water solubility of organic compounds.</p>
-<p>Aqueous solubility of organic chemicals is generally higher for smaller molecules, or for molecules that are more polar and hence can form attractions with the polar water molecules. Many, but not all, ionic compounds (salts) are very water-soluble, as their individual ions can interact strongly with water molecules, whose negative, oxygen-containing ends orient toward cations and whose positive, hydrogen-containing ends orient toward anions. The attractions between water molecules and ions in solution promote movement of ions into solution.</p>
+<p>This fundamental property refers to the saturated solubility of the organic compound in water and is shown as <span class="math notranslate nohighlight">\(C_w^{sat}\)</span>, and typical units are <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> and <span class="math notranslate nohighlight">\(\pu{\mu g L-1}\)</span>. For typical organic pollutants, <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> is usually very low. For example, a relatively high value might be for benzene (<span class="math notranslate nohighlight">\(\pu{2.2e-2 mol L-1}\)</span>), and a relatively low value might be for decachlorobiphenyl (<span class="math notranslate nohighlight">\(\pu{e-10 mol L-1}\)</span>). <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> changes with temperature but not as much as vapor pressure. There are several thermodynamics-based methods to predict the water solubility of organic compounds.</p>
+<p>The aqueous solubility of organic chemicals is generally higher for smaller molecules or molecules that are more polar and, hence, can form an attraction with the polar water molecules. Many, but not all, ionic compounds (salts) are very water-soluble, as their ions can interact strongly with water molecules, whose negative, oxygen-containing ends orient toward cations and whose positive, hydrogen-containing ends orient toward anions. The attraction between water molecules and ions in a solution promotes the movement of ions into the solution.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="aq-sol-org">
-<caption><span class="caption-number">Table 17 </span><span class="caption-text">Aqueous solubility values of selected organic chemicals at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. Miscible indicates very high solubility.</span><a class="headerlink" href="#aq-sol-org" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 17 </span><span class="caption-text">Aqueous solubility values of selected organic chemicals at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. “Miscible” indicates very high solubility.</span><a class="headerlink" href="#aq-sol-org" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head text-right"><p><span class="math notranslate nohighlight">\(C_w^{sat}\, (\pu{mol L-1})\)</span></p></th>
@@ -458,7 +439,7 @@ document.write(`
 </section>
 <section id="vapor-pressure">
 <h2>Vapor Pressure<a class="headerlink" href="#vapor-pressure" title="Link to this heading">#</a></h2>
-<p>Vapor pressure, another chemical-specific property, is defined as the partial pressure of a chemical in a gas phase that is in equilibrium with the pure liquid or solid chemical. Vapor pressure is essentially the solubility of a compound in air. Permanent gases, such as methane, have high vapor pressures; in fact, they have a vapor pressure of <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span> or <span class="math notranslate nohighlight">\(\pu{760 Torr}\)</span>. Some pesticides have medium vapor pressures; for example, hexachlorobenzene has a vapor pressure of about  <span class="math notranslate nohighlight">\(\pu{e-7 atm}\)</span>. Some compounds, such as decachlorobiphenyl, have vapor pressures so low that they are essentially nonvolatile ( <span class="math notranslate nohighlight">\(\pu{e-10 atm}\)</span>). For our purposes, the interesting range is  <span class="math notranslate nohighlight">\(\pu{e-4 - e-8 atm}\)</span>.</p>
+<p>Vapor pressure, another chemical-specific property, is the partial pressure of a chemical in a gas phase that is in equilibrium with the pure liquid or solid chemical. Vapor pressure is essentially the solubility of a compound in air. Permanent gases, such as methane, have high vapor pressures; in fact, they have a vapor pressure of <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span> or <span class="math notranslate nohighlight">\(\pu{760 Torr}\)</span>. Some pesticides have medium vapor pressures; for example, hexachlorobenzene has a vapor pressure of about  <span class="math notranslate nohighlight">\(\pu{e-7 atm}\)</span>. Some compounds, such as decachlorobiphenyl, have vapor pressures so low that they are essentially nonvolatile ( <span class="math notranslate nohighlight">\(\pu{e-10 atm}\)</span>). For our purposes, the interesting range is  <span class="math notranslate nohighlight">\(\pu{e-4 - e-8 atm}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Vapor Pressure</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -469,21 +450,21 @@ document.write(`
 \]</div>
 <p class="sd-card-text">where <span class="math notranslate nohighlight">\(n\)</span> is the number of moles of the chemical, <span class="math notranslate nohighlight">\(V\)</span> is the volume, <span class="math notranslate nohighlight">\(P\)</span> is the vapor pressure, <span class="math notranslate nohighlight">\(R\)</span> is the gas constant (<span class="math notranslate nohighlight">\(\pu{0.0821 L atm mol−1 K-1}\)</span>), and <span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature. Thus, a partial pressure of <span class="math notranslate nohighlight">\(\pu{0.08 atm}\)</span> of TCE corresponds to a concentration of approximately <span class="math notranslate nohighlight">\(\pu{0.003 mg L−1}\)</span>.</p>
 </div>
-</details><p>The term volatility is often used to qualitatively describe a chemical’s vapor pressure. Although there are no universally agreed-upon cutoffs, chemicals described as volatile typically have vapor pressures exceeding <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span> at the boiling point of water (<span class="math notranslate nohighlight">\(\pu{100 ^\circ C}\)</span>). Examples of volatile chemicals include solvents, such as TCE, and hydrocarbons present in gasoline, such as benzene. Semivolatile chemicals typically have vapor pressures lower than <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span> at <span class="math notranslate nohighlight">\(\pu{100 ^\circ C}\)</span> but nevertheless can volatilize significantly at environmental temperatures. Examples include naphthalene (found in mothballs) and other polycyclic aromatic hydrocarbons (PAHs). Chemicals whose vapor pressures are negligible are often called nonvolatile; examples include most salts. Vapor pressures are temperature dependent.</p>
+</details><p>The term volatility is often used to qualitatively describe a chemical’s vapor pressure. Although there are no universally agreed-upon cutoffs, chemicals described as volatile, typically have vapor pressures exceeding <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span> at the boiling point of water (<span class="math notranslate nohighlight">\(\pu{100 ^\circ C}\)</span>). Examples of volatile chemicals include solvents, such as TCE, and hydrocarbons present in gasoline, such as benzene. Semivolatile chemicals typically have vapor pressures lower than <span class="math notranslate nohighlight">\(\pu{1 atm}\)</span> at <span class="math notranslate nohighlight">\(\pu{100 ^\circ C}\)</span> but can volatilize significantly at environmental temperatures. Examples include naphthalene (found in mothballs) and other polycyclic aromatic hydrocarbons (PAHs). Chemicals with negligible vapor pressures are often called nonvolatile; examples include most salts. Vapor pressure is temperature-dependent.</p>
 </section>
 <section id="partitioning-into-phases">
 <h2>Partitioning into Phases<a class="headerlink" href="#partitioning-into-phases" title="Link to this heading">#</a></h2>
-<p>Environmental distribution of organic compounds can be studies by looking at their equilibrium partitioning between environmental phases, which include air, water, soil, and biota. Taking these phases pairwise, we can define the various physical and chemical properties that control the partition coefficients between these phases:</p>
+<p>The environmental distribution of organic compounds can be studied by looking at their equilibrium partitioning between environmental phases, which include air, water, soil, and biota. Taking these phases pairwise, we can define the various physical and chemical properties that control the partition coefficients between these phases:</p>
 <ol class="arabic simple">
 <li><p>Air-water: vapor pressure and water solubility</p></li>
 <li><p>Water-soil: adsorption and water solubility</p></li>
 <li><p>Soil-air: adsorption and vapor pressure</p></li>
 <li><p>All phases - biota: fat solubility or “lipophilicity”</p></li>
 </ol>
-<p>Partitioning between the air and water depends on a compound’s vapor pressure and water solubility. A highly soluble compound with low vapor pressure, such as sodium chloride, would not move across the air-water interface and would stay almost completely in the water phase; a very volatile compound, such as methane, would easily move out of the water phase and over time its concentration in the water would approach zero.</p>
-<p>Partitioning between air and soil or sediment also depends on a compound’s tendency to adsorb to particles and its vapor pressure. For example, DDT has a low vapor pressure and a high tendency to adsorb to particles; therefore, it is only slowly released from soils and sediments to the air.</p>
-<p>Lastly, partitioning and accumulation of pollutants into biota depends on all of these factors, especially vapor pressure and water solubility, but it is largely dependent on the compound’s solubility in the fat of the organism. The latter has a special name: <em><strong>lipophilicity</strong></em>, which simply means <em>fat loving</em>. It might also be called <em><strong>hydrophobicity</strong></em> (<em>water fearing</em>), but the most common term for this property is lipophilicity - note the spelling of this word.</p>
-<p>Let’s consider a system in which two bulk phases, 1 and 2 (e.g., air and water), are in contact with each other at a given temperature and pressure. We assume that the two phases are in equilibrium with each other with respect to the amounts of all chemical species present in each. We now introduce a very small amount of a given organic compound <span class="math notranslate nohighlight">\(i\)</span> into <em>Phase 1</em> (i.e., the properties of both bulk phases are not significantly influenced by the introduction of the compound). After a short time, some molecules of compound <em>i</em> will have been transferred from <em>Phase 1</em> (reactant) to <em>Phase 2</em> (product). This partitioning can be simply represented in a reaction form as follows:</p>
+<p>Partitioning between the air and water depends on a compound’s vapor pressure and solubility. A highly soluble compound with low vapor pressure, such as sodium chloride, would not move across the air-water interface and would stay almost completely in the water phase; a very volatile compound, such as methane, would quickly move out of the water phase and over time its concentration in the water would approach zero.</p>
+<p>Partitioning between air and soil or sediment depends on a compound’s tendency to absorb particles and vapor pressure. For example, DDT has a low vapor pressure and a high tendency to adsorb to particles; therefore, it is only slowly released from soils and sediments to the air.</p>
+<p>Lastly, the partitioning and accumulating pollutants into biota depend on all these factors, especially vapor pressure and water solubility. Still, it mainly depends on the compound’s solubility in the organism’s fat. The latter has a special name: <em><strong>lipophilicity</strong></em>, which means <em>fat loving</em>. It might also be called <em><strong>hydrophobicity</strong></em> (<em>water fearing</em>), but the most common term for this property is lipophilicity - note the spelling of this word.</p>
+<p>Let’s consider a system in which two bulk phases, 1 and 2 (e.g., air and water), are in contact with each other at a given temperature and pressure. We assume that the two phases are in equilibrium due to the amounts of all chemical species present in each. We now introduce a very small amount of a given organic compound <span class="math notranslate nohighlight">\(i\)</span> into <em>Phase 1</em> (i.e., the properties of both bulk phases are not significantly influenced by the introduction of the compound). After a short time, some molecules of the compound, <em>i</em>, will have been transferred from <em>Phase 1</em> (reactant) to <em>Phase 2</em> (product). This partitioning can be represented in a reaction form as follows:</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{$i$ in Phase 1 &lt;=&gt; $i$ in Phase 2}
@@ -491,22 +472,22 @@ document.write(`
 <p>The equilibrium situation can thus be described by an equilibrium partition constant, <span class="math notranslate nohighlight">\(K_p\)</span>, which we define as:</p>
 <div class="math notranslate nohighlight" id="equation-parti">
 <span class="eqno">(79)<a class="headerlink" href="#equation-parti" title="Link to this equation">#</a></span>\[K_p = \frac{C_{i,2}}{C_{i,1}}\]</div>
-<p>Because we have chosen <span class="math notranslate nohighlight">\(i\)</span> in Phase 2 as the “product,” the abundance of <span class="math notranslate nohighlight">\(i\)</span> in Phase 2 is in the numerator of Eq. <a class="reference internal" href="#equation-parti">(79)</a>. For practical purposes, we define a constant expressed as a ratio of concentrations rather than activities. Finally, we consider only situations in which the compound is present as a solute, that is, at low concentrations such that it does not significantly affect the properties of the bulk phase.</p>
+<p>Because we have chosen <span class="math notranslate nohighlight">\(i\)</span> in Phase 2 as the “product,” the abundance of <span class="math notranslate nohighlight">\(i\)</span> in Phase 2 is in the numerator of Eq. <a class="reference internal" href="#equation-parti">(79)</a>. We define a constant as a ratio of concentrations rather than activities for practical purposes. Finally, we consider only situations in which the compound is present as a solute, that is, at low concentrations, such that it does not significantly affect the properties of the bulk phase.</p>
 <section id="air-water-partitioning">
 <h3>Air-Water Partitioning<a class="headerlink" href="#air-water-partitioning" title="Link to this heading">#</a></h3>
-<p>Partitioning between air and water is represented using the Henry’s law constant (<span class="math notranslate nohighlight">\(K_H\)</span> or <span class="math notranslate nohighlight">\(H\)</span>). <span class="math notranslate nohighlight">\(K_H\)</span> is the ratio of a compound’s water solubility (<span class="math notranslate nohighlight">\(C_w^{sat}\)</span>) to its partial pressure above that water sample.</p>
+<p>The Henry’s law constant represents partitioning between air and water (<span class="math notranslate nohighlight">\(K_H\)</span> or <span class="math notranslate nohighlight">\(H\)</span>). <span class="math notranslate nohighlight">\(K_H\)</span> is the ratio of a compound’s water solubility (<span class="math notranslate nohighlight">\(C_w^{sat}\)</span>) to its partial pressure above that water sample.</p>
 <div class="math notranslate nohighlight" id="equation-khorg">
 <span class="eqno">(80)<a class="headerlink" href="#equation-khorg" title="Link to this equation">#</a></span>\[K_H = \frac{C_\text{Air}}{C_{\ce{H2O}}}\]</div>
-<p>When concentration of the compound is expressed in partial pressures (atm) and <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> is expressed in , then <span class="math notranslate nohighlight">\(K_H\)</span> units reflect these concentration units. When both <span class="math notranslate nohighlight">\(C_{Air}\)</span> and <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> have same units, <span class="math notranslate nohighlight">\(K_H\)</span> becomes dimensionless.</p>
+<p>When the concentration of the compound is expressed in partial pressures (atm) and <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> is expressed in <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>, then <span class="math notranslate nohighlight">\(K_H\)</span> units reflect these concentration units. When both <span class="math notranslate nohighlight">\(C_{Air}\)</span> and <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> have same units, <span class="math notranslate nohighlight">\(K_H\)</span> becomes dimensionless.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Air-Water Partitioning</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Benzene (a BTEX hydrocarbon) is released during an industrial accident and enters the groundwater system. The average concentration of benzene in the water is <span class="math notranslate nohighlight">\(\pu{1000 mg L−1}\)</span> (same as ppm). If the water is in contact with air, calculate the concentration of benzene in the air in . <span class="math notranslate nohighlight">\(K_H\)</span> for benzene is <span class="math notranslate nohighlight">\(0.22849\)</span>.</p>
+<p class="sd-card-text">Benzene (a BTEX hydrocarbon) is released during an industrial accident and enters the groundwater system. The average concentration of benzene in the water is <span class="math notranslate nohighlight">\(\pu{1000 mg L−1}\)</span> (same as ppm). If the water is in contact with air, calculate the benzene concentration in the air in <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>. <span class="math notranslate nohighlight">\(K_H\)</span> for benzene is <span class="math notranslate nohighlight">\(0.22849\)</span>.</p>
 <p class="sd-card-text"><strong>Answer</strong>:
-First convert <span class="math notranslate nohighlight">\(\pu{1000 mg L−1}\)</span> to <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>. Assume that <span class="math notranslate nohighlight">\(\pu{1 kg}\)</span> of water is equivalent to a volume of <span class="math notranslate nohighlight">\(\pu{1 L}\)</span>. The molecular weight of benzene (<span class="math notranslate nohighlight">\(\ce{C6H6}\)</span>) is 78.</p>
+First convert <span class="math notranslate nohighlight">\(\pu{1000 mg L−1}\)</span> to <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>. Assume that <span class="math notranslate nohighlight">\(\pu{1 kg}\)</span> of water equals a volume of <span class="math notranslate nohighlight">\(\pu{1 L}\)</span>. The molecular weight of benzene (<span class="math notranslate nohighlight">\(\ce{C6H6}\)</span>) is 78.</p>
 <div class="math notranslate nohighlight">
 \[\frac{\pu{1000 mg L-1} \times \pu{e-3 mg g-1}}{\pu{78g mol-1}} = \pu{1.28e-2 mol L-1}\]</div>
-<p class="sd-card-text">Substitute this concentration in Eq. <a class="reference internal" href="#equation-khorg">(80)</a>, we get</p>
+<p class="sd-card-text">Substitute this concentration in Eq. <a class="reference internal" href="#equation-khorg">(80)</a>, and we get</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 K_H &amp;= \frac{C_{Air}}{C_{\ce{H2O}}}\\
@@ -517,24 +498,24 @@ K_H &amp;= \frac{C_{Air}}{C_{\ce{H2O}}}\\
 </details></section>
 <section id="water-organics-partitioning">
 <h3>Water-Organics Partitioning<a class="headerlink" href="#water-organics-partitioning" title="Link to this heading">#</a></h3>
-<p>We use partition constants or coefficients to quantify distribution of organic chemicals in different phases (see Eq. <a class="reference internal" href="#equation-parti">(79)</a>. They are defined as the ratio of the concentration of an organic compound in two phases that are in equilibrium with each other.</p>
+<p>We use partition constants or coefficients to quantify the distribution of organic chemicals in different phases (see Eq. <a class="reference internal" href="#equation-parti">(79)</a>). They are defined as the ratio of the concentration of an organic compound in two phases that are in equilibrium with each other.</p>
 <div class="math notranslate nohighlight" id="equation-korg-h2o">
 <span class="eqno">(81)<a class="headerlink" href="#equation-korg-h2o" title="Link to this equation">#</a></span>\[K = \frac{C_\text{Organics}}{C_{\ce{H2O}}}\]</div>
-<p>Note that the denominator concentration will be something less than <span class="math notranslate nohighlight">\(C_w^{sat}\)</span>. A high value of <span class="math notranslate nohighlight">\(K\)</span> suggests that the compound is not very water soluble but is more soluble in organic solvents. In this case, the compound is said to be <em>lipophilic</em> (or fat soluble).</p>
+<p>The denominator concentration will be less than <span class="math notranslate nohighlight">\(C_w^{sat}\)</span>. A high value of <span class="math notranslate nohighlight">\(K\)</span> suggests that the compound is not water-soluble but more soluble in organic solvents. In this case, the compound is said to be <em>lipophilic</em> (or fat-soluble).</p>
 <p>To simulate lipids (fats) in biota, pharmacologists long ago selected a model compound: n-octanol. Thus, the partition coefficient that best describes lipophilicity is the octanol-water partition coefficient, usually given the symbol <span class="math notranslate nohighlight">\(K_{ow}\)</span>. The interesting values of <span class="math notranslate nohighlight">\(K_{ow}\)</span> are usually in the <span class="math notranslate nohighlight">\(\pu{e2 - e7}\)</span> range; hence, it is convenient to use the logarithm of <span class="math notranslate nohighlight">\(K_{ow}\)</span>. Clearly <span class="math notranslate nohighlight">\(K_{ow}\)</span> is related to <span class="math notranslate nohighlight">\(C_w^{sat}\)</span>; high water solubility implies a low <span class="math notranslate nohighlight">\(K_{ow}\)</span>. An empirical relationship between these two parameters:</p>
 <div class="math notranslate nohighlight" id="equation-logkow">
 <span class="eqno">(82)<a class="headerlink" href="#equation-logkow" title="Link to this equation">#</a></span>\[\log K_{ow} = - 0.86 \log C_w^{sat} + 0.32\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> is in . High <span class="math notranslate nohighlight">\(\log K_{ow}\)</span> values imply that the organic compound is <em>lipophilic</em>. If one knows the <span class="math notranslate nohighlight">\(\log K_{ow}\)</span> value of a given compound, it is possible to calculate the <span class="math notranslate nohighlight">\(\log K_{ow}\)</span> value of related compounds.</p>
+<p>Note that <span class="math notranslate nohighlight">\(C_w^{sat}\)</span> is in <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>. High <span class="math notranslate nohighlight">\(\log K_{ow}\)</span> values imply that the organic compound is <em>lipophilic</em>. If one knows the <span class="math notranslate nohighlight">\(\log K_{ow}\)</span> value of a given compound, it is possible to calculate the <span class="math notranslate nohighlight">\(\log K_{ow}\)</span> value of related compounds.</p>
 </section>
 <section id="water-solid-partitioning">
 <h3>Water-Solid Partitioning<a class="headerlink" href="#water-solid-partitioning" title="Link to this heading">#</a></h3>
-<p>Adsorption refers to the collection of organic compounds on the surfaces of particles, such as soil, suspended sediment, and aerosols. Most of these particles are covered with a layer of organic material; thus, the adsorption results from the attraction of two organic materials for one another. Adsorption is measured by the solid-water distribution coefficient (<span class="math notranslate nohighlight">\(K_d\)</span>), which is the ratio of the concentration of the compound on the solid to its concentration in the water surrounding the solid:</p>
+<p>Adsorption refers to the collection of organic compounds on the surfaces of particles, such as soil, suspended sediment, and aerosols. Most of these particles are covered with a layer of organic material; thus, the adsorption results from the attraction of two organic materials. Adsorption is measured by the solid-water distribution coefficient (<span class="math notranslate nohighlight">\(K_d\)</span>), which is the ratio of the concentration of the compound on the solid to its concentration in the water surrounding the solid:</p>
 <div class="math notranslate nohighlight" id="equation-kd">
 <span class="eqno">(83)<a class="headerlink" href="#equation-kd" title="Link to this equation">#</a></span>\[K_d = \frac{C_\text{Solid}}{C_{\ce{H2O}}}\]</div>
-<p>The concentration on the solid has units of <span class="math notranslate nohighlight">\(\pu{mol kg−1}\)</span>, and the concentration in the water is ; hence, <span class="math notranslate nohighlight">\(K_d\)</span> has units of <span class="math notranslate nohighlight">\(\pu{L kg−1}\)</span>. Is we assume a a solid density of <span class="math notranslate nohighlight">\(\pu{1 kg L-1}\)</span>, these units are often ignored. <span class="math notranslate nohighlight">\(K_d\)</span> will often depend on how much of the total mass of the particle is organic material; thus, <span class="math notranslate nohighlight">\(K_d\)</span> can be corrected by the fraction of organic material (<span class="math notranslate nohighlight">\(f_{om}\)</span>) in the particles to give the following expression.</p>
+<p>The concentration on the solid has units of <span class="math notranslate nohighlight">\(\pu{mol kg−1}\)</span>, and the concentration in the water is <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>; hence, <span class="math notranslate nohighlight">\(K_d\)</span> has units of <span class="math notranslate nohighlight">\(\pu{L kg−1}\)</span>. These units are often ignored if we assume a solid density of <span class="math notranslate nohighlight">\(\pu{1 kg L-1}\)</span>. <span class="math notranslate nohighlight">\(K_d\)</span> will often depend on how much of the total mass of the particle is organic material; thus, <span class="math notranslate nohighlight">\(K_d\)</span> can be corrected by the fraction of organic material (<span class="math notranslate nohighlight">\(f_{om}\)</span>) in the particles to give the following expression.</p>
 <div class="math notranslate nohighlight" id="equation-kom">
 <span class="eqno">(84)<a class="headerlink" href="#equation-kom" title="Link to this equation">#</a></span>\[K_{om} = \frac{K_d}{f_{om}}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(f_{om}\)</span> is a fraction and is always less than <span class="math notranslate nohighlight">\(1\)</span> and often less than <span class="math notranslate nohighlight">\(0.1\)</span>. Because the partitioning is from the water to the organic material on the particle, it should come as no surprise that <span class="math notranslate nohighlight">\(K_{om}\)</span> is empirically related to <span class="math notranslate nohighlight">\(K_{ow}\)</span> and to the water solubility:</p>
+<p>Note that <span class="math notranslate nohighlight">\(f_{om}\)</span> is a fraction and is always less than <span class="math notranslate nohighlight">\(1\)</span> and often less than <span class="math notranslate nohighlight">\(0.1\)</span>. Because the partitioning is from the water to the organic material on the particle, it should come as no surprise that <span class="math notranslate nohighlight">\(K_{om}\)</span> is empirically related to <span class="math notranslate nohighlight">\(K_{ow}\)</span> and the water solubility:</p>
 <div class="math notranslate nohighlight" id="equation-kom-csat">
 <span class="eqno">(85)<a class="headerlink" href="#equation-kom-csat" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
     \log K_{om} &amp;= 0.82 \log K_{ow} + 0.14\\
@@ -543,7 +524,7 @@ K_H &amp;= \frac{C_{Air}}{C_{\ce{H2O}}}\\
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Adsorption</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">It was found that the adsorption of napthalene onto sedimentary particles followed a linear relationship, with <span class="math notranslate nohighlight">\(K_d = \pu{137 L kg−1}\)</span>. If the napthalene concentration in the groundwater was <span class="math notranslate nohighlight">\(\pu{3.2 mg L−1}\)</span>, calculate the concentration of napthalene adsorbed onto the sedimentary particles in the aquifer.</p>
+<p class="sd-card-text">It was found that the adsorption of naphthalene onto sedimentary particles followed a linear relationship, with <span class="math notranslate nohighlight">\( K_d = \pu{137 L kg−1}\)</span>. If the naphthalene concentration in the groundwater was <span class="math notranslate nohighlight">\(\pu{3.2 mg L−1}\)</span>, calculate the concentration of naphthalene adsorbed onto the sedimentary particles in the aquifer.</p>
 <p class="sd-card-text"><strong>Answer</strong>:
 Substitute given data in Eq. <a class="reference internal" href="#equation-kd">(83)</a> as follows.</p>
 <div class="math notranslate nohighlight">
@@ -557,20 +538,20 @@ C_{Solid} &amp;= \pu{438 mg kg-1}
 </section>
 <section id="bioaccumulation">
 <h2>Bioaccumulation<a class="headerlink" href="#bioaccumulation" title="Link to this heading">#</a></h2>
-<p>Since many organic pollutants are <em>lipophilic</em> (fat- or tissue-loving), it is not surprising that they are found in organisms and biota that are exposed to them. Most organic pollutants tend to accumulate in biota. The simplest case of an animal in equilibrium with its surroundings is a fish. In this case, we can define a partition coefficient for the concentration of some organic compound in the fish relative to the concentration of that compound in the water in which the fish lives:</p>
+<p>Since many organic pollutants are <em>lipophilic</em> (fat- or tissue-loving), it is unsurprising that they are found in organisms and biota exposed to them. Most organic pollutants tend to accumulate in biota. The simplest case of an animal in equilibrium with its surroundings is a fish. In this case, we can define a partition coefficient for the concentration of some organic compound in the fish relative to the concentration of that compound in the water in which the fish lives:</p>
 <div class="math notranslate nohighlight" id="equation-kbiol">
 <span class="eqno">(86)<a class="headerlink" href="#equation-kbiol" title="Link to this equation">#</a></span>\[K_B = \frac{C_\text{Fish}}{C_{\ce{H2O}}}\]</div>
-<p>where <span class="math notranslate nohighlight">\(C_{fish}\)</span> is the concentration of some pollutant in the whole fish, usually in units of <span class="math notranslate nohighlight">\(\pu{\mu g g−1}\)</span> of wet weight of fish, and <span class="math notranslate nohighlight">\(C_{\ce{H2O}}\)</span> is the concentration of the same pollutant in the surrounding water, usually in units of <span class="math notranslate nohighlight">\(\pu{\mu g cm−3}\)</span> of water. The partition coefficient <span class="math notranslate nohighlight">\(K_B\)</span> is sometimes called the bioaccumulation factor (BAF) and has no units. Because octanol was selected to simulate animal lipids, <span class="math notranslate nohighlight">\(K_B\)</span> is related to <span class="math notranslate nohighlight">\(K_{ow}\)</span> as shown in the empirical relationship below:</p>
+<p>where <span class="math notranslate nohighlight">\(C_{fish}\)</span> is the concentration of some pollutant in the whole fish, usually in units of <span class="math notranslate nohighlight">\(\pu{\mu g g−1}\)</span> of the wet weight of fish, and <span class="math notranslate nohighlight">\(C_{\ce{H2O}}\)</span> is the concentration of the same pollutant in the surrounding water, usually in units of <span class="math notranslate nohighlight">\(\pu{\mu g cm−3}\)</span> of water. The partition coefficient <span class="math notranslate nohighlight">\(K_B\)</span> is sometimes called the bioaccumulation factor (BAF) and has no units. Because octanol was selected to simulate animal lipids, <span class="math notranslate nohighlight">\(K_B\)</span> is related to <span class="math notranslate nohighlight">\(K_{ow}\)</span> as shown in the empirical relationship below:</p>
 <div class="math notranslate nohighlight" id="equation-kbkow">
 <span class="eqno">(87)<a class="headerlink" href="#equation-kbkow" title="Link to this equation">#</a></span>\[\log K_B = \log K_{ow} - 1.32\]</div>
-<p><span class="math notranslate nohighlight">\(K_B\)</span> is higher for animals that feed on fish. E.g., dolphins and other higher level predators can have many times greater <span class="math notranslate nohighlight">\(K_B\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(K_B\)</span> is higher for animals that feed on fish. For example, dolphins and other higher-level predators can have much greater <span class="math notranslate nohighlight">\(K_B\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Bioaccumulation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">A covered soup bowl contains <span class="math notranslate nohighlight">\(\pu{1 L}\)</span> of a very dilute, tepid soup (at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>), <span class="math notranslate nohighlight">\(\pu{1 L}\)</span> of air, and a floating blob of fat with a volume of <span class="math notranslate nohighlight">\(\pu{1 mL}\)</span>. The soup also contains <span class="math notranslate nohighlight">\(\pu{1 mg}\)</span> of naphthalene. The <span class="math notranslate nohighlight">\(\log K_{ow}\)</span> for naphthalene is <span class="math notranslate nohighlight">\(3.36\)</span> and its unitless Henry’s law constant <span class="math notranslate nohighlight">\(0.0174\)</span>.</p>
 <p class="sd-card-text">Assuming everything is at equilibrium, estimate the amount of naphthalene you would ingest if you were to eat only the fat blob.</p>
 <p class="sd-card-text"><strong>Answer</strong>:
-First set up the mass balance equation:</p>
+First, set up the mass balance equation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 M_{total} = \pu{1 mg} &amp;= M_{\ce{H2O}} + M_{Air} + M_{Fat}  \\
@@ -636,12 +617,12 @@ C_{fish} &amp;= \pu{1207 \mu g L-1}
 <section id="degradation">
 <h2>Degradation<a class="headerlink" href="#degradation" title="Link to this heading">#</a></h2>
 <p>Because of the presence of C atoms in organic molecules, they are susceptible to degradation in most surface environments. The degradation can occur through various processes, including biodegradation, photodegradation, and chemical degradation.</p>
-<p>In <strong>biodegradation</strong> the breakdown of organic chemicals by microorganisms, such as bacteria and fungi, into simpler, non-toxic substances. The microorganisms use the organic chemicals as a source of energy and nutrients, breaking them down into carbon dioxide, water, and other organic compounds. Biodegradation occurs naturally in the environment, but can also be enhanced by adding specific microorganisms or nutrients to contaminated areas.</p>
-<p>In <strong>photodegradation</strong> process organic chemicals are degraded by exposure to sunlight or ultraviolet radiation. The energy from the radiation can break down the chemical bonds in the molecules, causing them to break down into simpler, less toxic substances. This process is commonly used to treat contaminated water or soil by exposing it to sunlight or ultraviolet light.</p>
-<p>During <strong>chemical degradation</strong> some organic chemicals can be degraded through chemical reactions. For example, oxidation can occur when organic chemicals react with oxygen in the environment, causing them to break down into simpler, less toxic substances. Chemical degradation can also occur through other chemical reactions, such as hydrolysis, where water is used to break down the chemical bonds in the molecules.</p>
-<p>The specific mechanism of degradation for a particular organic chemical depends on its chemical structure, the environmental conditions, and the presence of other chemicals or microorganisms in the environment.</p>
-<p>For organic chemicals predominantly dissolved in water or adsorbed to soil and sediment, chemical or biochemical transformations may also be important fate processes, each with their characteristic rate constant.</p>
-<p>We can use the chemical kinetics principles to study degradation rates.</p>
+<p>In <strong>biodegradation</strong> the breakdown of organic chemicals by microorganisms, such as bacteria and fungi, into simpler, non-toxic substances. The microorganisms use the organic chemicals as energy and nutrients, breaking them down into carbon dioxide, water, and other organic compounds. Biodegradation occurs naturally in the environment but can also be enhanced by adding specific microorganisms or nutrients to contaminated areas.</p>
+<p>In <strong>photodegradation</strong> process, organic chemicals are degraded by exposure to sunlight or ultraviolet radiation. The energy from the radiation can break down the chemical bonds in the molecules, causing them to break down into more straightforward, less toxic substances. This process is commonly used to treat contaminated water or soil by exposing it to sunlight or ultraviolet light.</p>
+<p>During <strong>chemical degradation</strong>, some organic chemicals can be degraded through chemical reactions. For example, oxidation can occur when organic chemicals react with oxygen in the environment, causing them to break down into simpler substances. Chemical degradation can also occur through other chemical reactions, such as hydrolysis, where water breaks down the chemical bonds in the molecules.</p>
+<p>The specific degradation mechanism for a particular organic chemical depends on its chemical structure, environmental conditions, and other chemicals or microorganisms in the environment.</p>
+<p>For organic chemicals predominantly dissolved in water or adsorbed to soil and sediment, chemical or biochemical transformations may also be essential fate processes, each with their characteristic rate constant.</p>
+<p>We can use the previously-covered chemical kinetics principles to study degradation rates.</p>
 </section>
 </section>
 
@@ -700,7 +681,8 @@ C_{fish} &amp;= \pu{1207 \mu g L-1}
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -770,8 +752,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -3,7 +3,7 @@
 1. Consider the following reaction, 
 
 $$\ce{4 NO2 + O2 -> 2 N2O5}$$
->At a particular time during the reaction, is being consumed at the rate of $\pu{1.3e-3 mol L-1 s-1}$. (a)  At what rate is being consumed? (b) At what rate is being produced? **Answer**: (a) $\pu{-3.25e-4mol L-1 s-1}$, (b) $\pu{6.5e-4 mol L-1 s-1}$
+>At a particular time during the reaction, is consumed at $\pu{1.3e-3 mol L-1 s-1}$. (a)  At what rate is it being consumed? (b) At what rate is it being produced? **Answer**: (a) $\pu{-3.25e-4mol L-1 s-1}$, (b) $\pu{6.5e-4 mol L-1 s-1}$
  
 2. The solvent methylene chloride ($\ce{CH2Cl2}$) reacts with bisulfide ($\ce{HS-}$) to form dithiomethane ($\ce{CH2(SH)2}$) as shown in this reaction: 
 
@@ -21,12 +21,12 @@ $$
 \end{align}$$
 >**Answer**: (1) 2, 2 (2) 2, 1, 3
 
-4. The decomposition of hydrogen peroxide is first order in $\ce{H2O2}$. 
+4. The decomposition of hydrogen peroxide ($\ce{H2O2}$) is a first-order reaction as shown below: 
 
 $$\ce{
 2 H2O2 -> 2 H2O + O2
 }$$
->The rate constant for this reaction at $\pu{20 ^\circ C}$ is $\pu{1.8e-5 s-1}$. The starting concentration of is $\pu{0.75 M}$. Determine (a) the concentration of remaining after $\pu{3 h}$.  **Answer**: $\pu{0.62 M}$ and (b) how long it will take for the concentration to drop to $\pu{0.10 M}$. **Answer**: $\pu{31 h}$.
+>The rate constant for this reaction at $\pu{20 ^\circ C}$ is $\pu{1.8e-5 s-1}$. The starting concentration of $\ce{H2O2}$ is $\pu{0.75 M}$. Determine (a) the remaining concentration after $\pu{3 h}$.  **Answer**: $\pu{0.62 M}$ and (b) how long it will take for the concentration to drop to $\pu{0.10 M}$. **Answer**: $\pu{31 h}$.
 
 5. The decomposition of ethane ($\ce{C2H6}$) to methyl radicals ($\ce{.CH3}$) is a first-order reaction with a rate constant of $\pu{5.36e-1 s-1}$ at $\pu{700 ^\circ C}$. Calculate the half-life of this reaction in minutes. **Answer**: $\pu{21.5 min}$
 
@@ -41,7 +41,7 @@ $$\ce{
 | 40        | 80                               |
 | 60        | 35                               |
 
-7. A researcher has monitored the treatment of an organic pollutant using a naturally-occurring mineral compound. The table below shows the kinetics data. Determine (a) the reaction order, (b) the rate constant for this reaction, and (c) the half-life of pollutant.
+7. A researcher has monitored the treatment of an organic pollutant using a naturally occurring mineral compound. The table below shows the kinetics data. Determine (a) the reaction order, (b) the rate constant for this reaction, and (c) the half-life of the pollutant.
 
 | Time, $\pu{h}$ | Conc, $\pu{\mu mol L-1}$ |
 |---------|-------------------------|

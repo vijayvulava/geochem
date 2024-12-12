@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="8.2 Organic Chemicals in the Environment" href="82EnvirOrganicChem.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -407,10 +388,10 @@ document.write(`
 <li><p>If <span class="math notranslate nohighlight">\(K_H\)</span> is  <span class="math notranslate nohighlight">\(\pu{29.51 atm L mol-1}\)</span> for <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> and the atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentration is <span class="math notranslate nohighlight">\(\pu{0.004 atm}\)</span>, what is <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentration in water at equilibrium?</p></li>
 <li><p>m-Xylene enters the groundwater system. The average concentration of m-Xylene in the groundwater is <span class="math notranslate nohighlight">\(\pu{100 mg L-1}\)</span>. If the groundwater at the top of the saturated zone is in equilibrium with air, calculate the concentration of m-Xylene in the air in <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span>. <span class="math notranslate nohighlight">\(K_H\)</span> for m-Xylene is <span class="math notranslate nohighlight">\(0.43736\)</span>. <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{4.12e-4 mol L-1}\)</span></p></li>
 <li><p>It was determined that the adsorption of toluene onto sedimentary particles followed a linear relationship, with <span class="math notranslate nohighlight">\(K_d\)</span> = <span class="math notranslate nohighlight">\(\pu{9.9 L kg−1}\)</span>. If the toluene concentration in the groundwater is <span class="math notranslate nohighlight">\(\pu{4.5 mg L−1}\)</span>, calculate the concentration of toluene sorbed onto the sedimentary particles in the aquifer. <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{446 mg kg−1}\)</span></p></li>
-<li><p>The first-order rate constant for the breakdown of toluene under aerobic conditions was <span class="math notranslate nohighlight">\(\pu{−0.54  d-1}\)</span>, and under anaerobic conditions the rate constant was <span class="math notranslate nohighlight">\(\pu{−0.002  d-1}\)</span>. Calculate the time required to degrade <span class="math notranslate nohighlight">\(\pu{90 \%}\)</span> of the toluene under aerobic and anaerobic conditions. <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{2.7 d}\)</span> and <span class="math notranslate nohighlight">\(\pu{1151 d}\)</span></p></li>
-<li><p>Assume an organic contaminant is introduced into an aquifer. Right after the spill the concentration of the organic contaminant is <span class="math notranslate nohighlight">\(\pu{12 mg L−1}\)</span>. A measurement made <span class="math notranslate nohighlight">\(\pu{20 d}\)</span> later reveals that the concentration of the contaminant has decreased to <span class="math notranslate nohighlight">\(\pu{1 mg L−1}\)</span>. Assuming that this is a first-order reaction, what is the half-life for this particular organic contaminant? <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{5.6 d}\)</span></p></li>
-<li><p>Lindane (a commonly-used pesticide) is considered to be a persistent organic pollutant (POP) in the environment. It has <span class="math notranslate nohighlight">\(\log K_H = 3.94\)</span> and <span class="math notranslate nohighlight">\(\log K_{ow} = 3.78\)</span> and first order rate constants for its loss from air, water, and soil/sediment are <span class="math notranslate nohighlight">\(\pu{0.1 d-1}\)</span>, <span class="math notranslate nohighlight">\(\pu{0.01 d-1}\)</span>, and <span class="math notranslate nohighlight">\(\pu{0.0006 d-1}\)</span>, respectively. Estimate the half-life of lindane loss from air, water, and soil/sediment.</p></li>
-<li><p>In a particular system, the half-life of Lindane undergoing aerobic decomposition is <span class="math notranslate nohighlight">\(\pu{210 d}\)</span>. Calculate the time required for <span class="math notranslate nohighlight">\(\pu{90 \%}\)</span> of the Lindane to decompose. <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{698 d}\)</span></p></li>
+<li><p>The first-order rate constant for the breakdown of toluene under aerobic conditions was <span class="math notranslate nohighlight">\(\pu{−0.54  d-1}\)</span>; under anaerobic conditions, the rate constant was <span class="math notranslate nohighlight">\(\pu{−0.002  d-1}\)</span>. Calculate the time required to degrade <span class="math notranslate nohighlight">\(\pu{90 \%}\)</span> of the toluene under aerobic and anaerobic conditions. <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{2.7 d}\)</span> and <span class="math notranslate nohighlight">\(\pu{1151 d}\)</span></p></li>
+<li><p>Assume an organic contaminant is introduced into an aquifer. Right after the spill, the concentration of the organic contaminant is <span class="math notranslate nohighlight">\(\pu{12 mg L−1}\)</span>. A measurement made <span class="math notranslate nohighlight">\(\pu{20 d}\)</span> later reveals that the concentration of the contaminant has decreased to <span class="math notranslate nohighlight">\(\pu{1 mg L−1}\)</span>. Assuming that this is a first-order reaction, what is the half-life for this particular organic contaminant? <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{5.6 d}\)</span></p></li>
+<li><p>Lindane (a commonly used pesticide) is considered a persistent organic pollutant (POP) in the environment. It has <span class="math notranslate nohighlight">\(\log K_H = 3.94\)</span> and <span class="math notranslate nohighlight">\(\log K_{ow} = 3.78\)</span>, and first-order rate constants for its loss from air, water, and soil/sediment are <span class="math notranslate nohighlight">\(\pu{0.1 d-1}\)</span>, <span class="math notranslate nohighlight">\(\pu{0.01 d-1}\)</span>, and <span class="math notranslate nohighlight">\(\pu{0.0006 d-1}\)</span>, respectively. Estimate the half-life of lindane loss from air, water, and soil/sediment.</p></li>
+<li><p>In a particular system, the half-life of Lindane undergoing aerobic decomposition is <span class="math notranslate nohighlight">\(\pu{210 d}\)</span>. Determine the duration needed for <span class="math notranslate nohighlight">\(\pu{90 \%}\)</span> of the Lindane to break down. <strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{698 d}\)</span></p></li>
 </ol>
 </section>
 
@@ -515,8 +496,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

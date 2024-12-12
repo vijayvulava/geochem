@@ -4,10 +4,10 @@
 
 When acids and bases react, the resulting neutralization results in the formation of salt and water. However, the type of salt depends on the relative strength of acids and bases.
 
-Salts that are from strong bases and strong acids do not hydrolyze are result in a solution with $p\ce{H}=7$. Halides and alkaline metals dissociate and do not affect the $\ce{H+}$ as the cation does not alter the $\ce{H+}$ and the anion does not attract the $\ce{H+}$ from water. 
+Salts from strong bases and strong acids do not hydrolyze, resulting in a solution with $p\ce{H}=7$. Halides and alkaline metals dissociate and do not affect the $\ce{H+}$ as the cation does not alter the $\ce{H+}$ and the anion does not attract the $\ce{H+}$ from water. 
 
 ```{dropdown} Example: Salt of a strong acid and a strong base
-Consider the salt $\ce{NaCl}$, which form as a result of a neutralization reaction between a strong acid, $\ce{HCl}$ and a strong base, $\ce{NaOH}$.
+Consider the salt $\ce{NaCl}$, which forms as a result of a neutralization reaction between a strong acid, $\ce{HCl}$, and a strong base, $\ce{NaOH}$.
 
 When dissolved in water, $\ce{NaCl}$ does not hydrolyze as shown below:
 
@@ -18,7 +18,7 @@ $$
 ```
 
 
-Salts that are from strong bases and weak acids do hydrolyze, which gives it a $p\ce{H}>7$. The anion in the salt is derived from a weak acid, most likely organic, and will accept the proton from the water in the reaction. This will have the water act as an acid that will, in this case, leaving a $\ce{OH-}$. The cation will be from a strong base, meaning from either the alkaline or alkaline earth metals and, like before, it will dissociate into an ion and will not affect the $\ce{H+}$. 
+Salts from strong bases and weak acids hydrolyze, giving it a $p\ce{H}>7$. The anion in the salt is derived from a weak acid, most likely organic, and will accept the proton from the water in the reaction. This will have the water act as an acid that will, in this case, leave a $\ce{OH-}$. The cation will be from a strong base, meaning from either the alkaline or alkaline earth metals, and, like before, it will dissociate into an ion and will not affect the $\ce{H+}$. 
 
 
 ```{dropdown} Example: Salt of a weak acid and a strong base
@@ -30,7 +30,7 @@ $$
 \ce{CH3COONa (s) <=> Na+ (aq) + CH3COO- (aq) }
 $$
 
-The $\ce{Na+}$ does not undergo acid or base ionization and has no effect on the solution $p\ce{H}$. 
+The $\ce{Na+}$ does not undergo acid or base ionization and does not affect the solution $p\ce{H}$. 
 
 The acetate ion, $\ce{CH3COO-}$, is the conjugate base of acetic acid, $\ce{CH3COOH}$, and so its base ionization (or base hydrolysis) reaction is represented by
 
@@ -43,7 +43,7 @@ $$
 Dissolving sodium acetate in water yields a solution of inert cations ($\ce{Na+}$) and weak base anions ($\ce{CH3COO-}$), resulting in a basic solution (final product contains $\ce{OH-}$).
 ```
 
-Salts of weak bases and strong acids do hydrolyze, which gives it a $p\ce{H}<7$. This is due to the fact that the anion will become a spectator ion and fail to attract the $\ce{H+}$, while the cation from the weak base will donate a $\ce{H+}$ to water forming a $\ce{H3O+}$.
+Salts of weak bases and strong acids do hydrolyze, which gives it a $p\ce{H}<7$. This is because the anion will become a spectator ion and fail to attract the $\ce{H+}$, while the cation from the weak base will donate a $\ce{H+}$ to water forming a $\ce{H3O+}$.
 
 ```{dropdown} Example: Salt of a strong acid and a weak base
 Consider ammonium chloride ($\ce{NH4Cl}$), which forms during a reaction between a strong acid $\ce{HCl}$ and a weak base $\ce{NH3}$
@@ -69,7 +69,7 @@ $$
 Dissolving $\ce{NH4Cl}$ in water yields a solution of weak acid cations ($\ce{NH4+}$) and inert anions ($\ce{Cl−}$), resulting in an acidic solution (final product contains $\ce{H3O+}$).
 ```
 
-Salts from a weak base and weak acid also hydrolyze as the others, but a bit more complex and will require the $K_a$ and $K_b$ to be taken into account. The stronger acid or base will be the dominant factor in determining whether the solution is acidic or basic. The cation will be the acid, and the anion will be the base and will form either form a $\ce{H3O+}$ or a $\ce{OH-}$ depending on which ion reacts more readily with the water.
+Salts from a weak base and weak acid also hydrolyze as the others, but a bit more complex and will require the $K_a$ and $K_b$ to be considered. The stronger acid or base will be the dominant factor in determining whether the solution is acidic or basic. The cation will be the acid, and the anion will be the base, forming either a $\ce{H3O+}$ or a $\ce{OH-}$ depending on which ion reacts more readily with the water.
 
 
 ## Solubility and Saturation
@@ -86,7 +86,7 @@ $$\ce{NaCl(s) → Na+(aq) + Cl–(aq)}$$
 
 Both types of reactions can be in equilibrium under the given set of conditions.
 
-It is common to write the precipitation‐dissolution equilibria with the solid phase as a reactant and the metals and ligands (anions) as products in their uncomplexed forms. For equilibria of this form, the equilibrium constant ($K$) is given a special name. It is called the ***solubility product*** and given the symbol $K_{s0}$. The $s$ in $K_{s0}$ indicates that a solid phase is involved and the zero (not the letter O) indicates that the metal and ligand are uncomplexed. 
+Writing the precipitation‐dissolution equilibria with the solid phase as a reactant and the metals and ligands (anions) as products in their uncomplexed forms is common. For equilibria of this form, the equilibrium constant ($K$) is given a unique name. It is called the ***solubility product*** and given the symbol $K_{s0}$. The $s$ in $K_{s0}$ indicates that a solid phase is involved, and the zero (not the letter O) indicates that the metal and ligand are uncomplexed. 
 
 ```{dropdown} Example: Solubility product notation
 The equilibrium constant for an equilibrium written with the solid phase as a reactant and the metals and ligands as products in their uncomplexed forms
@@ -100,7 +100,7 @@ CaCO3(s) &<=> Ca^2+ + CO3^2–    \qquad   $K = K_{s0}$
 \end{align}
 $$
 
-Note that the metal and ligand must be uncomplexed to use the $K_{s0}$ label.
+The metal and ligand must be uncomplexed to use the $K_{s0}$ label.
 
 The equilibrium constant for the equilibrium $\ce{CaCO3(s) + H+ = Ca^2+ + HCO3–}$ cannot be called $K_{s0}$.
 ```
@@ -111,7 +111,7 @@ $$
 \ce{M_xL_y (s) <=> x M^y+ + y L^x- \qquad $K_{s0}$}
 
 $$
-Let's write the equilibrium (law of mass) expression for this reaction.
+Let's write this reaction's equilibrium (law of mass) expression.
 ```{math}
 :label: solubility-product
 
@@ -121,11 +121,11 @@ K_{s0} = \frac{\{\ce{M^{y+}}\}^x \{\ce{L^{x-}}\}^y}{\{\ce{M_xL_y (s)}\}}
 
 ```
 
-Note, the activity of solids under standard thermodynamic conditions is unity (= 1).
+Note that the activity of solids under standard thermodynamic conditions is unity (= 1).
 
-How can you tell if the solid phase exists at equilibrium? If the solid phase exists, then the product of the free metal and ligand activities should equal the solubility product. This condition is called ***saturation***. If the product of the free metal and ligand activities is less than the solubility product, then the solid phase should not form at equilibrium and the solution is said to be ***undersaturated***. The solid phase will not exist at equilibrium in undersaturated solutions. When the product of the free metal and ligand activities is greater than the solubility product, this type of solution is said to be ***oversaturated***.
+How can you tell if the solid phase exists at equilibrium? If the solid phase exists, then the product of the free metal and ligand activities should equal the solubility product. This condition is called ***saturation***. If the free metal and ligand activity product is less than the solubility product, then the solid phase should not form at equilibrium, and the solution is said to be ***undersaturated***. The solid phase will not exist at equilibrium in undersaturated solutions. When the free metal and ligand activity product is greater than the solubility product, this type of solution is said to be ***oversaturated***.
 
-The product of the free metal and ligand activities is often called the ***ion activity product*** ($IAP$) and the above solid phase equilibria can be summarized as follows:
+The product of the free metal and ligand activities is often called the ***ion activity product*** ($IAP$), and the above solid phase equilibria can be summarized as follows:
 
 ```{admonition} Solubility product and saturation
 
@@ -143,5 +143,5 @@ Let's calculate the IAP of this system:
 
 $$IAP = [\ce{Ca^2+}][\ce{SO^2-}] = (10^{-3})(10^{-2}) = 10^{-5}$$
 
-Since, $IAP < K_{s0}$, the solution is undersaturated with respect to gypsum.	
+Since $IAP < K_{s0}$, the solution is undersaturated for gypsum.	
 ```

@@ -1,25 +1,25 @@
 # 6.2  Common Rate Expressions
 
-As seen in Eqs. {eq}`rate-ab` and {eq}`ratelaw-ab`, rate laws are in differential forms. They also show how reaction rates are impacted by reactant concentrations. In many chemical reactions reactants follow different trends on how they are consumed. Below we focus on two most common forms of rate expressions encountered in environmental geosciences.
+As seen in Eqs. {eq}`rate-ab` and {eq}`ratelaw-ab`, rate laws are in differential forms. They also show how reactant concentrations impact reaction rates. In many chemical reactions, reactants follow different trends in how they are consumed. Below, we focus on the two most common forms of rate expressions encountered in environmental geosciences.
 
-Note that the rate laws are represented in differential forms to generally describe what is occurring on a molecular level during a reaction. The integrated forms of the rate laws are used for determining the reaction order and the value of the rate constant from experimental measurements.
+Note that the rate laws are represented in differential forms to describe what occurs on a molecular level during a reaction. The integrated forms of the rate laws are used to determine the reaction order and the rate constant value from experimental measurements.
 
 ## Zero-order kinetics
 
-In some reactions, the rate of the reaction is independent of the reactant concentration. The rates of these zero-order reactions do not vary with increasing or decreasing reactants concentrations. Zero-order rate expression refers to the rate law where the exponents of all reactants are $0$. The basic expression is:
+In some reactions, the reaction rate is independent of the reactant concentration. The rates of these zero-order reactions do not vary with increasing or decreasing reactant concentrations. Zero-order rate expression refers to the rate law where the exponents of all reactants are $0$. The basic expression is:
 
 ```{math}
 :label: rate-ab-0
 \text{Rate} = \kappa [A]^0[B]^0
 ```
-The differential form of this expression can be show as:
+The differential form of this expression can be shown as:
 
 ```{math}
 :label: ratelaw-ab-0
 \text{Rate} = - \frac{\Delta [A]}{\Delta t} = \kappa
 ```
 
-On integrating the above expression we obtain, 
+On integrating the above expression, we obtain, 
 
 ```{math}
 :label: ratelaw-a-0
@@ -51,7 +51,7 @@ The graph of a zeroth-order reaction. The change in concentration of reactant an
 
 ## First-order kinetics
 
-A first-order reaction is a reaction that proceeds at a rate that is dependent on the concentration of the reactant. Exponents of all reactants are $1$ in expression below: 
+A first-order reaction is a reaction that proceeds at a rate that is dependent on the concentration of the reactant. Exponents of all reactants are $1$ in the expression below: 
 
 ```{math}
 :label: rate-1
@@ -81,7 +81,7 @@ Graphs of a first-order reaction. The expected shapes of the curves for plots o
 
 ```{dropdown} Example: First-order kinetics 
 
-If $\pu{3.0 g}$ of substance $B$ decomposes for $\pu{36 min}$ the mass of unreacted $B$ remaining is found to be $\pu{0.375 g}$. What is the half life of this reaction if it follows first-order kinetics? 
+If $\pu{3.0 g}$ of substance $B$ decomposes for $\pu{36 min}$ the mass of unreacted $B$ remaining is found to be $\pu{0.375 g}$. What is the half-life of this reaction if it follows first-order kinetics? 
 
 **Answer**: $\pu{12 min}$
 
@@ -102,6 +102,6 @@ The rate of decomposition of diazomethane is shown in the data below.
 
 Determine (a) the reaction order and (b) the rate constant for this reaction.
 
-**Answer**: On plotting these data in a $x-y$ graph resembling {numref}`first-order-rxn` and therefore, this is a first-order reaction. Plot the $\ln (\text{Conc}) $ vs. $\pu{Time}$ and the slope of this straight line is the rate constant.
+**Answer**: On plotting these data in a $x-y$ graph resembling {numref}`first-order-rxn` and therefore, this is a first-order reaction. Plot the $\ln (\text{Conc}) $ vs. $\pu{Time}$, and the slope of this straight line is the rate constant.
 
 ```

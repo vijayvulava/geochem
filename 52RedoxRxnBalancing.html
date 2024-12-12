@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="5.1 What is Oxidation and Reduction?" href="51RedoxRxn.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -403,21 +384,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="balancing-redox-reactions">
 <h1>5.2 Balancing Redox Reactions<a class="headerlink" href="#balancing-redox-reactions" title="Link to this heading">#</a></h1>
-<p>Balancing redox reactions is similar to balancing any chemical reactions.  However, the charge and the mass of the elements need to be considered during that process.</p>
-<p>For balancing redox reactions, we balance the elements on each side of the equation arrow, as well as the electrons.</p>
+<p>Balancing redox reactions is similar to balancing any chemical reactions.  However, the charge and mass of the elements need to be considered during that process.</p>
+<p>For balancing redox reactions, we balance the elements on each side of the equation arrow and the electrons.</p>
 <div class="admonition-balancing-redox-reactions admonition">
 <p class="admonition-title">Balancing redox reactions</p>
-<p>Follow steps below in sequence to balance redox reactions.</p>
+<p>Follow the steps below in sequence to balance redox reactions.</p>
 <ol class="arabic simple">
 <li><p>Identify the OS of all major elements</p></li>
 <li><p>Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span>  where appropriate in skeletal reaction</p></li>
 <li><p>Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span>  where appropriate in actual reaction</p></li>
-<li><p>Adjust stoichiometry of main element only</p></li>
+<li><p>Adjust the stoichiometry of the main element only</p></li>
 <li><p>Add <span class="math notranslate nohighlight">\(\ce{H2O}\)</span> on appropriate side of reaction to balance <span class="math notranslate nohighlight">\(\ce{O}\)</span></p></li>
 <li><p>Add <span class="math notranslate nohighlight">\(\ce{H+}\)</span> on appropriate side to balance <span class="math notranslate nohighlight">\(\ce{H}\)</span></p></li>
-<li><p>Verify charge balance on both sides of reaction</p></li>
-<li><p>Combine half-reactions such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span>  are consumed - factor half reactions as required</p></li>
-<li><p>Verify stoichiometry and charge balance of final reaction</p></li>
+<li><p>Verify charge balance on both sides of the reaction</p></li>
+<li><p>Combine half-reactions such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span>  are consumed - factor half-reactions as required</p></li>
+<li><p>Verify the stoichiometry and charge balance of the final reaction</p></li>
 </ol>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -452,21 +433,21 @@ SO4^2- + FeO -&gt; H2S + FeOOH
 </tbody>
 </table>
 </div>
-<p class="sd-card-text">Step 2: Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span> where appropriate in skeletal rxn</p>
+<p class="sd-card-text">Step 2: Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span> where appropriate in skeletal reaction</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
 \ce{
 S(VI) + 8 e- &amp;-&gt; S(-II)\\
 Fe(III) + e- &amp;-&gt; Fe(II)
 } \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Step 3: Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span> where appropriate in actual rxn</p>
+<p class="sd-card-text">Step 3: Place <span class="math notranslate nohighlight">\(\ce{e-}\)</span> where appropriate in actual reaction</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
 \ce{
 SO4^2- + 8 e- &amp;-&gt; H2S\\
 FeOOH + e- &amp;-&gt; FeO
 } \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Step 4: Adjust stoichiometry of main elements (in the example below they are already balanced)</p>
+<p class="sd-card-text">Step 4: Adjust the stoichiometry of the main elements (in the example below, they are already balanced)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
 \ce{
@@ -487,22 +468,22 @@ FeOOH + e- &amp;-&gt; FeO + H2O
 SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
 FeOOH + e- + H+ &amp;-&gt; FeO + H2O
 } \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Step 7: Verify charge balance on both sides of rxn</p>
-<p class="sd-card-text">Step 8a: Combine half-rxn such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  In this case multiply the <span class="math notranslate nohighlight">\(\ce{Fe}\)</span> half-reaction by a factor <span class="math notranslate nohighlight">\(8\)</span> to have same number of <span class="math notranslate nohighlight">\(\ce{e-}\)</span>.</p>
+<p class="sd-card-text">Step 7: Verify charge balance on both sides of the reactions</p>
+<p class="sd-card-text">Step 8a: Combine half-reaction such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  In this case, multiply the <span class="math notranslate nohighlight">\(\ce{Fe}\)</span> half-reaction by a factor <span class="math notranslate nohighlight">\(8\)</span> to have the same number of <span class="math notranslate nohighlight">\(\ce{e-}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
 \ce{
 SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
 8FeOOH + 8e- + 8H+ &amp;-&gt; 8FeO + 8H2O
 } \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Step 8b: Combine half-rxn such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  Reverse the 2nd reaction so that the <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are on the opposite sides of the reactions. Now, all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> can be cancelled.</p>
+<p class="sd-card-text">Step 8b: Combine half-reaction such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  Reverse the 2nd reaction so that the <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are on the opposite sides of the reactions. Now, all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> can be cancelled.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
 \ce{
 SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
 8 FeO + 8 H2O &amp;-&gt; 8 FeOOH + 8 e- + 8 H+
 } \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Step 9: Add both half-reactions and check stoichiometry and charge balance on final reaction</p>
+<p class="sd-card-text">Step 9: Add both half-reactions and check stoichiometry and charge balance on the final reaction</p>
 <div class="math notranslate nohighlight">
 \[ \ce{
 SO4^2- + 8 FeO + 2 H+ + 4 H2O -&gt; H2S + 8 FeOOH
@@ -560,7 +541,7 @@ SO4^2- + 8 FeO + 2 H+ + 4 H2O -&gt; H2S + 8 FeOOH
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Balancing redox reactions - Case Study 4</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Acid mine drainage is cause by the oxidation of pyrite (<span class="math notranslate nohighlight">\(\ce{FeS2(s)}\)</span>) when it comes in contact with water containing dissolved oxygen. The base reaction is:</p>
+<p class="sd-card-text">Acid mine drainage is caused by the oxidation of pyrite (<span class="math notranslate nohighlight">\(\ce{FeS2(s)}\)</span>) when it comes in contact with water containing dissolved oxygen. The base reaction is:</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 FeS2 + O2 -&gt; Fe(OH)3 + SO4^2-
@@ -684,8 +665,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

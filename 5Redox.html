@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="4.4 Practice Problems" href="44Problems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -424,11 +405,11 @@ document.write(`
 <h1>5 Redox Chemistry<a class="headerlink" href="#redox-chemistry" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>Earth’s atmosphere contains about <span class="math notranslate nohighlight">\(\pu{20 \%}\)</span> molecular oxygen, <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>, a chemically reactive gas that plays an essential role in the metabolism of aerobic organisms and in many environmental processes that shape the world. The term oxidation was originally used to describe chemical reactions involving <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>, but its meaning has evolved to refer to a broad and important reaction class known as <em>oxidation-reduction (redox) reactions</em>.</p>
-<p>In this chapter, we focus on how loss or gain of electrons can impact elements and their behavior in the environment. Below are some basic examples of redox reactions that occur on Earth, both naturally and due to human actions.</p>
+<p>Earth’s atmosphere consists of about 20% molecular oxygen (<span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>). This chemically reactive gas plays a crucial role in the metabolism of aerobic organisms as well as in various environmental processes that shape our world. The term “oxidation” was initially used to describe chemical reactions involving <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>. Still, its definition has since evolved to encompass a broader and more significant category of reactions known as oxidation-reduction (or redox) reactions.</p>
+<p>In this chapter, we explore how the loss or gain of electrons affects elements and their behavior in the environment. Below are some fundamental examples of redox reactions occurring on Earth through natural processes and human activities.</p>
 <section id="acid-rain">
 <h3>Acid Rain<a class="headerlink" href="#acid-rain" title="Link to this heading">#</a></h3>
-<p>Coal from the Appalachian Mountains have naturally higher sulfur content, due to their geological origin in the ocean basins. This coal is also the most common type of coal consumed in most of the eastern half of the US. When this coal is combusted, <span class="math notranslate nohighlight">\(\ce{S}\)</span> is oxidized as shown in the reaction below to form <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span>. Subsequent oxidation reaction turns <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span> into <span class="math notranslate nohighlight">\(\ce{SO3(g)}\)</span>, which leads to formation of sulfuric acid (<span class="math notranslate nohighlight">\(\ce{H2SO4(aq)}\)</span>) by combining with water. Sulfuric acid is a strong acid and leads to acid rain as well as acidification of natural streams, leading to deleterious impacts on overall environments.</p>
+<p>Due to their geological origin in ocean basins, coal from the Appalachian Mountains has a naturally higher sulfur content. This type of coal is also the most commonly consumed in the eastern half of the United States. When combusted, sulfur (<span class="math notranslate nohighlight">\(\ce{S}\)</span>) oxidizes, as shown in the reaction below, to form sulfur dioxide (<span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span>). A subsequent oxidation reaction converts <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span> into sulfur trioxide (<span class="math notranslate nohighlight">\(\ce{SO3(g)}\)</span>), which then combines with water to form sulfuric acid (<span class="math notranslate nohighlight">\(\ce{H2SO4(aq)}\)</span>). Sulfuric acid is a strong acid that contributes to acid rain and the acidification of natural streams, leading to harmful impacts on the overall environment.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} 
 \begin{align*} 
@@ -443,7 +424,7 @@ H2SO4(aq) &amp;-&gt; H+(aq) + HSO4^-(aq) &amp;
 </section>
 <section id="acid-mine-drainage">
 <h3>Acid Mine Drainage<a class="headerlink" href="#acid-mine-drainage" title="Link to this heading">#</a></h3>
-<p>Metal-bearing sulfide minerals such as iron, copper, and lead pyrites (<span class="math notranslate nohighlight">\(\ce{FeS2}\)</span>, <span class="math notranslate nohighlight">\(\ce{Cu2S}\)</span>, and <span class="math notranslate nohighlight">\(\ce{PbS}\)</span>), are stable in reducing environments but break down in oxidizing environments driven by oxidation of the sulfide anion (<span class="math notranslate nohighlight">\(\ce{S^2-}\)</span>) to <span class="math notranslate nohighlight">\(\ce{S^6+}\)</span> (present in <span class="math notranslate nohighlight">\(\ce{SO4^2-}\)</span>), can result in release of trace metals and arsenic to soils and aquatic systems.</p>
+<p>Metal-bearing sulfide minerals, such as iron pyrite (<span class="math notranslate nohighlight">\(\ce{FeS2}\)</span>), copper sulfide (<span class="math notranslate nohighlight">\(\ce{Cu2S}\)</span>), and lead sulfide (<span class="math notranslate nohighlight">\(\ce{PbS}\)</span>), are stable in reducing environments. However, these minerals can break down in oxidizing environments due to the oxidation of the sulfide anion (<span class="math notranslate nohighlight">\(\ce{S^2-}\)</span>) to <span class="math notranslate nohighlight">\(\ce{S^6+}\)</span>, which is present in sulfate (<span class="math notranslate nohighlight">\(\ce{SO4^2-}\)</span>). This process can lead to the release of trace metals and arsenic into soils and aquatic systems.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} 
 \begin{align*} 
@@ -451,12 +432,13 @@ H2SO4(aq) &amp;-&gt; H+(aq) + HSO4^-(aq) &amp;
 FeS2 + 14 Fe^3+ + 8 H2O &amp;-&gt; 16 H+ + 15 Fe^2+ + 2 SO4^2-\\
 PbS + 8 Fe^3+ + 4 H2O &amp;-&gt; 8 H+ + SO4^2- + Pb^2+ + 8 Fe^2+
 } \end{align*} \end{split}\]</div>
-<p>A by-product of these reactions is the large-scale release of acids (<span class="math notranslate nohighlight">\(\ce{H+}\)</span> in the above reactions) into stream environments. Often, <span class="math notranslate nohighlight">\(p\ce{H}\)</span> drops to levels that cannot sustain any aquatic life.</p>
+<p>A by-product of these reactions is the large-scale release of acids (<span class="math notranslate nohighlight">\(\ce{H+}\)</span> in the above reactions) into stream environments. Often, <span class="math notranslate nohighlight">\(p\ce{H}\)</span> drops to levels that cannot sustain aquatic life.</p>
 <p><a class="reference external" href="https://www.usgs.gov/mission-areas/water-resources/science/mine-drainage">Mine Drainage | U.S. Geological Survey (usgs.gov)</a></p>
 </section>
 <section id="arsenic-in-bengal-basin">
 <h3>Arsenic in Bengal Basin<a class="headerlink" href="#arsenic-in-bengal-basin" title="Link to this heading">#</a></h3>
-<p>Arsenic poisoning and the health emergency in Bengal Basin of the Indian subcontinent. The shallow aquifer materials in the Bengal Basic naturally contain thick deposits of arsenopyrite (<span class="math notranslate nohighlight">\(\ce{FeAsS}\)</span>) minerals. To address high infant mortality rates in Bangladesh, the WHO recommended and funded a large-scale installation of groundwater wells as groundwater naturally contained low bacteria compared to stream water. During pumping of groundwater, the extensive drawdown of the water table allowed reduction of ferric (<span class="math notranslate nohighlight">\(\ce{Fe^3+}\)</span>) to ferrous (<span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>) iron and dissolution of iron hydroxides, which in turn released arsenic into solution. Aquifers where dissolved arsenic was once well below drinking-water standards (e.g., <span class="math notranslate nohighlight">\(\pu{10 ppb}\)</span> in the USA) can experience substantial increases of dissolved arsenic that exceed safe drinking water standards.</p>
+<p>Arsenic poisoning poses a significant health emergency in the Bengal Basin of the Indian subcontinent. The shallow aquifer materials in this region naturally contain thick deposits of arsenopyrite (<span class="math notranslate nohighlight">\(\ce{FeAsS}\)</span>) minerals. To combat high infant mortality rates in Bangladesh, the World Health Organization (WHO) recommended and funded the large-scale installation of groundwater wells, as groundwater typically has lower bacterial levels than surface water.</p>
+<p>However, during the pumping of groundwater, the substantial drawdown of the water table led to the reduction of ferric iron (<span class="math notranslate nohighlight">\(\ce{Fe^3+}\)</span>) to ferrous iron (<span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>) and the dissolution of iron hydroxides. This process releases arsenic into the water. As a result, aquifers that previously had dissolved arsenic levels well below drinking water standards (for example, 10 ppb in the USA) can now experience significant increases in dissolved arsenic, surpassing safe drinking water limits.</p>
 <p><a class="reference external" href="https://www.iwapublishing.com/news/arsenic-contamination-groundwater-bangladesh-environmental-and-social-disaster">Arsenic Contamination In Groundwater In Bangladesh: An Environmental And Social Disaster | IWA Publishing</a></p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/BVht6JtufYE" 
@@ -465,7 +447,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="chromium-in-groundwater">
 <h3>Chromium in Groundwater<a class="headerlink" href="#chromium-in-groundwater" title="Link to this heading">#</a></h3>
-<p>Groundwater contamination during unregulated dumping of <span class="math notranslate nohighlight">\(\ce{Cr(VI)}\)</span> (<span class="math notranslate nohighlight">\(\ce{Cr^6+}\)</span>) waste by a large electrical utility, PG&amp;E, into unlined soil pits created a health emergency in the community of Hinkley, CA. The <span class="math notranslate nohighlight">\(\ce{Cr}\)</span> waste seeped into the aquifer and created a large plume that went undetected until the contaminated well water created many health problems in the local community. Since <span class="math notranslate nohighlight">\(\ce{Cr(VI)}\)</span> is present in water as an oxyanion (<span class="math notranslate nohighlight">\(\ce{Cr2O7^2-}\)</span> or <span class="math notranslate nohighlight">\(\ce{CrO4^2-}\)</span>), it is not “attracted” (sorbed) to aquifer materials, this form of Cr can easily be transported in groundwater environments. Typically, treatment of this form requires that <span class="math notranslate nohighlight">\(\ce{Cr^6+}\)</span> to be reduced to <span class="math notranslate nohighlight">\(\ce{Cr^3+}\)</span>, which is less toxic.</p>
+<p>Groundwater contamination due to the unregulated dumping of hexavalent chromium (<span class="math notranslate nohighlight">\(\ce{Cr(VI)}\)</span> or <span class="math notranslate nohighlight">\(\ce{Cr^6+}\)</span>) waste by the electrical utility PG&amp;E into unlined soil pits has created a health emergency in the community of Hinkley, California. The <span class="math notranslate nohighlight">\(\ce{Cr}\)</span> waste seeped into the aquifer, forming a large contamination plume that went undetected. It was only when the contaminated groundwater caused health issues within the local community that the problem became evident.</p>
+<p>Since <span class="math notranslate nohighlight">\(\ce{Cr(VI)}\)</span> exists in water as oxyanions (either <span class="math notranslate nohighlight">\(\ce{Cr2O7^2-}\)</span> or <span class="math notranslate nohighlight">\(\ce{CrO4^2-}\)</span>), it does not readily bind (or sorb) to aquifer materials, allowing it to be easily transported through groundwater. Typically, treating this form of chromium requires its reduction to trivalent chromium (<span class="math notranslate nohighlight">\(\ce{Cr^3+}\)</span>), which is less toxic.</p>
 <p><a class="reference external" href="https://news.stanford.edu/2018/07/23/widespread-groundwater-contamination-risk-chromium/">Widespread groundwater contamination risk from chromium | Stanford News</a></p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/tadJai_SC4I" 
@@ -474,7 +457,9 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="excess-nutrients-in-water">
 <h3>Excess nutrients in water<a class="headerlink" href="#excess-nutrients-in-water" title="Link to this heading">#</a></h3>
-<p>Large-scale factory-farming practices use excessive fertilizers to increase crop and animal yield. A by-product of these practices is the discharge of large concentrations of nutrient elements such as <span class="math notranslate nohighlight">\(\ce{N}\)</span> and <span class="math notranslate nohighlight">\(\ce{P}\)</span> in stream runoff. The excess <span class="math notranslate nohighlight">\(\ce{N}\)</span> and <span class="math notranslate nohighlight">\(\ce{P}\)</span> in the final receiving bodies of water result in an increase in algal populations in water. Excess algae create “blooms” that can be seen in the form of green pigments that float on water. Eutrophication, where degradation of algae in water bodies reduces available dissolved <span class="math notranslate nohighlight">\(\ce{N}\)</span> and <span class="math notranslate nohighlight">\(\ce{O2(aq)}\)</span> (DO) in the water. Aerobic microbial organisms responsible for degradation (consumption) of algae also consume during this process. Ultimately, DO reduces to a dangerously low level that is detrimental to aquatic and marine life. Excess fertilizer discharge in stream runoff have created “dead zones” and harmful algal blooms (HAB) in the Gulf of Mexico, the Great Lakes, and along the Atlantic coastal areas. Highly oxygenated surface waters in cool streams and lakes typically contain <span class="math notranslate nohighlight">\(\pu{7-9 mg L-1}\)</span> of DO. Wetlands and groundwater contain naturally lower amounts of DO than do surface waters (e.g., groundwater generally contain DO from <span class="math notranslate nohighlight">\(\pu{1-6 mg L-1}\)</span> while wetlands can vary between oxic and anoxic conditions). In aquatic environments, DO levels below <span class="math notranslate nohighlight">\(\pu{5-6 mg L-1}\)</span> are detrimental to aquatic life.</p>
+<p>Large-scale factory farming practices often rely on excessive use of fertilizers to boost crop and animal yields. However, a significant by-product of these practices is the discharge of high concentrations of nutrient elements such as nitrogen (<span class="math notranslate nohighlight">\(\ce{N}\)</span>) and phosphorus (<span class="math notranslate nohighlight">\(\ce{P}\)</span>) into streams via runoff. The accumulation of excess <span class="math notranslate nohighlight">\(\ce{N}\)</span> and <span class="math notranslate nohighlight">\(\ce{P}\)</span> in receiving bodies of water leads to an increase in algal populations, resulting in visible “blooms” characterized by green pigments floating on the water’s surface.</p>
+<p>This process, known as eutrophication, occurs when algae decompose the available dissolved nitrogen and dissolved oxygen (<span class="math notranslate nohighlight">\(\ce{O2}\)</span>, or DO) in the water. The aerobic microorganisms responsible for degrading the algae consume oxygen, which can lead to dangerously low DO levels that harm aquatic and marine life.</p>
+<p>The discharge of excess fertilizers into streams has created “dead zones” and harmful algal blooms (HABs) in regions such as the Gulf of Mexico, the Great Lakes, and along the Atlantic coastline. In healthy aquatic environments, highly oxygenated surface waters in cool streams and lakes typically contain between <span class="math notranslate nohighlight">\(\pu{7 mg L-1}\)</span> and <span class="math notranslate nohighlight">\(\pu{9 mg L-1}\)</span> of DO. In contrast, wetlands and groundwater usually have naturally lower amounts of DO; groundwater generally contains DO levels between <span class="math notranslate nohighlight">\(\pu{1 mg L-1}\)</span> and <span class="math notranslate nohighlight">\(\pu{6 mg L-1}\)</span>, while wetlands can experience a range of conditions from oxic to anoxic. It is important to note that DO levels below <span class="math notranslate nohighlight">\(\pu{5-6 mg L-1}\)</span> in aquatic environments can harm aquatic life.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/92TFJTtuq6k" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -557,7 +542,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -627,8 +613,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="3.4 Practice Problems" href="34Problems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -422,11 +403,11 @@ document.write(`
 <h1>4 Acids and Bases<a class="headerlink" href="#acids-and-bases" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>An acid-base reaction is one in which a hydrogen ion, <span class="math notranslate nohighlight">\(\ce{H+}\)</span>, is transferred from one chemical species to another. Such reactions are of central importance to numerous natural and anthropogenic processes, ranging from the chemical transformations that take place within human bodies, lakes and oceans, to industrial-scale production of fertilizers, pharmaceuticals, and other substances essential to society.</p>
-<p>In this chapter we explore the basic geochemistry of acid-base reactions.  Below are some examples of where acids and bases are encountered in natural and anthropogenic-influenced environments.</p>
+<p>An acid-base reaction involves the transfer of a hydrogen ion (<span class="math notranslate nohighlight">\(\ce{H+}\)</span>) from one chemical species to another. These reactions are crucial to a wide range of natural and human-made processes. They play a significant role in the chemical transformations occurring within the human body, lakes, and oceans and in the industrial production of fertilizers, pharmaceuticals, and other substances essential to society.</p>
+<p>In this chapter, we explore the fundamental geochemistry of acid-base reactions. Below are examples of where acids and bases are found in natural and human-influenced environments.</p>
 <section id="atmospheric-ce-co2-and-p-ce-h-in-natural-water">
 <h3>Atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> and <span class="math notranslate nohighlight">\(p\ce{H}\)</span> in Natural Water<a class="headerlink" href="#atmospheric-ce-co2-and-p-ce-h-in-natural-water" title="Link to this heading">#</a></h3>
-<p>Pure water containing no dissolved ions or gases is considered to be “neutral” or neither acidic not basic. However, rainwater is not pure water since it comes in contact with Earth’s atmosphere which contains many gases. While atmospheric gases such as and are relatively nonreactive in water, other gases such as are very reactive. reacts with water to form carbonic acid (<span class="math notranslate nohighlight">\(\ce{H2CO3}\)</span>), which makes rainwater acidic.</p>
+<p>Pure water with no dissolved ions or gases is considered “neutral,” meaning it is neither acidic nor basic. However, rainwater is not pure because it comes into contact with the Earth’s atmosphere, which contains various gases. While some atmospheric gases are relatively nonreactive in water, others are highly reactive. For instance, carbon dioxide (<span class="math notranslate nohighlight">\(\ce{CO2}\)</span>) reacts with water to form carbonic acid (<span class="math notranslate nohighlight">\(\ce{H2CO3}\)</span>), which makes rainwater acidic.</p>
 <p>The sequence of <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span>-caused rainwater acidification reactions is as follows. These important reactions will be explored further in this chapter.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -439,7 +420,7 @@ document.write(`
 	}
 \end{align*}
 \end{split}\]</div>
-<p>The produced <span class="math notranslate nohighlight">\(\ce{H+}\)</span> are the source of acidity to rainwater. The presence of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> typically lowers <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of typical rainwaters to <span class="math notranslate nohighlight">\(\approx 5.7\)</span>. As we learned from thermodynamic principles, increasing <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> concentrations in these sequence of reactions favors formation of more  <span class="math notranslate nohighlight">\(\ce{H+}\)</span> or the increase in acidity of water. This increase in acidity in ocean water has been attributed to suppressing of the carbonate ion (<span class="math notranslate nohighlight">\(\ce{CO3^2-}\)</span>) concentrations - an ion that is critical for marine calcifying organisms such as corals. For more information, see <a class="reference external" href="https://nca2014.globalchange.gov/report/our-changing-climate/ocean-acidification">Ocean Acidification | National Climate Assessment (globalchange.gov)</a>. Thermodynamic principles predict that lowering will also lower the formation acidity in water.</p>
+<p>The produced <span class="math notranslate nohighlight">\(\ce{H+}\)</span> ions are the source of acidity in rainwater. Typically, the presence of (\ce{H+}) lowers the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of rainwater to approximately 5.7. As we learned from thermodynamic principles, increasing concentrations of (\ce{CO2(g)}) in these reactions favor the formation of more <span class="math notranslate nohighlight">\(\ce{H+}\)</span> ions, leading to increased water acidity. This rise in acidity in ocean water has been linked to a decrease in the concentration of carbonate ions ((\ce{CO3^2-})), which are crucial for marine calcifying organisms, such as corals. For more information, see <a class="reference external" href="https://nca2014.globalchange.gov/report/our-changing-climate/ocean-acidification">Ocean Acidification | National Climate Assessment (globalchange.gov)</a>. Thermodynamic principles also predict that a decrease in <span class="math notranslate nohighlight">\(p\ce{H}\)</span> will result in lower acidity in water.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/L2bxwnm7JG4" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -447,7 +428,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="acid-rain">
 <h3>Acid Rain<a class="headerlink" href="#acid-rain" title="Link to this heading">#</a></h3>
-<p>Human activities - mainly fossil fuel-based power generation and automobile emissions - are the main cause of acid rain. Fossil fuels typically contain <span class="math notranslate nohighlight">\(\pu{1-3 \%}\)</span> of sulfur along with nitrogen and other minerals. Coal and fuel combustion releases large concentrations of nitrogen oxides (<span class="math notranslate nohighlight">\(\ce{NO_x (g)}\)</span>, a combination of <span class="math notranslate nohighlight">\(\ce{NO (g)}\)</span> and <span class="math notranslate nohighlight">\(\ce{NO2 (g)}\)</span>) and sulfur dioxide (<span class="math notranslate nohighlight">\(\ce{SO2}\)</span>) into the atmosphere. These gases mix and react with rainwater, <span class="math notranslate nohighlight">\(\ce{O2 (g)}\)</span>, and other chemicals to form more acidic pollutants, known as acid rain. Sulfur dioxide and nitrogen oxides dissolve very easily in water and can be carried very far by the wind.</p>
+<p>Human activities, primarily those related to fossil fuel-based power generation and automobile emissions, are the leading causes of acid rain. Fossil fuels typically contain 1-3% sulfur, nitrogen, and other minerals. The combustion of coal and fuel releases significant amounts of nitrogen oxides (<span class="math notranslate nohighlight">\(\ce{NOx}\)</span>, which includes both <span class="math notranslate nohighlight">\(\ce{NO}\)</span> and <span class="math notranslate nohighlight">\(\ce{NO2}\)</span>) and sulfur dioxide (<span class="math notranslate nohighlight">\(\ce{SO2}\)</span>) into the atmosphere. These gases mix and react with rainwater, <span class="math notranslate nohighlight">\(\ce{O2}\)</span>, and other chemicals to form acidic pollutants, classified as acid rain. Sulfur dioxide and nitrogen oxides dissolve quickly in water and can be transported over long distances by the wind.</p>
 <p>The sequence of <span class="math notranslate nohighlight">\(\ce{SO2(g)}\)</span>-caused rainwater acidification reactions is as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -470,24 +451,25 @@ frameborder="0" allowfullscreen class="video"></iframe>
 	}
 \end{align*}
 \end{split}\]</div>
-<p>The release of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> into water is the cause of increased acidity in water. These reactions produce more acid than dissolution of <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> in water causing drop of <span class="math notranslate nohighlight">\(p\ce{H}\)</span> to alarming levels in affected areas.</p>
+<p>The release of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> into water is the cause of increased acidity in water. These reactions produce more acid than the dissolution of <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> in water, causing a drop of <span class="math notranslate nohighlight">\(p\ce{H}\)</span> to alarming levels in affected areas.</p>
 <p><a class="reference external" href="https://ed.ted.com/lessons/should-you-be-worried-about-acid-rain-joseph-goffman">Whatever happened to acid rain? - Joseph Goffman | TED-Ed</a></p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/WIdWjqZsGgg" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>Extraction of metals from ore materials (typically oxides or sulfides of metals) usually involves heating the ore at high temperatures to separate the base metal from the remaining elements. This process is called smelting and has been probably been applied by human civilizations as far back as 5500 BCE. Smelting of sulfide minerals (<span class="math notranslate nohighlight">\(\ce{CuS}\)</span>, <span class="math notranslate nohighlight">\(\ce{PbS}\)</span>, <span class="math notranslate nohighlight">\(\ce{FeS2}\)</span>, etc.) releases into the atmosphere causing acid rain, if the emissions are not controlled (e.g., see <a class="reference internal" href="#ducktown"><span class="std std-numref">Fig. 35</span></a>)</p>
+<p>Extraction of metals from ore materials (typically oxides or sulfides of metals) usually involves heating the ore at high temperatures to separate the base metal from the remaining elements. This process is called smelting and has probably been applied by human civilizations as far back as 5500 BCE. Smelting of sulfide minerals (<span class="math notranslate nohighlight">\(\ce{CuS}\)</span>, <span class="math notranslate nohighlight">\(\ce{PbS}\)</span>, <span class="math notranslate nohighlight">\(\ce{FeS2}\)</span>, etc.) releases into the atmosphere causing acid rain, if the emissions are not controlled (e.g., see <code class="xref std std-numref docutils literal notranslate"><span class="pre">ducktown</span></code>)</p>
 <figure class="margin align-default" id="ducktown">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/A_train_bringing_copper_ore_out_of_the_mines%2C_Ducktown%2C_Tenn._Fumes_from_smelting_copper_for_sulfuric_acid_have_destroyed_all_vegetation_and_eroded_the_land_LCCN2017877450.jpg/800px-thumbnail.jpg?20190121070217"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/A_train_bringing_copper_ore_out_of_the_mines%2C_Ducktown%2C_Tenn._Fumes_from_smelting_copper_for_sulfuric_acid_have_destroyed_all_vegetation_and_eroded_the_land_LCCN2017877450.jpg/800px-thumbnail.jpg?20190121070217" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/A_train_bringing_copper_ore_out_of_the_mines%2C_Ducktown%2C_Tenn._Fumes_from_smelting_copper_for_sulfuric_acid_have_destroyed_all_vegetation_and_eroded_the_land_LCCN2017877450.jpg/800px-thumbnail.jpg?20190121070217" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/A_train_bringing_copper_ore_out_of_the_mines%2C_Ducktown%2C_Tenn._Fumes_from_smelting_copper_for_sulfuric_acid_have_destroyed_all_vegetation_and_eroded_the_land_LCCN2017877450.jpg/800px-thumbnail.jpg?20190121070217"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/A_train_bringing_copper_ore_out_of_the_mines%2C_Ducktown%2C_Tenn._Fumes_from_smelting_copper_for_sulfuric_acid_have_destroyed_all_vegetation_and_eroded_the_land_LCCN2017877450.jpg/800px-thumbnail.jpg?20190121070217" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/A_train_bringing_copper_ore_out_of_the_mines%2C_Ducktown%2C_Tenn._Fumes_from_smelting_copper_for_sulfuric_acid_have_destroyed_all_vegetation_and_eroded_the_land_LCCN2017877450.jpg/800px-thumbnail.jpg?20190121070217" style="width: 200px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Rampant copper mining and smelting operations during the 19th century caused widespread acid rain and environmental damage in many parts of the world. In the above image a train is bringing copper ore out of the mines in Ducktown, Tennessee. Sulfuric acid fumes from copper smelting copper destroyed all vegetation and denuded the landscape.  Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Ducktown,_Tennessee">Ducktown, Tennessee - Wikipedia</a></span><a class="headerlink" href="#ducktown" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Rampant copper mining and smelting operations during the 19th century caused widespread acid rain and environmental damage in many parts of the world. In the above image, a train is bringing copper ore out of the mines in Ducktown, Tennessee. Sulfuric acid fumes from copper smelting copper destroyed all vegetation and denuded the landscape.  Image source: <a class="reference external" href="https://en.wikipedia.org/wiki/Ducktown,_Tennessee">Ducktown, Tennessee - Wikipedia</a></span><a class="headerlink" href="#ducktown" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="acid-mine-drainage">
 <h3>Acid Mine Drainage<a class="headerlink" href="#acid-mine-drainage" title="Link to this heading">#</a></h3>
-<p>Acid mine drainage is any surface water or groundwater that drains from an active or abandoned mining operation. Mine drainage can be high-quality similar to natural waters or contaminated by leftover materials. Polluted mine drainage can be extremely acidic and often contains high concentrations of toxic, heavy metals. In general, the more acidic the water, the more likely it is to be harmful to living organisms.</p>
-<p>Mine drainage forms from a chemical reaction between water and rocks containing sulfur-bearing minerals. The resulting waters become rich in sulfuric acid and dissolved iron as shown in the reactions below. As the iron settles out of the water, it can form red, orange, or yellow sediments in the bottom of streams. The acidic runoff further dissolves heavy metals such as copper, lead, mercury into groundwater or surface water. The rate and degree by which acid-mine drainage proceeds can be increased by the action of certain bacteria.</p>
+<p>Acid mine drainage refers to surface water or groundwater that flows from an active or abandoned mining operation. This drainage can vary in quality; it may be similar to natural waters or contaminated with leftover materials from mining activities. Polluted mine drainage is often highly acidic and may contain elevated levels of toxic heavy metals. Generally, the higher the acidity of the water, the more harmful it is to living organisms.</p>
+<p>Mine drainage occurs from a chemical reaction between water and rocks that contain sulfur-bearing minerals. This reaction produces water rich in sulfuric acid and dissolved iron, as illustrated in the reactions below. When the iron settles out of the water, it forms red, orange, or yellow sediments at the bottoms of streams. The acidic runoff can also dissolve heavy metals such as copper, lead, and mercury, contaminating groundwater or surface water. The activity of certain bacteria can accelerate the rate and extent of acid mine drainage.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -498,7 +480,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 \end{align*}
 \end{split}\]</div>
 <figure class="margin align-default" id="amd">
-<a class="reference internal image-reference" href="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/acid-mine-drainage_0.jpg"><img alt="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/acid-mine-drainage_0.jpg" src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/acid-mine-drainage_0.jpg" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/acid-mine-drainage_0.jpg"><img alt="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/acid-mine-drainage_0.jpg" src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/acid-mine-drainage_0.jpg" style="width: 200px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 36 </span><span class="caption-text">Acid mine drainage can change the color of a stream into red or orange. Image source: <a class="reference external" href="https://www.usgs.gov/mission-areas/water-resources/science/mine-drainage">Mine Drainage | U.S. Geological Survey (usgs.gov)</a></span><a class="headerlink" href="#amd" title="Link to this image">#</a></p>
 </figcaption>
@@ -585,7 +568,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -653,8 +637,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

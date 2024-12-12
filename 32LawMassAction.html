@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="3.1 What is Equilibrium?" href="31ChemicalEquilibrium.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -421,7 +402,7 @@ document.write(`
 <h1>3.2  Law of Mass Action<a class="headerlink" href="#law-of-mass-action" title="Link to this heading">#</a></h1>
 <section id="reaction-quotient">
 <h2>Reaction quotient<a class="headerlink" href="#reaction-quotient" title="Link to this heading">#</a></h2>
-<p>To quantify chemical equilibrium, we need to define the term, <em><strong>reaction quotient</strong></em> (<span class="math notranslate nohighlight">\(Q_c\)</span>). In any balanced chemical reaction, this term refers to the ratio of product concentrations in the numerator and reactant concentrations in the denominator – with each concentration raised to a power equal to the corresponding stoichiometric coefficient.</p>
+<p>To quantify chemical equilibrium, we must define the term <em><strong>reaction quotient</strong></em> (<span class="math notranslate nohighlight">\(Q_c\)</span>). In any balanced chemical reaction, this term refers to the ratio of product concentrations in the numerator and reactant concentrations in the denominator – with each concentration raised to a power equal to the corresponding stoichiometric coefficient.</p>
 <div class="math notranslate nohighlight">
 \[
 \ce{aA + bB &lt;=&gt; cC +dD}
@@ -453,10 +434,10 @@ Cd^2+(aq) + 4 Br-(aq) &amp;&lt;=&gt; CdBr4^2-(aq)
 </details></section>
 <section id="the-law-of-mass-action-and-k">
 <h2>The Law of Mass Action and <span class="math notranslate nohighlight">\(K\)</span><a class="headerlink" href="#the-law-of-mass-action-and-k" title="Link to this heading">#</a></h2>
-<p>Extensive studies and observations have determined that <span class="math notranslate nohighlight">\(Q_c\)</span> had the same value at equilibrium at constant temperature, regardless of the initial concentrations. Therefore, for a system at equilibrium, <span class="math notranslate nohighlight">\(Q_c\)</span> becomes the equilibrium constant, <span class="math notranslate nohighlight">\(K_c\)</span>.</p>
+<p>Extensive studies and observations have determined that <span class="math notranslate nohighlight">\(Q_c\)</span> had the same value at equilibrium at constant temperature, regardless of the initial concentrations. Therefore, <span class="math notranslate nohighlight">\(Q_c\)</span> becomes the equilibrium constant for a system at equilibrium, <span class="math notranslate nohighlight">\(K_c\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-lawmassaction">
 <span class="eqno">(23)<a class="headerlink" href="#equation-lawmassaction" title="Link to this equation">#</a></span>\[Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b} = K_c\]</div>
-<p>Equation <a class="reference internal" href="#equation-lawmassaction">(23)</a> is known as the <em><strong>law of mass action</strong></em>. This expression can be simplified as follows:</p>
+<p>Equation <a class="reference internal" href="#equation-lawmassaction">(23)</a> is the <em><strong>law of mass action</strong></em>. This expression can be simplified as follows:</p>
 <div class="math notranslate nohighlight" id="equation-equi-exp">
 <span class="eqno">(24)<a class="headerlink" href="#equation-equi-exp" title="Link to this equation">#</a></span>\[K_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}\]</div>
 <p>This expression is called the <em><strong>equilibrium expression</strong></em>. If the equilibrium concentrations of all reactants and products are known in a given chemical reaction, we can calculate <span class="math notranslate nohighlight">\(K_c\)</span>.</p>
@@ -477,12 +458,12 @@ Br2(g) + Cl2(g) &lt;=&gt; 2 BrCl(g)
         &amp;= 7.1
 \end{aligned}
 \end{split}\]</div>
-<p class="sd-card-text">Note, we did not show any units for <span class="math notranslate nohighlight">\(K_c\)</span>. It is a dimensionless quantity as described in a subsequent section.</p>
+<p class="sd-card-text">Note that we did not show any units for <span class="math notranslate nohighlight">\(K_c\)</span>. It is a dimensionless quantity, as described in a subsequent section.</p>
 </div>
 </details></section>
 <section id="gas-phase-concentrations">
 <h2>Gas phase concentrations<a class="headerlink" href="#gas-phase-concentrations" title="Link to this heading">#</a></h2>
-<p>Gas concentrations can be expressed in <span class="math notranslate nohighlight">\(P\)</span>. But in reality, gas concentrations are often expressed in partial pressures or as percent of the composition of Earth’s atmosphere. Therefore, concentrations of gases are commonly expressed in units of atmosphere or <span class="math notranslate nohighlight">\(\pu{atm}\)</span>. We can also convert gas concentrations from <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> to <span class="math notranslate nohighlight">\(\pu{atm}\)</span> using the ideal gas law equation.</p>
+<p>Gas concentrations can be expressed in <span class="math notranslate nohighlight">\(P\)</span>. But in reality, gas concentrations are often expressed in partial pressures or as percent of the composition of Earth’s atmosphere. Therefore, concentrations of gases are commonly expressed in units of atmosphere or <span class="math notranslate nohighlight">\(\pu{atm}\)</span>. Using the ideal gas law equation, we can also convert gas concentrations from <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> to <span class="math notranslate nohighlight">\(\pu{atm}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-gaslaw">
 <span class="eqno">(25)<a class="headerlink" href="#equation-gaslaw" title="Link to this equation">#</a></span>\[PV = n R T\]</div>
 <p>where, <span class="math notranslate nohighlight">\(P\)</span> is pressure in <span class="math notranslate nohighlight">\(\pu{atm}\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is volume in <span class="math notranslate nohighlight">\(\pu{L}\)</span>, <span class="math notranslate nohighlight">\(n\)</span> is number of moles, <span class="math notranslate nohighlight">\(T\)</span> is temperature in <span class="math notranslate nohighlight">\(\pu{K}\)</span>, and <span class="math notranslate nohighlight">\(R\)</span> is gas law constant and has the value of <span class="math notranslate nohighlight">\(\pu{0.0821 L atm mol-1 K-1}\)</span> or <span class="math notranslate nohighlight">\(\pu{8.314 J mol-1 K}\)</span> at STP. Note that the ideal gas law is derived from a combination of Boyle’s, Charles’, and Avogadro’s laws. To convert gas concentrations from <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> to <span class="math notranslate nohighlight">\(\pu{atm}\)</span>, rearrange Eq. <a class="reference internal" href="#equation-gaslaw">(25)</a> as follows:</p>
@@ -557,14 +538,14 @@ CO2 (g) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 \end{align*}
 \end{split}\]</div>
 <ol class="arabic simple">
-<li><p class="sd-card-text">In the first reaction all chemical components are gases and is an example of homogeneous equilibrium reactions i.e., the states of matter are the same in the entire reaction. The second reaction contains more than one phase of matter and is an example of heterogeneous equilibrium.</p></li>
-<li><p class="sd-card-text">In the first reaction, <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> can be written since all components are gases, while in the second reaction only <span class="math notranslate nohighlight">\(K_c\)</span> can be written as <span class="math notranslate nohighlight">\(P\)</span> is not applicable for aqueous/liquid concentrations.</p></li>
+<li><p class="sd-card-text">In the first reaction, all chemical components are gases and is an example of a homogeneous equilibrium reaction, i.e., the states of matter are the same in the entire reaction. The second reaction contains more than one phase of matter and is an example of heterogeneous equilibrium.</p></li>
+<li><p class="sd-card-text">In the first reaction, <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> can be written since all components are gases, while in the second reaction, only <span class="math notranslate nohighlight">\(K_c\)</span> can be written as <span class="math notranslate nohighlight">\(P\)</span> is not applicable for aqueous/liquid concentrations.</p></li>
 </ol>
 </div>
 </details></section>
 <section id="k-and-delta-rxn-g">
 <h2><span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\Delta_{rxn}G\)</span><a class="headerlink" href="#k-and-delta-rxn-g" title="Link to this heading">#</a></h2>
-<p>As seen in Eq. <a class="reference internal" href="#equation-equi-exp">(24)</a>, <span class="math notranslate nohighlight">\(K\)</span> indicates a ratio of product concentrations over reactant concentrations at equilibrium. This magnitude of this ratio (<span class="math notranslate nohighlight">\(K\)</span>) can be interpreted mathematically to deduce relative concentrations of reactants or the products at equilibrium in a chemical reaction. When <span class="math notranslate nohighlight">\(K\)</span> is very large, we can expect the numerator (product concentrations) to be very large relative to the denominator (reactant concentrations), and vice versa. In other words, we can interpret a high <span class="math notranslate nohighlight">\(K\)</span> value to indicate the products in a reaction to be more favored and that the reaction proceeds spontaneously as written (to right). Likewise, a low <span class="math notranslate nohighlight">\(K\)</span> can be interpreted as meaning that the reaction is spontaneous to the left. As a rule of thumb, a <span class="math notranslate nohighlight">\(K\)</span> value of  <span class="math notranslate nohighlight">\(\ge 10^2\)</span> is considered high and a value of  <span class="math notranslate nohighlight">\(\le 10^{−2}\)</span> is considered low.</p>
+<p>As seen in Eq. <a class="reference internal" href="#equation-equi-exp">(24)</a>, <span class="math notranslate nohighlight">\(K\)</span> indicates a ratio of product concentrations over reactant concentrations at equilibrium. The magnitude of this ratio (<span class="math notranslate nohighlight">\(K\)</span>) can be interpreted mathematically to deduce relative concentrations of reactants or the products at equilibrium in a chemical reaction. When <span class="math notranslate nohighlight">\(K\)</span> is very large, we can expect the numerator (product concentrations) to be very large relative to the denominator (reactant concentrations) and vice versa. In other words, we can interpret a high <span class="math notranslate nohighlight">\(K\)</span> value to indicate the products in a reaction to being more favored and that the reaction proceeds spontaneously as written (to the right). Likewise, a low <span class="math notranslate nohighlight">\(K\)</span> can mean a spontaneous reaction to the left. As a rule of thumb, a <span class="math notranslate nohighlight">\(K\)</span> value of  <span class="math notranslate nohighlight">\(\ge 10^2\)</span> is considered high, and a value of  <span class="math notranslate nohighlight">\(\le 10^{−2}\)</span> is considered low.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="k-relative">
 <caption><span class="caption-number">Table 9 </span><span class="caption-text">Magnitude of <span class="math notranslate nohighlight">\(K\)</span> and significance in reactions.</span><a class="headerlink" href="#k-relative" title="Link to this table">#</a></caption>
 <thead>
@@ -588,7 +569,7 @@ CO2 (g) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 </section>
 <section id="influence-of-k-on-the-direction-of-reactions">
 <h2>Influence of <span class="math notranslate nohighlight">\(K\)</span> on the direction of reactions.<a class="headerlink" href="#influence-of-k-on-the-direction-of-reactions" title="Link to this heading">#</a></h2>
-<p>Since magnitude of <span class="math notranslate nohighlight">\(K\)</span> is related to spontaneity of the reaction, it follows that <span class="math notranslate nohighlight">\(K\)</span> is directly related to <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span>. When <span class="math notranslate nohighlight">\(K \gg 1\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is negative and when <span class="math notranslate nohighlight">\(K \ll 1\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is positive. Therefore, we can also use <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> to determine <span class="math notranslate nohighlight">\(K\)</span>. In the hypothetical reaction,</p>
+<p>Since the magnitude of <span class="math notranslate nohighlight">\(K\)</span> is related to the reaction’s spontaneity, <span class="math notranslate nohighlight">\(K\)</span> is directly related to <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span>. When <span class="math notranslate nohighlight">\(K \gg 1\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is negative and when <span class="math notranslate nohighlight">\(K \ll 1\)</span>, <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> is positive. Therefore, we can also use <span class="math notranslate nohighlight">\(\Delta_{rxn}G^\circ\)</span> to determine <span class="math notranslate nohighlight">\(K\)</span>. In the hypothetical reaction,</p>
 <div class="math notranslate nohighlight">
 \[\ce{aA + bB &lt;=&gt; cC + dD}
 \]</div>
@@ -607,22 +588,22 @@ CO2 (g) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 </section>
 <section id="chemical-activities">
 <h2>Chemical Activities<a class="headerlink" href="#chemical-activities" title="Link to this heading">#</a></h2>
-<p>In chemical thermodynamics, concentrations are dimensionless (unitless). These dimensionless or idealized concentrations are called activities. Activity of a chemical constituent is an important concept and is used to address the influence of physical and chemical conditions in the bulk solution. Chemical species in solution interact in many ways with nearby chemical species, including chemical bonding, van der Waals (dipole) interactions, to long-range electrostatic interactions. Sometimes, when concentrations of solutes are very high, they crowd each other. The intensity of all these interactions depends on the distance between the molecules and their concentrations. The activities inherently account for all these factors and are hence referred to as “thermodynamic concentrations.” Because, these values are dimensionless, <span class="math notranslate nohighlight">\(K_c\)</span> of any aqueous phase chemical reaction is dimensionless.</p>
+<p>In chemical thermodynamics, concentrations are dimensionless (unitless). These dimensionless or idealized concentrations are called activities. The activity of a chemical constituent is an important concept and is used to address the influence of physical and chemical conditions in the bulk solution. Chemical species in solution interact with nearby chemical species, including chemical bonding, van der Waals (dipole), and long-range electrostatic interactions. Sometimes, when concentrations of solutes are very high, they crowd each other. The intensity of all these interactions depends on the distance between the molecules and their concentrations. The activities inherently account for all these factors and are called “thermodynamic concentrations.” Because these values are dimensionless, <span class="math notranslate nohighlight">\(K_c\)</span> of any aqueous phase chemical reaction is dimensionless.</p>
 <p>Activities are derived from the same fundamental thermodynamic principles covered thus far. We use “<span class="math notranslate nohighlight">\(\{\, \}\)</span>” (curly brackets or braces) around chemical species names to indicate activity. An activity coefficient (<span class="math notranslate nohighlight">\(\gamma_i\)</span>) is used to convert concentrations to activities as follows:</p>
 <div class="math notranslate nohighlight" id="equation-activity">
 <span class="eqno">(31)<a class="headerlink" href="#equation-activity" title="Link to this equation">#</a></span>\[\{A\} = \gamma_A [A]\]</div>
-<p>where <span class="math notranslate nohighlight">\(\{A\}\)</span> is activity, <span class="math notranslate nohighlight">\([A]\)</span> is concentration, and <span class="math notranslate nohighlight">\(\gamma_A\)</span> is the activity coefficient. By convention, <span class="math notranslate nohighlight">\(\gamma_A = 1\)</span> for ideal solutes and dilute solutions (e.g., rain water and freshwater systems) and is <span class="math notranslate nohighlight">\(&lt; 1\)</span> all other cases. Also, by convention, <span class="math notranslate nohighlight">\(\{A\} = 1\)</span> for pure solids (e.g., mineral phases, precipitates, etc) and pure liquids (e.g., water).</p>
-<p>Activity coefficients are usually determined using ionic strength (<span class="math notranslate nohighlight">\(I\)</span>) of a solution. Ionic strength is a measure of combined concentration of all ions present in an aqueous solution and is calculated as follows:</p>
+<p>where <span class="math notranslate nohighlight">\(\{A\}\)</span> is activity, <span class="math notranslate nohighlight">\([A]\)</span> is concentration, and <span class="math notranslate nohighlight">\(\gamma_A\)</span> is the activity coefficient. By convention, <span class="math notranslate nohighlight">\(\gamma_A = 1\)</span> for ideal solutes and dilute solutions (e.g., rainwater and freshwater systems) and is <span class="math notranslate nohighlight">\(&lt; 1\)</span> in all other cases. Also, by convention, <span class="math notranslate nohighlight">\(\{A\} = 1\)</span> for pure solids (e.g., mineral phases, precipitates, etc.) and pure liquids (e.g., water).</p>
+<p>Activity coefficients are usually determined using a solution’s ionic strength (<span class="math notranslate nohighlight">\(I\)</span>). Ionic strength is a measure of the combined concentration of all ions present in an aqueous solution and is calculated as follows:</p>
 <div class="math notranslate nohighlight" id="equation-ionicstrength">
 <span class="eqno">(32)<a class="headerlink" href="#equation-ionicstrength" title="Link to this equation">#</a></span>\[I = \frac{1}{2} \sum_{i=1}^{n} c_i z_i^2\]</div>
-<p>where,  <span class="math notranslate nohighlight">\(c_i\)</span> is concentration of each ion in <span class="math notranslate nohighlight">\(\pu{mol L-1 }\)</span> and <span class="math notranslate nohighlight">\(z_i\)</span> is charge of each ion in  <span class="math notranslate nohighlight">\(\pu{eq mol-1}\)</span>. The activity coefficient, <span class="math notranslate nohighlight">\(\gamma_i\)</span> for each ion using one of the following equations:</p>
+<p>where,  <span class="math notranslate nohighlight">\(c_i\)</span> is concentration of each ion in <span class="math notranslate nohighlight">\(\pu{mol L-1 }\)</span> and <span class="math notranslate nohighlight">\(z_i\)</span> is charge of each ion in  <span class="math notranslate nohighlight">\(\pu{eq mol-1}\)</span>. The activity coefficient, <span class="math notranslate nohighlight">\(\gamma_i\)</span>, for each ion using one of the following equations:</p>
 <div class="math notranslate nohighlight" id="equation-activitycoeff">
 <span class="eqno">(33)<a class="headerlink" href="#equation-activitycoeff" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 -\log \gamma_i &amp;= A z_i^2 \sqrt{I}\, &amp;&amp; \text{for}\, I&lt;0.005 \\
 -\log \gamma_i &amp;= \dfrac{A z_i^2 \sqrt{I}}{1+Ba_i\sqrt{I}}\, &amp;&amp; \text{for}\, 0.005&lt;I&lt;0.1\\
 -\log \gamma_i &amp;= A z_i^2 \sqrt{I} \left( \dfrac{\sqrt{I}}{1+\sqrt{I}} -0.2I\right)\, &amp;&amp; \text{for}\, 0.1&lt;I&lt;0.5 
 \end{aligned}\end{split}\]</div>
-<p>where, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are called Debye-Hückel constants and vary with temperature. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(A=\pu{0.511}\)</span> and <span class="math notranslate nohighlight">\(B=\pu{0.329e8}\)</span>. <span class="math notranslate nohighlight">\(a_i\)</span> is ion size parameter and is provided in <a class="reference internal" href="#ionsize"><span class="std std-numref">Table 10</span></a>.</p>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are called Debye-Hückel constants and vary with temperature. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\(A=\pu{0.511}\)</span> and <span class="math notranslate nohighlight">\(B=\pu{0.329e8}\)</span>. <span class="math notranslate nohighlight">\(a_i\)</span> is ion size parameter and is provided in <a class="reference internal" href="#ionsize"><span class="std std-numref">Table 10</span></a>.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="pst-scrollable-table-container"><table class="table" id="ionsize">
@@ -652,15 +633,15 @@ CO2 (g) + H2O (l) &amp;&lt;=&gt; H2CO3 (aq)
 </section>
 <section id="units-of-k">
 <h2>Units of <span class="math notranslate nohighlight">\(K\)</span><a class="headerlink" href="#units-of-k" title="Link to this heading">#</a></h2>
-<p>As seen in the previous section, the <strong>activity</strong>, or the effective concentration, of ions is less than that indicated by the actual concentration. Ions become more and more widely separated as solutions become more dilute, and the residual interionic interactions become less significant. Thus, in extremely dilute solutions, the effective concentrations of the ions (their activities) are essentially equal to the actual concentrations. <em>In freshwater environmental systems, aqueous ions are present in very small concentrations and, therefore, activities and concentrations are similar</em>.</p>
+<p>As seen in the previous section, the <strong>activity</strong>, or the effective concentration, of ions is less than that indicated by the actual concentration. Ions become more widely separated as solutions become more dilute, and the residual interionic interactions become less significant. Thus, in extremely dilute solutions, the effective concentrations of the ions (their activities) are equal to the actual concentrations. <em>In freshwater environmental systems, aqueous ions are present in very small concentrations; therefore, activities and concentrations are similar</em>.</p>
 <p>Below is a summary of the main conventions of activities and effective concentrations:</p>
 <ul class="simple">
-<li><p>Activities are dimensionless (unitless) quantities and are in essence “adjusted” concentrations.</p></li>
-<li><p>For relatively dilute solutions, a substance’s activity and its molar concentration are roughly equal.</p></li>
+<li><p>Activities are dimensionless (unitless) quantities and are essentially “adjusted” concentrations.</p></li>
+<li><p>A substance’s activity and molar concentration are roughly equal for relatively dilute solutions.</p></li>
 <li><p>Activities for pure condensed phases (solids and liquids) are equal to 1.</p></li>
 </ul>
-<p>As a consequence of this last consideration, <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions do not contain terms for solids or liquids (being numerically equal to 1, these terms have no effect on the expression’s value)<em>.</em></p>
-<p>For <strong>homogeneous equilibrium</strong> (the reactants and products are present in a single solution), evaluation of reaction quotients (<span class="math notranslate nohighlight">\(Q_c\)</span>) and equilibrium constants (<span class="math notranslate nohighlight">\(K_c\)</span>), it is a common convention to omit units of concentrations (as they are equivalent to activities) of reactants and products, resulting in <strong><span class="math notranslate nohighlight">\(K\)</span> values are also dimensionless</strong>.</p>
+<p>Due to this last consideration, <span class="math notranslate nohighlight">\(Q_c\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions do not contain terms for solids or liquids (being numerically equal to 1, these terms do not affect the expression’s value).</p>
+<p>For <strong>homogeneous equilibrium</strong> (the reactants and products are present in a single solution), evaluation of reaction quotients (<span class="math notranslate nohighlight">\(Q_c\)</span>), and equilibrium constants (<span class="math notranslate nohighlight">\(K_c\)</span>), it is a common convention to omit units of concentrations (as they are equivalent to activities) of reactants and products, resulting in <strong><span class="math notranslate nohighlight">\(K\)</span> values are also dimensionless</strong>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Homogeneous reactions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -676,11 +657,11 @@ N2 (g) + 3 H2 (g) &amp;⇌ 2 NH3 (g) &amp;&amp; $K_c$ = \frac{[NH3 (g)]^2}{[N2 (
 \end{align*}
 \end{split}\]</div>
 <ol class="arabic simple">
-<li><p class="sd-card-text">In the first two reactions all chemical components are in aqueous phase and/or also include <span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span>. A <span class="math notranslate nohighlight">\(K_c\)</span> expression can be written for these reactions and the concentration <span class="math notranslate nohighlight">\(H2O (l)\)</span> does not appear in the <span class="math notranslate nohighlight">\(K_c\)</span> expression by convention.</p></li>
-<li><p class="sd-card-text">In the third reaction, all components are in gas phase and <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
+<li><p class="sd-card-text">In the first two reactions, all chemical components are in the aqueous phase and/or include <span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span>. A <span class="math notranslate nohighlight">\(K_c\)</span> expression can be written for these reactions, and the concentration <span class="math notranslate nohighlight">\(H2O (l)\)</span> does not appear by convention in the <span class="math notranslate nohighlight">\(K_c\)</span> expression.</p></li>
+<li><p class="sd-card-text">In the third reaction, all components are in the gas phase, and <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
 </ol>
 </div>
-</details><p>A <strong>heterogeneous equilibrium</strong> is a system in which reactants and products are found in two or more phases. The phases may be any combination of solid, liquid, or gas phases, and solutions. When dealing with these equilibria, remember that solids and pure liquids do not appear in equilibrium constant expressions (the activities of pure solids, pure liquids, and solvents are 1).  If a chemical reaction involves heterogeneous phases of reactants and products (usually a mixture of gases and liquids), it is not uncommon to see <span class="math notranslate nohighlight">\(K\)</span> values with units.</p>
+</details><p>A <strong>heterogeneous equilibrium</strong> is a system in which reactants and products are found in two or more phases. The phases may combine solid, liquid, or gas phases and solutions. When dealing with these equilibria, remember that solids and pure liquids do not appear in equilibrium constant expressions (the activities of pure solids, pure liquids, and solvents are 1).  If a chemical reaction involves heterogeneous phases of reactants and products (usually a mixture of gases and liquids), it is not uncommon to see <span class="math notranslate nohighlight">\(K\)</span> values with units.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Heterogeneous reactions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -696,9 +677,9 @@ H2O (l) &amp;⇌ H2O (g) &amp;&amp; $K_c$ = [H2O (g)]
 \end{align*}
 \end{split}\]</div>
 <ol class="arabic simple">
-<li><p class="sd-card-text">In the first reaction, a solid is dissolving in <span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span> to form ions.</p></li>
-<li><p class="sd-card-text">In the second reaction, a solid is reacting with a gas to form another solid. <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
-<li><p class="sd-card-text">In the third reaction, a phase change is occuring. <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
+<li><p class="sd-card-text">A  solid dissolves in <span class="math notranslate nohighlight">\(\ce{H2O (l)}\)</span> to form ions in the first reaction.</p></li>
+<li><p class="sd-card-text">In the second reaction, a solid reacts with a gas to form another solid. <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
+<li><p class="sd-card-text">In the third reaction, a phase change is occurring. <span class="math notranslate nohighlight">\(K_p\)</span> and <span class="math notranslate nohighlight">\(K_c\)</span> expressions can be written.</p></li>
 </ol>
 <p class="sd-card-text">When writing out the <span class="math notranslate nohighlight">\(K_c\)</span> expressions in such reactions, the activities of solids, liquids, and solvents are 1.</p>
 </div>
@@ -760,7 +741,8 @@ H2O (l) &amp;⇌ H2O (g) &amp;&amp; $K_c$ = [H2O (g)]
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -827,8 +809,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

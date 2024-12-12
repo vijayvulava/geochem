@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="7.3 Practice Problems" href="73Problems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="_static/CofC-GEG.png" class="logo__image only-light" alt="Introduction to Geochemistry - Home"/>
-    <script>document.write(`<img src="_static/CofC-GEG.png" class="logo__image only-dark" alt="Introduction to Geochemistry - Home"/>`);</script>
+    <img src="_static/CofC-GEG.png" class="logo__image only-dark pst-js-only" alt="Introduction to Geochemistry - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -358,24 +347,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -422,7 +403,7 @@ document.write(`
 <h1>8 Environmental Organic Chemistry<a class="headerlink" href="#environmental-organic-chemistry" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>Organic chemicals are intimately tied to all aspects of modern societies from consumer goods to pharmaceutical chemicals to household products. More than 9 million carbon-based natural and anthropogenic compounds have been identified. It is no surprise, then, that organic contaminants are ubiquitous in our environments. What happens to an organic compound when it is introduced into the natural environment? The answer depends on the physical and chemical properties of the compound.</p>
+<p>Organic chemicals are crucial in modern society, influencing everything from consumer goods to pharmaceuticals and household products. Over 9 million carbon-based natural and man-made compounds have been identified. Given this vast number, it is not surprising that organic contaminants are widespread in our environment. When an organic compound is introduced into the natural environment, its fate depends on its physical and chemical properties.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/4WR0_gEEZ9I" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -431,17 +412,17 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <iframe src="https://www.youtube.com/embed/A4cPmHGegKI" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>In this chapter, we will familiarize with some basic principles of organic chemistry and how organic chemicals behave in the environment.</p>
+<p>In this chapter, we will become familiar with the basic principles of organic chemistry and how organic chemicals behave in the environment.</p>
 <section id="fossil-fuels">
 <h3>Fossil Fuels<a class="headerlink" href="#fossil-fuels" title="Link to this heading">#</a></h3>
-<p>Fossil fuels are made up of hydrocarbons, which are compounds of hydrogen and carbon atoms. The carbon found in fossil fuels is primarily in the form of hydrocarbons such as methane, ethane, propane, butane, and octane. These hydrocarbons are formed from the remains of dead plants and animals that have been buried and subjected to heat and pressure over millions of years.</p>
-<p>Natural gas is primarily composed of methane (<span class="math notranslate nohighlight">\(\ce{CH4}\)</span>), a simple hydrocarbon, but can also contain other hydrocarbons such as ethane (<span class="math notranslate nohighlight">\(\ce{C2H6}\)</span>), propane (<span class="math notranslate nohighlight">\(\ce{C3H8}\)</span>), and butane (<span class="math notranslate nohighlight">\(\ce{C4H10}\)</span>).</p>
-<p>Coal is primarily composed of carbon, but it also contains small amounts of other elements such as hydrogen, sulfur, oxygen, and nitrogen. Coal is formed from the remains of plants that lived millions of years ago. The carbon in coal is derived from the carbon that was present in these plants. The nature of this carbon can vary depending on factors such as the type of plant, the environment in which it grew, and how long ago it lived.</p>
+<p>Fossil fuels are composed of hydrocarbons, which are compounds made up of hydrogen and carbon atoms. The carbon in fossil fuels primarily takes the form of hydrocarbons such as methane, ethane, propane, butane, and octane. These hydrocarbons are created from the remains of dead plants and animals that have been buried and subjected to heat and pressure over millions of years.</p>
+<p>Natural gas is mainly composed of methane (<span class="math notranslate nohighlight">\(\ce{CH4}\)</span>), a simple hydrocarbon, but it can also include other hydrocarbons such as ethane (<span class="math notranslate nohighlight">\(\ce{C2H6}\)</span>), propane (<span class="math notranslate nohighlight">\(\ce{3H8}\)</span>), and butane (<span class="math notranslate nohighlight">\(\ce{C4H10}\)</span>).</p>
+<p>Coal primarily consists of carbon but contains small amounts of other elements, such as hydrogen, sulfur, oxygen, and nitrogen. Coal is formed from the remains of plants that existed millions of years ago, and the carbon in coal originates from the carbon present in these plants. The characteristics of this carbon can vary depending on factors such as the type of plant, the environment in which it grew, and the period in which it existed.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/KkaplHQp2n0" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
-<p>The exploitation of fossil fuels have left an indelible impact on many of Earth’s environments.</p>
+<p>The exploitation of fossil fuels has indelibly impacted many of Earth’s environments.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/ikneKQAeUp0" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -449,10 +430,10 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="natural-organic-matter">
 <h3>Natural Organic Matter<a class="headerlink" href="#natural-organic-matter" title="Link to this heading">#</a></h3>
-<p>Carbon is the main element present in natural organic matter (NOM) and is complex and not fully understood. The NOM contains complex molecules of  carbon bonded with other elements, such as hydrogen, oxygen, and nitrogen.</p>
-<p>Organic matter is a major component of soil, and it plays an important role in soil fertility. It helps to hold water and nutrients in the soil, and it also provides a habitat for soil organisms. Organic matter is also a major component of living things, and it is essential for life. It is used to build cell structures, and it is also involved in many metabolic processes. Carbon in soil organic matter is also a very important reservoir of carbon in the global carbon cycle.</p>
-<p>The carbon in organic matter is not stable, and it can be decomposed (by oxidation) to <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> with the help of microorganisms. Decomposition is important because it releases nutrients back into the soil, which can be used by plants.</p>
-<p>The carbon in organic matter is a valuable resource, and it is important to understand its nature and how it is cycled through the environment. This knowledge can help us to manage our resources wisely and to protect the environment.</p>
+<p>Carbon is the primary element in natural organic matter (NOM), which remains complex and poorly understood. NOM consists of intricate molecules formed from carbon bonded with other elements such as hydrogen, oxygen, and nitrogen.</p>
+<p>Organic matter is a crucial component of soil and is essential to soil fertility. It helps retain water and nutrients in the soil and provides a habitat for soil organisms. Additionally, organic matter is a fundamental part of living organisms and is vital for life. It is used to construct cell structures and plays a role in many metabolic processes. The carbon in soil organic matter serves as an essential carbon reservoir within the global carbon cycle.</p>
+<p>The carbon in organic matter is unstable and can be decomposed by microorganisms through oxidation, releasing <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>. This decomposition process is vital as it recycles nutrients into the soil, making them available for plants.</p>
+<p>Understanding the properties and cycling of carbon in organic matter is crucial, as this knowledge can assist us in managing our resources wisely and protecting the environment.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/ECHYChDUfhQ" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -460,10 +441,10 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </section>
 <section id="organic-pollutants-in-the-environment">
 <h3>Organic Pollutants in the Environment<a class="headerlink" href="#organic-pollutants-in-the-environment" title="Link to this heading">#</a></h3>
-<p>Anthropogenic organic pollutants are chemicals can come from a variety of sources, including industrial emissions, agricultural runoff, and consumer products. The pollutants can have a variety of effects on the environment, including polluting water and soil, harming wildlife, and disrupting human health.</p>
-<p>Organic pollutants are commonly released into the environment through industrial emissions (volatile organic chemicals, untreated waste discharges, etc.), agricultural runoff (herbicides, pesticides, etc.), consumer products (nonstick cookware, household cleaners, personal care products, etc.), and human and animal waste (caffeine, medicines, etc.)</p>
-<p>Once these pollutants are in the environment, they can have a variety of effects in water and soil. For example, some pollutants can cause fish to die or make them more susceptible to disease. Some pollutant exposure can also cause health problems including cancer.</p>
-<p>It is important to understand the chemical nature, sources, and effects of organic pollutants so that we can take steps to protect the environment and human health.</p>
+<p>Anthropogenic organic pollutants are chemicals from various sources, including industrial emissions, agricultural runoff, and consumer products. These pollutants can adversely affect the environment by contaminating water and soil, harming wildlife, and disrupting human health.</p>
+<p>Organic pollutants are commonly released into the environment through several avenues: industrial emissions (such as volatile organic compounds and untreated waste discharges), agricultural runoff (including herbicides and pesticides), consumer products (like nonstick cookware, household cleaners, and personal care items), and human and animal waste (containing substances like caffeine and medications).</p>
+<p>Once these pollutants enter the environment, they can degrade water and soil quality. For instance, some pollutants can cause fish mortality or increase their disease susceptibility. Additionally, exposure to certain pollutants may lead to serious health issues, including cancer.</p>
+<p>Understanding organic pollutants’ chemical nature, sources, and effects is crucial for developing strategies to protect the environment and human health.</p>
 <div class="container">
 <iframe src="https://www.youtube.com/embed/sZHuZkUUYM4" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -477,8 +458,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p>The main goals for this chapter are to:</p>
 <ol class="arabic simple">
 <li><p>learn the basics of organic chemical nomenclature,</p></li>
-<li><p>explain how organic chemicals behave in various geological environments, and</p></li>
-<li><p>apply basic thermodynamic principles to determine partitioning of organic chemicals in geological environments.</p></li>
+<li><p>explain how organic chemicals behave in various geological environments and</p></li>
+<li><p>apply basic thermodynamic principles to determine the partitioning of organic chemicals in geological environments.</p></li>
 </ol>
 </div>
 </section>
@@ -545,7 +526,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -613,8 +595,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
