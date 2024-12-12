@@ -6,12 +6,12 @@ Atoms (from the Greek word *atomos*, which means "uncuttable") are tiny building
 ```{table} Mass and charge of subatomic particles. Note: formal unit of charge is coulomb ($\pu{C}$).
 :name: subatomic
   
-  |  Particle |  Mass        |  Mass       | Charge        | Charge   |
-  | ---------- | -------------: | ------------: | ---------------: | ----------: |
-  |          | $\pu{g}$           | $\pu{amu}$        | Absolute, $\pu{C}$ | Relative |
-  | Electron | $\pu{9.109e-28}$ | $\pu{5.486e-4}$ | $\pu{-1.6022e-19}$ |       $-1$ |
-  | Proton   | $\pu{1.673e-24}$ | $1.007$      | $\pu{1.6022e-19}$  |       $+1$ |
-  | Neutron  | $\pu{1.675e-24}$ | $1.009$      | $0$             |        $0$ |
+|  Particle |  Mass        |  Mass       | Charge        | Charge   |
+| ---------- | -------------: | ------------: | ---------------: | ----------: |
+|          | $\pu{g}$           | $\pu{amu}$        | Absolute, $\pu{C}$ | Relative |
+| Electron | $\pu{9.109e-28}$ | $\pu{5.486e-4}$ | $\pu{-1.6022e-19}$ |       $-1$ |
+| Proton   | $\pu{1.673e-24}$ | $1.007$      | $\pu{1.6022e-19}$  |       $+1$ |
+| Neutron  | $\pu{1.675e-24}$ | $1.009$      | $0$             |        $0$ |
   
 ```
   
@@ -72,7 +72,7 @@ Atomic mass is the mass of an atom in *amu*. When you look up the atomic mass of
   
 Naturally occurring $\ce{C}$ has two major stable isotopes - $\ce{^{12} C}$ ($99\%$ of all stable $\ce{C}$) and $\ce{^{13} C}$ ($1\%$  of all stable $\ce{C}$). 
   
-The atomic mass of $\ce{^{12} C}$ and $\ce{^{13} C}$ is $\pu{12 amu}$ and $\pu{13 amu}$, respectively. Using Eq. {eq}`averagemass` we can calculate the overall atomic mass of naturally occurring $\ce{C}$:  
+>The atomic mass of $\ce{^{12} C}$ and $\ce{^{13} C}$ is $\pu{12 amu}$ and $\pu{13 amu}$, respectively. Using Eq. {eq}`averagemass`, we can calculate the overall atomic mass of naturally occurring $\ce{C}$:  
   
 >$$
 = \frac{99}{100} \times \pu{12 amu} + \frac{1}{100}\times \pu{13 amu} = \pu{12.01 amu}
@@ -103,8 +103,9 @@ We know the number of atoms present in a mole of any substance, but *how much do
 The molar mass of a substance is the mass in *grams* of one mole of a substance. Atomic mass has the units of *atomic mass units* or *amu*.
   
 ```{dropdown} Example: Calculating molar masses:
-Carbon-12 or $\ce{^{12} C}$ (most abundant stable isotope of $\ce{C}$) is used the standard example -- mass of one mole of $\ce{^{12} C}$ is exactly $\pu{12 g}$, i.e., molar mass of $\ce{^{12} C}$ is equal to its atomic mass in grams.  The overall molar mass of naturally occurring $\ce{C}$ 
-  
+Carbon-12 or $\ce{^{12} C}$ (most abundant stable isotope of $\ce{C}$) is used the standard example -- mass of one mole of $\ce{^{12} C}$ is exactly $\pu{12 g}$, i.e., molar mass of $\ce{^{12} C}$ is equal to its atomic mass in grams.  
+
+>The overall molar mass of naturally occurring $\ce{C}$ 
 >$$
 = \frac{99}{100} \times \pu{12 g} + \frac{1}{100}\times \pu{13 g} = \pu{12.01 g}
 $$
@@ -113,30 +114,27 @@ $$
 So, how do we convert from moles to molar masses to the number of atoms?  Set up conversion factors such that units are explicitly shown and are consistent.
   
 ```{dropdown} Example: Conversion of moles to grams
-Ca is the most abundant metal in the human body. A typical human body contains roughly $\pu{30 moles}$ of $\ce{Ca}$. 
-  
-$$	
+Ca is the most abundant metal in the human body. A typical human body contains roughly $\pu{30 moles}$ of $\ce{Ca}$. How much is this amount in kg?
+
+>First, convert moles to the number of atoms as follows:  
+>$$	
 30\ \cancel{\text{moles Ca}}\times \dfrac{\pu{6.022e23 atoms Ca}}{1\ \cancel{\text{mole Ca}}} = \pu{1.807e25 atoms Ca} 
 $$	
-and
-  
-$$	
+>Then, convert the number of atoms to kg of Ca as follows:
+>$$	
 30\ \cancel{\text{moles Ca}}\times \frac{\pu{40.078 g Ca}}{1\ \cancel{\text{mole Ca}}} = \pu{1202.3 g Ca}
 $$
-  
-Therefore, $\pu{1202.3 g Ca}$ exists in an average human body.
+>Therefore, $\pu{1202.3 g}$ of Ca exists in an average human body.
 ```
   
 ```{dropdown} Example: Conversion of grams to atoms
 Copper is commonly used to fabricate electrical wire. How many copper atoms are in $\pu{5.00 g}$ of copper wire?
   
-**Answer:**
-  
-The number of $\ce{Cu}$ atoms in the wire may be conveniently derived from its mass by a two-step computation: first calculating the molar amount of $\ce{Cu}$, and then using Avogadro’s number ($N_A$) to convert this molar amount to the number of $\ce{Cu}$ atoms:
+>The number of $\ce{Cu}$ atoms in the wire may be conveniently derived from its mass by a two-step computation: first calculating the molar amount of $\ce{Cu}$, and then using Avogadro’s number ($N_A$) to convert this molar amount to the number of $\ce{Cu}$ atoms:
   
 ![](https://openstax.org/apps/archive/20221109.213337/resources/4e96501f65cccee7575915387b18ab45e3340551)
   
-$$
+>$$
 \pu{5.00 g}\ \ce{Cu} \dfrac{\text{mol Cu}}{\pu{63.55 g}} \dfrac{\pu{6.022e23 atoms}}{\text{mol}} = \pu{4.74e22 atoms Cu}
 $$
   
@@ -229,10 +227,10 @@ where $n$ is the number of atoms of the element in the compound, a list or table
 Atomic masses of $\ce{H}$ and $\ce{O}$ are $\pu{1.008 amu}$ and $\pu{16.00 amu}$ respectively, the molecular mass of $\ce{H2O}$ is $\pu{18.02 amu}$. Percent composition is as follows:
   
 $$
-  \begin{align}
-  \ce{H} &= \dfrac{2\times \pu{1.008 amu}\, \ce{H}}{\pu{18.02 amu}\, \ce{H2O}} \times 100 = \pu{11.19 \%} \\
-  \ce{O} &= \dfrac{1\times \pu{16.00 amu}\, \ce{O}}{\pu{18.02 amu}\, \ce{H2O}} \times 100 = \pu{88.81 \%}
-  \end{align}
+\begin{align}
+\ce{H} &= \dfrac{2\times \pu{1.008 amu}\, \ce{H}}{\pu{18.02 amu}\, \ce{H2O}} \times 100 = \pu{11.19 \%} \\
+\ce{O} &= \dfrac{1\times \pu{16.00 amu}\, \ce{O}}{\pu{18.02 amu}\, \ce{H2O}} \times 100 = \pu{88.81 \%}
+\end{align}
 $$
   
 The sum of the percentages adds up to $\pu{100 \%}$.
@@ -255,18 +253,15 @@ It is best to set this up as a table.  See the example below.
 ```{dropdown} Example: Determining chemical formulas
 During a chemical reaction, a precipitate forms.  The percent mass was determined experimentally as follows: $\ce{Ca} = \pu{39.74 \%}$, $\ce{P} = \pu{18.42 \%}$, $\ce{O} = \pu{38.07 \%}$, and $\ce{F} = \pu{3.77 \%}$.  Determine the chemical formula for this compound. 	
   
-**Answer:**
-  
-First, let's set this information up as a table and calculate the moles of each element.
-  
-  | Element | Wt., % |  Wt./100 g |  At. Wt. | Moles | Rel. Moles |
-  | --- | ---: |  ---: |  ---: |  ---: |  ---: | 
-  | $\ce{Ca}$ | $39.74$ | $39.74$ | $40.08$ | $0.992$ | $5$ | 
-  | $\ce{P}$ | $18.42$ | $18.42$ | $30.97$ | $0.595$ | $3$ |
-  | $\ce{O}$ | $38.07$ | $38.07$ | $16.00$ | $2.379$ | $12$ | 
-  | $\ce{F}$ | $3.77$ | $3.77$ | $19.00$ | $0.198$ | $1$ |
-  
-Based on this information, the formula of the compound is $\ce{Ca5P3O12F}$. If we re-arranged this formula, we get $\ce{Ca5(PO4)3F}$ (fluorapatite).
+>First, let's set this information up as a table and calculate the moles of each element. 
+| Element | Wt., % |  Wt./100 g |  At. Wt. | Moles | Rel. Moles |
+| --- | ---: |  ---: |  ---: |  ---: |  ---: | 
+| $\ce{Ca}$ | $39.74$ | $39.74$ | $40.08$ | $0.992$ | $5$ | 
+| $\ce{P}$ | $18.42$ | $18.42$ | $30.97$ | $0.595$ | $3$ |
+| $\ce{O}$ | $38.07$ | $38.07$ | $16.00$ | $2.379$ | $12$ | 
+| $\ce{F}$ | $3.77$ | $3.77$ | $19.00$ | $0.198$ | $1$ |
+>  
+>Based on this information, the formula of the compound is $\ce{Ca5P3O12F}$. If we re-arranged this formula, we get $\ce{Ca5(PO4)3F}$ (fluorapatite).
 ```
   
 In the above example, since the percent mass was determined experimentally, the resulting formula is considered an empirical formula or the simplest whole-number ratio of atoms that make up a compound.  If we know or determine the molecular weight of this compound by other means, we could compare the formula and molecular weights and then determine the exact molecular formula.
@@ -275,10 +270,7 @@ In the above example, since the percent mass was determined experimentally, the 
   
 If the empirical formula of a compound is $\ce{CH3}$ and its molecular weight is $\pu{30 g}$, the molecular formula can be determined as follows. 
   
-**Answer:**
-  
-First, calculate the formula weight of 
-  
+>First, calculate the formula weight of 
 $$
   \begin{align}
   \ce{
@@ -287,8 +279,7 @@ $$
   }
   \end{align}
 $$ 
-  
-Since the molecular weight is twice the formula weight, the molecular formula is $\ce{C2H6}$.
+>Since the molecular weight is twice the formula weight, the molecular formula is $\ce{C2H6}$.
   
 ```
 

@@ -14,7 +14,7 @@ Now reverse signs on both sides of the above equation,
 -T \Delta _{universe} S^\circ  = \Delta _{sys} H^\circ -T \Delta _{sys} S^\circ    <0
 ```
 
-According to Eq. {eq}`gibbs-deriv`, processes that occur at constant $P$ and $T$ are spontaneous if $\Delta _{sys} H^\circ$ and $\Delta _{sys} S^\circ$ are such that $\Delta _{sys} H^\circ   -T \Delta _{sys} S^\circ    <0$. We introduce a new thermodynamic function called Gibbs free energy ($G$) or free energy to simplify this expression. Gibbs free energy, $G$, is the energy available for work.
+According to Eq. {eq}`gibbs-deriv`, processes that occur at constant $P$ and $T$ are spontaneous if $\Delta _{sys} H^\circ$ and $\Delta _{sys} S^\circ$ are such that $\Delta _{sys} H^\circ -T \Delta _{sys} S^\circ <0$. To simplify this expression, we introduce a new thermodynamic function called Gibbs free energy ($G$) or free energy. Gibbs free energy, $G$, is the energy available for work.
 
 ```{math}
 :label: gibbs
@@ -36,7 +36,7 @@ Free energy is a state function and, as the name implies, has the same units as 
 
 ## Standard Gibbs free energy, $\Delta _{f} G^\circ$
 
-The standard free energy of the reaction is the free-energy change for a reaction when it occurs under standard-state conditions - i.e., when reactants in their standard states are converted to products in their standard states.
+The standard free energy of the reaction is the free-energy change for a reaction when it occurs under standard-state conditions - i.e. when reactants in their standard states are converted to products in their standard states.
 
 ````{margin}
 The CRC Handbook of Physics and Chemistry is a good reference for obtaining $\Delta_f G^\circ$ for most chemicals. The online version is available at [Standard Thermodynamic Properties of Chemical Substances (chemnetbase.com)](https://hbcp.chemnetbase.com/faces/documents/05_02/05_02_0001.xhtml)
@@ -129,7 +129,7 @@ Equations {eq}`gibbs`  and {eq}`gibbs_t` can be used to predict the sign of $\D
 
 In earlier example, we saw how $\Delta _{rxn} G^\circ$ was calculated at $\pu{25 ^\circ C}$ using Eq. {eq}`gibbs-rxn` - however, $\Delta _{rxn} G^\circ$ is a function of $T$. How do we calculate ($\Delta _{rxn} G^\circ$ at other $T$? In such cases, $\Delta _{rxn} S^\circ$ and $\Delta _{rxn} H^\circ$ are determined separately and applied directly in Eq. {eq}`gibbs_t` at the specified $T$.
 
-Using Eq. {eq}`gibbs_t`, the exact $T$ where a system reaches equilibrium could be calculated. The system will no longer be in equilibrium at any $T$ above or below this value. The exact definition of equilibrium will be explored in the next chapter.
+Using Eq. {eq}`gibbs_t`, the exact $T$ where a system reaches equilibrium could be calculated. The system will no longer be in equilibrium at a $T$ above or below this value. The exact definition of equilibrium will be explored in the next chapter.
 
 ```{dropdown} Example: Calculating $\Delta _{rxn} G^\circ$ at a specified $T$ 
 
@@ -142,7 +142,7 @@ $$
 
 Thermodynamic data for these substances at $\pu{25 ^\circ C}$ are as follows:
 
-| Chemical | $\Delta_f H^\circ$, \, $\pu{kJ mol-1}$ | $S^\circ$, \, $\pu{J K-1 mol−1}$ |
+| Chemical | $\Delta_f H^\circ$, $\pu{kJ mol-1}$ | $S^\circ$, $\pu{J K-1 mol−1}$ |
 | --- | ---: | ---: |
 | $\ce{CaCO3(s)}$ | $-1206.9$ | $92.9$ |
 | $\ce{CaO(s)}$ | $-635.6$ | $39.8$ |

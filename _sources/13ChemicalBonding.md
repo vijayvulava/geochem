@@ -140,6 +140,7 @@ Recall that atoms of elements with low *IE*, mostly metals, form cations. Also, 
 ```{dropdown} Example: Formation of an ionic bond
 
 Let's explore the formation of $\ce{NaCl}$ salt.  
+
 (1) Consider the formation of $\ce{Na+}$.  Since $\ce{Na}$ is a group 1 metal and has one valence electron (and low ionization energy or *IE*), it can easily give away that valence electron ($e^-$) as shown below and forms a cation:
 
 ![](assets/na-e-rxn.png)
@@ -182,7 +183,7 @@ In the reactions below, atoms of the same element share valence electrons to for
 
 ![](assets/h-o-n-bonds.png)
 
-In each case, a different type of bond is shown.  Note that all atoms now have 2 or 8 electrons in their valence shell.
+>In each case, a different type of bond is shown.  Note that all atoms now have 2 or 8 electrons in their valence shell.
 ```
 
 In each case, a different type of bond is shown.  Note that all atoms now have 2 or 8 electrons in their valence shell.
@@ -191,7 +192,7 @@ The end product of a covalent bond is the formation of a *molecule* ($\ce{H2}$, 
 
 ```{dropdown}  Example: Bond order
 
-As seen from previous example, the bond order of $\ce{H2}$, $\ce{O2}$, and $\ce{N2}$ is one, two, and three, respectively.
+>As seen from previous example, the bond order of $\ce{H2}$, $\ce{O2}$, and $\ce{N2}$ is one, two, and three, respectively.
 ```
 
 The ideal covalent and ionic bonds represent the extremes of a spectrum: most bonds are neither completely covalent nor completely ionic. In these intermediate cases, the bonding electrons will spend most, but not all, of their time, associated with one atom or another. Electronegativity helps describe the degree of ionicity of a bond: a bond is considered ionic when the difference in the electronegativity of the two atoms involved in the chemical bond is greater than two ({numref}`en-diff`). In {numref}`en-trend`, we see that metals (generally those elements on the left-hand side of the periodic table) tend to have low electronegativities. In contrast, the non-metals (those elements on the right) have high electronegativities. Thus, bonds between metals and nonmetals (e.g., $\ce{NaCl}$ will be ionic, while those between non-metals (e.g., $\ce{CO2}$) will be covalent, as will bonds between two like atoms (e.g., $\ce{O2}$). 

@@ -156,7 +156,7 @@ The following general rules for determining the electron configuration of an ele
 3. Electrons will not pair in degenerate (equal energy) orbitals if an empty orbital is available.
 4. The electrons will first be added singly to each available orbital for each set of orbitals ($s$, $p$, $d$, $f$).  After all the orbitals in a set have a single set of a single electron, subsequent electrons can enter these orbitals if they have the opposite spin.
 5. Atoms attain maximum stability when the available orbitals are completely-filled, half-filled, or empty.
-6. Orbitals will fill in the order indicated shown in Fig. {numref}`orbital-order`, which provides a simple way for you to remember the proper order.	
+6. Orbitals will fill in the order indicated shown in {numref}`orbital-order`, which provides a simple way for you to remember the proper order.	
  
 ```
 
@@ -270,7 +270,7 @@ Electron affinities of main group elements in the periodic table. Image source: 
 
 ### Electronegativity
 
-Electronegativity quantifies the tendency of an element to attract shared electrons (in a covalent bond) to itself. It is a parameter used to characterize the behavior of the elements and is inversely correlated with atomic radii within each periodic table group. It determines how the electron density in a molecule or a polyatomic ion is distributed. An element with a high electronegativity tends to attract electron density more than an element with low electronegativity. Electronegativity is a relative concept and can be measured only relative to the electronegativity of other elements.  {numref}`en-trend` shows trends in the periodic table. We can qualitatively predict an atom's electronegativity based on its *EA* and its *IE*$_1$. In general, electronegativity increases from left to right in the periodic table. Electronegativity values range between $0.7-4.0$, and elements with higher numbers indicate a stronger ability to attract electrons ({numref}`en-trend`).
+Electronegativity quantifies the tendency of an element to attract shared electrons (in a covalent bond) to itself. It is a parameter used to characterize the behavior of the elements and is inversely correlated with atomic radii within each periodic table group. It determines how the electron density in a molecule or a polyatomic ion is distributed. An element with a high electronegativity tends to attract electron density more than an element with low electronegativity. Electronegativity is a relative concept and can be measured only relative to the electronegativity of other elements.  {numref}`en-trend` shows trends in the periodic table. We can qualitatively predict an atom's electronegativity based on its *EA* and *IE*$_1$. In general, electronegativity increases from left to right in the periodic table. Electronegativity values range between $0.7-4.0$, and elements with higher numbers indicate a stronger ability to attract electrons ({numref}`en-trend`).
 
 ```{figure} https://openstax.org/apps/archive/20221109.213337/resources/a85730daff7d621641b83ce53ccb757ee7eb20e5
 ---
