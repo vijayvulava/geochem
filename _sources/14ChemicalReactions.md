@@ -129,25 +129,21 @@ $$
 >$$
 	\ce{Al2Si2O5(OH)4 + H+ -> Al^3+ + H4SiO4 + H2O}
 $$
-
 >2.  Balance the main elements ($\ce{Al}$ and $\ce{Si}$) first
 
 >$$
 	\ce{Al2Si2O5(OH)4 + H+ -> 2 Al^3+ + 2 H4SiO4 + H2O}
 $$
-
 >3. Balance $\ce{O}$ next and adjust $\ce{H2O}$ as needed
 
 >$$
 	\ce{Al2Si2O5(OH)4 + H+ -> 2 Al^3+ + 2 H4SiO4 + H2O}
 $$
-
 >4. Balance single elements and ions ($\ce{H+}$) last
 
 >$$
 	\ce{Al2Si2O5(OH)4 + 6 H+ -> 2 Al^3+ + 2 H4SiO4 + H2O}
 $$
-
 >5.  Check to see if there is mass balance for all elements.
 ```
 
