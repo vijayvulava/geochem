@@ -107,10 +107,9 @@ $$
 
 > Multiply the above equation by 2 to get the whole number of coefficients.
 >
-$$
+>$$
 \ce{2 C4H10(g) + 13 O2(g) -> 8 CO2(g) + 10 H2O(l)	}
 $$
-
 >The equation is still balanced!
 ```
 
