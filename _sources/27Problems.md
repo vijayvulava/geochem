@@ -19,20 +19,17 @@ $$\begin{align*}
 11. If $\Delta_{rxn}H^\circ = \pu{2803 kJ mol-1}$ for photosynthesis reaction shown below: 
 
 $$\ce{6 H2O(l) + 6 CO2(g) ->[Sunlight] C6H12O6(s) + 6 O2(g)}$$
-
->Calculate the solar energy required to produce $\pu{75 g}$ of $\ce{C6H12O6}$.
+Calculate the solar energy required to produce $\pu{75 g}$ of $\ce{C6H12O6}$.
 
 12. If $\Delta_{rxn}H^\circ = \pu{-72.4 kJ mol-1}$ for the reaction 
 
 $$\ce{H2(g) + Br2(l) -> 2 HBr(g)}$$
-
-> Calculate the amount of heat released when $\pu{1 kg}$ of $\ce{Br2}$ is consumed in this reaction.
+Calculate the heat released when $\pu{1 kg}$ of $\ce{Br2}$ is consumed in this reaction.
 
 13. If $\Delta_{rxn}H^\circ = \pu{333.8 kJ mol-1}$ for the thermochemical equation, 
 
 $$\ce{2 Cu2O -> 4 Cu + O2}$$
-
-> Calculate the mass of copper produced when $\pu{1.47e4 kJ}$ is consumed in this reaction.
+Calculate the mass of copper produced when $\pu{1.47e4 kJ}$ is consumed in this reaction.
 
 14. Determine the enthalpy change for each reaction using the reaction data provided in the table below each reaction:
 

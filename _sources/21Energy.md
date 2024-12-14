@@ -2,10 +2,10 @@
 
 ## What is energy?
 
-Energy is the capacity to do work. It can be in many forms: thermal energy (associated with the random motion of atoms and molecules), chemical energy (associated with bonds in chemical substances), potential energy (associated with the position of an object), kinetic energy (associated with motion), etc. Each of these forms of energy can be converted to another form (e.g., dropping an object converts potential energy to kinetic energy) but cannot be created or destroyed. This principle is called ***the law of conservation of energy***. SI unit of energy is joule or $\pu{J}$.
+Energy is the capacity to do work. It can be in many forms: thermal energy (associated with the random motion of atoms and molecules), chemical energy (associated with bonds in chemical substances), potential energy (associated with the position of an object), kinetic energy (associated with motion), etc. Each of these forms of energy can be converted to another form (e.g., dropping an object converts potential energy to kinetic energy) but cannot be created or destroyed. This principle is called the ***law of conservation of energy***. SI unit of energy is joule or $\pu{J}$.
 
 ```{dropdown} Example: Kinetic Energy
-The amount of kinetic energy possessed by $\pu{2 kg}$ mass moving at a speed of $\pu{1 m s−1}$, calculated as:
+The amount of kinetic energy possessed by $\pu{2 kg}$ mass moving at a speed of $\pu{1 m s−1}$, calculated as follows:
 
 >$$
 E_k = \frac{1}{2}m\nu^2 = \frac{1}{2}(\pu{ 2 kg})(\pu{1 m s-2})  = \pu{ 1 J}
@@ -21,7 +21,7 @@ $$
 Chemical change involves making or breaking chemical bonds. Formation of water from constituent elements is an example of chemical change: 
 
 $$\ce{2 H2(g) + O2(g) -> 2 H2O(l)} $$ 
-In each case there was a specific type of energy involved in the change. This energy must be released or supplied for changes (reactions) to occur.
+In each case, a specific type of energy was involved in the change. This energy must be released or supplied for changes (reactions) to occur.
 
 
 <div class="container">
@@ -30,7 +30,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
 
-Energy changes associated with physical processes and chemical reactions must be discussed in the context of a ***system*** and its ***surroundings***. A system is a specific part of the universe that interests us; the surroundings are the rest of the universe. Practically speaking, surroundings are immediately close to the system. In the above examples, ice or water is a system, and all other parts beyond this system (container, etc) are the surroundings.
+Energy changes associated with physical processes and chemical reactions must be discussed in the context of a ***system*** and its ***surroundings***. A system is a specific part of the universe that interests us; the surroundings are the rest of the universe. Practically speaking, surroundings are immediately close to the system. In the above examples, ice or water is a system, and all other parts beyond this system (container, etc.) are the surroundings.
 
 
 ## How is energy transferred?
@@ -41,7 +41,7 @@ Mass (e.g., coffee, gasoline) contained in a closed system (e.g., a Thermos flas
 
 Energy is not a physical substance like water or coffee, so energy transfer cannot be measured with a meter or an instrument. So, how can we tell how much useful energy a car can "put out" on one gas tank?
 
-The ***law of conservation of energy*** guarantees that all the chemical energy in the gasoline will reappear in some form, but not necessarily in a form useful for doing farm work. Tractors, like cars, are extremely inefficient, and typically, $\pu{90 \%}$ of the energy they consume is converted directly into heat, which is carried away by the exhaust and the air flowing over the radiator. We distinguish the energy that comes out directly as heat from the energy that accelerates a trailer or plows a field, so we define a technical meaning of the ordinary word "work" to express the distinction.  
+The ***law of conservation of energy*** guarantees that all the chemical energy in the gasoline will reappear in some form, but not necessarily in a form useful for doing farm work. Tractors, like cars, are highly inefficient, and typically, $\pu{90 \%}$ of the energy they consume is converted directly into heat, which is carried away by the exhaust and the air flowing over the radiator. We distinguish the energy that comes out directly as heat from the energy that accelerates a trailer or plows a field, so we define a technical meaning of the ordinary word "work" to express the distinction.  
 
 ### What is work?
 
@@ -61,7 +61,7 @@ Heat represents a type of energy transfer and reflects the part of energy transf
 
 ### A Pond Analogy
 
-Heat and work are forms of energy that are transferred in different ways. Suppose we consider the water in a deep pond. The amount of water in the pond is quite large but finite and could be measured; it corresponds to a system's *internal energy*, $U$.
+Heat and work are forms of energy that are transferred in different ways. Suppose we consider the water in a deep pond. The water in the pond is quite large but finite and could be measured; it corresponds to a system's *internal energy*, $U$.
 
 ```{figure} /assets/PondAnalogy.png
 ---
@@ -72,13 +72,13 @@ A pond analogy to relate the concepts of work and heat to the concept of energy.
 ```
 
 
-Water may be added and subtracted from the pond either in the form of stream water (heat, $q$) or precipitation/evaporation (work, $w$). All the inflows and outflows of the lake can be monitored using appropriate instruments. If the only gains and losses of water are as follows: stream inflow and outflow are $q_i$ and $q_o$, respectively, the precipitation is $w_r$, and the evaporation is $w_e$, then the change in pond volume, $\Delta U$, can be calculated as:
+Water may be added and subtracted from the pond in stream water (heat, $q$) by precipitation or evaporation (work, $w$). All the inflows and outflows of the lake can be monitored using appropriate instruments. If the only gains and losses of water are as follows: stream inflow and outflow are $q_i$ and $q_o$, respectively, the precipitation is $w_r$, and the evaporation is $w_e$, then the change in pond volume, $\Delta U$, can be calculated as:
 
 $$
 \Delta U = (q_i-q_o)+(w_r-w_e) = q + w
 $$
 
-Once water enters the pond, it loses its identity as a stream or rainwater. The pond does not contain any identifiable stream water or rain water; it is simply water. Similarly, systems do not contain so much heat or work; they contain energy. The water level in the pond can be raised either by stream water alone *or* by rainwater alone; the temperature rise in the water bath can be caused either by heating (transferring energy due to a temperature difference) or by thrashing a paddle wheel about in it (transferring energy by doing work on the system).
+Once water enters the pond, it becomes a stream or rainwater. The pond contains no identifiable stream or rainwater; it is simply water. Similarly, systems do not contain so much heat or work; they contain energy. The water level in the pond can be raised either by stream water alone *or* by rainwater alone; the temperature rise in the water bath can be caused either by heating (transferring energy due to a temperature difference) or by thrashing a paddle wheel about in it (transferring energy by doing work on the system).
 
 Another implication or assumption in our pond analogy is that water is conserved; it cannot simply appear or disappear. The same proposition regarding energy is known as the first law of thermodynamics (explored in the following sections). For example, the energy expended in lifting a book off the floor to the table was not lost but transferred to the book.
 
@@ -108,7 +108,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
 
-The above video shows how energy is consumed or produced during the forming or breaking of chemical bonds.  In an exothermic reaction, the energy of the products in a reaction is lower than the energy of the reactants, causing the excess energy to be released from the system to the surroundings. In an endothermic reaction, the products' energy is higher than the reactants' energy.
+The above video shows how energy is consumed or produced during the forming or breaking of chemical bonds.  In an exothermic reaction, the energy contained in the products of a reaction is lower than the energy contained in the reactants, causing the excess energy to be released from the system to the surroundings. In an endothermic reaction, the products' energy is higher than the energy of the reactants.
 
 ```{figure} https://www.fda.gov/files/nutrition-facts-label-download-image2.jpg
 ---
@@ -149,7 +149,7 @@ Systems can be considered at many scales. This picture shows how energy and matt
 
 A system is any portion of the universe that can be isolated from the rest of the universe for the purpose of observing and measuring changes. By saying that a system is any portion of the universe, we mean that the system can be whatever the observer defines it to be. In {numref}`earth-systems`, we can see different parts of Earth can be subdivided into subsystems and studied separately for convenience.  A system is conceptual in design and needs to be defined more clearly by the observer.  It can be large or small, simple or complex. It can be a laboratory experiment in a beaker or a lake, a small sample of rock, an ocean, a volcano, a mountain range, a continent, or an entire planet. A leaf is a system; it is part of a larger system (a tree), part of an even larger system (a forest), and so on. 
 
-A system being isolated from the rest of the universe means that it must have a boundary that sets it apart from its surroundings. The nature of the boundary is one of the most important defining features of a system, allowing us to establish three basic kinds of systems—open, closed, and isolated—with different types of boundaries.
+An isolated system from the rest of the universe means it must have a boundary that sets it apart from its surroundings. The nature of the boundary is one of the most important defining features of a system, allowing us to establish three basic kinds of systems—open, closed, and isolated—with different types of boundaries.
 
 ```{admonition} Types of systems
 
@@ -166,7 +166,7 @@ Since matter and energy are shared between systems and surroundings, it would be
 The storage and movement of material and energy in a group of interacting systems is often represented as a ***box model***. A box model can be used to show the following essential features of a system: 
 1. The processes by which matter (or energy) enters and leaves the system and the rates at which they do so.
 2. The processes by which matter (or energy) moves among the various parts of the system internally and the rates at which this happens.
-3. The amount of matter (or energy) in the system at a given time and its distribution within the system.
+3. The amount of matter (or energy) in the system at a given time and its distribution.
 
 As shown in {numref}`hydro-box-model`, the “boxes” in a box model represent the places where water (or energy, or whatever might be the material of interest) is stored for some time within the system. These storage places are called ***reservoirs***.  When the flux of matter into a reservoir matches the flux out of that reservoir, we say that the reservoir is at ***steady state***. The average time water spends in these reservoirs is called its ***residence time***. The residence time of any material in any particular reservoir is determined by the interaction of many factors, including the physical, chemical, and biological properties of the material itself, the properties of the reservoir, and any external forces or processes acting on either the material or the reservoir.
 
@@ -189,7 +189,7 @@ Under steady-state conditions, the residence time can be calculated as shown in 
 
 ### States and State Variables
 
-In thermodynamics, it is important to explicitly define a system's properties (e.g., composition, energy, temperature, pressure, and volume). These properties help us understand changes in the ***state of the system*** during a chemical process. When the state of the system changes, these properties change. ***State variables*** (or ***state functions***) are properties determined by the state of the system, regardless of how they were achieved. That is, when the state of the system changes, the magnitude of the change only depends on the initial and final states of the system and not on how the change is accomplished. Energy, pressure, temperature, and volume are examples of state variables. Several important state variables are not measurable in the absolute sense in a particular equilibrium state, though they do have fixed, finite values in these states. However, the changes between the equilibrium states can be measured. Changes in system variables can be denoted below. The $\Delta$ is a standard mathematical symbol for change and refers to the *final* minus *initial* values, as shown below.
+In thermodynamics, it is crucial to explicitly define a system's properties (e.g., composition, energy, temperature, pressure, and volume). These properties help us understand changes in the ***state of the system*** during a chemical process. When the state of the system changes, these properties change. ***State variables*** (or ***state functions***) are properties determined by the system's state, regardless of how they were achieved. That is, when the state of the system changes, the magnitude of the change only depends on the initial and final states of the system and not on how the change is accomplished. Energy, pressure, temperature, and volume are examples of state variables. Several important state variables are not measurable in the absolute sense in a particular equilibrium state, though they do have fixed, finite values in these states. However, the changes between the equilibrium states can be measured. Changes in system variables can be denoted below. The $\Delta$ is a standard mathematical symbol for change and refers to the *final* minus *initial* values, as shown below.
 
 $$
 	\begin{eqnarray*}
@@ -223,9 +223,11 @@ Thermodynamic properties can be extensive properties or intensive properties. **
 Some thermodynamic properties are additive even after systems are transformed or when two systems are combined. These properties are *conserved*. Intensive properties are not conserved as they are not additive even within the same system. Only extensive properties are conserved.
 
 ```{dropdown} Example: Conservation of Mass
-Conservation of mass Let's determine concentration in a solution ($S$) formed when one spoon ($\pu{5 mL}$) of seawater ($sw$) from Folly Beach ($=\pu{10.8 g L^{-1}}$) at $\pu{25 ^\circ C}$ is added to $\pu{1.0 L}$ of freshwater ($fw$) from Goose Creek reservoir ($=\pu{6 mg L^{-1}}$). Since concentration is an intensive and not additive property, it needs to be transformed into an extensive property. The extensive property equivalent of concentration is mass ($m = C\times V$, where $m$ is mass, $C$ is concentration, and $V$ is volume). 
+Let's determine the concentration in a solution ($s$) formed when one spoon ($\pu{5 mL}$) of seawater ($sw$) from Folly Beach ($=\pu{10.8 g L-1}$) at $\pu{25 ^\circ C}$ is added to $\pu{1.0 L}$ of freshwater ($fw$) from the Goose Creek reservoir ($=\pu{6 mg L^{-1}}$). 
 
-$$
+>Since concentration is an intensive and not additive property, it must be transformed into an extensive property. The extensive property equivalent of concentration is mass ($m = C\times V$, where $m$ is mass, $C$ is concentration, and $V$ is volume). 
+>
+>$$
 \begin{aligned}
         m_s &= m_{sw} + m_{fw} = C_{sw}V_{sw} + C_{fw}V_{fw}\\
          &= (\pu{5e-5 L})(\pu{10.8 g L-1}) + (\pu{1 L})(\pu{6e-3 g L-1})\\
@@ -237,7 +239,7 @@ $$
         C_s &= \frac{m_s}{V_s}\\ 
         &= \frac{\pu{6.54e-3 g}}{\pu{1.00005 L}} = \pu{6.5 mg L-1}
     \end{aligned}
-$$
+>$$
 ```
 
 
@@ -245,7 +247,7 @@ $$
 
 Thermodynamic properties are used to define the state of the system. However, we need to know how many properties are required to define a system. You can intuitively guess that this would depend on the system's complexity. The number of properties required is determined by the number of phases and components in the system.
 
-A ***phase*** is defined as a homogeneous body of matter with distinct boundaries with adjacent phases and hence can be mechanically separable. A phase's shape, orientation, and position in relation to adjacent phases are irrelevant, so a single phase may occur in several locations within a system. Examples of single phases include quartz in granite and a salt solution. There are three common phases: solid, liquid, gas, and vapor. A system with only one phase is *homogeneous* and a system with multiple phases is *heterogeneous*.
+A ***phase*** is defined as a homogeneous body of matter with distinct boundaries with adjacent phases and hence can be mechanically separable. A phase's shape, orientation, and position relative to adjacent phases are irrelevant, so a single phase may occur in several locations within a system. Examples of single phases include quartz in granite and a salt solution. There are three common phases: solid, liquid, gas, and vapor. A system with only one phase is *homogeneous* and a system with multiple phases is *heterogeneous*.
 
 ***Components*** are used to describe the chemical composition of a system. They are defined as the smallest set of chemical formulas required to completely describe the composition of all the phases that make up a system. For example, in a $\ce{NaCl}$ solution (it doesn't matter if there is water vapor or calcite precipitate in the solution), the combination of $\ce{NaCl}$ describes the composition of all phases.
 

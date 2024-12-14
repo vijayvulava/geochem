@@ -57,30 +57,32 @@ The variable $q_P$ in Eq {eq}`Enthalpy` is called enthalpy ($\Delta H^\circ$) an
 
 $\Delta _{rxn}H^\circ$ can be used to determine if the system ($sys$) gains or loses heat. This value can be positive or negative (units: $\pu{kJ mol-1}$) and must be applied to a chemical reaction representing the system.
 
-When $\Delta_{rxn}H^\circ <0$, ($\Delta_{prod}H^\circ < \Delta_{reac}H^\circ$), this implies there is more internal energy bound within the reactants and that portion of this energy is now contained within the products. At the same time, the rest is released into the surroundings. That is, the excess energy is released into the surroundings ($surr$). Such systems are called ***exothermic*** systems.
+When $\Delta_{rxn}H^\circ <0$, ($\Delta_{prod}H^\circ < \Delta_{reac}H^\circ$), this implies there is more internal energy bound within the reactants and that portion of this energy is now contained within the products. At the same time, the rest is released into the surroundings. The excess energy is released into the surroundings ($surr$). Such systems are called ***exothermic*** systems.
 
 ```{dropdown} Example: Exothermic reactions 
 
-Virtually any combustion reaction is exothermic as heat is released into the surroundings. Hydrogen gas explosively reacts with oxygen to form water molecules as shown in:
+Virtually any combustion reaction is exothermic as heat is released into the surroundings. Hydrogen gas explosively reacts with oxygen to form water molecules, as shown below:
 
-$$
+>$$
 \ce{2 H2(g) + O2(g) -> 2 H2O(l) + \text{heat}}
 $$
-
-The heat released into the surroundings is the "product" of these reactions and can be quantified if we know exactly how much internal energy makes up each of the chemical species.
+>
+>The heat released into the surroundings is the "product" of these reactions and can be quantified if we know exactly how much internal energy makes up each chemical species.
 ```
 
 In the scenarios where $\Delta_{rxn}H^\circ >0$, ($\Delta_{prod}H^\circ > \Delta_{reac}H^\circ$),  there is more internal energy in the products than in the reactants. The system has to adjust for the imbalance in the energy by absorbing energy from the surroundings. Such systems are called ***endothermic*** systems.
 
 ```{dropdown} Example: Endothermic reactions 
 
-The heating of liquid water from an external heat source (stove) causes water to evaporate or turn into vapor phase water. This can be represented as:
+The heating of liquid water from an external heat source (stove) causes water to evaporate or turn into vapor phase water. 
 
+>This process can be represented as follows:
+>
 $$
 \ce{H2O(l) + \text{heat} -> H2O(g)}
 $$
-
-Heat energy is a "reactant" required to make this reaction possible.
+>
+>Heat energy is a "reactant" required to make this reaction possible.
 ```
 
 Absolute enthalpies of chemical entities are difficult to measure. These values depend on the chemical composition of the chemical entity, the types of bonds involved, and system conditions (functions such as $V$, $P$, $T$, etc.). Hence, the $\Delta$ term is used before $H$ is used to denote the enthalpies of a chemical entity as measured relative to a standard state. The reference point for all enthalpy expressions is called the standard enthalpy of formation ($\Delta_f H^\circ$), which is defined as the heat change that results when $\pu{1 mol}$ of a compound is formed from its constituent elements in their standard states. ***Standard states*** refer to the most stable form of an element under standard conditions, meaning at ordinary atmospheric pressure. For example, oxygen can be the most stable form at ordinary atmospheric pressure. Although the standard state does not specify a temperature, we will always use ($\Delta_f H^\circ$) values measured at $\pu{25 ^\circ C}$. 
@@ -91,7 +93,7 @@ The CRC Handbook of Physics and Chemistry is a good reference for obtaining $\De
 
 ```{dropdown} Example: Determining enthalpy of a reaction
 
-Let's determine if the following reaction gains heat from or loses heat to the surroundings.
+Let's determine if the following reactions gain heat from or loses heat to the surroundings.
 
 $$
 \begin{align*}
@@ -102,25 +104,24 @@ H2O(l) &-> H2O(g)
 \end{align*}
 $$
 
-First, we need to look up $\Delta_f H^\circ$ for all chemical species in thermodynamic data tables
-
-| Chemical | $\Delta_f H^\circ$,  $\pu{kJ mol-1}$ | Chemical | $\Delta_f H^\circ$,  $\pu{kJ mol-1}$ |
-| --- | ---: | --- | ---: |
-| $\ce{O2 (g)}$  | $0$ | $\ce{H2O (g)}$ | $-241.8$ |
-| $\ce{H2 (g)}$ | $0$ | $\ce{H2O (l)}$ | $-285.8$ |
-|  |  | $\ce{H2O (s)}$ | $-291.8$|
-
-
-Next, we must calculate $\Delta_{rxn} H^\circ$ for each reaction. 
-
-$$
+>First, we need to look up $\Delta_f H^\circ$ for all chemical species in thermodynamic data tables
+>
+>| Chemical | $\Delta_f H^\circ$,  $\pu{kJ mol-1}$ | Chemical | $\Delta_f H^\circ$,  $\pu{kJ mol-1}$ |
+>| --- | ---: | --- | ---: |
+>| $\ce{O2 (g)}$  | $0$ | $\ce{H2O (g)}$ | $-241.8$ |
+>| $\ce{H2 (g)}$ | $0$ | $\ce{H2O (l)}$ | $-285.8$ |
+>|  |  | $\ce{H2O (s)}$ | $-291.8$|
+>
+>Next, we must calculate $\Delta_{rxn} H^\circ$ for each reaction. 
+>
+>$$
 \begin{align*}
 \Delta_{rxn} H^\circ &= [2(-241.8)] - [(2(0) + (0)] = \pu{-483.6 kJ mol-1}\\
 \Delta_{rxn} H^\circ &= [(-241.8)] - [(-285.8)] = \pu{+44.0 kJ mol-1}
 \end{align*}
-$$
-
-Since $\Delta_{rxn}H^\circ <0$, the first reaction is exothermic and $\Delta_{rxn}H^\circ >0$, the second reaction is endothermic.
+>$$
+>
+>Since $\Delta_{rxn}H^\circ <0$, the first reaction is exothermic and $\Delta_{rxn}H^\circ >0$, the second reaction is endothermic.
 ```
 
 Since we are working with thermochemical systems where heat is released or captured during a reaction, the following guidelines will help interpret, write, and manipulate thermochemical reactions.
@@ -148,12 +149,12 @@ H2O(g) &-> H2O(l)
 \end{align}
 $$
 
-If we used $\Delta_{f}H^\circ$ from the table in the previous example, we could calculate $\Delta_{rxn}H^\circ$ as $\pu{−967.2 kJ mol-1}$ and  $\pu{−44.0 kJ mol-1}$, respectively in these reactions.
+>If we used $\Delta_{f}H^\circ$ from the table in the previous example, we could calculate $\Delta_{rxn}H^\circ$ as $\pu{−967.2 kJ mol-1}$ and  $\pu{−44.0 kJ mol-1}$, respectively in these reactions.
 ```
 
 ```{dropdown} Example: Application of thermochemistry and mass balance 
 
-Let's calculate the heat evolved when $\pu{75 g}$ of $\ce{SO2(g)}$ is oxidized to $\ce{SO3 (g)}$ as shown:
+Let's calculate the heat evolved when $\pu{75 g}$ of $\ce{SO2(g)}$ is oxidized to $\ce{SO3 (g)}$ as shown in the reaction below:
 
 $$
 \ce{SO2(g) + 1/2 O2(g) -> SO3(g)}
@@ -161,24 +162,24 @@ $$
 
 $\Delta_{rxn}H^\circ = \pu{-99.1 kJ mol-1}$
 
-According to this reaction, $\pu{1 mole}$ of $\ce{SO2(g)}$ is oxidized to $\pu{1 mole}$ of $\ce{SO3(g)}$ resulting in $\Delta_{rxn}H^\circ = \pu{-99.1 kJ mol-1}$ (release of energy into surroundings) 
-
-The molar mass of $\ce{SO2(g)}$ is $\pu{64 g}$ ($\pu{1 mol} = \pu{64 g}$) or, in other words, $\pu{64 g}$ of $\ce{SO2(g)}$ results in $\Delta_{rxn}H^\circ = \pu{-99.1 kJ mol-1}$. 
-
-Therefore, $\pu{75 g}$ of $\ce{SO2(g)}$ results in:
-
-$$
+>According to this reaction, $\pu{1 mole}$ of $\ce{SO2(g)}$ is oxidized to $\pu{1 mole}$ of $\ce{SO3(g)}$ resulting in $\Delta_{rxn}H^\circ = \pu{-99.1 kJ mol-1}$ (release of energy into surroundings) 
+>
+>The molar mass of $\ce{SO2(g)}$ is $\pu{64 g}$ ($\pu{1 mol} = \pu{64 g}$) or, in other words, $\pu{64 g}$ of $\ce{SO2(g)}$ results in $\Delta_{rxn}H^\circ = \pu{-99.1 kJ mol-1}$. 
+>
+>Therefore, $\pu{75 g}$ of $\ce{SO2(g)}$ results in:
+>
+>$$
 \pu{75 g}\, \ce{SO2} \times \dfrac{\pu{1 mol}\, \ce{SO2}}{\pu{64 g}\, \ce{SO2}} = \pu{1.2 mol}\, \ce{SO2}
 $$
-
-$\therefore \Delta_\ce{SO2} H^\circ = \pu{1.2 mol}\times (\pu{-99.1 kJ mol-1}) = \pu{116 kJ}$.
+>
+>$\therefore \Delta_\ce{SO2} H^\circ = \pu{1.2 mol}\times (\pu{-99.1 kJ mol-1}) = \pu{116 kJ}$.
 ```
 
 ## Hess's Law
 
 Because $\Delta_{rxn}H^\circ$ is a state function, the change in enthalpy that occurs when reactants are converted to products in a reaction is the same whether the reaction occurs in one step or a series of steps. This observation is called ***Hess's law***. This is an application of the concept that in thermodynamics, the system *does not care* how many steps (individual reactions) are required to reach equilibrium -- just the final reaction.
 
-Another practical concern is that many compounds cannot directly synthesize from their elements. Sometimes, the reaction proceeds too slowly, or side reactions produce substances other than the desired compound. In these cases, using Hess's law, $\Delta_f H^\circ$ can be determined indirectly.
+Another practical concern is that many compounds cannot directly synthesize from their elements. Sometimes, the reaction proceeds too slowly, or side reactions produce substances other than the desired compound. In these cases, $\Delta_f H^\circ$ can be determined indirectly using Hess's law.
 
 ```{dropdown} Example: Hess's law 
 **Example 1**
@@ -197,17 +198,16 @@ This reaction can be created by combining two separate reactions shown below:
 | $\ce{C(s) + O2(g)  -> CO2(g)}$ | $-393.5$ |
 
 
-We can add balanced chemical equations just as we can add algebraic equalities, canceling identical items on opposite sides of the equation arrow. To combine the above two reactions, we must reverse the first reaction to get common terms on opposite sides. Also, remember to change the sign of $\Delta_{rxn}H^\circ$ when reversing reactions.
-
-| Reaction | $\Delta_{rxn}H^\circ$, $\pu{kJ mol-1}$ |
-| --- | ---: |
-| $\ce{CO2(g) -> CO(g) + 1/2 O2(g) }$  | $-283.0$ |
-| $\ce{C(s) + O2(g)  -> CO2(g)}$ | $-393.5$ |
-| --- | --- |
-| $\ce{C(s) + 1/2 O2(g)  -> CO(g)}$ | $-110.5$ |
-
-
-Therefore, $\Delta_{rxn}H^\circ = \pu{-110.5 kJ mol-1}$ for the final reaction.
+>We can add balanced chemical equations similar to adding algebraic equalities and canceling identical items on opposite sides of the equation arrow. To combine the above two reactions, we must reverse the first reaction to get common terms on opposite sides. Also, remember to change the sign of $\Delta_{rxn}H^\circ$ when reversing reactions.
+>
+>| Reaction | $\Delta_{rxn}H^\circ$, $\pu{kJ mol-1}$ |
+>| --- | ---: |
+>| $\ce{CO2(g) -> CO(g) + 1/2 O2(g) }$  | $-283.0$ |
+>| $\ce{C(s) + O2(g)  -> CO2(g)}$ | $-393.5$ |
+>| --- | --- |
+>| $\ce{C(s) + 1/2 O2(g)  -> CO(g)}$ | $-110.5$ |
+>
+>Therefore, $\Delta_{rxn}H^\circ = \pu{-110.5 kJ mol-1}$ for the final reaction.
 
 **Example 2**
 
@@ -223,22 +223,20 @@ C(s) + 2 H2(g) + 1/2 O2(g) -> CH3OH(l)
 | $\ce{C(s) + O2(g)  -> CO2(g)}$ | $-393.5$ |
 | $\ce{H2(g) + 1/2 O2(g) -> H2O(l)}$ | $-285.8$ |
 
-The following changes were made to each of the above reactions to get common reactants and products to match our required reaction:
-
-1. Rxn 1: Reversed, the sign of $\Delta_{rxn}H^\circ$ changed
-2. Rxn 2: No change
-3. Rxn 3: Multiplied by 2, including $\Delta_{rxn}H^\circ$ value
-
-
-| Reaction | $\Delta_{rxn}H^\circ$, $\pu{kJ mol-1}$ |
-| --- | ---: |
-| $\ce{CO2(g) + 2 H2O(l) -> CH3OH(l) + 3/2 O2(g) }$ | $726.4$ |
-| $\ce{C(s) + O2(g)  -> CO2(g)}$ | $-393.5$ |
-| $\ce{2 H2(g) + O2(g) -> 2 H2O(l)}$ | $-571.6$ |
-| --- | --- |
-| $\ce{C(s) + 2 H2 (g) + 1/2 O2(g) -> CH3OH(l)}$ | $-238.7$ |
-
-
-Therefore, $\Delta_{rxn}H^\circ = \pu{-238.7 kJ mol-1}$ for the final reaction.
+>The following changes were made to each of the above reactions to get common reactants and products to match our required reaction:
+>
+>1. Rxn 1: Reversed, the sign of $\Delta_{rxn}H^\circ$ changed
+>2. Rxn 2: No change
+>3. Rxn 3: Multiplied by 2, including $\Delta_{rxn}H^\circ$ value
+>
+>| Reaction | $\Delta_{rxn}H^\circ$, $\pu{kJ mol-1}$ |
+>| --- | ---: |
+>| $\ce{CO2(g) + 2 H2O(l) -> CH3OH(l) + 3/2 O2(g) }$ | $726.4$ |
+>| $\ce{C(s) + O2(g)  -> CO2(g)}$ | $-393.5$ |
+>| $\ce{2 H2(g) + O2(g) -> 2 H2O(l)}$ | $-571.6$ |
+>| --- | --- |
+>| $\ce{C(s) + 2 H2 (g) + 1/2 O2(g) -> CH3OH(l)}$ | $-238.7$ |
+>
+>Therefore, $\Delta_{rxn}H^\circ = \pu{-238.7 kJ mol-1}$ for the final reaction.
 
 ```

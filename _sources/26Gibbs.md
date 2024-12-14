@@ -65,11 +65,13 @@ C (s) + O2 (g) -> CO2 (g)
 
 $\Delta_f G^\circ _\ce{C(s)} = \pu{0 kJ mol-1}$, $\Delta_f G^\circ _\ce{O2(g)} = \pu{0 kJ mol-1}$, and $\Delta_f G^\circ _\ce{CO2(g)} = \pu{-394.4 kJ mol-1}$ at $\pu{25 ^\circ C}$. 
 
-$$\begin{aligned}
+>$$
+\begin{aligned}
 \Delta _{rxn} G^\circ  &= [\Delta _f G^\circ _\ce{CO2 (g)}] - [\Delta _f G^\circ _\ce{C (s)} + \Delta _f G_\ce{O2 (g)}]\\
 &= [(\pu{-394.4 kJ mol-1})] - [(\pu{0 kJ mol-1}) + (\pu{0 kJ mol-1})]\\
 &= \pu{-394.4 kJ mol-1}
-\end{aligned}$$
+\end{aligned}
+>$$
 
 **Example 2**
 
@@ -83,13 +85,13 @@ $$
 
 $\Delta_f G^\circ _\ce{CH4(g)} = \pu{-50.8 kJ mol-1}$, $\Delta_f G^\circ _\ce{CO2(g)} = \pu{-394.4 kJ mol-1}$, $\Delta_f G^\circ _\ce{O2(g)} = \pu{0 kJ mol-1}$, and $\Delta_f G^\circ _\ce{H2O(l)} = \pu{-237.2 kJ mol-1}$.
 
-$$
+>$$
 \begin{aligned}
 \Delta _{rxn} G^\circ  &= [\Delta_f G^\circ _\ce{CO2 (g)} + 2 \cdot\Delta_f G^\circ _\ce{H2O (l)}] - [\Delta_f G^\circ _\ce{CH4 (g)} + 2\cdot \Delta_f G^\circ _\ce{O2 (g)}]\\
 &= [(\pu{-394.4 kJ mol-1}) + 2(\pu{-237.2 kJ mol-1})]  - [(\pu{-50.8 kJ mol-1}) + 2(\pu{0 kJ mol-1})]\\
 &= \pu{-818.0 kJ mol-1}
 \end{aligned}
-$$
+>$$
 ```
 
 
@@ -149,16 +151,16 @@ Thermodynamic data for these substances at $\pu{25 ^\circ C}$ are as follows:
 | $\ce{CO2(g)}$ | $-393.5$ | $213.6$ |
 
 
-From these data we can determine $\Delta_{rxn}H^\circ = \pu{177.8 kJ mol-1}$ and $\Delta_{rxn}S^\circ = \pu{160.5 J K-1 mol-1}$. From these data, let's calculate $\Delta _{rxn} G^\circ$ at $\pu{835 ^\circ C}$ (= $\pu{1108 K}$). 
-
-$$
+>From these data we can determine $\Delta_{rxn}H^\circ = \pu{177.8 kJ mol-1}$ and $\Delta_{rxn}S^\circ = \pu{160.5 J K-1 mol-1}$. From these data, let's calculate $\Delta _{rxn} G^\circ$ at $\pu{835 ^\circ C}$ (= $\pu{1108 K}$). 
+>
+>$$
 \begin{aligned}
 \Delta _{rxn} G^\circ  &= \Delta_{rxn}H^\circ -T \Delta_{rxn}S^\circ\\
    &=\pu{177.8 kJ mol-1} - (\pu{1108 K})(\pu{160.5 J K-1 mol-1}) \left(\frac{\pu{1 kJ}}{\pu{e3 J}}\right)\\
    & =\pu{0  kJ mol-1}
 \end{aligned}
-$$
- 
-In this example, the system reached equilibrium at $\pu{835 ^\circ C}$!
+>$$
+>
+>In this example, the system reached equilibrium at $\pu{835 ^\circ C}$!
 ```
 

@@ -19,21 +19,23 @@ Processes that result in a decrease in the energy of a system often are spontane
 
 ```{dropdown} Example: Spontaneous chemical processes 
 
-All reactions below occur spontaneously at $\pu{25 ^\circ C}$. It is also evident that the first two reactions are exothermic, while the last two are endothermic.
+All reactions below occur spontaneously at $\pu{25 ^\circ C}$. 
 
-| Reaction | $\Delta_{rxn}H^\circ$,  $\pu{kJ mol-1}$ |
-| --- | ---: |
-| $\ce{CH4(g) + 2 O2(g) -> CO2(g) + 2 H2O(l)}$  | $-890.4$ |
-| $\ce{H+ (aq) + OH- (aq) <=> H2O(l) }$ | $-56.2$ |
-| $\ce{H2O(s) -> H2O(l)}$ | $6.01$ |
-| $\ce{NH4NO3(s) ->[H2O] NH4+ (aq) + NO3- (aq)}$ | $25.0$ |
+>| Reaction | $\Delta_{rxn}H^\circ$,  $\pu{kJ mol-1}$ |
+>| --- | ---: |
+>| $\ce{CH4(g) + 2 O2(g) -> CO2(g) + 2 H2O(l)}$  | $-890.4$ |
+>| $\ce{H+ (aq) + OH- (aq) <=> H2O(l) }$ | $-56.2$ |
+>| $\ce{H2O(s) -> H2O(l)}$ | $6.01$ |
+>| $\ce{NH4NO3(s) ->[H2O] NH4+ (aq) + NO3- (aq)}$ | $25.0$ |
+>
+>It is also evident that the first two reactions are exothermic, while the last two are endothermic.
 ```
 
 Because $\Delta_{rxn}H^\circ$ is not adequate to predict the spontaneity of the process, we have to define new terms such as entropy and Gibbs free energy.
 
 ## Entropy
 
-Imagine two well-insulated bottles somewhere in the universe ({numref}`spontaneous`) one side of the bottle was filled with a gas, and the other side of the bottle contained a vacuum, separated by a valve. If this valve were to be removed, you would intuitively know that gas would enter the side under vacuum spontaneously. We have neither added energy to nor taken energy from the system; hence, the first law says nothing about this process. Nor did opening the valve *cause* the reaction. It is apparent from the observation that if we reclose the valve, the gas will not return to the original side. This phenomenon suggests there is something very fundamental and universal about this. This process is addressed in the second law of thermodynamics.
+Imagine two well-insulated bottles somewhere in the universe ({numref}`spontaneous`) one side of the bottle was filled with a gas, and the other side contained a vacuum, separated by a valve. If this valve were to be removed, you would intuitively know that gas would enter the side under vacuum spontaneously. We have neither added energy to nor taken energy from the system; hence, the first law says nothing about this process. Nor did opening the valve *cause* the reaction. It is apparent from the observation that if we reclose the valve, the gas will not return to the original side. This phenomenon suggests there is something very fundamental and universal about this. This process is addressed in the second law of thermodynamics.
 
 ```{figure} https://openstax.org/apps/archive/20221109.213337/resources/9eafa2a59a63c98a307979ec929c1e6ae7d47898
 ---
@@ -43,7 +45,7 @@ figclass: margin-caption
 An isolated system consists of an ideal gas in one flask connected by a valve to a second flask containing a vacuum. Once the valve is opened, the gas spontaneously becomes evenly distributed between the flasks. Image source: [12.1 Spontaneity - Chemistry: Atoms First | OpenStax](https://openstax.org/books/chemistry-atoms-first/pages/12-1-spontaneity)
 ```
 
-A system's entropy ($S$) measures how spread out or how dispersed the system's energy is. The simplest interpretation of this is how spread out a system's energy is in space. Because the gas molecules initially confined to one side of the container are moving, they possess motional energy. When the barrier is removed, the motional energy of molecules will cause the molecules to spread out and occupy a larger volume. This dispersal of the system's motional energy causes an increase in the system's entropy. Just as an exothermic process favors spontaneity, spontaneity is also favored by an increase in the system's entropy. Whether it is the enthalpy change, the entropy change, or both, something must favor spontaneity for a process to be spontaneous.
+A system's entropy ($S$) measures how spread or dispersed the system's energy is. The simplest interpretation of this is how spread out a system's energy is in space. Because the gas molecules initially confined to one side of the container are moving, they possess motional energy. When the barrier is removed, the motional energy of molecules will cause the molecules to spread out and occupy a larger volume. This dispersal of the system's motional energy causes an increase in the system's entropy. Just as an exothermic process favors spontaneity, spontaneity is also favored by an increase in the system's entropy. Whether it is the enthalpy change, the entropy change, or both, something must favor spontaneity for a process to be spontaneous.
 
 [What is entropy? - Jeff Phillips | TED-Ed](https://ed.ted.com/lessons/what-is-entropy-jeff-phillips)
 
@@ -98,7 +100,7 @@ The Entropy ($S^\circ$) of selected substances is shown below. Observe the trend
 | $\ce{Hg(l)}$ | $77.4$ |
      
 The table of data shown above highlights the following trends:
-1. For a given substance, it increases in the following order: $S_\text{gas} \gg S_\text{liquid}> S_\text{solid}$. This can be explained by greater molecular motion in gases and liquids compared with solids (see {numref}`entropy-substance-fig`).
+1. For a given substance, it increases in the following order: $S_\text{gas} \gg S_\text{liquid}> S_\text{solid}$. This can be explained by greater molecular motion in gases and liquids than in solids (see {numref}`entropy-substance-fig`).
 2. For two monatomic species, the one with the larger molar mass has the greater $S^\circ$. E.g., compare $\ce{He}$ vs. $\ce{Ne}$.
 3. For two substances in the same phase and with similar molar masses, the substance with the more complex molecular structure has the greater $S^\circ$. The more complex a molecular structure, the more different types of motion the molecule can exhibit. E.g., $\ce{O2(g)}$ vs. $\ce{O3(g)}$.
 4. When an element exists in two or more allotropic forms (e.g., graphite vs. diamond), the form where the atoms are more mobile has greater entropy. In diamonds, the carbon atoms occupy fixed positions in a three-dimensional array. In graphite, although the carbon atoms occupy fixed positions within the two-dimensional sheets, the sheets are free to move relative to one another, which increases the mobility and, therefore, the total number of possible arrangements of atoms within the solid.
@@ -123,21 +125,22 @@ The entropy of a system ($\Delta _{sys} S^\circ$) can be calculated similarly to
 
 ```{dropdown} Example: Calculating $\Delta _{sys} S^\circ$ of a system 
 
-Let's calculate $\Delta _{sys} S^\circ$ of the following reaction at $\pu{25 ^\circ C}$
+Calculate the $\Delta _{sys} S^\circ$ of the following reaction at $\pu{25 ^\circ C}$
 
 $$
 \ce{CaCO3(s) -> CaO(s) + CO2(g)}
 $$
 
-$S^\circ$ of these substances can be looked up in the CRC Thermodynamic Data Tables: $S_{\ce{CaCO3 (s)}} = \pu{92.9 J K-1 mol-1}$, $S_{\ce{CaO (s)}} = \pu{39.8 J K-1 mol-1}$, and $S_{\ce{CO2 (g)}} = \pu{213.6 J K-1 mol-1}$. 
-
-$$
+>$S^\circ$ of these substances can be looked up in the CRC Thermodynamic Data Tables: 
+>$S_{\ce{CaCO3 (s)}} = \pu{92.9 J K-1 mol-1}$, $S_{\ce{CaO (s)}} = \pu{39.8 J K-1 mol-1}$, and $S_{\ce{CO2 (g)}} = \pu{213.6 J K-1 mol-1}$. 
+>
+>$$
 \begin{align*}
 \Delta _{sys} S^\circ  &= [S_{\ce{CaO (s)}} + S_{\ce{CO2 (g)}}] - [S_{\ce{CaCO3 (s)}}]\\
 &= [\pu{39.8 J K-1 mol-1} + \pu{213.6 J K-1 mol-1}] - [\pu{92.9 J K-1 mol-1}]\\
 &= \pu{160.5 J K-1 mol-1}
 \end{align*}
-$$
+>$$
 ```
 
 
@@ -145,30 +148,44 @@ $$
 
 Equation {eq}`s_sys` helps us calculate $\Delta _{sys}S^\circ$ for any process where $S^\circ$ of all reactants and products are known. But, we can qualitatively predict the sign of $\Delta _{sys}S^\circ$ by evaluating the chemical process.
 
-```{admonition} Processes that lead to increase in $S^\circ$ of a system
+```{admonition} Processes that lead to an increase in $S^\circ$ of a system
 
-1. Melting - when solids melt, molecules have greater energy and are more mobile. They go from being in fixed positions in the solid to being free to move about in the liquid.
+1. Melting - when solids melt, molecules have higher energy and are more mobile. They go from being in fixed positions in the solid to being free to move about in the liquid.
 2. Vaporization or sublimation - a dramatic increase in energy/mobility and the number of possible arrangements of a system's molecules when the molecules go from a condensed phase to the gas phase.
 3. Temperature increase - the energy of the system's molecules increases due to increased average kinetic energy.
-4. Reaction resulting in a greater number of gas molecules -- since the entropy of a substance in the gas phase is always significantly greater than its entropy in either the liquid or solid phase, a reaction that increases the number of gas molecules causes an increase in the system's entropy.
-5. Dissolving a substance - dissolving causes the dispersal of the molecules (and consequently, of the system's energy) into a larger volume and greater entropy. This rule breaks down for multiple-charged ions in water as these ions attract water molecules (hydration) around their surfaces, resulting in lower entropy.
+4. Reactions that lead to the formation of gases increase entropy, as the entropy of a substance in the gaseous state is always much higher than in the liquid or solid states. Therefore, a reaction that produces more gas molecules contributes to a rise in the system's entropy.
+5. Dissolving a substance leads to the spreading of molecules (and thus, the system's energy) over a larger volume and increased entropy. However, this principle does not hold for multiply charged ions in water, as these ions draw water molecules (hydration) to their surfaces, which results in decreased entropy.
 ```
 
 ```{dropdown} Example: Predicting the sign of $\Delta _{sys}S^\circ$ a system 
 
 Let's predict sign of $\Delta _{sys}S^\circ$ for the following systems using the rules outlined above:
 
-1. Decomposition of $\ce{CaCO3(s)}$ to $\ce{CaO(s)}$ and $\ce{CO2(g)}$: $+$ or $\Delta _{sys}S^\circ >0$
-2. Heating bromine vapor from $\pu{45 ^\circ C}$ to $\pu{80 ^\circ C}$: $+$ or $\Delta _{sys}S^\circ >0$
-3. Condensation of water vapor on a cold surface: $-$ or $\Delta _{sys}S^\circ <0$
-4. Reaction of $\ce{NH3(g)}$ and $\ce{HCl(g)}$ to give $\ce{NH4Cl(s)}$: $-$ or $\Delta _{sys}S^\circ <0$
-5. Dissolution of sugar in water: $+$ or $\Delta _{sys}S^\circ >0$
+1. Decomposition of $\ce{CaCO3(s)}$ to $\ce{CaO(s)}$ and $\ce{CO2(g)}$: 
+
+>$+$ or $\Delta _{sys}S^\circ >0$
+
+2. Heating bromine vapor from $\pu{45 ^\circ C}$ to $\pu{80 ^\circ C}$: 
+
+>$+$ or $\Delta _{sys}S^\circ >0$
+
+3. Condensation of water vapor on a cold surface: 
+
+>$-$ or $\Delta _{sys}S^\circ <0$
+
+4. Reaction of $\ce{NH3(g)}$ and $\ce{HCl(g)}$ to give $\ce{NH4Cl(s)}$: 
+
+>$-$ or $\Delta _{sys}S^\circ <0$
+
+5. Dissolution of sugar in water: 
+
+>$+$ or $\Delta _{sys}S^\circ >0$
 ```
 
 
 ## $S^\circ$ changes in the universe
 
-Every system we study is part of the universe. We call the environment that exists outside the system the surroundings. Together, the system and its surroundings make up the universe. The transfer of energy from the system to its surroundings was addressed in the first law. We can also describe entropy changes in the surroundings based on our understanding of entropy. To correctly predict if a system is spontaneous, we also need to address entropy change in the surroundings.
+Every system we study is part of the universe. We call the environment that exists outside the system the surroundings. Together, the system and its surroundings make up the universe. The transfer of energy from the system to its surroundings was addressed in the first law. We can also describe entropy changes in the surroundings based on our understanding of entropy. To correctly predict if a system is spontaneous, we must address entropy change in the surroundings.
 
 Consider melting an ice cube at room temperature (endothermic process). Because we can expect an ice cube to melt spontaneously, we would expect $\Delta _{sys} S^\circ  >0$ (melting of a solid). Consequent to this melting of ice, the air in the room becomes cooler, causing a decrease in entropy of the surrounding ($\Delta _{surr}S^\circ <0$). Now consider the opposite process of a cup of boiling water placed at room temperature (exothermic process). Because the water in the cup is cooling, $\Delta _{sys} S^\circ  >0$ and since the surroundings are warmer than before, $\Delta _{surr}S^\circ >0$.
 
@@ -234,15 +251,18 @@ $$
 \ce{N2(g) + 3 H2(g) -> 2 NH3(g)}
 $$
 
-Using thermodynamic data, we can determine that $\Delta _{sys} H^\circ = \pu{-96.2 kJ mol-1}$ and $\Delta _{sys} S^\circ = \pu{-199 J mol-1 K-1}$. Let's see if the synthesis of $\ce{NH3(g)}$ is spontaneous. Substitute given data into Eq. {eq}`secondlaw-sys` and adjust units for consistency.
+Using thermodynamic data, we can determine that $\Delta _{sys} H^\circ = \pu{-96.2 kJ mol-1}$ and $\Delta _{sys} S^\circ = \pu{-199 J mol-1 K-1}$. 
 
-$$
+>Let's see if the synthesis of $\ce{NH3(g)}$ is spontaneous. Substitute given data into Eq. {eq}`secondlaw-sys` and adjust units for consistency.
+>
+>$$
 \begin{aligned}
 \Delta _{universe} S^\circ  &= \pu{-199 J K-1 mol-1} - \frac{\pu{-96.2 J K-1 mol-1} \times \pu{1000 J K-1 mol-1}}{\pu{298 K}}\\
 &= \pu{-199 J K-1 mol-1} + \pu{323 J K-1 mol-1}\\
 &= \pu{124 J K-1 mol-1}
-\end{aligned}$$ 
-
-Since $\Delta _{universe} S^\circ >0$, this process is spontaneous.
+\end{aligned}
+>$$ 
+>
+>Since $\Delta _{universe} S^\circ >0$, this process is spontaneous.
 ```
 

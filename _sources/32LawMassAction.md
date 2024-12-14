@@ -2,7 +2,7 @@
 
 ## Reaction quotient
 
-To quantify chemical equilibrium, we must define the term ***reaction quotient*** ($Q_c$). In any balanced chemical reaction, this term refers to the ratio of product concentrations in the numerator and reactant concentrations in the denominator -- with each concentration raised to a power equal to the corresponding stoichiometric coefficient.
+To measure chemical equilibrium, we need to define the concept of the ***reaction quotient*** ($Q_c$). For any balanced chemical reaction, this term signifies the ratio of the concentrations of products in the numerator to the concentrations of reactants in the denominator, with each concentration elevated to the power corresponding to its stoichiometric coefficient.
 
 $$
 \ce{aA + bB <=> cC +dD}
@@ -15,11 +15,11 @@ Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}
 ```
 
 
-In the above equation, square brackets "$[ \, ]$" are used to indicate molar concentrations ($\pu{mol L-1}$ or $\pu{M}$) of a chemical constituent.
+In equation {eq}`qc`, square brackets "$[ \, ]$" are used to indicate molar concentrations ($\pu{mol L-1}$ or $\pu{M}$) of a chemical constituent.
 
 ```{dropdown} Example: Reaction quotient 
 
-Let's write $Q_c$ for the following reactions:
+Write $Q_c$ for the following reactions:
 
 $$
 \begin{align*}
@@ -30,12 +30,12 @@ Cd^2+(aq) + 4 Br-(aq) &<=> CdBr4^2-(aq)
 \end{align*}
 $$
 
-$$
+>$$
 \begin{aligned}
         Q_c &= \frac{[\ce{NH3(g)}]^2}{[\ce{N2(g)}][\ce{H2 (g)}]^3}\\
-         &=\frac{[\ce{CdBr4^{2-} (aq)}]}{[\ce{Cd^{2+} (aq)}][\ce{Br^- (aq)}]^4}
+         Q_c &=\frac{[\ce{CdBr4^{2-} (aq)}]}{[\ce{Cd^{2+} (aq)}][\ce{Br^- (aq)}]^4}
 \end{aligned}
-$$
+>$$
 ```
 
 ## The Law of Mass Action and $K$
@@ -56,7 +56,7 @@ Equation {eq}`lawmassaction` is the ***law of mass action***. This expression ca
 K_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}
 ```
 
-This expression is called the ***equilibrium expression***. If the equilibrium concentrations of all reactants and products are known in a given chemical reaction, we can calculate $K_c$.
+This expression is also called the ***equilibrium expression***. If the equilibrium concentrations of all reactants and products are known in a given chemical reaction, we can calculate $K_c$.
 
 ```{dropdown} Example: Calculating equilibrium constants 
 
@@ -66,25 +66,27 @@ $$\ce{
 Br2(g) + Cl2(g) <=> 2 BrCl(g)
 }$$
 
-the equilibrium concentrations were found to be $[\ce{Br2 (g)}] = \pu{2.3e-3 mol L-1}$, $[\ce{Cl2 (g)}] = \pu{1.2e-2 mol L-1}$, and $[\ce{BrCl (g)}] = \pu{1.4e-2 mol L-1}$.
+the equilibrium concentrations were found to be $[\ce{Br2 (g)}] = \pu{2.3e-3 mol L-1}$, $[\ce{Cl2 (g)}] = \pu{1.2e-2 mol L-1}$, and $[\ce{BrCl (g)}] = \pu{1.4e-2 mol L-1}$. Calculate the equilibrium constant.
  
-Let's write the equilibrium expression and substitute the given equilibrium concentrations to calculate $K_c$ 
-
-$$\begin{aligned}
+>Let's write the equilibrium expression and substitute the given equilibrium concentrations to calculate $K_c$ 
+>
+>$$\begin{aligned}
     K_c &= \frac{[\ce{BrCl(g){}}]^2}{[\ce{Br2(g)}][\ce{Cl2(g)}]}\\
         &= \frac{(\pu{1.4e-2 mol L-1})^2}{(\pu{2.3e-3 mol L-1})(\pu{1.2e-2 mol L-1})}\\
         &= 7.1
 \end{aligned}
-$$ 
-
-Note that we did not show any units for $K_c$. It is a dimensionless quantity, as described in a subsequent section.
+>$$ 
+>
+>Note that we did not show any units for $K_c$. It is a dimensionless quantity, as described in a subsequent section.
 
 ```
 
 
 ## Gas phase concentrations
 
-Gas concentrations can be expressed in $P$. But in reality, gas concentrations are often expressed in partial pressures or as percent of the composition of Earth's atmosphere. Therefore, concentrations of gases are commonly expressed in units of atmosphere or $\pu{atm}$. Using the ideal gas law equation, we can also convert gas concentrations from $\pu{mol L-1}$ to $\pu{atm}$. 
+In reality, gas concentrations are often expressed in partial pressures or as percent of the composition of Earth's atmosphere. Therefore, concentrations of gases are commonly expressed in units of atmosphere or $\pu{atm}$. Gas concentrations can be expressed in equations as $P$ (partial pressure). 
+
+Using the ideal gas law equation, we can also convert gas concentrations from $\pu{mol L-1}$ to $\pu{atm}$. 
 
 ```{math}
 :label: gaslaw
@@ -109,15 +111,15 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ```{dropdown} Example: Converting gas phase concentrations 
 
-$P_{\ce{O2}}$ in Earth's atmosphere is $0.21$ (or $21\%$ of Earth's atmosphere is composed of $\ce{O2 (g)}$) We can convert $P_{\ce{O2}}$ to $[\ce{O2}]$  at $\pu{25 ^\circ C}$ as follows: 
+Partial pressure of $\ce{O2 (g)}$ ($P_{\ce{O2}}$) in Earth's atmosphere is $pu{0.21 atm}$ (or $21\%$ of Earth's atmosphere is composed of $\ce{O2 (g)}$). Convert $P_{\ce{O2}}$ to $[\ce{O2}]$  at $\pu{25 ^\circ C}$.
 
-$$
+>$$
 \begin{aligned}
     \frac{n\ (\pu{mole})}{V\ (\pu{L})} &= \frac{P\ (\pu{atm}) }{R\ (\pu{atm L mol-1 K-1}) \times T\ (\pu{K})}\\
     &= \frac{\pu{0.21 atm}}{(\pu{0.0821atm L mol-1 K-1})\times (\pu{298 K})}\\
     &= \pu{8.58e-3 mol L-1}
     \end{aligned}
-$$
+>$$
 ```
 
 The equilibrium expression can be rewritten for reactions that involve gases only as 
@@ -137,41 +139,42 @@ K_p = K_c (RT)^{\Delta n}
 where, $\Delta n = \sum \text{Total}\, n\, \text{of products} - \sum \text{Total}\, n\, \text{of reactants}$.
 
 ```{dropdown} Example: Writing equilibrium expressions 
-Let's write the equilibrium expression in $K_p$ for the following reaction:
+Write the equilibrium expression in $K_p$ for the following reaction:
 
 $$\ce{
 Br2 (g) + Cl2 (g) <=> 2 BrCl (g)}
 $$
 
-$$K_p = \frac{{P_{\ce{BrCl (g)}}}^2}{P_{\ce{Br2 (g)}} P_{\ce{Cl2 (g)}}}$$
+>$$K_p = \frac{{P_{\ce{BrCl (g)}}}^2}{P_{\ce{Br2 (g)}} P_{\ce{Cl2 (g)}}}
+>$$
 
 ```
 
 ```{dropdown} Example: Converting equilibrium expressions 
 
-We calculated $K_c=7.1$ for the reaction below
+Calculate $K_p$ for the reaction below if $K_c=7.1$.
 
 $$\ce{
 Br2 (g) + Cl2 (g) <=> 2 BrCl (g)}
 $$
 
-Let's convert $K_c$ to $K_p$ using Eq. {eq}`kp-kc-convert`. 
-
-$\Delta n = (2)-(1+1) = 0$. 
-
-$$
+>Let's convert $K_c$ to $K_p$ using Eq. {eq}`kp-kc-convert`. 
+>
+>$\Delta n = (2)-(1+1) = 0$. 
+>
+>$$
 \begin{aligned}
 K_p &= K_c (RT)^{\Delta n}\\
     &= 7.1 \times (\pu{0.0821 atm L mol-1 K-1} \times \pu{373 K})^0\\
     &= 7.1
     \end{aligned}
-$$
+>$$
 ```
 
 
 ```{dropdown} Example: $K$'s and reaction types 
 
-Consider the following two reactions:
+Do $K_p$ and $K_c$ values exist for the following two reactions?
 
 $$
 \begin{align*}
@@ -182,8 +185,8 @@ CO2 (g) + H2O (l) &<=> H2CO3 (aq)
 \end{align*}
 $$
 
-1. In the first reaction, all chemical components are gases and is an example of a homogeneous equilibrium reaction, i.e., the states of matter are the same in the entire reaction. The second reaction contains more than one phase of matter and is an example of heterogeneous equilibrium.
-2. In the first reaction, $K_p$ and $K_c$ can be written since all components are gases, while in the second reaction, only $K_c$ can be written as $P$ is not applicable for aqueous/liquid concentrations.
+>1. In the first reaction, all chemical components are gases, which is an example of a homogeneous equilibrium reaction, i.e., the states of matter are the same in the entire reaction. The second reaction contains more than one phase of matter and is an example of heterogeneous equilibrium.
+>2. In the first reaction, $K_p$ and $K_c$ can be written since all components are gases, while in the second reaction, only $K_c$ can be written as $P$ is not applicable for aqueous/liquid concentrations.
 
 ```
 
@@ -300,8 +303,8 @@ N2 (g) + 3 H2 (g) &⇌ 2 NH3 (g) && $K_c$ = \frac{[NH3 (g)]^2}{[N2 (g)][H2 (g)]^
 \end{align*}
 $$
 
-1. In the first two reactions, all chemical components are in the aqueous phase and/or include $\ce{H2O (l)}$. A $K_c$ expression can be written for these reactions, and the concentration $H2O (l)$ does not appear by convention in the $K_c$ expression.
-2. In the third reaction, all components are in the gas phase, and $K_p$ and $K_c$ expressions can be written.
+>1. In the first two reactions, all chemical components are in the aqueous phase and/or include $\ce{H2O (l)}$. A $K_c$ expression can be written for these reactions, and the concentration $\ce{H2O (l)}$ does not appear by convention in the $K_c$ expression.
+>2. All components are in the gas phase in the third reaction, and $K_p$ and $K_c$ expressions can be written.
 
 ```
 
@@ -321,10 +324,10 @@ H2O (l) &⇌ H2O (g) && $K_c$ = [H2O (g)]
 \end{align*}
 $$
 
-1. A  solid dissolves in $\ce{H2O (l)}$ to form ions in the first reaction. 
-2. In the second reaction, a solid reacts with a gas to form another solid. $K_p$ and $K_c$ expressions can be written.
-3. In the third reaction, a phase change is occurring. $K_p$ and $K_c$ expressions can be written.
-
-When writing out the $K_c$ expressions in such reactions, the activities of solids, liquids, and solvents are 1. 
+>1. A  solid dissolves in $\ce{H2O (l)}$ to form ions in the first reaction. 
+>2. In the second reaction, a solid reacts with a gas to form another solid. $K_p$ and $K_c$ expressions can be written.
+>3. In the third reaction, a phase change is occurring. $K_p$ and $K_c$ expressions can be written.
+>
+>When writing out the $K_c$ expressions in such reactions, the activities of solids, liquids, and solvents are 1. 
 
 ```

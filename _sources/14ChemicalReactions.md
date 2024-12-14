@@ -19,7 +19,7 @@ CO2 (aq) + H2O (l) &<=> H2CO3 (aq)
 \end{align*}
 $$
 
-The first equation is a representation of the chemical reaction where gaseous $\ce{CO2}$ (or $\ce{CO2 (g)}$) dissolves in water to form aqueous $\ce{CO2}$ (or $\ce{CO2 (aq)}$). Because $\ce{CO2 (aq)}$ does not explicitly form a chemical bond with water, $\ce{H2O}$ is shown on top of the arrow to indicate its implicit involvement in the reaction.  The $\ce{<=>}$ arrow indicates that the reaction is reversible.  The second equation represents a chemical reaction where $\ce{CO2 (aq)}$ explicitly reacts with $\ce{H2O (l)}$ to produce $\ce{H2CO3 (aq)}$ (carbonic acid.)  
+>The first equation is a representation of the chemical reaction where gaseous $\ce{CO2}$ (or $\ce{CO2 (g)}$) dissolves in water to form aqueous $\ce{CO2}$ (or $\ce{CO2 (aq)}$). Because $\ce{CO2 (aq)}$ does not explicitly form a chemical bond with water, $\ce{H2O}$ is shown on top of the arrow to indicate its implicit involvement in the reaction.  The $\ce{<=>}$ arrow indicates that the reaction is reversible.  The second equation represents a chemical reaction where $\ce{CO2 (aq)}$ explicitly reacts with $\ce{H2O (l)}$ to produce $\ce{H2CO3 (aq)}$ (carbonic acid.)  
 
 ```
 
