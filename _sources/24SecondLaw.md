@@ -98,7 +98,7 @@ The Entropy ($S^\circ$) of selected substances is shown below. Observe the trend
 | $\ce{F2(g)}$ | $203.34$ |
 | $\ce{Au(s)}$ | $47.7$ |
 | $\ce{Hg(l)}$ | $77.4$ |
-     
+   
 The table of data shown above highlights the following trends:
 1. For a given substance, it increases in the following order: $S_\text{gas} \gg S_\text{liquid}> S_\text{solid}$. This can be explained by greater molecular motion in gases and liquids than in solids (see {numref}`entropy-substance-fig`).
 2. For two monatomic species, the one with the larger molar mass has the greater $S^\circ$. E.g., compare $\ce{He}$ vs. $\ce{Ne}$.
