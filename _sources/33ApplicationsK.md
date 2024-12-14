@@ -32,7 +32,7 @@ If we were to conduct an experiment starting with an initial mixture of $\pu{0.2
         &= 110.5\\
         & \ne K_c
     \end{aligned}
->$$
+$$
 >
 >In the above example, $Q_c>K_c$, the reaction proceeds to the left to reach equilibrium.
 ```
@@ -84,7 +84,7 @@ If the concentrations are $[\ce{N2}] = \pu{2.05 M}$, $[\ce{H2}] = \pu{1.56 M}$, 
 Q_c &= \frac{[\ce{NH3}]^2}{[\ce{N2}][\ce{H2}]^3} = \frac{(1.52)^2}{(2.05)\times(1.56)^3}\\
 &= 0.297    = K_c
  \end{aligned}
->$$ 
+$$ 
 > Therefore, the system is at equilibrium.
     
 >If we "stress" this system by increasing $[\ce{N2}]$ from $\pu{2.05 M}$  to $\pu{3.51 M}$, let's recalculate $Q_c$ 
@@ -93,7 +93,7 @@ Q_c &= \frac{[\ce{NH3}]^2}{[\ce{N2}][\ce{H2}]^3} = \frac{(1.52)^2}{(2.05)\times(
 Q_c &= \frac{(1.52)^2}{(3.51)\times(1.56)^3}\\
 &= 0.173 \ne K_c
 \end{aligned}
->$$ 
+$$ 
 >    
 >Since $Q_c < K_c$, the reaction proceeds to the right side of the above reaction (see {numref}`qckc-relation`). We can easily predict reaction scenarios involving removing or adding reactants or products.
 
@@ -214,7 +214,7 @@ Let's calculate concentrations of all components at equilibrium if we start with
 >
 >$$
 K_c = \frac{[\ce{HI}(g)]^2}{[\ce{H2(g)}][\ce{I2(g)}]} = \frac{(0.378)^2}{(0.051)\times(0.051)} = 54.9 \approx 54.3
->$$
+$$
 >
 >The slight discrepancy in the final calculation can be attributed to rounding.
 ```
