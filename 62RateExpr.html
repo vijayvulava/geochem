@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -248,9 +248,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -395,19 +400,19 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="common-rate-expressions">
 <h1>6.2  Common Rate Expressions<a class="headerlink" href="#common-rate-expressions" title="Link to this heading">#</a></h1>
-<p>As seen in Eqs. <a class="reference internal" href="61Rates.html#equation-rate-ab">(61)</a> and <a class="reference internal" href="61Rates.html#equation-ratelaw-ab">(62)</a>, rate laws are in differential forms. They also show how reactant concentrations impact reaction rates. In many chemical reactions, reactants follow different trends in how they are consumed. Below, we focus on the two most common forms of rate expressions encountered in environmental geosciences.</p>
-<p>Note that the rate laws are represented in differential forms to describe what occurs on a molecular level during a reaction. The integrated forms of the rate laws are used to determine the reaction order and the rate constant value from experimental measurements.</p>
+<p>As seen in Eqs. <a class="reference internal" href="61Rates.html#equation-rate-ab">(62)</a> and <a class="reference internal" href="61Rates.html#equation-ratelaw-ab">(63)</a>, rate laws are in differential forms. They also show how reactant concentrations impact reaction rates. In many chemical reactions, reactants follow different trends in how they are consumed. Below, we focus on the two most common forms of rate expressions encountered in environmental geosciences.</p>
+<p>Note that the rate laws are represented in differential forms to describe what occurs on a molecular level during a reaction. The integrated forms of the rate laws determine the reaction order and the rate constant value from experimental measurements.</p>
 <section id="zero-order-kinetics">
 <h2>Zero-order kinetics<a class="headerlink" href="#zero-order-kinetics" title="Link to this heading">#</a></h2>
 <p>In some reactions, the reaction rate is independent of the reactant concentration. The rates of these zero-order reactions do not vary with increasing or decreasing reactant concentrations. Zero-order rate expression refers to the rate law where the exponents of all reactants are <span class="math notranslate nohighlight">\(0\)</span>. The basic expression is:</p>
 <div class="math notranslate nohighlight" id="equation-rate-ab-0">
-<span class="eqno">(63)<a class="headerlink" href="#equation-rate-ab-0" title="Link to this equation">#</a></span>\[\text{Rate} = \kappa [A]^0[B]^0\]</div>
+<span class="eqno">(64)<a class="headerlink" href="#equation-rate-ab-0" title="Link to this equation">#</a></span>\[\text{Rate} = \kappa [A]^0[B]^0\]</div>
 <p>The differential form of this expression can be shown as:</p>
 <div class="math notranslate nohighlight" id="equation-ratelaw-ab-0">
-<span class="eqno">(64)<a class="headerlink" href="#equation-ratelaw-ab-0" title="Link to this equation">#</a></span>\[\text{Rate} = - \frac{\Delta [A]}{\Delta t} = \kappa\]</div>
+<span class="eqno">(65)<a class="headerlink" href="#equation-ratelaw-ab-0" title="Link to this equation">#</a></span>\[\text{Rate} = - \frac{\Delta [A]}{\Delta t} = \kappa\]</div>
 <p>On integrating the above expression, we obtain,</p>
 <div class="math notranslate nohighlight" id="equation-ratelaw-a-0">
-<span class="eqno">(65)<a class="headerlink" href="#equation-ratelaw-a-0" title="Link to this equation">#</a></span>\[[A]_t  = [A]_0 - \kappa t\]</div>
+<span class="eqno">(66)<a class="headerlink" href="#equation-ratelaw-a-0" title="Link to this equation">#</a></span>\[[A]_t  = [A]_0 - \kappa t\]</div>
 <p>This equation is represented in <a class="reference internal" href="#zero-order-rxn"><span class="std std-numref">Fig. 49</span></a>.</p>
 <figure class="margin-caption align-default" id="zero-order-rxn">
 <img alt="_images/ZeroOrder.png" src="_images/ZeroOrder.png" />
@@ -419,26 +424,48 @@
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Zero-order kinetics</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ol class="arabic simple">
-<li><p class="sd-card-text">Determine the rate constant (<span class="math notranslate nohighlight">\(\kappa\)</span>) of a zero-order reaction if the initial concentration of substance <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\pu{1.5 M}\)</span> and after <span class="math notranslate nohighlight">\(\pu{120 s}\)</span> the concentration of substance <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\pu{0.75 M}\)</span>.
-<strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{0.00624 M s−1}\)</span></p></li>
-<li><p class="sd-card-text">What is the half-life of substance <span class="math notranslate nohighlight">\(A\)</span> if its original concentration     is <span class="math notranslate nohighlight">\(\pu{1.2 M}\)</span>?
-<strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{96 s}\)</span></p></li>
-<li><p class="sd-card-text">If the original concentration of substance <span class="math notranslate nohighlight">\(A\)</span> is reduced to <span class="math notranslate nohighlight">\(\pu{1.0 M}\)</span> in the previous problem, does the half-life decrease, increase, or stay the same? If the half-life changes what is the new half-life?</p></li>
+<li><p class="sd-card-text">Determine the rate constant (<span class="math notranslate nohighlight">\(\kappa\)</span>) of a zero-order reaction if the initial concentration of substance <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\pu{1.5 M}\)</span> and after <span class="math notranslate nohighlight">\(\pu{120 s}\)</span> the concentration of substance <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\pu{0.75 M}\)</span>.</p></li>
 </ol>
-<p class="sd-card-text"><strong>Answer</strong>: The half-life decreases when the original concentration is reduced. New half-life is <span class="math notranslate nohighlight">\(\pu{80 s}\)</span>.</p>
+<blockquote>
+<div><p class="sd-card-text">In this problem, <span class="math notranslate nohighlight">\(A_0 = \pu{1.5 M}\)</span>, <span class="math notranslate nohighlight">\(A_t = \pu{0.75 M}\)</span>, and <span class="math notranslate nohighlight">\(t= \pu{120 S}\)</span>.  Using Eq. <a class="reference internal" href="#equation-ratelaw-a-0">(66)</a>, we can calculate <span class="math notranslate nohighlight">\(\kappa\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+[A]_t  &amp;= [A]_0 - \kappa t\\
+\pu{0.75 M} &amp;= \pu{1.5 M} - \kappa \pu{120 s}\\
+\kappa &amp;= \pu{0.00624 M s−1}
+\end{aligned}\end{split}\]</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p class="sd-card-text">What is the half-life of substance <span class="math notranslate nohighlight">\(A\)</span> if its original concentration is <span class="math notranslate nohighlight">\(\pu{1.2 M}\)</span>?</p></li>
+</ol>
+<blockquote>
+<div><p class="sd-card-text">In this problem, half-life (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>) refers to the time needed for <span class="math notranslate nohighlight">\(A_t = 1/2 \times A_0\)</span>. Since  <span class="math notranslate nohighlight">\(A_0 = \pu{1.2 M}\)</span>, <span class="math notranslate nohighlight">\(A_t = \pu{0.6 M}\)</span>.  We calculated <span class="math notranslate nohighlight">\(\kappa = \pu{0.00624 M s−1}\)</span> in the first problem. Now we can calculate  <span class="math notranslate nohighlight">\(t\)</span> using Eq. <a class="reference internal" href="#equation-ratelaw-a-0">(66)</a> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+[A]_t  &amp;= [A]_0 - \kappa t\\
+\pu{0.6 M} &amp;= \pu{1.2 M} - \pu{0.00624 M s−1} t_{1/2}\\
+t_{1/2} &amp;= \pu{96 s}
+\end{aligned}\end{split}\]</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p class="sd-card-text">If the original concentration of substance <span class="math notranslate nohighlight">\(A\)</span> is reduced to <span class="math notranslate nohighlight">\(\pu{1.0 M}\)</span> in the previous problem, does the half-life decrease, increase, or stay the same? If the half-life changes, what will the new half-life be?</p></li>
+</ol>
+<blockquote>
+<div><p class="sd-card-text">The half-life decreases when the original concentration is reduced. New half-life is <span class="math notranslate nohighlight">\(\pu{80 s}\)</span>.</p>
+</div></blockquote>
 </div>
 </details></section>
 <section id="first-order-kinetics">
 <h2>First-order kinetics<a class="headerlink" href="#first-order-kinetics" title="Link to this heading">#</a></h2>
 <p>A first-order reaction is a reaction that proceeds at a rate that is dependent on the concentration of the reactant. Exponents of all reactants are <span class="math notranslate nohighlight">\(1\)</span> in the expression below:</p>
 <div class="math notranslate nohighlight" id="equation-rate-1">
-<span class="eqno">(66)<a class="headerlink" href="#equation-rate-1" title="Link to this equation">#</a></span>\[\text{Rate} = \kappa [A][B]\]</div>
+<span class="eqno">(67)<a class="headerlink" href="#equation-rate-1" title="Link to this equation">#</a></span>\[\text{Rate} = \kappa [A][B]\]</div>
 <p>For <span class="math notranslate nohighlight">\(A\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-reactant-rate-1">
-<span class="eqno">(67)<a class="headerlink" href="#equation-reactant-rate-1" title="Link to this equation">#</a></span>\[\text{Rate} = - \frac{\Delta [A]}{\Delta t} = \kappa_A [A]\]</div>
+<span class="eqno">(68)<a class="headerlink" href="#equation-reactant-rate-1" title="Link to this equation">#</a></span>\[\text{Rate} = - \frac{\Delta [A]}{\Delta t} = \kappa_A [A]\]</div>
 <p>On integrating,</p>
 <div class="math notranslate nohighlight" id="equation-ratelaw-a-1">
-<span class="eqno">(68)<a class="headerlink" href="#equation-ratelaw-a-1" title="Link to this equation">#</a></span>\[[A]_t  = [A]_0 e^{- \kappa_A t}\quad \text{or} \quad \ln \frac{[A]_t}{[A]_0} = - \kappa_A t\]</div>
+<span class="eqno">(69)<a class="headerlink" href="#equation-ratelaw-a-1" title="Link to this equation">#</a></span>\[[A]_t  = [A]_0 e^{- \kappa_A t}\quad \text{or} \quad \ln \frac{[A]_t}{[A]_0} = - \kappa_A t\]</div>
 <p>This equation is represented in <a class="reference internal" href="#first-order-rxn"><span class="std std-numref">Fig. 50</span></a>.</p>
 <figure class="margin-caption align-default" id="first-order-rxn">
 <img alt="_images/FirstOrder.png" src="_images/FirstOrder.png" />
@@ -449,8 +476,24 @@
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: First-order kinetics</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">If <span class="math notranslate nohighlight">\(\pu{3.0 g}\)</span> of substance <span class="math notranslate nohighlight">\(B\)</span> decomposes for <span class="math notranslate nohighlight">\(\pu{36 min}\)</span> the mass of unreacted <span class="math notranslate nohighlight">\(B\)</span> remaining is found to be <span class="math notranslate nohighlight">\(\pu{0.375 g}\)</span>. What is the half-life of this reaction if it follows first-order kinetics?</p>
-<p class="sd-card-text"><strong>Answer</strong>: <span class="math notranslate nohighlight">\(\pu{12 min}\)</span></p>
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\(\pu{3.0 g}\)</span> of substance <span class="math notranslate nohighlight">\(B\)</span> decomposes for <span class="math notranslate nohighlight">\(\pu{36 min}\)</span> and the mass of unreacted <span class="math notranslate nohighlight">\(B\)</span> remaining is found to be <span class="math notranslate nohighlight">\(\pu{0.375 g}\)</span>, what is the half-life of this reaction if it follows first-order kinetics?</p>
+<blockquote>
+<div><p class="sd-card-text">In this problem, <span class="math notranslate nohighlight">\(B_0 = \pu{3.0 g}\)</span> and <span class="math notranslate nohighlight">\(B_t = \pu{0.375 g}\)</span>, and <span class="math notranslate nohighlight">\(t= \pu{36 min}\)</span>. Using Eq. <a class="reference internal" href="#equation-ratelaw-a-1">(69)</a>, we can calculate <span class="math notranslate nohighlight">\(\kappa\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\ln \frac{[B]_t}{[B]_0} &amp;= - \kappa_B t\\
+\ln \frac{\pu{0.375 g}}{\pu{3.0 g}} &amp;= - \kappa_B \pu{36 min}\\
+\kappa &amp;= \pu{0.0578 min-1}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Now that we have determined <span class="math notranslate nohighlight">\(\kappa\)</span> for substance <span class="math notranslate nohighlight">\(B\)</span>, we can calculate <span class="math notranslate nohighlight">\(t_{1/2}\)</span> (when <span class="math notranslate nohighlight">\([B]_t}= 0.5 \times[B]_0\)</span>) for this substance as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\ln \frac{[B]_t}{[B]_0} &amp;= - \kappa_B t\\
+\ln \frac{0.5\time [B]_0}{[B]_0}  &amp;= - \kappa_B t_{1/2}\\
+\ln 0.5 &amp;= \pu{0.0578 min-1} t_{1/2}\\
+t_{1/2} &amp;= \pu{12 min}
+\end{aligned}\end{split}\]</div>
+</div></blockquote>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -459,7 +502,7 @@
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p class="sd-card-text">Time, <span class="math notranslate nohighlight">\(\pu{s}\)</span></p></th>
-<th class="head"><p class="sd-card-text">Conc, <span class="math notranslate nohighlight">\(\pu{mm of Hg}\)</span></p></th>
+<th class="head"><p class="sd-card-text">Conc, <span class="math notranslate nohighlight">\(\pu{ppb}\)</span></p></th>
 </tr>
 </thead>
 <tbody>
@@ -485,7 +528,9 @@
 </table>
 </div>
 <p class="sd-card-text">Determine (a) the reaction order and (b) the rate constant for this reaction.</p>
-<p class="sd-card-text"><strong>Answer</strong>: On plotting these data in a <span class="math notranslate nohighlight">\(x-y\)</span> graph resembling <a class="reference internal" href="#first-order-rxn"><span class="std std-numref">Fig. 50</span></a> and therefore, this is a first-order reaction. Plot the <span class="math notranslate nohighlight">\(\ln (\text{Conc}) \)</span> vs. <span class="math notranslate nohighlight">\(\pu{Time}\)</span>, and the slope of this straight line is the rate constant.</p>
+<blockquote>
+<div><p class="sd-card-text">On plotting these data in a <span class="math notranslate nohighlight">\(x-y\)</span> graph resembling <a class="reference internal" href="#first-order-rxn"><span class="std std-numref">Fig. 50</span></a> and therefore, this is a first-order reaction. Plot the <span class="math notranslate nohighlight">\(\ln (\text{Conc}) \)</span> vs. <span class="math notranslate nohighlight">\(\pu{Time}\)</span>, and the slope of this straight line is the rate constant.</p>
+</div></blockquote>
 </div>
 </details></section>
 </section>
@@ -608,8 +653,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

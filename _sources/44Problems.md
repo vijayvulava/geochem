@@ -73,7 +73,7 @@ H4SiO4 (aq) <=> H3SiO4- (aq) + H+ (aq) \qquad $K_a = 10^{-9.83}$
 	2. $\ce{NaOH}$ (note: the product is $\ce{Zn(OH)4^2- (aq)}$).
 
 18. $\ce{Cu(OH)2 (s)}$ is an amphoteric compound and dissolves according to the shown after the question. Answer the following questions and assume that the water temperature is $\pu{25 ^\circ C}$.
-	1. Excess copper hydroxide is added to a beaker of water, i.e., solid copper hydroxide is present in the water. The solution $p\ce{H}$ is adjusted to $10$ using a base. Calculate $[\ce{Cu(OH)3- (aq)}]$ in the solution at equilibrium. 
+	1. Excess copper hydroxide is added to a beaker of water, i.e., solid copper hydroxide is present in the water. Using a base, the solution $p\ce{H}$ is adjusted to $10$. Calculate $[\ce{Cu(OH)3- (aq)}]$ in the solution at equilibrium. 
 	2. A strong acid is added to the solution until the $p\ce{H}$ is reduced to $4$. Will the amount of $\ce{Cu(OH)3- (aq)}$ in the beaker increase or decrease? Explain. At this $p\ce{H}$, calculate $[\ce{Cu(OH)3- (aq)}]$ in the solution. 
 
 $$\ce{

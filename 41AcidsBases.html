@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -248,9 +248,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -564,12 +569,15 @@ H2O &lt;=&gt; H+ + OH-
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Calculating <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span> and <span class="math notranslate nohighlight">\(\ce{OH-}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\{\ce{H3O+}\} = \pu{0.1 M}\)</span> in stomach acid. Let’s calculate the <span class="math notranslate nohighlight">\(\ce{OH-}\)</span> in stomach acid at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. Let’s substitute <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span> into Eq. <a class="reference internal" href="#equation-kw2">(37)</a>.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\{\ce{H3O+}\} = \pu{0.1 M}\)</span> in stomach acid. Calculate the <span class="math notranslate nohighlight">\(\ce{OH-}\)</span> in stomach acid at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<blockquote>
+<div><p class="sd-card-text">Let’s substitute <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span> into Eq. <a class="reference internal" href="#equation-kw2">(37)</a>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
         \pu{1e-14} &amp;=  \{\ce{H3O+}\}\{\ce{OH-}\} =  (0.1)\{\ce{OH-}\}\\
         \text{or,}\, \{\ce{OH-}\} &amp;= \frac{\pu{1e-14}}{0.1} =\pu{1.0e-13 M}
     \end{aligned}\end{split}\]</div>
+</div></blockquote>
 </div>
 </details></section>
 <section id="p-ce-h-and-p-ce-oh">
@@ -577,14 +585,17 @@ H2O &lt;=&gt; H+ + OH-
 <p>The acidity of an aqueous solution depends on <span class="math notranslate nohighlight">\(\{\ce{H3O+}\}\)</span>. This concentration can range over many orders of magnitude, making reporting the numbers cumbersome. To describe the acidity of a solution, rather than report the molar concentration of <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span>, we typically use the more convenient scale. The <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a solution is defined as the negative base-10 logarithm of the <span class="math notranslate nohighlight">\([\ce{H3O+}]\)</span> (in <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> or <span class="math notranslate nohighlight">\(\pu{M}\)</span>).</p>
 <div class="math notranslate nohighlight" id="equation-ph">
 <span class="eqno">(38)<a class="headerlink" href="#equation-ph" title="Link to this equation">#</a></span>\[p\ce{H} = -\log_{10}[\ce{H3O+}]\]</div>
-<p><span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a solution is dimensionless, and concentration units are removed before applying the logarithm. Conversely, the original units are added back when solution concentration is calculated from <span class="math notranslate nohighlight">\(p\ce{H}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a solution is dimensionless, and concentration units are removed before applying the logarithm. Conversely, the original units are returned when solution concentration is calculated from <span class="math notranslate nohighlight">\(p\ce{H}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Calculating <span class="math notranslate nohighlight">\(p\ce{H}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let’s calculate the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of pure water at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. From previous section we know that <span class="math notranslate nohighlight">\(\{\ce{H3O+}\} =  \pu{1e-7}{M}\)</span>. Therefore,</p>
+<p class="sd-card-text">Calculate the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of pure water at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<blockquote>
+<div><p class="sd-card-text">From the previous section we know that <span class="math notranslate nohighlight">\(\{\ce{H3O+}\} =  \pu{1e-7}{M}\)</span>. Therefore,</p>
 <div class="math notranslate nohighlight">
 \[p\ce{H} = -\log_{10}(\pu{1e-7}) = 7.0
 \]</div>
+</div></blockquote>
 </div>
 </details><p>Our understanding of <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span> and <span class="math notranslate nohighlight">\(\ce{OH-}\)</span> in water can be summarized as shown in <a class="reference internal" href="#h3o-oh-ph"><span class="std std-numref">Table 13</span></a>.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="h3o-oh-ph">
@@ -750,8 +761,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

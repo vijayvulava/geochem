@@ -23,7 +23,7 @@ $$
 \end{align*}
 $$
 
-The produced $\ce{H+}$ ions are the source of acidity in rainwater. Typically, the presence of \(\ce{H+}\) lowers the $p\ce{H}$ of rainwater to approximately 5.7. As we learned from thermodynamic principles, increasing concentrations of \(\ce{CO2(g)}\) in these reactions favor the formation of more $\ce{H+}$ ions, leading to increased water acidity. This rise in acidity in ocean water has been linked to a decrease in the concentration of carbonate ions (\(\ce{CO3^2-}\)), which are crucial for marine calcifying organisms, such as corals. For more information, see [Ocean Acidification | National Climate Assessment (globalchange.gov)](https://nca2014.globalchange.gov/report/our-changing-climate/ocean-acidification). Thermodynamic principles also predict that a decrease in $p\ce{H}$ will result in lower acidity in water.
+The produced $\ce{H+}$ ions are the source of acidity in rainwater. Typically, the presence of ($\ce{H+}$) lowers the $p\ce{H}$ of rainwater to approximately 5.7. As we learned from thermodynamic principles, increasing concentrations of ($\ce{CO2(g)}$) in these reactions favor the formation of more $\ce{H+}$ ions, leading to increased water acidity. This rise in acidity in ocean water has been linked to a decrease in the concentration of carbonate ions ($\ce{CO3^2-}$), which are crucial for marine calcifying organisms, such as corals. For more information, see [Ocean Acidification | National Climate Assessment (globalchange.gov)](https://nca2014.globalchange.gov/report/our-changing-climate/ocean-acidification). Thermodynamic principles also predict that a decrease in $p\ce{H}$ will result in lower acidity in water.
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/L2bxwnm7JG4" 

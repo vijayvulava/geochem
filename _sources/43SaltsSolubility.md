@@ -24,23 +24,23 @@ Salts from strong bases and weak acids hydrolyze, giving it a $p\ce{H}>7$. The 
 ```{dropdown} Example: Salt of a weak acid and a strong base
 Consider the salt $\ce{CH3COONa}$ (sodium acetate), which forms as a result of a neutralization reaction between a weak acid, $\ce{CH3COOH}$ and a strong base, $\ce{NaOH}$.
 
-When dissolved in water, $\ce{CH3COONa}$ dissociates as shown below:
-
-$$
+>When dissolved in water, $\ce{CH3COONa}$ dissociates as shown below:
+>
+>$$
 \ce{CH3COONa (s) <=> Na+ (aq) + CH3COO- (aq) }
 $$
-
-The $\ce{Na+}$ does not undergo acid or base ionization and does not affect the solution $p\ce{H}$. 
-
-The acetate ion, $\ce{CH3COO-}$, is the conjugate base of acetic acid, $\ce{CH3COOH}$, and so its base ionization (or base hydrolysis) reaction is represented by
-
-$$
+>
+>The $\ce{Na+}$ does not undergo acid or base ionization and does not affect the solution $p\ce{H}$. 
+>
+>The acetate ion, $\ce{CH3COO-}$, is the conjugate base of acetic acid, $\ce{CH3COOH}$, and so its base ionization (or base hydrolysis) reaction is represented by
+>
+>$$
 \ce{
 CH3COO− (aq) + H2O (l) <=>  CH3COOH (aq) + OH− (aq)
 }
 $$
-
-Dissolving sodium acetate in water yields a solution of inert cations ($\ce{Na+}$) and weak base anions ($\ce{CH3COO-}$), resulting in a basic solution (final product contains $\ce{OH-}$).
+>
+>Dissolving sodium acetate in water yields a solution of inert cations ($\ce{Na+}$) and weak base anions ($\ce{CH3COO-}$), resulting in a basic solution (final product contains $\ce{OH-}$).
 ```
 
 Salts of weak bases and strong acids do hydrolyze, which gives it a $p\ce{H}<7$. This is because the anion will become a spectator ion and fail to attract the $\ce{H+}$, while the cation from the weak base will donate a $\ce{H+}$ to water forming a $\ce{H3O+}$.
@@ -48,25 +48,25 @@ Salts of weak bases and strong acids do hydrolyze, which gives it a $p\ce{H}<7$.
 ```{dropdown} Example: Salt of a strong acid and a weak base
 Consider ammonium chloride ($\ce{NH4Cl}$), which forms during a reaction between a strong acid $\ce{HCl}$ and a weak base $\ce{NH3}$
 
-When dissolved in water, $\ce{NH4Cl}$ dissociates as shown below:
-
-$$
+>When dissolved in water, $\ce{NH4Cl}$ dissociates as shown below:
+>
+>$$
 \ce{
 NH4Cl (s) <=> NH4+ (aq) + Cl− (aq)
 }
 $$
-
-The $\ce{Cl-}$ is the conjugate base of the strong acid, $\ce{HCl}$, and does not participate in further reactions or have an impact on $p\ce{H}$.
-
-The $\ce{NH4+}$ is the conjugate acid of $\ce{NH3}$; its acid ionization (or acid hydrolysis) reaction is represented by
-
-$$
+>
+>The $\ce{Cl-}$ is the conjugate base of the strong acid, $\ce{HCl}$, and does not participate in further reactions or have an impact on $p\ce{H}$.
+>
+>The $\ce{NH4+}$ is the conjugate acid of $\ce{NH3}$; its acid ionization (or acid hydrolysis) reaction is represented by
+>
+>$$
 \ce{
 NH4+ (aq) + H2O (l) <=> H3O+ (aq) + NH3 (aq)
 }
 $$
-
-Dissolving $\ce{NH4Cl}$ in water yields a solution of weak acid cations ($\ce{NH4+}$) and inert anions ($\ce{Cl−}$), resulting in an acidic solution (final product contains $\ce{H3O+}$).
+>
+>Dissolving $\ce{NH4Cl}$ in water yields a solution of weak acid cations ($\ce{NH4+}$) and inert anions ($\ce{Cl−}$), resulting in an acidic solution (final product contains $\ce{H3O+}$).
 ```
 
 Salts from a weak base and weak acid also hydrolyze as the others, but a bit more complex and will require the $K_a$ and $K_b$ to be considered. The stronger acid or base will be the dominant factor in determining whether the solution is acidic or basic. The cation will be the acid, and the anion will be the base, forming either a $\ce{H3O+}$ or a $\ce{OH-}$ depending on which ion reacts more readily with the water.
@@ -86,12 +86,12 @@ $$\ce{NaCl(s) → Na+(aq) + Cl–(aq)}$$
 
 Both types of reactions can be in equilibrium under the given set of conditions.
 
-Writing the precipitation‐dissolution equilibria with the solid phase as a reactant and the metals and ligands (anions) as products in their uncomplexed forms is common. For equilibria of this form, the equilibrium constant ($K$) is given a unique name. It is called the ***solubility product*** and given the symbol $K_{s0}$. The $s$ in $K_{s0}$ indicates that a solid phase is involved, and the zero (not the letter O) indicates that the metal and ligand are uncomplexed. 
+It is common to write the precipitation‐dissolution equilibria with the solid phase as a reactant and the metals and ligands (anions) as products in their uncomplexed forms. For equilibria of this form, the equilibrium constant ($K$) is given a unique name. It is called the ***solubility product*** and given the symbol $K_{s0}$. The $s$ in $K_{s0}$ indicates that a solid phase is involved, and the zero (not the letter O) indicates that the metal and ligand are uncomplexed. 
 
 ```{dropdown} Example: Solubility product notation
-The equilibrium constant for an equilibrium written with the solid phase as a reactant and the metals and ligands as products in their uncomplexed forms
+The equilibrium constant for an equilibrium is written with the solid phase as a reactant and the metals and ligands as products in their uncomplexed forms, as shown below.
 
-$$
+>$$
 \begin{align}
 \ce{
 NaCl(s) &<=> Na+ + Cl–  \qquad     $ K = K_{s0}$\\
@@ -99,10 +99,10 @@ CaCO3(s) &<=> Ca^2+ + CO3^2–    \qquad   $K = K_{s0}$
 }
 \end{align}
 $$
-
-The metal and ligand must be uncomplexed to use the $K_{s0}$ label.
-
-The equilibrium constant for the equilibrium $\ce{CaCO3(s) + H+ = Ca^2+ + HCO3–}$ cannot be called $K_{s0}$.
+>
+>The metal and ligand must be uncomplexed to use the $K_{s0}$ label.
+>
+>Note that the equilibrium constant for the equilibrium $\ce{CaCO3(s) + H+ = Ca^2+ + HCO3–}$ cannot be called $K_{s0}$.
 ```
 
 For a mineral solid, $\ce{M_xL_y (s)}$,
@@ -112,12 +112,12 @@ $$
 
 $$
 Let's write this reaction's equilibrium (law of mass) expression.
+
 ```{math}
 :label: solubility-product
 
 K_{s0} = \frac{\{\ce{M^{y+}}\}^x \{\ce{L^{x-}}\}^y}{\{\ce{M_xL_y (s)}\}} 
  = \{\ce{M^{y+}}\}^x \{\ce{L^{x-}}\}^y
-
 
 ```
 
@@ -139,9 +139,9 @@ The product of the free metal and ligand activities is often called the ***ion a
 
 In a particular solution $[\ce{Ca^2+}] = \pu{e-3 mol L-1}$  and $[\ce{SO^2-}] = \pu{e-2 mol L-1}$. At $\pu{25 ^\circ C}$, is the solution over- or undersaturated with respect to gypsum ($\ce{CaSO4},\, K_{s0}=10^{-4.6}$)?
 
-Let's calculate the IAP of this system:
-
-$$IAP = [\ce{Ca^2+}][\ce{SO^2-}] = (10^{-3})(10^{-2}) = 10^{-5}$$
-
-Since $IAP < K_{s0}$, the solution is undersaturated for gypsum.	
+>Let's calculate the IAP of this system:
+>
+>$$IAP = [\ce{Ca^2+}][\ce{SO^2-}] = (10^{-3})(10^{-2}) = 10^{-5}$$
+>
+>Since $IAP < K_{s0}$, the solution is undersaturated for gypsum.	
 ```

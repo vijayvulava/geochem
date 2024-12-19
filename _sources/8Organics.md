@@ -20,7 +20,7 @@ In this chapter, we will become familiar with the basic principles of organic ch
   
 Fossil fuels are composed of hydrocarbons, which are compounds made up of hydrogen and carbon atoms. The carbon in fossil fuels primarily takes the form of hydrocarbons such as methane, ethane, propane, butane, and octane. These hydrocarbons are created from the remains of dead plants and animals that have been buried and subjected to heat and pressure over millions of years.
 
-Natural gas is mainly composed of methane ($\ce{CH4}$), a simple hydrocarbon, but it can also include other hydrocarbons such as ethane ($\ce{C2H6}$), propane ($\ce{3H8}$), and butane ($\ce{C4H10}$).
+Natural gas is mainly composed of methane ($\ce{CH4}$), a simple hydrocarbon, but it can also include other hydrocarbons such as ethane ($\ce{C2H6}$), propane ($\ce{C3H8}$), and butane ($\ce{C4H10}$).
 
 Coal primarily consists of carbon but contains small amounts of other elements, such as hydrogen, sulfur, oxygen, and nitrogen. Coal is formed from the remains of plants that existed millions of years ago, and the carbon in coal originates from the carbon present in these plants. The characteristics of this carbon can vary depending on factors such as the type of plant, the environment in which it grew, and the period in which it existed.  
 

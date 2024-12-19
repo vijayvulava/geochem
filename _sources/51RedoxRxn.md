@@ -14,17 +14,16 @@ $$
 &-> 2 NaCl
 } $$
 
-Here is $\ce{Na}$ is losing $\ce{e-}$ to become $\ce{Na+}$ and is oxidized. Also, $\ce{Cl2}$ is gaining $\ce{e-}$ to become $\ce{Cl-}$ and is reduced.
-
+>Here $\ce{Na}$ is losing an $\ce{e-}$ to become $\ce{Na+}$ and is oxidized. Also, $\ce{Cl2}$ is gaining $\ce{e-}$ to become $\ce{Cl-}$ and is reduced.
+>
 $$ 
-\begin{align*} 
+>\begin{align*} 
 \ce{
 2 Fe + O2 &-> 2 Fe^2+ + 2O^2- \\
 &-> 2 FeO
 } \end{align*} $$
-
-Here $\ce{Fe}$ is losing $\ce{e-}$ to become $\ce{Fe^2+}$ and is oxidized.
-While, $\ce{O2}$ is gaining $\ce{e-}$ to become $\ce{O^2-}$ and is reduced.
+>
+>Here $\ce{Fe}$ is losing $\ce{e-}$ to become $\ce{Fe^2+}$ and is oxidized. While, $\ce{O2}$ is gaining $\ce{e-}$ to become $\ce{O^2-}$ and is reduced.
 ```
 
 Representing "half" of a redox reaction is often convenient - the oxidation half or the reduction half. Reactions that only show the oxidation or reduction of an element are called half reactions. Half reactions help balance redox reactions.
@@ -33,7 +32,7 @@ Representing "half" of a redox reaction is often convenient - the oxidation half
 
 Below are examples of oxidation reactions where an element loses $\ce{e-}$.
 
-$$ \begin{align*} \ce{
+>$$ \begin{align*} \ce{
 Fe(s) &-> Fe^2+ + 2 e- \\
 &-> Fe^3+ + 3 e- \\
 C(s) &-> C^4+ + 4 e-
@@ -41,7 +40,7 @@ C(s) &-> C^4+ + 4 e-
 
 Below are reduction reactions where an element gains $\ce{e-}$.
 
-$$ \begin{align*} 
+>$$ \begin{align*} 
 \ce{
 O + 2 e- &-> O^2- \\
 N + 3 e- &-> N^3-
@@ -53,9 +52,11 @@ The above examples are shown in the form of a ***half-reaction***, where oxidati
 
 ```{dropdown} Example: Balancing half-reactions 
 
-Let's combine the reactions to write a balanced redox reaction. Since each half-reaction produces 2  $\ce{e-}$ while half-reaction requires 4 $\ce{e-}$, multiply half-reaction by 2. Now combine the half-reactions and cancel the $\ce{e-}$.
+Let's combine the reactions to write a balanced redox reaction. 
 
-$$ \begin{align*} 
+>Since each half-reaction produces 2  $\ce{e-}$ while half-reaction requires 4 $\ce{e-}$, multiply half-reaction by 2. Now combine the half-reactions and cancel the $\ce{e-}$.
+>
+>$$ \begin{align*} 
 \ce{
 2 Fe(s) &-> 2 Fe^2+ + 4e- \\
 O2(g) + 4 e- &-> 2 O^2- \\
@@ -63,8 +64,8 @@ O2(g) + 4 e- &-> 2 O^2- \\
 2 Fe(s) + O2(g) &-> 2 Fe^2+ + 2 O^2-
 } 
 \end{align*} $$
-
-Note: The $\ce{e-}$ from the half-reactions appear on opposite sides to be able to cancel out.
+>
+>Note: The $\ce{e-}$ from the half-reactions appear on opposite sides to be able to cancel out.
 ```
  
 
@@ -78,7 +79,7 @@ $$\ce{
 2 Fe + O2 -> 2 FeO
 }$$
 
-On left-side of reaction, $\ce{Fe}$ is "helping" $\ce{O2}$ reduce is, hence, a reducing agent. Likewise, $\ce{O2}$ is helping $\ce{Fe}$ oxidize and is an oxidizing agent.
+>On left-side of reaction, $\ce{Fe}$ is "helping" $\ce{O2}$ reduce is, hence, a reducing agent. Likewise, $\ce{O2}$ is helping $\ce{Fe}$ oxidize and is an oxidizing agent.
 ```
 
 
@@ -105,18 +106,20 @@ $\ce{Fe^3+} = +3$, $\ce{O^2-} = -2$
 
 ```{dropdown} Example: Determining oxidation states of nitrogen 
 
-Let's determine the OS of $\ce{N}$ in $\ce{NH3}$, $\ce{NO3-}$, $\ce{NO2-}$, and $\ce{N2}$. Per the OS rules, OS for $\ce{H}$ and $\ce{O}$ in these compounds are $+1$ and $-2$, respectively.
+Determine the OS of $\ce{N}$ in $\ce{NH3}$, $\ce{NO3-}$, $\ce{NO2-}$, and $\ce{N2}$. 
 
-We can use a simple algebra trick to determine the OS for an unknown. Let's start with $\ce{NH3}$. Let's call OS of $\ce{N}$ as $x$. Therefore, based on the above rules, $x+3(+1) = 0$. Or, $x = -3$, or OS for $\ce{N}$ in $\ce{NH3}$ is 3.
-
-Similarly, let's write the algebraic notation for $\ce{NO3-}$. $x+3(-2) = -1$ or, $x = +5$.
-
-Therefore, the OS of all $\ce{N}$ compounds are:
-1. $\ce{NH3}$ : $-3$
-2. $\ce{NO3-}$: $+5$
-3. $\ce{NO2-}$: $+3$
-4. $\ce{N2}$: $0$
-
-We can rank these $\ce{N}$ compounds from the most oxidized to most reduced forms as follows: $\ce{NO3-}$, $\ce{NO2-}$, $\ce{N2}$, and $\ce{NH3}$.
+>Per the OS rules, OS for $\ce{H}$ and $\ce{O}$ in these compounds are $+1$ and $-2$, respectively.
+>
+>We can use a simple algebra trick to determine the OS for an unknown. Let's start with $\ce{NH3}$. Let's call OS of $\ce{N}$ as $x$. Therefore, based on the above rules, $x+3(+1) = 0$. Or, $x = -3$, or OS for $\ce{N}$ in $\ce{NH3}$ is 3.
+>
+>Similarly, let's write the algebraic notation for $\ce{NO3-}$. $x+3(-2) = -1$ or, $x = +5$.
+>
+>Therefore, the OS of all $\ce{N}$ compounds are:
+>1. $\ce{NH3}$ : $-3$
+>2. $\ce{NO3-}$: $+5$
+>3. $\ce{NO2-}$: $+3$
+>4. $\ce{N2}$: $0$
+>
+>We can rank these $\ce{N}$ compounds from the most oxidized to most reduced forms as follows: $\ce{NO3-}$, $\ce{NO2-}$, $\ce{N2}$, and $\ce{NH3}$.
 ```
  

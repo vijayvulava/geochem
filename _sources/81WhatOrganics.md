@@ -45,7 +45,7 @@ Isomers for an alkane with the same condensed formula: $\ce{C4H10}$.
 Image source: [21.1 Hydrocarbons - Chemistry: Atoms First 2e | OpenStax](https://openstax.org/books/chemistry-atoms-first-2e/pages/21-1-hydrocarbons)
 ```
 
-The compounds *n*-butane and 2-methylpropane are structural isomers (the term constitutional isomers is also commonly used). Constitutional isomers have the same molecular formula but different spatial arrangements of the atoms in their molecules. The n-butane molecule contains an unbranched chain, meaning no carbon atom is bonded to more than two other carbon atoms. We use the term normal, or the prefix *n*, to refer to a chain of carbon atoms without branching. The compound 2–methylpropane has a branched chain (the carbon atom in the center of the Lewis structure is bonded to three other carbon atoms)
+The compounds *n*-butane and 2-methylpropane are structural isomers (the term constitutional isomers is also commonly used). Constitutional isomers have the same molecular formula but different spatial arrangements of the atoms in their molecules. The *n*-butane molecule contains an unbranched chain, meaning no carbon atom is bonded to more than two other carbon atoms. We use the term normal, or the prefix *n*, to refer to a chain of carbon atoms without branching. The compound 2–methylpropane has a branched chain (the carbon atom in the center of the Lewis structure is bonded to three other carbon atoms)
 
 ## Hydrocarbons
 
@@ -152,7 +152,7 @@ PAHs are composed of multiple aromatic hydrocarbon (benzene-like) rings. The sim
 PAHs can be harmful to human health. They can cause cancer, birth defects, and other health problems. Exposure to PAHs can occur through the air, water, food, and soil. The Environmental Protection Agency (EPA) has set limits on the amount of PAHs in drinking water.
 
 
-```{figure} https://www.atsdr.cdc.gov/csem/polycyclic-aromatic-hydrocarbons/images/pah-small.jpg
+```{figure} https://www.researchgate.net/publication/341246252/figure/fig1/AS:888913929465857@1588945004147/Chemical-structures-of-common-polycyclic-aromatic-hydrocarbons-PAHs.png
 ---
 name: pahs
 figclass: margin-caption

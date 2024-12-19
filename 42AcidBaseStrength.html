@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -248,9 +248,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -429,13 +434,24 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of strong acids</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Calculate the <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of <span class="math notranslate nohighlight">\(\pu{0.035 M}\)</span> <span class="math notranslate nohighlight">\(\ce{HI}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
-<p class="sd-card-text">Because <span class="math notranslate nohighlight">\(\ce{HI}\)</span> is a strong acid, it produces <span class="math notranslate nohighlight">\(\pu{0.035 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span>. Therefore, <span class="math notranslate nohighlight">\(p\ce{H}= -\log_{10}(0.035) = 1.46\)</span>.</p>
+<blockquote>
+<div><p class="sd-card-text">Because <span class="math notranslate nohighlight">\(\ce{HI}\)</span> is a strong acid, it reacts as follows:</p>
+<div class="math notranslate nohighlight">
+\[\ce{
+HI + H2O -&gt; H3O+ + I-
+}\]</div>
+<p class="sd-card-text">Therefore, according to the reaction stoichiometry, <span class="math notranslate nohighlight">\(\pu{0.035 M}\)</span> <span class="math notranslate nohighlight">\(\ce{HI}\)</span> produces <span class="math notranslate nohighlight">\(\pu{0.035 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{H3O+}\)</span>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[p\ce{H}= -\log_{10}(\ce{H3O+}) = -\log_{10}(0.035) = 1.46\]</div>
+</div></blockquote>
 </div>
 </details><p>Hydroxides of alkali metals (Group 1 - e.g., <span class="math notranslate nohighlight">\(\ce{LiOH}\)</span>, <span class="math notranslate nohighlight">\(\ce{NaOH}\)</span>, <span class="math notranslate nohighlight">\(\ce{KOH}\)</span>, <span class="math notranslate nohighlight">\(\ce{RbOH}\)</span>, <span class="math notranslate nohighlight">\(\ce{CsOH}\)</span>) and alkaline earth metals (Group 2 - e.g., <span class="math notranslate nohighlight">\(\ce{Ca(OH)2}\)</span>, <span class="math notranslate nohighlight">\(\ce{Mg(OH)2}\)</span>, and <span class="math notranslate nohighlight">\(\ce{Ba(OH)2}\)</span>) are strong bases.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of strong bases</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of <span class="math notranslate nohighlight">\(\pu{0.018 M}\)</span>  NaOH at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. Because <span class="math notranslate nohighlight">\(\ce{NaOH}\)</span> is a strong base, it produces <span class="math notranslate nohighlight">\(\pu{0.018 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. There are two ways we can calculate <span class="math notranslate nohighlight">\(p\ce{H}\)</span>.</p>
+<p class="sd-card-text">Calculate <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of <span class="math notranslate nohighlight">\(\pu{0.018 M}\)</span>  NaOH at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<blockquote>
+<div><p class="sd-card-text">Because <span class="math notranslate nohighlight">\(\ce{NaOH}\)</span> is a strong base, it produces <span class="math notranslate nohighlight">\(\pu{0.018 M}\)</span> of <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. There are two ways we can calculate <span class="math notranslate nohighlight">\(p\ce{H}\)</span>.</p>
 <p class="sd-card-text">Approach 1. Substitute <span class="math notranslate nohighlight">\(\{\ce{OH-}\}\)</span> in Eq. <a class="reference internal" href="41AcidsBases.html#equation-kw2">(37)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -444,12 +460,15 @@ frameborder="0" allowfullscreen class="video"></iframe>
 &amp;= \frac{\pu{1.0e-14}}{(0.018)} = \pu{5.56e-13}\\
 p\ce{H} &amp;= -\log(\pu{5.56e-13}) =12.25
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">Approach 2: Calculate <span class="math notranslate nohighlight">\(p\ce{OH}\)</span> from <span class="math notranslate nohighlight">\(\{\ce{OH-}\}\)</span> and substitute this value in Eq. <a class="reference internal" href="41AcidsBases.html#equation-phpoh">(40)</a>:</p>
+</div></blockquote>
+<blockquote>
+<div><p class="sd-card-text">Approach 2: Calculate <span class="math notranslate nohighlight">\(p\ce{OH}\)</span> from <span class="math notranslate nohighlight">\(\{\ce{OH-}\}\)</span> and substitute this value in Eq. <a class="reference internal" href="41AcidsBases.html#equation-phpoh">(40)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 p\ce{OH} &amp;= -\log(0.018) = 1.75\\
 p\ce{H} &amp;= 14.0 - p\ce{OH} = 14.0-1.75 = 12.25
 \end{aligned}\end{split}\]</div>
+</div></blockquote>
 </div>
 </details></section>
 <section id="acid-ionization-constants">
@@ -468,7 +487,9 @@ HA &lt;=&gt;[H2O] H+ + A-
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Equilibrium <span class="math notranslate nohighlight">\(p\ce{H}\)</span>  of weak acid solutions</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let’s calculate  at equilibrium of <span class="math notranslate nohighlight">\(\pu{0.5 M}\)</span> <span class="math notranslate nohighlight">\(\ce{HF}\)</span> solution at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>. This equilibrium reaction is</p>
+<p class="sd-card-text">Calculate  at equilibrium of <span class="math notranslate nohighlight">\(\pu{0.5 M}\)</span> <span class="math notranslate nohighlight">\(\ce{HF}\)</span> solution at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<blockquote>
+<div><p class="sd-card-text">This equilibrium reaction is</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 HF + H2O &lt;=&gt; H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
@@ -521,12 +542,14 @@ HF + H2O &lt;=&gt; H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
 <div class="math notranslate nohighlight">
 \[K_a = \frac{\{\ce{H3O+}\}\{\ce{F-}\}}{\{\ce{HF}\}} = \frac{(+x)(+x)}{(0.5-x)} = \pu{7.1e-4}\]</div>
 <p class="sd-card-text">The above expression can be simplified into a quadratic expression and be solved for <span class="math notranslate nohighlight">\(x\)</span>. In this case, <span class="math notranslate nohighlight">\(x = \pu{1.9e-2}\)</span> or from the above table <span class="math notranslate nohighlight">\(\{\ce{H3O+}\} = x = \pu{1.9e-2}\)</span> or <span class="math notranslate nohighlight">\(p\ce{H} = 1.72\)</span>.</p>
+</div></blockquote>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Relative abundance of weak acids</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">We can calculate the relative abundance of the conjugate base of a weak acid by examining the equilibrium expression. In the <span class="math notranslate nohighlight">\(\ce{HF}\)</span> ionization reaction shown in the previous example, the expression can be rearranged as</p>
-<div class="math notranslate nohighlight">
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[\begin{split}
  \begin{align*}
     K_a &amp;= \frac{\{\ce{H3O+}\}\{\ce{F-}\}}{\{\ce{HF}\}}\\
@@ -537,6 +560,7 @@ HF + H2O &lt;=&gt; H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
 <p class="sd-card-text">Percent ionization is calculated as follows:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\{\ce{F-}\}}{\{\ce{HF}\}} \times \pu{100 \%}\]</div>
+</div></blockquote>
 </div>
 </details><aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -563,13 +587,15 @@ CO2(aq) &amp;&lt;&lt;=&gt; H2CO3(aq)
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Application of <span class="math notranslate nohighlight">\(K_H\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">If we assume that <span class="math notranslate nohighlight">\([\ce{CO2(g)}]\)</span> is <span class="math notranslate nohighlight">\(\pu{400 ppm}\)</span> (= <span class="math notranslate nohighlight">\(\pu{400e-6 atm}\)</span>),</p>
-<div class="math notranslate nohighlight">
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 [\ce{CO2 (aq)}] &amp;= K_H P_{\ce{CO2 (g)}} \\
 &amp;= \pu{10^{-1.47} mol L-1 atm-1} \times \pu{400e-6 atm} \\
 &amp;= \pu{10^{-4.87} mol L-1}
 \end{aligned}
 \end{split}\]</div>
+</div></blockquote>
 </div>
 </details><p>At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, the <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> dissociates in water as follows,</p>
 <div class="math notranslate nohighlight" id="equation-h2co3-ka1ka2">
@@ -675,7 +701,9 @@ Al(H2O)4(OH)2^+ (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + Al(H2O)3(OH)3 (aq)
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Amphoteric acids and bases</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Aluminum oxide (<span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span>) is amphoteric. It can behave either as an acidic or basic oxide depending on the reaction conditions. For example, <span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span> acts as a base with hydrochloric acid (<span class="math notranslate nohighlight">\(\ce{HCl}\)</span>) to produce a salt (<span class="math notranslate nohighlight">\(\ce{AlCl3}\)</span>) and <span class="math notranslate nohighlight">\(\ce{H2O}\)</span>,</p>
+<p class="sd-card-text">Aluminum oxide (<span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span>) is amphoteric. It can behave as an acidic or a basic oxide depending on the reaction conditions.</p>
+<blockquote>
+<div><p class="sd-card-text">For example, <span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span> acts as a base with hydrochloric acid (<span class="math notranslate nohighlight">\(\ce{HCl}\)</span>) to produce a salt (<span class="math notranslate nohighlight">\(\ce{AlCl3}\)</span>) and <span class="math notranslate nohighlight">\(\ce{H2O}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 Al2O3 + 6 HCl -&gt; 2 AlCl3 + 3 H2O
@@ -694,8 +722,9 @@ Al(OH)3 + 3 H+ &amp;-&gt; Al^3+ + 3 H2O\\
 Al(OH)3 + OH- &amp;-&gt; Al(OH)4^-
 }
 \end{align}\end{split}\]</div>
+</div></blockquote>
 </div>
-</details><p>The amphoteric nature of metal oxides and hydroxides is often exploited in water and wastewater treatment as well as the treatment of metal-contaminated soils and groundwater. By adding acids or bases to solutions, metal contaminants in solid form could be “mobilized” into aqueous solutions.</p>
+</details><p>The amphoteric nature of metal oxides and hydroxides is often exploited in water and wastewater treatment and the treatment of metal-contaminated soils and groundwater. By adding acids or bases to solutions, metal contaminants in solid form could be “mobilized” into aqueous solutions.</p>
 </section>
 <section id="common-ions-and-buffering">
 <h2>Common Ions and Buffering<a class="headerlink" href="#common-ions-and-buffering" title="Link to this heading">#</a></h2>
@@ -703,12 +732,13 @@ Al(OH)3 + OH- &amp;-&gt; Al(OH)4^-
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Common ion effect</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let’s calculate <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> (acetic acid) solution. The <span class="math notranslate nohighlight">\(K_a\)</span> for <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> is <span class="math notranslate nohighlight">\(\pu{1.8e-5}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
+<p class="sd-card-text">Calculate <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> (acetic acid) solution. The <span class="math notranslate nohighlight">\(K_a\)</span> for <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> is <span class="math notranslate nohighlight">\(\pu{1.8e-5}\)</span> at <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 CH3COOH &lt;=&gt; H+ + CH3COO- 
 }\]</div>
-<p class="sd-card-text">Let’s calculate concentrations of all components at equilibrium using the ICE method.</p>
+<blockquote>
+<div><p class="sd-card-text">Let’s calculate the concentrations of all components at equilibrium using the ICE method.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
@@ -742,7 +772,7 @@ CH3COOH &lt;=&gt; H+ + CH3COO-
 \[\ce{
 CH3COONa (aq) -&gt; CH3COO- (aq) + Na+ (aq)
 }\]</div>
-<p class="sd-card-text">The net effect of adding the above two reactions is to increase the concentration of <span class="math notranslate nohighlight">\(\ce{CH3COO- (aq)}\)</span> in the original reaction.  Le Châtelier’s principle tells us that increasing product concentration will drive the reaction to the left.</p>
+<p class="sd-card-text">Adding the above two reactions increases the concentration of <span class="math notranslate nohighlight">\(\ce{CH3COO- (aq)}\)</span> in the original reaction.  Le Châtelier’s principle tells us that increasing product concentration will drive the reaction to the left.</p>
 <div class="math notranslate nohighlight">
 \[ \ce{
 CH3COOH (aq)) &lt;&lt;=&gt;  H+ (aq) +  CH3COO- (aq)
@@ -776,13 +806,15 @@ CH3COOH (aq)) &lt;&lt;=&gt;  H+ (aq) +  CH3COO- (aq)
 </table>
 </div>
 <p class="sd-card-text">The solution to this problem yields: [<span class="math notranslate nohighlight">\(\ce{H+ (aq)}\)</span>] = <span class="math notranslate nohighlight">\(\pu{3.6e-5 M}\)</span> or <span class="math notranslate nohighlight">\(p\ce{H} = 4.44\)</span>, or as expected <span class="math notranslate nohighlight">\(p\ce{H}\)</span> increased.</p>
+</div></blockquote>
 </div>
-</details><p>In the above solution, a soluble salt that contained a common ion shifted the equilibrium to the left, thereby suppressing the ionization of the weak electrolyte. Generally, when a compound containing an ion in common with a dissolved substance is added to a solution at equilibrium, the equilibrium shifts to the left. This phenomenon is known as the <em>common ion effect</em>. The common ion can also be <span class="math notranslate nohighlight">\(\ce{H+}\)</span> or <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. That is, adding a strong acid to a weak acid’s solution suppresses the weak acid’s ionization. Similarly, adding a strong base to a solution of a weak base suppresses the ionization of the weak base.</p>
+</details><p>In the above solution, a soluble salt that contained a common ion shifted the equilibrium to the left, thereby suppressing the ionization of the weak electrolyte. Generally, when a compound containing an ion in common with a dissolved substance is added to a solution at equilibrium, the equilibrium shifts to the left. This phenomenon is known as the <em>common ion effect</em>. The common ion can also be <span class="math notranslate nohighlight">\(\ce{H+}\)</span> or <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. Adding a strong acid to a weak acid’s solution suppresses the weak acid’s ionization. Similarly, adding a strong base to a solution of a weak base suppresses the ionization of the weak base.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Common ion effect due to addition of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> or <span class="math notranslate nohighlight">\(\ce{OH-}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">What happens when you add <span class="math notranslate nohighlight">\(\ce{H+}\)</span> or <span class="math notranslate nohighlight">\(\ce{OH-}\)</span> to the previous acetate system?</p>
-<p class="sd-card-text">Adding <span class="math notranslate nohighlight">\(\ce{H+}\)</span> to the acetate system:</p>
+<blockquote>
+<div><p class="sd-card-text">Adding <span class="math notranslate nohighlight">\(\ce{H+}\)</span> to the acetate system:</p>
 <div class="math notranslate nohighlight">
 \[\ce{
 H+ + CH3COO- -&gt; CH3COOH
@@ -794,6 +826,7 @@ H+ + CH3COO- -&gt; CH3COOH
 CH3COOH + OH- -&gt; CH3COO- + H2O
 }\]</div>
 <p class="sd-card-text">Or, a strong base (<span class="math notranslate nohighlight">\(\ce{OH-}\)</span>) turns into a weak base (<span class="math notranslate nohighlight">\(\ce{CH3COO-}\)</span>)!</p>
+</div></blockquote>
 </div>
 </details><figure class="margin-caption align-default" id="acetate-buffer">
 <img alt="https://openstax.org/apps/archive/20221109.213337/resources/1c77469757bdebda940b86afc5133f1a34578d22" src="https://openstax.org/apps/archive/20221109.213337/resources/1c77469757bdebda940b86afc5133f1a34578d22" />
@@ -809,8 +842,8 @@ CH3COOH + OH- -&gt; CH3COO- + H2O
 \[\ce{
 CH3COOH &lt;=&gt; H+ + CH3COO- \qquad $K_{a} = \pu{1.8e-5}$
 }\]</div>
-<p class="sd-card-text">Let’s calculate concentrations of all components at equilibrium using
-the ICE method.</p>
+<blockquote>
+<div><p class="sd-card-text">Let’s calculate the concentrations of all components at equilibrium using the ICE method.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
@@ -866,7 +899,7 @@ H+ + CH3COO- -&gt; CH3COOH
 </tbody>
 </table>
 </div>
-<p class="sd-card-text">Using the ICE approach, let’s determine this solution’s final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> after adding <span class="math notranslate nohighlight">\(\ce{HCl}\)</span>.</p>
+<p class="sd-card-text">Let’s use the ICE approach to determine this solution’s final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> after adding <span class="math notranslate nohighlight">\(\ce{HCl}\)</span>.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p class="sd-card-text"></p></th>
@@ -895,6 +928,7 @@ H+ + CH3COO- -&gt; CH3COOH
 </table>
 </div>
 <p class="sd-card-text">The solution to this problem yields a <span class="math notranslate nohighlight">\(p\ce{H} = 4.66\)</span>. In other words, a drop of <span class="math notranslate nohighlight">\(0.08\)</span> <span class="math notranslate nohighlight">\(p\ce{H}\)</span> unit after adding the strong acid. In contrast, if there were no acetate present in the solution, <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of pure water in the presence of <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> HCl would have been <span class="math notranslate nohighlight">\(1.0\)</span> (<span class="math notranslate nohighlight">\(-\log[\ce{H+}] = -\log(0.1) = 1.0\)</span>)!</p>
+</div></blockquote>
 </div>
 </details><p>The final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a buffer solution can be determined using the <em><strong>Henderson-Hasselbalch equation</strong></em>, which can be derived from the equilibrium expression of dissociation of a weak acid. The final equation is given as:</p>
 <div class="math notranslate nohighlight" id="equation-henderson">
@@ -903,7 +937,9 @@ H+ + CH3COO- -&gt; CH3COOH
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Henderson-Hasselbalch Equation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let’s use this equation to solve for the final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> when <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> of HCl was added to the solution containing <span class="math notranslate nohighlight">\(\pu{1.0 M}\)</span> each of <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> and <span class="math notranslate nohighlight">\(\ce{CH3COONa}\)</span>. From the previous example, we have [<span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span>] and [<span class="math notranslate nohighlight">\(\ce{CH3COO-}\)</span>] as <span class="math notranslate nohighlight">\(\pu{0.9 M}\)</span> and <span class="math notranslate nohighlight">\(\pu{1.1 M}\)</span>, respectively. Substitute these values in Eq. <a class="reference internal" href="#equation-henderson">(53)</a>.</p>
+<p class="sd-card-text">Let’s use this equation to solve for the final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> when <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> of HCl was added to the solution containing <span class="math notranslate nohighlight">\(\pu{1.0 M}\)</span> each of <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> and <span class="math notranslate nohighlight">\(\ce{CH3COONa}\)</span>. From the previous example, we have [<span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span>] and [<span class="math notranslate nohighlight">\(\ce{CH3COO-}\)</span>] as <span class="math notranslate nohighlight">\(\pu{0.9 M}\)</span> and <span class="math notranslate nohighlight">\(\pu{1.1 M}\)</span>, respectively.</p>
+<blockquote>
+<div><p class="sd-card-text">Substitute these values in Eq. <a class="reference internal" href="#equation-henderson">(53)</a>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
     p\ce{H} &amp;= pK_a + \log \frac{[\ce{CH3COO-}]}{[\ce{CH3COOH}]} \\
@@ -911,6 +947,7 @@ H+ + CH3COO- -&gt; CH3COOH
     &amp;= 4.65
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">This <span class="math notranslate nohighlight">\(p\ce{H}\)</span> value is similar to that obtained using the ICE approach.</p>
+</div></blockquote>
 </div>
 </details><aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -1071,8 +1108,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

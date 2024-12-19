@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="_static/vmv.css?v=4f17cb1b" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -248,9 +248,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -385,7 +390,7 @@
   <section class="tex2jax_ignore mathjax_ignore" id="balancing-redox-reactions">
 <h1>5.2 Balancing Redox Reactions<a class="headerlink" href="#balancing-redox-reactions" title="Link to this heading">#</a></h1>
 <p>Balancing redox reactions is similar to balancing any chemical reactions.  However, the charge and mass of the elements need to be considered during that process.</p>
-<p>For balancing redox reactions, we balance the elements on each side of the equation arrow and the electrons.</p>
+<p>For balancing redox reactions, we balance the elements on each side of the reaction and the electrons.</p>
 <div class="admonition-balancing-redox-reactions admonition">
 <p class="admonition-title">Balancing redox reactions</p>
 <p>Follow the steps below in sequence to balance redox reactions.</p>
@@ -409,7 +414,8 @@
 \[\ce{
 SO4^2- + FeO -&gt; H2S + FeOOH
 }\]</div>
-<p class="sd-card-text">This reaction involves two redox “couples”:</p>
+<blockquote>
+<div><p class="sd-card-text">This reaction involves two redox “couples”:</p>
 <p class="sd-card-text">Step 1: Identify the OS of all major elements</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -462,38 +468,47 @@ SO4^2- + 8 e- &amp;-&gt; H2S + 4 H2O\\
 FeOOH + e- &amp;-&gt; FeO + H2O
 } \end{align*} \end{split}\]</div>
 <p class="sd-card-text">Step 6: Add <span class="math notranslate nohighlight">\(\ce{H+}\)</span> to balance <span class="math notranslate nohighlight">\(\ce{O}\)</span></p>
+</div></blockquote>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
 \ce{
 SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
 FeOOH + e- + H+ &amp;-&gt; FeO + H2O
 } \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Step 7: Verify charge balance on both sides of the reactions</p>
+<blockquote>
+<div><p class="sd-card-text">Step 7: Verify charge balance on both sides of the reactions</p>
 <p class="sd-card-text">Step 8a: Combine half-reaction such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  In this case, multiply the <span class="math notranslate nohighlight">\(\ce{Fe}\)</span> half-reaction by a factor <span class="math notranslate nohighlight">\(8\)</span> to have the same number of <span class="math notranslate nohighlight">\(\ce{e-}\)</span>.</p>
+</div></blockquote>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
 \ce{
 SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
 8FeOOH + 8e- + 8H+ &amp;-&gt; 8FeO + 8H2O
 } \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Step 8b: Combine half-reaction such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  Reverse the 2nd reaction so that the <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are on the opposite sides of the reactions. Now, all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> can be cancelled.</p>
+<blockquote>
+<div><p class="sd-card-text">Step 8b: Combine half-reaction such that all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are consumed.  Reverse the 2nd reaction so that the <span class="math notranslate nohighlight">\(\ce{e-}\)</span> are on the opposite sides of the reactions. Now, all <span class="math notranslate nohighlight">\(\ce{e-}\)</span> can be cancelled.</p>
+</div></blockquote>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
 \ce{
 SO4^2- + 8 e- + 10 H+ &amp;-&gt; H2S + 4 H2O\\
 8 FeO + 8 H2O &amp;-&gt; 8 FeOOH + 8 e- + 8 H+
 } \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Step 9: Add both half-reactions and check stoichiometry and charge balance on the final reaction</p>
+<blockquote>
+<div><p class="sd-card-text">Step 9: Add both half-reactions and check stoichiometry and charge balance on the final reaction</p>
 <div class="math notranslate nohighlight">
 \[ \ce{
 SO4^2- + 8 FeO + 2 H+ + 4 H2O -&gt; H2S + 8 FeOOH
 }\]</div>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{FeO}\)</span> is oxidized by <span class="math notranslate nohighlight">\(\ce{SO4^2-}\)</span>!</p>
+</div></blockquote>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Balancing redox reactions – Case Study 1</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Groundwater is an anoxic environment where dissolved iron exists as <span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>. When this water is pumped to the surface, <span class="math notranslate nohighlight">\(\ce{O2(g)}\)</span> in atmosphere oxidizes <span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>, into an insoluble precipitate <span class="math notranslate nohighlight">\(\ce{Fe(OH)3 (s)}\)</span> depending on <span class="math notranslate nohighlight">\(p\ce{H}\)</span> conditions. Let’s write the half-reactions and the overall redox reaction.</p>
+<p class="sd-card-text">Groundwater is an anoxic environment where dissolved iron exists as <span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>. When this water is pumped to the surface, <span class="math notranslate nohighlight">\(\ce{O2(g)}\)</span> in atmosphere oxidizes <span class="math notranslate nohighlight">\(\ce{Fe^2+}\)</span>, into an insoluble precipitate <span class="math notranslate nohighlight">\(\ce{Fe(OH)3 (s)}\)</span> depending on <span class="math notranslate nohighlight">\(p\ce{H}\)</span> conditions.</p>
+<blockquote>
+<div><p class="sd-card-text">Let’s write the half-reactions and the overall redox reaction.</p>
 <p class="sd-card-text">(1) The half-reactions</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align} \ce{
@@ -505,11 +520,14 @@ SO4^2- + 8 FeO + 2 H+ + 4 H2O -&gt; H2S + 8 FeOOH
 \[\ce{
     4 Fe^2+ + O2 + 10 H2O &lt;=&gt; 4 Fe(OH)3 + 8 H+
 }\]</div>
+</div></blockquote>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Balancing redox reactions – Case Study 2</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Ammonia (as <span class="math notranslate nohighlight">\(\ce{NH3}\)</span>) in fertilizers discharged into natural surface waters is often oxidized to <span class="math notranslate nohighlight">\(\ce{NO3-}\)</span> by bacteria using dissolved oxygen. This process is called nitrification. Let’s write the half-reactions and the overall redox reaction.</p>
+<p class="sd-card-text">Ammonia (as <span class="math notranslate nohighlight">\(\ce{NH3}\)</span>) in fertilizers discharged into natural surface waters is often oxidized to <span class="math notranslate nohighlight">\(\ce{NO3-}\)</span> by bacteria using dissolved oxygen. This process is called nitrification.</p>
+<blockquote>
+<div><p class="sd-card-text">Let’s write the half-reactions and the overall redox reaction.</p>
 <p class="sd-card-text">(1) The half-reactions</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align} \ce{
@@ -521,11 +539,14 @@ SO4^2- + 8 FeO + 2 H+ + 4 H2O -&gt; H2S + 8 FeOOH
 \[ \ce{
     NH4+ + 2 O2 &lt;=&gt; NO3- + 2 H+ + H2O
  }\]</div>
+</div></blockquote>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Balancing redox reactions - Case Study 3</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{SO4^2-(aq)}\)</span> in ocean water is often reduced to <span class="math notranslate nohighlight">\(\ce{H2S(g)}\)</span> by abundant organic matter (<span class="math notranslate nohighlight">\(\ce{CH2O}\)</span> in simplified form) present in saltmarsh environments. <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> is a common by-product during this process. Let’s write the half-reactions and the overall redox reaction.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\ce{SO4^2-(aq)}\)</span> in ocean water is often reduced to <span class="math notranslate nohighlight">\(\ce{H2S(g)}\)</span> by abundant organic matter (<span class="math notranslate nohighlight">\(\ce{CH2O}\)</span> in simplified form) present in saltmarsh environments. <span class="math notranslate nohighlight">\(\ce{CO2(g)}\)</span> is a common by-product during this process.</p>
+<blockquote>
+<div><p class="sd-card-text">Let’s write the half-reactions and the overall redox reaction.</p>
 <p class="sd-card-text">(1) The half-reactions</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align} \ce{
@@ -537,6 +558,7 @@ SO4^2- + 8 FeO + 2 H+ + 4 H2O -&gt; H2S + 8 FeOOH
 \[ \ce{
     SO4^2- + 2 CH2O + 2 H+ &lt;=&gt; H2S + 2 CO2 + 2 H2O
     } \]</div>
+</div></blockquote>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -546,7 +568,8 @@ SO4^2- + 8 FeO + 2 H+ + 4 H2O -&gt; H2S + 8 FeOOH
 \[\ce{
 FeS2 + O2 -&gt; Fe(OH)3 + SO4^2-
 }\]</div>
-<p class="sd-card-text">In this reaction, three elements (<span class="math notranslate nohighlight">\(\ce{Fe}\)</span>, <span class="math notranslate nohighlight">\(\ce{S}\)</span>, and <span class="math notranslate nohighlight">\(\ce{O}\)</span>) participate in the overall redox reaction.</p>
+<blockquote>
+<div><p class="sd-card-text">In this reaction, three elements (<span class="math notranslate nohighlight">\(\ce{Fe}\)</span>, <span class="math notranslate nohighlight">\(\ce{S}\)</span>, and <span class="math notranslate nohighlight">\(\ce{O}\)</span>) participate in the overall redox reaction.</p>
 <p class="sd-card-text">(1) The half-reactions</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align} 
@@ -561,6 +584,7 @@ FeS2 + O2 -&gt; Fe(OH)3 + SO4^2-
     4 FeS2 + 15 O2 + 14 H2O -&gt; 4 Fe(OH)3 + 8 SO4^2- + 16 H+
     } \end{align} \]</div>
 <p class="sd-card-text">In this case, both <span class="math notranslate nohighlight">\(\ce{Fe}\)</span> and <span class="math notranslate nohighlight">\(\ce{S}\)</span> are oxidized by <span class="math notranslate nohighlight">\(\ce{O2}\)</span>.</p>
+</div></blockquote>
 </div>
 </details></section>
 
@@ -665,8 +689,8 @@ By Dr. Vijay Vulava
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

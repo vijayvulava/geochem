@@ -193,9 +193,11 @@ Although $K_w$  is constant, the individual concentrations of $\ce{H3O+}$ and $\
 
 ```{dropdown} Example: Calculating $\ce{H3O+}$ and $\ce{OH-}$
 
-$\{\ce{H3O+}\} = \pu{0.1 M}$ in stomach acid. Let's calculate the $\ce{OH-}$ in stomach acid at $\pu{25 ^\circ C}$. Let's substitute $\ce{H3O+}$ into Eq. {eq}`kw2`.
+$\{\ce{H3O+}\} = \pu{0.1 M}$ in stomach acid. Calculate the $\ce{OH-}$ in stomach acid at $\pu{25 ^\circ C}$. 
 
-$$\begin{aligned}
+>Let's substitute $\ce{H3O+}$ into Eq. {eq}`kw2`.
+>
+>$$\begin{aligned}
         \pu{1e-14} &=  \{\ce{H3O+}\}\{\ce{OH-}\} =  (0.1)\{\ce{OH-}\}\\
         \text{or,}\, \{\ce{OH-}\} &= \frac{\pu{1e-14}}{0.1} =\pu{1.0e-13 M}
     \end{aligned}$$
@@ -212,13 +214,15 @@ The acidity of an aqueous solution depends on $\{\ce{H3O+}\}$. This concentratio
 p\ce{H} = -\log_{10}[\ce{H3O+}]
 ```
 
-$p\ce{H}$ of a solution is dimensionless, and concentration units are removed before applying the logarithm. Conversely, the original units are added back when solution concentration is calculated from $p\ce{H}$.
+$p\ce{H}$ of a solution is dimensionless, and concentration units are removed before applying the logarithm. Conversely, the original units are returned when solution concentration is calculated from $p\ce{H}$.
 
 ```{dropdown} Example: Calculating $p\ce{H}$
 
-Let's calculate the $p\ce{H}$ of pure water at $\pu{25 ^\circ C}$. From previous section we know that $\{\ce{H3O+}\} =  \pu{1e-7}{M}$. Therefore,
+Calculate the $p\ce{H}$ of pure water at $\pu{25 ^\circ C}$. 
 
-$$p\ce{H} = -\log_{10}(\pu{1e-7}) = 7.0
+>From the previous section we know that $\{\ce{H3O+}\} =  \pu{1e-7}{M}$. Therefore,
+>
+>$$p\ce{H} = -\log_{10}(\pu{1e-7}) = 7.0
 $$
 
 ```

@@ -30,7 +30,7 @@ Isotopic fractionation is the partitioning of isotopes during physical (evaporat
 
 During evaporation of $\ce{H2O}$ in a closed system, six isotope combinations of $\ce{H2O}$ are possible: $\ce{^1H2^{16}O}, \ce{^1H^2H^{16}O}, \ce{^2H2^{16}O}, \ce{^1H2^{18}O}, \ce{^1H^2H^{18}O}, \ce{^2H2^{18}O}$.
 
-As a result of these different stable isotope combinations, the molecular masses are $18$, $19$, $20$, $20$, $21$, and $22$ respectively. See the conceptualizations in the figure below.
+>As a result of these different stable isotope combinations, the molecular masses are $18$, $19$, $20$, $20$, $21$, and $22$ respectively. See the conceptualizations in the figure below.
 
 ![# Water Isotopes Diagram - USGS](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Fig%201.Isotopes.web_.jpg)
 
@@ -53,7 +53,7 @@ $$\ce{
 H2O(s) <=> H2O(l) <=> H2O(g)
 }$$
 
-As we know, the molecules of water are held together by weak hydrogen bonds.  These intermolecular bonds are strongest in the solid phase and weakest in the vapor phase.  In addition, there is slightly greater hydrogen bond strength for $\ce{H2^{18}O-H2O}$ versus $\ce{H2^{16}O-H2O}$ bonds, the $\ce{^{16}O}$ bonds will be more easily broken during evaporation. Therefore, a lower concentration of $\ce{H2^{18}O}$ is present in the water vapor than in the liquid water, so water is isotopically enriched over its vapor. Similarly, $\ce{^{18}O}$ is more enriched in ice than water. 
+>As we know, the molecules of water are held together by weak hydrogen bonds.  These intermolecular bonds are strongest in the solid phase and weakest in the vapor phase.  In addition, there is slightly greater hydrogen bond strength for $\ce{H2^{18}O-H2O}$ versus $\ce{H2^{16}O-H2O}$ bonds, the $\ce{^{16}O}$ bonds will be more easily broken during evaporation. Therefore, a lower concentration of $\ce{H2^{18}O}$ is present in the water vapor than in the liquid water, so water is isotopically enriched over its vapor. Similarly, $\ce{^{18}O}$ is more enriched in ice than in water. 
 
 ```
 
@@ -66,7 +66,7 @@ $$\ce{
 CaCO3 ->[Acid] CaO + CO2
 }$$
 
-In this reaction, $\ce{CO2}$ escapes and thus does not equilibrate with the solid phase. During a chemical reaction, the lighter isotope is more reactive and concentrated in the products. The relative loss of the lighter isotope from the reactants leads to an enrichment of the reactants in the heavier isotope. In this example, the gas phase (product) is enriched in the lighter isotopes of C and O, and the enrichment is significantly greater than that which would occur during an equilibrium reaction.
+>In this reaction, $\ce{CO2}$ escapes and thus does not equilibrate with the solid phase. During a chemical reaction, the lighter isotope is more reactive and concentrated in the products. The relative loss of the lighter isotope from the reactants leads to an enrichment of the reactants in the heavier isotope. In this example, the gas phase (product) is enriched in the lighter isotopes of C and O, and the enrichment is significantly greater than that which would occur during an equilibrium reaction.
 
 ```
 
@@ -77,7 +77,7 @@ The partitioning of stable isotopes between two substances, $A$ and $B$, is desc
 \alpha = \frac{R_A}{R_B}
 ```
 
-Where $R$ is the ratio of heavy to light isotope abundance (e.g., $\ce{^2 H}$/$\ce{^1 H}$, $\ce{^{18}O}$/$\ce{^{16}O}$ ). Generally, the isotope abundance ratio does not significantly vary in the environment, so the fractionation factor, $\alpha$, generally has a value close to 1. However, this value can be precisely measured and expressed with a precision of 4-5 decimal places. The fractionation factor depends on the temperature and can be determined experimentally or from spectroscopic data.
+Where $R$ is the ratio of heavy to light isotope abundance (e.g., $\ce{^2 H}$/$\ce{^1 H}$, $\ce{^{18}O}$/$\ce{^{16}O}$ ). The isotope abundance ratio does not significantly vary in the environment, so the fractionation factor, $\alpha$, generally has a value close to 1. However, this value can be precisely measured and expressed with a precision of 4-5 decimal places. The fractionation factor depends on the temperature and can be determined experimentally or from spectroscopic data.
 
 ```{dropdown} Example: Isotope fractionation factor 
 
@@ -87,21 +87,21 @@ $$R = \frac{\ce{^{18}O}}{\ce{^{16}O}}
 $$ 
 We can calculate $\alpha$ as
 
-$$\alpha = \frac{\ce{^{18}O}/\ce{^{16}O}_{\text{(liquid)}}}{\ce{^{18}O}/\ce{^{16}O}_{\text{(vapor)}}}
+>$$\alpha = \frac{\ce{^{18}O}/\ce{^{16}O}_{\text{(liquid)}}}{\ce{^{18}O}/\ce{^{16}O}_{\text{(vapor)}}}
 $$
 
-Since $\ce{^{16}O}$ is enriched in the vapor phase relative to the liquid,
-
-$$
+>Since $\ce{^{16}O}$ is enriched in the vapor phase relative to the liquid,
+>
+>$$
 [\ce{^{18}O}]_{\text{vapor}} > [\ce{^{16}O}]_{\text{liquid}}
 $$
 
-Conversely, $\ce{^{18}O}$ is enriched in the liquid relative to the vapor,
-
+>Conversely, $\ce{^{18}O}$ is enriched in the liquid relative to the vapor,
+>
 $$
-[\ce{^{18}O}]_{\text{liquid}} > [\ce{^{18}O}]_{\text{vapor}}$$
-
-Therefore, the fractionation factor is greater than 1. With increasing temperature, the fractionation factor decreases and becomes 1 at infinite temperature.
+>[\ce{^{18}O}]_{\text{liquid}} > [\ce{^{18}O}]_{\text{vapor}}$$
+>
+>Therefore, the fractionation factor is greater than 1. Increasing temperature decreases the fractionation factor and becomes 1 at infinite temperature.
 
 ```
 
@@ -134,19 +134,19 @@ $$
 1/3 CaC^{16}O3 + H2^{18}O <=> 1/3 CaC^{18}O3 + H2^{16}O
 }$$
 
-Writing this equation in terms of the equilibrium constant, $K$,
-
-$$K = \frac{([\ce{CaC^{18}O3}]^{1/3} [\ce{H2^{16}O}])}{([\ce{CaC^{16}O3}]^{1/3} [\ce{H2^{18}O}])}$$
-
-Rearranging this equation with $\ce{CaCO3}$ separated from $\ce{H2O}$,
-
-$$K = \frac{([\ce{CaC^{18}O3}]/[\ce{CaC^{16}O3}])^{1/3}}{[\ce{H2^{18}O}]/ [\ce{H2^{16}O}]}$$
-
-Therefore,
-
-$$K = \alpha = \frac{R_\text{Carbonate}}{R_\ce{H2O}} = \frac{\ce{^{18}O}/\ce{^{18}O}\, \text{of}\, \ce{CaCO3}}{\ce{^{18}O}/\ce{^{18}O}\, \text{of}\, \ce{H2O}}$$
-
-Because the isotopic fractionation factor varies as a function of temperature, the measured fractionation factor can be compared to empirical values to determine the equilibrium temperature for the calcium carbonate-water reaction.
+>Writing this equation in terms of the equilibrium constant, $K$,
+>
+>$$K = \frac{([\ce{CaC^{18}O3}]^{1/3} [\ce{H2^{16}O}])}{([\ce{CaC^{16}O3}]^{1/3} [\ce{H2^{18}O}])}$$
+>
+>Rearranging this equation with $\ce{CaCO3}$ separated from $\ce{H2O}$,
+>
+>$$K = \frac{([\ce{CaC^{18}O3}]/[\ce{CaC^{16}O3}])^{1/3}}{[\ce{H2^{18}O}]/ [\ce{H2^{16}O}]}$$
+>
+>Therefore,
+>
+>$$K = \alpha = \frac{R_\text{Carbonate}}{R_\ce{H2O}} = \frac{\ce{^{18}O}/\ce{^{18}O}\, \text{of}\, \ce{CaCO3}}{\ce{^{18}O}/\ce{^{18}O}\, \text{of}\, \ce{H2O}}$$
+>
+>Because the isotopic fractionation factor varies as a function of temperature, the measured fractionation factor can be compared to empirical values to determine the equilibrium temperature for the calcium carbonate-water reaction.
 ```
 
 
@@ -189,13 +189,13 @@ Since the $\delta$ values and the isotope fractionation factors ($\alpha$) are d
 
 A rainwater sample collected in Boston, Massachusetts, has an $\ce{^{18} O}$/$\ce{^{16} O}$ ratio of $0.0019750$. Calculate $\delta$ for this rainwater sample.
 
-From {numref}`isotopestandards`, we can read the isotopic ratio of $\ce{^{18} O}$/$\ce{^{16} O}$ in V-SMOW to be $0.0020052$. Substitute values in Eqn. {eq}`delta` as follows: 
-
-$$\begin{align}
+>From {numref}`isotopestandards`, we can read the isotopic ratio of $\ce{^{18} O}$/$\ce{^{16} O}$ in V-SMOW to be $0.0020052$. Substitute values in Eqn. {eq}`delta` as follows: 
+>
+>$$\begin{align}
 \delta &=  \left(\frac{\ce{^{18}O}/\ce{^{16}O}_\text{Sample}}{\ce{^{18}O}/\ce{^{16}O}_\text{Standard}} - 1\right) \times 1000\\ &=\left(\frac{0.0019750}{0.0020052} - 1\right) \times 1000 = \pu{-15.1 ‰} 
 \end{align}$$
-
-Since this final value is negative, the sample isotopically lighter than the standard.
+>
+>Since this final value is negative, the sample isotopically lighter than the standard.
 ```
 
 

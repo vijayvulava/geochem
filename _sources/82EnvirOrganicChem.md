@@ -21,20 +21,22 @@ The aqueous solubility of organic chemicals is generally higher for smaller mole
 
 ## Vapor Pressure
 
-Vapor pressure, another chemical-specific property, is the partial pressure of a chemical in a gas phase that is in equilibrium with the pure liquid or solid chemical. Vapor pressure is essentially the solubility of a compound in air. Permanent gases, such as methane, have high vapor pressures; in fact, they have a vapor pressure of $\pu{1 atm}$ or $\pu{760 Torr}$. Some pesticides have medium vapor pressures; for example, hexachlorobenzene has a vapor pressure of about  $\pu{e-7 atm}$. Some compounds, such as decachlorobiphenyl, have vapor pressures so low that they are essentially nonvolatile ( $\pu{e-10 atm}$). For our purposes, the interesting range is  $\pu{e-4 - e-8 atm}$.
+Vapor pressure, another chemical-specific property, is the partial pressure of a chemical in a gas phase that is in equilibrium with the pure liquid or solid chemical. Vapor pressure is essentially the solubility of a compound in air. Permanent gases, such as methane, have high vapor pressures; in fact, they have a vapor pressure of $\pu{1 atm}$ or $\pu{760 Torr}$. Some pesticides have medium vapor pressures; for example, hexachlorobenzene has a vapor pressure of about  $\pu{e-7 atm}$. Some compounds, such as decachlorobiphenyl, have vapor pressures so low that they are essentially nonvolatile ( $\pu{e-10 atm}$). For our purposes, the relevant range is  $\pu{e-4 - e-8 atm}$.
 
 ```{dropdown} Example: Vapor Pressure
-At $\pu{20 ^\circ C}$ a bottle contains both air and pure liquid TCE (trichloroethylene, a common industrial solvent), the partial pressure of TCE vapor in the air-filled neck of the bottle (the headspace) will be approximately $\pu{0.08 atm}$. The ideal gas law is used to convert the vapor pressure into the corresponding concentration (expressed in moles of vapor per volume), 
+At $\pu{20 ^\circ C}$ a bottle contains both air and pure liquid TCE (trichloroethylene, a common industrial solvent), the partial pressure of TCE vapor in the air-filled neck of the bottle (the headspace) will be approximately $\pu{0.08 atm}$. 
 
+>The ideal gas law is used to convert the vapor pressure into the corresponding concentration (expressed in moles of vapor per volume), 
+>
 $$
 \frac{n}{V}=\frac{P}{\text{R}T}
 $$
-
-where $n$ is the number of moles of the chemical, $V$ is the volume, $P$ is the vapor pressure, $R$ is the gas constant ($\pu{0.0821 L atm mol−1 K-1}$), and $T$ is the absolute temperature. Thus, a partial pressure of $\pu{0.08 atm}$ of TCE corresponds to a concentration of approximately $\pu{0.003 mg L−1}$.
+>
+>where $n$ is the number of moles of the chemical, $V$ is the volume, $P$ is the vapor pressure, $R$ is the gas constant ($\pu{0.0821 L atm mol−1 K-1}$), and $T$ is the absolute temperature. Thus, a partial pressure of $\pu{0.08 atm}$ of TCE corresponds to a concentration of approximately $\pu{0.003 mg L−1}$.
 
 ```
 
-The term volatility is often used to qualitatively describe a chemical's vapor pressure. Although there are no universally agreed-upon cutoffs, chemicals described as volatile, typically have vapor pressures exceeding $\pu{1 atm}$ at the boiling point of water ($\pu{100 ^\circ C}$). Examples of volatile chemicals include solvents, such as TCE, and hydrocarbons present in gasoline, such as benzene. Semivolatile chemicals typically have vapor pressures lower than $\pu{1 atm}$ at $\pu{100 ^\circ C}$ but can volatilize significantly at environmental temperatures. Examples include naphthalene (found in mothballs) and other polycyclic aromatic hydrocarbons (PAHs). Chemicals with negligible vapor pressures are often called nonvolatile; examples include most salts. Vapor pressure is temperature-dependent.
+The term volatility is often used to qualitatively describe a chemical's vapor pressure. Although there are no universally agreed-upon cutoffs, chemicals described as volatile typically have vapor pressures exceeding $\pu{1 atm}$ at the boiling point of water ($\pu{100 ^\circ C}$). Examples of volatile chemicals include solvents, such as TCE, and hydrocarbons present in gasoline, such as benzene. Semivolatile chemicals typically have vapor pressures lower than $\pu{1 atm}$ at $\pu{100 ^\circ C}$ but can volatilize significantly at environmental temperatures. Examples include naphthalene (found in mothballs) and other polycyclic aromatic hydrocarbons (PAHs). Chemicals with negligible vapor pressures are often nonvolatile; examples include most salts. Vapor pressure is temperature-dependent.
 
 ## Partitioning into Phases
 
@@ -80,14 +82,13 @@ When the concentration of the compound is expressed in partial pressures (atm) a
 
 Benzene (a BTEX hydrocarbon) is released during an industrial accident and enters the groundwater system. The average concentration of benzene in the water is $\pu{1000 mg L−1}$ (same as ppm). If the water is in contact with air, calculate the benzene concentration in the air in $\pu{mol L-1}$. $K_H$ for benzene is $0.22849$.
 
-**Answer**:
-First convert $\pu{1000 mg L−1}$ to $\pu{mol L-1}$. Assume that $\pu{1 kg}$ of water equals a volume of $\pu{1 L}$. The molecular weight of benzene ($\ce{C6H6}$) is 78.
-
-$$\frac{\pu{1000 mg L-1} \times \pu{e-3 mg g-1}}{\pu{78g mol-1}} = \pu{1.28e-2 mol L-1}$$
-
-Substitute this concentration in Eq. {eq}`khorg`, and we get
-
-$$\begin{aligned}
+>First convert $\pu{1000 mg L−1}$ to $\pu{mol L-1}$. Assume that $\pu{1 kg}$ of water equals a volume of $\pu{1 L}$. The molecular weight of benzene ($\ce{C6H6}$) is 78.
+>
+>$$\frac{\pu{1000 mg L-1} \times \pu{e-3 mg g-1}}{\pu{78g mol-1}} = \pu{1.28e-2 mol L-1}$$
+>
+>Substitute this concentration in Eq. {eq}`khorg`, and we get
+>
+>$$\begin{aligned}
 K_H &= \frac{C_{Air}}{C_{\ce{H2O}}}\\
 0.22849 &= \frac{C_{Air}}{\pu{1.28e-2 mol L-1}}\\
 \therefore C_{Air} &= \pu{2.92e-3 mol L-1}
@@ -144,10 +145,9 @@ Note that $f_{om}$ is a fraction and is always less than $1$ and often less than
 
 It was found that the adsorption of naphthalene onto sedimentary particles followed a linear relationship, with $ K_d = \pu{137 L kg−1}$. If the naphthalene concentration in the groundwater was $\pu{3.2 mg L−1}$, calculate the concentration of naphthalene adsorbed onto the sedimentary particles in the aquifer.
 
-**Answer**:
-Substitute given data in Eq. {eq}`kd` as follows. 
-
-$$\begin{aligned}
+>Substitute given data in Eq. {eq}`kd` as follows:
+>
+>$$\begin{aligned}
 K_d &= \frac{C_{Solid}}{C_{\ce{H2O}}}\\
 \pu{137 L kg-1} &= \frac{C_{Solid}}{\pu{3.2 mg L-1}}\\
 C_{Solid} &= \pu{438 mg kg-1}
@@ -179,54 +179,52 @@ A covered soup bowl contains $\pu{1 L}$ of a very dilute, tepid soup (at $\pu{2
 
 Assuming everything is at equilibrium, estimate the amount of naphthalene you would ingest if you were to eat only the fat blob.
 
-**Answer**:
-First, set up the mass balance equation: 
-
-$$\begin{aligned}
+>First, set up the mass balance equation: 
+>
+>$$\begin{aligned}
 M_{total} = \pu{1 mg} &= M_{\ce{H2O}} + M_{Air} + M_{Fat}  \\
 &= C_{\ce{H2O}}V_{\ce{H2O}} + C_{Air}V_{Air} + C_{Fat}V_{Fat} \\
 &= C_{\ce{H2O}}(\pu{1 L}) + C_{Air}(\pu{1 L}) + C_{Fat}(\pu{e-3 L})
 \end{aligned}$$ 
-
-We need to make this into an equation with only one unknown to solve for $M_{Fat}$
-
-Now, let's rearrange the partitioning coefficients: 
-
-$$\begin{aligned}
+>
+>We need to make this into an equation with only one unknown to solve for $M_{Fat}$
+>
+>Now, let's rearrange the partitioning coefficients: 
+>
+>$$\begin{aligned}
 K_{ow}  &= \frac{C_{Fat}}{C_{\ce{H2O}}} \\
 \text{Or,} \quad    C_{\ce{H2O}} &= \frac{C_{Fat}}{K_{ow}} 
 \end{aligned}$$
-
-$$\begin{aligned}
+>
+>$$\begin{aligned}
 K_H &= \frac{C_{Air}}{C_{\ce{H2O}}}  \\
 \text{Or,}\quad C_{Air} &= K_H (C_{\ce{H2O}}) 
 \end{aligned}$$
-
-Combining the above two expressions, we get
-
-$$
+>
+>Combining the above two expressions, we get
+>
+>$$
 C_{Air} = K_H \left(\frac{C_{Fat}}{K_{ow}} \right) 
 $$
-
-Substitute $C_{\ce{H2O}}$ and $C_{Air}$ expressions into the $M_{total}$ expression
-
-$$\begin{aligned}
+>
+>Substitute $C_{\ce{H2O}}$ and $C_{Air}$ expressions into the $M_{total}$ expression
+>
+>$$\begin{aligned}
 M_{total}   &= \left(\frac{C_{Fat}}{K_{ow}}\right) (\pu{1 L}) + K_H \left(\frac{C_{Fat}}{K_{ow}} \right)(\pu{1 L}) + C_{Fat}(\pu{e-3 L})  \\
 &= (C_{Fat})\left( \frac{1}{K_{ow}} + \frac{K_H}{K_{ow}} + \pu{e-3}\right)\\
 &= (C_{Fat}) \left( \frac{1}{10^{3.36}} + \frac{0.0174}{10^{3.36}} + \pu{e-3}\right)\\
 &=  (C_{Fat})(\pu{0.00144 L})
 \end{aligned}$$
-
-Simplify and calculate $C_{Fat}$ and $M_{Fat}$ 
-
-$$\begin{aligned}
+>
+>Simplify and calculate $C_{Fat}$ and $M_{Fat}$ 
+>
+>$$\begin{aligned}
 M_{total}   &=  (C_{Fat})(\pu{0.00144 L})\\
 C_{Fat} &= \frac{M_{total}}{\pu{0.00144 L}} = \frac{\pu{1 mg}}{\pu{0.00144 L}}\\
 & = \pu{693 mg L-1}\\
 M_{Fat} &= C_{Fat}\times V_{Fat} = \pu{693 mg L-1}\times \pu{e-3 L}\\
 &= \pu{0.693 mg} 
 \end{aligned}$$
-
 ```
 
 
@@ -234,24 +232,21 @@ M_{Fat} &= C_{Fat}\times V_{Fat} = \pu{693 mg L-1}\times \pu{e-3 L}\\
 
 A stream is contaminated with 1,2,4-trichlorobenzene (1,2,4-TCB) and has 1,2,4-TCB concentration of $\pu{2.3 \mu g L-1}$. The molecular weight of this compound is $\pu{181.5 g mol−1}$, and its $\log K_{ow}$ (at $\pu{25 ^\circ C}$) is $4.04$. Estimate the maximum concentration of 1,2,4-TCB in rainbow trout swimming in water.
 
-**Answer**:
-First, let's calculate $K_B$ using $K_{ow}$ using Eq. {eq}`kbkow`.
-
-$$\begin{aligned}
+>First, let's calculate $K_B$ using $K_{ow}$ using Eq. {eq}`kbkow`.
+>
+>$$\begin{aligned}
 \log K_B &= \log K_{ow} - 1.32\\
 &= 4.04-1.32 = 2.72\\
 K_B = 10^{2.72} = 524.8
 \end{aligned}$$ 
-
-Now, apply this value to the $K_B$ expression in Eq. {eq}`kbiol`: 
-
-$$\begin{aligned}
+>
+>Now, apply this value to the $K_B$ expression in Eq. {eq}`kbiol`: 
+>
+>$$\begin{aligned}
 K_B &= \frac{C_{fish}}{C_{\ce{H2O}}}\\
 524.8 &= \frac{C_{fish}}{\pu{2.3 \mu g L-1}}\\
 C_{fish} &= \pu{1207 \mu g L-1}
 \end{aligned}$$
-
-
 ```
 
 

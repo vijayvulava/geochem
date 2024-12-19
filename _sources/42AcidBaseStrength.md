@@ -34,27 +34,36 @@ There are only a few strong acids and include: $\ce{HCl}$, $\ce{HBr}$, $\ce{HI}$
 
 Calculate the $p\ce{H}$ of $\pu{0.035 M}$ $\ce{HI}$ at $\pu{25 ^\circ C}$. 
 
-Because $\ce{HI}$ is a strong acid, it produces $\pu{0.035 M}$ of $\ce{H3O+}$. Therefore, $p\ce{H}= -\log_{10}(0.035) = 1.46$.
+>Because $\ce{HI}$ is a strong acid, it reacts as follows:
+>
+>$$\ce{
+HI + H2O -> H3O+ + I-
+}$$
+>Therefore, according to the reaction stoichiometry, $\pu{0.035 M}$ $\ce{HI}$ produces $\pu{0.035 M}$ of $\ce{H3O+}$. Therefore, 
+>
+>$$p\ce{H}= -\log_{10}(\ce{H3O+}) = -\log_{10}(0.035) = 1.46$$
 ```
 
 Hydroxides of alkali metals (Group 1 - e.g., $\ce{LiOH}$, $\ce{NaOH}$, $\ce{KOH}$, $\ce{RbOH}$, $\ce{CsOH}$) and alkaline earth metals (Group 2 - e.g., $\ce{Ca(OH)2}$, $\ce{Mg(OH)2}$, and $\ce{Ba(OH)2}$) are strong bases.
 
 ```{dropdown} Example: $p\ce{H}$ of strong bases
  
-Let's calculate $p\ce{H}$ of $\pu{0.018 M}$  NaOH at $\pu{25 ^\circ C}$. Because $\ce{NaOH}$ is a strong base, it produces $\pu{0.018 M}$ of $\ce{OH-}$. There are two ways we can calculate $p\ce{H}$.
+Calculate $p\ce{H}$ of $\pu{0.018 M}$  NaOH at $\pu{25 ^\circ C}$. 
 
-Approach 1. Substitute $\{\ce{OH-}\}$ in Eq. {eq}`kw2`:
-
-$$\begin{aligned}
+>Because $\ce{NaOH}$ is a strong base, it produces $\pu{0.018 M}$ of $\ce{OH-}$. There are two ways we can calculate $p\ce{H}$.
+>
+>Approach 1. Substitute $\{\ce{OH-}\}$ in Eq. {eq}`kw2`:
+>
+>$$\begin{aligned}
 \{\ce{H3O+}\}\{\ce{OH-}\} &=  \pu{1.0e-14}\\
 \{\ce{H3O+}\} &= \frac{\pu{1.0e-14}}{\{\ce{OH-}\}} \\
 &= \frac{\pu{1.0e-14}}{(0.018)} = \pu{5.56e-13}\\
 p\ce{H} &= -\log(\pu{5.56e-13}) =12.25
 \end{aligned}$$
 
-Approach 2: Calculate $p\ce{OH}$ from $\{\ce{OH-}\}$ and substitute this value in Eq. {eq}`phpoh`: 
-
-$$\begin{aligned}
+>Approach 2: Calculate $p\ce{OH}$ from $\{\ce{OH-}\}$ and substitute this value in Eq. {eq}`phpoh`: 
+>
+>$$\begin{aligned}
 p\ce{OH} &= -\log(0.018) = 1.75\\
 p\ce{H} &= 14.0 - p\ce{OH} = 14.0-1.75 = 12.25
 \end{aligned}$$
@@ -86,44 +95,45 @@ Weak acids do not completely dissociate. Hence, we must use the *ICE method* set
 
 ```{dropdown} Example: Equilibrium $p\ce{H}$  of weak acid solutions 
 
-Let's calculate  at equilibrium of $\pu{0.5 M}$ $\ce{HF}$ solution at $\pu{25 ^\circ C}$. This equilibrium reaction is 
+Calculate  at equilibrium of $\pu{0.5 M}$ $\ce{HF}$ solution at $\pu{25 ^\circ C}$. 
 
-$$\ce{
+>This equilibrium reaction is 
+>
+>$$\ce{
 HF + H2O <=> H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
 }$$
-
-Let's set the ICE table for this problem
-
-|   | $\ce{HF(aq)}$ | $+$ | $\ce{H2O (l)}$ | $\rightleftharpoons$ | $\ce{H3O+ (aq)}$ | $+$ | $\ce{F- (aq)}$ |
-|---|------------|-----|------|--------|---------------|-----|------|
-| [I] | $0.5$      |     |      |       | $0$    |     | $0$         |
-| [C] | $-x$       |     |   |     | $+x$          |     | $+x$        |
-| [E] | $(0.5-x)$  |     |   |    | $(+x)$        |     | $(+x)$      |
-
-
-We can now substitute these into Eq. {eq}`ka` 
-
-$$K_a = \frac{\{\ce{H3O+}\}\{\ce{F-}\}}{\{\ce{HF}\}} = \frac{(+x)(+x)}{(0.5-x)} = \pu{7.1e-4}$$
-
-The above expression can be simplified into a quadratic expression and be solved for $x$. In this case, $x = \pu{1.9e-2}$ or from the above table $\{\ce{H3O+}\} = x = \pu{1.9e-2}$ or $p\ce{H} = 1.72$. 
+>
+>Let's set the ICE table for this problem
+>
+>|   | $\ce{HF(aq)}$ | $+$ | $\ce{H2O (l)}$ | $\rightleftharpoons$ | $\ce{H3O+ (aq)}$ | $+$ | $\ce{F- (aq)}$ |
+>|---|------------|-----|------|--------|---------------|-----|------|
+>| [I] | $0.5$      |     |      |       | $0$    |     | $0$         |
+>| [C] | $-x$       |     |   |     | $+x$          |     | $+x$        |
+>| [E] | $(0.5-x)$  |     |   |    | $(+x)$        |     | $(+x)$      |
+>
+>We can now substitute these into Eq. {eq}`ka` 
+>
+>$$K_a = \frac{\{\ce{H3O+}\}\{\ce{F-}\}}{\{\ce{HF}\}} = \frac{(+x)(+x)}{(0.5-x)} = \pu{7.1e-4}$$
+>
+>The above expression can be simplified into a quadratic expression and be solved for $x$. In this case, $x = \pu{1.9e-2}$ or from the above table $\{\ce{H3O+}\} = x = \pu{1.9e-2}$ or $p\ce{H} = 1.72$. 
 ```
 
 ```{dropdown} Example: Relative abundance of weak acids 
 
 We can calculate the relative abundance of the conjugate base of a weak acid by examining the equilibrium expression. In the $\ce{HF}$ ionization reaction shown in the previous example, the expression can be rearranged as 
 
-$$
+>$$
  \begin{align*}
     K_a &= \frac{\{\ce{H3O+}\}\{\ce{F-}\}}{\{\ce{HF}\}}\\
     \frac{\{\ce{F-}\}}{\{\ce{HF}\}} &= \frac{K_a}{\{\ce{H3O+}\}} 
 \end{align*}
 $$
-
-For any given $\{\ce{H3O+}\}$ (or $p\ce{H}$), we can calculate the relative abundance of weak acids. We can express this ratio in $\%$ by multiplying by $100$.
-
-Percent ionization is calculated as follows:
-
-$$\frac{\{\ce{F-}\}}{\{\ce{HF}\}} \times \pu{100 \%}$$
+>
+>For any given $\{\ce{H3O+}\}$ (or $p\ce{H}$), we can calculate the relative abundance of weak acids. We can express this ratio in $\%$ by multiplying by $100$.
+>
+>Percent ionization is calculated as follows:
+>
+>$$\frac{\{\ce{F-}\}}{\{\ce{HF}\}} \times \pu{100 \%}$$
 ```
 
 ````{margin}
@@ -159,7 +169,7 @@ The $K_H$ is a special equilibrium constant called the ***Henry's Law constant*
 
 If we assume that $[\ce{CO2(g)}]$ is $\pu{400 ppm}$ (= $\pu{400e-6 atm}$),
 
-$$\begin{aligned}
+>$$\begin{aligned}
 [\ce{CO2 (aq)}] &= K_H P_{\ce{CO2 (g)}} \\
 &= \pu{10^{-1.47} mol L-1 atm-1} \times \pu{400e-6 atm} \\
 &= \pu{10^{-4.87} mol L-1}
@@ -325,21 +335,22 @@ Most metal ions (transition metals) will undergo acid ionization to some extent 
 
 ```{dropdown} Example: Amphoteric acids and bases
 
-Aluminum oxide ($\ce{Al2O3}$) is amphoteric. It can behave either as an acidic or basic oxide depending on the reaction conditions. For example, $\ce{Al2O3}$ acts as a base with hydrochloric acid ($\ce{HCl}$) to produce a salt ($\ce{AlCl3}$) and $\ce{H2O}$,
+Aluminum oxide ($\ce{Al2O3}$) is amphoteric. It can behave as an acidic or a basic oxide depending on the reaction conditions. 
 
-$$\ce{
+>For example, $\ce{Al2O3}$ acts as a base with hydrochloric acid ($\ce{HCl}$) to produce a salt ($\ce{AlCl3}$) and $\ce{H2O}$,
+>
+>$$\ce{
 Al2O3 + 6 HCl -> 2 AlCl3 + 3 H2O
 }$$
-
-and acts as an acid with sodium hydroxide ($\ce{NaOH}$),
-
-$$\ce{
+>and acts as an acid with sodium hydroxide ($\ce{NaOH}$),
+>
+>$$\ce{
 Al2O3 + 2 NaOH + 3 H2O -> 2 NaAl(OH)4
 }$$
-
-Aluminum hydroxide reacts with both acids and bases similarly:
-
-$$
+>
+>Aluminum hydroxide reacts with both acids and bases similarly:
+>
+>$$
 \begin{align}
 \ce{
 Al(OH)3 + 3 H+ &-> Al^3+ + 3 H2O\\
@@ -348,7 +359,7 @@ Al(OH)3 + OH- &-> Al(OH)4^-
 \end{align}$$
 ```
 
-The amphoteric nature of metal oxides and hydroxides is often exploited in water and wastewater treatment as well as the treatment of metal-contaminated soils and groundwater. By adding acids or bases to solutions, metal contaminants in solid form could be "mobilized" into aqueous solutions.
+The amphoteric nature of metal oxides and hydroxides is often exploited in water and wastewater treatment and the treatment of metal-contaminated soils and groundwater. By adding acids or bases to solutions, metal contaminants in solid form could be "mobilized" into aqueous solutions.
 
 
 ## Common Ions and Buffering
@@ -357,67 +368,66 @@ A buffer solution resists changes when acids or bases are added. This is possibl
 
 ```{dropdown} Example: Common ion effect 
 
-Let's calculate $p\ce{H}$ of a $\pu{0.1 M}$ $\ce{CH3COOH}$ (acetic acid) solution. The $K_a$ for $\ce{CH3COOH}$ is $\pu{1.8e-5}$ at $\pu{25 ^\circ C}$.
+Calculate $p\ce{H}$ of a $\pu{0.1 M}$ $\ce{CH3COOH}$ (acetic acid) solution. The $K_a$ for $\ce{CH3COOH}$ is $\pu{1.8e-5}$ at $\pu{25 ^\circ C}$.
 
 $$\ce{
 CH3COOH <=> H+ + CH3COO- 
 }$$
 
-Let's calculate concentrations of all components at equilibrium using the ICE method.
-
-|   | $\ce{CH3COOH (aq)}$ | $\ce{H+ (aq)}$ | $\ce{CH3COO- (aq)}$ |
-|---|------------------|-------------|------------------|
-| [I] | $0.1$            | $0$         | $0$              |
-| [C] | $-x$             | $+x$        | $+x$             |
-| [E] | $0.1-x$          | $+x$        | $+x$             |
-
-
-The solution to this problem yields: $[\ce{CH3COOH (aq)}] = \pu{0.099 M}$, $[\ce{CH3COO- (aq)}] = [\ce{H+ (aq)}] = \pu{1.34e-3 M}$ or $p\ce{H} = 2.87$.
-
-Now, let's add $\pu{0.05 M}$ of $\ce{CH3COONa}$ (the $\ce{Na}$ salt of acetic acid) to the above $\ce{CH3COOH (aq)}$ solution.  $\ce{CH3COONa}$ dissociates strongly into ionic form as follows:
-
-$$\ce{
+>Let's calculate the concentrations of all components at equilibrium using the ICE method.
+>
+>|   | $\ce{CH3COOH (aq)}$ | $\ce{H+ (aq)}$ | $\ce{CH3COO- (aq)}$ |
+>|---|------------------|-------------|------------------|
+>| [I] | $0.1$            | $0$         | $0$              |
+>| [C] | $-x$             | $+x$        | $+x$             |
+>| [E] | $0.1-x$          | $+x$        | $+x$             |
+>
+>The solution to this problem yields: $[\ce{CH3COOH (aq)}] = \pu{0.099 M}$, $[\ce{CH3COO- (aq)}] = [\ce{H+ (aq)}] = \pu{1.34e-3 M}$ or $p\ce{H} = 2.87$.
+>
+>Now, let's add $\pu{0.05 M}$ of $\ce{CH3COONa}$ (the $\ce{Na}$ salt of acetic acid) to the above $\ce{CH3COOH (aq)}$ solution.  $\ce{CH3COONa}$ dissociates strongly into ionic form as follows:
+>
+>$$\ce{
 CH3COONa (aq) -> CH3COO- (aq) + Na+ (aq)
 }$$
-
-The net effect of adding the above two reactions is to increase the concentration of $\ce{CH3COO- (aq)}$ in the original reaction.  Le Châtelier's principle tells us that increasing product concentration will drive the reaction to the left.
-
-$$ \ce{
+>
+>Adding the above two reactions increases the concentration of $\ce{CH3COO- (aq)}$ in the original reaction.  Le Châtelier's principle tells us that increasing product concentration will drive the reaction to the left.
+>
+>$$ \ce{
 CH3COOH (aq)) <<=>  H+ (aq) +  CH3COO- (aq)
 } $$
-
-This shift of equilibrium to the left consumes not only some of the $\ce{CH3COO- (aq)}$, but also some of the $\ce{H+ (aq)}$ (a strong acid) to form $\ce{CH3COOH (aq)}$, a weak acid.  Therefore, the $p\ce{H}$ of the solution increases.  Let's calculate the new equilibrium concentrations using the ICE method as above, but with different initial concentrations.
-
-|   | $\ce{CH3COOH (aq)}$ | $\ce{H+ (aq)}$ | $\ce{CH3COO- (aq)}$|
-|---|------------------|-------------------|--------------------|
-| [I] | $0.099$      | $\pu{1.34e-3}$     | $\pu{5.134e-2}$     |
-| [C] | $+y$             | $-y$              | $-y$               |
-| [E] | $0.099+y$        | $\pu{1.34e-3} -y$ | $\pu{5.134e-2} -y$ |
-
-The solution to this problem yields: [$\ce{H+ (aq)}$] = $\pu{3.6e-5 M}$ or $p\ce{H} = 4.44$, or as expected $p\ce{H}$ increased.
+>
+>This shift of equilibrium to the left consumes not only some of the $\ce{CH3COO- (aq)}$, but also some of the $\ce{H+ (aq)}$ (a strong acid) to form $\ce{CH3COOH (aq)}$, a weak acid.  Therefore, the $p\ce{H}$ of the solution increases.  Let's calculate the new equilibrium concentrations using the ICE method as above, but with different initial concentrations.
+>
+>|   | $\ce{CH3COOH (aq)}$ | $\ce{H+ (aq)}$ | $\ce{CH3COO- (aq)}$|
+>|---|------------------|-------------------|--------------------|
+>| [I] | $0.099$      | $\pu{1.34e-3}$     | $\pu{5.134e-2}$     |
+>| [C] | $+y$             | $-y$              | $-y$               |
+>| [E] | $0.099+y$        | $\pu{1.34e-3} -y$ | $\pu{5.134e-2} -y$ |
+>
+>The solution to this problem yields: [$\ce{H+ (aq)}$] = $\pu{3.6e-5 M}$ or $p\ce{H} = 4.44$, or as expected $p\ce{H}$ increased.
 ```
 
-In the above solution, a soluble salt that contained a common ion shifted the equilibrium to the left, thereby suppressing the ionization of the weak electrolyte. Generally, when a compound containing an ion in common with a dissolved substance is added to a solution at equilibrium, the equilibrium shifts to the left. This phenomenon is known as the *common ion effect*. The common ion can also be $\ce{H+}$ or $\ce{OH-}$. That is, adding a strong acid to a weak acid's solution suppresses the weak acid's ionization. Similarly, adding a strong base to a solution of a weak base suppresses the ionization of the weak base.
+In the above solution, a soluble salt that contained a common ion shifted the equilibrium to the left, thereby suppressing the ionization of the weak electrolyte. Generally, when a compound containing an ion in common with a dissolved substance is added to a solution at equilibrium, the equilibrium shifts to the left. This phenomenon is known as the *common ion effect*. The common ion can also be $\ce{H+}$ or $\ce{OH-}$. Adding a strong acid to a weak acid's solution suppresses the weak acid's ionization. Similarly, adding a strong base to a solution of a weak base suppresses the ionization of the weak base.
 
 ```{dropdown} Example: Common ion effect due to addition of $\ce{H+}$ or $\ce{OH-}$
 
 What happens when you add $\ce{H+}$ or $\ce{OH-}$ to the previous acetate system?
 
-Adding $\ce{H+}$ to the acetate system:
-
-$$\ce{
+>Adding $\ce{H+}$ to the acetate system:
+>
+>$$\ce{
 H+ + CH3COO- -> CH3COOH
 }$$
-
-Or, a strong acid ($\ce{H+}$) turns into a weak acid ($\ce{CH3COOH}$)!
-
-Adding $\ce{OH-}$ to the acetate system:
-
-$$\ce{
+>
+>Or, a strong acid ($\ce{H+}$) turns into a weak acid ($\ce{CH3COOH}$)!
+>
+>Adding $\ce{OH-}$ to the acetate system:
+>
+>$$\ce{
 CH3COOH + OH- -> CH3COO- + H2O
 }$$
-
-Or, a strong base ($\ce{OH-}$) turns into a weak base ($\ce{CH3COO-}$)!
+>
+>Or, a strong base ($\ce{OH-}$) turns into a weak base ($\ce{CH3COO-}$)!
 
 ```
 
@@ -438,37 +448,36 @@ $$\ce{
 CH3COOH <=> H+ + CH3COO- \qquad $K_{a} = \pu{1.8e-5}$
 }$$
 
-Let's calculate concentrations of all components at equilibrium using
-the ICE method.
-
-|   | $\ce{CH3COOH <=>}$ | $\ce{H+ +}$  | $\ce{CH3COO-}$ |
-|---|-----------------------------------|-----------|--------------|
-| [I] | $1.0$                             | $0$       | $1.0$        |
-| [C] | $-x$                              | $+x$      | $+x$         |
-| [E] | $1.0-x$                           | $+x$      | $1.0+x$      |
-
-The solution to this problem yields a $p\ce{H} = 4.74$.
-
-Now, let's add $\pu{0.1 M}$ of $\ce{HCl}$ to this system (assume that the addition of $\ce{HCl}$ doesn't change volume).  As the previous example shows, all added $\ce{H+}$ is converted to $\ce{CH3COOH}$.	
-
-$$\ce{
+>Let's calculate the concentrations of all components at equilibrium using the ICE method.
+>
+>|   | $\ce{CH3COOH <=>}$ | $\ce{H+ +}$  | $\ce{CH3COO-}$ |
+>|---|-----------------------------------|-----------|--------------|
+>| [I] | $1.0$                             | $0$       | $1.0$        |
+>| [C] | $-x$                              | $+x$      | $+x$         |
+>| [E] | $1.0-x$                           | $+x$      | $1.0+x$      |
+>
+>The solution to this problem yields a $p\ce{H} = 4.74$.
+>
+>Now, let's add $\pu{0.1 M}$ of $\ce{HCl}$ to this system (assume that the addition of $\ce{HCl}$ doesn't change volume).  As the previous example shows, all added $\ce{H+}$ is converted to $\ce{CH3COOH}$.	
+>
+>$$\ce{
 H+ + CH3COO- -> CH3COOH
 }$$
-
-|       | $\ce{H+ +}$ | $\ce{CH3COO- ->}$ | $\ce{CH3COOH}$ |
-|---------------|-----------|-------------|--------------|
-| On addition of $\ce{H+}$    | $0.1$     | $1.0$    | $1.0$        |
-| On consumption of $\ce{H+}$ | $0$       | $0.9$    | $1.1$        |
-
-Using the ICE approach, let's determine this solution's final $p\ce{H}$ after adding $\ce{HCl}$.
-
-|   | $\ce{CH3COOH <=>}$ | $\ce{H+ +}$  | $\ce{CH3COO-}$ |
-|---|-----------------------------------|-----------|--------------|
-| [I] | $1.1$                             | $0$       | $0.9$        |
-| [C] | $-x$                              | $+x$      | $+x$         |
-| [E] | $1.1-x$                           | $+x$      | $0.9+x$      |
-
-The solution to this problem yields a $p\ce{H} = 4.66$. In other words, a drop of $0.08$ $p\ce{H}$ unit after adding the strong acid. In contrast, if there were no acetate present in the solution, $p\ce{H}$ of pure water in the presence of $\pu{0.1 M}$ HCl would have been $1.0$ ($-\log[\ce{H+}] = -\log(0.1) = 1.0$)!
+>
+>|       | $\ce{H+ +}$ | $\ce{CH3COO- ->}$ | $\ce{CH3COOH}$ |
+>|---------------|-----------|-------------|--------------|
+>| On addition of $\ce{H+}$    | $0.1$     | $1.0$    | $1.0$        |
+>| On consumption of $\ce{H+}$ | $0$       | $0.9$    | $1.1$        |
+>
+>Let's use the ICE approach to determine this solution's final $p\ce{H}$ after adding $\ce{HCl}$.
+>
+>|   | $\ce{CH3COOH <=>}$ | $\ce{H+ +}$  | $\ce{CH3COO-}$ |
+>|---|-----------------------------------|-----------|--------------|
+>| [I] | $1.1$                             | $0$       | $0.9$        |
+>| [C] | $-x$                              | $+x$      | $+x$         |
+>| [E] | $1.1-x$                           | $+x$      | $0.9+x$      |
+>
+>The solution to this problem yields a $p\ce{H} = 4.66$. In other words, a drop of $0.08$ $p\ce{H}$ unit after adding the strong acid. In contrast, if there were no acetate present in the solution, $p\ce{H}$ of pure water in the presence of $\pu{0.1 M}$ HCl would have been $1.0$ ($-\log[\ce{H+}] = -\log(0.1) = 1.0$)!
 ```
 
 The final $p\ce{H}$ of a buffer solution can be determined using the ***Henderson-Hasselbalch equation***, which can be derived from the equilibrium expression of dissociation of a weak acid. The final equation is given as:
@@ -483,14 +492,16 @@ Equation {eq}`henderson` can be used to determine ideal concentrations and appro
 
 ```{dropdown} Example: Henderson-Hasselbalch Equation 
 
-Let's use this equation to solve for the final $p\ce{H}$ when $\pu{0.1 M}$ of HCl was added to the solution containing $\pu{1.0 M}$ each of $\ce{CH3COOH}$ and $\ce{CH3COONa}$. From the previous example, we have [$\ce{CH3COOH}$] and [$\ce{CH3COO-}$] as $\pu{0.9 M}$ and $\pu{1.1 M}$, respectively. Substitute these values in Eq. {eq}`henderson`.
+Let's use this equation to solve for the final $p\ce{H}$ when $\pu{0.1 M}$ of HCl was added to the solution containing $\pu{1.0 M}$ each of $\ce{CH3COOH}$ and $\ce{CH3COONa}$. From the previous example, we have [$\ce{CH3COOH}$] and [$\ce{CH3COO-}$] as $\pu{0.9 M}$ and $\pu{1.1 M}$, respectively. 
 
-$$\begin{aligned}
+>Substitute these values in Eq. {eq}`henderson`.
+>
+>$$\begin{aligned}
     p\ce{H} &= pK_a + \log \frac{[\ce{CH3COO-}]}{[\ce{CH3COOH}]} \\
     &= 4.74 + \log \frac{\pu{0.9 M}}{\pu{1.1 M}}\\
     &= 4.65
 \end{aligned}$$ 
-This $p\ce{H}$ value is similar to that obtained using the ICE approach.
+>This $p\ce{H}$ value is similar to that obtained using the ICE approach.
 
 ```
 

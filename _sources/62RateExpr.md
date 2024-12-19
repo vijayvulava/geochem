@@ -2,7 +2,7 @@
 
 As seen in Eqs. {eq}`rate-ab` and {eq}`ratelaw-ab`, rate laws are in differential forms. They also show how reactant concentrations impact reaction rates. In many chemical reactions, reactants follow different trends in how they are consumed. Below, we focus on the two most common forms of rate expressions encountered in environmental geosciences.
 
-Note that the rate laws are represented in differential forms to describe what occurs on a molecular level during a reaction. The integrated forms of the rate laws are used to determine the reaction order and the rate constant value from experimental measurements.
+Note that the rate laws are represented in differential forms to describe what occurs on a molecular level during a reaction. The integrated forms of the rate laws determine the reaction order and the rate constant value from experimental measurements.
 
 ## Zero-order kinetics
 
@@ -38,14 +38,28 @@ The graph of a zeroth-order reaction. The change in concentration of reactant an
 ```{dropdown} Example: Zero-order kinetics
 
 1.  Determine the rate constant ($\kappa$) of a zero-order reaction if the initial concentration of substance $A$ is $\pu{1.5 M}$ and after $\pu{120 s}$ the concentration of substance $A$ is $\pu{0.75 M}$.
-    **Answer**: $\pu{0.00624 M s−1}$
 
-2.  What is the half-life of substance $A$ if its original concentration     is $\pu{1.2 M}$?
-    **Answer**: $\pu{96 s}$
+> In this problem, $A_0 = \pu{1.5 M}$, $A_t = \pu{0.75 M}$, and $t= \pu{120 S}$.  Using Eq. {eq}`ratelaw-a-0`, we can calculate $\kappa$ as follows:
+>
+>$$\begin{aligned}
+[A]_t  &= [A]_0 - \kappa t\\
+\pu{0.75 M} &= \pu{1.5 M} - \kappa \pu{120 s}\\
+\kappa &= \pu{0.00624 M s−1}
+\end{aligned}$$
 
-3.  If the original concentration of substance $A$ is reduced to $\pu{1.0 M}$ in the previous problem, does the half-life decrease, increase, or stay the same? If the half-life changes what is the new half-life?     
+2.  What is the half-life of substance $A$ if its original concentration is $\pu{1.2 M}$?
 
-**Answer**: The half-life decreases when the original concentration is reduced. New half-life is $\pu{80 s}$.
+> In this problem, half-life ($t_{1/2}$) refers to the time needed for $A_t = 1/2 \times A_0$. Since  $A_0 = \pu{1.2 M}$, $A_t = \pu{0.6 M}$.  We calculated $\kappa = \pu{0.00624 M s−1}$ in the first problem. Now we can calculate  $t$ using Eq. {eq}`ratelaw-a-0` as follows:
+>
+>$$\begin{aligned}
+[A]_t  &= [A]_0 - \kappa t\\
+\pu{0.6 M} &= \pu{1.2 M} - \pu{0.00624 M s−1} t_{1/2}\\
+t_{1/2} &= \pu{96 s}
+\end{aligned}$$
+
+3.  If the original concentration of substance $A$ is reduced to $\pu{1.0 M}$ in the previous problem, does the half-life decrease, increase, or stay the same? If the half-life changes, what will the new half-life be?     
+
+>The half-life decreases when the original concentration is reduced. New half-life is $\pu{80 s}$.
 ```
 
 
@@ -81,9 +95,24 @@ Graphs of a first-order reaction. The expected shapes of the curves for plots o
 
 ```{dropdown} Example: First-order kinetics 
 
-If $\pu{3.0 g}$ of substance $B$ decomposes for $\pu{36 min}$ the mass of unreacted $B$ remaining is found to be $\pu{0.375 g}$. What is the half-life of this reaction if it follows first-order kinetics? 
+If $\pu{3.0 g}$ of substance $B$ decomposes for $\pu{36 min}$ and the mass of unreacted $B$ remaining is found to be $\pu{0.375 g}$, what is the half-life of this reaction if it follows first-order kinetics? 
 
-**Answer**: $\pu{12 min}$
+> In this problem, $B_0 = \pu{3.0 g}$ and $B_t = \pu{0.375 g}$, and $t= \pu{36 min}$. Using Eq. {eq}`ratelaw-a-1`, we can calculate $\kappa$ as follows:
+>
+>$$\begin{aligned}
+\ln \frac{[B]_t}{[B]_0} &= - \kappa_B t\\
+\ln \frac{\pu{0.375 g}}{\pu{3.0 g}} &= - \kappa_B \pu{36 min}\\
+\kappa &= \pu{0.0578 min-1}
+\end{aligned}$$
+>
+>Now that we have determined $\kappa$ for substance $B$, we can calculate $t_{1/2}$ (when $[B]_t}= 0.5 \times[B]_0$) for this substance as follows:
+>
+>$$\begin{aligned}
+\ln \frac{[B]_t}{[B]_0} &= - \kappa_B t\\
+\ln \frac{0.5\time [B]_0}{[B]_0}  &= - \kappa_B t_{1/2}\\
+\ln 0.5 &= \pu{0.0578 min-1} t_{1/2}\\
+t_{1/2} &= \pu{12 min}
+\end{aligned}$$
 
 ```
 
@@ -91,7 +120,7 @@ If $\pu{3.0 g}$ of substance $B$ decomposes for $\pu{36 min}$ the mass of unre
 
 The rate of decomposition of diazomethane is shown in the data below.
 
-| Time, $\pu{s}$ | Conc, $\pu{mm of Hg}$ |
+| Time, $\pu{s}$ | Conc, $\pu{ppb}$ |
 |---------|----------------|
 | 0       | 284            |
 | 100     | 220            |
@@ -102,6 +131,6 @@ The rate of decomposition of diazomethane is shown in the data below.
 
 Determine (a) the reaction order and (b) the rate constant for this reaction.
 
-**Answer**: On plotting these data in a $x-y$ graph resembling {numref}`first-order-rxn` and therefore, this is a first-order reaction. Plot the $\ln (\text{Conc}) $ vs. $\pu{Time}$, and the slope of this straight line is the rate constant.
+>On plotting these data in a $x-y$ graph resembling {numref}`first-order-rxn` and therefore, this is a first-order reaction. Plot the $\ln (\text{Conc}) $ vs. $\pu{Time}$, and the slope of this straight line is the rate constant.
 
 ```

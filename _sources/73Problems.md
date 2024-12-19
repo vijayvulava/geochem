@@ -6,8 +6,8 @@
 4. $\ce{^{230}Th}$ activity in surface of a marine sediment core is $\pu{62 dpm}$ and $\pu{28 dpm}$ at $\pu{1 m}$ depth. $(\lambda = \pu{9.217e-6 y-1})$. 
 	1. What is the age of sediment at $\pu{1 m}$ depth? 
 	2. What is the sedimentation age in $\pu{m y-1}$.
-5. A water sample has a $\delta \ce{^{18}O}$ value of $\pu{−4.5 ‰}$. It is in equilibrium with water vapor at $\pu{25 ^\circ C}$. The fractionation factor at $\pu{25 ^\circ C}$ is $1.0093$. What is the $\delta \ce{^{18}O}$ value of the water vapor? **Answer**: $\pu{−13.67 ‰}$
-6. For Greenland, average summer temperatures are $\pu{0 ^\circ C}$ and average winter temperatures are $\pu{-30 ^\circ C}$. The fractionation factors for $\delta \ce{^{18}O}$ are: at $\pu{-30 ^\circ C}$, $\alpha = 1.0155$ and at $\pu{0 ^\circ C}$, $\alpha = 1.0112$. Calculate the isotopic composition of snow formed during the summer and winter seasons. **Answer:** Summer = $\pu{−24.4 ‰}$ and winter = $\pu{−29.9 ‰}$
+5. A water sample has a $\delta \ce{^{18}O}$ value of $\pu{−4.5 ‰}$. It is in equilibrium with water vapor at $\pu{25 ^\circ C}$. The fractionation factor at $\pu{25 ^\circ C}$ is $1.0093$. What is the $\delta \ce{^{18}O}$ value of the water vapor? %**Answer**: $\pu{−13.67 ‰}$
+6. For Greenland, average summer temperatures are $\pu{0 ^\circ C}$ and average winter temperatures are $\pu{-30 ^\circ C}$. The fractionation factors for $\delta \ce{^{18}O}$ are: at $\pu{-30 ^\circ C}$, $\alpha = 1.0155$ and at $\pu{0 ^\circ C}$, $\alpha = 1.0112$. Calculate the isotopic composition of snow formed during the summer and winter seasons. %**Answer:** Summer = $\pu{−24.4 ‰}$ and winter = $\pu{−29.9 ‰}$
 7. A water sample was measured by isotope ratio mass spectrometry to have a $\ce{^{18}O/^{16}O}$ ratio $R = 0.00199517$ with VSMOW ($R = 0.00200520$). What is its $\delta$ value (rounded to one decimal place)?
 8. Identify which water sample is isotopically lightest in the figure below. Provide an appropriate rationale.
 

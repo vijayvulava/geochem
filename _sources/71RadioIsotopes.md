@@ -71,7 +71,7 @@ $$
 \ce{_6^{14}C -> _7^{14}N + e-}
 $$
 
-Because the neutron converts to a proton, the isotope's mass number does not change, but the atomic number increases by 1.
+>Because the neutron converts to a proton, the isotope's mass number does not change, but the atomic number increases by 1.
 ```
 
 
@@ -91,7 +91,7 @@ $$
 \ce{_9^{18}F -> _8^{18}O + e+}
 $$
 
-The mass number did not change, but the atomic number decreased by $1$ as there is one less proton in the nucleus.
+>The mass number did not change, but the atomic number decreased by $1$ as there is one less proton in the nucleus.
 ```
 
 A proton can also convert into a neutron by capturing an orbiting electron, emitting X-ray radiation, as shown in the reaction below. This process is called ***electron capture***.
@@ -111,8 +111,7 @@ $$
 \ce{_9^{18}F + e- -> _8^{18}O + X-rays}
 $$
 
-
-The mass number did not change, but the atomic number decreased by $1$ as there is one less proton in the nucleus.
+>The mass number did not change, but the atomic number decreased by $1$ as there is one less proton in the nucleus.
 
 ```
 
@@ -136,13 +135,13 @@ $$
 \ce{_{94}^{239}Pu -> _{92}^{235}U + _{2}^{4}He}
 $$
 
-The loss of an $\alpha$ particle means that the mass number decreases by 4, whereas the atomic number decreases by 2.
+>The loss of an $\alpha$ particle means that the mass number decreases by 4, whereas the atomic number decreases by 2.
 
 ```
 
 The $\alpha$ particle is ejected at speed and, due to its mass, is the most ionizing but the least penetrating form of radiation. A sheet of paper can block this form of radiation.
 
-Another form of radioactive decay is that of spontaneous fission. In this process, a heavy radioisotope will split into two medium-weight nuclei called fission products. These are commonly radioactive themselves.
+Another form of radioactive decay is that of spontaneous fission. A heavy radioisotope will split into two medium-weight nuclei called fission products in this process. These are commonly radioactive themselves.
 
 ```{dropdown} Example: Spontaneous fission 
 
@@ -152,7 +151,7 @@ $$
 \ce{_{98}^{252}Cf -> _{48}^{120}Cd + _{50}^{130}Sn + 2 n^0}
 $$
 
-The atomic numbers of cadmium (48) and tin (50) add up to the atomic number of californium (98) because there is no change in the total number of protons. The total mass of the products including the two neutrons, adds up to 252, the mass number of $\ce{_{98}^{252}Cf}$.
+>The atomic numbers of cadmium (48) and tin (50) add up to the atomic number of californium (98) because there is no change in the total number of protons. The total mass of the products, including the two neutrons, adds up to 252, the mass number of $\ce{_{98}^{252}Cf}$.
 
 ```
 
@@ -222,7 +221,7 @@ Consider the radioactive decay of $\ce{^{238}U}$ to $\ce{^{234}Th}$. $\ce{^{238}
 N = (N+D) e^{-\lambda t}
 ```
 
-If we assume that the $D$ is not a radioisotope, we can simplify Eq. {eq}`radio-decay-equation` to determine the number of daughter atoms formed as the parent atoms decay as follows:
+Suppose we assume that the $D$ is not a radioisotope. In that case, we can simplify Eq. {eq}`radio-decay-equation` to determine the number of daughter atoms formed as the parent atoms decay as follows:
 
 ```{math}
 :label: 

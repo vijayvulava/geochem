@@ -91,9 +91,8 @@ CO2 + 2 H2O &-> CH4 + 2 O2\\
 }
 \end{align}$$
 
-**Answer:** 
 
-$$\begin{aligned}
+>$$\begin{aligned}
 \text{Rate} &=  - \frac{1}{a} \frac{\Delta [A]}{\Delta t} = - \frac{1}{b} \frac{\Delta [B]}{\Delta t} = \frac{1}{c} \frac{\Delta [C]}{\Delta t} =  \frac{1}{d} \frac{\Delta [D]}{\Delta t}\\
 &= -  \frac{\Delta [\ce{CO2}]}{\Delta t} = - \frac{1}{2} \frac{\Delta [\ce{H2O}]}{\Delta t} =   \frac{\Delta [\ce{CH4}]}{\Delta t} =  \frac{1}{2} \frac{\Delta [\ce{O2}]}{\Delta t}\\
 &= -  \frac{1}{4}\frac{\Delta [\ce{NH3}]}{\Delta t} = - \frac{1}{5} \frac{\Delta [\ce{O2}]}{\Delta t} =   \frac{1}{4}\frac{\Delta [\ce{NO}]}{\Delta t} =  \frac{1}{6} \frac{\Delta [\ce{H2O}]}{\Delta t}
@@ -113,12 +112,13 @@ $$\ce{
 
 At a particular time during the reaction, $\ce{NO2(g)}$ is being consumed at the rate of $\pu{1.3e-3 mol L-1 s-1}$. (a) At what rate is $\ce{O2(g)}$ being consumed? (b) At what rate is $\ce{N2O5(g)}$ being produced?
 
-**Answer**:
-
-$$\text{Rate} =  -  \frac{1}{4}\frac{\Delta [\ce{NO2}]}{\Delta t} = -  \frac{\Delta [\ce{O2}]}{\Delta t} =   \frac{1}{2}\frac{\Delta [\ce{N2O5}]}{\Delta t}
+>First, write the rate expression for all species in the reaction.
+>
+>$$\text{Rate} =  -  \frac{1}{4}\frac{\Delta [\ce{NO2}]}{\Delta t} = -  \frac{\Delta [\ce{O2}]}{\Delta t} =   \frac{1}{2}\frac{\Delta [\ce{N2O5}]}{\Delta t}
 $$
-
-$$\begin{aligned}
+>
+> Since the consumption rate of $\ce{NO2(g)}$ is known, we can calculate the reaction rate as follows:
+>$$\begin{aligned}
 \frac{\Delta [\ce{NO2}]}{\Delta t} &= -\pu{1.3e-3 mol L-1 s-1}\\
 \text{Rate} & = -  \frac{1}{4}\frac{\Delta [\ce{NO2}]}{\Delta t} = -  \frac{1}{4} \times (-\pu{1.3e-3 mol L-1 s-1})\\
 &= \pu{3.25e-4 mol L-1 s-1}
