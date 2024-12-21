@@ -118,6 +118,7 @@ At a particular time during the reaction, $\ce{NO2(g)}$ is being consumed at the
 $$
 >
 > Since the consumption rate of $\ce{NO2(g)}$ is known, we can calculate the reaction rate as follows:
+>
 >$$\begin{aligned}
 \frac{\Delta [\ce{NO2}]}{\Delta t} &= -\pu{1.3e-3 mol L-1 s-1}\\
 \text{Rate} & = -  \frac{1}{4}\frac{\Delta [\ce{NO2}]}{\Delta t} = -  \frac{1}{4} \times (-\pu{1.3e-3 mol L-1 s-1})\\

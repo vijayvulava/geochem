@@ -9,9 +9,9 @@ Salts from strong bases and strong acids do not hydrolyze, resulting in a soluti
 ```{dropdown} Example: Salt of a strong acid and a strong base
 Consider the salt $\ce{NaCl}$, which forms as a result of a neutralization reaction between a strong acid, $\ce{HCl}$, and a strong base, $\ce{NaOH}$.
 
-When dissolved in water, $\ce{NaCl}$ does not hydrolyze as shown below:
-
-$$
+>When dissolved in water, $\ce{NaCl}$ does not hydrolyze as shown below:
+>
+>$$
 \ce{NaCl (s) + H2O (l) -> Na+ (aq) + Cl- (aq) + H+ (aq) + OH- (aq)}
 $$
 
@@ -86,18 +86,18 @@ $$\ce{NaCl(s) → Na+(aq) + Cl–(aq)}$$
 
 Both types of reactions can be in equilibrium under the given set of conditions.
 
-It is common to write the precipitation‐dissolution equilibria with the solid phase as a reactant and the metals and ligands (anions) as products in their uncomplexed forms. For equilibria of this form, the equilibrium constant ($K$) is given a unique name. It is called the ***solubility product*** and given the symbol $K_{s0}$. The $s$ in $K_{s0}$ indicates that a solid phase is involved, and the zero (not the letter O) indicates that the metal and ligand are uncomplexed. 
+Writing the precipitation‐dissolution equilibria with the solid phase as a reactant and the metals and ligands (anions) as products in their uncomplexed forms is common. For equilibria of this form, the equilibrium constant ($K$) is given a unique name. It is called the ***solubility product*** and given the symbol $K_{s0}$. The $s$ in $K_{s0}$ indicates that a solid phase is involved, and the zero (not the letter O) indicates that the metal and ligand are uncomplexed. 
 
 ```{dropdown} Example: Solubility product notation
 The equilibrium constant for an equilibrium is written with the solid phase as a reactant and the metals and ligands as products in their uncomplexed forms, as shown below.
 
 >$$
-\begin{align}
+\begin{align*}
 \ce{
-NaCl(s) &<=> Na+ + Cl–  \qquad     $ K = K_{s0}$\\
-CaCO3(s) &<=> Ca^2+ + CO3^2–    \qquad   $K = K_{s0}$
+NaCl(s) &<=> Na+ + Cl–  &    $ K = K_{s0}$\\
+CaCO3(s) &<=> Ca^2+ + CO3^2–    &   $K = K_{s0}$
 }
-\end{align}
+\end{align*}
 $$
 >
 >The metal and ligand must be uncomplexed to use the $K_{s0}$ label.

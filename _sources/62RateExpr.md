@@ -32,29 +32,29 @@ On integrating the above expression, we obtain,
 name: zero-order-rxn
 figclass: margin-caption
 ---
-The graph of a zeroth-order reaction. The change in concentration of reactant and product with time produces a straight line. 
+The graphical trend of a zeroth-order reaction. The change in concentration of reactant and product with time produces a straight line. 
 ```
 
 ```{dropdown} Example: Zero-order kinetics
 
 1.  Determine the rate constant ($\kappa$) of a zero-order reaction if the initial concentration of substance $A$ is $\pu{1.5 M}$ and after $\pu{120 s}$ the concentration of substance $A$ is $\pu{0.75 M}$.
 
-> In this problem, $A_0 = \pu{1.5 M}$, $A_t = \pu{0.75 M}$, and $t= \pu{120 S}$.  Using Eq. {eq}`ratelaw-a-0`, we can calculate $\kappa$ as follows:
+> In this problem, $A_0 = \pu{1.5 M}$, $A_t = \pu{0.75 M}$, and $t= \pu{120 s}$.  Using Eq. {eq}`ratelaw-a-0`, we can calculate $\kappa$ as follows:
 >
 >$$\begin{aligned}
 [A]_t  &= [A]_0 - \kappa t\\
-\pu{0.75 M} &= \pu{1.5 M} - \kappa \pu{120 s}\\
+(\pu{0.75 M}) &= (\pu{1.5 M}) - \kappa (\pu{120 s})\\
 \kappa &= \pu{0.00624 M s−1}
 \end{aligned}$$
 
-2.  What is the half-life of substance $A$ if its original concentration is $\pu{1.2 M}$?
+2.  What is the half-life of substance $A$ (from problem 1) if its original concentration is $\pu{1.2 M}$?
 
-> In this problem, half-life ($t_{1/2}$) refers to the time needed for $A_t = 1/2 \times A_0$. Since  $A_0 = \pu{1.2 M}$, $A_t = \pu{0.6 M}$.  We calculated $\kappa = \pu{0.00624 M s−1}$ in the first problem. Now we can calculate  $t$ using Eq. {eq}`ratelaw-a-0` as follows:
+> In this problem, half-life ($t_{1/2}$) refers to the time needed for $A_t = 0.5 \cdot A_0$. Since  $A_0 = \pu{1.2 M}$, $A_t = \pu{0.6 M}$.  We calculated $\kappa = \pu{0.00624 M s−1}$ in the first problem. Now we can calculate  $t$ using Eq. {eq}`ratelaw-a-0` as follows:
 >
 >$$\begin{aligned}
 [A]_t  &= [A]_0 - \kappa t\\
-\pu{0.6 M} &= \pu{1.2 M} - \pu{0.00624 M s−1} t_{1/2}\\
-t_{1/2} &= \pu{96 s}
+\pu{0.6 M} &= \pu{1.2 M} - \pu{0.00624 M s−1} \cdot t_{1/2}\\
+\therefore \, t_{1/2} &= \pu{96 s}
 \end{aligned}$$
 
 3.  If the original concentration of substance $A$ is reduced to $\pu{1.0 M}$ in the previous problem, does the half-life decrease, increase, or stay the same? If the half-life changes, what will the new half-life be?     
@@ -90,7 +90,7 @@ On integrating,
 name: first-order-rxn
 figclass: margin-caption
 ---
-Graphs of a first-order reaction. The expected shapes of the curves for plots of reactant concentration versus time (top) and the natural logarithm of reactant concentration versus time (bottom) for a first-order reaction. 
+Graphical trend of a first-order reaction. The expected shapes of the graphs for plots of reactant concentration versus time (top) and the natural logarithm of reactant concentration versus time (bottom) for a first-order reaction. 
 ```
 
 ```{dropdown} Example: First-order kinetics 
@@ -101,17 +101,17 @@ If $\pu{3.0 g}$ of substance $B$ decomposes for $\pu{36 min}$ and the mass of 
 >
 >$$\begin{aligned}
 \ln \frac{[B]_t}{[B]_0} &= - \kappa_B t\\
-\ln \frac{\pu{0.375 g}}{\pu{3.0 g}} &= - \kappa_B \pu{36 min}\\
+\ln \frac{\pu{0.375 g}}{\pu{3.0 g}} &= - \kappa_B \cdot \pu{36 min}\\
 \kappa &= \pu{0.0578 min-1}
 \end{aligned}$$
 >
->Now that we have determined $\kappa$ for substance $B$, we can calculate $t_{1/2}$ (when $[B]_t}= 0.5 \times[B]_0$) for this substance as follows:
+>Now that we have determined $\kappa$ for substance $B$, we can calculate $t_{1/2}$ (when $[B]_t}= 0.5 \cdot [B]_0$) for this substance as follows:
 >
 >$$\begin{aligned}
 \ln \frac{[B]_t}{[B]_0} &= - \kappa_B t\\
 \ln \frac{0.5\time [B]_0}{[B]_0}  &= - \kappa_B t_{1/2}\\
-\ln 0.5 &= \pu{0.0578 min-1} t_{1/2}\\
-t_{1/2} &= \pu{12 min}
+\ln 0.5 &= - \pu{0.0578 min-1} t_{1/2}\\
+\therefore \, t_{1/2} &= \pu{12 min}
 \end{aligned}$$
 
 ```

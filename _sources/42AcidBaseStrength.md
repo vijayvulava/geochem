@@ -58,13 +58,13 @@ Calculate $p\ce{H}$ of $\pu{0.018 M}$  NaOH at $\pu{25 ^\circ C}$.
 \{\ce{H3O+}\}\{\ce{OH-}\} &=  \pu{1.0e-14}\\
 \{\ce{H3O+}\} &= \frac{\pu{1.0e-14}}{\{\ce{OH-}\}} \\
 &= \frac{\pu{1.0e-14}}{(0.018)} = \pu{5.56e-13}\\
-p\ce{H} &= -\log(\pu{5.56e-13}) =12.25
+p\ce{H} &= -\log\{\ce{H3O+}\} =  -\log(\pu{5.56e-13}) = 12.25
 \end{aligned}$$
 
 >Approach 2: Calculate $p\ce{OH}$ from $\{\ce{OH-}\}$ and substitute this value in Eq. {eq}`phpoh`: 
 >
 >$$\begin{aligned}
-p\ce{OH} &= -\log(0.018) = 1.75\\
+p\ce{OH} &= -\log\{\ce{OH-}\} = -\log(0.018) = 1.75\\
 p\ce{H} &= 14.0 - p\ce{OH} = 14.0-1.75 = 12.25
 \end{aligned}$$
 ```
@@ -120,8 +120,10 @@ HF + H2O <=> H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
 
 ```{dropdown} Example: Relative abundance of weak acids 
 
-We can calculate the relative abundance of the conjugate base of a weak acid by examining the equilibrium expression. In the $\ce{HF}$ ionization reaction shown in the previous example, the expression can be rearranged as 
+Calculate the relative abundance of the conjugate base of a weak acid by examining the equilibrium expression. 
 
+>In the $\ce{HF}$ ionization reaction shown in the previous example, the expression can be rearranged as follows:
+>
 >$$
  \begin{align*}
     K_a &= \frac{\{\ce{H3O+}\}\{\ce{F-}\}}{\{\ce{HF}\}}\\
@@ -161,16 +163,22 @@ The above two reactions cannot be separated, and it is often difficult to distin
 
 The equilibrium relationship of reaction {eq}`co2-dissol` can be expressed as
 
-$$K_H = \frac{[\ce{CO2 (aq)}]}{P_{\ce{CO2 (g)}}} = \pu{10^{-1.47} mol L-1 atm-1}$$
+```{math}
+:label: co2-kh
+\begin{align*}
+K_H &= \frac{[\ce{CO2 (aq)}]}{P_{\ce{CO2 (g)}}}\\ 
+&= \pu{10^{-1.47} mol L-1 atm-1}
+\end{align*}
+```
 
 The $K_H$ is a special equilibrium constant called the ***Henry's Law constant*** and is used for equilibrium reactions involving gas dissolution in water. Using the $K_H$, $[\ce{H2CO3^*}]$ can be calculated for different atmospheric concentrations.
 
 ```{dropdown} Example: Application of $K_H$
 
-If we assume that $[\ce{CO2(g)}]$ is $\pu{400 ppm}$ (= $\pu{400e-6 atm}$),
+If we assume that $[\ce{CO2(g)}]$ is $\pu{400 ppm}$ (= $\pu{400e-6 atm}$), convert this concentration to $\pu{mol L-1}$ using Eq. {eq}`co2-kh`.
 
 >$$\begin{aligned}
-[\ce{CO2 (aq)}] &= K_H P_{\ce{CO2 (g)}} \\
+\[\ce{CO2 (aq)}\] &= K_H P_{\ce{CO2 (g)}} \\
 &= \pu{10^{-1.47} mol L-1 atm-1} \times \pu{400e-6 atm} \\
 &= \pu{10^{-4.87} mol L-1}
 \end{aligned}

@@ -69,7 +69,7 @@ FeOOH + e- &-> FeO + H2O
 >
 >Step 6: Add $\ce{H+}$ to balance $\ce{O}$
 >
-$$ \begin{align*} 
+>$$ \begin{align*} 
 \ce{
 SO4^2- + 8 e- + 10 H+ &-> H2S + 4 H2O\\
 FeOOH + e- + H+ &-> FeO + H2O
@@ -79,7 +79,7 @@ FeOOH + e- + H+ &-> FeO + H2O
 >
 >Step 8a: Combine half-reaction such that all $\ce{e-}$ are consumed.  In this case, multiply the $\ce{Fe}$ half-reaction by a factor $8$ to have the same number of $\ce{e-}$.  
 >
-$$ \begin{align*} 
+>$$ \begin{align*} 
 \ce{
 SO4^2- + 8 e- + 10 H+ &-> H2S + 4 H2O\\
 8FeOOH + 8e- + 8H+ &-> 8FeO + 8H2O
@@ -87,7 +87,7 @@ SO4^2- + 8 e- + 10 H+ &-> H2S + 4 H2O\\
 >
 >Step 8b: Combine half-reaction such that all $\ce{e-}$ are consumed.  Reverse the 2nd reaction so that the $\ce{e-}$ are on the opposite sides of the reactions. Now, all $\ce{e-}$ can be cancelled.
 >
-$$ \begin{align*} 
+>$$ \begin{align*} 
 \ce{
 SO4^2- + 8 e- + 10 H+ &-> H2S + 4 H2O\\
 8 FeO + 8 H2O &-> 8 FeOOH + 8 e- + 8 H+

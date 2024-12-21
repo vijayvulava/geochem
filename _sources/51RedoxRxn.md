@@ -15,14 +15,14 @@ $$
 } $$
 
 >Here $\ce{Na}$ is losing an $\ce{e-}$ to become $\ce{Na+}$ and is oxidized. Also, $\ce{Cl2}$ is gaining $\ce{e-}$ to become $\ce{Cl-}$ and is reduced.
->
+
 $$ 
->\begin{align*} 
+\begin{align*} 
 \ce{
 2 Fe + O2 &-> 2 Fe^2+ + 2O^2- \\
 &-> 2 FeO
 } \end{align*} $$
->
+
 >Here $\ce{Fe}$ is losing $\ce{e-}$ to become $\ce{Fe^2+}$ and is oxidized. While, $\ce{O2}$ is gaining $\ce{e-}$ to become $\ce{O^2-}$ and is reduced.
 ```
 
@@ -32,7 +32,8 @@ Representing "half" of a redox reaction is often convenient - the oxidation half
 
 Below are examples of oxidation reactions where an element loses $\ce{e-}$.
 
->$$ \begin{align*} \ce{
+>$$ \begin{align*} 
+\ce{
 Fe(s) &-> Fe^2+ + 2 e- \\
 &-> Fe^3+ + 3 e- \\
 C(s) &-> C^4+ + 4 e-
@@ -110,9 +111,9 @@ Determine the OS of $\ce{N}$ in $\ce{NH3}$, $\ce{NO3-}$, $\ce{NO2-}$, and $\ce{N
 
 >Per the OS rules, OS for $\ce{H}$ and $\ce{O}$ in these compounds are $+1$ and $-2$, respectively.
 >
->We can use a simple algebra trick to determine the OS for an unknown. Let's start with $\ce{NH3}$. Let's call OS of $\ce{N}$ as $x$. Therefore, based on the above rules, $x+3(+1) = 0$. Or, $x = -3$, or OS for $\ce{N}$ in $\ce{NH3}$ is 3.
+>We can use a simple algebra trick to determine the OS for an unknown. Let's start with $\ce{NH3}$. Let's call OS of $\ce{N}$ as $x$. Therefore, based on Rule $\#$8, $x+3(+1) = 0$. Or, $x = -3$, or OS for $\ce{N}$ in $\ce{NH3}$ is 3.
 >
->Similarly, let's write the algebraic notation for $\ce{NO3-}$. $x+3(-2) = -1$ or, $x = +5$.
+>Similarly, let's write the algebraic notation for $\ce{NO3-}$ using Rule $#$9 as $x+3(-2) = -1$, Therefore, $x = +5$ or OS for $\ce{N}$ in $\ce{NO3-}$ is 5.
 >
 >Therefore, the OS of all $\ce{N}$ compounds are:
 >1. $\ce{NH3}$ : $-3$

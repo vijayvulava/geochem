@@ -14,9 +14,11 @@ Naturally occurring hydrogen is found to consist of three isotopes:
 2. $\pu{0.0115 \%}$ whose isotopic weight is $2.01410178$
 3. $\pu{0 \%}$ whose isotopic weight is $3.016049277$
 
-Let's calculate the atomic weight of an average naturally occurring sample of a hydrogen atom. We can calculate the weighted average as follows: 
+Calculate the atomic weight of an average naturally occurring sample of a hydrogen atom. 
 
-$$\begin{align}
+>The atomic weight is the weighted average of the masses of all isotopes of the element and can be calculated as follows: 
+>
+>$$\begin{align}
     \text{Atomic Weight} &= \frac{99.9885}{100}\times 1.007825 \\
     &+ \frac{0.0115}{100}\times 2.01410178 \\
     &+ \frac{0}{100}\times 3.016049277 \\
@@ -196,7 +198,7 @@ where $\lambda$ is the radioactive decay constant (similar to the rate constant,
 :label: radio-decay-equation
 \begin{aligned}
 \ln \frac{N_t}{N_0} &= -\lambda t \\
-\text{or, }
+\text{or,}\,
 N &= N_0 e^{-\lambda t} 
 \end{aligned}
 ```
@@ -209,7 +211,7 @@ Since the radioisotope is unstable and decaying according to first-order kinetic
 :label: 
 \begin{aligned}
 \frac{1}{2} &= e^{-\lambda t_{1/2}} \\
-\text{or,} 
+\text{or,}\,
 t_{1/2} &= \frac{0.693}{\lambda}
 \end{aligned}
 ```

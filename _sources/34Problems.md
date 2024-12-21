@@ -25,7 +25,7 @@ $$
 \end{align*}
 $$
 
-3. Create a table of all gases in Earth's atmosphere from the most abundant at the top to the least abundant (minimum of 6 gases). In adjacent columns, list concentrations in fraction ($\%$), partial pressure ($P,\, \pu{atm}$), and concentration ($C,\, \pu{mol L-1}$). See the template below:
+3. Create a table of all gases in Earth's atmosphere from the most abundant at the top to the least abundant (minimum of 6 gases). In adjacent columns, list concentrations in fraction ($\%$), partial pressure ($P,\, \pu{atm}$), and concentration ($C,\, \pu{mol L-1}$). Use the template below:
    
 | Gas       | Fraction   |   $P$   |   $C$   |
 |------  |-----: | ------: | --------: |
@@ -34,81 +34,75 @@ $$
 | $\ce{O2}$ | $21$    | $0.21$   | $\pu{8.58e-3}$    |
 | $\vdots$  |     |     |       |
 
-4. Carbonyl chloride ($\ce{COCl2}$), also called phosgene, is a highly poisonous gas used on the battlefield in World War I. It is produced by the reaction of carbon monoxide with chlorine gas as follows
+4. Carbonyl chloride ($\ce{COCl2}$), also called phosgene, is a highly poisonous gas used on the battlefield in World War I. It is produced by the reaction of carbon monoxide with chlorine gas, as shown in the reaction below. In an experiment conducted at $\pu{74 ^\circ C}$, the equilibrium concentrations of the species involved in the reaction were as follows: $[\ce{CO}] = \pu{1.2e-2 M}$, $[\ce{Cl2}]= \pu{0.054 M}$, and $[\ce{COCl2}] = \pu{0.14 M}$. Answer the following questions.
 
 $$\ce{CO(g) + Cl2(g)  <=> COCl2(g)}$$
+	1. Write the equilibrium expression. 
+	2. Determine $K_c$ and $K_p$ for this reaction at $\pu{74 ^\circ C}$.
 
-In an experiment conducted at $\pu{74 ^\circ C}$, the equilibrium concentrations of the species involved in the reaction were as follows: $[\ce{CO}] = \pu{1.2e-2 M}$, $[\ce{Cl2}]= \pu{0.054 M}$, and $[\ce{COCl2}] = \pu{0.14 M}$. 
-1. Write the equilibrium expression. 
-2. Determine $K_c$ and $K_p$ for this reaction at 74 °C.
 
-5. At equilibrium, the pressure of the reacting mixture (represented below) is $\pu{0.105 atm}$ at $\pu{350 ^\circ C}$. 
+5. At equilibrium, the pressure of the reacting mixture (represented below) is $\pu{0.105 atm}$ at $\pu{350 ^\circ C}$. Determine $K_c$ and $K_p$ for this reaction.
 
 $$\ce{CaCO3(s) <=> CaO(s) + CO2(g)
 }$$
-Determine $K_c$ and $K_p$ for this reaction.
 
-6. Below is a reaction depicting the composition of water molecules and the production of $\ce{H2(g)}$ at $\pu{25 ^\circ C}$. (In reality, this reaction occurs at a very high temperature.)
+
+6. Below is a reaction depicting the composition of water molecules and the production of $\ce{H2(g)}$ at $\pu{25 ^\circ C}$. (In reality, this reaction occurs at a very high temperature.) Using thermodynamic data, calculate this reaction's equilibrium constant, $K_p$.
 
 $$\ce{2 H2O(g) <=> 2 H2(g) + O2(g)
 }$$
-Using thermodynamic data, calculate this reaction's equilibrium constant, $K_p$.
 
-7. The dissolution of silver chloride in water at $\pu{25 ^\circ C}$. 
+
+7. The dissolution of silver chloride in water at $\pu{25 ^\circ C}$. Calculate $\Delta_{rxn}G^\circ$ for the process using only the data provided here.
 
 $$\ce{AgCl(s) <=>[H2O] Ag+(aq) + Cl-(aq) \qquad $K_{sp} = \pu{1.6e-10}$
 }$$
-Calculate $\Delta_{rxn}G^\circ$ for the process using only the data provided here.
 
-8. Consider the decomposition of calcium carbonate, as shown in the reaction below. 
+
+8. Consider the decomposition of calcium carbonate, as shown in the reaction below. Assume that $\Delta_{rxn}H^\circ = \pu{177.8 kJ mol-1}$ and $\Delta_{rxn}S^\circ = \pu{160.5 J mol-1 K-1}$ for the temperature range.  Calculate the pressure in atm of $\ce{CO2(g)}$ in an equilibrium process at the following temperatures: $\pu{25 ^\circ C}$  and $\pu{800 ^\circ C}$.
 
 $$\ce{CaCO3 <=> CaO + CO2
 }$$
-Assume that $\Delta_{rxn}H^\circ = \pu{177.8 kJ mol-1}$ and $\Delta_{rxn}S^\circ = \pu{160.5 J mol-1 K-1}$ for the temperature range.  Calculate the pressure in atm of $\ce{CO2(g)}$ in an equilibrium process at the following temperatures: $\pu{25 ^\circ C}$  and $\pu{800 ^\circ C}$.
 
-9. At $\pu{25 ^\circ C}$, $\Delta_{rxn}G^\circ = \pu{8.6 kJ mol-1}$ for the process shown below. 
+9. At $\pu{25 ^\circ C}$, $\Delta_{rxn}G^\circ = \pu{8.6 kJ mol-1}$ for the process shown below. Calculate the vapor pressure of water at this temperature.
 
 $$\ce{H2O(l) <=> H2O(g)
 }$$
-Calculate the vapor pressure of water at this temperature.
 
-10. The reaction below shows the equilibrium between graphite and diamond.
+
+10. The reaction below shows the equilibrium between graphite and diamond. (a) Calculate $\Delta_{rxn}G^\circ$ for the process, (b) Determine if the formation of graphite from diamond favored at $\pu{25 ^\circ C}$? (c) Why do diamonds not become graphite on standing if this reaction is favored?
 
 $$\ce{C  (diamond) <=> C  (graphite)
 }$$
-1. Calculate $\Delta_{rxn}G^\circ$ for the process. 
-2. Is the formation of graphite from diamond favored at $\pu{25 ^\circ C}$? Why do diamonds not become graphite on standing if this reaction is favored?
+
 
 11. $\ce{CaCl2(s)}$ is a strong electrolyte when it is dissolved in water at $\pu{25 ^\circ C}$ to create $\ce{Ca^2+}$ and $\ce{Cl-}$. Calculate activity of $\{\ce{Ca^2+}\}$ and $\{\ce{Cl-}\}$ when the following concentrations of $\ce{CaCl2(s)}$ are dissolved: (a) $\pu{0.001 mol L-1}$, (b) $\pu{0.09 mol L-1}$, and (c) $\pu{0.4 mol L-1}$.
 
-12. At the start of the following reaction, the concentrations of $\ce{N2}$, $\ce{H2}$, and $\ce{NH3}$ are $\pu{0.071 M}$, $\pu{9.2e-3 M}$, and $\pu{1.83e-4 M}$, respectively. 
+
+12. At the start of the following reaction, the concentrations of $\ce{N2}$, $\ce{H2}$, and $\ce{NH3}$ are $\pu{0.071 M}$, $\pu{9.2e-3 M}$, and $\pu{1.83e-4 M}$, respectively. (a) Determine whether this system is at equilibrium, and (b) if it is not, determine in which direction it must proceed to establish equilibrium.
 
 $$\ce{N2 + 3 H2 <=> 2 NH3 \qquad $K_c =1.2$ at $\pu{375 ^\circ C}$
 }$$
-	1. Determine whether this system is at equilibrium.
-	2. If not at equilibrium, determine in which direction it must proceed to establish equilibrium.
+	
 
-13. Hydrogen sulfide ($\ce{H2S(g)}$) is a commonly found in salt marsh environments. It is removed by reaction with oxygen to produce elemental sulfur.
+13. Hydrogen sulfide ($\ce{H2S(g)}$) is a commonly found in salt marsh environments. It is removed by reaction with oxygen to produce elemental sulfur. For each of the following scenarios, determine whether the equilibrium will shift to the right, shift to the left, or neither: (a) addition of $\ce{O2(g)}$, (b) removal of $\ce{H2S(g)}$, (c) removal of $\ce{H2O(g)}$, and (d) addition of $\ce{S(s)}$.
 
 $$\ce{2 H2S(g) + O2(g) <=> 2 S(s) + 2 H2O(g)
 }$$
-For each of the following scenarios, determine whether the equilibrium will shift to the right, shift to the left, or neither: 
-	1. addition of $\ce{O2(g)}$, 
-	2. removal of $\ce{H2S(g)}$, 
-	3. removal of $\ce{H2O(g)}$, and 
-	4. addition of $\ce{S(s)}$.
 
-14. Repeat the above problem with the following initial data.
+
+14. Repeat the above problem with the following initial data. Calculate concentrations of all components at equilibrium if we start with $\ce{H2(g)}$ = $\pu{0.00623 M}$, $\ce{H2(g)}$ = $\pu{0.00414 M}$, and $\ce{HI(g)}$ =  $\pu{0.0424 M}$. $K_c$ for the above reaction is $54.3$ at $\pu{430 ^\circ C}$. Hint: Compare $Q_c$ with $K_c$ to determine which direction the reaction proceeds towards equilibrium.
 
 $$\ce{H2(g) + I2(g) <=> 2 HI(g)
 }$$
-Calculate concentrations of all components at equilibrium if we start with $\ce{H2(g)}$ = $\pu{0.00623 M}$, $\ce{H2(g)}$ = $\pu{0.00414 M}$, and $\ce{HI(g)}$ =  $\pu{0.0424 M}$. $K_c$ for the above reaction is $54.3$ at $\pu{430 ^\circ C}$. Hint: Compare $Q_c$ with $K_c$ to determine which direction the reaction proceeds towards equilibrium.
+
 
 15. Large quantities of $\ce{H2 (g)}$ are needed to produce $\ce{NH3(g)}$. One preparation for $\ce{H2 (g)}$ is the following reaction, at $\pu{300 ^\circ C}$ in the presence of a Cu-Zn catalyst:
 
 $$\ce{CO(g) + H2O(g) <=> CO2(g) + H2(g) \qquad $K_c=1.87$ and $\Delta _{rxn}H^\circ = \pu{-41 kJ mol-1}$
 }$$
-	1. Initial concentrations of reactants $\ce{CO(g)}$ and $\ce{H2O(g)}$ were $\pu{3.2 M}$. The final concentration of $\ce{CO(g)}$ was monitored over time and determined to be $\pu{1.35 M}$ at equilibrium. What are the equilibrium concentrations of all gases? (Use ICE method) 
-	2. In another reactor, initial concentrations are: $[\ce{CO}] = \pu{0.50 M}$, $[\ce{H2O}] = \pu{0.045 M}$, $[\ce{CO2}] = \pu{0.050 M}$, $[\ce{H2}] = \pu{0.040 M}$. (i) Compare $Q$ to $K$ and determine the direction of the reaction. (ii) What are the equilibrium concentrations?
-	3. If $\pu{0.80 mole}$ of $\ce{CO(g)}$ and $\ce{H2O(g)}$ are added to a new $\pu{5 L}$ reactor, what are the equilibrium concentrations of all reactants and products?
-	4. If your objective is to increase $\ce{H2(g)}$ production, explain which of the following options work? (i) Remove reactant or product? (ii) Add reactant or product? (iii) Change $P$? (iv) Change $T$?
+
+1. Initial concentrations of reactants $\ce{CO(g)}$ and $\ce{H2O(g)}$ were $\pu{3.2 M}$. The final concentration of $\ce{CO(g)}$ was monitored over time and determined to be $\pu{1.35 M}$ at equilibrium. What are the equilibrium concentrations of all gases? (Use ICE method) 
+2. In another reactor, initial concentrations are: $[\ce{CO}] = \pu{0.50 M}$, $[\ce{H2O}] = \pu{0.045 M}$, $[\ce{CO2}] = \pu{0.050 M}$, $[\ce{H2}] = \pu{0.040 M}$. (i) Compare $Q$ to $K$ and determine the direction of the reaction. (ii) What are the equilibrium concentrations?
+3. If $\pu{0.80 mole}$ of $\ce{CO(g)}$ and $\ce{H2O(g)}$ are added to a new $\pu{5 L}$ reactor, what are the equilibrium concentrations of all reactants and products?
+4. If your objective is to increase $\ce{H2(g)}$ production, explain which of the following options work? (i) Remove reactant or product? (ii) Add reactant or product? (iii) Change $P$? (iv) Change $T$?

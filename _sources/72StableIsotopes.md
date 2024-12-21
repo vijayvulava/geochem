@@ -85,8 +85,9 @@ Consider the evaporation of water. We can set the fractionation ratio and factor
 
 $$R = \frac{\ce{^{18}O}}{\ce{^{16}O}}
 $$ 
-We can calculate $\alpha$ as
 
+>We can calculate $\alpha$ as
+>
 >$$\alpha = \frac{\ce{^{18}O}/\ce{^{16}O}_{\text{(liquid)}}}{\ce{^{18}O}/\ce{^{16}O}_{\text{(vapor)}}}
 $$
 
@@ -95,11 +96,11 @@ $$
 >$$
 [\ce{^{18}O}]_{\text{vapor}} > [\ce{^{16}O}]_{\text{liquid}}
 $$
-
+>
 >Conversely, $\ce{^{18}O}$ is enriched in the liquid relative to the vapor,
 >
-$$
->[\ce{^{18}O}]_{\text{liquid}} > [\ce{^{18}O}]_{\text{vapor}}$$
+>$$
+[\ce{^{18}O}]_{\text{liquid}} > [\ce{^{18}O}]_{\text{vapor}}$$
 >
 >Therefore, the fractionation factor is greater than 1. Increasing temperature decreases the fractionation factor and becomes 1 at infinite temperature.
 

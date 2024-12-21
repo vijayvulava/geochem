@@ -59,7 +59,7 @@ Ca(OH)2 &-> Ca^2+ + 2 OH-}
 \end{align*}
 $$
 
-> First two reactions are examples of an Arrhenius acid, while the third and fourth reactions are examples of an Arrhenius base.
+> The first two reactions are examples of an Arrhenius acid, while the third and fourth reactions are examples of an Arrhenius base.
 ``` 
 
 ## Brønsted-Lowry Acids and Bases
@@ -77,10 +77,10 @@ NH3 + H2O &<=> NH4+ + OH-}
 \end{align*}
 $$
 
-> The first example below is both an Arrhenius and Brønsted acid as is donated. The second example is also both an Arrhenius and Brønsted base because it produces a $\ce{OH-}$ and accepts a $\ce{H+}$ (to become $\ce{NH4+}$).
+> The first example is both an Arrhenius and Brønsted acid as is donated. The second example is also both an Arrhenius and Brønsted base because it produces a $\ce{OH-}$ and accepts a $\ce{H+}$ (to become $\ce{NH4+}$).
 ```
 
-The reactions below show the same reaction, but it is important to recognize that $\ce{H+}$ does not exist as an isolated species in solution. Rather, it is hydrated just as other aqueous ions are. The positively charged proton is strongly attracted to the partial negative charge ($\delta -$) on the oxygen atom in a water molecule and forms the **hydronium ion,** $\ce{H3O+}$.
+The reactions below show the same reaction, but it is important to recognize that $\ce{H+}$ does not exist as an isolated species in solution. Instead, it is hydrated just as other aqueous ions are. The positively charged proton is strongly attracted to the partial negative charge ($\delta -$) on the oxygen atom in a water molecule and forms the **hydronium ion,** $\ce{H3O+}$.
 
 $$
 \begin{align*}
@@ -133,14 +133,15 @@ figclass: margin-caption
 A coordinate covalent bond shows a water molecule combining with a hydrogen ion to form a hydronium ion, and an ammonia molecule combines with a hydrogen ion to form an ammonium ion.   Image source: [15.2 Lewis Acids and Bases - Chemistry 2e | OpenStax](https://openstax.org/books/chemistry-2e/pages/15-2-lewis-acids-and-bases)
 ```
 
-*The species donating the electron pair that compose the bond is a Lewis base*, *the species accepting the electron pair is a Lewis acid*, and the product of the reaction is a Lewis acid-base adduct. Brønsted-Lowry acid-base reactions represent a subcategory of Lewis acid reactions, specifically, those in which the acid species is $\ce{H+}$.
+*The species donating the electron pair that comprise the bond is a Lewis base*, *the species accepting the electron pair is a Lewis acid*, and the product of the reaction is a Lewis acid-base reaction. Brønsted-Lowry acid-base reactions represent a subcategory of Lewis acid reactions, specifically, those in which the acid species is $\ce{H+}$.
 
 ````{margin}
 For more information, see [15.2 Lewis Acids and Bases - Chemistry 2e | OpenStax](https://openstax.org/books/chemistry-atoms-first/pages/14-1-bronsted-lowry-acids-and-bases)
 ````
+
 ## Acid-Base Properties of Water
 
-Water is considered a *universal solvent* due to its ubiquity and importance for all biological, environmental, and surficial geological processes. In addition, most environmental acid-base chemistry occurs in aqueous solution. Water can act as either a Brønsted-Lowry acid (as in the ionization of $\ce{HCl}$) or a Brønsted-Lowry base (as in the ionization of $\ce{NH3}$). Amphoteric is a species that can behave either as a Brønsted-Lowry acid or a Brønsted-Lowry base. Water is also a very weak electrolyte, but it does undergo ionization to a small extent:
+Water is considered a *universal solvent* due to its ubiquity and importance for all biological, environmental, and surficial geological processes. In addition, most environmental acid-base chemistry occurs in aqueous solution. Water can act as either a Brønsted-Lowry acid (as in the ionization of $\ce{HCl}$) or a Brønsted-Lowry base (as in the ionization of $\ce{NH3}$). Amphoteric species can behave either as a Brønsted-Lowry acid or a Brønsted-Lowry base. Water is also a very weak electrolyte, but it does undergo ionization to a small extent:
 
 $$\ce{
 H2O <=> H+ + OH-
@@ -193,20 +194,20 @@ Although $K_w$  is constant, the individual concentrations of $\ce{H3O+}$ and $\
 
 ```{dropdown} Example: Calculating $\ce{H3O+}$ and $\ce{OH-}$
 
-$\{\ce{H3O+}\} = \pu{0.1 M}$ in stomach acid. Calculate the $\ce{OH-}$ in stomach acid at $\pu{25 ^\circ C}$. 
+The acid concentration in the stomach ($\{\ce{H3O+}\}) is $\pu{0.1 M}$. Calculate the $\ce{OH-}$ in stomach acid at $\pu{25 ^\circ C}$. 
 
 >Let's substitute $\ce{H3O+}$ into Eq. {eq}`kw2`.
 >
 >$$\begin{aligned}
-        \pu{1e-14} &=  \{\ce{H3O+}\}\{\ce{OH-}\} =  (0.1)\{\ce{OH-}\}\\
-        \text{or,}\, \{\ce{OH-}\} &= \frac{\pu{1e-14}}{0.1} =\pu{1.0e-13 M}
+        K_w = \pu{1e-14} &=  \{\ce{H3O+}\}\{\ce{OH-}\} =  (0.1)\{\ce{OH-}\}\\
+        \therefore \, \{\ce{OH-}\} &= \frac{\pu{1e-14}}{0.1} =\pu{1.0e-13 M}
     \end{aligned}$$
 ```
 
 
 ##  $p\ce{H}$ and $p\ce{OH}$
 
-The acidity of an aqueous solution depends on $\{\ce{H3O+}\}$. This concentration can range over many orders of magnitude, making reporting the numbers cumbersome. To describe the acidity of a solution, rather than report the molar concentration of $\ce{H3O+}$, we typically use the more convenient scale. The $p\ce{H}$ of a solution is defined as the negative base-10 logarithm of the $[\ce{H3O+}]$ (in $\pu{mol L-1}$ or $\pu{M}$). 
+The acidity of an aqueous solution depends on $\{\ce{H3O+}\}$. This concentration can range over many orders of magnitude, making reporting the numbers cumbersome. To describe the acidity of a solution, rather than report the molar concentration of $\ce{H3O+}$, we typically use the more convenient scale. The $p\ce{H}$ of a solution is defined as the negative base-10 logarithm of the $\{\ce{H3O+}\}$ (in $\pu{mol L-1}$ or $\pu{M}$). 
 
 ```{math}
 :label: ph
@@ -220,7 +221,7 @@ $p\ce{H}$ of a solution is dimensionless, and concentration units are removed be
 
 Calculate the $p\ce{H}$ of pure water at $\pu{25 ^\circ C}$. 
 
->From the previous section we know that $\{\ce{H3O+}\} =  \pu{1e-7}{M}$. Therefore,
+>From the previous section we know that $\{\ce{H3O+}\} =  \pu{1e-7 M}$. Therefore,
 >
 >$$p\ce{H} = -\log_{10}(\pu{1e-7}) = 7.0
 $$

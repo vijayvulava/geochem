@@ -458,14 +458,14 @@ HI + H2O -&gt; H3O+ + I-
 \{\ce{H3O+}\}\{\ce{OH-}\} &amp;=  \pu{1.0e-14}\\
 \{\ce{H3O+}\} &amp;= \frac{\pu{1.0e-14}}{\{\ce{OH-}\}} \\
 &amp;= \frac{\pu{1.0e-14}}{(0.018)} = \pu{5.56e-13}\\
-p\ce{H} &amp;= -\log(\pu{5.56e-13}) =12.25
+p\ce{H} &amp;= -\log\{\ce{H3O+}\} =  -\log(\pu{5.56e-13}) = 12.25
 \end{aligned}\end{split}\]</div>
 </div></blockquote>
 <blockquote>
 <div><p class="sd-card-text">Approach 2: Calculate <span class="math notranslate nohighlight">\(p\ce{OH}\)</span> from <span class="math notranslate nohighlight">\(\{\ce{OH-}\}\)</span> and substitute this value in Eq. <a class="reference internal" href="41AcidsBases.html#equation-phpoh">(40)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-p\ce{OH} &amp;= -\log(0.018) = 1.75\\
+p\ce{OH} &amp;= -\log\{\ce{OH-}\} = -\log(0.018) = 1.75\\
 p\ce{H} &amp;= 14.0 - p\ce{OH} = 14.0-1.75 = 12.25
 \end{aligned}\end{split}\]</div>
 </div></blockquote>
@@ -547,9 +547,10 @@ HF + H2O &lt;=&gt; H3O+ + F- \qquad $K_a = \pu{7.1e-4}$
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Relative abundance of weak acids</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We can calculate the relative abundance of the conjugate base of a weak acid by examining the equilibrium expression. In the <span class="math notranslate nohighlight">\(\ce{HF}\)</span> ionization reaction shown in the previous example, the expression can be rearranged as</p>
+<p class="sd-card-text">Calculate the relative abundance of the conjugate base of a weak acid by examining the equilibrium expression.</p>
 <blockquote>
-<div><div class="math notranslate nohighlight">
+<div><p class="sd-card-text">In the <span class="math notranslate nohighlight">\(\ce{HF}\)</span> ionization reaction shown in the previous example, the expression can be rearranged as follows:</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}
  \begin{align*}
     K_a &amp;= \frac{\{\ce{H3O+}\}\{\ce{F-}\}}{\{\ce{HF}\}}\\
@@ -580,17 +581,20 @@ CO2(aq) &amp;&lt;&lt;=&gt; H2CO3(aq)
 \end{align*}\end{split}\]</div>
 <p>The above two reactions cannot be separated, and it is often difficult to distinguish between <span class="math notranslate nohighlight">\(\ce{CO2(aq)}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2CO3(aq)}\)</span>. Often, scientists use the term <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> to denote the sum of <span class="math notranslate nohighlight">\([\ce{CO2(aq)}]\)</span> and <span class="math notranslate nohighlight">\([\ce{H2CO3(aq)}]\)</span>. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, <span class="math notranslate nohighlight">\([\ce{CO2(aq)}]\)</span>  makes up <span class="math notranslate nohighlight">\(\pu{99.85 \%}\)</span> of this sum and may be more acceptable to the use of <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span>. In this text, we will use <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> to represent carbonic acid.</p>
 <p>The equilibrium relationship of reaction <a class="reference internal" href="#equation-co2-dissol">(42)</a> can be expressed as</p>
-<div class="math notranslate nohighlight">
-\[K_H = \frac{[\ce{CO2 (aq)}]}{P_{\ce{CO2 (g)}}} = \pu{10^{-1.47} mol L-1 atm-1}\]</div>
+<div class="math notranslate nohighlight" id="equation-co2-kh">
+<span class="eqno">(43)<a class="headerlink" href="#equation-co2-kh" title="Link to this equation">#</a></span>\[\begin{split}\begin{align*}
+K_H &amp;= \frac{[\ce{CO2 (aq)}]}{P_{\ce{CO2 (g)}}}\\ 
+&amp;= \pu{10^{-1.47} mol L-1 atm-1}
+\end{align*}\end{split}\]</div>
 <p>The <span class="math notranslate nohighlight">\(K_H\)</span> is a special equilibrium constant called the <em><strong>Henry’s Law constant</strong></em> and is used for equilibrium reactions involving gas dissolution in water. Using the <span class="math notranslate nohighlight">\(K_H\)</span>, <span class="math notranslate nohighlight">\([\ce{H2CO3^*}]\)</span> can be calculated for different atmospheric concentrations.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Application of <span class="math notranslate nohighlight">\(K_H\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">If we assume that <span class="math notranslate nohighlight">\([\ce{CO2(g)}]\)</span> is <span class="math notranslate nohighlight">\(\pu{400 ppm}\)</span> (= <span class="math notranslate nohighlight">\(\pu{400e-6 atm}\)</span>),</p>
+<p class="sd-card-text">If we assume that <span class="math notranslate nohighlight">\([\ce{CO2(g)}]\)</span> is <span class="math notranslate nohighlight">\(\pu{400 ppm}\)</span> (= <span class="math notranslate nohighlight">\(\pu{400e-6 atm}\)</span>), convert this concentration to <span class="math notranslate nohighlight">\(\pu{mol L-1}\)</span> using Eq. <a class="reference internal" href="#equation-co2-kh">(43)</a>.</p>
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-[\ce{CO2 (aq)}] &amp;= K_H P_{\ce{CO2 (g)}} \\
+\[\ce{CO2 (aq)}\] &amp;= K_H P_{\ce{CO2 (g)}} \\
 &amp;= \pu{10^{-1.47} mol L-1 atm-1} \times \pu{400e-6 atm} \\
 &amp;= \pu{10^{-4.87} mol L-1}
 \end{aligned}
@@ -599,30 +603,30 @@ CO2(aq) &amp;&lt;&lt;=&gt; H2CO3(aq)
 </div>
 </details><p>At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, the <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> dissociates in water as follows,</p>
 <div class="math notranslate nohighlight" id="equation-h2co3-ka1ka2">
-<span class="eqno">(43)<a class="headerlink" href="#equation-h2co3-ka1ka2" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+<span class="eqno">(44)<a class="headerlink" href="#equation-h2co3-ka1ka2" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 \ce{
 H2CO3(aq) &amp;&lt;=&gt; H+ (aq) + HCO3- (aq) \qquad $K_{a1} = \pu{4.47e-7}$\\
 HCO3- (aq) &amp;&lt;=&gt; H+ (aq) + CO3^2- (aq) \qquad $K_{a2} = \pu{4.68e-10}$
 }
 \end{align}\end{split}\]</div>
-<p>The relative abundance of <span class="math notranslate nohighlight">\(\ce{H2CO3^* (aq)}\)</span>, <span class="math notranslate nohighlight">\(\ce{HCO3- (aq)}\)</span>, and <span class="math notranslate nohighlight">\(\ce{CO3^2- (aq)}\)</span> at any <span class="math notranslate nohighlight">\(p\ce{H}\)</span> can be calculated by applying the Law of Mass Action expression to reactions <a class="reference internal" href="#equation-h2co3-ka1ka2">(43)</a>. These expressions can be rearranged and expressed as:</p>
+<p>The relative abundance of <span class="math notranslate nohighlight">\(\ce{H2CO3^* (aq)}\)</span>, <span class="math notranslate nohighlight">\(\ce{HCO3- (aq)}\)</span>, and <span class="math notranslate nohighlight">\(\ce{CO3^2- (aq)}\)</span> at any <span class="math notranslate nohighlight">\(p\ce{H}\)</span> can be calculated by applying the Law of Mass Action expression to reactions <a class="reference internal" href="#equation-h2co3-ka1ka2">(44)</a>. These expressions can be rearranged and expressed as:</p>
 <div class="math notranslate nohighlight" id="equation-co3-ka1-ka2-exp">
-<span class="eqno">(44)<a class="headerlink" href="#equation-co3-ka1-ka2-exp" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+<span class="eqno">(45)<a class="headerlink" href="#equation-co3-ka1-ka2-exp" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 \frac{[\ce{H2CO3^* (aq)}]}{[\ce{HCO3- (aq)}]} &amp;= \frac{[\ce{H3O+ (aq)}]}{K_{a1}}  \\
 \frac{[\ce{HCO3- (aq)}]}{[\ce{CO3^2- (aq)}]} &amp;= \frac{[\ce{H3O+ (aq)}]}{K_{a2}} 
 \end{align}\end{split}\]</div>
 <p>The total carbonate concentration (<span class="math notranslate nohighlight">\(\ce{C}_T\)</span>) present in an aqueous system can be considered constant. If we assume that all carbonate is only present in this aqueous system in the forms of <span class="math notranslate nohighlight">\(\ce{H2CO3^* (aq)}\)</span>, <span class="math notranslate nohighlight">\(\ce{HCO3- (aq)}\)</span>, and <span class="math notranslate nohighlight">\(\ce{CO3^2- (aq)}\)</span>, we can use mass balance concepts to determine absolute abundance as follows:</p>
 <div class="math notranslate nohighlight" id="equation-ct-exp">
-<span class="eqno">(45)<a class="headerlink" href="#equation-ct-exp" title="Link to this equation">#</a></span>\[\ce{C}_T = [\ce{H2CO3^* (aq)}] + [\ce{HCO3- (aq)}] + [\ce{CO3^2- (aq)}] \]</div>
-<p>Equilibrium expressions  <a class="reference internal" href="#equation-co3-ka1-ka2-exp">(44)</a> can be combined with equation <a class="reference internal" href="#equation-ct-exp">(45)</a> and simplified as:</p>
+<span class="eqno">(46)<a class="headerlink" href="#equation-ct-exp" title="Link to this equation">#</a></span>\[\ce{C}_T = [\ce{H2CO3^* (aq)}] + [\ce{HCO3- (aq)}] + [\ce{CO3^2- (aq)}] \]</div>
+<p>Equilibrium expressions  <a class="reference internal" href="#equation-co3-ka1-ka2-exp">(45)</a> can be combined with equation <a class="reference internal" href="#equation-ct-exp">(46)</a> and simplified as:</p>
 <div class="math notranslate nohighlight" id="equation-ct-expanded">
-<span class="eqno">(46)<a class="headerlink" href="#equation-ct-expanded" title="Link to this equation">#</a></span>\[\ce{C}_T = [\ce{H2CO3^* (aq)}]\left(1 + \frac{K_{a1}}{[\ce{H3O+}]} + \frac{K_{a1} K_{a2}}{[\ce{H3O+}]^2}\right) \]</div>
-<p>We now have an expression that relates total carbonate to the amount of. This is a very useful expression. To simplify subsequent equations, we will define a variable, <span class="math notranslate nohighlight">\(\alpha_\text{H}\)</span>, that encompasses all of the terms inside the parentheses in equation <a class="reference internal" href="#equation-ct-expanded">(46)</a>. Note that this portion of the equation deals with <span class="math notranslate nohighlight">\(p\ce{H}\)</span>  of the aqueous system.</p>
+<span class="eqno">(47)<a class="headerlink" href="#equation-ct-expanded" title="Link to this equation">#</a></span>\[\ce{C}_T = [\ce{H2CO3^* (aq)}]\left(1 + \frac{K_{a1}}{[\ce{H3O+}]} + \frac{K_{a1} K_{a2}}{[\ce{H3O+}]^2}\right) \]</div>
+<p>We now have an expression that relates total carbonate to the amount of. This is a very useful expression. To simplify subsequent equations, we will define a variable, <span class="math notranslate nohighlight">\(\alpha_\text{H}\)</span>, that encompasses all of the terms inside the parentheses in equation <a class="reference internal" href="#equation-ct-expanded">(47)</a>. Note that this portion of the equation deals with <span class="math notranslate nohighlight">\(p\ce{H}\)</span>  of the aqueous system.</p>
 <div class="math notranslate nohighlight" id="equation-alpha-h">
-<span class="eqno">(47)<a class="headerlink" href="#equation-alpha-h" title="Link to this equation">#</a></span>\[\alpha_\ce{H} = \left(1 + \frac{K_{a1}}{[\ce{H3O+}]} + \frac{K_{a1} K_{a2}}{[\ce{H3O+}]^2}\right)\]</div>
-<p>We can now determine <span class="math notranslate nohighlight">\([\ce{H2CO3^* (aq)}]\)</span>, <span class="math notranslate nohighlight">\([\ce{HCO3- (aq)}]\)</span>, and <span class="math notranslate nohighlight">\([\ce{CO3^2- (aq)}]\)</span>, by combining equations eq <a class="reference internal" href="#equation-co3-ka1-ka2-exp">(44)</a> and <a class="reference internal" href="#equation-ct-expanded">(46)</a> as follows:</p>
+<span class="eqno">(48)<a class="headerlink" href="#equation-alpha-h" title="Link to this equation">#</a></span>\[\alpha_\ce{H} = \left(1 + \frac{K_{a1}}{[\ce{H3O+}]} + \frac{K_{a1} K_{a2}}{[\ce{H3O+}]^2}\right)\]</div>
+<p>We can now determine <span class="math notranslate nohighlight">\([\ce{H2CO3^* (aq)}]\)</span>, <span class="math notranslate nohighlight">\([\ce{HCO3- (aq)}]\)</span>, and <span class="math notranslate nohighlight">\([\ce{CO3^2- (aq)}]\)</span>, by combining equations eq <a class="reference internal" href="#equation-co3-ka1-ka2-exp">(45)</a> and <a class="reference internal" href="#equation-ct-expanded">(47)</a> as follows:</p>
 <div class="math notranslate nohighlight" id="equation-ct-alpha">
-<span class="eqno">(48)<a class="headerlink" href="#equation-ct-alpha" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+<span class="eqno">(49)<a class="headerlink" href="#equation-ct-alpha" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 [\ce{H2CO3^* (aq)}] &amp;= \frac{\text{C}_T}{\alpha_\text{H}}\\
 [\ce{HCO3^- (aq)}] &amp;= \frac{\text{C}_T K_{a1}}{[\ce{H3O+}] \alpha_\text{H}}\\
 [\ce{CO3^2- (aq)}] &amp;= \frac{\text{C}_T K_{a1} K_{a2}}{[\ce{H3O+}]^2 \alpha_\text{H}}
@@ -633,7 +637,7 @@ HCO3- (aq) &amp;&lt;=&gt; H+ (aq) + CO3^2- (aq) \qquad $K_{a2} = \pu{4.68e-10}$
 <h2>Silicic acid system<a class="headerlink" href="#silicic-acid-system" title="Link to this heading">#</a></h2>
 <p>Silicic acid (<span class="math notranslate nohighlight">\(\ce{H4SiO4}\)</span>) is a common byproduct of silicate mineral weathering and weak acid. This is a “tetraprotic acid,” meaning it can release four <span class="math notranslate nohighlight">\(\ce{H+}\)</span> in four dissociation steps. Only the first two dissociation steps are environmentally relevant. At <span class="math notranslate nohighlight">\(\pu{25 ^\circ C}\)</span>, dissociates in water as follows,</p>
 <div class="math notranslate nohighlight" id="equation-silicate">
-<span class="eqno">(49)<a class="headerlink" href="#equation-silicate" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+<span class="eqno">(50)<a class="headerlink" href="#equation-silicate" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 \ce{
 H4SiO4 + H2O &amp;&lt;=&gt; H3SiO4- + H3O+ \qquad  $K_{a1} = \pu{10^{-9.83}}$\\
 H3SiO4- + H2O &amp;&lt;=&gt; H2SiO4^2- + H3O+ \qquad  $K_{a2} = \pu{10^{-13.17}}$
@@ -650,11 +654,11 @@ B + H2O &lt;=&gt; HB+ + OH-
 }\]</div>
 <p>The equilibrium expression for this reaction can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-kb">
-<span class="eqno">(50)<a class="headerlink" href="#equation-kb" title="Link to this equation">#</a></span>\[K_b = \frac{\{\ce{HB+}\}\{\ce{OH-}\}}{\{\ce{B}\}}\]</div>
+<span class="eqno">(51)<a class="headerlink" href="#equation-kb" title="Link to this equation">#</a></span>\[K_b = \frac{\{\ce{HB+}\}\{\ce{OH-}\}}{\{\ce{B}\}}\]</div>
 <p><span class="math notranslate nohighlight">\(K_b\)</span>  is special equilibrium constant called the <em><strong>base ionization constant</strong></em>.</p>
 <p><span class="math notranslate nohighlight">\(K_a\)</span> and <span class="math notranslate nohighlight">\(K_b\)</span> are related to <span class="math notranslate nohighlight">\(K_w\)</span> by following relationship.</p>
 <div class="math notranslate nohighlight" id="equation-kakb">
-<span class="eqno">(51)<a class="headerlink" href="#equation-kakb" title="Link to this equation">#</a></span>\[K_a \times K_b = K_w\]</div>
+<span class="eqno">(52)<a class="headerlink" href="#equation-kakb" title="Link to this equation">#</a></span>\[K_a \times K_b = K_w\]</div>
 </section>
 <section id="amphoteric-compounds-and-hydrated-metal-ions">
 <h2>Amphoteric Compounds and Hydrated Metal Ions<a class="headerlink" href="#amphoteric-compounds-and-hydrated-metal-ions" title="Link to this heading">#</a></h2>
@@ -690,7 +694,7 @@ Al(H2O)6^3+ (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + Al(H2O)5(OH)^2+ (aq) \qquad $K_
 </figure>
 <p>The conjugate base produced by the above process contains five other bonded water molecules capable of acting as acids.</p>
 <div class="math notranslate nohighlight" id="equation-aluminum-dissoc">
-<span class="eqno">(52)<a class="headerlink" href="#equation-aluminum-dissoc" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+<span class="eqno">(53)<a class="headerlink" href="#equation-aluminum-dissoc" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 \ce{
 Al(H2O)6^3+ (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + Al(H2O)5(OH)^2+ (aq)\\
 Al(H2O)5(OH)^2+ (aq) + H2O (l) &lt;=&gt; H3O+ (aq) + Al(H2O)4(OH)2^+ (aq)\\
@@ -932,14 +936,14 @@ H+ + CH3COO- -&gt; CH3COOH
 </div>
 </details><p>The final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> of a buffer solution can be determined using the <em><strong>Henderson-Hasselbalch equation</strong></em>, which can be derived from the equilibrium expression of dissociation of a weak acid. The final equation is given as:</p>
 <div class="math notranslate nohighlight" id="equation-henderson">
-<span class="eqno">(53)<a class="headerlink" href="#equation-henderson" title="Link to this equation">#</a></span>\[p\ce{H} = pK_a + \log \frac{[\text{Conjugate Base}]}{[\text{Acid}]}\]</div>
-<p>Equation <a class="reference internal" href="#equation-henderson">(53)</a> can be used to determine ideal concentrations and appropriate combinations of weak acids/conjugate bases that make effective buffer solutions.</p>
+<span class="eqno">(54)<a class="headerlink" href="#equation-henderson" title="Link to this equation">#</a></span>\[p\ce{H} = pK_a + \log \frac{[\text{Conjugate Base}]}{[\text{Acid}]}\]</div>
+<p>Equation <a class="reference internal" href="#equation-henderson">(54)</a> can be used to determine ideal concentrations and appropriate combinations of weak acids/conjugate bases that make effective buffer solutions.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Example: Henderson-Hasselbalch Equation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Let’s use this equation to solve for the final <span class="math notranslate nohighlight">\(p\ce{H}\)</span> when <span class="math notranslate nohighlight">\(\pu{0.1 M}\)</span> of HCl was added to the solution containing <span class="math notranslate nohighlight">\(\pu{1.0 M}\)</span> each of <span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span> and <span class="math notranslate nohighlight">\(\ce{CH3COONa}\)</span>. From the previous example, we have [<span class="math notranslate nohighlight">\(\ce{CH3COOH}\)</span>] and [<span class="math notranslate nohighlight">\(\ce{CH3COO-}\)</span>] as <span class="math notranslate nohighlight">\(\pu{0.9 M}\)</span> and <span class="math notranslate nohighlight">\(\pu{1.1 M}\)</span>, respectively.</p>
 <blockquote>
-<div><p class="sd-card-text">Substitute these values in Eq. <a class="reference internal" href="#equation-henderson">(53)</a>.</p>
+<div><p class="sd-card-text">Substitute these values in Eq. <a class="reference internal" href="#equation-henderson">(54)</a>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
     p\ce{H} &amp;= pK_a + \log \frac{[\ce{CH3COO-}]}{[\ce{CH3COOH}]} \\
@@ -971,12 +975,12 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p>Minerals in rocks undergo chemical weathering and release different types of ions into natural water systems, some of which can resist fluctuation in <span class="math notranslate nohighlight">\(p\ce{H}\)</span> as shown in the preceding section.  This ability to resist change to <span class="math notranslate nohighlight">\(p\ce{H}\)</span> due to adding acids and bases is called the <em><strong>buffering capacity</strong></em> of water. Volcanic and human activities release reactive gases such as <span class="math notranslate nohighlight">\(\ce{CO2}\)</span>, <span class="math notranslate nohighlight">\(\ce{SO2}\)</span>, and <span class="math notranslate nohighlight">\(\ce{NO_x}\)</span>, which interact with water creating acids and bases that affect natural water systems. However, the presence of ions such as <span class="math notranslate nohighlight">\(\ce{HCO3-}\)</span> and <span class="math notranslate nohighlight">\(\ce{PO4^3-}\)</span> in natural water can counteract the addition of <span class="math notranslate nohighlight">\(\ce{H+}\)</span> and <span class="math notranslate nohighlight">\(\ce{OH-}\)</span>. Water samples would need to be titrated with a strong acid or base to determine the ability of water to buffer the addition of acids or bases.</p>
 <p>The carbonic acid is the dominant weak acid system in most natural waters. In this system, the main weak acids are <span class="math notranslate nohighlight">\(\ce{HCO3–}\)</span> and <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> and the main weak bases are <span class="math notranslate nohighlight">\(\ce{HCO3–}\)</span> and <span class="math notranslate nohighlight">\(\ce{CO3^2–}\)</span>. To neutralize these acids, base ions have to be added. This is called the <em><strong>acid neutralizing capacity</strong></em> (ANC) or <em><strong>alkalinity</strong></em> of water. Based on our understanding of the <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> system in a previous section, this value is determined as follows:</p>
 <div class="math notranslate nohighlight" id="equation-anc">
-<span class="eqno">(54)<a class="headerlink" href="#equation-anc" title="Link to this equation">#</a></span>\[\ce{
+<span class="eqno">(55)<a class="headerlink" href="#equation-anc" title="Link to this equation">#</a></span>\[\ce{
 ANC = [HCO3-] + 2[CO3^2-] + [OH-] - [H+]
 }\]</div>
 <p>Acid ions must be added to neutralize the bases in natural waters. This is called the <em><strong>base neutralizing capacity</strong></em> (BNC) or <em><strong>acidity</strong></em> of water. This value is determined as follows:</p>
 <div class="math notranslate nohighlight" id="equation-bnc">
-<span class="eqno">(55)<a class="headerlink" href="#equation-bnc" title="Link to this equation">#</a></span>\[\ce{
+<span class="eqno">(56)<a class="headerlink" href="#equation-bnc" title="Link to this equation">#</a></span>\[\ce{
 BNC = 2[H2CO3^*] + [HCO3-] + [H+] - [OH-]
 }\]</div>
 <p>Alkalinity is the strong acid required to make water equivalent to an <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> solution, and acidity is the strong base required to make water equivalent to a <span class="math notranslate nohighlight">\(\ce{Na2CO3}\)</span> solution. This means alkalinity and acidity are intimately tied to the <span class="math notranslate nohighlight">\(\ce{H2CO3^*}\)</span> titration curve. It also means titration with a strong acid is an excellent way to measure alkalinity. Similarly, titration with a strong base is used to measure acidity.</p>
